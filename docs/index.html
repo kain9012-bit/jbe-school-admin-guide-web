@@ -3,166 +3,249 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="전북특별자치도교육청 학교행정업무 길라잡이 제1편을 업무 흐름과 통합 검색으로 살펴보는 웹 시범판"
-    />
-    <meta name="theme-color" content="#153f37" />
+    <meta name="description" content="학교행정업무 길라잡이 제1편을 업무 흐름과 통합 검색으로 이용하는 웹 안내서" />
+    <meta name="theme-color" content="#0b50d0" />
     <title>학교행정업무 길라잡이 웹판 | 제1편 행정업무 및 보안</title>
-    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="vendor/krds/krds.min.css" />
+    <link rel="stylesheet" href="assets/styles-v2.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main-content">본문으로 바로가기</a>
+    <a class="skip-link" href="#main-content">본문 바로가기</a>
 
-    <header class="site-header">
-      <div class="header-inner">
-        <a class="brand" href="#" aria-label="학교행정업무 길라잡이 웹판 홈">
-          <span class="brand-mark" aria-hidden="true">길</span>
-          <span>
-            <strong>학교행정업무 길라잡이</strong>
-            <small>업무 흐름 · 통합 검색</small>
-          </span>
-        </a>
-        <div class="header-actions">
-          <button class="search-trigger" type="button" data-open-search>
-            <span aria-hidden="true">⌕</span>
-            <span>업무·질문·서식 검색</span>
-            <kbd>/</kbd>
-          </button>
-          <a class="header-link" href="downloads/chapter1-manual.pdf">원문 PDF</a>
+    <div id="krds-masthead">
+      <div class="toggle-wrap">
+        <div class="toggle-head">
+          <div class="inner">
+            <span class="nuri-txt">이 누리집은 학교행정업무 길라잡이의 웹 시범판입니다.</span>
+          </div>
         </div>
+      </div>
+    </div>
+
+    <header id="krds-header">
+      <div class="header-container">
+        <div class="header-branding">
+          <div class="inner">
+            <a class="guide-brand" href="#overview" aria-label="학교행정업무 길라잡이 웹판 처음으로">
+              <span class="brand-symbol" aria-hidden="true">행정</span>
+              <span class="brand-copy">
+                <strong>학교행정업무 길라잡이</strong>
+                <small>제1편 행정업무 및 보안</small>
+              </span>
+            </a>
+            <div class="header-actions">
+              <button class="krds-btn medium text search-open" type="button" data-open-search>
+                <span aria-hidden="true">⌕</span> 통합검색
+              </button>
+              <a class="krds-btn medium secondary" href="downloads/chapter1-manual.pdf" target="_blank" rel="noopener">
+                원문 PDF
+              </a>
+            </div>
+          </div>
+        </div>
+        <nav class="krds-main-menu" aria-label="주요 메뉴">
+          <div class="inner">
+            <ul class="gnb-menu">
+              <li><a class="gnb-main-trigger is-active" href="#overview">업무 흐름</a></li>
+              <li><button class="gnb-main-trigger" type="button" data-open-search>질문·서식 검색</button></li>
+              <li><a class="gnb-main-trigger" href="#downloads">자료 내려받기</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
 
-    <main id="main-content">
-      <section class="hero" id="overview">
-        <div class="hero-inner">
-          <div class="hero-copy">
-            <p class="eyebrow">전북 학교행정업무 길라잡이 · 웹 시범판</p>
-            <h1>찾는 업무는 흐름으로,<br />필요한 근거는 바로.</h1>
-            <p class="hero-description">
-              제1편 행정업무 및 보안의 9개 업무를 단계별로 살펴보고,
-              매뉴얼·FAQ·서식을 한 번에 검색할 수 있습니다.
-            </p>
-            <div class="hero-actions">
-              <button class="primary-button" type="button" data-open-search>
-                궁금한 내용 검색하기
-              </button>
-              <a class="secondary-button" href="#work-list">업무 흐름 둘러보기</a>
+    <div class="krds-breadcrumb-wrap">
+      <div class="inner">
+        <ol class="breadcrumb" id="breadcrumb">
+          <li class="home"><a href="#overview">홈</a></li>
+          <li><span>제1편 행정업무 및 보안</span></li>
+        </ol>
+      </div>
+    </div>
+
+    <main id="main-content" tabindex="-1">
+      <section id="overview-view" class="view">
+        <div class="guide-hero">
+          <div class="inner">
+            <div class="hero-copy">
+              <span class="krds-badge bg-light-primary">학교 실무자용 웹 안내서</span>
+              <h1>업무의 시작부터 마무리까지<br />순서대로 확인하세요</h1>
+              <p>
+                원문을 길게 읽지 않아도 됩니다. 하려는 업무를 고르면 단계별 행동,
+                확인사항, 서식과 근거가 한 흐름으로 이어집니다.
+              </p>
+              <form class="hero-search" id="hero-search-form" role="search">
+                <label class="sr-only" for="hero-search-input">업무, 질문, 서식 검색</label>
+                <input id="hero-search-input" class="krds-input" type="search" placeholder="예: 직무대리, 공인 폐기, 기록물 이관" autocomplete="off" />
+                <button class="krds-btn primary" type="submit">검색</button>
+              </form>
+              <div class="quick-keywords" aria-label="추천 검색어">
+                <span>추천</span>
+                <button type="button" data-query="비전자문서">비전자문서</button>
+                <button type="button" data-query="대리결재">대리결재</button>
+                <button type="button" data-query="폐기 공인">폐기 공인</button>
+                <button type="button" data-query="기록물 이관">기록물 이관</button>
+              </div>
             </div>
+            <aside class="hero-guide" aria-label="이용 방법">
+              <p class="guide-kicker">이용 방법</p>
+              <ol>
+                <li><span>1</span><div><strong>업무 선택</strong><p>9개 업무 중 하나를 고릅니다.</p></div></li>
+                <li><span>2</span><div><strong>현재 단계 선택</strong><p>지금 해야 할 일을 바로 엽니다.</p></div></li>
+                <li><span>3</span><div><strong>근거까지 확인</strong><p>서식·FAQ·원문 쪽수를 함께 봅니다.</p></div></li>
+              </ol>
+            </aside>
           </div>
-          <aside class="hero-note" aria-label="이용 안내">
-            <span class="note-label">처음 오셨나요?</span>
-            <h2>분야를 몰라도 괜찮습니다</h2>
-            <p>
-              “직무대리 명령서는 언제 쓰나요?”처럼 평소 쓰는 말로 검색해
-              보세요. 관련 업무와 FAQ, 서식이 함께 나옵니다.
-            </p>
-            <button class="text-button" type="button" data-search-example="직무대리 명령서">
-              예시 검색해 보기 <span aria-hidden="true">→</span>
-            </button>
+        </div>
+
+        <div class="content-container overview-content">
+          <section aria-labelledby="work-list-title">
+            <div class="section-title-row">
+              <div>
+                <p class="section-kicker">업무별 절차</p>
+                <h2 id="work-list-title">어떤 업무를 처리하시나요?</h2>
+              </div>
+              <p>업무를 선택하면 첫 단계부터 실무 내용이 열립니다.</p>
+            </div>
+            <div id="work-grid" class="krds-structured-list work-grid" aria-live="polite"></div>
+          </section>
+
+          <section id="downloads" class="download-section" aria-labelledby="download-title">
+            <div>
+              <p class="section-kicker">원본 자료</p>
+              <h2 id="download-title">필요할 때 원본도 확인하세요</h2>
+              <p>웹 안내는 빠른 업무 처리를 돕는 시범 서비스입니다. 최종 판단은 최신 원문과 관련 규정을 확인하세요.</p>
+            </div>
+            <div class="download-links">
+              <a class="krds-btn secondary" href="downloads/chapter1-manual.pdf" target="_blank" rel="noopener">제1편 PDF 보기</a>
+              <a class="krds-btn tertiary" href="downloads/chapter1-forms.hwpx" download>서식·예시 HWPX</a>
+              <a class="krds-btn tertiary" href="downloads/chapter1-faq.hwp" download>FAQ HWP</a>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section id="work-view" class="view" hidden>
+        <div class="content-container work-page">
+          <button class="mobile-work-menu krds-btn secondary" id="mobile-work-menu" type="button" aria-expanded="false" aria-controls="side-navigation">
+            다른 업무 선택
+          </button>
+          <aside id="side-navigation" class="krds-side-navigation" aria-label="제1편 업무 목록">
+            <h2 class="lnb-tit">제1편 업무 목록</h2>
+            <ul class="lnb-list" id="side-work-list"></ul>
           </aside>
-        </div>
-        <div class="stats" aria-label="제1편 수록 자료">
-          <div><strong>9</strong><span>업무 흐름</span></div>
-          <div><strong>55</strong><span>질의응답</span></div>
-          <div><strong>19</strong><span>서식·예시</span></div>
-          <div><strong>37</strong><span>원문 쪽수</span></div>
-        </div>
-      </section>
+          <article class="work-content">
+            <header class="work-heading">
+              <div class="work-heading-meta">
+                <span class="krds-badge bg-light-primary" id="work-number"></span>
+                <span id="work-pages"></span>
+              </div>
+              <h1 id="work-title"></h1>
+              <p id="work-intro"></p>
+            </header>
 
-      <section class="content-section" id="work-list">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">WORKFLOW MAP</p>
-            <h2>어떤 업무를 확인하시나요?</h2>
-          </div>
-          <p>업무 카드를 선택하면 처리 흐름과 원문 근거로 이동합니다.</p>
-        </div>
-        <div class="work-grid" id="work-grid" aria-live="polite"></div>
-      </section>
+            <section class="workflow-section" aria-labelledby="workflow-title">
+              <div class="workflow-heading">
+                <div>
+                  <p class="section-kicker">처리 흐름</p>
+                  <h2 id="workflow-title">현재 단계를 선택하세요</h2>
+                </div>
+                <p id="step-progress" aria-live="polite"></p>
+              </div>
+              <ol class="krds-step-wrap guide-stepper" id="step-list"></ol>
+            </section>
 
-      <section class="content-section guide-strip">
-        <div>
-          <p class="eyebrow">QUICK ACCESS</p>
-          <h2>원문 자료도 그대로 제공합니다</h2>
-          <p>웹판의 모든 내용은 원문과 함께 확인할 수 있습니다.</p>
-        </div>
-        <div class="download-list">
-          <a href="downloads/chapter1-manual.pdf">
-            <span class="file-type">PDF</span>
-            <span><strong>제1편 매뉴얼</strong><small>행정업무 및 보안</small></span>
-          </a>
-          <a href="downloads/chapter1-faq.hwp">
-            <span class="file-type">HWP</span>
-            <span><strong>질의응답</strong><small>업무 FAQ 55건</small></span>
-          </a>
-          <a href="downloads/chapter1-forms.hwpx">
-            <span class="file-type">HWPX</span>
-            <span><strong>서식·예시</strong><small>서식 11종, 예시 8종</small></span>
-          </a>
-        </div>
-      </section>
+            <section class="step-panel" id="step-panel" aria-labelledby="step-title" tabindex="-1">
+              <header class="step-panel-head">
+                <div>
+                  <span class="step-label" id="step-label"></span>
+                  <h2 id="step-title"></h2>
+                  <p id="step-summary"></p>
+                </div>
+                <a class="krds-btn small tertiary" id="source-page-link" href="downloads/chapter1-manual.pdf" target="_blank" rel="noopener">원문 PDF</a>
+              </header>
 
-      <section class="content-section notice">
-        <h2>이용 전 확인해 주세요</h2>
-        <p>
-          이 웹판은 공식 원문을 더 쉽게 찾도록 재구성한 시범 서비스입니다.
-          실제 업무 처리 전에는 원문과 최신 법령·지침을 함께 확인해 주세요.
-          내용이 다른 경우 원문과 최신 기준을 우선합니다.
-        </p>
-        <a id="official-board-link" href="#" target="_blank" rel="noreferrer">교육청 공식 게시판에서 확인</a>
+              <div class="task-block action-block">
+                <h3><span aria-hidden="true">✓</span> 이 단계에서 할 일</h3>
+                <ol id="step-actions"></ol>
+              </div>
+
+              <div class="detail-grid">
+                <section class="task-block">
+                  <h3>확인사항</h3>
+                  <ul id="step-checks"></ul>
+                </section>
+                <section class="task-block caution-block" id="caution-block">
+                  <h3>주의·예외</h3>
+                  <ul id="step-cautions"></ul>
+                </section>
+              </div>
+
+              <section class="resource-block" aria-labelledby="resource-title">
+                <h3 id="resource-title">서식·근거</h3>
+                <dl class="resource-list">
+                  <div><dt>관련 서식</dt><dd id="step-forms"></dd></div>
+                  <div><dt>근거</dt><dd id="step-basis"></dd></div>
+                  <div><dt>원문 위치</dt><dd id="step-pages"></dd></div>
+                </dl>
+              </section>
+
+              <nav class="step-navigation" aria-label="단계 이동">
+                <button class="krds-btn secondary" id="prev-step" type="button">이전 단계</button>
+                <button class="krds-btn primary" id="next-step" type="button">다음 단계</button>
+              </nav>
+            </section>
+
+            <section class="related-section" aria-labelledby="faq-title">
+              <div class="related-heading">
+                <div>
+                  <p class="section-kicker">함께 확인</p>
+                  <h2 id="faq-title">관련 질문</h2>
+                </div>
+                <button class="krds-btn small text" type="button" data-open-search>전체 질문 검색</button>
+              </div>
+              <div class="krds-accordion" id="related-faqs"></div>
+            </section>
+          </article>
+        </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div>
-        <strong>학교행정업무 길라잡이 웹판</strong>
-        <p>제1편 행정업무 및 보안 · 시범 서비스</p>
+    <footer class="guide-footer">
+      <div class="inner">
+        <div>
+          <strong>학교행정업무 길라잡이 웹판</strong>
+          <p>제1편 행정업무 및 보안 · 제안용 시범 서비스</p>
+        </div>
+        <p>최신 기준과 최종 해석은 전북특별자치도교육청의 공식 원문을 우선합니다.</p>
       </div>
-      <p>원문 출처: 전북특별자치도교육청 학교행정업무 길라잡이</p>
     </footer>
 
-    <dialog class="search-dialog" id="search-dialog" aria-labelledby="search-title">
-      <div class="dialog-header">
-        <div>
-          <p class="eyebrow">INTEGRATED SEARCH</p>
-          <h2 id="search-title">길라잡이 통합 검색</h2>
-        </div>
-        <button class="icon-button" type="button" data-close-search aria-label="검색 닫기">×</button>
-      </div>
-      <form class="search-form" role="search">
-        <label class="sr-only" for="global-search">업무·질문·서식 검색</label>
-        <span aria-hidden="true">⌕</span>
-        <input
-          id="global-search"
-          type="search"
-          autocomplete="off"
-          placeholder="예: 공인 폐기, 비전자문서, 직무대리 명령서"
-        />
-        <button type="reset" aria-label="검색어 지우기">지우기</button>
-      </form>
-      <div class="suggestions" aria-label="추천 검색어">
-        <button type="button" data-query="공인 폐기">공인 폐기</button>
-        <button type="button" data-query="비전자문서">비전자문서</button>
-        <button type="button" data-query="결재경로">결재경로</button>
-        <button type="button" data-query="범죄경력 조회">범죄경력 조회</button>
-      </div>
-      <div class="result-summary" id="result-summary">검색어를 입력하면 관련 업무와 자료를 보여드립니다.</div>
-      <div class="search-results" id="search-results"></div>
-    </dialog>
-
-    <dialog class="detail-dialog" id="detail-dialog" aria-labelledby="detail-title">
-      <div class="detail-shell">
-        <div class="detail-topbar">
-          <button class="back-button" type="button" data-close-detail>← 전체 업무</button>
-          <button class="icon-button" type="button" data-close-detail aria-label="업무 상세 닫기">×</button>
-        </div>
-        <article id="detail-content"></article>
+    <dialog class="search-dialog" id="search-dialog" aria-labelledby="search-dialog-title">
+      <div class="search-dialog-inner">
+        <header>
+          <div>
+            <p class="section-kicker">통합검색</p>
+            <h2 id="search-dialog-title">업무·단계·질문·서식 찾기</h2>
+          </div>
+          <button class="dialog-close" type="button" data-close-search aria-label="검색 닫기">×</button>
+        </header>
+        <form id="search-form" role="search">
+          <label class="sr-only" for="search-input">검색어</label>
+          <div class="dialog-search-row">
+            <input id="search-input" class="krds-input" type="search" placeholder="찾는 업무를 자연스럽게 입력하세요" autocomplete="off" />
+            <button class="krds-btn primary" type="submit">검색</button>
+          </div>
+        </form>
+        <p class="search-status" id="search-status">업무명이나 궁금한 문장을 입력하세요.</p>
+        <div class="search-results" id="search-results"></div>
       </div>
     </dialog>
 
+    <script src="vendor/krds/krds.min.js"></script>
     <script src="assets/chapter1-data.js"></script>
-    <script src="assets/app.js"></script>
+    <script src="assets/chapter1-steps.js"></script>
+    <script src="assets/app-v2.js"></script>
   </body>
 </html>
