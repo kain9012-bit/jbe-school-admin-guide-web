@@ -511,6 +511,10 @@ input {
   align-items: start;
   padding-block: 5.6rem 10rem;
 }
+.work-content {
+  min-width: 0;
+}
+
 
 .krds-side-navigation {
   position: sticky;
@@ -815,6 +819,18 @@ input {
   border-bottom: 1px solid var(--guide-line);
 }
 
+.accordion-item.faq-targeted {
+  margin-inline: -1.2rem;
+  padding-inline: 1.2rem;
+  background: var(--guide-blue-pale);
+  border-radius: 0.8rem;
+  scroll-margin-top: 2rem;
+}
+
+.accordion-item.faq-targeted .btn-accordion {
+  background: transparent;
+}
+
 .btn-accordion {
   display: flex;
   width: 100%;
@@ -842,6 +858,12 @@ input {
 
 .accordion-collapse {
   padding: 0 0 2rem;
+}
+
+.krds-accordion .accordion-item .accordion-collapse:not([hidden]) {
+  max-height: none;
+  overflow: visible;
+  visibility: visible;
 }
 
 .accordion-body {

@@ -39,7 +39,33 @@ const { chromium } = require("playwright");
     exactStepLinks: await page.locator('.search-result[href*="work=records"][href*="step=transfer"]').count()
   };
 
-  const result = { overview, detail, search, errors };
+  await page.locator("#search-input").fill("\uc5c5\ubb34\uad00\ub9ac\uc2dc\uc2a4\ud15c \uc6b4\uc601 \uadfc\uac70");
+  await page.waitForTimeout(100);
+  const faqResult = page.locator('.search-result[href*="faq="]').first();
+  const faqHref = await faqResult.getAttribute("href");
+  await faqResult.click();
+  await page.waitForSelector("#work-view:not([hidden])");
+  const faq = {
+    resultHref: faqHref,
+    targetedItems: await page.locator(".accordion-item.faq-targeted").count(),
+    expandedButtons: await page.locator('.faq-targeted .btn-accordion[aria-expanded="true"]').count(),
+    visibleAnswerLength: await page.locator(".faq-targeted .accordion-body").innerText().then((text) => text.trim().length)
+  };
+  const mobilePage = await browser.newPage({ viewport: { width: 390, height: 844 } });
+  await mobilePage.goto("http://127.0.0.1:8792/", { waitUntil: "networkidle" });
+  await mobilePage.locator("#hero-search-input").fill("\uc5c5\ubb34\uad00\ub9ac\uc2dc\uc2a4\ud15c \uc6b4\uc601 \uadfc\uac70");
+  await mobilePage.locator("#hero-search-form").evaluate((form) => form.requestSubmit());
+  await mobilePage.locator('.search-result[href*="faq="]').first().click();
+  await mobilePage.waitForSelector(".faq-targeted .accordion-body");
+  const mobile = {
+    horizontalOverflow: await mobilePage.evaluate(
+      () => document.documentElement.scrollWidth - document.documentElement.clientWidth
+    ),
+    visibleAnswerLength: await mobilePage.locator(".faq-targeted .accordion-body").innerText().then((text) => text.trim().length)
+  };
+  await mobilePage.close();
+
+  const result = { overview, detail, search, faq, mobile, errors };
   console.log(JSON.stringify(result, null, 2));
   const valid =
     overview.workCards === 9 &&
@@ -48,6 +74,13 @@ const { chromium } = require("playwright");
     detail.rawTextVisible === 0 &&
     search.results > 0 &&
     search.exactStepLinks > 0 &&
+    search.status.includes("\uc804\uccb4 \ud3b8") &&
+    faq.resultHref?.includes("faq=") &&
+    faq.targetedItems === 1 &&
+    faq.expandedButtons === 1 &&
+    faq.visibleAnswerLength > 0 &&
+    mobile.horizontalOverflow === 0 &&
+    mobile.visibleAnswerLength > 0 &&
     errors.length === 0;
 
   await browser.close();

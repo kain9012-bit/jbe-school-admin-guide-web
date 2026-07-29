@@ -9,7 +9,8 @@
 - 실제 처리 순서로 나눈 45개 단계
 - 각 단계에 할 일, 확인사항, 주의·예외, 서식, 근거, 원문 쪽수 통합
 - FAQ 55건과 서식·예시 19종 연결
-- 검색 결과에서 관련 업무 단계로 바로 이동
+- 공개된 모든 편을 한 번에 찾는 통합검색
+- FAQ 검색 결과에서 해당 업무 단계로 이동하고 답변 자동 펼침
 - 원문 PDF·HWP·HWPX 내려받기
 - KRDS 기반 반응형·키보드 접근 화면
 
@@ -29,6 +30,21 @@
 - `docs/vendor/krds/`: KRDS 배포 CSS·JavaScript·Pretendard GOV 글꼴
 - `source/chapter-01/original/`: 교육청 원본 자료
 - `scripts/`: 원문 추출, 데이터 생성, 화면 검증 도구
+
+## 통합검색과 FAQ
+
+홈 화면과 상단 검색은 먼저 편을 선택하지 않아도 공개된 모든 편의 업무, 처리 단계,
+FAQ, 서식·예시를 한 번에 검색합니다. 결과에는 편 이름과 자료 유형이 함께 표시되며,
+다른 편의 결과를 선택하면 해당 편과 업무 단계로 바로 이동합니다. FAQ 결과는 질문이
+있는 단계로 이동한 뒤 해당 답변을 자동으로 펼칩니다.
+
+통합검색은 `docs/assets/guide-search-index.js`를 사용합니다. 편별 데이터가 바뀌거나
+새 편을 공개한 뒤에는 `node scripts/build_global_search_index.js`를 실행해 색인을
+갱신합니다.
+
+HWP·HWPX·PDF 원문을 새 편의 구조화 데이터로 변환할 때는
+[`kordoc`](https://github.com/chrisryugj/kordoc)을 추출 도구로 활용할 수 있습니다.
+웹 화면은 변환된 JavaScript 데이터를 사용하므로 이용자의 브라우저에 `kordoc`이 필요하지 않습니다.
 
 ## 로컬 확인
 
