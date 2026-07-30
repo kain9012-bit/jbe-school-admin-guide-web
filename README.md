@@ -61,3 +61,25 @@ HWP·HWPX·PDF 원문을 새 편의 구조화 데이터로 변환할 때는
 - 안내서 원본: 전북특별자치도교육청 학교행정업무 길라잡이
 - UI 기반: KRDS UI/UX (`KRDS-uiux/krds-uiux`, ISC)
 - 자세한 표기는 `NOTICE.md`를 확인하세요.
+
+## 검증 스크립트
+
+`node scripts/validate_<이름>.js` 형태로 실행합니다. 모두 저장소 파일만 읽으므로
+브라우저나 인터넷 연결이 없어도 동작합니다.
+
+- `validate_structured_site.js`: 구조화 블록을 다시 이어 붙였을 때 원문 PDF 쪽의
+  줄 순서·내용과 정확히 같은지 대조합니다.
+- `validate_faithful_site.js`: 원문에 없는 할 일·확인사항을 지어내지 않았는지,
+  원문 쪽·서식 원문·통합검색 구성이 온전한지 확인합니다.
+- `validate_chapter3.js`: 제3편 자료와 의미 단계 배치의 무결성을 확인합니다.
+- `validate_global_home.js`: 19개 편 통합 홈과 편 미지정 진입 흐름을 확인합니다.
+- `validate_self_hosted_assets.js`: 화면 자산이 모두 저장소 안에 있는지 확인합니다.
+- 그 밖에 표 너비, 목록 들여쓰기, 법령 분리, 본문 FAQ 표현을 각각 확인합니다.
+
+`scripts/inspect_live_ui.js`는 실제 브라우저로 화면을 열어 콘솔 오류, 끊어진 링크,
+가로 넘침, 모바일 화면을 점검합니다. `docs`를 정적 서버로 띄운 뒤 실행합니다.
+
+```
+python3 -m http.server 8899 --directory docs
+node scripts/inspect_live_ui.js http://127.0.0.1:8899
+```

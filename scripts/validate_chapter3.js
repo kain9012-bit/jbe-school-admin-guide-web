@@ -1,91 +1,91 @@
+// 제3편 인사관리 데이터가 현재 화면 구조에 맞는지 확인합니다.
+// 화면은 CHAPTER3_DATA의 본문 블록을 GUIDE_WORKFLOW_LAYOUT의 의미 단계로 묶어 보여 줍니다.
+
 const fs = require("fs");
 const path = require("path");
-const vm = require("vm");
+const {
+  docs,
+  loadGuideData,
+  requireCondition,
+  checkWorkflowLayout,
+} = require("./lib/load_guide_data");
 
-const root = path.resolve(__dirname, "..");
-const docs = path.join(root, "docs");
+const window = loadGuideData();
+const config = window.GUIDE_CONFIG;
+const data = window.CHAPTER3_DATA;
+const sourceFlows = window.CHAPTER3_STEPS;
+const layouts = window.GUIDE_WORKFLOW_LAYOUT;
+const searchIndex = window.GUIDE_SEARCH_INDEX;
 
-function execute(relativePath, context) {
-  const filePath = path.join(docs, relativePath);
-  vm.runInContext(fs.readFileSync(filePath, "utf8"), context, { filename: filePath });
-}
-
-function requireCondition(condition, message) {
-  if (!condition) throw new Error(message);
-}
-
-const context = vm.createContext({ window: {} });
-execute("assets/guide-config.js", context);
-execute("assets/chapter3-data.js", context);
-execute("assets/chapter3-steps.js", context);
-execute("assets/guide-search-index.js", context);
-
-const config = context.window.GUIDE_CONFIG;
-const data = context.window.CHAPTER3_DATA;
-const workflows = context.window.CHAPTER3_STEPS;
-const searchIndex = context.window.GUIDE_SEARCH_INDEX;
 const chapter = config.chapters.find((item) => item.id === "03");
-
 requireCondition(chapter?.available, "제3편이 공개 상태가 아닙니다.");
 requireCondition(chapter.title === "인사관리", "제3편 제목이 올바르지 않습니다.");
+
 requireCondition(data.sections.length === 5, `제3편 업무 수 오류: ${data.sections.length}`);
 requireCondition(data.faqs.length === 19, `제3편 FAQ 수 오류: ${data.faqs.length}`);
 requireCondition(data.forms.length === 21, `제3편 서식 수 오류: ${data.forms.length}`);
 
 let stepCount = 0;
+let blockCount = 0;
+
 for (const work of data.sections) {
-  const workflow = workflows[work.id];
-  requireCondition(workflow, `업무 흐름 누락: ${work.id}`);
-  requireCondition(workflow.steps.length >= 3, `업무 단계 부족: ${work.id}`);
-  requireCondition(work.body.length >= 400, `원문 내용 부족: ${work.id}`);
-  for (const step of workflow.steps) {
-    stepCount += 1;
-    requireCondition(step.actions.length >= 3, `할 일 부족: ${work.id}/${step.id}`);
-    requireCondition(step.checks.length >= 3, `확인사항 부족: ${work.id}/${step.id}`);
-    requireCondition(step.basis.length >= 1, `근거 누락: ${work.id}/${step.id}`);
-    requireCondition(/PDF\s+\d+/.test(step.pages), `PDF 페이지 누락: ${work.id}/${step.id}`);
+  requireCondition(
+    Array.isArray(work.contentBlocks) && work.contentBlocks.length > 0,
+    `본문 블록 누락: ${work.id}`
+  );
+  requireCondition(
+    Array.isArray(sourceFlows[work.id]),
+    `원문 흐름 정보 누락: ${work.id}`
+  );
+  requireCondition(
+    /\d/.test(String(work.printedPages)),
+    `원문 쪽 표기 누락: ${work.id}`
+  );
+
+  stepCount += checkWorkflowLayout(work, layouts[work.id]);
+  blockCount += work.contentBlocks.length;
+
+  for (const formId of work.formIds) {
+    requireCondition(
+      data.forms.some((form) => form.id === formId),
+      `업무에 연결된 서식이 자료에 없습니다: ${work.id}/${formId}`
+    );
   }
 }
-requireCondition(stepCount === 23, `제3편 단계 수 오류: ${stepCount}`);
+
+requireCondition(stepCount === 31, `제3편 단계 수 오류: ${stepCount}`);
+requireCondition(blockCount === 91, `제3편 본문 블록 수 오류: ${blockCount}`);
 
 for (const relativePath of Object.values(data.downloads)) {
   const filePath = path.join(docs, relativePath);
-  requireCondition(fs.existsSync(filePath) && fs.statSync(filePath).size > 0, `다운로드 누락: ${relativePath}`);
+  requireCondition(
+    fs.existsSync(filePath) && fs.statSync(filePath).size > 0,
+    `내려받기 파일 누락: ${relativePath}`
+  );
 }
 
 const chapterEntries = searchIndex.filter((item) => item.chapterId === "03");
-requireCondition(chapterEntries.length === 68, `제3편 검색 항목 수 오류: ${chapterEntries.length}`);
 requireCondition(
-  chapterEntries.filter((item) => item.type === "자주 묻는 질문").length === 19,
-  "제3편 FAQ 검색 항목이 19건이 아닙니다."
+  chapterEntries.length === 136,
+  `제3편 검색 항목 수 오류: ${chapterEntries.length}`
+);
+requireCondition(
+  chapterEntries.filter((item) => item.type === "FAQ 원문").length === data.faqs.length,
+  "제3편 FAQ가 모두 검색 색인에 있지 않습니다."
+);
+requireCondition(
+  chapterEntries.filter((item) => item.type === "업무").length === data.sections.length,
+  "제3편 업무가 모두 검색 색인에 있지 않습니다."
+);
+requireCondition(
+  chapterEntries.every((item) => data.sections.some((work) => work.id === item.workId)),
+  "검색 색인이 존재하지 않는 업무를 가리킵니다."
 );
 requireCondition(
   chapterEntries.some(
-    (item) =>
-      item.type === "업무 단계" &&
-      item.workId === "performance-appraisal" &&
-      item.stepId === "submit" &&
-      item.text.includes("가점")
+    (item) => item.workId === "performance-appraisal" && item.text.includes("근무성적평정")
   ),
-  "근무성적평정 자료 제출 단계가 검색 색인에 없습니다."
-);
-requireCondition(
-  chapterEntries.some(
-    (item) =>
-      item.type === "자주 묻는 질문" &&
-      item.faqNumber === 13 &&
-      item.title.includes("해외여행")
-  ),
-  "휴직 중 해외여행 FAQ가 검색 색인에 없습니다."
-);
-requireCondition(
-  chapterEntries.some(
-    (item) =>
-      item.type === "서식·예시" &&
-      item.title.includes("육아휴직 신청 공문") &&
-      item.workId === "status-rights"
-  ),
-  "육아휴직 신청 공문이 관련 단계에 연결되지 않았습니다."
+  "근무성적평정 내용이 검색 색인에 없습니다."
 );
 
 console.log(
@@ -94,6 +94,7 @@ console.log(
       chapter: `${chapter.label} ${chapter.title}`,
       works: data.sections.length,
       steps: stepCount,
+      contentBlocks: blockCount,
       faqs: data.faqs.length,
       forms: data.forms.length,
       chapterSearchEntries: chapterEntries.length,

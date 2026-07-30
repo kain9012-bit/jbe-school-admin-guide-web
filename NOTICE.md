@@ -15,7 +15,13 @@
 - 원본 저장소: https://github.com/KRDS-uiux/krds-uiux
 - 사용 버전: 1.1.0
 - 패키지 표기 라이선스: ISC
-- 포함 자산: `krds.min.css`, `krds.min.js`, Pretendard GOV 웹 글꼴
+- 포함 자산: `krds.min.css`, `krds.min.js`, Pretendard GOV 웹 글꼴,
+  `docs/vendor/krds/img/`의 구성요소 아이콘 SVG 76종
+
+배포본 CSS는 원래 아이콘을 `www.krds.go.kr`에서 불러왔습니다. 내부망이나 외부
+접속이 제한된 환경에서도 화면이 온전히 보이도록, 같은 배포 버전(1.1.0)의 아이콘
+파일을 저장소에 함께 두고 CSS의 경로를 저장소 내부 경로로 바꾸었습니다.
+아이콘 내용은 원본과 같으며 수정하지 않았습니다.
 
 KRDS는 대한민국 디지털 정부 서비스를 위한 디자인 시스템입니다.
 이 시범 사이트는 공식 KRDS 서비스가 아니며, 전북특별자치도교육청의 공식

@@ -201,28 +201,46 @@ for (const [chapterId, data] of [
   }
 }
 
+// 기본 페이지가 실제로 쓰는 화면은 업무 흐름형입니다.
+// 구조화 데이터를 그 화면이 그대로 받아 쓰는지 확인합니다.
 const indexSource = fs.readFileSync(path.join(docs, "index.html"), "utf8");
-const appSource = fs.readFileSync(path.join(docs, "assets", "app-structured-v2.js"), "utf8");
-const bootstrapSource = fs.readFileSync(
-  path.join(docs, "assets", "guide-bootstrap-structured.js"),
+const appSource = fs.readFileSync(
+  path.join(docs, "assets", "app-faithful-workflow.js"),
   "utf8"
 );
+const bootstrapSource = fs.readFileSync(
+  path.join(docs, "assets", "guide-bootstrap-workflow.js"),
+  "utf8"
+);
+const detailSource = fs.readFileSync(
+  path.join(docs, "assets", "structured-details.js"),
+  "utf8"
+);
+
 requireCondition(
-  indexSource.includes("assets/guide-bootstrap-structured.js"),
-  "구조화 앱 부트스트랩이 기본 페이지에 연결되지 않았습니다."
+  indexSource.includes("assets/guide-bootstrap-workflow.js"),
+  "기본 페이지에 현재 화면 부트스트랩이 연결되지 않았습니다."
 );
 requireCondition(
-  indexSource.includes('id="structured-content"') &&
-    indexSource.includes("<details class=\"source-verification\">"),
-  "구조화 본문 또는 접힌 원문 대조 영역이 없습니다."
+  bootstrapSource.includes("assets/app-faithful-workflow.js"),
+  "부트스트랩에 현재 화면 코드가 연결되지 않았습니다."
 );
 requireCondition(
-  bootstrapSource.includes("assets/app-structured-v2.js"),
-  "구조화 앱이 부트스트랩에 연결되지 않았습니다."
+  indexSource.includes('id="step-list"') && indexSource.includes('id="breadcrumb"'),
+  "업무 단계 표시줄 또는 이동 경로 영역이 없습니다."
 );
 requireCondition(
-  !appSource.includes("flowStep") && !appSource.includes("관련 흐름"),
-  "자동 추정 흐름 연결 UI가 남아 있습니다."
+  indexSource.includes("assets/structured-details.js") &&
+    indexSource.includes("assets/structured-details.css"),
+  "구조화 본문 표현이 기본 페이지에 연결되지 않았습니다."
+);
+requireCondition(
+  appSource.includes("work.contentBlocks") && appSource.includes("GUIDE_WORKFLOW_LAYOUT"),
+  "화면이 구조화 블록과 의미 단계 배치를 사용하지 않습니다."
+);
+requireCondition(
+  !appSource.includes("flowStep") && !detailSource.includes("flowStep"),
+  "자동 추정 흐름 연결이 남아 있습니다."
 );
 
 console.log(
