@@ -283,6 +283,17 @@
     runSearch(searchInput.value);
   });
   searchInput.addEventListener("input", () => runSearch(searchInput.value));
+  // 검색 입력칸에서 Esc를 누르면 브라우저가 입력값만 지우고 이벤트를 멈추므로
+  // 대화상자를 직접 닫아 줍니다.
+  searchDialog.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeSearch();
+    }
+  });
+  searchDialog.addEventListener("close", () => {
+    if (lastFocusedElement instanceof HTMLElement) lastFocusedElement.focus();
+  });
   searchResults.addEventListener("click", (event) => {
     if (event.target.closest(".search-result")) closeSearch();
   });

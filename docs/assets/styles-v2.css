@@ -237,6 +237,15 @@ input {
   color: var(--guide-line);
 }
 
+/* KRDS 기본 구분 아이콘은 외부 서버의 SVG에 의존하므로 사용하지 않습니다.
+   구분 기호는 위의 텍스트 기호 하나만 표시합니다. */
+.krds-breadcrumb-wrap .breadcrumb li::after,
+.breadcrumb li:not(:last-child)::after,
+.breadcrumb li::after {
+  display: none !important;
+  content: none !important;
+}
+
 .breadcrumb a {
   color: inherit;
 }
@@ -608,6 +617,16 @@ input {
   margin: 0;
   padding: 0 0 1.2rem;
   list-style: none;
+}
+
+/* 단계가 많아 가로로 넘칠 때 더 볼 내용이 있음을 오른쪽 흐림으로 알립니다. */
+.guide-stepper.is-scrollable {
+  scroll-behavior: smooth;
+}
+
+.guide-stepper.is-scrollable:not(.at-end) {
+  -webkit-mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 4rem), transparent 100%);
+  mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 4rem), transparent 100%);
 }
 
 .guide-stepper li {

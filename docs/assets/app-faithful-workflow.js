@@ -365,6 +365,29 @@
       });
     });
 
+    // 단계가 많아 가로로 넘칠 때 현재 단계가 화면 밖에 있지 않도록 맞춥니다.
+    const syncStepperEdge = () => {
+      const overflow = stepList.scrollWidth - stepList.clientWidth;
+      stepList.classList.toggle("is-scrollable", overflow > 4);
+      stepList.classList.toggle("at-end", stepList.scrollLeft >= overflow - 4);
+    };
+    if (!stepList.dataset.edgeBound) {
+      stepList.dataset.edgeBound = "true";
+      stepList.addEventListener("scroll", syncStepperEdge, { passive: true });
+      window.addEventListener("resize", syncStepperEdge);
+    }
+    requestAnimationFrame(() => {
+      syncStepperEdge();
+      const activeButton = stepList.querySelector(".step-button.active");
+      if (!activeButton || !stepList.classList.contains("is-scrollable")) return;
+      const listBox = stepList.getBoundingClientRect();
+      const activeBox = activeButton.getBoundingClientRect();
+      const centerOffset =
+        activeBox.left - listBox.left + stepList.scrollLeft + activeBox.width / 2;
+      const target = centerOffset - stepList.clientWidth / 2;
+      stepList.scrollTo({ left: Math.max(0, target), behavior: "smooth" });
+    });
+
     let sourceNote = document.querySelector(".workflow-source-note");
     if (!sourceNote) {
       sourceNote = document.createElement("p");
@@ -965,6 +988,17 @@
     runSearch(searchInput.value);
   });
   searchInput.addEventListener("input", () => runSearch(searchInput.value));
+  // 검색 입력칸에서 Esc를 누르면 브라우저가 입력값만 지우고 이벤트를 멈추므로
+  // 대화상자를 직접 닫아 줍니다.
+  searchDialog.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeSearch();
+    }
+  });
+  searchDialog.addEventListener("close", () => {
+    if (lastFocusedElement instanceof HTMLElement) lastFocusedElement.focus();
+  });
   searchResults.addEventListener("click", (event) => {
     if (event.target.closest(".search-result")) closeSearch();
   });
