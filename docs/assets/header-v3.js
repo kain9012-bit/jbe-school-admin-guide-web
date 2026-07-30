@@ -6,18 +6,25 @@
   const chapterGrid = document.getElementById("chapter-grid");
   const mobileMenuButton = document.getElementById("global-menu-toggle");
   const mobileMenu = document.getElementById("mobile-global-nav");
+  const requestedId = new URLSearchParams(location.search).get("chapter");
   const active =
-    config.chapters.find((chapter) => chapter.id === new URLSearchParams(location.search).get("chapter") && chapter.available) ||
-    config.chapters.find((chapter) => chapter.id === config.defaultChapter);
+    config.chapters.find(
+      (chapter) => chapter.id === requestedId && chapter.available
+    ) || null;
 
   function chapterName(chapter) {
+    if (!chapter) return "전체 19개 편";
     return chapter.title ? `${chapter.label} ${chapter.title}` : chapter.label;
+  }
+
+  function globalHomeHref() {
+    return `${location.href.split(/[?#]/)[0]}#overview`;
   }
 
   function renderChapterGrid() {
     chapterGrid.innerHTML = config.chapters
       .map((chapter) => {
-        const current = chapter.id === active.id;
+        const current = Boolean(active && chapter.id === active.id);
         if (!chapter.available) {
           return `
             <li class="chapter-item is-planned">
@@ -39,6 +46,14 @@
         `;
       })
       .join("");
+
+    const available = config.chapters.filter((chapter) => chapter.available);
+    const note = document.getElementById("chapter-dialog-note");
+    if (note) {
+      note.textContent = `현재 ${available
+        .map((chapter) => chapter.label)
+        .join("·")}을 제공하며, 나머지 편은 자료 검수 후 순차적으로 열립니다.`;
+    }
   }
 
   function openChapterDialog() {
@@ -78,6 +93,10 @@
     target.textContent = chapterName(active);
   });
 
+  document.querySelectorAll("[data-global-home]").forEach((link) => {
+    link.href = globalHomeHref();
+  });
+
   function applyChapterContext(event) {
     const { chapter, data } = event.detail;
     const fullName = chapterName(chapter);
@@ -101,9 +120,11 @@
   }
 
   function patchGeneratedContext() {
-    const fullName = chapterName(window.ACTIVE_GUIDE_CHAPTER || active);
+    const currentChapter = window.ACTIVE_GUIDE_CHAPTER || active;
+    if (!currentChapter) return;
+    const fullName = chapterName(currentChapter);
     const sideTitle = document.getElementById("side-chapter-title");
-    if (sideTitle) sideTitle.textContent = `${window.ACTIVE_GUIDE_CHAPTER.label} 업무 목록`;
+    if (sideTitle) sideTitle.textContent = `${currentChapter.label} 업무 목록`;
 
     const breadcrumb = document.getElementById("breadcrumb");
     if (breadcrumb) {

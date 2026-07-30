@@ -1,0 +1,184 @@
+.global-home-hero .hero-copy {
+  max-width: 76rem;
+}
+
+.global-overview-content {
+  padding-block: 7.2rem 9.6rem;
+}
+
+.global-chapter-section {
+  scroll-margin-top: 2rem;
+}
+
+.global-chapter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.6rem;
+  margin-top: 3rem;
+}
+
+.global-chapter-card {
+  position: relative;
+  display: grid;
+  min-height: 15rem;
+  grid-template-columns: 4.8rem minmax(0, 1fr) auto;
+  gap: 1.4rem;
+  align-items: start;
+  padding: 2.2rem;
+  color: var(--guide-ink);
+  text-decoration: none;
+  background: #fff;
+  border: 1px solid var(--guide-line);
+  border-radius: 1.2rem;
+}
+
+.global-chapter-card.is-available {
+  border-color: #a9c8f8;
+  box-shadow: 0 0.6rem 1.8rem rgba(8, 56, 145, 0.07);
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.global-chapter-card.is-available:hover,
+.global-chapter-card.is-available:focus-visible {
+  border-color: var(--guide-blue);
+  box-shadow: 0 1rem 2.4rem rgba(8, 56, 145, 0.13);
+  transform: translateY(-0.2rem);
+}
+
+.global-chapter-card.is-planned {
+  color: var(--guide-muted);
+  background: #f8f9fb;
+}
+
+.global-chapter-number {
+  display: inline-flex;
+  width: 4.8rem;
+  height: 4.8rem;
+  align-items: center;
+  justify-content: center;
+  color: var(--guide-blue-dark);
+  background: var(--guide-blue-pale);
+  border-radius: 1.2rem;
+  font-size: 1.8rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.is-planned .global-chapter-number {
+  color: #59636e;
+  background: #e8ebef;
+}
+
+.global-chapter-copy {
+  display: grid;
+  min-width: 0;
+  gap: 0.55rem;
+}
+
+.global-chapter-copy small {
+  color: var(--guide-muted);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.global-chapter-copy strong {
+  min-height: 4.8rem;
+  font-size: 1.75rem;
+  line-height: 1.4;
+}
+
+.chapter-state {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 0.4rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.chapter-state.available {
+  color: var(--guide-blue-dark);
+  background: var(--guide-blue-pale);
+}
+
+.chapter-state.planned {
+  color: #59636e;
+  background: #e8ebef;
+}
+
+.global-chapter-arrow {
+  align-self: center;
+  color: var(--guide-blue);
+  font-size: 2rem;
+}
+
+.global-source-section {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 7.2rem;
+  padding: 3.2rem;
+  background: var(--guide-surface);
+  border-radius: 1.2rem;
+  scroll-margin-top: 2rem;
+}
+
+.global-source-section h2 {
+  margin: 0.6rem 0 0;
+  font-size: 2.6rem;
+}
+
+.global-source-section p:last-child {
+  max-width: 76rem;
+  margin: 1rem 0 0;
+  color: var(--guide-muted);
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+.global-home-mode .chapter-short {
+  max-width: 18rem;
+}
+
+@media (max-width: 1023px) {
+  .global-chapter-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .global-overview-content {
+    padding-block: 5.6rem 7.2rem;
+  }
+
+  .global-chapter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .global-chapter-card {
+    min-height: 13rem;
+    grid-template-columns: 4.2rem minmax(0, 1fr) auto;
+    padding: 1.8rem;
+  }
+
+  .global-chapter-number {
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+
+  .global-chapter-copy strong {
+    min-height: 0;
+    font-size: 1.65rem;
+  }
+
+  .global-source-section {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2.4rem;
+  }
+}

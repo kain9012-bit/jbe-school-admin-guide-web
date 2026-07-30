@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="vendor/krds/krds.min.css" />
     <link rel="stylesheet" href="assets/styles-v2.css" />
     <link rel="stylesheet" href="assets/header-v3.css" />
+    <link rel="stylesheet" href="assets/workflow-faithful.css" />
+    <link rel="stylesheet" href="assets/semantic-workflow.css" />
+    <link rel="stylesheet" href="assets/structured-details.css" />
+    <link rel="stylesheet" href="assets/global-home.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">본문 바로가기</a>
@@ -25,7 +29,7 @@
 
     <header id="krds-header" class="guide-global-header">
       <div class="global-header-inner">
-        <a class="guide-brand" href="?chapter=01#overview" aria-label="학교행정업무 길라잡이 처음으로">
+        <a class="guide-brand" href="#overview" data-global-home aria-label="학교행정업무 길라잡이 통합 홈">
           <span class="brand-symbol" aria-hidden="true">행정</span>
           <span class="brand-copy">
             <strong>학교행정업무 길라잡이</strong>
@@ -36,7 +40,7 @@
         <nav class="global-nav" aria-label="주요 메뉴">
           <button class="global-nav-item chapter-select" type="button" data-open-chapters>
             <span>편 선택</span>
-            <span class="chapter-short" data-current-chapter>제1편 행정업무 및 보안</span>
+            <span class="chapter-short" data-current-chapter>전체 19개 편</span>
             <span aria-hidden="true">⌄</span>
           </button>
           <a class="global-nav-item" href="#overview">업무 흐름</a>
@@ -61,7 +65,7 @@
 
       <nav class="mobile-global-nav" id="mobile-global-nav" aria-label="모바일 주요 메뉴" hidden>
         <button class="global-nav-item chapter-select" type="button" data-open-chapters>
-          <span>편 선택</span><span data-current-chapter>제1편 행정업무 및 보안</span>
+          <span>편 선택</span><span data-current-chapter>전체 19개 편</span>
         </button>
         <a class="global-nav-item" href="#overview"><span>업무 흐름</span><span aria-hidden="true">→</span></a>
         <button class="global-nav-item" type="button" data-open-search><span>질문·서식 검색</span><span aria-hidden="true">→</span></button>
@@ -75,7 +79,7 @@
       <div class="inner">
         <ol class="breadcrumb" id="breadcrumb">
           <li class="home"><a href="#overview">홈</a></li>
-          <li><span data-current-chapter>제1편 행정업무 및 보안</span></li>
+          <li><span data-current-chapter>전체 19개 편</span></li>
         </ol>
       </div>
     </div>
@@ -85,11 +89,11 @@
         <div class="guide-hero">
           <div class="inner">
             <div class="hero-copy">
-              <span class="krds-badge bg-light-primary" data-current-chapter>제1편 행정업무 및 보안</span>
+              <span class="krds-badge bg-light-primary" data-current-chapter>전체 19개 편</span>
               <h1>업무의 시작부터 마무리까지<br />순서대로 확인하세요</h1>
               <p>
-                원문을 길게 읽지 않아도 됩니다. 하려는 업무를 고르면 단계별 행동,
-                확인사항, 서식과 근거가 한 흐름으로 이어집니다.
+                매뉴얼에 실제로 제시된 업무 흐름을 따라 세부 내용과 관련 법규,
+                TIP, 서식과 FAQ를 한 화면에서 확인할 수 있습니다.
               </p>
               <form class="hero-search" id="hero-search-form" role="search">
                 <label class="sr-only" for="hero-search-input">업무, 질문, 서식 검색</label>
@@ -183,17 +187,17 @@
               </header>
 
               <div class="task-block action-block">
-                <h3><span aria-hidden="true">✓</span> 이 단계에서 할 일</h3>
+                <h3><span aria-hidden="true">✓</span> 업무 내용</h3>
                 <ol id="step-actions"></ol>
               </div>
 
               <div class="detail-grid">
                 <section class="task-block">
-                  <h3>확인사항</h3>
+                  <h3>관련 법규·참고자료</h3>
                   <ul id="step-checks"></ul>
                 </section>
                 <section class="task-block caution-block" id="caution-block">
-                  <h3>주의·예외</h3>
+                  <h3>TIP·주의사항</h3>
                   <ul id="step-cautions"></ul>
                 </section>
               </div>
@@ -232,7 +236,7 @@
       <div class="inner">
         <div>
           <strong>학교행정업무 길라잡이 웹판</strong>
-          <p><span data-current-chapter>제1편 행정업무 및 보안</span> · 제안용 시범 서비스</p>
+          <p><span data-current-chapter>전체 19개 편</span> · 제안용 시범 서비스</p>
         </div>
         <p>최신 기준과 최종 해석은 전북특별자치도교육청의 공식 원문을 우선합니다.</p>
       </div>
@@ -277,7 +281,9 @@
     <script src="vendor/krds/krds.min.js"></script>
     <script src="assets/guide-config.js"></script>
     <script src="assets/guide-search-index.js"></script>
+    <script src="assets/form-assets.js"></script>
+    <script src="assets/structured-details.js"></script>
     <script src="assets/header-v3.js"></script>
-    <script src="assets/guide-bootstrap.js"></script>
+    <script src="assets/guide-bootstrap-workflow.js"></script>
   </body>
 </html>

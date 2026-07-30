@@ -36,7 +36,7 @@
         })
       );
 
-      await loadScript("assets/app-v2.js");
+      await loadScript("assets/app-faithful.js");
       document.dispatchEvent(
         new CustomEvent("guide:app-ready", {
           detail: { chapter: activeChapter, data: chapterData, steps: chapterSteps }

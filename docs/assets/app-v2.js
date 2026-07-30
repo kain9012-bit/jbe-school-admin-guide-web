@@ -67,6 +67,21 @@
 
   const getForm = (formId) => data.forms.find((form) => form.id === formId);
 
+  function renderSearchExamples() {
+    const examples = data.meta.searchExamples || ["비전자문서", "대리결재", "폐기 공인", "기록물 이관"];
+    const target = byId("quick-keywords");
+    target.innerHTML = `
+      <span>추천</span>
+      ${examples
+        .map(
+          (query) =>
+            `<button type="button" data-query="${escapeHtml(query)}">${escapeHtml(query)}</button>`
+        )
+        .join("")}
+    `;
+    byId("hero-search-input").placeholder = `예: ${examples.join(", ")}`;
+  }
+
   function renderOverview() {
     workGrid.innerHTML = data.sections
       .map((work) => {
@@ -261,7 +276,8 @@
     renderResources(step);
     renderFaqs(work, step, requestedFaqNumber);
 
-    const pdfPage = Array.isArray(work.pdfPages) ? work.pdfPages[0] : 1;
+    const pageMatch = String(step.pages || "").match(/PDF\s+(\d+)/);
+    const pdfPage = pageMatch ? Number(pageMatch[1]) : Array.isArray(work.pdfPages) ? work.pdfPages[0] : 1;
     byId("source-page-link").href = `${data.downloads.manual}#page=${pdfPage}`;
 
     const prevButton = byId("prev-step");
@@ -570,6 +586,7 @@
   });
 
   window.addEventListener("hashchange", renderRoute);
+  renderSearchExamples();
   renderOverview();
   renderRoute();
 })();
