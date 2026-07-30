@@ -75,9 +75,22 @@ requireCondition(
   globalHome.includes("config.chapters.map(chapterCard)"),
   "통합 홈이 편 카드를 설정에서 생성하지 않습니다."
 );
+// 분야 카드는 그 자리에서 업무 목록을 펼치고, 업무를 고르면 곧바로 처리 단계로 갑니다.
 requireCondition(
-  globalHome.includes('href="?chapter=${encodeURIComponent(chapter.id)}#overview"'),
-  "이용 가능한 편 카드가 편별 홈으로 연결되지 않습니다."
+  globalHome.includes("data-toggle-chapter") && globalHome.includes('aria-expanded="false"'),
+  "분야 카드가 그 자리에서 펼쳐지는 방식이 아닙니다."
+);
+requireCondition(
+  globalHome.includes("#work=${encodeURIComponent("),
+  "업무를 선택했을 때 처리 단계로 바로 가지 않습니다."
+);
+requireCondition(
+  !globalHome.includes("웹판 이용 가능") && !globalHome.includes("웹판 준비 중"),
+  "분야 카드에 불필요한 상태 라벨이 남아 있습니다."
+);
+requireCondition(
+  globalHome.includes('breadcrumbWrap.hidden = true'),
+  "통합 홈에서 '홈' 한 칸만 남는 이동 경로가 숨겨지지 않습니다."
 );
 requireCondition(
   globalHome.includes('desktopChapterLink.textContent = "업무 분야"'),
@@ -121,6 +134,17 @@ for (const filename of ["index.html", "index-structured.html", "index-workflow.h
   for (const word of jargon) {
     requireCondition(!html.includes(word), `${filename}에 내부 기준 표현 '${word}'이 남아 있습니다.`);
   }
+  const navSearchButtons = (
+    html.match(/<nav class="global-nav"[\s\S]*?<\/nav>/)?.[0].match(/data-open-search/g) || []
+  ).length;
+  requireCondition(
+    navSearchButtons === 1,
+    `${filename}의 상단 메뉴에 같은 검색창을 여는 버튼이 ${navSearchButtons}개 있습니다.`
+  );
+  requireCondition(
+    !html.includes("편을 선택하세요"),
+    `${filename}에 '편을 선택하세요' 문구가 남아 있습니다.`
+  );
 }
 for (const asset of ["global-home.js", "header-v3.js", "guide-bootstrap-workflow.js"]) {
   const source = fs.readFileSync(path.join(root, "docs/assets", asset), "utf8");

@@ -28,34 +28,108 @@
     return `${chapter.label} ${chapter.title}`.trim();
   }
 
+  // 통합검색 색인에 들어 있는 업무 항목으로 분야별 업무 목록을 만듭니다.
+  // 편별 원문 데이터를 따로 불러오지 않아도 됩니다.
+  function worksOf(chapterId) {
+    return searchIndex.filter(
+      (item) => item.type === "업무" && item.chapterId === chapterId
+    );
+  }
+
+  function workHref(item) {
+    return `?chapter=${encodeURIComponent(item.chapterId)}#work=${encodeURIComponent(
+      item.workId
+    )}`;
+  }
+
   function chapterCard(chapter) {
     const name = chapterName(chapter);
-    if (chapter.available) {
+    if (!chapter.available) {
       return `
-        <a class="global-chapter-card is-available"
-           href="?chapter=${encodeURIComponent(chapter.id)}#overview">
-          <span class="global-chapter-number">${chapter.number}</span>
+        <article class="global-chapter-card is-planned">
+          <span class="global-chapter-number" aria-hidden="true">${chapter.number}</span>
           <span class="global-chapter-copy">
             <small>${escapeHtml(chapter.label)}</small>
             <strong>${escapeHtml(chapter.title)}</strong>
-            <span class="chapter-state available">웹판 이용 가능</span>
           </span>
-          <span class="global-chapter-arrow" aria-hidden="true">→</span>
-        </a>
+          <span class="sr-only">${escapeHtml(`${name}은 아직 웹에서 볼 수 없습니다.`)}</span>
+        </article>
       `;
     }
+
+    const works = worksOf(chapter.id);
+    const panelId = `chapter-works-${chapter.id}`;
     return `
-      <article class="global-chapter-card is-planned" aria-label="${escapeHtml(
-        `${name}, 웹판 준비 중`
-      )}">
-        <span class="global-chapter-number">${chapter.number}</span>
-        <span class="global-chapter-copy">
-          <small>${escapeHtml(chapter.label)}</small>
-          <strong>${escapeHtml(chapter.title)}</strong>
-          <span class="chapter-state planned">웹판 준비 중</span>
-        </span>
-      </article>
+      <div class="global-chapter-item" data-chapter-item="${escapeHtml(chapter.id)}">
+        <button class="global-chapter-card is-available" type="button"
+                aria-expanded="false" aria-controls="${panelId}"
+                data-toggle-chapter="${escapeHtml(chapter.id)}">
+          <span class="global-chapter-number" aria-hidden="true">${chapter.number}</span>
+          <span class="global-chapter-copy">
+            <small>${escapeHtml(chapter.label)}</small>
+            <strong>${escapeHtml(chapter.title)}</strong>
+            <span class="global-chapter-count">업무 ${works.length}개</span>
+          </span>
+          <span class="global-chapter-arrow" aria-hidden="true">⌄</span>
+        </button>
+        <div class="global-work-panel" id="${panelId}" hidden>
+          <div class="global-work-panel-inner">
+            <p class="global-work-lead">${escapeHtml(
+              `${chapter.title}의 업무를 선택하면 처리 단계로 바로 이동합니다.`
+            )}</p>
+            <ul class="global-work-list">
+              ${works
+                .map(
+                  (item, index) => `
+                <li>
+                  <a class="global-work-link" href="${escapeHtml(workHref(item))}">
+                    <span class="global-work-number">${String(index + 1).padStart(2, "0")}</span>
+                    <span class="global-work-copy">
+                      <strong>${escapeHtml(item.title)}</strong>
+                      <small>원문 ${escapeHtml(item.description)}</small>
+                    </span>
+                    <span class="global-work-arrow" aria-hidden="true">→</span>
+                  </a>
+                </li>
+              `
+                )
+                .join("")}
+            </ul>
+          </div>
+        </div>
+      </div>
     `;
+  }
+
+  // 카드를 누르면 그 자리에서 업무 목록이 부드럽게 열리고 닫힙니다.
+  function bindChapterToggles() {
+    document.querySelectorAll("[data-toggle-chapter]").forEach((button) => {
+      button.addEventListener("click", () => {
+        const panel = byId(button.getAttribute("aria-controls"));
+        if (!panel) return;
+        const willOpen = button.getAttribute("aria-expanded") !== "true";
+
+        // 한 번에 하나만 열어 화면이 길어지지 않게 합니다.
+        document.querySelectorAll("[data-toggle-chapter]").forEach((other) => {
+          if (other === button) return;
+          const otherPanel = byId(other.getAttribute("aria-controls"));
+          other.setAttribute("aria-expanded", "false");
+          if (otherPanel) {
+            otherPanel.hidden = true;
+            otherPanel.classList.remove("is-open");
+          }
+        });
+
+        button.setAttribute("aria-expanded", String(willOpen));
+        if (willOpen) {
+          panel.hidden = false;
+          requestAnimationFrame(() => panel.classList.add("is-open"));
+        } else {
+          panel.classList.remove("is-open");
+          panel.hidden = true;
+        }
+      });
+    });
   }
 
   function renderGlobalHome() {
@@ -154,13 +228,21 @@
       </div>
     `;
 
-    byId("breadcrumb").innerHTML =
-      '<li class="home"><span aria-current="page">홈</span></li>';
+    // 통합 홈은 이동 경로의 출발점이라 표시할 앞 단계가 없습니다.
+    // '홈' 한 글자만 남는 빈 줄을 없앱니다.
+    const breadcrumbWrap = document.querySelector(".krds-breadcrumb-wrap");
+    if (breadcrumbWrap) breadcrumbWrap.hidden = true;
+    byId("breadcrumb").innerHTML = "";
     document.querySelectorAll("[data-current-chapter]").forEach((target) => {
       target.textContent = "전체 업무";
     });
     document.querySelectorAll(".pdf-link").forEach((link) => {
       link.hidden = true;
+    });
+    // 통합 홈에는 분야 목록이 화면에 이미 펼쳐져 있으므로
+    // 같은 일을 하는 상단의 분야 선택 버튼은 숨깁니다.
+    document.querySelectorAll(".global-nav-item.chapter-select").forEach((button) => {
+      button.hidden = true;
     });
     const desktopChapterLink = document.querySelector(
       '.global-nav > a.global-nav-item[href="#overview"]'
@@ -267,6 +349,7 @@
   }
 
   renderGlobalHome();
+  bindChapterToggles();
 
   document.querySelectorAll("[data-open-search]").forEach((button) => {
     button.addEventListener("click", () => openSearch());

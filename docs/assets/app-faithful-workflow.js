@@ -375,28 +375,26 @@
       if (activeButton) activeButton.focus({ preventScroll: true });
     }
 
-    // 단계가 많아 가로로 넘칠 때 현재 단계가 화면 밖에 있지 않도록 맞춥니다.
-    const syncStepperEdge = () => {
-      const overflow = stepList.scrollWidth - stepList.clientWidth;
-      stepList.classList.toggle("is-scrollable", overflow > 4);
-      stepList.classList.toggle("at-end", stepList.scrollLeft >= overflow - 4);
+    // 단계가 많으면 가로로 밀지 않고 여러 줄로 나눠 전부 보이게 합니다.
+    // 한 줄에 몇 칸이 들어갈지는 화면 너비에 맞춰 정하고,
+    // 줄 끝에 놓인 단계는 다음 단계로 이어지는 선을 지웁니다.
+    const MIN_STEP_WIDTH = 128;
+    const layOutSteps = () => {
+      const items = [...stepList.children];
+      if (!items.length) return;
+      const width = stepList.clientWidth;
+      const columns = Math.max(1, Math.min(items.length, Math.floor(width / MIN_STEP_WIDTH)));
+      stepList.style.setProperty("--step-cols", columns);
+      items.forEach((item, index) => {
+        const endOfRow = (index + 1) % columns === 0;
+        item.classList.toggle("is-row-end", endOfRow);
+      });
     };
-    if (!stepList.dataset.edgeBound) {
-      stepList.dataset.edgeBound = "true";
-      stepList.addEventListener("scroll", syncStepperEdge, { passive: true });
-      window.addEventListener("resize", syncStepperEdge);
+    if (!stepList.dataset.layoutBound) {
+      stepList.dataset.layoutBound = "true";
+      window.addEventListener("resize", layOutSteps);
     }
-    requestAnimationFrame(() => {
-      syncStepperEdge();
-      const activeButton = stepList.querySelector(".step-button.active");
-      if (!activeButton || !stepList.classList.contains("is-scrollable")) return;
-      const listBox = stepList.getBoundingClientRect();
-      const activeBox = activeButton.getBoundingClientRect();
-      const centerOffset =
-        activeBox.left - listBox.left + stepList.scrollLeft + activeBox.width / 2;
-      const target = centerOffset - stepList.clientWidth / 2;
-      stepList.scrollTo({ left: Math.max(0, target), behavior: "smooth" });
-    });
+    layOutSteps();
 
     let sourceNote = document.querySelector(".workflow-source-note");
     if (!sourceNote) {

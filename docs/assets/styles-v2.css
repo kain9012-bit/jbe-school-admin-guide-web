@@ -610,31 +610,24 @@ input {
   margin-top: 4rem;
 }
 
+/* 단계가 많으면 가로로 밀지 않고 여러 줄로 나눠 한눈에 보이게 합니다.
+   한 줄에 들어갈 칸 수는 화면 너비에 맞춰 자바스크립트가 정합니다. */
 .guide-stepper {
   display: grid;
-  grid-template-columns: repeat(var(--step-count, 5), minmax(10rem, 1fr));
-  overflow-x: auto;
+  grid-template-columns: repeat(var(--step-cols, var(--step-count, 5)), minmax(0, 1fr));
+  row-gap: 2.4rem;
   margin: 0;
   padding: 0 0 1.2rem;
   list-style: none;
 }
 
-/* 단계가 많아 가로로 넘칠 때 더 볼 내용이 있음을 오른쪽 흐림으로 알립니다. */
-.guide-stepper.is-scrollable {
-  scroll-behavior: smooth;
-}
-
-.guide-stepper.is-scrollable:not(.at-end) {
-  -webkit-mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 4rem), transparent 100%);
-  mask-image: linear-gradient(to right, #000 0, #000 calc(100% - 4rem), transparent 100%);
-}
-
 .guide-stepper li {
   position: relative;
-  min-width: 12rem;
+  min-width: 0;
 }
 
-.guide-stepper li:not(:last-child)::before {
+/* 줄 끝에 놓인 단계는 이어지는 선을 그리지 않습니다. */
+.guide-stepper li:not(:last-child):not(.is-row-end)::before {
   position: absolute;
   top: 1.9rem;
   left: calc(50% + 2.2rem);
@@ -660,6 +653,10 @@ input {
   background: transparent;
   border: 0;
   cursor: pointer;
+}
+
+.step-button > span:last-child {
+  overflow-wrap: anywhere;
 }
 
 .step-button .step-circle {
