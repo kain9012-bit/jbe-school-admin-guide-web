@@ -72,17 +72,16 @@ const globalHome = fs.readFileSync(
   "utf8"
 );
 requireCondition(
-  globalHome.includes("config.chapters.map(chapterCard)") &&
-    globalHome.includes("학교행정업무 길라잡이 19개 편"),
-  "통합 홈이 19개 편 카드를 설정에서 생성하지 않습니다."
+  globalHome.includes("config.chapters.map(chapterCard)"),
+  "통합 홈이 편 카드를 설정에서 생성하지 않습니다."
 );
 requireCondition(
   globalHome.includes('href="?chapter=${encodeURIComponent(chapter.id)}#overview"'),
   "이용 가능한 편 카드가 편별 홈으로 연결되지 않습니다."
 );
 requireCondition(
-  globalHome.includes('desktopChapterLink.textContent = "전체 편"'),
-  "통합 홈의 상단 메뉴가 전체 편으로 바뀌지 않습니다."
+  globalHome.includes('desktopChapterLink.textContent = "업무 분야"'),
+  "통합 홈의 상단 메뉴가 업무 분야로 바뀌지 않습니다."
 );
 requireCondition(
   !globalHome.includes("9개 업무"),
@@ -100,8 +99,8 @@ for (const filename of ["index.html", "index-structured.html", "index-workflow.h
     `${filename}의 브랜드 홈이 제1편으로 고정되어 있습니다.`
   );
   requireCondition(
-    html.includes("data-current-chapter>전체 19개 편"),
-    `${filename}의 초기 편 문맥이 전체 19개 편이 아닙니다.`
+    html.includes("data-current-chapter>전체 업무"),
+    `${filename}의 초기 문맥 표시가 전체 업무가 아닙니다.`
   );
 }
 
@@ -114,6 +113,21 @@ requireCondition(
     chapterApp.includes('escapeHtml(globalHomeHref())'),
   "편별 화면의 홈 이동이 19개 편 통합 홈으로 연결되지 않습니다."
 );
+
+// 이용자에게 보이는 문구에 편 수 같은 내부 기준 표현이 없어야 합니다.
+const jargon = ["19개 편", "제19편", "전체 19개"];
+for (const filename of ["index.html", "index-structured.html", "index-workflow.html"]) {
+  const html = fs.readFileSync(path.join(root, "docs", filename), "utf8");
+  for (const word of jargon) {
+    requireCondition(!html.includes(word), `${filename}에 내부 기준 표현 '${word}'이 남아 있습니다.`);
+  }
+}
+for (const asset of ["global-home.js", "header-v3.js", "guide-bootstrap-workflow.js"]) {
+  const source = fs.readFileSync(path.join(root, "docs/assets", asset), "utf8");
+  for (const word of jargon) {
+    requireCondition(!source.includes(word), `${asset}에 내부 기준 표현 '${word}'이 남아 있습니다.`);
+  }
+}
 
 console.log(
   "global home valid: 19 chapters, no default chapter, integrated search and chapter entry checked"

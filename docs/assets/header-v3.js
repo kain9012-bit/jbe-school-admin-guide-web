@@ -13,7 +13,7 @@
     ) || null;
 
   function chapterName(chapter) {
-    if (!chapter) return "전체 19개 편";
+    if (!chapter) return "전체 업무";
     return chapter.title ? `${chapter.label} ${chapter.title}` : chapter.label;
   }
 

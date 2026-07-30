@@ -54,7 +54,7 @@
         main.innerHTML = `
           <section class="content-container load-error">
             <h1>안내서를 불러오지 못했습니다.</h1>
-            <p>잠시 후 다시 시도하거나 19개 편 통합 홈으로 이동해 주세요.</p>
+            <p>잠시 후 다시 시도하거나 통합 홈으로 이동해 주세요.</p>
             <a class="krds-btn primary" href="${location.pathname}#overview">
               통합 홈으로
             </a>

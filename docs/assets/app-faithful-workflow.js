@@ -342,6 +342,10 @@
 
   function renderStepList(work, steps, activeIndex) {
     const stepList = byId("step-list");
+    // 단계 목록을 다시 그리면 지금 눌린 버튼이 사라집니다.
+    // 그대로 두면 브라우저가 포커스를 잃으면서 화면을 위로 끌어올리므로,
+    // 다시 그린 뒤 같은 자리의 버튼으로 포커스를 옮겨 줍니다.
+    const hadFocusInStepList = stepList.contains(document.activeElement);
     stepList.style.setProperty("--step-count", steps.length);
     stepList.innerHTML = steps
       .map((step, index) => {
@@ -364,6 +368,12 @@
         location.hash = routeFor(work.id, button.dataset.stepId);
       });
     });
+
+    if (hadFocusInStepList) {
+      const activeButton = stepList.querySelector(".step-button.active");
+      // preventScroll을 주어 포커스를 옮기는 것만으로 화면이 움직이지 않게 합니다.
+      if (activeButton) activeButton.focus({ preventScroll: true });
+    }
 
     // 단계가 많아 가로로 넘칠 때 현재 단계가 화면 밖에 있지 않도록 맞춥니다.
     const syncStepperEdge = () => {
@@ -856,6 +866,9 @@
       location.hash = "#overview";
       return;
     }
+    // 같은 업무 안에서 단계만 바꾼 것인지 판단합니다.
+    // 단계만 바뀐 경우에는 보던 위치를 그대로 두어야 읽던 자리를 잃지 않습니다.
+    const stayedInSameWork = currentWorkId === work.id;
     currentWorkId = work.id;
     overviewView.hidden = true;
     workView.hidden = false;
@@ -872,7 +885,7 @@
     renderStep(work, step, options.faqNumber);
     document.title = `${work.title} · ${step.title} | 학교행정업무 길라잡이`;
     if (options.formId) requestAnimationFrame(() => openForm(options.formId));
-    else window.scrollTo({ top: 0, behavior: "instant" });
+    else if (!stayedInSameWork) window.scrollTo({ top: 0, behavior: "instant" });
   }
 
   function renderRoute() {
