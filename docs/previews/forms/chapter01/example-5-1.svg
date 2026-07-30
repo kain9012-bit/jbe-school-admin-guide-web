@@ -1,51 +1,50 @@
-<?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 841.88" width="595.28pt" height="841.88pt" font-family="'HCR Batang','함초롬바탕','Hancom Batang',AppleMyungjo,'Noto Serif CJK KR',serif" xml:space="preserve"><defs><clipPath id="pgclip0"><rect x="0" y="0" width="595.28" height="841.86" /></clipPath><clipPath id="pgclip1"><rect x="0" y="0" width="595.28" height="841.86" /></clipPath><clipPath id="pgclip2"><rect x="0" y="0" width="595.28" height="841.88" /></clipPath></defs>
-<g data-page="1" transform="translate(0 0.00)"><rect width="595.28" height="841.88" fill="white" stroke="#c9c7c4" stroke-width="0.75" /><g clip-path="url(#pgclip2)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 841.88" width="595.28pt" height="841.88pt" font-family="'HCR Batang','함초롬바탕','Hancom Batang',AppleMyungjo,'Noto Serif CJK KR',serif" xml:space="preserve">
+<defs><clipPath id="pgclip0"><rect x="0" y="0" width="595.28" height="841.88"/></clipPath></defs>
+<g data-page="1" transform="translate(0 0)"><rect width="595.28" height="841.88" fill="white" stroke="#c9c7c4" stroke-width="0.75"/><g clip-path="url(#pgclip0)">
 <text x="63.2" y="102.3" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="227.76" lengthAdjust="spacing">[예시5-1]단건 예시(행정안전부 제공 샘플)</text>
-<text x="173.07" y="155.99" font-size="20" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="93.12" lengthAdjust="spacing">○○학교</text>
-<text x="59.5" y="207.65" font-size="12" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="34.92" lengthAdjust="spacing">수신자</text>
-<text x="105.94" y="207.65" font-size="12" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="46.56" lengthAdjust="spacing">내부결재</text>
-<text x="59.5" y="226.29" font-size="12" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="30.96" lengthAdjust="spacing">(경유)</text>
-<text x="59.5" y="244.92" font-size="12" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="23.28" lengthAdjust="spacing">제목</text>
-<text x="105.94" y="244.92" font-size="12" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="315.36" lengthAdjust="spacing">○○○○○○ 채용을 위한 결격사유 및 범죄경력 유무조회</text>
-<line x1="56.69" y1="254.33" x2="536.74" y2="254.32" stroke="#000000" stroke-width="0.91" />
-<text x="56.69" y="266.29" font-size="11" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="481.88" lengthAdjust="spacing">2024년 ○○○○○○ 채용을 위한 관련 대상자의 결격사유 및 범죄경력 유무를 아래와 같이 </text>
-<text x="56.69" y="283.89" font-size="11" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="94.38" lengthAdjust="spacing">조회하고자 합니다.</text>
-<text x="56.69" y="301.49" font-size="11" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="154.61" lengthAdjust="spacing">근거법령: (예시) 0000법 제00조</text>
-<text x="56.69" y="319.09" font-size="11" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="301" lengthAdjust="spacing">2. 대상인원: 김00(123456-1234567), 김00(654321-7654321) </text>
-<text x="56.69" y="336.69" font-size="11" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="335.46" lengthAdjust="spacing"> ※ &lt;주의&gt; 공문 내용에 전체 대상인원 성명, 주민등록번호 모두 기입</text>
-<text x="56.69" y="354.29" font-size="11" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="151.3" lengthAdjust="spacing">3. 동의여부: (대상자 동의함 ■</text>
-<text x="224" y="354.29" font-size="11" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="60.5" lengthAdjust="spacing">동의안함 □)</text>
-<text x="56.69" y="371.89" font-size="11" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="208.07" lengthAdjust="spacing">4. 조회방법: 행정정보공동이용시스템 활용.</text>
-<text x="275.43" y="371.89" font-size="11" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="13.76" lengthAdjust="spacing">끝.</text>
-<text x="228.71" y="413.63" font-size="10" font-family="'Malgun Gothic','맑은 고딕','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="137.8" lengthAdjust="spacing">[내부결재 문서 작성 주의사항]</text>
-<text x="63.19" y="430.63" font-size="10" font-family="'Malgun Gothic','맑은 고딕','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="468.84" lengthAdjust="spacing">내부결재문서 등록 시 붙임파일(예: 전체대상자 명단 또는 사전동의서 등)을 첨부해야 할 경우 </text>
-<text x="63.19" y="447.63" font-size="10" font-family="'Malgun Gothic','맑은 고딕','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="49.24" lengthAdjust="spacing">결재문서와</text>
-<text x="112.43" y="447.63" font-size="10" font-family="'Malgun Gothic','맑은 고딕','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="419.6" lengthAdjust="spacing"> 붙임파일을 같이 스캔하여 하나의 파일로 만든 후 첨부하시기 바랍니다. (내부결재문서 </text>
-<text x="63.19" y="464.63" font-size="10" font-family="'Malgun Gothic','맑은 고딕','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="111" lengthAdjust="spacing">1개의 파일만 첨부 가능)</text>
-<line x1="58.09" y1="398.14" x2="537.16" y2="398.14" stroke="#000000" stroke-width="0.34" />
-<line x1="58.09" y1="473.11" x2="537.16" y2="473.11" stroke="#000000" stroke-width="0.34" />
-<line x1="58.09" y1="398.14" x2="58.09" y2="473.11" stroke="#000000" stroke-width="0.34" />
-<line x1="537.16" y1="398.14" x2="537.16" y2="473.11" stroke="#000000" stroke-width="0.34" />
-<text x="239.43" y="597.59" font-size="20" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="116.4" lengthAdjust="spacing">○○학교장</text>
-<rect x="58.09" y="632.22" width="479.13" height="4.8" fill="#CCCCCC" />
-<text x="59.5" y="659.89" font-size="10" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="29.1" lengthAdjust="spacing">주무관</text>
-<text x="188.53" y="659.89" font-size="10" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="38.8" lengthAdjust="spacing">행정실장</text>
-<text x="337.86" y="659.89" font-size="10" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing">교장</text>
-<text x="59.5" y="677.03" font-size="10" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="29.1" lengthAdjust="spacing">협조자</text>
-<text x="59.5" y="693.42" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing">시행</text>
-<text x="91.22" y="693.42" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="40.9" lengthAdjust="spacing">0 0학교-</text>
-<text x="152.12" y="693.42" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="100.2" lengthAdjust="spacing">( 20○○. ○○. ○○.)</text>
-<text x="306.14" y="693.42" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing">접수</text>
-<text x="59.5" y="707.65" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">우</text>
-<text x="366.06" y="707.65" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">/</text>
-<text x="59.5" y="720.45" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing">전화</text>
-<text x="89.74" y="720.45" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="44" lengthAdjust="spacing">000-0000</text>
-<text x="168.06" y="720.45" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing">전송</text>
-<text x="198.1" y="720.45" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="44" lengthAdjust="spacing">000-0000</text>
-<text x="276.42" y="720.45" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">/</text>
-<text x="283.5" y="720.45" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="76.13" lengthAdjust="spacing">00000@jbedu.kr</text>
-<text x="416.02" y="720.45" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">/</text>
-<text x="423.34" y="720.45" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="29.1" lengthAdjust="spacing">비공개</text>
+<text x="173.08" y="155.99" font-size="20" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="93.12" lengthAdjust="spacing">○○학교</text>
+<text x="59.5" y="207.41" font-size="12" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="34.92" lengthAdjust="spacing">수신자</text>
+<text x="105.94" y="207.41" font-size="12" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="46.56" lengthAdjust="spacing">내부결재</text>
+<text x="59.5" y="226.05" font-size="12" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="30.96" lengthAdjust="spacing">(경유)</text>
+<text x="59.5" y="244.68" font-size="12" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="23.28" lengthAdjust="spacing">제목</text>
+<text x="105.94" y="244.68" font-size="12" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="315.36" lengthAdjust="spacing">○○○○○○ 채용을 위한 결격사유 및 범죄경력 유무조회</text>
+<line x1="56.69" y1="255.09" x2="536.74" y2="255.08" stroke="#000000" stroke-width="0.91"/>
+<text x="56.69" y="267.05" font-size="11" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="481.9" lengthAdjust="spacing">2024년 ○○○○○○ 채용을 위한 관련 대상자의 결격사유 및 범죄경력 유무를 아래와 같이 </text>
+<text x="56.69" y="284.65" font-size="11" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="94.38" lengthAdjust="spacing">조회하고자 합니다.</text>
+<text x="56.69" y="302.25" font-size="11" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="154.61" lengthAdjust="spacing">근거법령: (예시) 0000법 제00조</text>
+<text x="56.69" y="319.85" font-size="11" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="301" lengthAdjust="spacing">2. 대상인원: 김00(123456-1234567), 김00(654321-7654321) </text>
+<text x="56.69" y="337.45" font-size="11" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="335.46" lengthAdjust="spacing"> ※ &lt;주의&gt; 공문 내용에 전체 대상인원 성명, 주민등록번호 모두 기입</text>
+<text x="56.69" y="355.05" font-size="11" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="151.3" lengthAdjust="spacing">3. 동의여부: (대상자 동의함 ■</text>
+<text x="224" y="355.05" font-size="11" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="60.5" lengthAdjust="spacing">동의안함 □)</text>
+<text x="56.69" y="372.65" font-size="11" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="208.07" lengthAdjust="spacing">4. 조회방법: 행정정보공동이용시스템 활용.</text>
+<text x="275.43" y="372.65" font-size="11" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="13.76" lengthAdjust="spacing">끝.</text>
+<text x="228.73" y="414.39" font-size="10" font-family="'Malgun Gothic','맑은 고딕','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="137.8" lengthAdjust="spacing">[내부결재 문서 작성 주의사항]</text>
+<text x="63.19" y="431.39" font-size="10" font-family="'Malgun Gothic','맑은 고딕','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="463.86" lengthAdjust="spacing">내부결재문서 등록 시 붙임파일(예: 전체대상자 명단 또는 사전동의서 등)을 첨부해야 할 경우 결재문서와</text>
+<text x="63.19" y="448.39" font-size="10" font-family="'Malgun Gothic','맑은 고딕','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="468.87" lengthAdjust="spacingAndGlyphs">붙임파일을 같이 스캔하여 하나의 파일로 만든 후 첨부하시기 바랍니다. (내부결재문서 1개의 파일만 첨부 </text>
+<text x="63.19" y="465.39" font-size="10" font-family="'Malgun Gothic','맑은 고딕','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="22.6" lengthAdjust="spacing">가능)</text>
+<line x1="58.09" y1="398.9" x2="537.16" y2="398.9" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.09" y1="473.87" x2="537.16" y2="473.87" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.09" y1="398.9" x2="58.09" y2="473.87" stroke="#000000" stroke-width="0.34"/>
+<line x1="537.16" y1="398.9" x2="537.16" y2="473.87" stroke="#000000" stroke-width="0.34"/>
+<text x="239.44" y="599.07" font-size="20" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="116.4" lengthAdjust="spacing">○○학교장</text>
+<rect x="58.09" y="600.07" width="479.13" height="4.8" fill="#CCCCCC"/>
+<text x="59.5" y="627.74" font-size="10" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="29.1" lengthAdjust="spacing">주무관</text>
+<text x="188.53" y="627.74" font-size="10" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="38.8" lengthAdjust="spacing">행정실장</text>
+<text x="337.86" y="627.74" font-size="10" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing">교장</text>
+<text x="59.5" y="644.88" font-size="10" font-family="'GulimChe','굴림체','Gulim','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="29.1" lengthAdjust="spacing">협조자</text>
+<text x="59.5" y="661.27" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing">시행</text>
+<text x="91.22" y="661.27" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="40.9" lengthAdjust="spacing">0 0학교-</text>
+<text x="152.12" y="661.27" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="100.2" lengthAdjust="spacing">( 20○○. ○○. ○○.)</text>
+<text x="306.14" y="661.27" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing">접수</text>
+<text x="59.5" y="675.5" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">우</text>
+<text x="366.06" y="675.5" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">/</text>
+<text x="59.5" y="688.3" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing">전화</text>
+<text x="89.74" y="688.3" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="44" lengthAdjust="spacing">000-0000</text>
+<text x="168.06" y="688.3" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing">전송</text>
+<text x="198.1" y="688.3" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="44" lengthAdjust="spacing">000-0000</text>
+<text x="276.42" y="688.3" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">/</text>
+<text x="283.5" y="688.3" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="76.13" lengthAdjust="spacing">00000@jbedu.kr</text>
+<text x="416.02" y="688.3" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">/</text>
+<text x="423.34" y="688.3" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="29.1" lengthAdjust="spacing">비공개</text>
 </g></g>
 </svg>

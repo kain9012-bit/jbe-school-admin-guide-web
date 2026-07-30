@@ -1,104 +1,106 @@
-<?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 841.86" width="595.28pt" height="841.86pt" font-family="'HCR Batang','함초롬바탕','Hancom Batang',AppleMyungjo,'Noto Serif CJK KR',serif" xml:space="preserve"><defs><clipPath id="pgclip0"><rect x="0" y="0" width="595.28" height="841.86" /></clipPath><clipPath id="pgclip1"><rect x="0" y="0" width="595.28" height="841.86" /></clipPath></defs>
-<g data-page="1" transform="translate(0 0.00)"><rect width="595.28" height="841.86" fill="white" stroke="#c9c7c4" stroke-width="0.75" /><g clip-path="url(#pgclip1)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 1707.72" width="595.28pt" height="1707.72pt" font-family="'HCR Batang','함초롬바탕','Hancom Batang',AppleMyungjo,'Noto Serif CJK KR',serif" xml:space="preserve">
+<defs><clipPath id="pgclip0"><rect x="0" y="0" width="595.28" height="841.86"/></clipPath></defs>
+<g data-page="1" transform="translate(0 0)"><rect width="595.28" height="841.86" fill="white" stroke="#c9c7c4" stroke-width="0.75"/><g clip-path="url(#pgclip0)">
 <text x="63.2" y="102.3" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="50.76" lengthAdjust="spacing">[예시5-1]</text>
 <text x="262.74" y="170.29" font-size="18" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="69.84" lengthAdjust="spacing">○○학교</text>
-<text x="58.1" y="155.06" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="23.28" lengthAdjust="spacing">수신</text>
-<text x="113.03" y="155.06" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="81.48" lengthAdjust="spacing">전북특별자치도</text>
-<text x="194.51" y="155.06" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="193.92" lengthAdjust="spacing">○○교육지원청교육장(행정지원과장)</text>
-<text x="58.1" y="174.7" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="30.96" lengthAdjust="spacing">(경유)</text>
-<text x="58.1" y="194.34" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="23.28" lengthAdjust="spacing">제목</text>
-<text x="113.03" y="194.34" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="75.84" lengthAdjust="spacing">질병휴직 신청</text>
-<line x1="56.69" y1="270.72" x2="536.74" y2="270.67" stroke="#000000" stroke-width="0.91" />
-<text x="56.69" y="283.97" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="433.08" lengthAdjust="spacing">지방공무원법 제63조제1항제1호의 규정에 따라 다음과 같이 휴직을 신청합니다.</text>
-<text x="79.24" y="311.36" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="29.28" lengthAdjust="spacing">소 속</text>
-<text x="153.64" y="311.36" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="29.28" lengthAdjust="spacing">직 급</text>
-<text x="226.62" y="311.36" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="29.28" lengthAdjust="spacing">성 명</text>
-<text x="293.66" y="311.36" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="52.56" lengthAdjust="spacing">휴직 사유</text>
-<text x="386.38" y="311.36" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="69.84" lengthAdjust="spacing">휴직신청기간</text>
-<text x="495.41" y="311.36" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="23.28" lengthAdjust="spacing">비고</text>
-<text x="76.42" y="352.34" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="34.92" lengthAdjust="spacing">○○중</text>
-<text x="145" y="342.74" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="46.56" lengthAdjust="spacing">지방교육</text>
-<text x="139.18" y="361.94" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="58.2" lengthAdjust="spacing">행정주사보</text>
-<text x="223.8" y="352.34" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="34.92" lengthAdjust="spacing">○○○</text>
-<text x="296.66" y="352.34" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="46.56" lengthAdjust="spacing">질병휴직</text>
-<text x="380.2" y="342.74" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="82.2" lengthAdjust="spacing">20○○.00.00∼</text>
-<text x="370.06" y="361.94" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="102.48" lengthAdjust="spacing"> 20○○.00.00(1년)</text>
-<line x1="58.09" y1="292.97" x2="129.65" y2="292.97" stroke="#000000" stroke-width="1.13" />
-<line x1="58.09" y1="321.35" x2="129.65" y2="321.35" stroke="#000000" stroke-width="1.42" />
-<line x1="58.09" y1="292.97" x2="58.09" y2="321.35" stroke="#000000" stroke-width="1.13" />
-<line x1="129.65" y1="292.97" x2="129.65" y2="321.35" stroke="#000000" stroke-width="0.34" />
-<line x1="129.65" y1="292.97" x2="206.89" y2="292.97" stroke="#000000" stroke-width="1.13" />
-<line x1="129.65" y1="321.35" x2="206.89" y2="321.35" stroke="#000000" stroke-width="1.42" />
-<line x1="129.65" y1="292.97" x2="129.65" y2="321.35" stroke="#000000" stroke-width="0.34" />
-<line x1="206.89" y1="292.97" x2="206.89" y2="321.35" stroke="#000000" stroke-width="0.34" />
-<line x1="206.89" y1="292.97" x2="275.61" y2="292.97" stroke="#000000" stroke-width="1.13" />
-<line x1="206.89" y1="321.35" x2="275.61" y2="321.35" stroke="#000000" stroke-width="1.42" />
-<line x1="206.89" y1="292.97" x2="206.89" y2="321.35" stroke="#000000" stroke-width="0.34" />
-<line x1="275.61" y1="292.97" x2="275.61" y2="321.35" stroke="#000000" stroke-width="0.34" />
-<line x1="275.61" y1="292.97" x2="364.25" y2="292.97" stroke="#000000" stroke-width="1.13" />
-<line x1="275.61" y1="321.35" x2="364.25" y2="321.35" stroke="#000000" stroke-width="1.42" />
-<line x1="275.61" y1="292.97" x2="275.61" y2="321.35" stroke="#000000" stroke-width="0.34" />
-<line x1="364.25" y1="292.97" x2="364.25" y2="321.35" stroke="#000000" stroke-width="0.34" />
-<line x1="364.25" y1="292.97" x2="478.36" y2="292.97" stroke="#000000" stroke-width="1.13" />
-<line x1="364.25" y1="321.35" x2="478.36" y2="321.35" stroke="#000000" stroke-width="1.42" />
-<line x1="364.25" y1="292.97" x2="364.25" y2="321.35" stroke="#000000" stroke-width="0.34" />
-<line x1="478.36" y1="292.97" x2="478.36" y2="321.35" stroke="#000000" stroke-width="0.34" />
-<line x1="478.36" y1="292.97" x2="535.73" y2="292.97" stroke="#000000" stroke-width="1.13" />
-<line x1="478.36" y1="321.35" x2="535.73" y2="321.35" stroke="#000000" stroke-width="1.42" />
-<line x1="478.36" y1="292.97" x2="478.36" y2="321.35" stroke="#000000" stroke-width="0.34" />
-<line x1="535.73" y1="292.97" x2="535.73" y2="321.35" stroke="#000000" stroke-width="1.13" />
-<line x1="58.09" y1="321.35" x2="129.65" y2="321.35" stroke="#000000" stroke-width="1.42" />
-<line x1="58.09" y1="374.93" x2="129.65" y2="374.93" stroke="#000000" stroke-width="1.13" />
-<line x1="58.09" y1="321.35" x2="58.09" y2="374.93" stroke="#000000" stroke-width="1.13" />
-<line x1="129.65" y1="321.35" x2="129.65" y2="374.93" stroke="#000000" stroke-width="0.34" />
-<line x1="129.65" y1="321.35" x2="206.89" y2="321.35" stroke="#000000" stroke-width="1.42" />
-<line x1="129.65" y1="374.93" x2="206.89" y2="374.93" stroke="#000000" stroke-width="1.13" />
-<line x1="129.65" y1="321.35" x2="129.65" y2="374.93" stroke="#000000" stroke-width="0.34" />
-<line x1="206.89" y1="321.35" x2="206.89" y2="374.93" stroke="#000000" stroke-width="0.34" />
-<line x1="206.89" y1="321.35" x2="275.61" y2="321.35" stroke="#000000" stroke-width="1.42" />
-<line x1="206.89" y1="374.93" x2="275.61" y2="374.93" stroke="#000000" stroke-width="1.13" />
-<line x1="206.89" y1="321.35" x2="206.89" y2="374.93" stroke="#000000" stroke-width="0.34" />
-<line x1="275.61" y1="321.35" x2="275.61" y2="374.93" stroke="#000000" stroke-width="0.34" />
-<line x1="275.61" y1="321.35" x2="364.25" y2="321.35" stroke="#000000" stroke-width="1.42" />
-<line x1="275.61" y1="374.93" x2="364.25" y2="374.93" stroke="#000000" stroke-width="1.13" />
-<line x1="275.61" y1="321.35" x2="275.61" y2="374.93" stroke="#000000" stroke-width="0.34" />
-<line x1="364.25" y1="321.35" x2="364.25" y2="374.93" stroke="#000000" stroke-width="0.34" />
-<line x1="364.25" y1="321.35" x2="478.36" y2="321.35" stroke="#000000" stroke-width="1.42" />
-<line x1="364.25" y1="374.93" x2="478.36" y2="374.93" stroke="#000000" stroke-width="1.13" />
-<line x1="364.25" y1="321.35" x2="364.25" y2="374.93" stroke="#000000" stroke-width="0.34" />
-<line x1="478.36" y1="321.35" x2="478.36" y2="374.93" stroke="#000000" stroke-width="0.34" />
-<line x1="478.36" y1="321.35" x2="535.73" y2="321.35" stroke="#000000" stroke-width="1.42" />
-<line x1="478.36" y1="374.93" x2="535.73" y2="374.93" stroke="#000000" stroke-width="1.13" />
-<line x1="478.36" y1="321.35" x2="478.36" y2="374.93" stroke="#000000" stroke-width="0.34" />
-<line x1="535.73" y1="321.35" x2="535.73" y2="374.93" stroke="#000000" stroke-width="1.13" />
-<text x="56.69" y="414.33" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="23.28" lengthAdjust="spacing">붙임</text>
-<text x="91.97" y="414.33" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="102.72" lengthAdjust="spacing">1. 휴직신청서 1부.</text>
-<text x="92.69" y="433.53" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="227.52" lengthAdjust="spacing">2. 진단서(병명 및 치료기간 등 명시) 1부.</text>
-<text x="332.21" y="433.53" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="15.48" lengthAdjust="spacing">끝.</text>
-<rect x="58.09" y="610.41" width="476.3" height="4.8" fill="#CCCCCC" />
-<text x="242.28" y="519.91" font-size="20" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="116.4" lengthAdjust="spacing">○○학교장</text>
-<text x="59.5" y="568.24" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="29.1" lengthAdjust="spacing">수신자</text>
-<text x="59.5" y="640.21" font-size="8" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="23.28" lengthAdjust="spacing">주무관</text>
-<text x="133.5" y="640.21" font-size="8" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="23.28" lengthAdjust="spacing">○○○</text>
-<text x="182.82" y="640.21" font-size="8" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="31.04" lengthAdjust="spacing">행정실장</text>
-<text x="256.82" y="640.21" font-size="8" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="23.28" lengthAdjust="spacing">○○○</text>
-<text x="306.14" y="640.21" font-size="8" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="15.52" lengthAdjust="spacing">교장</text>
-<text x="380.14" y="640.21" font-size="8" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="23.28" lengthAdjust="spacing">○○○</text>
-<text x="59.5" y="663.71" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="29.1" lengthAdjust="spacing">협조자</text>
-<text x="59.5" y="682.93" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing">시행</text>
-<text x="82.7" y="682.93" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="40.9" lengthAdjust="spacing">0 0학교-</text>
-<text x="143.6" y="682.93" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="73.4" lengthAdjust="spacing">( 20○○.00.00.)</text>
-<text x="306.14" y="682.93" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing">접수</text>
-<text x="59.5" y="698.57" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">우</text>
-<text x="366.06" y="698.57" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">/</text>
-<text x="59.5" y="714.21" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing">전화</text>
-<text x="84.06" y="714.21" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="44" lengthAdjust="spacing">000-0000</text>
-<text x="159.54" y="714.21" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing">전송</text>
-<text x="183.9" y="714.21" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="44" lengthAdjust="spacing">000-0000</text>
-<text x="259.38" y="714.21" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">/</text>
-<text x="266.7" y="714.21" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="87.66" lengthAdjust="spacing">7080@hanmail.net</text>
-<text x="416.02" y="714.21" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">/</text>
-<text x="423.34" y="714.21" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="29.1" lengthAdjust="spacing">비공개</text>
+<text x="58.1" y="219.64" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="23.28" lengthAdjust="spacing">수신</text>
+<text x="113.03" y="219.64" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="81.48" lengthAdjust="spacing">전북특별자치도</text>
+<text x="194.51" y="219.64" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="193.92" lengthAdjust="spacing">○○교육지원청교육장(행정지원과장)</text>
+<text x="58.1" y="239.28" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="30.96" lengthAdjust="spacing">(경유)</text>
+<text x="58.1" y="258.92" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="23.28" lengthAdjust="spacing">제목</text>
+<text x="113.03" y="258.92" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="75.84" lengthAdjust="spacing">질병휴직 신청</text>
+<line x1="56.69" y1="280.72" x2="536.74" y2="280.67" stroke="#000000" stroke-width="0.91"/>
+<text x="56.69" y="293.97" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="433.08" lengthAdjust="spacing">지방공무원법 제63조제1항제1호의 규정에 따라 다음과 같이 휴직을 신청합니다.</text>
+<text x="79.23" y="321.36" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="29.28" lengthAdjust="spacing">소 속</text>
+<text x="153.63" y="321.36" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="29.28" lengthAdjust="spacing">직 급</text>
+<text x="226.61" y="321.36" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="29.28" lengthAdjust="spacing">성 명</text>
+<text x="293.65" y="321.36" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="52.56" lengthAdjust="spacing">휴직 사유</text>
+<text x="386.39" y="321.36" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="69.84" lengthAdjust="spacing">휴직신청기간</text>
+<text x="495.41" y="321.36" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="23.28" lengthAdjust="spacing">비고</text>
+<text x="76.41" y="362.34" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="34.92" lengthAdjust="spacing">○○중</text>
+<text x="144.99" y="352.74" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="46.56" lengthAdjust="spacing">지방교육</text>
+<text x="139.17" y="371.94" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="58.2" lengthAdjust="spacing">행정주사보</text>
+<text x="223.79" y="362.34" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="34.92" lengthAdjust="spacing">○○○</text>
+<text x="296.65" y="362.34" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="46.56" lengthAdjust="spacing">질병휴직</text>
+<text x="380.21" y="352.74" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="82.2" lengthAdjust="spacing">20○○.00.00∼</text>
+<text x="370.07" y="371.94" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="102.48" lengthAdjust="spacing"> 20○○.00.00(1년)</text>
+<line x1="58.09" y1="302.97" x2="129.65" y2="302.97" stroke="#000000" stroke-width="1.13"/>
+<line x1="58.09" y1="331.35" x2="129.65" y2="331.35" stroke="#000000" stroke-width="1.42"/>
+<line x1="58.09" y1="302.97" x2="58.09" y2="331.35" stroke="#000000" stroke-width="1.13"/>
+<line x1="129.65" y1="302.97" x2="129.65" y2="331.35" stroke="#000000" stroke-width="0.34"/>
+<line x1="129.65" y1="302.97" x2="206.89" y2="302.97" stroke="#000000" stroke-width="1.13"/>
+<line x1="129.65" y1="331.35" x2="206.89" y2="331.35" stroke="#000000" stroke-width="1.42"/>
+<line x1="129.65" y1="302.97" x2="129.65" y2="331.35" stroke="#000000" stroke-width="0.34"/>
+<line x1="206.89" y1="302.97" x2="206.89" y2="331.35" stroke="#000000" stroke-width="0.34"/>
+<line x1="206.89" y1="302.97" x2="275.61" y2="302.97" stroke="#000000" stroke-width="1.13"/>
+<line x1="206.89" y1="331.35" x2="275.61" y2="331.35" stroke="#000000" stroke-width="1.42"/>
+<line x1="206.89" y1="302.97" x2="206.89" y2="331.35" stroke="#000000" stroke-width="0.34"/>
+<line x1="275.61" y1="302.97" x2="275.61" y2="331.35" stroke="#000000" stroke-width="0.34"/>
+<line x1="275.61" y1="302.97" x2="364.25" y2="302.97" stroke="#000000" stroke-width="1.13"/>
+<line x1="275.61" y1="331.35" x2="364.25" y2="331.35" stroke="#000000" stroke-width="1.42"/>
+<line x1="275.61" y1="302.97" x2="275.61" y2="331.35" stroke="#000000" stroke-width="0.34"/>
+<line x1="364.25" y1="302.97" x2="364.25" y2="331.35" stroke="#000000" stroke-width="0.34"/>
+<line x1="364.25" y1="302.97" x2="478.36" y2="302.97" stroke="#000000" stroke-width="1.13"/>
+<line x1="364.25" y1="331.35" x2="478.36" y2="331.35" stroke="#000000" stroke-width="1.42"/>
+<line x1="364.25" y1="302.97" x2="364.25" y2="331.35" stroke="#000000" stroke-width="0.34"/>
+<line x1="478.36" y1="302.97" x2="478.36" y2="331.35" stroke="#000000" stroke-width="0.34"/>
+<line x1="478.36" y1="302.97" x2="535.73" y2="302.97" stroke="#000000" stroke-width="1.13"/>
+<line x1="478.36" y1="331.35" x2="535.73" y2="331.35" stroke="#000000" stroke-width="1.42"/>
+<line x1="478.36" y1="302.97" x2="478.36" y2="331.35" stroke="#000000" stroke-width="0.34"/>
+<line x1="535.73" y1="302.97" x2="535.73" y2="331.35" stroke="#000000" stroke-width="1.13"/>
+<line x1="58.09" y1="331.35" x2="129.65" y2="331.35" stroke="#000000" stroke-width="1.42"/>
+<line x1="58.09" y1="384.93" x2="129.65" y2="384.93" stroke="#000000" stroke-width="1.13"/>
+<line x1="58.09" y1="331.35" x2="58.09" y2="384.93" stroke="#000000" stroke-width="1.13"/>
+<line x1="129.65" y1="331.35" x2="129.65" y2="384.93" stroke="#000000" stroke-width="0.34"/>
+<line x1="129.65" y1="331.35" x2="206.89" y2="331.35" stroke="#000000" stroke-width="1.42"/>
+<line x1="129.65" y1="384.93" x2="206.89" y2="384.93" stroke="#000000" stroke-width="1.13"/>
+<line x1="129.65" y1="331.35" x2="129.65" y2="384.93" stroke="#000000" stroke-width="0.34"/>
+<line x1="206.89" y1="331.35" x2="206.89" y2="384.93" stroke="#000000" stroke-width="0.34"/>
+<line x1="206.89" y1="331.35" x2="275.61" y2="331.35" stroke="#000000" stroke-width="1.42"/>
+<line x1="206.89" y1="384.93" x2="275.61" y2="384.93" stroke="#000000" stroke-width="1.13"/>
+<line x1="206.89" y1="331.35" x2="206.89" y2="384.93" stroke="#000000" stroke-width="0.34"/>
+<line x1="275.61" y1="331.35" x2="275.61" y2="384.93" stroke="#000000" stroke-width="0.34"/>
+<line x1="275.61" y1="331.35" x2="364.25" y2="331.35" stroke="#000000" stroke-width="1.42"/>
+<line x1="275.61" y1="384.93" x2="364.25" y2="384.93" stroke="#000000" stroke-width="1.13"/>
+<line x1="275.61" y1="331.35" x2="275.61" y2="384.93" stroke="#000000" stroke-width="0.34"/>
+<line x1="364.25" y1="331.35" x2="364.25" y2="384.93" stroke="#000000" stroke-width="0.34"/>
+<line x1="364.25" y1="331.35" x2="478.36" y2="331.35" stroke="#000000" stroke-width="1.42"/>
+<line x1="364.25" y1="384.93" x2="478.36" y2="384.93" stroke="#000000" stroke-width="1.13"/>
+<line x1="364.25" y1="331.35" x2="364.25" y2="384.93" stroke="#000000" stroke-width="0.34"/>
+<line x1="478.36" y1="331.35" x2="478.36" y2="384.93" stroke="#000000" stroke-width="0.34"/>
+<line x1="478.36" y1="331.35" x2="535.73" y2="331.35" stroke="#000000" stroke-width="1.42"/>
+<line x1="478.36" y1="384.93" x2="535.73" y2="384.93" stroke="#000000" stroke-width="1.13"/>
+<line x1="478.36" y1="331.35" x2="478.36" y2="384.93" stroke="#000000" stroke-width="0.34"/>
+<line x1="535.73" y1="331.35" x2="535.73" y2="384.93" stroke="#000000" stroke-width="1.13"/>
+<text x="56.69" y="424.33" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="23.28" lengthAdjust="spacing">붙임</text>
+<text x="91.97" y="424.33" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="102.72" lengthAdjust="spacing">1. 휴직신청서 1부.</text>
+<text x="92.69" y="443.53" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="227.52" lengthAdjust="spacing">2. 진단서(병명 및 치료기간 등 명시) 1부.</text>
+<text x="332.21" y="443.53" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="15.48" lengthAdjust="spacing">끝.</text>
+</g></g>
+<g data-page="2" transform="translate(0 865.86)"><rect width="595.28" height="841.86" fill="white" stroke="#c9c7c4" stroke-width="0.75"/><g clip-path="url(#pgclip0)">
+<rect x="58.09" y="201.47" width="476.3" height="4.8" fill="#CCCCCC"/>
+<text x="242.29" y="110.97" font-size="20" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="116.4" lengthAdjust="spacing">○○학교장</text>
+<text x="59.5" y="159.3" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="29.1" lengthAdjust="spacing">수신자</text>
+<text x="59.5" y="231.27" font-size="8" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="23.28" lengthAdjust="spacing">주무관</text>
+<text x="133.5" y="231.27" font-size="8" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="23.28" lengthAdjust="spacing">○○○</text>
+<text x="182.82" y="231.27" font-size="8" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="31.04" lengthAdjust="spacing">행정실장</text>
+<text x="256.82" y="231.27" font-size="8" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="23.28" lengthAdjust="spacing">○○○</text>
+<text x="306.14" y="231.27" font-size="8" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="15.52" lengthAdjust="spacing">교장</text>
+<text x="380.14" y="231.27" font-size="8" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="23.28" lengthAdjust="spacing">○○○</text>
+<text x="59.5" y="254.77" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="29.1" lengthAdjust="spacing">협조자</text>
+<text x="59.5" y="273.99" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing">시행</text>
+<text x="82.7" y="273.99" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="40.9" lengthAdjust="spacing">0 0학교-</text>
+<text x="143.6" y="273.99" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="73.4" lengthAdjust="spacing">( 20○○.00.00.)</text>
+<text x="306.14" y="273.99" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing">접수</text>
+<text x="59.5" y="289.63" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">우</text>
+<text x="366.06" y="289.63" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">/</text>
+<text x="59.5" y="305.27" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing">전화</text>
+<text x="84.06" y="305.27" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="44" lengthAdjust="spacing">000-0000</text>
+<text x="159.54" y="305.27" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing">전송</text>
+<text x="183.9" y="305.27" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="44" lengthAdjust="spacing">000-0000</text>
+<text x="259.38" y="305.27" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">/</text>
+<text x="266.7" y="305.27" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="87.66" lengthAdjust="spacing">7080@hanmail.net</text>
+<text x="416.02" y="305.27" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">/</text>
+<text x="423.34" y="305.27" font-size="10" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="29.1" lengthAdjust="spacing">비공개</text>
 </g></g>
 </svg>

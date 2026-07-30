@@ -4,8 +4,12 @@ import argparse
 import copy
 import io
 import json
+import os
 import re
+import shlex
 import shutil
+import subprocess
+import tempfile
 import zipfile
 from dataclasses import dataclass
 from pathlib import Path
@@ -166,11 +170,16 @@ def clone_section_slice(source_xml: bytes, start: int, end: int) -> bytes:
         local_name(node.tag) == "secPr" for node in first_paragraph.iter()
     )
     if not has_section_properties:
-        section_properties = next(
+        # 구역 설정은 secPr 하나만으로 완성되지 않습니다.
+        # 원본에서는 secPr 바로 뒤에 단 설정(ctrl/colPr)이 함께 오며,
+        # 이 짝이 깨지면 한글이 용지·여백을 기본값으로 되돌립니다.
+        # 그래서 secPr을 담고 있던 run의 앞부분을 통째로 옮깁니다.
+        source_run = next(
             (
                 node
                 for node in source_root.iter()
-                if local_name(node.tag) == "secPr"
+                if local_name(node.tag) == "run"
+                and any(local_name(child.tag) == "secPr" for child in node)
             ),
             None,
         )
@@ -178,9 +187,35 @@ def clone_section_slice(source_xml: bytes, start: int, end: int) -> bytes:
             (node for node in first_paragraph.iter() if local_name(node.tag) == "run"),
             None,
         )
-        if section_properties is None or first_run is None:
+        if source_run is None or first_run is None:
             raise RuntimeError("분리본에 필요한 HWPX 구역 설정을 찾지 못했습니다.")
-        first_run.insert(0, copy.deepcopy(section_properties))
+
+        # 구역 설정 묶음은 문서에 따라 secPr이 먼저 오기도 하고 ctrl이 먼저 오기도 합니다.
+        # 순서를 그대로 지키면서 앞쪽의 설정 요소만 옮기고,
+        # 본문에 해당하는 글자·표를 만나면 멈춥니다.
+        carried: list[ET.Element] = []
+        for child in source_run:
+            if local_name(child.tag) not in {"secPr", "ctrl"}:
+                break
+            carried.append(copy.deepcopy(child))
+
+        for offset, node in enumerate(carried):
+            first_run.insert(offset, node)
+
+    section_properties = next(
+        (node for node in output_root.iter() if local_name(node.tag) == "secPr"),
+        None,
+    )
+    if section_properties is None:
+        raise RuntimeError("분리본에 구역 설정이 없습니다.")
+    page_properties = next(
+        (node for node in section_properties.iter() if local_name(node.tag) == "pagePr"),
+        None,
+    )
+    if page_properties is None or not any(
+        local_name(node.tag) == "margin" for node in page_properties
+    ):
+        raise RuntimeError("분리본에 용지·여백 설정이 없습니다.")
 
     return ET.tostring(output_root, encoding="utf-8", xml_declaration=True)
 
@@ -437,6 +472,111 @@ def build_preview_svgs(
     return assets
 
 
+LINESEG_RE = re.compile(r"<hp:linesegarray>.*?</hp:linesegarray>", re.DOTALL)
+
+
+def strip_layout_cache(hwpx: Path, target: Path) -> int:
+    """한글이 저장한 조판 캐시를 지운 사본을 만듭니다.
+
+    통합 문서에서 서식을 떼어내면 원본의 조판 캐시가 새 문서의 실제 배치와
+    맞지 않아 제목이 표 위에 겹쳐 그려집니다. 캐시를 지우면 kordoc이
+    문서 내용을 기준으로 다시 조판하므로 겹침 없이 렌더링됩니다.
+    내려받기용 원본 파일은 그대로 두고, 미리보기 생성에만 이 사본을 씁니다.
+    """
+    with zipfile.ZipFile(hwpx, "r") as archive:
+        names = archive.namelist()
+        payload = {name: archive.read(name) for name in names}
+
+    removed = 0
+    for name in names:
+        if not SECTION_RE.match(name):
+            continue
+        text = payload[name].decode("utf-8")
+        text, count = LINESEG_RE.subn("", text)
+        removed += count
+        payload[name] = text.encode("utf-8")
+
+    target.parent.mkdir(parents=True, exist_ok=True)
+    with zipfile.ZipFile(target, "w") as archive:
+        for name in names:
+            archive.writestr(
+                name,
+                payload[name],
+                zipfile.ZIP_STORED if name == "mimetype" else zipfile.ZIP_DEFLATED,
+            )
+    return removed
+
+
+def kordoc_render(source_hwpx: Path, target_svg: Path) -> None:
+    command = os.environ.get("KORDOC_CLI")
+    if not command:
+        raise RuntimeError(
+            "KORDOC_CLI 환경변수에 kordoc CLI 경로를 지정하세요. "
+            "예: KORDOC_CLI='node ./node_modules/kordoc/dist/cli.js'"
+        )
+    target_svg.parent.mkdir(parents=True, exist_ok=True)
+    result = subprocess.run(
+        [*shlex.split(command), "render", str(source_hwpx), "-o", str(target_svg), "--silent"],
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0 or not target_svg.exists():
+        raise RuntimeError(
+            f"{source_hwpx.name} 렌더 실패: {result.stderr.strip() or result.stdout.strip()}"
+        )
+
+
+def render_preview_svgs(
+    chapter_id: str,
+    markers: list[str],
+    download_root: Path,
+) -> dict[str, dict[str, object]]:
+    """서식별 HWPX를 그대로 렌더링해 미리보기를 만듭니다.
+
+    예전에는 통합 SVG를 표식 위치로 잘라 썼는데, 한 쪽에 여러 서식이 있으면
+    경계가 어긋났습니다. 이제 개별 파일 자체를 렌더링하므로 경계 문제가 없습니다.
+    """
+    preview_root = DOCS / "previews" / "forms" / f"chapter{chapter_id}"
+    preview_root.mkdir(parents=True, exist_ok=True)
+    assets: dict[str, dict[str, object]] = {}
+
+    with tempfile.TemporaryDirectory() as work_dir:
+        work = Path(work_dir)
+        for marker in markers:
+            slug = marker_slug(marker)
+            hwpx = download_root / f"{slug}.hwpx"
+            if not hwpx.exists():
+                raise FileNotFoundError(hwpx)
+
+            reflow_source = work / f"{slug}.hwpx"
+            strip_layout_cache(hwpx, reflow_source)
+
+            preview_file = preview_root / f"{slug}.svg"
+            kordoc_render(reflow_source, preview_file)
+
+            svg_text = preview_file.read_text(encoding="utf-8")
+            if "<script" in svg_text.lower() or re.search(
+                r"(?:href|src)\s*=\s*[\"']https?://", svg_text, re.IGNORECASE
+            ):
+                raise RuntimeError(
+                    f"{preview_file.name}에 허용하지 않는 외부 실행 요소가 있습니다."
+                )
+
+            root = ET.fromstring(svg_text)
+            pages = [
+                child
+                for child in list(root)
+                if local_name(child.tag) == "g" and child.attrib.get("data-page")
+            ]
+            assets[marker] = {
+                "preview": f"previews/forms/chapter{chapter_id}/{slug}.svg",
+                "download": f"downloads/forms/chapter{chapter_id}/{slug}.hwpx",
+                "pageCount": max(1, len(pages)),
+            }
+
+    return assets
+
+
 def build_chapter(source: ChapterSource) -> dict[str, dict[str, object]]:
     if not source.hwpx.exists():
         raise FileNotFoundError(source.hwpx)
@@ -478,11 +618,7 @@ def build_chapter(source: ChapterSource) -> dict[str, dict[str, object]]:
         )
 
     marker_ids = [marker for marker, _, _, _ in ranges]
-    return build_preview_svgs(
-        source.combined_svg,
-        source.chapter_id,
-        marker_ids,
-    )
+    return render_preview_svgs(source.chapter_id, marker_ids, download_root)
 
 
 def write_assets_script(all_assets: dict[str, dict[str, dict[str, object]]]) -> None:

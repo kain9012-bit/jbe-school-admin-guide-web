@@ -1,24 +1,25 @@
-<?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 841.86" width="595.28pt" height="841.86pt" font-family="'HCR Batang','함초롬바탕','Hancom Batang',AppleMyungjo,'Noto Serif CJK KR',serif" xml:space="preserve"><defs><clipPath id="pgclip0"><rect x="0" y="0" width="595.28" height="841.86" /></clipPath><clipPath id="pgclip1"><rect x="0" y="0" width="595.28" height="841.86" /></clipPath><clipPath id="pgclip2"><rect x="0" y="0" width="595.28" height="841.88" /></clipPath></defs>
-<g data-page="1" transform="translate(0 0.00)"><rect width="595.28" height="841.86" fill="white" stroke="#c9c7c4" stroke-width="0.75" /><g clip-path="url(#pgclip1)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 841.86" width="595.28pt" height="841.86pt" font-family="'HCR Batang','함초롬바탕','Hancom Batang',AppleMyungjo,'Noto Serif CJK KR',serif" xml:space="preserve">
+<defs><clipPath id="pgclip0"><rect x="0" y="0" width="595.28" height="841.86"/></clipPath></defs>
+<g data-page="1" transform="translate(0 0)"><rect width="595.28" height="841.86" fill="white" stroke="#c9c7c4" stroke-width="0.75"/><g clip-path="url(#pgclip0)">
 <text x="63.2" y="102.3" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="37.56" lengthAdjust="spacing">[서식4]</text>
 <text x="56.69" y="151.19" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="54.07" lengthAdjust="spacing">[별지 제1호서식]</text>
 <text x="228.5" y="207.6" font-size="20" font-family="'한양견고딕','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="137.05" lengthAdjust="spacing" font-weight="bold">직무대리 명령서</text>
-<text x="82.83" y="266.5" font-size="14" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="119.14" lengthAdjust="spacing"> 1. 직무대리 직명:</text>
-<text x="91.83" y="350.5" font-size="14" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="194.04" lengthAdjust="spacing">2. 직무대리자의 직위와 성명: </text>
-<text x="91.83" y="434.5" font-size="14" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="119.14" lengthAdjust="spacing">3. 직무대리 기간: </text>
-<text x="109.97" y="506.45" font-size="13" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="345.29" lengthAdjust="spacingAndGlyphs">「전북특별자치도교육청 직무대리 규칙」 제4조 제2항에 따라 </text>
-<text x="455.25" y="506.45" font-size="13" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="54.61" lengthAdjust="spacingAndGlyphs">위와 같이</text>
-<text x="77.83" y="532.45" font-size="13" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="122.91" lengthAdjust="spacing">직무대리를 명합니다.</text>
-<text x="367.3" y="625.8" font-size="12" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif">년</text>
-<text x="420.94" y="625.8" font-size="12" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif">월</text>
-<text x="474.58" y="625.8" font-size="12" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif">일</text>
-<text x="160.85" y="689.65" font-size="13" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="25.22" lengthAdjust="spacing">직위</text>
-<text x="251.07" y="689.65" font-size="13" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="25.22" lengthAdjust="spacing">성명</text>
-<text x="386.79" y="689.65" font-size="8" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="51.92" lengthAdjust="spacing" fill="#7F7F7F">(서명 또는 인)</text>
-<line x1="60.91" y1="157.19" x2="534.35" y2="157.19" stroke="#000000" stroke-width="0.34" />
-<line x1="60.91" y1="744.59" x2="534.35" y2="744.59" stroke="#000000" stroke-width="0.34" />
-<line x1="60.91" y1="157.19" x2="60.91" y2="744.59" stroke="#000000" stroke-width="0.34" />
-<line x1="534.35" y1="157.19" x2="534.35" y2="744.59" stroke="#000000" stroke-width="0.34" />
+<text x="82.84" y="263.1" font-size="14" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="119.14" lengthAdjust="spacing"> 1. 직무대리 직명:</text>
+<text x="91.84" y="338.5" font-size="14" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="194.04" lengthAdjust="spacing">2. 직무대리자의 직위와 성명: </text>
+<text x="91.84" y="422.5" font-size="14" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="119.14" lengthAdjust="spacing">3. 직무대리 기간: </text>
+<text x="111.39" y="494.45" font-size="13" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="360.45" lengthAdjust="spacing">「전북특별자치도교육청 직무대리 규칙」 제4조 제2항에 따라 </text>
+<text x="471.84" y="494.45" font-size="13" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="44.38" lengthAdjust="spacing">위와 같</text>
+<text x="82.84" y="520.45" font-size="13" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif">이</text>
+<text x="95.07" y="520.45" font-size="13" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="129.34" lengthAdjust="spacing"> 직무대리를 명합니다.</text>
+<text x="367.29" y="613.8" font-size="12" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif">년</text>
+<text x="420.93" y="613.8" font-size="12" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif">월</text>
+<text x="474.57" y="613.8" font-size="12" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif">일</text>
+<text x="160.85" y="675.95" font-size="13" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="25.22" lengthAdjust="spacing">직위</text>
+<text x="251.07" y="675.95" font-size="13" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="25.22" lengthAdjust="spacing">성명</text>
+<text x="386.79" y="675.95" font-size="8" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="51.92" lengthAdjust="spacing" fill="#7F7F7F">(서명 또는 인)</text>
+<line x1="60.92" y1="157.19" x2="534.36" y2="157.19" stroke="#000000" stroke-width="0.34"/>
+<line x1="60.92" y1="729.79" x2="534.36" y2="729.79" stroke="#000000" stroke-width="0.34"/>
+<line x1="60.92" y1="157.19" x2="60.92" y2="729.79" stroke="#000000" stroke-width="0.34"/>
+<line x1="534.36" y1="157.19" x2="534.36" y2="729.79" stroke="#000000" stroke-width="0.34"/>
 </g></g>
 </svg>

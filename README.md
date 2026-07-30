@@ -74,6 +74,8 @@ HWP·HWPX·PDF 원문을 새 편의 구조화 데이터로 변환할 때는
 - `validate_chapter3.js`: 제3편 자료와 의미 단계 배치의 무결성을 확인합니다.
 - `validate_global_home.js`: 19개 편 통합 홈과 편 미지정 진입 흐름을 확인합니다.
 - `validate_self_hosted_assets.js`: 화면 자산이 모두 저장소 안에 있는지 확인합니다.
+- `validate_form_previews.py`: 서식 미리보기에 겹쳐 그려진 글자가 없는지, 내려받기
+  HWPX가 원본의 용지·여백·단 설정을 지키는지 확인합니다.
 - 그 밖에 표 너비, 목록 들여쓰기, 법령 분리, 본문 FAQ 표현을 각각 확인합니다.
 
 `scripts/inspect_live_ui.js`는 실제 브라우저로 화면을 열어 콘솔 오류, 끊어진 링크,
@@ -83,3 +85,22 @@ HWP·HWPX·PDF 원문을 새 편의 구조화 데이터로 변환할 때는
 python3 -m http.server 8899 --directory docs
 node scripts/inspect_live_ui.js http://127.0.0.1:8899
 ```
+
+## 서식 자산 다시 만들기
+
+서식별 내려받기 파일과 미리보기는 `scripts/build_form_assets.py`가 만듭니다.
+미리보기 렌더링에 [`kordoc`](https://github.com/chrisryugj/kordoc)이 필요합니다.
+
+```
+npm install kordoc
+KORDOC_CLI="node ./node_modules/kordoc/dist/cli.js" python3 scripts/build_form_assets.py
+python3 scripts/validate_form_previews.py
+```
+
+통합 서식 파일에서 서식 하나를 떼어낼 때 두 가지를 지킵니다.
+
+- 구역 설정은 `secPr`과 단 설정(`ctrl/colPr`)이 한 묶음입니다. 둘 중 하나만 옮기면
+  한글이 용지·여백을 기본값으로 되돌리므로 묶음째 옮깁니다.
+- 미리보기는 떼어낸 파일에서 한글이 저장한 조판 캐시를 지운 사본으로 렌더링합니다.
+  원본 캐시는 통합 문서 기준이라 그대로 쓰면 제목이 표 위에 겹쳐 그려집니다.
+  내려받기용 파일은 캐시를 그대로 둡니다.

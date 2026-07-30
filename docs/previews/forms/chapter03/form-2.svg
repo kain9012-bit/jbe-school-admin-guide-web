@@ -1,42 +1,44 @@
-<?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 841.86" width="595.28pt" height="841.86pt" font-family="'HCR Batang','함초롬바탕','Hancom Batang',AppleMyungjo,'Noto Serif CJK KR',serif" xml:space="preserve"><defs><clipPath id="pgclip0"><rect x="0" y="0" width="595.28" height="841.86" /></clipPath><clipPath id="pgclip1"><rect x="0" y="0" width="595.28" height="841.86" /></clipPath></defs>
-<g data-page="1" transform="translate(0 0.00)"><rect width="595.28" height="841.86" fill="white" stroke="#c9c7c4" stroke-width="0.75" /><g clip-path="url(#pgclip1)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 1707.72" width="595.28pt" height="1707.72pt" font-family="'HCR Batang','함초롬바탕','Hancom Batang',AppleMyungjo,'Noto Serif CJK KR',serif" xml:space="preserve">
+<defs><clipPath id="pgclip0"><rect x="0" y="0" width="595.28" height="841.86"/></clipPath></defs>
+<g data-page="1" transform="translate(0 0)"><rect width="595.28" height="841.86" fill="white" stroke="#c9c7c4" stroke-width="0.75"/><g clip-path="url(#pgclip0)">
 <text x="63.2" y="102.3" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="37.56" lengthAdjust="spacing">[서식2]</text>
-<text x="214.38" y="170.54" font-size="24" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" font-weight="bold" fill="#404040">휴</text>
-<text x="285.66" y="170.54" font-size="24" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" font-weight="bold" fill="#404040">직</text>
-<text x="356.94" y="170.54" font-size="24" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" font-weight="bold" fill="#404040">원</text>
-<text x="248.42" y="195.79" font-size="17" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="97.76" lengthAdjust="spacing" font-weight="bold" fill="#404040">(육아휴직용) </text>
-<text x="297.5" y="242.84" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="52.64" lengthAdjust="spacing" fill="#404040">소 속 : </text>
-<text x="297.5" y="265.24" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="52.64" lengthAdjust="spacing" fill="#404040">직 급 : </text>
-<text x="297.5" y="287.64" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="52.64" lengthAdjust="spacing" fill="#404040">성 명 : </text>
-<text x="73.98" y="332.44" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="398.92" lengthAdjust="spacing" fill="#404040">위 본인은 지방공무원법 제63조 제2항 제4호의 규정에 의거 </text>
-<text x="472.9" y="332.44" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="62.2" lengthAdjust="spacing" fill="#404040">휴직원을 </text>
-<text x="59.5" y="354.84" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="242.76" lengthAdjust="spacing" fill="#404040">제출하오니 허락하여 주시기 바랍니다.</text>
-<text x="94.5" y="399.64" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="74.9" lengthAdjust="spacing" fill="#404040">◦ 휴직기간</text>
-<text x="101.5" y="430.44" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="107.38" lengthAdjust="spacing" fill="#404040">- 첫째 : 20○○.</text>
-<text x="229.88" y="430.44" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" fill="#404040">.</text>
-<text x="255.36" y="430.44" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="73.22" lengthAdjust="spacing" fill="#404040">. ~ 20○○.</text>
-<text x="349.58" y="430.44" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" fill="#404040">.</text>
-<text x="375.06" y="430.44" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" fill="#404040">.</text>
-<text x="393.54" y="430.44" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" fill="#404040">(</text>
-<text x="412.02" y="430.44" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="18.06" lengthAdjust="spacing" fill="#404040">월)</text>
-<text x="94.5" y="461.24" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" fill="#404040">◦</text>
-<text x="108.08" y="461.24" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="277.02" lengthAdjust="spacing" fill="#404040"> 휴직사유 : 육아휴직 (만 8세 이하 자녀 양육)</text>
-<text x="94.5" y="492.04" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="120.54" lengthAdjust="spacing" fill="#404040">◦ 대상자녀 : 첫째</text>
-<text x="94.5" y="522.84" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="243.18" lengthAdjust="spacing" fill="#404040">◦ 대상자녀의 순차적 육아휴직 여부 :</text>
-<text x="59.5" y="564.84" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="475.6" lengthAdjust="spacing" fill="#404040">※ 관련서류 : 가족관계증명서(또는 주민등록등본) 1부, 대상자녀에 대한 </text>
-<text x="59.5" y="587.24" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="283.92" lengthAdjust="spacing" fill="#404040">순차적인 육아휴직의 경우 관련 증빙서 첨부.</text>
-<text x="241.3" y="633.64" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="47.04" lengthAdjust="spacing" fill="#404040">20○○.</text>
-<text x="316.34" y="633.64" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" fill="#404040">.</text>
-<text x="348.82" y="633.64" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" fill="#404040">.</text>
-<text x="279.1" y="680.04" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="66.22" lengthAdjust="spacing" fill="#404040">신 청 인 :</text>
-<text x="450.32" y="680.04" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="61.18" lengthAdjust="spacing" fill="#404040">(인, 서명)</text>
-<text x="59.5" y="748.94" font-size="16" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="155.2" lengthAdjust="spacing" font-weight="bold" fill="#404040">전북특별자치도교육감</text>
-<text x="221.7" y="748.94" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="27.16" lengthAdjust="spacing" font-weight="bold" fill="#404040">귀하</text>
-<text x="59.5" y="772.84" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="314.72" lengthAdjust="spacing" font-weight="bold" fill="#404040">(전북특별자치도교육청○○교육지원청교육장 귀하)</text>
-<line x1="58.09" y1="126.39" x2="536.52" y2="126.39" stroke="#000000" stroke-width="1.13" />
-<line x1="58.09" y1="779.17" x2="536.52" y2="779.17" stroke="#000000" stroke-width="1.13" />
-<line x1="58.09" y1="126.39" x2="58.09" y2="779.17" stroke="#000000" stroke-width="1.13" />
-<line x1="536.52" y1="126.39" x2="536.52" y2="779.17" stroke="#000000" stroke-width="1.13" />
+</g></g>
+<g data-page="2" transform="translate(0 865.86)"><rect width="595.28" height="841.86" fill="white" stroke="#c9c7c4" stroke-width="0.75"/><g clip-path="url(#pgclip0)">
+<text x="214.39" y="129.17" font-size="24" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" font-weight="bold" fill="#404040">휴</text>
+<text x="285.67" y="129.17" font-size="24" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" font-weight="bold" fill="#404040">직</text>
+<text x="356.95" y="129.17" font-size="24" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" font-weight="bold" fill="#404040">원</text>
+<text x="248.43" y="154.42" font-size="17" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="97.76" lengthAdjust="spacing" font-weight="bold" fill="#404040">(육아휴직용) </text>
+<text x="297.5" y="201.47" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="52.64" lengthAdjust="spacing" fill="#404040">소 속 : </text>
+<text x="297.5" y="223.87" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="52.64" lengthAdjust="spacing" fill="#404040">직 급 : </text>
+<text x="297.5" y="246.27" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="52.64" lengthAdjust="spacing" fill="#404040">성 명 : </text>
+<text x="73.99" y="291.07" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="398.92" lengthAdjust="spacing" fill="#404040">위 본인은 지방공무원법 제63조 제2항 제4호의 규정에 의거 </text>
+<text x="472.91" y="291.07" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="62.2" lengthAdjust="spacing" fill="#404040">휴직원을 </text>
+<text x="59.5" y="313.47" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="242.76" lengthAdjust="spacing" fill="#404040">제출하오니 허락하여 주시기 바랍니다.</text>
+<text x="94.5" y="358.27" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="74.9" lengthAdjust="spacing" fill="#404040">◦ 휴직기간</text>
+<text x="101.5" y="389.07" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="107.38" lengthAdjust="spacing" fill="#404040">- 첫째 : 20○○.</text>
+<text x="229.88" y="389.07" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" fill="#404040">.</text>
+<text x="255.36" y="389.07" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="73.22" lengthAdjust="spacing" fill="#404040">. ~ 20○○.</text>
+<text x="349.58" y="389.07" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" fill="#404040">.</text>
+<text x="375.06" y="389.07" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" fill="#404040">.</text>
+<text x="393.54" y="389.07" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" fill="#404040">(</text>
+<text x="412.02" y="389.07" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="18.06" lengthAdjust="spacing" fill="#404040">월)</text>
+<text x="94.5" y="419.87" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" fill="#404040">◦</text>
+<text x="108.08" y="419.87" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="277.02" lengthAdjust="spacing" fill="#404040"> 휴직사유 : 육아휴직 (만 8세 이하 자녀 양육)</text>
+<text x="94.5" y="450.67" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="120.54" lengthAdjust="spacing" fill="#404040">◦ 대상자녀 : 첫째</text>
+<text x="94.5" y="481.47" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="243.18" lengthAdjust="spacing" fill="#404040">◦ 대상자녀의 순차적 육아휴직 여부 :</text>
+<text x="59.5" y="523.47" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="475.61" lengthAdjust="spacing" fill="#404040">※ 관련서류 : 가족관계증명서(또는 주민등록등본) 1부, 대상자녀에 대한 순</text>
+<text x="155.96" y="545.87" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="270.34" lengthAdjust="spacing" fill="#404040">차적인 육아휴직의 경우 관련 증빙서 첨부.</text>
+<text x="241.31" y="592.27" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="47.04" lengthAdjust="spacing" fill="#404040">20○○.</text>
+<text x="316.35" y="592.27" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" fill="#404040">.</text>
+<text x="348.83" y="592.27" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" fill="#404040">.</text>
+<text x="279.11" y="638.67" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="66.22" lengthAdjust="spacing" fill="#404040">신 청 인 :</text>
+<text x="450.33" y="638.67" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="61.18" lengthAdjust="spacing" fill="#404040">(인, 서명)</text>
+<text x="59.5" y="707.57" font-size="16" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="155.2" lengthAdjust="spacing" font-weight="bold" fill="#404040">전북특별자치도교육감</text>
+<text x="221.7" y="707.57" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="27.16" lengthAdjust="spacing" font-weight="bold" fill="#404040">귀하</text>
+<text x="59.5" y="731.47" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="314.72" lengthAdjust="spacing" font-weight="bold" fill="#404040">(전북특별자치도교육청○○교육지원청교육장 귀하)</text>
+<line x1="58.09" y1="85.03" x2="536.52" y2="85.03" stroke="#000000" stroke-width="1.13"/>
+<line x1="58.09" y1="737.81" x2="536.52" y2="737.81" stroke="#000000" stroke-width="1.13"/>
+<line x1="58.09" y1="85.03" x2="58.09" y2="737.81" stroke="#000000" stroke-width="1.13"/>
+<line x1="536.52" y1="85.03" x2="536.52" y2="737.81" stroke="#000000" stroke-width="1.13"/>
 </g></g>
 </svg>
