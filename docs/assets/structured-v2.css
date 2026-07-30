@@ -1,0 +1,65 @@
+.exact-flow-preview {
+  display: grid;
+  gap: 0.5rem;
+  min-height: 4.5rem;
+}
+
+.exact-flow-preview span {
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: pre-line;
+  color: #334155;
+  line-height: 1.55;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.exact-source-flow {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.exact-flow-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid #b8cef7;
+  border-radius: 0.75rem;
+  background: #f3f7ff;
+}
+
+.exact-flow-text {
+  white-space: pre-wrap;
+  color: #123b7a;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.75;
+}
+
+.exact-flow-row a {
+  flex: 0 0 auto;
+  color: #0b50d0;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+.continuation-label {
+  color: #555;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.structured-source-block:target {
+  outline: 3px solid #246beb;
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .exact-flow-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
