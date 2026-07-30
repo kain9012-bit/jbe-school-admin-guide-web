@@ -1,0 +1,242 @@
+.source-detail-list {
+  padding-left: 0 !important;
+  list-style: none;
+}
+
+.source-detail {
+  padding: 1.6rem 0;
+  border-bottom: 1px solid var(--guide-line);
+}
+
+.source-detail:first-child {
+  padding-top: 0;
+}
+
+.source-detail:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.source-detail strong {
+  display: block;
+  margin-bottom: 0.7rem;
+  color: var(--guide-ink);
+  font-size: 1.7rem;
+}
+
+.source-detail-body {
+  display: block;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.75;
+}
+
+.source-detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  align-items: center;
+  margin-top: 1rem;
+  color: var(--guide-muted);
+  font-size: 1.3rem;
+}
+
+.source-detail-meta a {
+  color: var(--guide-blue);
+  text-underline-offset: 0.2rem;
+}
+
+.task-block[hidden] {
+  display: none !important;
+}
+
+.detail-grid:has(> section[hidden] + section[hidden]) {
+  display: none;
+}
+
+.resource-chip {
+  border: 0;
+  cursor: pointer;
+}
+
+.source-note {
+  color: var(--guide-muted);
+  font-size: 1.45rem;
+}
+
+.form-source-dialog {
+  width: min(calc(100% - 4rem), 112rem);
+  max-height: calc(100vh - 6rem);
+  padding: 0;
+  border: 0;
+  border-radius: 1.6rem;
+  box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.28);
+}
+
+.form-source-dialog::backdrop {
+  background: rgba(19, 20, 22, 0.65);
+}
+
+.form-source-dialog-inner {
+  display: grid;
+  max-height: calc(100vh - 6rem);
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
+.form-source-dialog header,
+.form-source-dialog footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+  padding: 2.4rem 3rem;
+}
+
+.form-source-dialog header {
+  border-bottom: 1px solid var(--guide-line);
+}
+
+.form-source-dialog footer {
+  justify-content: flex-end;
+  border-top: 1px solid var(--guide-line);
+}
+
+.form-source-dialog h2 {
+  margin: 0;
+  font-size: 2.4rem;
+}
+
+.form-source-content {
+  display: grid;
+  min-height: 0;
+  grid-template-rows: auto minmax(0, 1fr);
+  overflow: hidden;
+  background: #eef1f5;
+}
+
+.form-preview-kicker {
+  margin: 0 0 0.4rem;
+  color: var(--guide-blue);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.form-preview-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.6rem;
+  align-items: center;
+  min-height: 5.2rem;
+  padding: 0.8rem 2rem;
+  border-bottom: 1px solid var(--guide-line);
+  background: #fff;
+  color: var(--guide-muted);
+  font-size: 1.35rem;
+}
+
+.form-preview-controls {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.form-preview-controls button {
+  min-width: 3.6rem;
+  min-height: 3.4rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--guide-line);
+  border-radius: 0.6rem;
+  background: #fff;
+  color: var(--guide-ink);
+  cursor: pointer;
+}
+
+.form-preview-controls button:hover {
+  border-color: var(--guide-blue);
+  color: var(--guide-blue);
+}
+
+.form-preview-controls output {
+  min-width: 5rem;
+  color: var(--guide-ink);
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.form-preview-viewport {
+  min-height: 36rem;
+  overflow: auto;
+  padding: 2.4rem;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35)),
+    #dfe3e8;
+}
+
+.form-preview-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 0.8rem 2.4rem rgba(19, 20, 22, 0.16);
+  transition: width 160ms ease;
+}
+
+.form-preview-fallback {
+  max-width: 52rem;
+  margin: 8rem auto;
+  padding: 2.4rem;
+  border-radius: 1rem;
+  background: #fff;
+  color: var(--guide-muted);
+  text-align: center;
+}
+
+.form-download-note {
+  margin-right: auto;
+  color: var(--guide-muted);
+  font-size: 1.35rem;
+}
+
+.workflow-source-note {
+  margin: 1.4rem 0 0;
+  color: var(--guide-muted);
+  font-size: 1.4rem;
+}
+
+@media (max-width: 767px) {
+  .source-detail strong {
+    font-size: 1.6rem;
+  }
+
+  .form-source-dialog header,
+  .form-source-dialog footer,
+  .form-source-content {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .form-preview-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .form-preview-controls {
+    width: 100%;
+  }
+
+  .form-preview-controls button:last-child {
+    margin-left: auto;
+  }
+
+  .form-preview-viewport {
+    min-height: 28rem;
+    padding: 1.2rem;
+  }
+
+  .form-source-dialog footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

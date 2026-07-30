@@ -1,0 +1,986 @@
+(function () {
+  "use strict";
+
+  const data = window.CHAPTER1_DATA;
+  const activeChapter =
+    window.ACTIVE_GUIDE_CHAPTER || { id: "01", label: "제1편", title: "행정업무 및 보안" };
+  const allChapterSearchIndex = Array.isArray(window.GUIDE_SEARCH_INDEX)
+    ? window.GUIDE_SEARCH_INDEX
+    : [];
+
+  if (!data) {
+    document.body.innerHTML = "<p>안내서 데이터를 불러오지 못했습니다.</p>";
+    return;
+  }
+
+  const byId = (id) => document.getElementById(id);
+  const escapeHtml = (value) =>
+    String(value ?? "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  const normalize = (value) =>
+    String(value ?? "").toLocaleLowerCase("ko-KR").replace(/\s+/g, " ").trim();
+  const excerpt = (value, limit = 180) => {
+    const text = String(value ?? "").replace(/\s+/g, " ").trim();
+    return text.length > limit ? `${text.slice(0, limit).trim()}…` : text;
+  };
+
+  const overviewView = byId("overview-view");
+  const workView = byId("work-view");
+  const breadcrumb = byId("breadcrumb");
+  const workGrid = byId("work-grid");
+  const sideWorkList = byId("side-work-list");
+  const searchDialog = byId("search-dialog");
+  const searchInput = byId("search-input");
+  const searchResults = byId("search-results");
+  const searchStatus = byId("search-status");
+  const mobileWorkMenu = byId("mobile-work-menu");
+  const sideNavigation = byId("side-navigation");
+  let currentWorkId = "";
+  let currentStepId = "";
+  let lastFocusedElement = null;
+
+  function isSourceFlowBlock(work, block) {
+    return work.flowGroups.some(
+      (flow) =>
+        flow.sourceText === block.body &&
+        flow.pdfPage === block.pdfPage &&
+        flow.printedPage === block.printedPage
+    );
+  }
+
+  function flowTitles(work) {
+    const titles = [];
+    for (const flow of work.flowGroups) {
+      for (const part of String(flow.sourceText).split(/\s*▶\s*|\n+/)) {
+        const title = part.trim();
+        if (title && !titles.some((item) => normalize(item) === normalize(title))) titles.push(title);
+      }
+    }
+    return titles;
+  }
+
+  function sourceHeadingSteps(work, blocks) {
+    const candidates = blocks.filter(
+      (block) =>
+        /^\d+\.\s*\S/.test(block.title) &&
+        !/^매뉴얼 \d+쪽$/.test(block.title)
+    );
+    if (!candidates.length) {
+      return [{ title: work.title, anchorIndex: 0 }];
+    }
+    return candidates.map((block) => ({
+      title: block.title,
+      anchorIndex: blocks.indexOf(block),
+      anchorId: block.id,
+    }));
+  }
+
+  function titleTerms(title) {
+    const withoutLabels = String(title)
+      .replace(/\[[^\]]+\]/g, " ")
+      .replace(/\([^)]*\)/g, " ");
+    const terms = withoutLabels
+      .split(/[^\p{L}\p{N}]+/u)
+      .map((term) => term.trim())
+      .filter((term) => term.length >= 2);
+    return [...new Set(terms)];
+  }
+
+  function relevance(block, title) {
+    const source = normalize(`${block.title} ${block.body}`);
+    const cleanTitle = normalize(
+      String(title).replace(/\[[^\]]+\]/g, " ").replace(/\([^)]*\)/g, " ")
+    );
+    let score = cleanTitle && source.includes(cleanTitle) ? 100 : 0;
+    for (const term of titleTerms(title)) {
+      if (source.includes(normalize(term))) score += 10;
+    }
+    return score;
+  }
+
+  function uniquePages(blocks) {
+    return [...new Set(blocks.map((block) => block.printedPage))];
+  }
+
+  function cleanSourceHeading(title) {
+    return String(title || "")
+      .replace(/^\d+\.\s*/, "")
+      .replace(/^\d+\s+/, "")
+      .replace(/세부내용$/, "")
+      .trim();
+  }
+
+  function isStandaloneLawLine(line) {
+    const normalized = String(line || "").replace(/\s+/g, " ").trim();
+    return /^(?:[•‣▶]\s*)?[「『].+[」』](?:\s*제[\d조항호~,.·\s]+.*)?$/.test(normalized);
+  }
+
+  function splitLawReferences(block) {
+    const lines = String(block.body || "")
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter(Boolean);
+    const lawLines = lines.filter(isStandaloneLawLine);
+    const contentLines = lines.filter((line) => !isStandaloneLawLine(line));
+    const isLawHeading = block.title === "관련법규 및 참고자료";
+    const isLawOnly = lines.length > 0 && lawLines.length === lines.length;
+
+    return {
+      contentBlock:
+        !isLawHeading && !isLawOnly && (contentLines.length || !block.body)
+          ? {
+              ...block,
+              body: contentLines.length ? contentLines.join("\n") : block.body,
+            }
+          : null,
+      lawBlock:
+        lawLines.length
+          ? {
+              ...block,
+              id: `${block.id}-law-reference`,
+              title: "관련법규 및 참고자료",
+              body: lawLines.join("\n"),
+            }
+          : null,
+    };
+  }
+
+  function buildWorkflow(work) {
+    const layout = window.GUIDE_WORKFLOW_LAYOUT?.[work.id];
+    if (!Array.isArray(layout) || !layout.length) {
+      throw new Error(`${work.title}의 의미 구조가 없습니다.`);
+    }
+
+    const blockById = new Map(work.contentBlocks.map((block) => [block.id, block]));
+    const substantiveBlocks = work.contentBlocks.filter(
+      (block) =>
+        !isSourceFlowBlock(work, block) &&
+        !(block.title === "업무 흐름도" && !block.body)
+    );
+    const assignedIds = layout.flatMap((step) => step.blocks);
+    const duplicateIds = assignedIds.filter(
+      (id, index) => assignedIds.indexOf(id) !== index
+    );
+    const missingIds = substantiveBlocks
+      .map((block) => block.id)
+      .filter((id) => !assignedIds.includes(id));
+    const unknownIds = assignedIds.filter((id) => !blockById.has(id));
+    if (duplicateIds.length || missingIds.length || unknownIds.length) {
+      throw new Error(
+        `${work.title} 의미 구조 오류: 중복 ${duplicateIds.join(",")}; ` +
+        `누락 ${missingIds.join(",")}; 알 수 없음 ${unknownIds.join(",")}`
+      );
+    }
+
+    const steps = layout.map((sourceStep, index) => {
+      const stepBlocks = sourceStep.blocks.map((id) => blockById.get(id));
+      const tipBlocks = stepBlocks.filter((block) => block.title === "TIPTIP");
+      const classifiedBlocks = stepBlocks
+        .filter((block) => block.title !== "TIPTIP")
+        .map(splitLawReferences);
+      const mainBlocks = classifiedBlocks
+        .map((entry) => entry.contentBlock)
+        .filter(Boolean);
+      const lawBlocks = classifiedBlocks
+        .map((entry) => entry.lawBlock)
+        .filter(Boolean);
+      const topics = mainBlocks
+        .map((block) => cleanSourceHeading(block.title))
+        .filter(
+          (title) =>
+            title &&
+            !/^매뉴얼 \d+쪽$/.test(title) &&
+            title !== work.title &&
+            !topicsStructural(title)
+        );
+      const uniqueTopics = [...new Set(topics)];
+      const summary = uniqueTopics.length
+        ? `${uniqueTopics.slice(0, 3).join(", ")}${
+            uniqueTopics.length > 3 ? " 등" : ""
+          }을 중심으로 확인합니다.`
+        : "매뉴얼의 업무 흐름도에 제시된 단계입니다.";
+      return {
+        id: `step-${index + 1}`,
+        title: sourceStep.title,
+        blocks: stepBlocks,
+        mainBlocks,
+        lawBlocks,
+        tipBlocks,
+        summary,
+        pages: uniquePages(stepBlocks),
+      };
+    });
+
+    const visibleTitles = steps.map((step) => step.title).slice(0, 5);
+    const intro = work.flowGroups.length
+      ? `${visibleTitles.join(" → ")}${
+          steps.length > visibleTitles.length ? " 등" : ""
+        }의 흐름으로 업무를 확인합니다.`
+      : `${visibleTitles.join(", ")}${
+          steps.length > visibleTitles.length ? " 등" : ""
+        }의 항목별 기준을 확인합니다.`;
+    return {
+      intro,
+      steps,
+      faqCategories: work.faqCategories,
+      sourceFlows: work.flowGroups,
+    };
+  }
+
+  function topicsStructural(title) {
+    return /^(공문서 관리|업무관리시스템|공인관리|직무대리|사무인계인수|기록물 관리|신원조사 등 전력조회|사이버보안진단의 날 운영|시설보안|지방공무원 인사|근무성적평정|교육훈련|포상|신분 및 권익보장)$/.test(
+      title
+    );
+  }
+
+  const workflows = Object.fromEntries(
+    data.sections.map((work) => [work.id, buildWorkflow(work)])
+  );
+  const getWork = (workId) => data.sections.find((work) => work.id === workId);
+  const getSteps = (workId) => workflows[workId]?.steps || [];
+  const getForm = (formId) => data.forms.find((form) => form.id === formId);
+
+  function routeFor(workId, stepId, options = {}) {
+    const params = new URLSearchParams({ work: workId });
+    if (stepId) params.set("step", stepId);
+    if (options.blockId) params.set("block", options.blockId);
+    if (options.formId) params.set("form", options.formId);
+    if (options.faqNumber) params.set("faq", options.faqNumber);
+    return `#${params.toString()}`;
+  }
+
+  function findStep(workId, { stepId, blockId } = {}) {
+    const steps = getSteps(workId);
+    if (stepId) {
+      const explicit = steps.find((step) => step.id === stepId);
+      if (explicit) return explicit;
+    }
+    if (blockId) {
+      const containing = steps.find((step) =>
+        step.blocks.some((block) => block.id === blockId)
+      );
+      if (containing) return containing;
+    }
+    return steps[0];
+  }
+
+  function chapterName(item = activeChapter) {
+    return [item.chapterLabel || item.label, item.chapterTitle || item.title]
+      .filter(Boolean)
+      .join(" ");
+  }
+
+  function globalHomeHref() {
+    return `${location.href.split(/[?#]/)[0]}#overview`;
+  }
+
+  function renderSearchExamples() {
+    const examples = data.meta.searchExamples || [];
+    const target = document.querySelector(".quick-keywords");
+    if (!target) return;
+    target.innerHTML = `
+      <span>추천</span>
+      ${examples
+        .map(
+          (query) =>
+            `<button type="button" data-query="${escapeHtml(query)}">${escapeHtml(query)}</button>`
+        )
+        .join("")}
+    `;
+    byId("hero-search-input").placeholder = examples.length
+      ? `예: ${examples.join(", ")}`
+      : "업무, 질문, 서식을 검색하세요";
+  }
+
+  function renderOverview() {
+    workGrid.innerHTML = data.sections
+      .map((work) => {
+        const workflow = workflows[work.id];
+        const visibleSteps = workflow.steps.slice(0, 4);
+        return `
+          <a class="structured-item work-card"
+             href="${routeFor(work.id, workflow.steps[0]?.id)}">
+            <div class="work-card-top">
+              <span class="work-card-number">업무 ${String(work.number).padStart(2, "0")}</span>
+              <span class="work-card-pages">원문 ${escapeHtml(work.printedPages)}쪽</span>
+            </div>
+            <h3>${escapeHtml(work.title)}</h3>
+            <p>${escapeHtml(workflow.intro)}</p>
+            <div class="work-card-flow" aria-label="원문 주요 흐름">
+              ${visibleSteps.map((step) => `<span>${escapeHtml(step.title)}</span>`).join("")}
+            </div>
+            <span class="work-card-link">
+              <span>${workflow.steps.length}단계로 보기</span><span aria-hidden="true">→</span>
+            </span>
+          </a>
+        `;
+      })
+      .join("");
+  }
+
+  function renderSideNavigation() {
+    sideWorkList.innerHTML = data.sections
+      .map((work) => {
+        const firstStep = getSteps(work.id)[0];
+        return `
+          <li class="lnb-item">
+            <a class="lnb-btn${work.id === currentWorkId ? " active" : ""}"
+               href="${routeFor(work.id, firstStep?.id)}"
+               ${work.id === currentWorkId ? 'aria-current="page"' : ""}>
+              <span class="side-number">${String(work.number).padStart(2, "0")}</span>
+              <span>${escapeHtml(work.title)}</span>
+            </a>
+          </li>
+        `;
+      })
+      .join("");
+  }
+
+  function renderStepList(work, steps, activeIndex) {
+    const stepList = byId("step-list");
+    stepList.style.setProperty("--step-count", steps.length);
+    stepList.innerHTML = steps
+      .map((step, index) => {
+        const stateClass =
+          index === activeIndex ? " active" : index < activeIndex ? " complete" : "";
+        const current = index === activeIndex ? ' aria-current="step"' : "";
+        return `
+          <li>
+            <button class="step-button${stateClass}" type="button"
+                    data-step-id="${escapeHtml(step.id)}"${current}>
+              <span class="step-circle">${index < activeIndex ? "✓" : index + 1}</span>
+              <span>${escapeHtml(step.title)}</span>
+            </button>
+          </li>
+        `;
+      })
+      .join("");
+    stepList.querySelectorAll("[data-step-id]").forEach((button) => {
+      button.addEventListener("click", () => {
+        location.hash = routeFor(work.id, button.dataset.stepId);
+      });
+    });
+
+    let sourceNote = document.querySelector(".workflow-source-note");
+    if (!sourceNote) {
+      sourceNote = document.createElement("p");
+      sourceNote.className = "workflow-source-note";
+      stepList.insertAdjacentElement("afterend", sourceNote);
+    }
+    sourceNote.textContent = workflows[work.id].sourceFlows.length
+      ? workflows[work.id].sourceFlows.map((flow) => flow.sourceText).join(" / ")
+      : "원문에 별도 흐름도가 없어 매뉴얼의 소제목 순서로 구성했습니다.";
+  }
+
+  function logicalSummaryItems(block) {
+    const body = String(block.body || "");
+    const lines = body
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter(Boolean);
+    if (!lines.length) return [];
+    const heading = cleanSourceHeading(block.title);
+    const looksLikeTable = /구\s*분\s+내\s*용/.test(body) || lines.length >= 12;
+    if (looksLikeTable) {
+      return [`${heading || "이 항목"}의 항목별 기준과 세부 내용을 확인합니다.`];
+    }
+    const items = [];
+    for (const line of lines) {
+      const startsItem =
+        /^(?:[•‣▶※]|[-–]\s|\d+[.)]\s|[가-힣]\.\s)/.test(line) ||
+        line.includes(" : ");
+      if (!items.length || startsItem) items.push(line);
+      else items[items.length - 1] += ` ${line}`;
+    }
+    return items.slice(0, 3).map((item) => excerpt(item, 170));
+  }
+
+  function summaryItemMarkup(item) {
+    const match = String(item).match(/^([•‣▶※]|[-–])\s*(.*)$/);
+    if (!match) {
+      return `<li class="semantic-summary-item semantic-summary-plain">
+        <span class="semantic-summary-text">${escapeHtml(item)}</span>
+      </li>`;
+    }
+    const level = /^[-–]$/.test(match[1]) ? 1 : 0;
+    return `<li class="semantic-summary-item" style="--summary-level: ${level}">
+      <span class="semantic-summary-marker" aria-hidden="true">${escapeHtml(match[1])}</span>
+      <span class="semantic-summary-text">${escapeHtml(match[2])}</span>
+    </li>`;
+  }
+
+  function sourceBlockMarkup(block) {
+    const generatedTitle = /^매뉴얼 \d+쪽$/.test(block.title);
+    const structural =
+      !block.body && (block.title.endsWith("세부내용") || block.title === "업무 흐름도");
+    const heading = generatedTitle ? "" : cleanSourceHeading(block.title);
+    const summaries = logicalSummaryItems(block);
+    const fullDetail = block.body
+      ? window.GUIDE_DETAIL_RENDERER?.render(block)
+      : null;
+    return `
+      <li class="source-detail${structural ? " structural-marker" : ""}"
+          data-source-block="${escapeHtml(block.id)}">
+        ${heading ? `<strong>${escapeHtml(heading)}</strong>` : ""}
+        ${
+          summaries.length
+            ? `<ul class="semantic-summary-list">${summaries
+                .map((item) => summaryItemMarkup(item))
+                .join("")}</ul>`
+            : ""
+        }
+        ${
+          block.body
+            ? `<details class="source-full-detail" data-detail-type="${escapeHtml(
+                fullDetail?.type || "text"
+              )}">
+                 <summary>${escapeHtml(fullDetail?.summary || "전체 내용 보기")}</summary>
+                 <div class="source-full-content">${
+                   fullDetail?.html ||
+                   `<div class="source-full-text">${escapeHtml(block.body)}</div>`
+                 }</div>
+               </details>`
+            : ""
+        }
+      </li>
+    `;
+  }
+
+  function renderSourceBlocks(targetId, blocks) {
+    const target = byId(targetId);
+    const container = target.closest(".task-block");
+    container.hidden = blocks.length === 0;
+    target.classList.add("source-detail-list");
+    target.innerHTML = blocks.map(sourceBlockMarkup).join("");
+  }
+
+  let formPreviewZoom = 100;
+
+  function getFormAsset(formId) {
+    const chapterId = window.ACTIVE_GUIDE_CHAPTER?.id || "01";
+    return window.FORM_ASSETS?.[chapterId]?.[formId] || null;
+  }
+
+  function setFormPreviewZoom(nextZoom) {
+    formPreviewZoom = Math.max(60, Math.min(200, nextZoom));
+    const image = byId("form-preview-image");
+    const output = byId("form-preview-zoom");
+    if (image) image.style.width = `${formPreviewZoom}%`;
+    if (output) output.textContent = `${formPreviewZoom}%`;
+  }
+
+  function ensureFormDialog() {
+    if (byId("form-source-dialog")) return;
+    document.body.insertAdjacentHTML(
+      "beforeend",
+      `
+        <dialog class="form-source-dialog" id="form-source-dialog" aria-labelledby="form-source-title">
+          <div class="form-source-dialog-inner">
+            <header>
+              <div>
+                <p class="form-preview-kicker">원본 서식 미리보기</p>
+                <h2 id="form-source-title"></h2>
+              </div>
+              <button class="dialog-close" type="button" data-close-form aria-label="서식 닫기">×</button>
+            </header>
+            <div class="form-source-content" id="form-source-content">
+              <div class="form-preview-toolbar" aria-label="미리보기 도구">
+                <span id="form-preview-status"></span>
+                <div class="form-preview-controls">
+                  <button type="button" data-form-zoom-out aria-label="미리보기 축소">−</button>
+                  <output id="form-preview-zoom">100%</output>
+                  <button type="button" data-form-zoom-in aria-label="미리보기 확대">＋</button>
+                  <button type="button" data-form-zoom-reset>화면 맞춤</button>
+                </div>
+              </div>
+              <div class="form-preview-viewport" id="form-preview-viewport" tabindex="0">
+                <img class="form-preview-image" id="form-preview-image" alt="" draggable="false" />
+                <p class="form-preview-fallback" id="form-preview-fallback" hidden>
+                  미리보기를 준비하지 못했습니다. 아래 HWPX 파일을 내려받아 확인해 주세요.
+                </p>
+              </div>
+            </div>
+            <footer>
+              <span class="form-download-note" id="form-download-note"></span>
+              <a class="krds-btn primary" id="form-download-link" href="" download>
+                해당 항목 HWPX 내려받기
+              </a>
+            </footer>
+          </div>
+        </dialog>
+      `
+    );
+
+    const dialog = byId("form-source-dialog");
+    dialog
+      .querySelector("[data-close-form]")
+      .addEventListener("click", () => dialog.close());
+    dialog
+      .querySelector("[data-form-zoom-out]")
+      .addEventListener("click", () => setFormPreviewZoom(formPreviewZoom - 20));
+    dialog
+      .querySelector("[data-form-zoom-in]")
+      .addEventListener("click", () => setFormPreviewZoom(formPreviewZoom + 20));
+    dialog
+      .querySelector("[data-form-zoom-reset]")
+      .addEventListener("click", () => setFormPreviewZoom(100));
+  }
+
+  function openForm(formId) {
+    const form = getForm(formId);
+    if (!form) return;
+    ensureFormDialog();
+
+    const asset = getFormAsset(formId);
+    const image = byId("form-preview-image");
+    const fallback = byId("form-preview-fallback");
+    const download = byId("form-download-link");
+    const status = byId("form-preview-status");
+    const viewport = byId("form-preview-viewport");
+
+    byId("form-source-title").textContent = `${form.id} ${form.title}`;
+    setFormPreviewZoom(100);
+    viewport.scrollTo({ top: 0, left: 0 });
+
+    if (asset) {
+      image.hidden = false;
+      image.src = asset.preview;
+      image.alt = `${form.id} ${form.title} 원본 문서 미리보기`;
+      fallback.hidden = true;
+      status.textContent = `${asset.pageCount}쪽 · HWPX 원본 배치`;
+      download.hidden = false;
+      download.href = asset.download;
+      download.textContent = `${form.id} HWPX 내려받기`;
+      byId("form-download-note").textContent =
+        "현재 보고 있는 항목만 개별 파일로 내려받습니다.";
+    } else {
+      image.hidden = true;
+      image.removeAttribute("src");
+      fallback.hidden = false;
+      status.textContent = "미리보기 준비 중";
+      download.hidden = true;
+      byId("form-download-note").textContent = "";
+    }
+
+    const dialog = byId("form-source-dialog");
+    if (typeof dialog.showModal === "function") dialog.showModal();
+    else dialog.setAttribute("open", "");
+  }
+
+  function renderResources(work, step) {
+    const formsTarget = byId("step-forms");
+    const forms = work.formIds.map(getForm).filter(Boolean);
+    formsTarget.innerHTML = forms.length
+      ? `<span class="resource-links">${forms
+          .map(
+            (form) => `
+              <button class="resource-chip" type="button" data-form-id="${escapeHtml(form.id)}">
+                ${escapeHtml(form.id)} ${escapeHtml(form.title)}
+              </button>
+            `
+          )
+          .join("")}</span>`
+      : '<span class="source-note">원문에 별도 서식·예시가 연결되어 있지 않습니다.</span>';
+    formsTarget.querySelectorAll("[data-form-id]").forEach((button) => {
+      button.addEventListener("click", () => openForm(button.dataset.formId));
+    });
+
+    byId("step-basis").innerHTML = step.lawBlocks.length
+      ? step.lawBlocks
+          .map((block) => {
+            const references = String(block.body || block.title)
+              .split(/\r?\n/)
+              .map((line) => line.replace(/^[•‣▶]\s*/, "").trim())
+              .filter(Boolean);
+            return `
+              <div class="basis-reference-group">
+                <ul class="basis-reference-list">
+                  ${references
+                    .map((reference) => `<li>${escapeHtml(reference)}</li>`)
+                    .join("")}
+                </ul>
+                <a class="basis-source-link"
+                   href="${escapeHtml(data.downloads.manual)}#page=${block.pdfPage}"
+                   target="_blank" rel="noopener">매뉴얼 ${block.printedPage}쪽 원문</a>
+              </div>
+            `;
+          })
+          .join("")
+      : "—";
+    byId("step-pages").textContent = step.pages.length
+      ? step.pages.map((page) => `매뉴얼 ${page}쪽`).join(", ")
+      : work.printedPages;
+  }
+
+  function relatedFaqsFor(work, step, requestedFaqNumber = "") {
+    const requested = data.faqs.find(
+      (faq) => String(faq.number) === String(requestedFaqNumber)
+    );
+    const terms = titleTerms(
+      `${work.title} ${step.title} ${step.blocks.map((block) => block.title).join(" ")}`
+    );
+    const ranked = data.faqs
+      .filter((faq) => work.faqCategories.includes(faq.category))
+      .map((faq) => {
+        const source = normalize(`${faq.question} ${faq.answer}`);
+        const score = terms.reduce(
+          (total, term) => total + (source.includes(normalize(term)) ? 1 : 0),
+          0
+        );
+        return { faq, score };
+      })
+      .sort((a, b) => b.score - a.score || a.faq.number - b.faq.number)
+      .slice(0, 5)
+      .map((item) => item.faq);
+    if (requested && !ranked.some((faq) => faq.id === requested.id)) {
+      return [requested, ...ranked].slice(0, 5);
+    }
+    return ranked;
+  }
+
+  function parseFaqContent(answer) {
+    const contentLines = [];
+    const metadata = [];
+
+    String(answer || "")
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .forEach((line) => {
+        const metaMatch = line.match(/^【([^】]+)】\s*(.*)$/);
+        if (metaMatch) metadata.push({ label: metaMatch[1], value: metaMatch[2] });
+        else contentLines.push(line);
+      });
+
+    let questionLines = [];
+    let answerLines = contentLines;
+    if (/^질문\s*내용$/.test(contentLines[0] || "")) {
+      const embedded = contentLines.slice(1);
+      const blankIndex = embedded.findIndex((line) => !line);
+      const answerStart =
+        blankIndex >= 0
+          ? blankIndex + 1
+          : embedded.findIndex(
+              (line, index) => index > 0 && /^[･․•‣▶○]\s*/.test(line)
+            );
+
+      if (answerStart >= 0) {
+        const questionEnd = blankIndex >= 0 ? blankIndex : answerStart;
+        questionLines = embedded.slice(0, questionEnd).filter(Boolean);
+        answerLines = embedded.slice(answerStart).filter(Boolean);
+      } else {
+        questionLines = embedded.filter(Boolean);
+        answerLines = [];
+      }
+    } else {
+      answerLines = contentLines.filter(Boolean);
+    }
+
+    return { questionLines, answerLines, metadata };
+  }
+
+  function faqTextMarkup(lines) {
+    const entries = [];
+    lines.forEach((rawLine) => {
+      const line = String(rawLine || "").trim();
+      if (!line) return;
+      const bulletMatch = line.match(/^[･․•‣▶○]\s*(.*)$/);
+      if (bulletMatch) {
+        entries.push({ type: "bullet", text: bulletMatch[1] });
+        return;
+      }
+      const previous = entries.at(-1);
+      if (previous) previous.text += ` ${line}`;
+      else entries.push({ type: "paragraph", text: line });
+    });
+
+    return `<div class="faq-text-body">${entries
+      .map((entry) =>
+        entry.type === "bullet"
+          ? `<div class="faq-text-item">
+               <span class="faq-text-marker" aria-hidden="true">•</span>
+               <span>${escapeHtml(entry.text)}</span>
+             </div>`
+          : `<p>${escapeHtml(entry.text)}</p>`
+      )
+      .join("")}</div>`;
+  }
+
+  function faqContentMarkup(faq) {
+    const parsed = parseFaqContent(faq.answer);
+    return `
+      <div class="faq-content-stack">
+        ${
+          parsed.questionLines.length
+            ? `<section class="faq-question-card" aria-label="질문 내용">
+                 <div class="faq-section-head">
+                   <span class="faq-role-badge question">질문 내용</span>
+                 </div>
+                 ${faqTextMarkup(parsed.questionLines)}
+               </section>`
+            : ""
+        }
+        <section class="faq-answer-card" aria-label="답변">
+          <div class="faq-section-head">
+            <span class="faq-role-badge answer">답변</span>
+          </div>
+          ${faqTextMarkup(parsed.answerLines)}
+          ${
+            parsed.metadata.length
+              ? `<dl class="faq-answer-meta">${parsed.metadata
+                  .map(
+                    (item) => `
+                      <div>
+                        <dt>${escapeHtml(item.label)}</dt>
+                        <dd>${escapeHtml(item.value)}</dd>
+                      </div>
+                    `
+                  )
+                  .join("")}</dl>`
+              : ""
+          }
+        </section>
+      </div>
+    `;
+  }
+
+  function renderFaqs(work, step, requestedFaqNumber = "") {
+    const target = byId("related-faqs");
+    const faqs = relatedFaqsFor(work, step, requestedFaqNumber);
+    if (!faqs.length) {
+      target.innerHTML = '<p class="empty-state">이 업무에 연결된 FAQ 원문이 없습니다.</p>';
+      return;
+    }
+    target.innerHTML = faqs
+      .map((faq) => {
+        const number = String(faq.number);
+        const panelId = `faq-panel-${number}`;
+        const expanded = number === String(requestedFaqNumber);
+        return `
+          <div class="accordion-item${expanded ? " faq-targeted" : ""}">
+            <h3>
+              <button class="btn-accordion" id="${panelId}-button" type="button"
+                      aria-expanded="${expanded}" aria-controls="${panelId}">
+                <span class="faq-question-layout">
+                  <span class="faq-list-icon" aria-hidden="true">Q</span>
+                  <span class="faq-question-text">${escapeHtml(faq.question)}</span>
+                </span>
+              </button>
+            </h3>
+            <div class="accordion-collapse" id="${panelId}"
+                 aria-labelledby="${panelId}-button"${expanded ? "" : " hidden"}>
+              <div class="accordion-body">${faqContentMarkup(faq)}</div>
+            </div>
+          </div>
+        `;
+      })
+      .join("");
+    target.querySelectorAll(".btn-accordion").forEach((button) => {
+      button.addEventListener("click", () => {
+        const expanded = button.getAttribute("aria-expanded") === "true";
+        button.setAttribute("aria-expanded", String(!expanded));
+        byId(button.getAttribute("aria-controls")).hidden = expanded;
+      });
+    });
+  }
+
+  function renderStep(work, step, requestedFaqNumber = "") {
+    const steps = getSteps(work.id);
+    const activeIndex = steps.indexOf(step);
+    currentStepId = step.id;
+    byId("step-label").textContent = `${activeIndex + 1}단계`;
+    byId("step-title").textContent = step.title;
+    byId("step-summary").textContent = step.summary;
+    byId("step-progress").textContent = `전체 ${steps.length}단계 중 ${activeIndex + 1}단계`;
+    renderSourceBlocks("step-actions", step.mainBlocks);
+    renderSourceBlocks("step-checks", []);
+    renderSourceBlocks("step-cautions", step.tipBlocks);
+    renderResources(work, step);
+    renderFaqs(work, step, requestedFaqNumber);
+
+    const firstBlock = step.blocks[0];
+    byId("source-page-link").href = firstBlock
+      ? `${data.downloads.manual}#page=${firstBlock.pdfPage}`
+      : data.downloads.manual;
+
+    const prevButton = byId("prev-step");
+    const nextButton = byId("next-step");
+    prevButton.disabled = activeIndex === 0;
+    nextButton.disabled = activeIndex === steps.length - 1;
+    nextButton.textContent = activeIndex === steps.length - 1 ? "마지막 단계" : "다음 단계";
+    prevButton.onclick = () => {
+      if (activeIndex > 0) location.hash = routeFor(work.id, steps[activeIndex - 1].id);
+    };
+    nextButton.onclick = () => {
+      if (activeIndex < steps.length - 1) {
+        location.hash = routeFor(work.id, steps[activeIndex + 1].id);
+      }
+    };
+    renderStepList(work, steps, activeIndex);
+  }
+
+  function renderWork(workId, options = {}) {
+    const work = getWork(workId);
+    if (!work) {
+      location.hash = "#overview";
+      return;
+    }
+    const step = findStep(work.id, options);
+    if (!step) {
+      location.hash = "#overview";
+      return;
+    }
+    currentWorkId = work.id;
+    overviewView.hidden = true;
+    workView.hidden = false;
+    renderSideNavigation();
+    byId("work-number").textContent = `업무 ${String(work.number).padStart(2, "0")}`;
+    byId("work-pages").textContent = `원문 ${work.printedPages}쪽`;
+    byId("work-title").textContent = work.title;
+    byId("work-intro").textContent = workflows[work.id].intro;
+    breadcrumb.innerHTML = `
+      <li class="home"><a href="${escapeHtml(globalHomeHref())}">홈</a></li>
+      <li><a href="#overview">${escapeHtml(chapterName())}</a></li>
+      <li><span>${escapeHtml(work.title)}</span></li>
+    `;
+    renderStep(work, step, options.faqNumber);
+    document.title = `${work.title} · ${step.title} | 학교행정업무 길라잡이`;
+    if (options.formId) requestAnimationFrame(() => openForm(options.formId));
+    else window.scrollTo({ top: 0, behavior: "instant" });
+  }
+
+  function renderRoute() {
+    const raw = location.hash.replace(/^#/, "");
+    if (!raw || raw === "overview" || raw === "downloads") {
+      currentWorkId = "";
+      currentStepId = "";
+      workView.hidden = true;
+      overviewView.hidden = false;
+      breadcrumb.innerHTML = `
+        <li class="home"><a href="${escapeHtml(globalHomeHref())}">홈</a></li>
+        <li><span>${escapeHtml(chapterName())}</span></li>
+      `;
+      document.title = `학교행정업무 길라잡이 웹판 | ${chapterName()}`;
+      if (raw === "downloads") {
+        requestAnimationFrame(() => byId("downloads").scrollIntoView({ behavior: "smooth" }));
+      }
+      return;
+    }
+    const params = new URLSearchParams(raw);
+    renderWork(params.get("work"), {
+      stepId: params.get("step") || "",
+      blockId: params.get("block") || "",
+      formId: params.get("form") || "",
+      faqNumber: params.get("faq") || "",
+    });
+  }
+
+  function searchResultHref(item) {
+    const options = {
+      blockId: item.blockId || "",
+      formId: item.formId || "",
+      faqNumber: item.faqNumber || "",
+    };
+    let stepId = "";
+    if (!item.chapterId || item.chapterId === activeChapter.id) {
+      stepId = findStep(item.workId, { blockId: item.blockId })?.id || "";
+    }
+    const hash = routeFor(item.workId, stepId, options);
+    return !item.chapterId || item.chapterId === activeChapter.id
+      ? hash
+      : `?chapter=${encodeURIComponent(item.chapterId)}${hash}`;
+  }
+
+  function scoreResult(item, query) {
+    const terms = normalize(query).split(" ").filter(Boolean);
+    const source = normalize(item.text);
+    if (!terms.length || !terms.every((term) => source.includes(term))) return 0;
+    const title = normalize(item.title);
+    return terms.reduce((score, term) => score + (title.includes(term) ? 10 : 2), 0);
+  }
+
+  function runSearch(query) {
+    const trimmed = query.trim();
+    if (!trimmed) {
+      searchStatus.textContent = "전체 편의 매뉴얼·FAQ·서식 원문을 검색합니다.";
+      searchResults.innerHTML = "";
+      return;
+    }
+    const results = allChapterSearchIndex
+      .map((item) => ({ item, score: scoreResult(item, trimmed) }))
+      .filter((result) => result.score > 0)
+      .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title, "ko"))
+      .slice(0, 30);
+    searchStatus.textContent = results.length
+      ? `전체 편 ‘${trimmed}’ 검색 결과 ${results.length}건`
+      : `‘${trimmed}’과 일치하는 원문이 없습니다.`;
+    searchResults.innerHTML = results.length
+      ? results
+          .map(
+            ({ item }) => `
+              <a class="search-result" href="${escapeHtml(searchResultHref(item))}">
+                <div class="search-result-meta">
+                  <span>${escapeHtml(chapterName(item))}</span>
+                  <span aria-hidden="true">·</span><span>${escapeHtml(item.type)}</span>
+                </div>
+                <h3>${escapeHtml(item.title)}</h3>
+                <p>${escapeHtml(item.description)}</p>
+              </a>
+            `
+          )
+          .join("")
+      : '<p class="empty-state">원문에 사용된 다른 단어나 문장으로 검색해 보세요.</p>';
+  }
+
+  function openSearch(query = "") {
+    lastFocusedElement = document.activeElement;
+    if (typeof searchDialog.showModal === "function") searchDialog.showModal();
+    else searchDialog.setAttribute("open", "");
+    searchInput.value = query;
+    runSearch(query);
+    requestAnimationFrame(() => searchInput.focus());
+  }
+
+  function closeSearch() {
+    if (typeof searchDialog.close === "function" && searchDialog.open) searchDialog.close();
+    else searchDialog.removeAttribute("open");
+    if (lastFocusedElement instanceof HTMLElement) lastFocusedElement.focus();
+  }
+
+  document.querySelectorAll("[data-open-search]").forEach((button) => {
+    button.addEventListener("click", () => openSearch());
+  });
+  document.querySelectorAll("[data-close-search]").forEach((button) => {
+    button.addEventListener("click", closeSearch);
+  });
+  byId("hero-search-form").addEventListener("submit", (event) => {
+    event.preventDefault();
+    openSearch(byId("hero-search-input").value);
+  });
+  byId("search-form").addEventListener("submit", (event) => {
+    event.preventDefault();
+    runSearch(searchInput.value);
+  });
+  searchInput.addEventListener("input", () => runSearch(searchInput.value));
+  searchResults.addEventListener("click", (event) => {
+    if (event.target.closest(".search-result")) closeSearch();
+  });
+  document.querySelector(".quick-keywords")?.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-query]");
+    if (button) openSearch(button.dataset.query);
+  });
+  mobileWorkMenu.addEventListener("click", () => {
+    const expanded = mobileWorkMenu.getAttribute("aria-expanded") === "true";
+    mobileWorkMenu.setAttribute("aria-expanded", String(!expanded));
+    sideNavigation.classList.toggle("mobile-open", !expanded);
+  });
+  window.addEventListener("hashchange", renderRoute);
+
+  ensureFormDialog();
+  renderSearchExamples();
+  renderOverview();
+  renderRoute();
+})();
