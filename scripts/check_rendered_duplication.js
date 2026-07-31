@@ -44,7 +44,6 @@ async function main() {
   page.on("pageerror", (error) => problems.push(`스크립트 예외: ${error.message}`));
 
   let checkedSteps = 0;
-  let sourceTableBlocks = 0;
 
   for (const [chapterId, key] of [
     ["01", "CHAPTER1_DATA"],
@@ -73,30 +72,24 @@ async function main() {
           const list = document.getElementById("step-actions");
           if (!list) return [];
           const out = [];
+          // 한 블록 안에서 같은 문구가 되풀이되는 것은 원문이 표이기 때문입니다.
+          // (예: '구 분 / 내 용' 표의 여러 행, 직급별 제출자료 표의 여러 열)
+          // 매뉴얼이 그렇게 적혀 있는 것이라 화면 잘못이 아니므로,
+          // 서로 다른 블록에 같은 문구가 나오는 경우만 셉니다.
           list.querySelectorAll(".source-detail").forEach((block) => {
             if (block.querySelector("table")) return;
-            // 원문이 '구 분 / 내 용' 표인 자리는 같은 문구가 여러 행에 나옵니다.
-            // 매뉴얼이 그렇게 적혀 있는 것이라 화면 잘못이 아닙니다.
-            const first = block.querySelector(".semantic-summary-item");
-            if (first && /^구\s*분\s+내\s*용/.test(first.textContent.replace(/\s+/g, " ").trim())) {
-              window.__sourceTables = (window.__sourceTables || 0) + 1;
-              return;
-            }
+            const inBlock = new Set();
             block.querySelectorAll(".semantic-summary-item, .source-full-text").forEach(
               (node) => {
                 const text = node.textContent.replace(/\s+/g, " ").trim();
-                if (text.length >= 12) out.push(text);
+                if (text.length >= 12) inBlock.add(text);
               }
             );
+            out.push(...inBlock);
           });
           return out;
         });
 
-        sourceTableBlocks += await page.evaluate(() => {
-          const count = window.__sourceTables || 0;
-          window.__sourceTables = 0;
-          return count;
-        });
         checkedSteps += 1;
 
         const seen = new Map();
@@ -120,8 +113,7 @@ async function main() {
   await browser.close();
 
   console.log(
-    `단계 ${checkedSteps}개 확인 ` +
-      `(원문이 표인 블록 ${sourceTableBlocks}개는 목록으로 펼쳐져 있어 제외)`
+    `항목 ${checkedSteps}개 확인 (한 블록 안의 표 반복은 원문 그대로이므로 제외)`
   );
   if (problems.length) {
     console.error(`\n중복 ${problems.length}건:`);

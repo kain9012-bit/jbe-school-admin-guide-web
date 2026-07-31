@@ -53,7 +53,7 @@ for (const work of data.sections) {
   }
 }
 
-requireCondition(stepCount === 31, `제3편 단계 수 오류: ${stepCount}`);
+requireCondition(stepCount === 54, `제3편 목차 항목 수 오류: ${stepCount}`);
 requireCondition(blockCount === 91, `제3편 본문 블록 수 오류: ${blockCount}`);
 
 for (const relativePath of Object.values(data.downloads)) {

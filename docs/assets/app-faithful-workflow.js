@@ -202,7 +202,7 @@
         ? `${uniqueTopics.slice(0, 3).join(", ")}${
             uniqueTopics.length > 3 ? " 등" : ""
           }을 중심으로 확인합니다.`
-        : "매뉴얼의 업무 흐름도에 제시된 단계입니다.";
+        : "매뉴얼의 해당 소제목 아래 내용입니다.";
       return {
         id: `step-${index + 1}`,
         title: sourceStep.title,
@@ -215,14 +215,10 @@
       };
     });
 
-    const visibleTitles = steps.map((step) => step.title).slice(0, 5);
-    const intro = work.flowGroups.length
-      ? `${visibleTitles.join(" → ")}${
-          steps.length > visibleTitles.length ? " 등" : ""
-        }의 흐름으로 업무를 확인합니다.`
-      : `${visibleTitles.join(", ")}${
-          steps.length > visibleTitles.length ? " 등" : ""
-        }의 항목별 기준을 확인합니다.`;
+    const visibleTitles = steps.map((step) => cleanSourceHeading(step.title)).slice(0, 4);
+    const intro = `${visibleTitles.join(", ")}${
+      steps.length > visibleTitles.length ? " 등" : ""
+    }을 매뉴얼 차례대로 확인합니다.`;
     return {
       intro,
       steps,
@@ -862,10 +858,10 @@
     const steps = getSteps(work.id);
     const activeIndex = steps.indexOf(step);
     currentStepId = step.id;
-    byId("step-label").textContent = `${activeIndex + 1}단계`;
+    byId("step-label").textContent = `${activeIndex + 1}번째 항목`;
     byId("step-title").textContent = step.title;
     byId("step-summary").textContent = step.summary;
-    byId("step-progress").textContent = `전체 ${steps.length}단계 중 ${activeIndex + 1}단계`;
+    byId("step-progress").textContent = `전체 ${steps.length}개 항목 중 ${activeIndex + 1}번째`;
     renderSourceBlocks("step-actions", step.mainBlocks);
     renderSourceBlocks("step-checks", []);
     renderSourceBlocks("step-cautions", step.tipBlocks);
@@ -881,7 +877,7 @@
     const nextButton = byId("next-step");
     prevButton.disabled = activeIndex === 0;
     nextButton.disabled = activeIndex === steps.length - 1;
-    nextButton.textContent = activeIndex === steps.length - 1 ? "마지막 단계" : "다음 단계";
+    nextButton.textContent = activeIndex === steps.length - 1 ? "마지막 항목" : "다음 항목";
     prevButton.onclick = () => {
       if (activeIndex > 0) location.hash = routeFor(work.id, steps[activeIndex - 1].id);
     };

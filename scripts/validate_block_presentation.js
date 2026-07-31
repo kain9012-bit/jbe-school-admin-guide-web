@@ -104,13 +104,9 @@ for (const [chapterId, key] of [
 
         checkedBlocks += 1;
 
-        // 미리보기는 앞 3항목을 보여 줍니다. 그것이 본문 전부이면
-        // '더 보기'를 달아도 같은 글을 두 번 읽게 할 뿐입니다.
+        // 본문은 접지 않고 한 번만 그대로 보여 줍니다.
         const items = logicalItems(body);
-        const preview = items.slice(0, 3).map((item) => excerpt(item));
-        const coversAll =
-          items.length <= preview.length && !preview.some((item) => item.endsWith("…"));
-        if (coversAll) duplicated += 1;
+        if (items.length) duplicated += 0;
       }
     }
   }
@@ -123,8 +119,12 @@ const app = fs.readFileSync(
 );
 
 requireCondition(
-  app.includes("summaryCoversAll") && app.includes("const showFullDetail ="),
-  "미리보기가 본문 전부일 때 '더 보기'를 숨기는 처리가 없습니다."
+  !app.includes("<details class=\"source-full-detail\""),
+  "본문을 접어 두는 '더 보기'가 남아 있습니다. 같은 글을 두 번 싣게 됩니다."
+);
+requireCondition(
+  app.includes("const items = block.body && !asTable ? allLogicalItems(block) : [];"),
+  "본문을 한 번에 전부 보여 주는 처리가 없습니다."
 );
 requireCondition(
   app.includes("function isEmptyStructuralBlock("),
@@ -153,6 +153,5 @@ if (problems.length) {
 
 console.log(
   `block presentation valid: 본문 블록 ${checkedBlocks}개 확인 ` +
-    `(그중 ${duplicated}개는 미리보기가 본문 전부라 '더 보기'를 달지 않음), ` +
     `본문 없는 구조 표시 ${emptyStructural}개 제외, 제목만 있는 항목 ${headingOnly}개 유지`
 );
