@@ -21,6 +21,25 @@
     return `${location.href.split(/[?#]/)[0]}#overview`;
   }
 
+  const searchIndex = Array.isArray(window.GUIDE_SEARCH_INDEX)
+    ? window.GUIDE_SEARCH_INDEX
+    : [];
+
+  const escapeHtml = (value) =>
+    String(value ?? "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+
+  // 분야 안의 업무 목록은 통합검색 색인에서 가져옵니다.
+  function worksOf(chapterId) {
+    return searchIndex.filter(
+      (item) => item.type === "업무" && item.chapterId === chapterId
+    );
+  }
+
   function renderChapterGrid() {
     chapterGrid.innerHTML = config.chapters
       .map((chapter) => {
@@ -30,30 +49,108 @@
             <li class="chapter-item is-planned">
               <span class="chapter-link" aria-disabled="true">
                 <strong>${chapter.label}</strong>
-                <small>준비 중</small>
+                <span>${escapeHtml(chapter.title)}</span>
+                <span class="sr-only">아직 웹에서 볼 수 없습니다.</span>
               </span>
             </li>
           `;
         }
+        const works = worksOf(chapter.id);
+        const panelId = `chapter-dialog-works-${chapter.id}`;
         return `
           <li class="chapter-item${current ? " is-current" : ""}">
-            <a class="chapter-link" href="?chapter=${chapter.id}#overview"${current ? ' aria-current="page"' : ""}>
+            <button class="chapter-link" type="button"
+                    aria-expanded="false" aria-controls="${panelId}"
+                    data-dialog-chapter="${chapter.id}"${
+                      current ? ' aria-current="page"' : ""
+                    }>
               <strong>${chapter.label}</strong>
-              <span>${chapter.title}</span>
-              <small>${current ? "현재 편" : "이동"}</small>
-            </a>
+              <span>${escapeHtml(chapter.title)}</span>
+              <small>업무 ${works.length}개</small>
+              <span class="chapter-link-arrow" aria-hidden="true">⌄</span>
+            </button>
+            <div class="chapter-works" id="${panelId}" hidden>
+              <ul>
+                ${works
+                  .map(
+                    (item, index) => `
+                  <li>
+                    <a href="?chapter=${encodeURIComponent(
+                      item.chapterId
+                    )}#work=${encodeURIComponent(item.workId)}"
+                       data-dialog-work="${escapeHtml(item.workId)}"
+                       data-dialog-work-chapter="${escapeHtml(item.chapterId)}">
+                      <span class="chapter-work-number">${String(index + 1).padStart(
+                        2,
+                        "0"
+                      )}</span>
+                      <span class="chapter-work-copy">
+                        <strong>${escapeHtml(item.title)}</strong>
+                        <small>원문 ${escapeHtml(item.description)}</small>
+                      </span>
+                      <span aria-hidden="true">→</span>
+                    </a>
+                  </li>
+                `
+                  )
+                  .join("")}
+              </ul>
+            </div>
           </li>
         `;
       })
       .join("");
 
+    bindChapterToggles();
+
     const available = config.chapters.filter((chapter) => chapter.available);
     const note = document.getElementById("chapter-dialog-note");
     if (note) {
       note.textContent = `현재 ${available
-        .map((chapter) => chapter.label)
-        .join("·")}을 제공하며, 나머지 편은 자료 검수 후 순차적으로 열립니다.`;
+        .map((chapter) => chapter.title)
+        .join("·")} 분야를 볼 수 있으며, 나머지는 자료 검수 후 순차적으로 열립니다.`;
     }
+  }
+
+  // 분야를 누르면 그 자리에서 업무 목록이 펼쳐집니다.
+  function bindChapterToggles() {
+    const buttons = chapterGrid.querySelectorAll("[data-dialog-chapter]");
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const panel = document.getElementById(button.getAttribute("aria-controls"));
+        if (!panel) return;
+        const willOpen = button.getAttribute("aria-expanded") !== "true";
+
+        buttons.forEach((other) => {
+          if (other === button) return;
+          const otherPanel = document.getElementById(other.getAttribute("aria-controls"));
+          other.setAttribute("aria-expanded", "false");
+          if (otherPanel) {
+            otherPanel.hidden = true;
+            otherPanel.classList.remove("is-open");
+          }
+        });
+
+        button.setAttribute("aria-expanded", String(willOpen));
+        if (willOpen) {
+          panel.hidden = false;
+          requestAnimationFrame(() => panel.classList.add("is-open"));
+        } else {
+          panel.classList.remove("is-open");
+          panel.hidden = true;
+        }
+      });
+    });
+
+    // 지금 보고 있는 분야 안에서 업무를 고르면 새로 불러오지 않고 바로 이동합니다.
+    chapterGrid.querySelectorAll("[data-dialog-work]").forEach((link) => {
+      link.addEventListener("click", (event) => {
+        if (!active || link.dataset.dialogWorkChapter !== active.id) return;
+        event.preventDefault();
+        closeChapterDialog();
+        location.hash = `#work=${encodeURIComponent(link.dataset.dialogWork)}`;
+      });
+    });
   }
 
   function openChapterDialog() {

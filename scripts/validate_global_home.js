@@ -127,6 +127,37 @@ requireCondition(
   "편별 화면의 홈 이동이 19개 편 통합 홈으로 연결되지 않습니다."
 );
 
+// 상단의 분야 선택 창도 홈과 같은 방식으로 업무를 펼쳐 보여야 합니다.
+const header = fs.readFileSync(path.join(root, "docs/assets/header-v3.js"), "utf8");
+requireCondition(
+  header.includes("data-dialog-chapter") && header.includes('aria-expanded="false"'),
+  "분야 선택 창이 그 자리에서 펼쳐지는 방식이 아닙니다."
+);
+requireCondition(
+  header.includes("#work=${encodeURIComponent("),
+  "분야 선택 창에서 업무를 고를 때 처리 단계로 바로 가지 않습니다."
+);
+requireCondition(
+  !header.includes("준비 중") && !header.includes('"현재 편"'),
+  "분야 선택 창에 불필요한 상태 라벨이 남아 있습니다."
+);
+requireCondition(
+  header.includes("function worksOf("),
+  "분야 선택 창이 분야별 업무 목록을 만들지 않습니다."
+);
+
+for (const filename of ["index.html", "index-structured.html", "index-workflow.html"]) {
+  const html = fs.readFileSync(path.join(root, "docs", filename), "utf8");
+  requireCondition(
+    html.includes('id="chapter-dialog-note"'),
+    `${filename}의 분야 선택 창 안내 문구가 갱신되지 않습니다.`
+  );
+  requireCondition(
+    !html.includes("제1편 시범 콘텐츠만"),
+    `${filename}에 제1편만 제공한다는 옛 안내가 남아 있습니다.`
+  );
+}
+
 // 이용자에게 보이는 문구에 편 수 같은 내부 기준 표현이 없어야 합니다.
 const jargon = ["19개 편", "제19편", "전체 19개"];
 for (const filename of ["index.html", "index-structured.html", "index-workflow.html"]) {
