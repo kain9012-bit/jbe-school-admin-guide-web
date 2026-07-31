@@ -473,43 +473,31 @@
       !block.body && (block.title.endsWith("세부내용") || block.title === "업무 흐름도");
     // 원문의 항목 번호('1. 정의')는 매뉴얼과 대조할 때 필요하므로 그대로 둡니다.
     const heading = generatedTitle ? "" : String(block.title || "").trim();
-    const summaries = logicalSummaryItems(block);
-    const fullDetail = block.body
-      ? window.GUIDE_DETAIL_RENDERER?.render(block)
-      : null;
+    // 안내서는 읽으라고 만든 문서입니다. 앞 몇 줄만 보여 주고 나머지를 접어 두면
+    // 같은 글을 두 번 싣게 되고, 읽는 사람은 한 번 더 눌러야 합니다.
+    // 그래서 본문은 접지 않고 한 번만, 전부 보여 줍니다.
+    const rendered = block.body ? window.GUIDE_DETAIL_RENDERER?.render(block) : null;
 
-    // 위에 보여 준 내용이 본문 전부라면 '더 보기'를 달지 않습니다.
-    // 같은 글을 두 번 읽게 만들 뿐입니다.
-    // 표처럼 다른 방식으로 정리해 보여 주는 경우에는 그대로 답니다.
-    const allItems = allLogicalItems(block);
-    const summaryCoversAll =
-      fullDetail?.type === "text" &&
-      allItems.length <= summaries.length &&
-      !summaries.some((item) => String(item).endsWith("…"));
-    const showFullDetail = Boolean(block.body) && !summaryCoversAll;
+    // 표로 정리해 보여 줄 수 있으면 표로만 보여 줍니다. 줄 목록을 함께 내지 않습니다.
+    const asTable = rendered && rendered.type !== "text" && rendered.html;
+    const items = block.body && !asTable ? allLogicalItems(block) : [];
 
     return `
       <li class="source-detail${structural ? " structural-marker" : ""}"
           data-source-block="${escapeHtml(block.id)}">
         ${heading ? `<strong>${escapeHtml(heading)}</strong>` : ""}
         ${
-          summaries.length
-            ? `<ul class="semantic-summary-list">${summaries
-                .map((item) => summaryItemMarkup(item))
-                .join("")}</ul>`
+          asTable
+            ? `<div class="source-full-content" data-detail-type="${escapeHtml(
+                rendered.type
+              )}">${rendered.html}</div>`
             : ""
         }
         ${
-          showFullDetail
-            ? `<details class="source-full-detail" data-detail-type="${escapeHtml(
-                fullDetail?.type || "text"
-              )}">
-                 <summary>${escapeHtml(fullDetail?.summary || "전체 내용 보기")}</summary>
-                 <div class="source-full-content">${
-                   fullDetail?.html ||
-                   `<div class="source-full-text">${escapeHtml(block.body)}</div>`
-                 }</div>
-               </details>`
+          items.length
+            ? `<ul class="semantic-summary-list">${items
+                .map((item) => summaryItemMarkup(item))
+                .join("")}</ul>`
             : ""
         }
       </li>
