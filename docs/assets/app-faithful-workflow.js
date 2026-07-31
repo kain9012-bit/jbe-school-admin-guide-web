@@ -182,6 +182,8 @@
       const tipBlocks = stepBlocks.filter((block) => block.title === "TIPTIP");
       const classifiedBlocks = stepBlocks
         .filter((block) => block.title !== "TIPTIP")
+        // 업무 흐름도는 위에 그림으로 따로 보여 주므로 본문에 또 넣지 않습니다.
+        .filter((block) => !isSourceFlowBlock(work, block) && block.title !== "업무 흐름도")
         .map(splitLawReferences);
       const mainBlocks = classifiedBlocks
         .map((entry) => entry.contentBlock)
@@ -410,26 +412,41 @@
     }
     section.hidden = false;
 
-    diagram.innerHTML = flows
-      .map((flow) => {
-        const steps = String(flow.sourceText)
+    // 흐름이 여러 줄이면 줄마다 따로 그립니다.
+    // '[접수 시] …', '[기안 시] …'처럼 서로 다른 흐름이기 때문입니다.
+    const lines = flows.flatMap((flow) =>
+      String(flow.sourceText)
+        .split(/\r?\n/)
+        .map((line) => line.trim())
+        .filter(Boolean)
+    );
+
+    diagram.innerHTML = lines
+      .map((line) => {
+        const steps = line
           .split(/\s*▶\s*/)
           .map((part) => part.trim())
           .filter(Boolean);
-        return steps
-          .map(
-            (step, index) => `
-              <li class="work-flow-step">
-                <span class="work-flow-name">${escapeHtml(step)}</span>
-                ${
-                  index < steps.length - 1
-                    ? '<span class="work-flow-arrow" aria-hidden="true">▶</span>'
-                    : ""
-                }
-              </li>
-            `
-          )
-          .join("");
+        return `
+          <li class="work-flow-line">
+            <ol class="work-flow-row">
+              ${steps
+                .map(
+                  (step, index) => `
+                    <li class="work-flow-step">
+                      <span class="work-flow-name">${escapeHtml(step)}</span>
+                      ${
+                        index < steps.length - 1
+                          ? '<span class="work-flow-arrow" aria-hidden="true">▶</span>'
+                          : ""
+                      }
+                    </li>
+                  `
+                )
+                .join("")}
+            </ol>
+          </li>
+        `;
       })
       .join("");
 

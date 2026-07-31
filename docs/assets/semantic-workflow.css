@@ -63,6 +63,14 @@
 }
 
 .work-flow-diagram {
+  display: grid;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.work-flow-row {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem 1rem;
