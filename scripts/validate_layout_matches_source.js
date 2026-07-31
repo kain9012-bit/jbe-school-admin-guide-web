@@ -22,6 +22,18 @@ const HEADING = /^\d+\.\s*\S/;
 const GENERATED = /^매뉴얼 \d+쪽$/;
 const squash = (value) => String(value || "").replace(/\s+/g, "");
 
+// 원문 쪽 글자에서 '세부내용 OOO' 형태의 소제목을 모읍니다.
+function inSourcePrefix(work, squashFn) {
+  const names = new Set();
+  for (const page of work.sourcePages) {
+    for (const line of String(page.text).split(/\r?\n/)) {
+      const found = /^세부내용\s+(\S.*)$/.exec(line.trim());
+      if (found) names.add(squashFn(found[1]));
+    }
+  }
+  return names;
+}
+
 let works = 0;
 let sections = 0;
 let headingSections = 0;
@@ -54,13 +66,20 @@ for (const [chapterId, key] of [
         .filter((block) => /세부내용$/.test(block.title))
         .map((block) => squash(block.title.replace(/세부내용$/, "")))
     );
+    for (const name of inSourcePrefix(work, squash)) sectionNames.add(name);
 
     // 원문 쪽 글자에 있는 소제목 표시가 목차에 빠짐없이 나와야 합니다.
+    // 표시는 'OOO세부내용'처럼 뒤에 붙기도 하고 '세부내용 OOO'처럼 앞에 붙기도 합니다.
     const inSource = new Set();
     for (const page of work.sourcePages) {
       for (const line of String(page.text).split(/\r?\n/)) {
         const text = line.trim();
-        if (/세부내용$/.test(text)) inSource.add(squash(text.replace(/세부내용$/, "")));
+        if (/세부내용$/.test(text)) {
+          inSource.add(squash(text.replace(/세부내용$/, "")));
+          continue;
+        }
+        const prefix = /^세부내용\s+(\S.*)$/.exec(text);
+        if (prefix) inSource.add(squash(prefix[1]));
       }
     }
     const inLayout = new Set(layout.map((section) => squash(section.title)));
@@ -82,14 +101,38 @@ for (const [chapterId, key] of [
         problems.push(`${label}: 매뉴얼에 없는 소제목입니다.`);
       }
 
-      // 3. 그 소제목 표시 블록을 실제로 담고 있어야 합니다.
-      if (sectionNames.has(key)) {
+      // 3. 뒤에 붙은 표시는 그 표시 블록을 담고 있어야 합니다.
+      //    앞에 붙은 표시는 블록 제목이 아니라 쪽 글자에만 있으므로,
+      //    그 쪽의 내용을 담고 있는지로 확인합니다.
+      const suffixNames = new Set(
+        work.contentBlocks
+          .filter((block) => /세부내용$/.test(block.title))
+          .map((block) => squash(block.title.replace(/세부내용$/, "")))
+      );
+      if (suffixNames.has(key)) {
         const owns = section.blocks.some((id) => {
           const block = work.contentBlocks.find((item) => item.id === id);
           return block && squash(String(block.title).replace(/세부내용$/, "")) === key;
         });
         if (!owns) {
           problems.push(`${label}: 매뉴얼의 해당 소제목 구역을 담고 있지 않습니다.`);
+        }
+      } else if (sectionNames.has(key)) {
+        const pages = new Set(
+          section.blocks
+            .map((id) => work.contentBlocks.find((item) => item.id === id))
+            .filter(Boolean)
+            .map((block) => block.pdfPage)
+        );
+        const marked = work.sourcePages.some(
+          (page) =>
+            pages.has(page.pdfPage) &&
+            String(page.text)
+              .split(/\r?\n/)
+              .some((line) => squash(line).includes(`세부내용${key}`))
+        );
+        if (!marked) {
+          problems.push(`${label}: 매뉴얼에서 이 소제목이 붙은 쪽의 내용이 아닙니다.`);
         }
       }
 

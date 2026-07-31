@@ -6,7 +6,8 @@ window.GUIDE_WORKFLOW_LAYOUT = {
     { title: "검토·협조·결재", blocks: ["p4-b1","p4-b2","p4-b3","p4-b4","p4-b5","p5-b1","p5-b2","p5-b3","p5-b4"] }
   ],
   "k-edufine": [
-    { title: "문서기안 및 발송", blocks: ["p6-b1","p6-b2","p6-b3","p6-b4","p6-b5","p6-b6","p7-b1","p7-b2","p7-b3","p7-b4","p7-b5","p7-b6"] }
+    { title: "문서 접수(등록) 및 공람", blocks: ["p6-b1","p6-b2","p6-b3","p6-b4","p6-b5","p6-b6"] },
+    { title: "문서기안 및 발송", blocks: ["p7-b1","p7-b2","p7-b3","p7-b4","p7-b5","p7-b6"] }
   ],
   "official-seals": [
     { title: "공인제작", blocks: ["p8-b1","p8-b2","p8-b3","p8-b4","p8-b5","p8-b6","p8-b7","p8-b8"] },
@@ -32,7 +33,8 @@ window.GUIDE_WORKFLOW_LAYOUT = {
   "background-check": [
     { title: "신원조사", blocks: ["p21-b1","p21-b2","p21-b3","p21-b4"] },
     { title: "결격사유 조회", blocks: ["p21-b5"] },
-    { title: "행정정보 공동이용 시스템 이용 절차", blocks: ["p21-b6","p21-b7","p22-b1","p22-b2","p23-b1","p23-b2","p23-b3","p23-b4","p23-b5"] }
+    { title: "성범죄 경력 및 아동학대관련 범죄전력조회", blocks: ["p21-b6","p21-b7","p22-b1","p22-b2"] },
+    { title: "행정정보 공동이용 시스템 이용 절차", blocks: ["p23-b1","p23-b2","p23-b3","p23-b4","p23-b5"] }
   ],
   "cyber-security-day": [
     { title: "사이버 보안진단의 날 운영", blocks: ["p24-b1","p24-b2","p24-b3","p24-b4","p24-b5","p24-b6"] },

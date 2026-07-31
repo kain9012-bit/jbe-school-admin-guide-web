@@ -20,12 +20,30 @@ const root = path.resolve(__dirname, "..");
 const target = path.join(root, "docs/assets/workflow-layout.js");
 
 const SECTION_MARK = /세부내용$/;
+// 매뉴얼에는 '문서기안 및 발송세부내용'처럼 뒤에 붙은 것도 있고
+// '세부내용 문서 접수(등록) 및 공람'처럼 앞에 붙은 것도 있습니다.
+const SECTION_MARK_PREFIX = /^세부내용\s+(\S.*)$/;
+
+// 앞에 붙은 표시는 블록 제목이 아니라 원문 쪽 글자에만 있습니다.
+// 그 쪽의 마지막 블록에서 묶음을 닫는 이름으로 씁니다.
+function prefixMarksByPage(work) {
+  const marks = new Map();
+  for (const page of work.sourcePages) {
+    for (const line of String(page.text).split(/\r?\n/)) {
+      const found = SECTION_MARK_PREFIX.exec(line.trim());
+      if (found && !marks.has(page.pdfPage)) marks.set(page.pdfPage, found[1].trim());
+    }
+  }
+  return marks;
+}
 
 function sectionsOf(work) {
   const sections = [];
   let buffer = [];
+  const prefixMarks = prefixMarksByPage(work);
+  const blocks = work.contentBlocks;
 
-  for (const block of work.contentBlocks) {
+  for (const [index, block] of blocks.entries()) {
     buffer.push(block.id);
 
     // 표시에 본문이 딸려 있어도 소제목은 소제목입니다.
@@ -33,6 +51,15 @@ function sectionsOf(work) {
     if (SECTION_MARK.test(block.title)) {
       const title = block.title.replace(SECTION_MARK, "").trim();
       sections.push({ title: title || work.title, blocks: buffer });
+      buffer = [];
+      continue;
+    }
+
+    // 앞에 붙은 표시는 그 쪽의 마지막 블록에서 묶음을 닫습니다.
+    const next = blocks[index + 1];
+    const pageEnds = !next || next.pdfPage !== block.pdfPage;
+    if (pageEnds && prefixMarks.has(block.pdfPage)) {
+      sections.push({ title: prefixMarks.get(block.pdfPage), blocks: buffer });
       buffer = [];
     }
   }
