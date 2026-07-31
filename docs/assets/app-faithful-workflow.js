@@ -433,8 +433,7 @@
       })
       .join("");
 
-    const pages = [...new Set(flows.map((flow) => flow.printedPage))];
-    note.textContent = `매뉴얼 ${pages.join(", ")}쪽`;
+    note.hidden = true;
   }
 
   function allLogicalItems(block) {
