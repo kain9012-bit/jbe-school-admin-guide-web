@@ -971,6 +971,37 @@ input {
   margin-top: 2.4rem;
 }
 
+/* 찾을 자료 종류 고르기 */
+.search-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+}
+
+.search-filter {
+  padding: 0.7rem 1.4rem;
+  color: var(--guide-muted);
+  font-size: 1.4rem;
+  font-weight: 600;
+  background: #fff;
+  border: 1px solid var(--guide-line);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.search-filter:hover,
+.search-filter:focus-visible {
+  color: var(--guide-blue-dark);
+  border-color: var(--guide-blue);
+}
+
+.search-filter.is-selected {
+  color: #fff;
+  background: var(--guide-blue);
+  border-color: var(--guide-blue);
+}
+
 .search-status {
   margin: 2rem 0 1rem;
   color: var(--guide-muted);
@@ -1002,11 +1033,36 @@ input {
 
 .search-result-meta {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.8rem;
   align-items: center;
-  color: var(--guide-blue);
+  color: var(--guide-muted);
   font-size: 1.3rem;
   font-weight: 700;
+}
+
+/* 결과가 업무인지 질문인지 서식인지 한눈에 구분되게 합니다. */
+.search-result-kind {
+  display: inline-flex;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.search-result-kind.kind-work {
+  color: var(--guide-blue-dark);
+  background: var(--guide-blue-pale);
+}
+
+.search-result-kind.kind-faq {
+  color: #1d5d3a;
+  background: #e3f5ea;
+}
+
+.search-result-kind.kind-form {
+  color: #7a3e00;
+  background: #fff3db;
 }
 
 .search-result h3 {

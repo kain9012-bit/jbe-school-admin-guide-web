@@ -912,6 +912,22 @@
     });
   }
 
+  // 찾는 자료 종류를 골라 결과를 좁힐 수 있게 합니다.
+  const SEARCH_SCOPES = {
+    all: { label: "전체", types: ["업무", "매뉴얼 원문", "FAQ 원문", "서식·예시 원문"] },
+    work: { label: "업무", types: ["업무", "매뉴얼 원문"] },
+    faq: { label: "질문", types: ["FAQ 원문"] },
+    form: { label: "서식", types: ["서식·예시 원문"] },
+  };
+  const SEARCH_KIND_LABELS = { work: "업무", faq: "질문", form: "서식" };
+  let currentSearchScope = "all";
+
+  function searchKindOf(item) {
+    if (item.type === "FAQ 원문") return "faq";
+    if (item.type === "서식·예시 원문") return "form";
+    return "work";
+  }
+
   function searchResultHref(item) {
     const options = {
       blockId: item.blockId || "",
@@ -939,26 +955,33 @@
   function runSearch(query) {
     const trimmed = query.trim();
     if (!trimmed) {
-      searchStatus.textContent = "전체 편의 매뉴얼·FAQ·서식 원문을 검색합니다.";
+      searchStatus.textContent =
+        "업무명이나 궁금한 문장을 입력하고 검색을 누르세요.";
       searchResults.innerHTML = "";
       return;
     }
+    const scope = SEARCH_SCOPES[currentSearchScope] || SEARCH_SCOPES.all;
     const results = allChapterSearchIndex
+      .filter((item) => scope.types.includes(item.type))
       .map((item) => ({ item, score: scoreResult(item, trimmed) }))
       .filter((result) => result.score > 0)
       .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title, "ko"))
       .slice(0, 30);
+
+    const where = currentSearchScope === "all" ? "" : `${scope.label}에서 `;
     searchStatus.textContent = results.length
-      ? `전체 편 ‘${trimmed}’ 검색 결과 ${results.length}건`
-      : `‘${trimmed}’과 일치하는 원문이 없습니다.`;
+      ? `${where}‘${trimmed}’ 검색 결과 ${results.length}건`
+      : `${where}‘${trimmed}’과 일치하는 원문이 없습니다.`;
     searchResults.innerHTML = results.length
       ? results
           .map(
             ({ item }) => `
               <a class="search-result" href="${escapeHtml(searchResultHref(item))}">
                 <div class="search-result-meta">
+                  <span class="search-result-kind kind-${escapeHtml(
+                    searchKindOf(item)
+                  )}">${escapeHtml(SEARCH_KIND_LABELS[searchKindOf(item)])}</span>
                   <span>${escapeHtml(chapterName(item))}</span>
-                  <span aria-hidden="true">·</span><span>${escapeHtml(item.type)}</span>
                 </div>
                 <h3>${escapeHtml(item.title)}</h3>
                 <p>${escapeHtml(item.description)}</p>
@@ -966,7 +989,26 @@
             `
           )
           .join("")
-      : '<p class="empty-state">원문에 사용된 다른 단어나 문장으로 검색해 보세요.</p>';
+      : `<p class="empty-state">${
+          currentSearchScope === "all"
+            ? "원문에 사용된 다른 단어나 문장으로 검색해 보세요."
+            : `${scope.label}에는 없습니다. 전체로 바꿔 찾아보세요.`
+        }</p>`;
+  }
+
+  function bindSearchFilters() {
+    const buttons = document.querySelectorAll("[data-search-scope]");
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        currentSearchScope = button.dataset.searchScope;
+        buttons.forEach((other) => {
+          const selected = other === button;
+          other.classList.toggle("is-selected", selected);
+          other.setAttribute("aria-pressed", String(selected));
+        });
+        runSearch(searchInput.value);
+      });
+    });
   }
 
   function openSearch(query = "") {
@@ -998,7 +1040,9 @@
     event.preventDefault();
     runSearch(searchInput.value);
   });
-  searchInput.addEventListener("input", () => runSearch(searchInput.value));
+  bindSearchFilters();
+  // 글자를 칠 때마다 결과가 바뀌면 읽기 어려우므로
+  // 검색 버튼을 누르거나 Enter를 쳤을 때만 결과를 바꿉니다.
   // 검색 입력칸에서 Esc를 누르면 브라우저가 입력값만 지우고 이벤트를 멈추므로
   // 대화상자를 직접 닫아 줍니다.
   searchDialog.addEventListener("keydown", (event) => {

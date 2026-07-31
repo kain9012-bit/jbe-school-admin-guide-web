@@ -266,6 +266,22 @@
     document.title = "학교행정업무 길라잡이 웹판";
   }
 
+  // 찾는 자료 종류를 골라 결과를 좁힐 수 있게 합니다.
+  const SEARCH_SCOPES = {
+    all: { label: "전체", types: ["업무", "매뉴얼 원문", "FAQ 원문", "서식·예시 원문"] },
+    work: { label: "업무", types: ["업무", "매뉴얼 원문"] },
+    faq: { label: "질문", types: ["FAQ 원문"] },
+    form: { label: "서식", types: ["서식·예시 원문"] },
+  };
+  const SEARCH_KIND_LABELS = { work: "업무", faq: "질문", form: "서식" };
+  let currentSearchScope = "all";
+
+  function searchKindOf(item) {
+    if (item.type === "FAQ 원문") return "faq";
+    if (item.type === "서식·예시 원문") return "form";
+    return "work";
+  }
+
   function resultHref(item) {
     const chapterId = item.chapterId || config.defaultChapter;
     const params = new URLSearchParams();
@@ -291,12 +307,13 @@
   function runSearch(query) {
     const trimmed = query.trim();
     if (!trimmed) {
-      searchStatus.textContent =
-        "학교행정업무 전체에서 업무·단계·질문·서식 원문을 검색합니다.";
+      searchStatus.textContent = "업무명이나 궁금한 문장을 입력하고 검색을 누르세요.";
       searchResults.innerHTML = "";
       return;
     }
+    const scope = SEARCH_SCOPES[currentSearchScope] || SEARCH_SCOPES.all;
     const results = searchIndex
+      .filter((item) => scope.types.includes(item.type))
       .map((item) => ({ item, score: scoreResult(item, trimmed) }))
       .filter((result) => result.score > 0)
       .sort(
@@ -305,21 +322,24 @@
       )
       .slice(0, 30);
 
+    const where = currentSearchScope === "all" ? "" : `${scope.label}에서 `;
     searchStatus.textContent = results.length
-      ? `‘${trimmed}’ 검색 결과 ${results.length}건`
-      : `‘${trimmed}’과 일치하는 원문을 찾지 못했습니다.`;
+      ? `${where}‘${trimmed}’ 검색 결과 ${results.length}건`
+      : `${where}‘${trimmed}’과 일치하는 원문을 찾지 못했습니다.`;
     searchResults.innerHTML = results.length
       ? results
           .map(({ item }) => {
             const chapter = config.chapters.find(
               (candidate) => candidate.id === item.chapterId
             );
+            const kind = searchKindOf(item);
             return `
               <a class="search-result" href="${escapeHtml(resultHref(item))}">
                 <div class="search-result-meta">
+                  <span class="search-result-kind kind-${kind}">${escapeHtml(
+                    SEARCH_KIND_LABELS[kind]
+                  )}</span>
                   <span>${escapeHtml(chapter ? chapterName(chapter) : item.chapterLabel)}</span>
-                  <span aria-hidden="true">·</span>
-                  <span>${escapeHtml(item.type)}</span>
                 </div>
                 <h3>${escapeHtml(item.title)}</h3>
                 <p>${escapeHtml(item.description)}</p>
@@ -327,7 +347,26 @@
             `;
           })
           .join("")
-      : '<p class="empty-state">다른 업무명이나 문장으로 검색해 보세요.</p>';
+      : `<p class="empty-state">${
+          currentSearchScope === "all"
+            ? "다른 업무명이나 문장으로 검색해 보세요."
+            : `${scope.label}에는 없습니다. 전체로 바꿔 찾아보세요.`
+        }</p>`;
+  }
+
+  function bindSearchFilters() {
+    const buttons = document.querySelectorAll("[data-search-scope]");
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        currentSearchScope = button.dataset.searchScope;
+        buttons.forEach((other) => {
+          const selected = other === button;
+          other.classList.toggle("is-selected", selected);
+          other.setAttribute("aria-pressed", String(selected));
+        });
+        runSearch(searchInput.value);
+      });
+    });
   }
 
   function openSearch(query = "") {
@@ -365,7 +404,9 @@
     event.preventDefault();
     runSearch(searchInput.value);
   });
-  searchInput.addEventListener("input", () => runSearch(searchInput.value));
+  bindSearchFilters();
+  // 글자를 칠 때마다 결과가 바뀌면 읽기 어려우므로
+  // 검색 버튼을 누르거나 Enter를 쳤을 때만 결과를 바꿉니다.
   // 검색 입력칸에서 Esc를 누르면 브라우저가 입력값만 지우고 이벤트를 멈추므로
   // 대화상자를 직접 닫아 줍니다.
   searchDialog.addEventListener("keydown", (event) => {

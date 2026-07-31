@@ -127,6 +127,34 @@ requireCondition(
   "편별 화면의 홈 이동이 19개 편 통합 홈으로 연결되지 않습니다."
 );
 
+// 검색은 글자를 칠 때마다가 아니라 검색을 눌렀을 때만 결과를 바꿔야 하고,
+// 찾을 자료 종류를 고를 수 있어야 합니다.
+for (const asset of ["global-home.js", "app-faithful-workflow.js"]) {
+  const source = fs.readFileSync(path.join(root, "docs/assets", asset), "utf8");
+  requireCondition(
+    !source.includes('searchInput.addEventListener("input"'),
+    `${asset}가 글자를 칠 때마다 검색 결과를 바꿉니다.`
+  );
+  requireCondition(
+    source.includes("SEARCH_SCOPES") && source.includes("function bindSearchFilters()"),
+    `${asset}에 찾을 자료 종류 고르기가 없습니다.`
+  );
+  requireCondition(
+    source.includes("search-result-kind"),
+    `${asset}의 검색 결과에 자료 종류 표시가 없습니다.`
+  );
+}
+
+for (const filename of ["index.html", "index-structured.html", "index-workflow.html"]) {
+  const html = fs.readFileSync(path.join(root, "docs", filename), "utf8");
+  for (const scope of ["all", "work", "faq", "form"]) {
+    requireCondition(
+      html.includes(`data-search-scope="${scope}"`),
+      `${filename}에 '${scope}' 검색 종류 버튼이 없습니다.`
+    );
+  }
+}
+
 // 상단의 분야 선택 창도 홈과 같은 방식으로 업무를 펼쳐 보여야 합니다.
 const header = fs.readFileSync(path.join(root, "docs/assets/header-v3.js"), "utf8");
 requireCondition(
