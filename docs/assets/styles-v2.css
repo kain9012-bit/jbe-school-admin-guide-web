@@ -1002,6 +1002,22 @@ input {
   border-color: var(--guide-blue);
 }
 
+.search-hint {
+  margin: 1.2rem 0 0;
+  color: var(--guide-muted);
+  font-size: 1.35rem;
+  line-height: 1.6;
+}
+
+.search-hint code {
+  padding: 0.15rem 0.5rem;
+  color: var(--guide-blue-dark);
+  font-family: inherit;
+  font-size: 1.3rem;
+  background: var(--guide-blue-pale);
+  border-radius: 0.4rem;
+}
+
 .search-status {
   margin: 2rem 0 1rem;
   color: var(--guide-muted);

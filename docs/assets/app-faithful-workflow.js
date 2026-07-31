@@ -950,14 +950,6 @@
       : `?chapter=${encodeURIComponent(item.chapterId)}${hash}`;
   }
 
-  function scoreResult(item, query) {
-    const terms = normalize(query).split(" ").filter(Boolean);
-    const source = normalize(item.text);
-    if (!terms.length || !terms.every((term) => source.includes(term))) return 0;
-    const title = normalize(item.title);
-    return terms.reduce((score, term) => score + (title.includes(term) ? 10 : 2), 0);
-  }
-
   function runSearch(query) {
     const trimmed = query.trim();
     if (!trimmed) {
@@ -967,16 +959,17 @@
       return;
     }
     const scope = SEARCH_SCOPES[currentSearchScope] || SEARCH_SCOPES.all;
-    const results = allChapterSearchIndex
-      .filter((item) => scope.types.includes(item.type))
-      .map((item) => ({ item, score: scoreResult(item, trimmed) }))
-      .filter((result) => result.score > 0)
-      .sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title, "ko"))
-      .slice(0, 30);
+    const found = window.GUIDE_SEARCH.search(allChapterSearchIndex, trimmed, {
+      types: scope.types,
+      limit: 30,
+    });
+    const results = found.results;
 
     const where = currentSearchScope === "all" ? "" : `${scope.label}에서 `;
+    const shown =
+      found.total > results.length ? ` (관련 높은 ${results.length}건 표시)` : "";
     searchStatus.textContent = results.length
-      ? `${where}‘${trimmed}’ 검색 결과 ${results.length}건`
+      ? `${where}‘${trimmed}’ 검색 결과 ${found.total}건${shown}`
       : `${where}‘${trimmed}’과 일치하는 원문이 없습니다.`;
     searchResults.innerHTML = results.length
       ? results
