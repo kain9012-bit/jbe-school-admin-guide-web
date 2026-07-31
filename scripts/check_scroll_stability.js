@@ -59,7 +59,7 @@ async function main() {
   await trial({
     label: "제1편 단계 버튼 이동",
     url: chapter1,
-    selector: '.step-button[data-step-id="step-3"]',
+    selector: '.step-button[data-step-id="step-2"]',
     startAt: 300,
     expect: "keep",
   });
@@ -72,7 +72,7 @@ async function main() {
   });
   await trial({
     label: "제1편 이전 단계 버튼",
-    url: `${chapter1}&step=step-3`,
+    url: `${chapter1}&step=step-2`,
     selector: "#prev-step",
     startAt: 900,
     expect: "keep",
@@ -80,7 +80,7 @@ async function main() {
   await trial({
     label: "제3편 단계 버튼 이동",
     url: chapter3,
-    selector: '.step-button[data-step-id="step-6"]',
+    selector: '.step-button[data-step-id="step-1"]',
     startAt: 300,
     expect: "keep",
   });

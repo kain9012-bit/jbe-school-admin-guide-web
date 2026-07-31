@@ -48,37 +48,33 @@ for (const [chapterId, key] of [
       problems.push(`${where}: 내용이 매뉴얼 순서와 다르게 배치되었습니다.`);
     }
 
-    const titles = new Set(work.contentBlocks.map((block) => squash(block.title)));
-    const pageLabels = new Set(
+    // 매뉴얼은 소제목을 'OOO세부내용' 표시로 알려 줍니다.
+    const sectionNames = new Set(
       work.contentBlocks
         .filter((block) => !block.body && /세부내용$/.test(block.title))
         .map((block) => squash(block.title.replace(/세부내용$/, "")))
-    );
-    const printedPages = new Set(
-      work.contentBlocks.map((block) => `매뉴얼${block.printedPage}쪽`)
     );
 
     for (const [index, section] of layout.entries()) {
       sections += 1;
       const label = `${where} ${index + 1}번째 [${section.title}]`;
 
-      // 2. 목차 제목은 매뉴얼에 있는 말이어야 합니다. 지어낸 이름이 있으면 안 됩니다.
+      // 2. 목차 제목은 매뉴얼이 붙여 둔 소제목이어야 합니다. 지어낸 이름은 안 됩니다.
       const key = squash(section.title);
-      if (titles.has(key)) headingSections += 1;
-      else if (pageLabels.has(key) || printedPages.has(key)) pageSections += 1;
-      else if (key === squash(work.title)) headingSections += 1;
+      if (sectionNames.has(key)) headingSections += 1;
+      else if (key === squash(work.title)) pageSections += 1;
       else {
-        problems.push(`${label}: 매뉴얼에 없는 제목입니다.`);
+        problems.push(`${label}: 매뉴얼에 없는 소제목입니다.`);
       }
 
-      // 3. 소제목으로 시작하는 항목은 그 소제목 블록을 담고 있어야 합니다.
-      if (HEADING.test(section.title) && !GENERATED.test(section.title)) {
+      // 3. 그 소제목 표시 블록을 실제로 담고 있어야 합니다.
+      if (sectionNames.has(key)) {
         const owns = section.blocks.some((id) => {
           const block = work.contentBlocks.find((item) => item.id === id);
-          return block && squash(block.title) === key;
+          return block && squash(String(block.title).replace(/세부내용$/, "")) === key;
         });
         if (!owns) {
-          problems.push(`${label}: 제목에 해당하는 원문 내용을 담고 있지 않습니다.`);
+          problems.push(`${label}: 매뉴얼의 해당 소제목 구역을 담고 있지 않습니다.`);
         }
       }
 
@@ -112,6 +108,6 @@ if (problems.length) {
 
 console.log(
   `layout matches source: 업무 ${works}개 · 항목 ${sections}개 ` +
-    `(소제목에서 온 것 ${headingSections}개, 원문 구역 이름에서 온 것 ${pageSections}개), ` +
+    `(매뉴얼 소제목 ${headingSections}개, 소제목 표시가 없어 업무명을 쓴 것 ${pageSections}개), ` +
     `지어낸 제목과 빈 항목 없음`
 );

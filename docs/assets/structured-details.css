@@ -15,6 +15,17 @@
   margin-left: calc(var(--summary-level, 0) * 1.8rem);
 }
 
+/* 앞에 기호가 없는 줄은 글이 들어갈 칸 하나만 씁니다.
+   기호 칸(1.2rem)에 넣으면 좁은 화면에서 글이 밖으로 삐져나갑니다. */
+.semantic-summary-item.semantic-summary-plain {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.semantic-summary-text {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 .semantic-summary-marker {
   color: currentColor;
   font-weight: 700;

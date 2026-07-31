@@ -1,6 +1,14 @@
 .source-detail-list {
+  display: grid;
+  /* 칸 너비를 남은 자리에 맞춥니다. 이렇게 하지 않으면 긴 줄 하나가
+     칸 전체를 늘려 좁은 화면에서 가로 스크롤이 생깁니다. */
+  grid-template-columns: minmax(0, 1fr);
   padding-left: 0 !important;
   list-style: none;
+}
+
+.source-detail-list > li {
+  min-width: 0;
 }
 
 .source-detail {

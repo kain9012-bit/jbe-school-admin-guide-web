@@ -131,8 +131,8 @@ requireCondition(
   "본문 없는 구조 표시 블록을 걸러 내는 처리가 없습니다."
 );
 requireCondition(
-  app.includes('const heading = generatedTitle ? "" : String(block.title || "").trim();'),
-  "원문의 항목 번호가 제목에서 지워지고 있습니다."
+  app.includes("squash(raw) === squash(currentStepTitle)"),
+  "항목 안에서 바로 위 소제목을 다시 적고 있습니다."
 );
 requireCondition(
   app.includes("[•‣▶※*]"),

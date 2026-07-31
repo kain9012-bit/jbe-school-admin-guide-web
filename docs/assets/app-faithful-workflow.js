@@ -41,6 +41,7 @@
   const sideNavigation = byId("side-navigation");
   let currentWorkId = "";
   let currentStepId = "";
+  let currentStepTitle = "";
   let lastFocusedElement = null;
 
   function isSourceFlowBlock(work, block) {
@@ -198,11 +199,8 @@
             !topicsStructural(title)
         );
       const uniqueTopics = [...new Set(topics)];
-      const summary = uniqueTopics.length
-        ? `${uniqueTopics.slice(0, 3).join(", ")}${
-            uniqueTopics.length > 3 ? " 등" : ""
-          }을 중심으로 확인합니다.`
-        : "매뉴얼의 해당 소제목 아래 내용입니다.";
+      // 소제목이 이미 위에 적혀 있으므로 같은 말을 되풀이하지 않습니다.
+      const summary = "";
       return {
         id: `step-${index + 1}`,
         title: sourceStep.title,
@@ -215,10 +213,7 @@
       };
     });
 
-    const visibleTitles = steps.map((step) => cleanSourceHeading(step.title)).slice(0, 4);
-    const intro = `${visibleTitles.join(", ")}${
-      steps.length > visibleTitles.length ? " 등" : ""
-    }을 매뉴얼 차례대로 확인합니다.`;
+    const intro = `매뉴얼 ${work.printedPages}쪽의 내용입니다.`;
     return {
       intro,
       steps,
@@ -399,15 +394,47 @@
     }
     layOutSteps();
 
-    let sourceNote = document.querySelector(".workflow-source-note");
-    if (!sourceNote) {
-      sourceNote = document.createElement("p");
-      sourceNote.className = "workflow-source-note";
-      stepList.insertAdjacentElement("afterend", sourceNote);
+  }
+
+  // 매뉴얼의 업무 흐름도를 그대로 보여 줍니다.
+  // 누르는 곳이 아니라 이 업무가 어떤 순서로 이뤄지는지 알려 주는 그림입니다.
+  function renderWorkFlowDiagram(work) {
+    const section = byId("work-flow-section");
+    const diagram = byId("work-flow-diagram");
+    const note = byId("work-flow-note");
+    const flows = workflows[work.id].sourceFlows;
+
+    if (!flows.length) {
+      section.hidden = true;
+      return;
     }
-    sourceNote.textContent = workflows[work.id].sourceFlows.length
-      ? workflows[work.id].sourceFlows.map((flow) => flow.sourceText).join(" / ")
-      : "원문에 별도 흐름도가 없어 매뉴얼의 소제목 순서로 구성했습니다.";
+    section.hidden = false;
+
+    diagram.innerHTML = flows
+      .map((flow) => {
+        const steps = String(flow.sourceText)
+          .split(/\s*▶\s*/)
+          .map((part) => part.trim())
+          .filter(Boolean);
+        return steps
+          .map(
+            (step, index) => `
+              <li class="work-flow-step">
+                <span class="work-flow-name">${escapeHtml(step)}</span>
+                ${
+                  index < steps.length - 1
+                    ? '<span class="work-flow-arrow" aria-hidden="true">▶</span>'
+                    : ""
+                }
+              </li>
+            `
+          )
+          .join("");
+      })
+      .join("");
+
+    const pages = [...new Set(flows.map((flow) => flow.printedPage))];
+    note.textContent = `매뉴얼 ${pages.join(", ")}쪽`;
   }
 
   function allLogicalItems(block) {
@@ -468,7 +495,10 @@
     const structural =
       !block.body && (block.title.endsWith("세부내용") || block.title === "업무 흐름도");
     // 원문의 항목 번호('1. 정의')는 매뉴얼과 대조할 때 필요하므로 그대로 둡니다.
-    const heading = generatedTitle ? "" : String(block.title || "").trim();
+    // 다만 지금 보고 있는 목차 항목과 같은 제목이면 바로 위에 이미 적혀 있으므로 뺍니다.
+    const raw = String(block.title || "").trim();
+    const heading =
+      generatedTitle || squash(raw) === squash(currentStepTitle) ? "" : raw;
     // 안내서는 읽으라고 만든 문서입니다. 앞 몇 줄만 보여 주고 나머지를 접어 두면
     // 같은 글을 두 번 싣게 되고, 읽는 사람은 한 번 더 눌러야 합니다.
     // 그래서 본문은 접지 않고 한 번만, 전부 보여 줍니다.
@@ -858,9 +888,11 @@
     const steps = getSteps(work.id);
     const activeIndex = steps.indexOf(step);
     currentStepId = step.id;
-    byId("step-label").textContent = `${activeIndex + 1}번째 항목`;
+    currentStepTitle = step.title;
     byId("step-title").textContent = step.title;
-    byId("step-summary").textContent = step.summary;
+    const summaryNode = byId("step-summary");
+    summaryNode.textContent = step.summary;
+    summaryNode.hidden = !step.summary;
     byId("step-progress").textContent = `전체 ${steps.length}개 항목 중 ${activeIndex + 1}번째`;
     renderSourceBlocks("step-actions", step.mainBlocks);
     renderSourceBlocks("step-checks", []);
@@ -887,6 +919,7 @@
       }
     };
     renderStepList(work, steps, activeIndex);
+    renderWorkFlowDiagram(work);
   }
 
   function renderWork(workId, options = {}) {
