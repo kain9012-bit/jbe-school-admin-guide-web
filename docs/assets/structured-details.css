@@ -10,9 +10,17 @@
 
 .semantic-summary-item {
   display: grid;
-  grid-template-columns: 1.2rem minmax(0, 1fr);
-  gap: 0.4rem;
-  margin-left: calc(var(--summary-level, 0) * 1.8rem);
+  /* 기호 칸을 넉넉히 잡습니다. 1.2rem으로 두면 '▶'처럼 넓은 기호가
+     칸을 넘쳐 글자에 달라붙습니다. */
+  grid-template-columns: 1.8rem minmax(0, 1fr);
+  gap: 0.6rem;
+  margin-left: calc(var(--summary-level, 0) * 2.4rem);
+}
+
+/* 기호는 칸 안에서 오른쪽에 붙여 글자와의 사이를 일정하게 둡니다. */
+.semantic-summary-marker {
+  justify-self: end;
+  white-space: nowrap;
 }
 
 /* 앞에 기호가 없는 줄은 글이 들어갈 칸 하나만 씁니다.

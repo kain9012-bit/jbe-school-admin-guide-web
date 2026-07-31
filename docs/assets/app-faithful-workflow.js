@@ -492,14 +492,49 @@
     return items.slice(0, 3).map((item) => excerpt(item, 170));
   }
 
-  function summaryItemMarkup(item) {
-    const match = String(item).match(/^([•‣▶※]|[-–])\s*(.*)$/);
+  // 매뉴얼은 글머리 기호로 위계를 나타냅니다.
+  //   • 또는 ▶  가장 바깥
+  //   ‣          그 아래
+  //   ※ 또는 *   앞 항목에 붙는 설명
+  //   - 또는 –   가장 안쪽
+  // 숫자가 작을수록 바깥입니다. 실제 들여쓰기 단계는 그 묶음에 나온 기호만으로
+  // 다시 매기므로, ‣로만 시작하는 묶음은 ‣가 맨 바깥이 됩니다.
+  const MARKER_DEPTH = { "•": 0, "▶": 0, "‣": 1, "※": 1.5, "*": 1.5, "-": 2, "–": 2 };
+  const MARKER_RE = /^([•‣▶※*]|[-–])\s*(.*)$/;
+
+  function markerOf(item) {
+    return MARKER_RE.exec(String(item));
+  }
+
+  // 한 묶음 안에 나온 기호들만 모아 0, 1, 2… 단계로 다시 매깁니다.
+  function summaryLevels(items) {
+    const depths = [
+      ...new Set(
+        items
+          .map((item) => markerOf(item))
+          .filter(Boolean)
+          .map((match) => MARKER_DEPTH[match[1]])
+          .filter((depth) => depth !== undefined)
+      ),
+    ].sort((a, b) => a - b);
+
+    return items.map((item) => {
+      const match = markerOf(item);
+      if (!match) return 0;
+      const depth = MARKER_DEPTH[match[1]];
+      const level = depths.indexOf(depth);
+      return level < 0 ? 0 : level;
+    });
+  }
+
+  function summaryItemMarkup(item, level = 0) {
+    const match = markerOf(item);
     if (!match) {
-      return `<li class="semantic-summary-item semantic-summary-plain">
+      return `<li class="semantic-summary-item semantic-summary-plain"
+                 style="--summary-level: ${level}">
         <span class="semantic-summary-text">${escapeHtml(item)}</span>
       </li>`;
     }
-    const level = /^[-–]$/.test(match[1]) ? 1 : 0;
     return `<li class="semantic-summary-item" style="--summary-level: ${level}">
       <span class="semantic-summary-marker" aria-hidden="true">${escapeHtml(match[1])}</span>
       <span class="semantic-summary-text">${escapeHtml(match[2])}</span>
@@ -541,9 +576,12 @@
         }
         ${
           items.length
-            ? `<ul class="semantic-summary-list">${items
-                .map((item) => summaryItemMarkup(item))
-                .join("")}</ul>`
+            ? `<ul class="semantic-summary-list">${(() => {
+                const levels = summaryLevels(items);
+                return items
+                  .map((item, index) => summaryItemMarkup(item, levels[index]))
+                  .join("");
+              })()}</ul>`
             : ""
         }
       </li>
