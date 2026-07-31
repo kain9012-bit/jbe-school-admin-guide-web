@@ -74,7 +74,7 @@ for (const forbidden of ["문서 필요성 판단", "업무의 목적과 수신 
 }
 
 // 통합검색은 두 편의 업무·원문·서식·FAQ를 모두 담습니다.
-requireCondition(searchIndex.length === 351, `통합검색 항목 수 오류: ${searchIndex.length}`);
+requireCondition(searchIndex.length === 353, `통합검색 항목 수 오류: ${searchIndex.length}`);
 requireCondition(
   searchIndex.every((item) => item.chapterId === "01" || item.chapterId === "03"),
   "공개하지 않은 편이 통합검색에 들어 있습니다."

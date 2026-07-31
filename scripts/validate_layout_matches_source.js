@@ -89,6 +89,19 @@ for (const [chapterId, key] of [
       }
     }
 
+    // 번호 소제목이 본문 줄에 묻혀 있으면 목차에서 사라집니다.
+    // '7 . 전보'처럼 번호와 마침표 사이가 벌어진 경우에 생기던 문제입니다.
+    for (const block of work.contentBlocks) {
+      for (const line of String(block.body || "").split(/\r?\n/)) {
+        if (/^\d+\s*\.\s*\S/.test(line.trim())) {
+          problems.push(
+            `${where}: 번호 소제목 '${line.trim().slice(0, 24)}'이 ` +
+              `'${block.title.slice(0, 20)}' 본문에 묻혀 있습니다.`
+          );
+        }
+      }
+    }
+
     // 매뉴얼은 소제목 안에서 '1. 2. 3.'으로 번호를 매기고 새 소제목에서 1부터
     // 다시 시작합니다. 앞 묶음의 다음 번호로 시작하는 묶음이 있다면
     // 이어지는 내용이 엉뚱한 소제목으로 넘어간 것입니다.

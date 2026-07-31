@@ -44,10 +44,10 @@ window.GUIDE_WORKFLOW_LAYOUT = {
     { title: "보호지역 지정 및 관리", blocks: ["p25-b1","p25-b2","p25-b3","p25-b4","p25-b5","p25-b6","p25-b7","p25-b8","p25-b9"] }
   ],
   "local-personnel": [
-    { title: "인사제도", blocks: ["p4-b1","p4-b2","p4-b3","p4-b4","p4-b5","p4-b6","p5-b1","p5-b2","p5-b3","p6-b1","p6-b2","p6-b3","p7-b1","p7-b2","p7-b3","p7-b4","p7-b5","p8-b1","p8-b2","p9-b1","p9-b2"] }
+    { title: "인사제도", blocks: ["p4-b1","p4-b2","p4-b3","p4-b4","p4-b5","p4-b6","p5-b1","p5-b2","p5-b3","p6-b1","p6-b2","p6-b3","p6-b4","p7-b1","p7-b2","p7-b3","p7-b4","p7-b5","p8-b1","p8-b2","p9-b1","p9-b2"] }
   ],
   "performance-appraisal": [
-    { title: "근무성적평정", blocks: ["p10-b1","p10-b2","p10-b3","p10-b4","p10-b5","p10-b6","p10-b7","p11-b1","p11-b2","p11-b3"] }
+    { title: "근무성적평정", blocks: ["p10-b1","p10-b2","p10-b3","p10-b4","p10-b5","p10-b6","p10-b7","p11-b1","p11-b2","p11-b3","p11-b4"] }
   ],
   "training": [
     { title: "교육훈련 개요", blocks: ["p12-b1","p12-b2","p12-b3","p12-b4","p12-b5","p12-b6","p12-b7","p12-b8","p12-b9"] },

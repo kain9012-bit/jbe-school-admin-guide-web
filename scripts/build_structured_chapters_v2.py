@@ -43,7 +43,9 @@ def is_heading(line: str) -> bool:
         return True
     if line.endswith("세부내용"):
         return True
-    if re.match(r"^\d+\.\s*\S", line):
+    # 매뉴얼에는 '7 . 전보'처럼 번호와 마침표 사이가 벌어진 소제목도 있습니다.
+    # 공백을 허용하지 않으면 앞 소제목 본문에 묻혀 목차에서 사라집니다.
+    if re.match(r"^\d+\s*\.\s*\S", line):
         return True
     if re.match(r"^\d+\s+[가-힣A-Za-z]", line) and len(line) <= 45:
         return True

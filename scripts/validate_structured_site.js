@@ -138,7 +138,7 @@ validateChapter(data3, {
   label: "제3편",
   expectedPages: 15,
   expectedLines: 574,
-  expectedBlocks: 91,
+  expectedBlocks: 93,
   forms: 21,
   faqs: 19,
 });
