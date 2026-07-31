@@ -713,6 +713,7 @@
               .split(/\r?\n/)
               .map((line) => line.replace(/^[•‣▶]\s*/, "").trim())
               .filter(Boolean);
+            // 쪽 정보는 바로 아래 '원문 위치' 칸에 있으므로 여기서는 적지 않습니다.
             return `
               <div class="basis-reference-group">
                 <ul class="basis-reference-list">
@@ -720,9 +721,6 @@
                     .map((reference) => `<li>${escapeHtml(reference)}</li>`)
                     .join("")}
                 </ul>
-                <a class="basis-source-link"
-                   href="${escapeHtml(data.downloads.manual)}#page=${block.pdfPage}"
-                   target="_blank" rel="noopener">매뉴얼 ${block.printedPage}쪽 원문</a>
               </div>
             `;
           })
