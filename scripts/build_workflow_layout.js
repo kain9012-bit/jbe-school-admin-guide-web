@@ -64,6 +64,34 @@ function sectionsOf(work) {
     }
   }
 
+  // 소제목 표시가 쪽 끝에 붙어 있으면, 그 소제목의 내용이 다음 쪽 첫머리로
+  // 이어지는데도 거기서 끊겨 다음 묶음으로 넘어갑니다.
+  // 매뉴얼은 소제목 안에서 '1. 2. 3.'으로 번호를 매기고 새 소제목에서 1부터
+  // 다시 시작하므로, 번호가 이어지면 앞 묶음의 내용으로 되돌립니다.
+  //   문서작성:  1. 문서의 성립 / 2. 공문서의 종류 / 3. 기안의 일반사항
+  //   (쪽 넘김)  4. 문서작성의 일반원칙  ← 여전히 문서작성
+  //              1. 의견작성            ← 여기부터 검토·협조·결재
+  const numberOf = (id) => {
+    const block = work.contentBlocks.find((item) => item.id === id);
+    const found = block && /^(\d+)\.\s*\S/.exec(String(block.title));
+    return found ? Number(found[1]) : null;
+  };
+
+  for (let index = 0; index + 1 < sections.length; index += 1) {
+    const current = sections[index];
+    const next = sections[index + 1];
+    const numbers = current.blocks.map(numberOf).filter((value) => value !== null);
+    if (!numbers.length) continue;
+
+    let expected = Math.max(...numbers) + 1;
+    while (next.blocks.length) {
+      const number = numberOf(next.blocks[0]);
+      if (number !== expected) break;
+      current.blocks.push(next.blocks.shift());
+      expected += 1;
+    }
+  }
+
   // 표시 없이 남은 내용은 마지막 묶음에 붙입니다.
   if (buffer.length) {
     if (sections.length) {

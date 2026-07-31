@@ -2,8 +2,8 @@
 // 손으로 고치지 마세요. 원문이 바뀌면 스크립트를 다시 실행하세요.
 window.GUIDE_WORKFLOW_LAYOUT = {
   "official-documents": [
-    { title: "문서작성", blocks: ["p3-b1","p3-b2","p3-b3","p3-b4","p3-b5","p3-b6","p3-b7","p3-b8"] },
-    { title: "검토·협조·결재", blocks: ["p4-b1","p4-b2","p4-b3","p4-b4","p4-b5","p5-b1","p5-b2","p5-b3","p5-b4"] }
+    { title: "문서작성", blocks: ["p3-b1","p3-b2","p3-b3","p3-b4","p3-b5","p3-b6","p3-b7","p3-b8","p4-b1"] },
+    { title: "검토·협조·결재", blocks: ["p4-b2","p4-b3","p4-b4","p4-b5","p5-b1","p5-b2","p5-b3","p5-b4"] }
   ],
   "k-edufine": [
     { title: "문서 접수(등록) 및 공람", blocks: ["p6-b1","p6-b2","p6-b3","p6-b4","p6-b5","p6-b6"] },

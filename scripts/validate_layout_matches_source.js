@@ -89,6 +89,30 @@ for (const [chapterId, key] of [
       }
     }
 
+    // 매뉴얼은 소제목 안에서 '1. 2. 3.'으로 번호를 매기고 새 소제목에서 1부터
+    // 다시 시작합니다. 앞 묶음의 다음 번호로 시작하는 묶음이 있다면
+    // 이어지는 내용이 엉뚱한 소제목으로 넘어간 것입니다.
+    const numbersOf = (section) =>
+      section.blocks
+        .map((id) => {
+          const block = work.contentBlocks.find((item) => item.id === id);
+          const found = block && /^(\d+)\.\s*\S/.exec(String(block.title));
+          return found ? Number(found[1]) : null;
+        })
+        .filter((value) => value !== null);
+
+    for (let index = 0; index + 1 < layout.length; index += 1) {
+      const current = numbersOf(layout[index]);
+      const next = numbersOf(layout[index + 1]);
+      if (!current.length || !next.length) continue;
+      if (next[0] === Math.max(...current) + 1) {
+        problems.push(
+          `${where}: '${layout[index].title}'에서 이어지는 ${next[0]}번 내용이 ` +
+            `'${layout[index + 1].title}'으로 넘어가 있습니다.`
+        );
+      }
+    }
+
     for (const [index, section] of layout.entries()) {
       sections += 1;
       const label = `${where} ${index + 1}번째 [${section.title}]`;
