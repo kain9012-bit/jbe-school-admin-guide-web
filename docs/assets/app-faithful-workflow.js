@@ -414,6 +414,22 @@
       : "원문에 별도 흐름도가 없어 매뉴얼의 소제목 순서로 구성했습니다.";
   }
 
+  function allLogicalItems(block) {
+    const lines = String(block.body || "")
+      .split(/\r?\n/)
+      .map((line) => line.trim())
+      .filter(Boolean);
+    const items = [];
+    for (const line of lines) {
+      const startsItem =
+        /^(?:[•‣▶※*]|[-–]\s|\d+[.)]\s|[가-힣]\.\s)/.test(line) ||
+        line.includes(" : ");
+      if (!items.length || startsItem) items.push(line);
+      else items[items.length - 1] += ` ${line}`;
+    }
+    return items;
+  }
+
   function logicalSummaryItems(block) {
     const body = String(block.body || "");
     const lines = body
@@ -429,7 +445,7 @@
     const items = [];
     for (const line of lines) {
       const startsItem =
-        /^(?:[•‣▶※]|[-–]\s|\d+[.)]\s|[가-힣]\.\s)/.test(line) ||
+        /^(?:[•‣▶※*]|[-–]\s|\d+[.)]\s|[가-힣]\.\s)/.test(line) ||
         line.includes(" : ");
       if (!items.length || startsItem) items.push(line);
       else items[items.length - 1] += ` ${line}`;
@@ -455,11 +471,23 @@
     const generatedTitle = /^매뉴얼 \d+쪽$/.test(block.title);
     const structural =
       !block.body && (block.title.endsWith("세부내용") || block.title === "업무 흐름도");
-    const heading = generatedTitle ? "" : cleanSourceHeading(block.title);
+    // 원문의 항목 번호('1. 정의')는 매뉴얼과 대조할 때 필요하므로 그대로 둡니다.
+    const heading = generatedTitle ? "" : String(block.title || "").trim();
     const summaries = logicalSummaryItems(block);
     const fullDetail = block.body
       ? window.GUIDE_DETAIL_RENDERER?.render(block)
       : null;
+
+    // 위에 보여 준 내용이 본문 전부라면 '더 보기'를 달지 않습니다.
+    // 같은 글을 두 번 읽게 만들 뿐입니다.
+    // 표처럼 다른 방식으로 정리해 보여 주는 경우에는 그대로 답니다.
+    const allItems = allLogicalItems(block);
+    const summaryCoversAll =
+      fullDetail?.type === "text" &&
+      allItems.length <= summaries.length &&
+      !summaries.some((item) => String(item).endsWith("…"));
+    const showFullDetail = Boolean(block.body) && !summaryCoversAll;
+
     return `
       <li class="source-detail${structural ? " structural-marker" : ""}"
           data-source-block="${escapeHtml(block.id)}">
@@ -472,7 +500,7 @@
             : ""
         }
         ${
-          block.body
+          showFullDetail
             ? `<details class="source-full-detail" data-detail-type="${escapeHtml(
                 fullDetail?.type || "text"
               )}">
@@ -488,12 +516,29 @@
     `;
   }
 
+  // 원문에서 소제목 노릇만 하던 줄은 화면에서 빈 항목으로만 보이므로 내지 않습니다.
+  // '2. 결재의 순서 : 기안자 → …'처럼 제목 자체가 내용을 담은 줄은 그대로 보여 줍니다.
+  const squash = (value) => String(value || "").replace(/\s+/g, "");
+
+  function isEmptyStructuralBlock(block, work) {
+    if (block.body) return false;
+    const raw = String(block.title || "").trim();
+    if (!raw) return true;
+    // '문서작성세부내용'처럼 원문의 구역 표시로만 쓰인 줄입니다.
+    if (/세부내용$/.test(raw)) return true;
+    if (raw === "업무 흐름도" || raw === "관련법규 및 참고자료") return true;
+    // '3 공인관리'처럼 업무 이름을 되풀이하는 줄입니다. 띄어쓰기 차이는 무시합니다.
+    return Boolean(work) && squash(cleanSourceHeading(raw)) === squash(work.title);
+  }
+
   function renderSourceBlocks(targetId, blocks) {
     const target = byId(targetId);
+    const work = data.sections.find((section) => section.id === currentWorkId);
+    const visible = blocks.filter((block) => !isEmptyStructuralBlock(block, work));
     const container = target.closest(".task-block");
-    container.hidden = blocks.length === 0;
+    container.hidden = visible.length === 0;
     target.classList.add("source-detail-list");
-    target.innerHTML = blocks.map(sourceBlockMarkup).join("");
+    target.innerHTML = visible.map(sourceBlockMarkup).join("");
   }
 
   let formPreviewZoom = 100;
