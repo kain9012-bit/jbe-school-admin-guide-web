@@ -28,7 +28,9 @@ function sectionsOf(work) {
   for (const block of work.contentBlocks) {
     buffer.push(block.id);
 
-    if (!block.body && SECTION_MARK.test(block.title)) {
+    // 표시에 본문이 딸려 있어도 소제목은 소제목입니다.
+    // 본문은 그 구역에 속하므로 함께 담고 묶음을 닫습니다.
+    if (SECTION_MARK.test(block.title)) {
       const title = block.title.replace(SECTION_MARK, "").trim();
       sections.push({ title: title || work.title, blocks: buffer });
       buffer = [];

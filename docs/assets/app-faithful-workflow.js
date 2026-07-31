@@ -213,7 +213,7 @@
       };
     });
 
-    const intro = `매뉴얼 ${work.printedPages}쪽의 내용입니다.`;
+    const intro = "";
     return {
       intro,
       steps,
@@ -943,7 +943,9 @@
     byId("work-number").textContent = `업무 ${String(work.number).padStart(2, "0")}`;
     byId("work-pages").textContent = `원문 ${work.printedPages}쪽`;
     byId("work-title").textContent = work.title;
-    byId("work-intro").textContent = workflows[work.id].intro;
+    const introNode = byId("work-intro");
+    introNode.textContent = workflows[work.id].intro;
+    introNode.hidden = !workflows[work.id].intro;
     breadcrumb.innerHTML = `
       <li class="home"><a href="${escapeHtml(chapterHomeHref())}">홈</a></li>
       <li><span>${escapeHtml(work.title)}</span></li>

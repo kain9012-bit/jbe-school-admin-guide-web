@@ -51,9 +51,24 @@ for (const [chapterId, key] of [
     // 매뉴얼은 소제목을 'OOO세부내용' 표시로 알려 줍니다.
     const sectionNames = new Set(
       work.contentBlocks
-        .filter((block) => !block.body && /세부내용$/.test(block.title))
+        .filter((block) => /세부내용$/.test(block.title))
         .map((block) => squash(block.title.replace(/세부내용$/, "")))
     );
+
+    // 원문 쪽 글자에 있는 소제목 표시가 목차에 빠짐없이 나와야 합니다.
+    const inSource = new Set();
+    for (const page of work.sourcePages) {
+      for (const line of String(page.text).split(/\r?\n/)) {
+        const text = line.trim();
+        if (/세부내용$/.test(text)) inSource.add(squash(text.replace(/세부내용$/, "")));
+      }
+    }
+    const inLayout = new Set(layout.map((section) => squash(section.title)));
+    for (const name of inSource) {
+      if (!inLayout.has(name)) {
+        problems.push(`${where}: 매뉴얼의 소제목 '${name}'이 목차에 없습니다.`);
+      }
+    }
 
     for (const [index, section] of layout.entries()) {
       sections += 1;
