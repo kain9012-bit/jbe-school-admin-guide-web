@@ -62,6 +62,12 @@
   display: none;
 }
 
+/* 둘 중 하나만 있을 때는 남은 카드가 폭을 다 쓰도록 합니다.
+   두 칸짜리 격자에 하나만 두면 카드가 절반으로 좁아집니다. */
+.detail-grid:has(> section[hidden]) {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .resource-chip {
   border: 0;
   cursor: pointer;

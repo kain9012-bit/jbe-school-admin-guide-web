@@ -24,7 +24,6 @@
 .source-full-content {
   margin-top: 1.2rem;
   padding: 1.6rem;
-  white-space: pre-wrap;
   overflow-wrap: anywhere;
   color: var(--guide-muted);
   background: #fff;
@@ -32,6 +31,19 @@
   border-radius: 0.8rem;
   font-size: 1.45rem;
   line-height: 1.75;
+}
+
+/* 줄바꿈을 살려야 하는 곳은 원문 글자를 그대로 싣는 자리뿐입니다.
+   표를 담는 상자에까지 적용하면 HTML의 들여쓰기 공백이 빈 줄로 보입니다. */
+.source-full-text {
+  white-space: pre-wrap;
+}
+
+/* 표만 들어 있는 상자는 표 바깥 여백을 두지 않습니다. */
+.source-full-content:has(> .source-table-scroll:only-child) {
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 
 .source-detail.structural-marker {
