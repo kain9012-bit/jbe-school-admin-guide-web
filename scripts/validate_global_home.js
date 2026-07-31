@@ -50,13 +50,32 @@ requireCondition(
   "현재 웹판 제공 편 표시가 제1·3편과 일치하지 않습니다."
 );
 
+// 편만 지정한 주소는 따로 화면을 갖지 않고 통합 홈에서 그 분야를 펼쳐야 합니다.
+const workflowBootstrap = fs.readFileSync(
+  path.join(root, "docs/assets/guide-bootstrap-workflow.js"),
+  "utf8"
+);
+requireCondition(
+  workflowBootstrap.includes("goHomeWithChapter") &&
+    workflowBootstrap.includes("GUIDE_HOME_OPEN_CHAPTER"),
+  "편만 지정해 들어왔을 때 통합 홈으로 보내지 않습니다."
+);
+// 진입 페이지는 하나만 남아야 합니다.
+const entryPages = fs
+  .readdirSync(path.join(root, "docs"))
+  .filter((name) => name.endsWith(".html"));
+requireCondition(
+  entryPages.length === 1 && entryPages[0] === "index.html",
+  `진입 페이지가 여러 개입니다: ${entryPages.join(", ")}`
+);
+
 const bootstrap = fs.readFileSync(
   path.join(root, "docs/assets/guide-bootstrap-workflow.js"),
   "utf8"
 );
 requireCondition(
-  bootstrap.includes("const activeChapter = requested || null;"),
-  "편을 지정하지 않았을 때 제1편으로 강제 이동하는 로직이 남아 있습니다."
+  bootstrap.includes("goHomeWithChapter ? null : requested || null"),
+  "편을 지정하지 않았을 때 특정 편으로 강제 이동하는 로직이 남아 있습니다."
 );
 requireCondition(
   bootstrap.includes('await loadScript("assets/global-home.js")'),
@@ -76,6 +95,10 @@ requireCondition(
   "통합 홈이 편 카드를 설정에서 생성하지 않습니다."
 );
 // 분야 카드는 그 자리에서 업무 목록을 펼치고, 업무를 고르면 곧바로 처리 단계로 갑니다.
+requireCondition(
+  globalHome.includes("window.GUIDE_HOME_OPEN_CHAPTER"),
+  "통합 홈이 지정된 분야를 펼치지 않습니다."
+);
 requireCondition(
   globalHome.includes("data-toggle-chapter") && globalHome.includes('aria-expanded="false"'),
   "분야 카드가 그 자리에서 펼쳐지는 방식이 아닙니다."
@@ -101,7 +124,7 @@ requireCondition(
   "통합 홈에 제1편의 9개 업무 안내가 남아 있습니다."
 );
 
-for (const filename of ["index.html", "index-structured.html", "index-workflow.html"]) {
+for (const filename of ["index.html"]) {
   const html = fs.readFileSync(path.join(root, "docs", filename), "utf8");
   requireCondition(
     html.includes('href="assets/global-home.css"'),
@@ -145,7 +168,7 @@ for (const asset of ["global-home.js", "app-faithful-workflow.js"]) {
   );
 }
 
-for (const filename of ["index.html", "index-structured.html", "index-workflow.html"]) {
+for (const filename of ["index.html"]) {
   const html = fs.readFileSync(path.join(root, "docs", filename), "utf8");
   for (const scope of ["all", "work", "faq", "form"]) {
     requireCondition(
@@ -174,7 +197,7 @@ requireCondition(
   "분야 선택 창이 분야별 업무 목록을 만들지 않습니다."
 );
 
-for (const filename of ["index.html", "index-structured.html", "index-workflow.html"]) {
+for (const filename of ["index.html"]) {
   const html = fs.readFileSync(path.join(root, "docs", filename), "utf8");
   requireCondition(
     html.includes('id="chapter-dialog-note"'),
@@ -188,7 +211,7 @@ for (const filename of ["index.html", "index-structured.html", "index-workflow.h
 
 // 이용자에게 보이는 문구에 편 수 같은 내부 기준 표현이 없어야 합니다.
 const jargon = ["19개 편", "제19편", "전체 19개"];
-for (const filename of ["index.html", "index-structured.html", "index-workflow.html"]) {
+for (const filename of ["index.html"]) {
   const html = fs.readFileSync(path.join(root, "docs", filename), "utf8");
   for (const word of jargon) {
     requireCondition(!html.includes(word), `${filename}에 내부 기준 표현 '${word}'이 남아 있습니다.`);

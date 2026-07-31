@@ -80,18 +80,28 @@ async function main() {
     await page.close();
   }
 
-  // 2. 편별 개요와 업무 상세
+  // 2. 편만 지정해 들어오면 홈에서 그 분야가 펼쳐지고, 거기서 업무로 이어집니다.
   for (const chapter of ["01", "03"]) {
-    const page = await open(desktop, `제${chapter}편 개요`, `${base}/index.html?chapter=${chapter}#overview`);
-    const workCards = await page.locator("a.work-card").count();
-    const title = (await page.locator("h1").first().textContent().catch(() => "")) || "";
-    note(`제${chapter}편 개요: 업무 카드 ${workCards}개, 제목 "${title.trim().slice(0, 40)}"`);
-    if (workCards === 0) problems.push(`제${chapter}편 개요에 업무 카드가 없습니다.`);
-    await shoot(page, `10-chapter${chapter}-overview`);
+    const page = await open(
+      desktop,
+      `제${chapter}편 진입`,
+      `${base}/index.html?chapter=${chapter}`
+    );
+    const expanded = await page
+      .locator(`[data-toggle-chapter="${chapter}"]`)
+      .getAttribute("aria-expanded")
+      .catch(() => null);
+    const workLinks = await page.locator(`#chapter-works-${chapter} .global-work-link`).count();
+    note(`제${chapter}편 진입: 홈에서 펼침=${expanded}, 업무 링크 ${workLinks}개`);
+    if (expanded !== "true") {
+      problems.push(`제${chapter}편 주소로 들어왔을 때 홈에서 펼쳐지지 않습니다.`);
+    }
+    if (workLinks === 0) problems.push(`제${chapter}편 업무 목록이 비어 있습니다.`);
+    await shoot(page, `10-chapter${chapter}-home`);
 
     const firstHref =
-      workCards > 0
-        ? await page.locator("a.work-card").first().getAttribute("href")
+      workLinks > 0
+        ? await page.locator(`#chapter-works-${chapter} .global-work-link`).first().getAttribute("href")
         : null;
     const firstWork = firstHref ? firstHref.split("#work=")[1] : null;
     if (firstWork) {
@@ -134,7 +144,11 @@ async function main() {
 
   // 3. 내려받기 링크
   {
-    const page = await open(desktop, "내려받기", `${base}/index.html?chapter=01#downloads`);
+    const page = await open(
+      desktop,
+      "내려받기",
+      `${base}/index.html?chapter=01#work=official-documents`
+    );
     const links = await page.locator('a[href*="downloads/"]').evaluateAll((els) =>
       els.map((el) => el.getAttribute("href"))
     );
@@ -154,7 +168,7 @@ async function main() {
       isMobile: true,
       hasTouch: true,
     });
-    const page = await open(mobile, "모바일", `${base}/index.html?chapter=03#overview`);
+    const page = await open(mobile, "모바일", `${base}/index.html?chapter=03#work=local-personnel`);
     const hOverflow = await page.evaluate(
       () => document.documentElement.scrollWidth - document.documentElement.clientWidth
     );

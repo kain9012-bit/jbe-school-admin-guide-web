@@ -390,6 +390,20 @@
   renderGlobalHome();
   bindChapterToggles();
 
+  // 편만 지정한 주소로 들어온 경우 그 분야를 펼친 채로 보여 줍니다.
+  const openChapterId = window.GUIDE_HOME_OPEN_CHAPTER;
+  if (openChapterId) {
+    const target = document.querySelector(
+      `[data-toggle-chapter="${CSS.escape(openChapterId)}"]`
+    );
+    if (target) {
+      target.click();
+      requestAnimationFrame(() =>
+        target.scrollIntoView({ block: "center", behavior: "instant" })
+      );
+    }
+  }
+
   document.querySelectorAll("[data-open-search]").forEach((button) => {
     button.addEventListener("click", () => openSearch());
   });

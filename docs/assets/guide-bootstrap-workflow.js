@@ -6,10 +6,20 @@
   const requested = config.chapters.find(
     (chapter) => chapter.id === requestedId && chapter.available
   );
-  const activeChapter = requested || null;
-  const version = "20260730-global-home";
+  // 업무를 지정하지 않고 편만 지정해 들어오면 따로 개요 화면을 보여 주지 않고
+  // 통합 홈에서 그 분야를 펼쳐 줍니다. 홈과 똑같이 생긴 화면이 하나 더 있으면
+  // 이용자가 어디로 왔는지 헷갈리기 때문입니다.
+  const hasWorkRoute = /(^|&)work=/.test(location.hash.replace(/^#/, ""));
+  const goHomeWithChapter = Boolean(requested) && !hasWorkRoute;
+  const activeChapter = goHomeWithChapter ? null : requested || null;
+  const version = "20260731-home-only";
 
   window.ACTIVE_GUIDE_CHAPTER = activeChapter;
+  window.GUIDE_HOME_OPEN_CHAPTER = goHomeWithChapter ? requested.id : "";
+
+  if (goHomeWithChapter && typeof history.replaceState === "function") {
+    history.replaceState(null, "", `${location.pathname}#chapters`);
+  }
 
   function loadScript(src) {
     return new Promise((resolve, reject) => {

@@ -275,7 +275,14 @@
   }
 
   function globalHomeHref() {
-    return `${location.href.split(/[?#]/)[0]}#overview`;
+    return `${location.href.split(/[?#]/)[0]}#chapters`;
+  }
+
+  // 편만 지정한 주소는 더 이상 따로 화면을 갖지 않고 통합 홈에서 그 분야를 펼칩니다.
+  function chapterHomeHref() {
+    return `${location.href.split(/[?#]/)[0]}?chapter=${encodeURIComponent(
+      activeChapter.id
+    )}`;
   }
 
   function renderSearchExamples() {
@@ -856,12 +863,12 @@
   function renderWork(workId, options = {}) {
     const work = getWork(workId);
     if (!work) {
-      location.hash = "#overview";
+      location.href = chapterHomeHref();
       return;
     }
     const step = findStep(work.id, options);
     if (!step) {
-      location.hash = "#overview";
+      location.href = chapterHomeHref();
       return;
     }
     // 같은 업무 안에서 단계만 바꾼 것인지 판단합니다.
@@ -876,8 +883,7 @@
     byId("work-title").textContent = work.title;
     byId("work-intro").textContent = workflows[work.id].intro;
     breadcrumb.innerHTML = `
-      <li class="home"><a href="${escapeHtml(globalHomeHref())}">홈</a></li>
-      <li><a href="#overview">${escapeHtml(chapterName())}</a></li>
+      <li class="home"><a href="${escapeHtml(chapterHomeHref())}">홈</a></li>
       <li><span>${escapeHtml(work.title)}</span></li>
     `;
     renderStep(work, step, options.faqNumber);
@@ -1068,8 +1074,18 @@
   });
   window.addEventListener("hashchange", renderRoute);
 
+  // 편만 지정한 주소는 더 이상 따로 화면을 갖지 않으므로
+  // 상단의 '업무 흐름'은 그 분야를 펼친 홈으로 보냅니다.
+  document
+    .querySelectorAll('.global-nav a[href="#overview"], .mobile-global-nav a[href="#overview"]')
+    .forEach((link) => {
+      link.href = chapterHomeHref();
+      const label = link.querySelector("span");
+      if (label) label.textContent = "다른 업무 보기";
+      else link.textContent = "다른 업무 보기";
+    });
+
   ensureFormDialog();
   renderSearchExamples();
-  renderOverview();
   renderRoute();
 })();

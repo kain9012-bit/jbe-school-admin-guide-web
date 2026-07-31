@@ -223,14 +223,8 @@
     const sideTitle = document.getElementById("side-chapter-title");
     if (sideTitle) sideTitle.textContent = `${currentChapter.label} 업무 목록`;
 
-    const breadcrumb = document.getElementById("breadcrumb");
-    if (breadcrumb) {
-      const items = breadcrumb.querySelectorAll("li");
-      if (items.length >= 2) {
-        const target = items[1].querySelector("a, span");
-        if (target) target.textContent = fullName;
-      }
-    }
+    // 이동 경로는 '홈 > 업무명' 두 단계입니다.
+    // 편 이름을 덮어쓰면 지금 보고 있는 업무명이 사라지므로 손대지 않습니다.
   }
 
   document.addEventListener("guide:data-ready", applyChapterContext);
