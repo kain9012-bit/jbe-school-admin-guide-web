@@ -54,7 +54,7 @@ for (const work of data.sections) {
 }
 
 requireCondition(stepCount === 11, `제3편 소제목 수 오류: ${stepCount}`);
-requireCondition(blockCount === 93, `제3편 본문 블록 수 오류: ${blockCount}`);
+requireCondition(blockCount === 95, `제3편 본문 블록 수 오류: ${blockCount}`);
 
 for (const relativePath of Object.values(data.downloads)) {
   const filePath = path.join(docs, relativePath);
@@ -66,7 +66,7 @@ for (const relativePath of Object.values(data.downloads)) {
 
 const chapterEntries = searchIndex.filter((item) => item.chapterId === "03");
 requireCondition(
-  chapterEntries.length === 138,
+  chapterEntries.length === 140,
   `제3편 검색 항목 수 오류: ${chapterEntries.length}`
 );
 requireCondition(

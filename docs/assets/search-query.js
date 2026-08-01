@@ -36,14 +36,23 @@
 
       if (!HANGUL.test(run)) {
         if (run.length < 2) continue;
-        add(run, 3);
+        add(run, run.length * 1.5);
       } else if (run.length === 1) {
         add(run, 1);
       } else {
-        // 낱말 전체는 조각보다 훨씬 확실한 근거입니다.
-        add(run, 3);
+        // 길게 맞을수록 확실한 근거입니다. 그래서 맞은 글자 수를 그대로 점수로 씁니다.
+        // '사무인계인수'가 통째로 든 글이 '하나'만 스친 글보다 위에 와야 합니다.
+        add(run, run.length * 1.5);
+
+        // 조사는 낱말 뒤에 붙습니다. 뒤를 한두 글자 떼어 낸 모양도 함께 봅니다.
+        //   사무인계인수는 → 사무인계인수 → 사무인계인
+        // 조사 목록을 손으로 관리하지 않고도 '사무인계인수'와 만납니다.
+        for (let cut = 1; cut <= 2; cut += 1) {
+          if (run.length - cut >= 2) add(run.slice(0, run.length - cut), run.length - cut);
+        }
+
         for (let index = 0; index < run.length - 1; index += 1) {
-          add(run.slice(index, index + 2), 1);
+          add(run.slice(index, index + 2), 2);
         }
       }
 
@@ -113,8 +122,10 @@
     }
     if (!matched) return null;
 
-    // 많이 맞을수록 크게 올리고, 입력한 문장이 통째로 있으면 가장 위로 보냅니다.
-    score += matched * matched;
+    // 여러 낱말이 맞으면 올려 주되, 근거의 크기에 비례해 올립니다.
+    // 그냥 더해 버리면 약한 낱말 둘이 확실한 낱말 하나를 이겨 버립니다.
+    //   '육아휴직'이 통째로 든 글 < '휴직'과 '신청'을 스친 글  ← 이런 뒤집힘을 막습니다.
+    score *= 1 + (matched - 1) * 0.35;
     if (phrases.length) score += 60;
     if (wholeQuery.length >= 4 && text.includes(wholeQuery)) score += 80;
     return { score, matched };

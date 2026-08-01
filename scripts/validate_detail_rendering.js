@@ -22,9 +22,15 @@ vm.runInContext(
 const data = context.window.CHAPTER1_DATA;
 const renderer = context.window.GUIDE_DETAIL_RENDERER;
 const allBlocks = data.sections.flatMap((section) => section.contentBlocks);
-const byId = new Map(allBlocks.map((block) => [block.id, block]));
+// 블록 번호는 원문을 다시 나눌 때마다 밀립니다.
+// 매뉴얼에 적힌 소제목으로 찾아야 엉뚱한 블록을 보지 않습니다.
+function blockTitled(title) {
+  const found = allBlocks.find((block) => block.title.trim() === title);
+  requireCondition(found, `매뉴얼 소제목 '${title}' 블록을 찾지 못했습니다.`);
+  return found;
+}
 
-const formation = renderer.render(byId.get("p3-b3"));
+const formation = renderer.render(blockTitled("1. 문서의 성립 및 효력발생"));
 requireCondition(formation.type === "text", "문서 성립 블록이 텍스트로 렌더링되지 않았습니다.");
 requireCondition(
   formation.html.includes("방식으로 결재함으로써 성립"),
@@ -42,7 +48,7 @@ requireCondition(
   `문서 성립 계층이 올바르지 않습니다: ${formationLevels.join(",")}`
 );
 
-const drafting = renderer.render(byId.get("p3-b5"));
+const drafting = renderer.render(blockTitled("3. 기안의 일반사항"));
 const draftingLevels = [...drafting.html.matchAll(/--outline-level: (\d)/g)].map(
   (match) => Number(match[1])
 );
@@ -51,7 +57,7 @@ requireCondition(
   `기안 일반사항 계층이 올바르지 않습니다: ${draftingLevels.join(",")}`
 );
 
-const documentTypes = renderer.render(byId.get("p3-b4"));
+const documentTypes = renderer.render(blockTitled("2. 공문서의 종류"));
 requireCondition(documentTypes.type === "table", "공문서 종류가 표로 렌더링되지 않았습니다.");
 requireCondition(!documentTypes.html.includes("<caption"), "표의 빈 캡션 행이 남아 있습니다.");
 requireCondition(

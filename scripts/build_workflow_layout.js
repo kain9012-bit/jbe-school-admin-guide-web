@@ -1,11 +1,15 @@
-// 업무 안의 소제목을 매뉴얼에서 그대로 뽑아 목차를 만듭니다.
+// 업무 안의 목차를 매뉴얼 소제목에서 그대로 만들어 냅니다.
 //
-// 매뉴얼은 소제목을 'OOO세부내용'이라는 표시로 알려 줍니다.
-// PDF에서 글자를 뽑으면 이 표시가 해당 구역의 '끝'에 오므로,
-// 앞의 내용을 모아 두었다가 표시를 만나면 그 이름으로 한 묶음을 닫습니다.
+// 매뉴얼은 소제목마다 앞에 '세부내용'이라는 알약 모양 표시를 달아 둡니다.
 //
-//   직무대리      → 1. 정의 / 2. 구분 / 3. 지정 절차 / 4. 책임과 권한
-//   직무대리자 지정 → 16쪽 지정 방법 표
+//   세부내용  신원조사        ← 여기서 한 묶음이 시작합니다
+//     관련법규 및 참고자료
+//     구분/내용 표
+//   세부내용  결격사유 조회    ← 여기서 다음 묶음이 시작합니다
+//
+// 표시가 나오면 그 자리에서 새 묶음을 열고, 다음 표시를 만날 때까지의 내용을
+// 그 묶음에 담습니다. 첫 표시보다 앞에 있는 업무 제목과 업무 흐름도는
+// 첫 묶음에 함께 둡니다.
 //
 // '1. 정의' 같은 번호 항목은 소제목이 아니라 그 안의 세부 항목이므로
 // 목차를 다시 쪼개지 않고 해당 소제목 아래에 그대로 둡니다.
@@ -19,87 +23,25 @@ const { loadGuideData } = require("./lib/load_guide_data");
 const root = path.resolve(__dirname, "..");
 const target = path.join(root, "docs/assets/workflow-layout.js");
 
-const SECTION_MARK = /세부내용$/;
-// 매뉴얼에는 '문서기안 및 발송세부내용'처럼 뒤에 붙은 것도 있고
-// '세부내용 문서 접수(등록) 및 공람'처럼 앞에 붙은 것도 있습니다.
-const SECTION_MARK_PREFIX = /^세부내용\s+(\S.*)$/;
-
-// 앞에 붙은 표시는 블록 제목이 아니라 원문 쪽 글자에만 있습니다.
-// 그 쪽의 마지막 블록에서 묶음을 닫는 이름으로 씁니다.
-function prefixMarksByPage(work) {
-  const marks = new Map();
-  for (const page of work.sourcePages) {
-    for (const line of String(page.text).split(/\r?\n/)) {
-      const found = SECTION_MARK_PREFIX.exec(line.trim());
-      if (found && !marks.has(page.pdfPage)) marks.set(page.pdfPage, found[1].trim());
-    }
-  }
-  return marks;
-}
+const SECTION_MARK = /^세부내용\s+(\S.*)$/;
 
 function sectionsOf(work) {
   const sections = [];
-  let buffer = [];
-  const prefixMarks = prefixMarksByPage(work);
-  const blocks = work.contentBlocks;
+  const preamble = [];
 
-  for (const [index, block] of blocks.entries()) {
-    buffer.push(block.id);
-
-    // 표시에 본문이 딸려 있어도 소제목은 소제목입니다.
-    // 본문은 그 구역에 속하므로 함께 담고 묶음을 닫습니다.
-    if (SECTION_MARK.test(block.title)) {
-      const title = block.title.replace(SECTION_MARK, "").trim();
-      sections.push({ title: title || work.title, blocks: buffer });
-      buffer = [];
+  for (const block of work.contentBlocks) {
+    const mark = SECTION_MARK.exec(String(block.title).trim());
+    if (mark) {
+      sections.push({ title: mark[1].trim(), blocks: [block.id] });
       continue;
     }
-
-    // 앞에 붙은 표시는 그 쪽의 마지막 블록에서 묶음을 닫습니다.
-    const next = blocks[index + 1];
-    const pageEnds = !next || next.pdfPage !== block.pdfPage;
-    if (pageEnds && prefixMarks.has(block.pdfPage)) {
-      sections.push({ title: prefixMarks.get(block.pdfPage), blocks: buffer });
-      buffer = [];
-    }
+    if (sections.length) sections[sections.length - 1].blocks.push(block.id);
+    else preamble.push(block.id);
   }
 
-  // 소제목 표시가 쪽 끝에 붙어 있으면, 그 소제목의 내용이 다음 쪽 첫머리로
-  // 이어지는데도 거기서 끊겨 다음 묶음으로 넘어갑니다.
-  // 매뉴얼은 소제목 안에서 '1. 2. 3.'으로 번호를 매기고 새 소제목에서 1부터
-  // 다시 시작하므로, 번호가 이어지면 앞 묶음의 내용으로 되돌립니다.
-  //   문서작성:  1. 문서의 성립 / 2. 공문서의 종류 / 3. 기안의 일반사항
-  //   (쪽 넘김)  4. 문서작성의 일반원칙  ← 여전히 문서작성
-  //              1. 의견작성            ← 여기부터 검토·협조·결재
-  const numberOf = (id) => {
-    const block = work.contentBlocks.find((item) => item.id === id);
-    const found = block && /^(\d+)\.\s*\S/.exec(String(block.title));
-    return found ? Number(found[1]) : null;
-  };
-
-  for (let index = 0; index + 1 < sections.length; index += 1) {
-    const current = sections[index];
-    const next = sections[index + 1];
-    const numbers = current.blocks.map(numberOf).filter((value) => value !== null);
-    if (!numbers.length) continue;
-
-    let expected = Math.max(...numbers) + 1;
-    while (next.blocks.length) {
-      const number = numberOf(next.blocks[0]);
-      if (number !== expected) break;
-      current.blocks.push(next.blocks.shift());
-      expected += 1;
-    }
-  }
-
-  // 표시 없이 남은 내용은 마지막 묶음에 붙입니다.
-  if (buffer.length) {
-    if (sections.length) {
-      sections[sections.length - 1].blocks.push(...buffer);
-    } else {
-      sections.push({ title: work.title, blocks: buffer });
-    }
-  }
+  // 소제목 표시보다 앞에 있는 업무 제목·흐름도는 첫 묶음에 함께 둡니다.
+  if (!sections.length) return [{ title: work.title, blocks: preamble }];
+  sections[0].blocks = [...preamble, ...sections[0].blocks];
 
   // 본문이 하나도 없는 묶음은 화면에서 빈칸으로만 보이므로 옆 묶음에 합칩니다.
   const hasBody = (section) =>

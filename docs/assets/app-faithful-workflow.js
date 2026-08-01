@@ -111,7 +111,7 @@
     return String(title || "")
       .replace(/^\d+\.\s*/, "")
       .replace(/^\d+\s+/, "")
-      .replace(/세부내용$/, "")
+      .replace(/^세부내용\s+/, "")
       .trim();
   }
 
@@ -544,7 +544,7 @@
   function sourceBlockMarkup(block) {
     const generatedTitle = /^매뉴얼 \d+쪽$/.test(block.title);
     const structural =
-      !block.body && (block.title.endsWith("세부내용") || block.title === "업무 흐름도");
+      !block.body && (/^세부내용\s/.test(block.title) || block.title === "업무 흐름도");
     // 원문의 항목 번호('1. 정의')는 매뉴얼과 대조할 때 필요하므로 그대로 둡니다.
     // 다만 지금 보고 있는 목차 항목과 같은 제목이면 바로 위에 이미 적혀 있으므로 뺍니다.
     const raw = String(block.title || "").trim();
@@ -596,8 +596,8 @@
     if (block.body) return false;
     const raw = String(block.title || "").trim();
     if (!raw) return true;
-    // '문서작성세부내용'처럼 원문의 구역 표시로만 쓰인 줄입니다.
-    if (/세부내용$/.test(raw)) return true;
+    // '세부내용 문서작성'처럼 원문의 소제목 표시로만 쓰인 줄입니다.
+    if (/^세부내용\s/.test(raw)) return true;
     if (raw === "업무 흐름도" || raw === "관련법규 및 참고자료") return true;
     // '3 공인관리'처럼 업무 이름을 되풀이하는 줄입니다. 띄어쓰기 차이는 무시합니다.
     return Boolean(work) && squash(cleanSourceHeading(raw)) === squash(work.title);

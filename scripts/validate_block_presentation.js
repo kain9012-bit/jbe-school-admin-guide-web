@@ -41,7 +41,7 @@ function cleanSourceHeading(title) {
   return String(title || "")
     .replace(/^\d+\.\s*/, "")
     .replace(/^\d+\s+/, "")
-    .replace(/세부내용$/, "")
+    .replace(/^세부내용\s+/, "")
     .trim();
 }
 
@@ -93,7 +93,7 @@ for (const [chapterId, key] of [
           const squash = (value) => String(value || "").replace(/\s+/g, "");
           const isStructural =
             !raw ||
-            /세부내용$/.test(raw) ||
+            /^세부내용\s/.test(raw) ||
             raw === "업무 흐름도" ||
             raw === "관련법규 및 참고자료" ||
             squash(cleanSourceHeading(raw)) === squash(work.title);
