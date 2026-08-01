@@ -179,9 +179,9 @@
 
     const steps = layout.map((sourceStep, index) => {
       const stepBlocks = sourceStep.blocks.map((id) => blockById.get(id));
-      const tipBlocks = stepBlocks.filter((block) => block.title === "TIPTIP");
+      const tipBlocks = stepBlocks.filter((block) => block.title === "TIP");
       const classifiedBlocks = stepBlocks
-        .filter((block) => block.title !== "TIPTIP")
+        .filter((block) => block.title !== "TIP")
         // 업무 흐름도는 위에 그림으로 따로 보여 주므로 본문에 또 넣지 않습니다.
         .filter((block) => !isSourceFlowBlock(work, block) && block.title !== "업무 흐름도")
         .map(splitLawReferences);
@@ -548,10 +548,10 @@
     // 원문의 항목 번호('1. 정의')는 매뉴얼과 대조할 때 필요하므로 그대로 둡니다.
     // 다만 지금 보고 있는 목차 항목과 같은 제목이면 바로 위에 이미 적혀 있으므로 뺍니다.
     const raw = String(block.title || "").trim();
-    // 'TIPTIP'은 매뉴얼이 TIP 상자임을 표시한 말입니다.
+    // 'TIP'은 매뉴얼이 TIP 상자임을 표시한 말입니다.
     // 위에 이미 'TIP·주의사항'이라고 적혀 있으므로 제목으로 다시 내지 않습니다.
     const heading =
-      generatedTitle || raw === "TIPTIP" || squash(raw) === squash(currentStepTitle)
+      generatedTitle || raw === "TIP" || squash(raw) === squash(currentStepTitle)
         ? ""
         : raw;
     // 안내서는 읽으라고 만든 문서입니다. 앞 몇 줄만 보여 주고 나머지를 접어 두면

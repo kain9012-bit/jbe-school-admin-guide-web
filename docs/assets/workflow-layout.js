@@ -3,10 +3,10 @@
 window.GUIDE_WORKFLOW_LAYOUT = {
   "official-documents": [
     { title: "문서작성", blocks: ["p3-b1","p3-b2","p3-b3","p3-b4","p3-b5","p3-b6","p3-b7","p3-b8","p4-b1"] },
-    { title: "검토·협조·결재", blocks: ["p4-b2","p4-b3","p4-b4","p5-b1","p5-b2","p5-b3"] }
+    { title: "검토·협조·결재", blocks: ["p4-b2","p4-b3","p4-b4","p4-b5","p5-b1","p5-b2","p5-b3","p5-b4"] }
   ],
   "k-edufine": [
-    { title: "문서 접수(등록) 및 공람", blocks: ["p6-b1","p6-b2","p6-b3","p6-b4","p6-b5","p6-b6","p6-b7"] },
+    { title: "문서 접수(등록) 및 공람", blocks: ["p6-b1","p6-b2","p6-b3","p6-b4","p6-b5","p6-b6","p6-b7","p6-b8"] },
     { title: "문서기안 및 발송", blocks: ["p7-b1","p7-b2","p7-b3","p7-b4","p7-b5","p7-b6"] }
   ],
   "official-seals": [
@@ -16,12 +16,12 @@ window.GUIDE_WORKFLOW_LAYOUT = {
     { title: "공인폐기", blocks: ["p10-b1","p10-b2","p10-b3","p10-b4"] }
   ],
   "acting-duty": [
-    { title: "직무대리", blocks: ["p11-b1","p11-b2","p11-b3","p11-b4","p11-b5","p11-b6","p11-b7","p11-b8","p11-b9"] },
+    { title: "직무대리", blocks: ["p11-b1","p11-b2","p11-b3","p11-b4","p11-b5","p11-b6","p11-b7","p11-b8","p11-b9","p11-b10"] },
     { title: "직무대리자 지정", blocks: ["p12-b1","p12-b2","p12-b3"] }
   ],
   "handover": [
     { title: "학교장 및 행정실장", blocks: ["p13-b1","p13-b2","p13-b3","p13-b4","p13-b5","p13-b6","p14-b1"] },
-    { title: "학교운영위원장", blocks: ["p14-b2","p14-b3","p14-b4","p14-b5"] }
+    { title: "학교운영위원장", blocks: ["p14-b2","p14-b3","p14-b4","p14-b5","p14-b6"] }
   ],
   "records": [
     { title: "등록", blocks: ["p15-b1","p15-b2","p15-b3","p15-b4","p15-b5","p15-b6","p15-b7","p15-b8","p15-b9"] },
@@ -60,7 +60,7 @@ window.GUIDE_WORKFLOW_LAYOUT = {
   "status-rights": [
     { title: "휴·복직", blocks: ["p15-b1","p15-b2","p15-b3","p15-b4","p15-b5","p15-b6","p15-b7","p16-b1","p16-b2","p16-b3","p16-b4"] },
     { title: "직위해제", blocks: ["p17-b1","p17-b2","p17-b3","p17-b4"] },
-    { title: "정년퇴직 및 면직", blocks: ["p17-b5","p17-b6","p17-b7","p17-b8"] },
+    { title: "정년퇴직 및 면직", blocks: ["p17-b5","p17-b6","p17-b7","p17-b8","p17-b9"] },
     { title: "소청", blocks: ["p18-b1","p18-b2","p18-b3","p18-b4","p18-b5","p18-b6","p18-b7"] },
     { title: "고충처리", blocks: ["p18-b8","p18-b9","p18-b10","p18-b11","p18-b12"] }
   ]

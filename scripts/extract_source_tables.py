@@ -120,6 +120,58 @@ def _tables_of_page(page):
     return complete
 
 
+def clean_page(page):
+    """본문에 없는 글자를 걸러 낸 쪽을 돌려줍니다.
+
+    · 쪽 옆에 세로로 붙은 편 이름표는 본문이 아닙니다.
+    · 매뉴얼은 굵은 글씨를 같은 자리에 두 번 겹쳐 찍어 만듭니다.
+      그대로 읽으면 'TIP'이 'TTIIPP'가 되므로 겹친 글자는 하나만 셉니다.
+    """
+    seen: set[tuple] = set()
+
+    def keep(obj):
+        if obj.get("object_type") != "char":
+            return True
+        if obj.get("x1", 0) > CONTENT_RIGHT_EDGE:
+            return False
+        mark = (obj.get("text"), round(obj.get("x0", 0), 1), round(obj.get("top", 0), 1))
+        if mark in seen:
+            return False
+        seen.add(mark)
+        return True
+
+    return page.filter(keep)
+
+
+def lines_from_words(words) -> list[str]:
+    """낱말을 지면에 보이는 줄로 묶습니다.
+
+    화살표처럼 글자보다 조금 위에 그려진 것이 있어서, 줄을 묶은 뒤에는
+    반드시 가로 위치로 다시 세워야 합니다. 그러지 않으면 한 줄이
+    '→ → → → 방법 : 문서관리 접수함…'처럼 화살표만 앞에 몰립니다.
+    """
+    lines: list[list[dict]] = []
+    for word in sorted(words, key=lambda item: (item["top"] + item["bottom"]) / 2):
+        middle = (word["top"] + word["bottom"]) / 2
+        if lines:
+            previous = lines[-1]
+            reference = sum((item["top"] + item["bottom"]) / 2 for item in previous) / len(previous)
+            if abs(middle - reference) <= 4:
+                previous.append(word)
+                continue
+        lines.append([word])
+    return [
+        " ".join(word["text"] for word in sorted(line, key=lambda item: item["x0"]))
+        for line in lines
+    ]
+
+
+def tidy(text: str) -> str:
+    # 제3편은 낱말 사이를 보통 띄어쓰기가 아닌 특수 글자로 벌려 놓았습니다.
+    text = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f\xa0]", " ", text)
+    return re.sub(r"[^\S\n]+", " ", text).strip()
+
+
 def _cell_text(page, x0, x1, top, bottom) -> str:
     words = [
         word
@@ -128,19 +180,12 @@ def _cell_text(page, x0, x1, top, bottom) -> str:
     ]
     if not words:
         return ""
-    lines: list[list[dict]] = []
-    for word in sorted(words, key=lambda item: (round(item["top"], 1), item["x0"])):
-        if lines and abs(word["top"] - lines[-1][0]["top"]) <= 3:
-            lines[-1].append(word)
-        else:
-            lines.append([word])
-    text = "\n".join(" ".join(word["text"] for word in line) for line in lines)
-    text = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f\xa0]", " ", text)
-    return re.sub(r"[^\S\n]+", " ", text).strip()
+    return tidy("\n".join(lines_from_words(words)))
 
 
-def tables_of(page) -> list[dict]:
+def tables_of(source) -> list[dict]:
     """한 쪽에서 찾은 표를 위에서 아래 순서로 돌려줍니다."""
+    page = clean_page(source)
     found = []
     for table in _tables_of_page(page):
         columns = table["columns"]

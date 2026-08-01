@@ -33,7 +33,7 @@ import pdfplumber
 
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from extract_source_tables import tables_of
+from extract_source_tables import clean_page, lines_from_words, tables_of, tidy
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "docs" / "assets"
@@ -64,20 +64,11 @@ def save(chapter: int, data: dict) -> None:
     )
 
 
-def page_text(page) -> str:
-    body = page.filter(
-        lambda obj: obj.get("object_type") != "char" or obj.get("x1", 0) <= CONTENT_RIGHT_EDGE
-    )
-    text = body.extract_text(x_tolerance=1.6, y_tolerance=3) or ""
-    # 제3편은 낱말 사이를 보통 띄어쓰기가 아닌 특수 글자로 벌려 놓았습니다.
-    # 그대로 두면 화면과 검색에서 '지방공무원임용령'처럼 붙어 보입니다.
-    text = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f\xa0]", " ", text)
-    lines = []
-    for raw in text.split("\n"):
-        line = re.sub(r"[^\S\n]+", " ", raw).strip()
-        if line:
-            lines.append(line)
-    return "\n".join(lines)
+def page_text(source) -> str:
+    body = clean_page(source)
+    words = body.extract_words(x_tolerance=1.6, y_tolerance=3, keep_blank_chars=False)
+    lines = [tidy(line) for line in lines_from_words(words)]
+    return "\n".join(line for line in lines if line)
 
 
 def main() -> None:

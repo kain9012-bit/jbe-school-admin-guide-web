@@ -97,7 +97,7 @@ def load_data(chapter: int) -> dict[str, object]:
 
 
 def is_heading(line: str) -> bool:
-    if line in {"업무 흐름도", "관련법규 및 참고자료", "TIPTIP"}:
+    if line in {"업무 흐름도", "관련법규 및 참고자료", "TIP"}:
         return True
     if line.endswith("세부내용"):
         return True

@@ -357,7 +357,7 @@
     if (
       !subject ||
       subject.length > 32 ||
-      /^(?:TIPTIP|업무 흐름도|관련법규 및 참고자료)$/.test(subject)
+      /^(?:TIP|업무 흐름도|관련법규 및 참고자료)$/.test(subject)
     ) {
       subject = "";
     }

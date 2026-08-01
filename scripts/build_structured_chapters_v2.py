@@ -42,7 +42,7 @@ def save(chapter: int, data: dict) -> None:
 
 
 def is_heading(line: str) -> bool:
-    if line in {FLOW_TITLE, "관련법규 및 참고자료", "TIPTIP"}:
+    if line in {FLOW_TITLE, "관련법규 및 참고자료", "TIP"}:
         return True
     # 매뉴얼은 소제목 앞에 '세부내용'이라는 알약 모양 표시를 붙여 둡니다.
     if re.match(r"^세부내용\s+\S", line):

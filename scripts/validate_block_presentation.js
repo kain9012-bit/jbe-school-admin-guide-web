@@ -80,7 +80,7 @@ for (const [chapterId, key] of [
       for (const blockId of step.blocks) {
         const block = blockById.get(blockId);
         if (!block) continue;
-        if (block.title === "TIPTIP") continue;
+        if (block.title === "TIP") continue;
 
         const body = mainBody(block);
         const title = cleanSourceHeading(block.title);
