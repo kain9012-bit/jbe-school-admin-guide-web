@@ -11,5 +11,11 @@
     "kordoc": "^4.4.0",
     "pdfjs-dist": "^4.10.38"
   },
-  "comment": "kordoc은 원문 대조 검증에만 씁니다(scripts/validate_source_against_kordoc.mjs). OCR용 무거운 선택 의존성은 필요 없으니 'npm install --omit=optional'로 설치하세요. pdfjs-dist는 kordoc이 4.x를 쓰므로 5.x로 올리지 마세요."
+  "comment": [
+    "kordoc은 원문 대조 검증에만 씁니다(scripts/validate_source_against_kordoc.mjs).",
+    "OCR용 무거운 선택 의존성은 필요 없으니 '--omit=optional'로 설치하세요(893MB → 80MB).",
+    "pdfjs-dist는 kordoc이 4.x를 쓰므로 5.x로 올리지 마세요.",
+    "윈도우 PowerShell은 서명 없는 npm.ps1을 막으므로 'npm' 대신 'npm.cmd'를 쓰세요.",
+    "  npm.cmd install --omit=optional"
+  ]
 }
