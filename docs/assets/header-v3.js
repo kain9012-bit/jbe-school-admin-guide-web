@@ -208,11 +208,15 @@
       link.href = data.downloads.manual;
       if (link.dataset.label === "chapter") link.textContent = `${chapter.label} PDF 보기`;
     });
+    // 저장되는 파일 이름을 무엇인지 알아볼 수 있게 정해 줍니다.
+    // 정해 주지 않으면 'chapter1-forms.hwpx'가 그대로 이름이 됩니다.
     document.querySelectorAll("[data-download='forms']").forEach((link) => {
       link.href = data.downloads.forms;
+      link.setAttribute("download", `${fullName} 서식·예시 모음.hwpx`);
     });
     document.querySelectorAll("[data-download='faq']").forEach((link) => {
       link.href = data.downloads.faq;
+      link.setAttribute("download", `${fullName} 자주 묻는 질문.hwp`);
     });
   }
 

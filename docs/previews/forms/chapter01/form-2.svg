@@ -4,8 +4,8 @@
 <text x="63.2" y="102.3" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="43.56" lengthAdjust="spacing"> [서식2]</text>
 <text x="59.51" y="153" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="54.07" lengthAdjust="spacing">[별지 제2호서식]</text>
 <text x="224.25" y="176.89" font-size="16" font-family="'한양견고딕','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="143.87" lengthAdjust="spacing" font-weight="bold">전자이미지공인대장</text>
-<text x="64.26" y="217.69" font-size="11" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="48.18" lengthAdjust="spacing">공인 명칭</text>
-<text x="77.68" y="240.5" font-size="11" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="21.34" lengthAdjust="spacing">종류</text>
+<text x="64.24" y="217.69" font-size="11" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="48.18" lengthAdjust="spacing">공인 명칭</text>
+<text x="77.66" y="240.5" font-size="11" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="21.34" lengthAdjust="spacing">종류</text>
 <text x="130" y="240.15" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif">［</text>
 <text x="149.7" y="240.15" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="29.1" lengthAdjust="spacing">］청인</text>
 <text x="218.8" y="240.15" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif">［</text>
@@ -16,25 +16,25 @@
 <text x="76.45" y="328.94" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="25.03" lengthAdjust="spacing">］등록</text>
 <text x="59.51" y="344.94" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif">［</text>
 <text x="76.45" y="344.94" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="33.37" lengthAdjust="spacing">］재등록</text>
-<text x="126.75" y="296.89" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="92.3" lengthAdjust="spacing" font-style="italic" fill="#5D5D5D">전자이미지공인 인영</text>
-<text x="237.4" y="269.66" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="73.07" lengthAdjust="spacing"> 등록일(재등록일)</text>
+<text x="126.73" y="296.89" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="92.3" lengthAdjust="spacing" font-style="italic" fill="#5D5D5D">전자이미지공인 인영</text>
+<text x="237.39" y="269.66" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="73.07" lengthAdjust="spacing"> 등록일(재등록일)</text>
 <text x="354.33" y="269.66" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif">년</text>
 <text x="390.92" y="269.66" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif">월</text>
 <text x="432.11" y="269.66" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif">일</text>
-<text x="237.4" y="306.48" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="73.07" lengthAdjust="spacing">등록(재등록) 사유</text>
-<text x="256.06" y="327.3" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="35.75" lengthAdjust="spacing">관리부서</text>
-<text x="303.84" y="340.12" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="153.8" lengthAdjust="spacing">전자이미지공인 사용 기관(부서) 현황</text>
-<text x="120" y="378.58" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="78.44" lengthAdjust="spacing" font-style="italic" fill="#5D5D5D">전자이미지공인 </text>
-<text x="198.44" y="378.58" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="27.35" lengthAdjust="spacing" font-style="italic" fill="#5D5D5D">등록 </text>
-<text x="134.8" y="394.58" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="43.8" lengthAdjust="spacing" font-style="italic" fill="#5D5D5D">당시 공인</text>
-<text x="178.6" y="394.58" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="32.4" lengthAdjust="spacing" font-style="italic" fill="#5D5D5D">의 인영</text>
-<text x="241.87" y="360.94" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="64.14" lengthAdjust="spacing">사용 기관(부서)</text>
+<text x="237.39" y="306.48" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="73.07" lengthAdjust="spacing">등록(재등록) 사유</text>
+<text x="256.05" y="327.3" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="35.75" lengthAdjust="spacing">관리부서</text>
+<text x="303.83" y="340.12" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="153.8" lengthAdjust="spacing">전자이미지공인 사용 기관(부서) 현황</text>
+<text x="120" y="378.58" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="78.42" lengthAdjust="spacing" font-style="italic" fill="#5D5D5D">전자이미지공인 </text>
+<text x="198.42" y="378.58" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="27.34" lengthAdjust="spacing" font-style="italic" fill="#5D5D5D">등록 </text>
+<text x="134.78" y="394.58" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="43.8" lengthAdjust="spacing" font-style="italic" fill="#5D5D5D">당시 공인</text>
+<text x="178.58" y="394.58" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="32.4" lengthAdjust="spacing" font-style="italic" fill="#5D5D5D">의 인영</text>
+<text x="241.86" y="360.94" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="64.14" lengthAdjust="spacing">사용 기관(부서)</text>
 <text x="343.31" y="360.94" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="49.3" lengthAdjust="spacing">시스템 명칭</text>
-<text x="431.61" y="360.94" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="26.82" lengthAdjust="spacing">통보일</text>
+<text x="431.6" y="360.94" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="26.82" lengthAdjust="spacing">통보일</text>
 <text x="479.87" y="360.94" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="49.3" lengthAdjust="spacing">최초 사용일</text>
-<text x="265" y="420.22" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="17.88" lengthAdjust="spacing">비고</text>
-<text x="80" y="493.91" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="16.68" lengthAdjust="spacing">폐기</text>
-<text x="126.75" y="493.91" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="92.3" lengthAdjust="spacing" font-style="italic" fill="#5D5D5D">전자이미지공인 인영</text>
+<text x="264.99" y="420.22" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="17.88" lengthAdjust="spacing">비고</text>
+<text x="79.99" y="493.91" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="16.68" lengthAdjust="spacing">폐기</text>
+<text x="126.73" y="493.91" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="92.3" lengthAdjust="spacing" font-style="italic" fill="#5D5D5D">전자이미지공인 인영</text>
 <text x="251.65" y="433.04" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="26.82" lengthAdjust="spacing">폐기일</text>
 <text x="363.55" y="433.04" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif">년</text>
 <text x="395.52" y="433.04" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif">월</text>
@@ -44,10 +44,10 @@
 <text x="322.08" y="466.68" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="25.43" lengthAdjust="spacing"> 소속:</text>
 <text x="388.98" y="466.68" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="20.83" lengthAdjust="spacing">직급:</text>
 <text x="451.27" y="466.68" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="20.83" lengthAdjust="spacing">성명:</text>
-<text x="288.13" y="487.5" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="185.22" lengthAdjust="spacing">전자이미지공인 사용 기관(부서)에 대한 조치</text>
-<text x="241.87" y="508.32" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="64.14" lengthAdjust="spacing">사용 기관(부서)</text>
+<text x="288.12" y="487.5" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="185.22" lengthAdjust="spacing">전자이미지공인 사용 기관(부서)에 대한 조치</text>
+<text x="241.86" y="508.32" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="64.14" lengthAdjust="spacing">사용 기관(부서)</text>
 <text x="343.31" y="508.32" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="49.3" lengthAdjust="spacing">시스템 명칭</text>
-<text x="431.61" y="508.32" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="26.82" lengthAdjust="spacing">통보일</text>
+<text x="431.6" y="508.32" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="26.82" lengthAdjust="spacing">통보일</text>
 <text x="479.87" y="508.32" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="49.3" lengthAdjust="spacing">최종 사용일</text>
 <text x="59.51" y="577.63" font-size="10" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="63.5" lengthAdjust="spacing">&lt; 작성 방법 &gt;</text>
 <text x="59.51" y="592.78" font-size="9" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="127.95" lengthAdjust="spacing">1. 최초로 등록하는 때에는 ［</text>
@@ -57,8 +57,8 @@
 <text x="383.68" y="592.78" font-size="9" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="18.33" lengthAdjust="spacing">］재</text>
 <text x="402.01" y="592.78" font-size="9" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="90.45" lengthAdjust="spacing">등록란에 ∨표를 한다.</text>
 <text x="59.51" y="607.18" font-size="9" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="304.38" lengthAdjust="spacing">2. 비고란은 관련 문서의 생산등록번호 및 시행일 등 참고사항을 기록한다.</text>
-<text x="59.51" y="621.58" font-size="9" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="473.36" lengthAdjust="spacing">3. 전자이미지공인을 등록하는 때에는 공인을 전자이미지공인대장의 해당란에 찍고, 그 찍은 인영을 전자적인 이미</text>
-<text x="72.46" y="635.98" font-size="9" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="406.08" lengthAdjust="spacing">지 형태로 입력한 후 그 파일의 이미지를 출력하여 전자이미지공인의 인영을 해당란에 붙여야 한다.</text>
+<text x="59.51" y="621.58" font-size="9" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="473.36" lengthAdjust="spacingAndGlyphs">3. 전자이미지공인을 등록하는 때에는 공인을 전자이미지공인대장의 해당란에 찍고, 그 찍은 인영을 전자적인 이미지 </text>
+<text x="59.51" y="635.98" font-size="9" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="392.85" lengthAdjust="spacing">형태로 입력한 후 그 파일의 이미지를 출력하여 전자이미지공인의 인영을 해당란에 붙여야 한다.</text>
 <text x="410.25" y="660.98" font-size="8" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="60.36" lengthAdjust="spacing">210mm×297mm</text>
 <text x="470.61" y="660.98" font-size="8" font-family="'HCR Batang','함초롬바탕','한컴바탕','HCR Batang','Batang','Noto Serif KR',serif" textLength="62.26" lengthAdjust="spacing">(백상지 150g/㎡)</text>
 <line x1="58.1" y1="198.13" x2="452.86" y2="198.13" stroke="#7F7F7F" stroke-width="1.42"/>

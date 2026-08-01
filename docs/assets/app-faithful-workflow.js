@@ -115,6 +115,16 @@
       .trim();
   }
 
+  // 내려받은 파일 이름을 '예시3 도보게재 의뢰 기안문.hwpx'처럼 만듭니다.
+  // 윈도우·맥에서 파일 이름에 쓸 수 없는 글자는 가운뎃점으로 바꿉니다.
+  function downloadFileName(form) {
+    const name = `${form.id} ${form.title}`
+      .replace(/[\\/:*?"<>|]/g, "·")
+      .replace(/\s+/g, " ")
+      .trim();
+    return `${name}.hwpx`;
+  }
+
   function isStandaloneLawLine(line) {
     const normalized = String(line || "").replace(/\s+/g, " ").trim();
     return /^(?:[•‣▶]\s*)?[「『].+[」』](?:\s*제[\d조항호~,.·\s]+.*)?$/.test(normalized);
@@ -709,6 +719,10 @@
       status.textContent = `${asset.pageCount}쪽 · HWPX 원본 배치`;
       download.hidden = false;
       download.href = asset.download;
+      // 저장되는 파일 이름을 서식 이름으로 정해 줍니다.
+      // 정해 주지 않으면 주소 끝의 'example-3.hwpx'가 그대로 이름이 되어
+      // 여러 개를 받아 두면 무엇이 무엇인지 알 수 없습니다.
+      download.setAttribute("download", downloadFileName(form));
       download.textContent = `${form.id} HWPX 내려받기`;
       byId("form-download-note").textContent =
         "현재 보고 있는 항목만 개별 파일로 내려받습니다.";

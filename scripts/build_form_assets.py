@@ -3,10 +3,12 @@ from __future__ import annotations
 import argparse
 import copy
 import io
+import hashlib
 import json
 import os
 import re
 import shlex
+import sys
 import shutil
 import subprocess
 import tempfile
@@ -17,6 +19,7 @@ from xml.etree import ElementTree as ET
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 DOCS = ROOT / "docs"
 MARKER_RE = re.compile(r"\[(서식|예시|참고)\s*(\d+(?:-\d+)?)\]")
 SECTION_RE = re.compile(r"^Contents/section(\d+)\.xml$")
@@ -416,6 +419,7 @@ def build_preview_svgs(
     preview_root = DOCS / "previews" / "forms" / f"chapter{chapter_id}"
     preview_root.mkdir(parents=True, exist_ok=True)
     assets: dict[str, dict[str, object]] = {}
+    cache = load_preview_cache()
 
     view_box = root.attrib.get("viewBox", "0 0 595.28 841.88").split()
     width = float(view_box[2])
@@ -526,6 +530,40 @@ def kordoc_render(source_hwpx: Path, target_svg: Path) -> None:
         )
 
 
+def overlaps(preview_svg: Path) -> bool:
+    """미리보기에서 글자가 겹쳐 그려졌는지 봅니다.
+
+    판단 기준은 검증 스크립트와 똑같아야 하므로 그 함수를 그대로 가져다 씁니다.
+    여기서 따로 만들면 둘이 어긋나 검증만 통과하는 미리보기가 생깁니다.
+    """
+    import validate_form_previews as checker
+
+    before = len(checker.problems)
+    checker.check_overlap(preview_svg)
+    found = len(checker.problems) > before
+    del checker.problems[before:]
+    return found
+
+
+PREVIEW_CACHE = ROOT / "tmp" / "form-preview-cache.json"
+
+
+def load_preview_cache() -> dict[str, str]:
+    if PREVIEW_CACHE.exists():
+        try:
+            return json.loads(PREVIEW_CACHE.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            return {}
+    return {}
+
+
+def save_preview_cache(cache: dict[str, str]) -> None:
+    PREVIEW_CACHE.parent.mkdir(parents=True, exist_ok=True)
+    PREVIEW_CACHE.write_text(
+        json.dumps(cache, ensure_ascii=False, indent=2, sort_keys=True), encoding="utf-8"
+    )
+
+
 def render_preview_svgs(
     chapter_id: str,
     markers: list[str],
@@ -539,6 +577,7 @@ def render_preview_svgs(
     preview_root = DOCS / "previews" / "forms" / f"chapter{chapter_id}"
     preview_root.mkdir(parents=True, exist_ok=True)
     assets: dict[str, dict[str, object]] = {}
+    cache = load_preview_cache()
 
     with tempfile.TemporaryDirectory() as work_dir:
         work = Path(work_dir)
@@ -548,11 +587,32 @@ def render_preview_svgs(
             if not hwpx.exists():
                 raise FileNotFoundError(hwpx)
 
-            reflow_source = work / f"{slug}.hwpx"
-            strip_layout_cache(hwpx, reflow_source)
-
+            # 렌더는 한 건에 몇 초씩 걸립니다. 서식 내용이 그대로면 다시 만들지 않습니다.
+            # 파일 시각은 쓸 수 없습니다. 이 스크립트가 실행할 때마다 통합 문서에서
+            # 서식을 새로 떼어 내므로 시각이 늘 새것이 되기 때문입니다. 내용을 봅니다.
+            # 강제로 다시 만들려면 FORM_PREVIEW_FORCE=1 을 주세요.
             preview_file = preview_root / f"{slug}.svg"
-            kordoc_render(reflow_source, preview_file)
+            digest = hashlib.sha256(hwpx.read_bytes()).hexdigest()
+            fresh = (
+                preview_file.exists()
+                and cache.get(str(preview_file.relative_to(DOCS))) == digest
+                and not os.environ.get("FORM_PREVIEW_FORCE")
+            )
+            if not fresh:
+                # 한글이 저장해 둔 조판을 그대로 씁니다. 쪽나눔 자리가 원본과 같습니다.
+                kordoc_render(hwpx, preview_file)
+
+                # 다만 통합 문서에서 떼어 낸 탓에 조판이 맞지 않는 서식이 간혹 있어
+                # 글자가 겹쳐 그려집니다. 그때만 조판 캐시를 지우고 다시 그립니다.
+                # 다시 조판하면 겹침은 없어지지만 쪽나눔 자리가 원본과 달라지므로,
+                # 겹치는 것에만 씁니다.
+                if overlaps(preview_file):
+                    reflow_source = work / f"{slug}.hwpx"
+                    strip_layout_cache(hwpx, reflow_source)
+                    kordoc_render(reflow_source, preview_file)
+
+                cache[str(preview_file.relative_to(DOCS))] = digest
+                save_preview_cache(cache)
 
             svg_text = preview_file.read_text(encoding="utf-8")
             if "<script" in svg_text.lower() or re.search(
@@ -596,6 +656,22 @@ def build_chapter(source: ChapterSource) -> dict[str, dict[str, object]]:
     markers = find_section_markers(section_xmls)
     ranges = section_ranges(markers)
     download_root = DOCS / "downloads" / "forms" / f"chapter{source.chapter_id}"
+
+    # 통합 문서가 그대로면 떼어 낸 서식도 그대로입니다. 다시 만들지 않습니다.
+    # 매번 다시 만들면 내용이 같은데도 파일이 새로 쓰여, 미리보기까지 다시 그리게 됩니다.
+    cache = load_preview_cache()
+    combined_digest = hashlib.sha256(source.hwpx.read_bytes()).hexdigest()
+    cache_key = f"combined:{source.chapter_id}"
+    expected = [download_root / f"{marker_slug(marker)}.hwpx" for marker, _, _, _ in ranges]
+    reuse = (
+        cache.get(cache_key) == combined_digest
+        and all(path.exists() for path in expected)
+        and not os.environ.get("FORM_PREVIEW_FORCE")
+    )
+    if reuse:
+        marker_ids = [marker for marker, _, _, _ in ranges]
+        return render_preview_svgs(source.chapter_id, marker_ids, download_root)
+
     if download_root.exists():
         resolved_root = download_root.resolve()
         expected_parent = (DOCS / "downloads" / "forms").resolve()
@@ -616,6 +692,10 @@ def build_chapter(source: ChapterSource) -> dict[str, dict[str, object]]:
             section_slice,
             rewritten_hpf,
         )
+
+    cache = load_preview_cache()
+    cache[cache_key] = combined_digest
+    save_preview_cache(cache)
 
     marker_ids = [marker for marker, _, _, _ in ranges]
     return render_preview_svgs(source.chapter_id, marker_ids, download_root)

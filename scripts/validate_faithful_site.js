@@ -140,6 +140,21 @@ requireCondition(
   "서식이 없는 경우의 원문 기준 안내 문구가 없습니다."
 );
 
+// 내려받은 파일 이름이 'example-3.hwpx'처럼 나오면 무엇인지 알 수 없습니다.
+requireCondition(
+  appSource.includes("function downloadFileName(") &&
+    appSource.includes('download.setAttribute("download", downloadFileName(form))'),
+  "서식을 내려받을 때 파일 이름을 서식 이름으로 정해 주지 않습니다."
+);
+const headerSource = fs.readFileSync(
+  path.join(docs, "assets", "header-v3.js"),
+  "utf8"
+);
+requireCondition(
+  headerSource.includes("서식·예시 모음.hwpx") && headerSource.includes("자주 묻는 질문.hwp"),
+  "모음 자료를 내려받을 때 파일 이름을 알아볼 수 있게 정해 주지 않습니다."
+);
+
 console.log(
   JSON.stringify(
     {
