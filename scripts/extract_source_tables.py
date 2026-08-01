@@ -208,7 +208,12 @@ def drawn_boxes(page) -> list[dict]:
 
 
 def reading_order(page) -> list[str]:
-    """지면에 보이는 차례대로 줄을 돌려줍니다.
+    """지면에 보이는 차례대로 줄 글자만 돌려줍니다."""
+    return [line["text"] for line in reading_order_lines(page)]
+
+
+def reading_order_lines(page) -> list[dict]:
+    """지면에 보이는 차례대로 줄을 돌려줍니다. 줄마다 높이도 함께 알려 줍니다.
 
     나란히 놓인 상자는 왼쪽 상자를 다 읽고 오른쪽 상자로 넘어갑니다.
     상자가 하나뿐인 자리는 예전과 똑같이 위에서 아래로 읽습니다.
@@ -251,7 +256,7 @@ def reading_order(page) -> list[str]:
         segments.append(
             {
                 "top": min(boxes[item]["top"] for item in row),
-                "lines": [line for item in row for line in lines_from_words(inside[item])],
+                "lines": [line for item in row for line in _lines_with_span(inside[item])],
             }
         )
 
@@ -259,12 +264,23 @@ def reading_order(page) -> list[str]:
         segments.append(
             {
                 "top": min(word["top"] for word in line_words),
-                "lines": lines_from_words(line_words),
+                "lines": _lines_with_span(line_words),
             }
         )
 
     segments.sort(key=lambda item: item["top"])
     return [line for segment in segments for line in segment["lines"]]
+
+
+def _lines_with_span(words) -> list[dict]:
+    return [
+        {
+            "text": " ".join(word["text"] for word in sorted(line, key=lambda item: item["x0"])),
+            "top": min(word["top"] for word in line),
+            "bottom": max(word["bottom"] for word in line),
+        }
+        for line in _group_lines(words)
+    ]
 
 
 def _group_lines(words) -> list[list]:
@@ -301,6 +317,7 @@ def _cell_text(page, x0, x1, top, bottom) -> str:
 def tables_of(source) -> list[dict]:
     """한 쪽에서 찾은 표를 위에서 아래 순서로 돌려줍니다."""
     page = clean_page(source)
+    page_lines = reading_order_lines(page)
     found = []
     for table in _tables_of_page(page):
         columns = table["columns"]
@@ -313,11 +330,25 @@ def tables_of(source) -> list[dict]:
             rows.append(cells)
         if len(rows) < 3 or not any(any(cell for cell in row) for row in rows):
             continue
+
+        # 표가 차지한 자리에 있던 '줄'도 함께 적어 둡니다.
+        # 화면은 표를 그린 뒤 본문에서 이 줄들을 덜어 냅니다. 글자를 세어
+        # 짐작하면 '공인직인'처럼 세로로 걸친 이름표가 있는 표에서 어긋납니다.
+        top, bottom = table["rows"][0][0], table["rows"][-1][1]
+        # 본문 줄과 똑같은 방법으로 묶은 줄에서 표 높이에 든 것만 고릅니다.
+        # 따로 묶으면 머리글이 여러 줄인 표에서 본문과 다르게 나뉩니다.
+        region = [
+            line["text"]
+            for line in page_lines
+            if top - 1 <= line["top"] < bottom - 1 and line["text"].strip()
+        ]
+
         found.append(
             {
-                "top": table["rows"][0][0],
+                "top": top,
                 "headers": rows[0],
                 "rows": rows[1:],
+                "sourceLines": [tidy(line) for line in region if tidy(line)],
             }
         )
     found.sort(key=lambda item: item["top"])

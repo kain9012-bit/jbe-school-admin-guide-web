@@ -194,31 +194,15 @@
 
     // 이미 표로 그린 줄은 본문에서 덜어 냅니다. 그러지 않으면 같은 내용이 두 번 나옵니다.
     //
-    // 줄끼리 견주면 안 됩니다. 원문 한 줄은 '목 적 • 국가에 대한 충성심…'처럼
-    // 이름표와 내용이 붙어 있는데 표에서는 두 칸으로 나뉘고, 이름표가 칸 가운데
-    // 항목 옆에 붙어 있기도 해서 순서도 어긋납니다.
-    // 그래서 표에 든 글자를 세어 두고 줄마다 그만큼 덜어 냅니다.
-    // 표에 없는 글자가 있는 줄만 표 밖의 설명으로 보고 아래에 남깁니다.
-    const remaining = new Map();
-    for (const cells of table.rows) {
-      for (const character of cells.join("").replace(/\s/g, "")) {
-        remaining.set(character, (remaining.get(character) || 0) + 1);
-      }
-    }
+    // 어느 줄이 표였는지는 원문에서 읽을 때 좌표로 이미 적어 두었습니다(sourceLines).
+    // 글자를 세어 짐작하면 '공인직인'처럼 여러 줄에 걸친 이름표가 있는 표에서
+    // 덜 덜어 내어 표 아래에 같은 줄이 다시 나옵니다.
+    const drawn = [...(table.sourceLines || [])];
     const after = [];
     for (const line of lines.slice(headerIndex + 1)) {
-      const characters = [...normalizeLine(line).replace(/\s/g, "")];
-      if (!characters.length) continue;
-      const need = new Map();
-      for (const character of characters) {
-        need.set(character, (need.get(character) || 0) + 1);
-      }
-      const covered = [...need].every(([character, count]) => (remaining.get(character) || 0) >= count);
-      if (!covered) {
-        after.push(line);
-        continue;
-      }
-      for (const [character, count] of need) remaining.set(character, remaining.get(character) - count);
+      const at = drawn.indexOf(normalizeLine(line));
+      if (at >= 0) drawn.splice(at, 1);
+      else after.push(line);
     }
 
     const caption =
