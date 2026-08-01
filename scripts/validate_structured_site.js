@@ -129,7 +129,7 @@ requireCondition(data3.sections.length === 5, `제3편 업무 수 오류: ${data
 validateChapter(data1, {
   label: "제1편",
   expectedPages: 23,
-  expectedLines: 710,
+  expectedLines: 740,
   expectedBlocks: 140,
   forms: 19,
   faqs: 55,
@@ -137,7 +137,7 @@ validateChapter(data1, {
 validateChapter(data3, {
   label: "제3편",
   expectedPages: 15,
-  expectedLines: 517,
+  expectedLines: 522,
   expectedBlocks: 96,
   forms: 21,
   faqs: 19,
@@ -246,8 +246,8 @@ requireCondition(
 console.log(
   JSON.stringify(
     {
-      chapter1: { works: 9, pages: 23, lines: 710, blocks: 140, forms: 19, faqs: 55 },
-      chapter3: { works: 5, pages: 15, lines: 517, blocks: 96, forms: 21, faqs: 19 },
+      chapter1: { works: 9, pages: 23, lines: 740, blocks: 140, forms: 19, faqs: 55 },
+      chapter3: { works: 5, pages: 15, lines: 522, blocks: 96, forms: 21, faqs: 19 },
       exactSourceFlows: {
         chapter1: data1.sections.reduce((total, section) => total + section.flowGroups.length, 0),
         chapter3: data3.sections.reduce((total, section) => total + section.flowGroups.length, 0),

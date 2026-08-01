@@ -166,6 +166,121 @@ def lines_from_words(words) -> list[str]:
     ]
 
 
+def drawn_boxes(page) -> list[dict]:
+    """지면에 그려진 상자를 찾습니다.
+
+    27쪽 '가~바' 절차 상자처럼 상자 여섯 개가 두 줄로 나란히 놓인 지면이 있습니다.
+    이런 곳을 그냥 줄로 읽으면 나란한 상자의 글이 한 줄에 섞입니다.
+        (유·초·중 : 행정지원과/  [정보열람-결격·범죄통합조회*  바. 결격·범
+    상자 테두리를 읽어 두면 어느 글이 어느 상자 안에 있는지 알 수 있습니다.
+    """
+    boxes = []
+    for shape in [*page.curves, *page.rects]:
+        if shape["width"] < 60 or shape["height"] < 30:
+            continue
+        if shape["x1"] > CONTENT_RIGHT_EDGE + 10:
+            continue
+        mark = (round(shape["x0"]), round(shape["x1"]), round(shape["top"]), round(shape["bottom"]))
+        if mark in {box["mark"] for box in boxes}:
+            continue
+        boxes.append(
+            {
+                "mark": mark,
+                "x0": shape["x0"],
+                "x1": shape["x1"],
+                "top": shape["top"],
+                "bottom": shape["bottom"],
+            }
+        )
+    # 상자 안에 상자가 또 있으면 바깥 것은 칸막이일 뿐이므로 뺍니다.
+    return [
+        box
+        for box in boxes
+        if not any(
+            other is not box
+            and other["x0"] >= box["x0"] - 1
+            and other["x1"] <= box["x1"] + 1
+            and other["top"] >= box["top"] - 1
+            and other["bottom"] <= box["bottom"] + 1
+            for other in boxes
+        )
+    ]
+
+
+def reading_order(page) -> list[str]:
+    """지면에 보이는 차례대로 줄을 돌려줍니다.
+
+    나란히 놓인 상자는 왼쪽 상자를 다 읽고 오른쪽 상자로 넘어갑니다.
+    상자가 하나뿐인 자리는 예전과 똑같이 위에서 아래로 읽습니다.
+    """
+    words = page.extract_words(x_tolerance=1.6, y_tolerance=3, keep_blank_chars=False)
+    boxes = drawn_boxes(page)
+
+    def owner(word):
+        middle_x = (word["x0"] + word["x1"]) / 2
+        middle_y = (word["top"] + word["bottom"]) / 2
+        for index, box in enumerate(boxes):
+            if box["x0"] <= middle_x <= box["x1"] and box["top"] <= middle_y <= box["bottom"]:
+                return index
+        return None
+
+    inside: dict[int, list] = {}
+    outside = []
+    for word in words:
+        index = owner(word)
+        if index is None:
+            outside.append(word)
+        else:
+            inside.setdefault(index, []).append(word)
+
+    # 상자를 가로로 나란한 것끼리 한 묶음으로 만듭니다.
+    segments = []
+    used = set()
+    for index, box in enumerate(boxes):
+        if index in used or index not in inside:
+            continue
+        row = [
+            other
+            for other in range(len(boxes))
+            if other in inside
+            and boxes[other]["top"] < box["bottom"]
+            and boxes[other]["bottom"] > box["top"]
+        ]
+        used.update(row)
+        row.sort(key=lambda item: boxes[item]["x0"])
+        segments.append(
+            {
+                "top": min(boxes[item]["top"] for item in row),
+                "lines": [line for item in row for line in lines_from_words(inside[item])],
+            }
+        )
+
+    for line_words in _group_lines(outside):
+        segments.append(
+            {
+                "top": min(word["top"] for word in line_words),
+                "lines": lines_from_words(line_words),
+            }
+        )
+
+    segments.sort(key=lambda item: item["top"])
+    return [line for segment in segments for line in segment["lines"]]
+
+
+def _group_lines(words) -> list[list]:
+    lines: list[list] = []
+    for word in sorted(words, key=lambda item: (item["top"] + item["bottom"]) / 2):
+        middle = (word["top"] + word["bottom"]) / 2
+        if lines:
+            previous = lines[-1]
+            reference = sum((item["top"] + item["bottom"]) / 2 for item in previous) / len(previous)
+            if abs(middle - reference) <= 4:
+                previous.append(word)
+                continue
+        lines.append([word])
+    return lines
+
+
 def tidy(text: str) -> str:
     # 제3편은 낱말 사이를 보통 띄어쓰기가 아닌 특수 글자로 벌려 놓았습니다.
     text = re.sub(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f\xa0]", " ", text)

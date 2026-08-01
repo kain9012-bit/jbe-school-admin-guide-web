@@ -33,7 +33,7 @@ import pdfplumber
 
 import sys
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from extract_source_tables import clean_page, lines_from_words, tables_of, tidy
+from extract_source_tables import clean_page, reading_order, tables_of, tidy
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "docs" / "assets"
@@ -65,9 +65,7 @@ def save(chapter: int, data: dict) -> None:
 
 
 def page_text(source) -> str:
-    body = clean_page(source)
-    words = body.extract_words(x_tolerance=1.6, y_tolerance=3, keep_blank_chars=False)
-    lines = [tidy(line) for line in lines_from_words(words)]
+    lines = [tidy(line) for line in reading_order(clean_page(source))]
     return "\n".join(line for line in lines if line)
 
 
