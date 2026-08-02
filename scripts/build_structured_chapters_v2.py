@@ -10,8 +10,10 @@ ASSETS = ROOT / "docs" / "assets"
 FLOW_TITLE = "업무 흐름도"
 LAW_TITLE = "관련법규 및 참고자료"
 SOURCE_FLOW = re.compile(r"^\s*[^▶\n]+\s*▶")
-# 법령 상자 안에 들어가는 줄입니다. 「」로 묶인 법령 이름으로 시작합니다.
-LAW_LINE = re.compile(r"^(?:[•‣▶]\s*)?[「『].+[」』]")
+# 법령 상자 안에 들어가는 줄입니다.
+# 대부분 「」로 묶인 법령 이름이지만 '• 정부 표창 규정'처럼 없는 것도 있습니다.
+# 상자 안은 모두 • 항목이므로 그것으로 봅니다.
+LAW_LINE = re.compile(r"^•\s*\S")
 ORNAMENTS = {
     "제",
     "1편",

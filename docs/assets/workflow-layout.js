@@ -21,12 +21,12 @@ window.GUIDE_WORKFLOW_LAYOUT = {
   ],
   "handover": [
     { title: "학교장 및 행정실장", blocks: ["p13-b1","p13-b2","p13-b3","p13-b4","p13-b5","p13-b6","p14-b1"] },
-    { title: "학교운영위원장", blocks: ["p14-b2","p14-b3","p14-b4","p14-b5","p14-b6"] }
+    { title: "학교운영위원장", blocks: ["p14-b2","p14-b3","p14-b4","p14-b5"] }
   ],
   "records": [
-    { title: "등록", blocks: ["p15-b1","p15-b2","p15-b3","p15-b4","p15-b5","p15-b6","p15-b7","p15-b8","p15-b9"] },
+    { title: "등록", blocks: ["p15-b1","p15-b2","p15-b3","p15-b4","p15-b5","p15-b6","p15-b7","p15-b8"] },
     { title: "정리·편철", blocks: ["p16-b1","p16-b2","p16-b3","p17-b1"] },
-    { title: "이관·보존", blocks: ["p18-b1","p18-b2","p18-b3","p18-b4","p18-b5","p19-b1"] },
+    { title: "이관·보존", blocks: ["p18-b1","p18-b2","p18-b3","p18-b4","p19-b1"] },
     { title: "폐기", blocks: ["p19-b2","p19-b3","p19-b4"] },
     { title: "비전자기록물 이관 및 폐기 절차", blocks: ["p20-b1","p20-b2","p20-b3"] }
   ],
@@ -50,12 +50,12 @@ window.GUIDE_WORKFLOW_LAYOUT = {
     { title: "근무성적평정", blocks: ["p10-b1","p10-b2","p10-b3","p10-b4","p10-b5","p10-b6","p10-b7","p10-b8","p11-b1","p11-b2","p11-b3","p11-b4"] }
   ],
   "training": [
-    { title: "교육훈련 개요", blocks: ["p12-b1","p12-b2","p12-b3","p12-b4","p12-b5","p12-b6","p12-b7","p12-b8","p12-b9","p12-b10"] },
-    { title: "교육훈련 실적 관리", blocks: ["p13-b1","p13-b2","p13-b3","p13-b4","p13-b5","p13-b6","p13-b7"] }
+    { title: "교육훈련 개요", blocks: ["p12-b1","p12-b2","p12-b3","p12-b4","p12-b5","p12-b6","p12-b7","p12-b8","p12-b9"] },
+    { title: "교육훈련 실적 관리", blocks: ["p13-b1","p13-b2","p13-b3","p13-b4","p13-b5","p13-b6"] }
   ],
   "awards": [
-    { title: "포상대상자 선정", blocks: ["p14-b1","p14-b2","p14-b3","p14-b4","p14-b5","p14-b6","p14-b7","p14-b8","p14-b9","p14-b10"] },
-    { title: "공적조서 작성 및 제출", blocks: ["p14-b11","p14-b12","p14-b13"] }
+    { title: "포상대상자 선정", blocks: ["p14-b1","p14-b2","p14-b3","p14-b4","p14-b5","p14-b6","p14-b7","p14-b8","p14-b9"] },
+    { title: "공적조서 작성 및 제출", blocks: ["p14-b10","p14-b11","p14-b12"] }
   ],
   "status-rights": [
     { title: "휴·복직", blocks: ["p15-b1","p15-b2","p15-b3","p15-b4","p15-b5","p15-b6","p15-b7","p16-b1","p16-b2","p16-b3","p16-b4"] },

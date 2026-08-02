@@ -130,7 +130,7 @@ validateChapter(data1, {
   label: "제1편",
   expectedPages: 23,
   expectedLines: 740,
-  expectedBlocks: 140,
+  expectedBlocks: 137,
   forms: 19,
   faqs: 55,
 });
@@ -138,7 +138,7 @@ validateChapter(data3, {
   label: "제3편",
   expectedPages: 15,
   expectedLines: 522,
-  expectedBlocks: 96,
+  expectedBlocks: 93,
   forms: 21,
   faqs: 19,
 });
@@ -246,8 +246,8 @@ requireCondition(
 console.log(
   JSON.stringify(
     {
-      chapter1: { works: 9, pages: 23, lines: 740, blocks: 140, forms: 19, faqs: 55 },
-      chapter3: { works: 5, pages: 15, lines: 522, blocks: 96, forms: 21, faqs: 19 },
+      chapter1: { works: 9, pages: 23, lines: 740, blocks: 137, forms: 19, faqs: 55 },
+      chapter3: { works: 5, pages: 15, lines: 522, blocks: 93, forms: 21, faqs: 19 },
       exactSourceFlows: {
         chapter1: data1.sections.reduce((total, section) => total + section.flowGroups.length, 0),
         chapter3: data3.sections.reduce((total, section) => total + section.flowGroups.length, 0),

@@ -135,9 +135,14 @@
       .split(/\r?\n/)
       .map((line) => line.trim())
       .filter(Boolean);
-    const lawLines = lines.filter(isStandaloneLawLine);
-    const contentLines = lines.filter((line) => !isStandaloneLawLine(line));
     const isLawHeading = block.title === "관련법규 및 참고자료";
+
+    // 매뉴얼의 '관련법규 및 참고자료' 상자는 통째로 근거입니다.
+    // 상자 안에는 「」로 묶이지 않은 참고자료도 들어 있습니다.
+    //   • 정부 표창 규정 / • 기록물 관리지침 / • 학교발전기금의 조성·운영 …
+    // 「」가 있는 줄만 골라 쓰면 이런 줄이 화면에서 사라집니다.
+    const lawLines = isLawHeading ? lines : lines.filter(isStandaloneLawLine);
+    const contentLines = isLawHeading ? [] : lines.filter((line) => !isStandaloneLawLine(line));
     const isLawOnly = lines.length > 0 && lawLines.length === lines.length;
 
     return {
