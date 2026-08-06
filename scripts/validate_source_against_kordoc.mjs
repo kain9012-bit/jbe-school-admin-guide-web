@@ -157,8 +157,10 @@ for (const [key, relative] of Object.entries(SOURCES)) {
       // 방식이 달라 견줄 수도 없습니다. 표 밖의 글만 차례를 따집니다.
       const inTable = new Set();
       for (const block of work.contentBlocks) {
-        if (block.pdfPage !== page.pdfPage || !block.table) continue;
-        for (const line of String(block.body).split(/\r?\n/)) inTable.add(line.trim());
+        if (block.pdfPage !== page.pdfPage || !block.tables) continue;
+        for (const table of block.tables) {
+          for (const line of table.sourceLines || []) inTable.add(line.trim());
+        }
       }
 
       let cursor = 0;

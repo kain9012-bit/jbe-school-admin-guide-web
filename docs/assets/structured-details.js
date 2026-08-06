@@ -145,6 +145,92 @@
     return Array.from({ length: columnCount }, () => 100 / columnCount);
   }
 
+  // 병합된 칸은 한글이 '이 칸이 몇 칸·몇 줄을 차지한다'고 적어 둔 그대로 그립니다.
+  // 병합에 가려 사라진 자리는 빈 칸 표시가 아니라 아예 그리지 않습니다.
+  function spanAttributes(cell) {
+    const colSpan = cell && cell.colSpan > 1 ? ` colspan="${cell.colSpan}"` : "";
+    const rowSpan = cell && cell.rowSpan > 1 ? ` rowspan="${cell.rowSpan}"` : "";
+    return `${colSpan}${rowSpan}`;
+  }
+
+  // 한글은 병합에 가려진 자리도 빈 칸으로 남겨 둡니다.
+  // 그대로 그리면 칸이 밀리므로, 가려진 자리는 빼고 그립니다.
+  function visibleCells(rows) {
+    const covered = rows.map(() => []);
+    const result = [];
+    for (const [rowIndex, row] of rows.entries()) {
+      const line = [];
+      let column = 0;
+      for (const cell of row) {
+        // 가려진 자리에도 빈 칸이 하나씩 들어 있습니다. 그 칸은 그리지 않고 넘어갑니다.
+        if (covered[rowIndex][column]) {
+          column += 1;
+          continue;
+        }
+        const colSpan = cell.colSpan || 1;
+        const rowSpan = cell.rowSpan || 1;
+        for (let down = 0; down < rowSpan; down += 1) {
+          for (let across = 0; across < colSpan; across += 1) {
+            if (down === 0 && across === 0) continue;
+            const target = covered[rowIndex + down];
+            if (target) target[column + across] = true;
+          }
+        }
+        line.push({ ...cell, column });
+        column += colSpan;
+      }
+      result.push(line);
+    }
+    return result;
+  }
+
+  function spannedTableMarkup(caption, headers, rows) {
+    const text = (cell) => normalizeLine(cell && cell.text);
+    const columnCount = headers.reduce((total, cell) => total + (cell.colSpan || 1), 0);
+    const widths = Array.from({ length: columnCount }, () => 100 / columnCount);
+    const body = visibleCells(rows);
+    return `
+      <div class="source-table-scroll">
+        <table class="source-criteria-table" data-column-layout="${widths
+          .map((width) => width.toFixed(1))
+          .join("-")}" aria-label="${escapeHtml(caption)}">
+          <thead>
+            <tr>${headers
+              .map((cell) => `<th scope="col"${spanAttributes(cell)}>${escapeHtml(text(cell))}</th>`)
+              .join("")}</tr>
+          </thead>
+          <tbody>
+            ${body
+              .map(
+                (cells) => `
+                  <tr>
+                    ${cells
+                      .map((cell) => {
+                        // 원문에서 비어 있는 칸은 비워 둡니다.
+                        // 줄표를 찍으면 없는 내용을 있는 것처럼 보이게 합니다.
+                        const lines = bodyLines(unwrap(cell.text));
+                        const content = lines.length ? cellMarkup(lines) : "";
+                        // 첫 칸만 행 머리입니다. 위 칸이 여러 줄을 차지해 첫 칸이
+                        // 가려진 줄에서는 그다음 칸이 행 머리가 아닙니다.
+                        if (cell.column === 0) {
+                          return `<th scope="row"${spanAttributes(cell)}>${content}</th>`;
+                        }
+                        return `<td${spanAttributes(cell)}>${content}</td>`;
+                      })
+                      .join("")}
+                  </tr>
+                `
+              )
+              .join("")}
+          </tbody>
+        </table>
+      </div>
+    `;
+  }
+
+  // 표 안의 줄바꿈은 항목 구분입니다. 한 칸 안에서 목록으로 보여 줍니다.
+  const unwrap = (value) => String(value ?? "");
+
   function tableMarkup(caption, headers, rows) {
     const widths = contentAwareColumnWidths(headers, rows);
     return `
@@ -180,29 +266,21 @@
     `;
   }
 
-  // 매뉴얼 PDF의 칸 경계선을 읽어 만든 표입니다.
-  // 글자 순서만으로는 어느 줄이 어느 칸인지 알 수 없어 원문 그대로 그립니다.
+  // 매뉴얼 한글파일(HWPX)에 들어 있는 표를 그대로 그립니다.
+  // 병합된 칸까지 원문에 적힌 그대로여서 짐작할 것이 없습니다.
   function renderSourceTable(block) {
-    const table = block && block.table;
-    if (!table || !Array.isArray(table.rows) || table.rows.length < 1) return null;
+    const tables = Array.isArray(block && block.tables) ? block.tables : [];
+    if (!tables.length) return null;
 
-    const headers = (table.headers || []).map(normalizeLine);
-    const headerLine = normalizeLine(headers.join(" "));
-    const lines = bodyLines(block.body);
-    const headerIndex = lines.findIndex((line) => normalizeLine(line) === headerLine);
-    if (headerIndex < 0) return null;
-
-    // 이미 표로 그린 줄은 본문에서 덜어 냅니다. 그러지 않으면 같은 내용이 두 번 나옵니다.
-    //
-    // 어느 줄이 표였는지는 원문에서 읽을 때 좌표로 이미 적어 두었습니다(sourceLines).
-    // 글자를 세어 짐작하면 '공인직인'처럼 여러 줄에 걸친 이름표가 있는 표에서
-    // 덜 덜어 내어 표 아래에 같은 줄이 다시 나옵니다.
-    const drawn = [...(table.sourceLines || [])];
-    const after = [];
-    for (const line of lines.slice(headerIndex + 1)) {
-      const at = drawn.indexOf(normalizeLine(line));
-      if (at >= 0) drawn.splice(at, 1);
-      else after.push(line);
+    // 어느 줄이 어느 표에 담겼는지는 표를 붙일 때 적어 두었습니다(sourceLines).
+    // 본문 줄을 차례대로 훑으면서 표에 담긴 줄을 만나면 그 자리에 표를 그립니다.
+    // 그래야 한 소제목 안에 표가 둘 이상일 때도 원문 차례가 지켜집니다.
+    const remaining = tables.map((table) => new Map());
+    for (const [index, table] of tables.entries()) {
+      for (const line of table.sourceLines || []) {
+        const value = normalizeLine(line);
+        remaining[index].set(value, (remaining[index].get(value) || 0) + 1);
+      }
     }
 
     const caption =
@@ -211,26 +289,38 @@
         .replace(/^\d+\s*\.\s*/, "")
         .replace(/^세부내용\s+/, "")
         .split(/\s*:\s*/)[0]
-        .trim() || headerLine;
+        .trim() || "표";
 
-    const rows = table.rows.map((cells) => [
-      normalizeLine(cells[0]) || "—",
-      ...cells.slice(1).map((cell) => bodyLines(cell)),
-    ]);
-
-    const before = lines.slice(0, headerIndex);
-    const intro = before.length
-      ? `<div class="source-structured-intro">${cellMarkup(before)}</div>`
-      : "";
-    const outro = after.length
-      ? `<div class="source-structured-outro">${renderSourceOutline(after.join("\n"))}</div>`
-      : "";
-
-    return {
-      summary: `${caption} 표로 보기`,
-      html: `${intro}${tableMarkup(caption, headers, rows)}${outro}`,
-      type: "table",
+    const pieces = [];
+    let buffer = [];
+    const drawn = new Set();
+    const flush = () => {
+      if (!buffer.length) return;
+      pieces.push(`<div class="source-structured-intro">${cellMarkup(buffer)}</div>`);
+      buffer = [];
     };
+
+    for (const line of bodyLines(block.body)) {
+      const value = normalizeLine(line);
+      const owner = remaining.findIndex((counts) => (counts.get(value) || 0) > 0);
+      if (owner < 0) {
+        buffer.push(line);
+        continue;
+      }
+      remaining[owner].set(value, remaining[owner].get(value) - 1);
+      if (drawn.has(owner)) continue;
+      drawn.add(owner);
+      flush();
+      const table = tables[owner];
+      const headerCells = (table.headers || []).map((cell) =>
+        typeof cell === "string" ? { text: cell, colSpan: 1, rowSpan: 1 } : cell
+      );
+      pieces.push(spannedTableMarkup(caption, headerCells, table.rows));
+    }
+    flush();
+
+    if (!drawn.size) return null;
+    return { summary: `${caption} 표로 보기`, html: pieces.join(""), type: "table" };
   }
 
   function sourceOutlineItems(body) {

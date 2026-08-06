@@ -321,7 +321,6 @@
              href="${routeFor(work.id, workflow.steps[0]?.id)}">
             <div class="work-card-top">
               <span class="work-card-number">업무 ${String(work.number).padStart(2, "0")}</span>
-              <span class="work-card-pages">원문 ${escapeHtml(work.printedPages)}쪽</span>
             </div>
             <h3>${escapeHtml(work.title)}</h3>
             <p>${escapeHtml(workflow.intro)}</p>
@@ -783,9 +782,6 @@
           })
           .join("")
       : "—";
-    byId("step-pages").textContent = step.pages.length
-      ? step.pages.map((page) => `매뉴얼 ${page}쪽`).join(", ")
-      : work.printedPages;
   }
 
   function relatedFaqsFor(work, step, requestedFaqNumber = "") {
@@ -1016,7 +1012,6 @@
     workView.hidden = false;
     renderSideNavigation();
     byId("work-number").textContent = `업무 ${String(work.number).padStart(2, "0")}`;
-    byId("work-pages").textContent = `원문 ${work.printedPages}쪽`;
     byId("work-title").textContent = work.title;
     const introNode = byId("work-intro");
     introNode.textContent = workflows[work.id].intro;
