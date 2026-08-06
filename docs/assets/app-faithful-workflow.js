@@ -44,19 +44,15 @@
   let currentStepTitle = "";
   let lastFocusedElement = null;
 
+  // 업무 흐름도는 화면 위쪽에 그림으로 따로 보여 주므로 본문에서는 뺍니다.
   function isSourceFlowBlock(work, block) {
-    return work.flowGroups.some(
-      (flow) =>
-        flow.sourceText === block.body &&
-        flow.pdfPage === block.pdfPage &&
-        flow.printedPage === block.printedPage
-    );
+    return block.title === "업무 흐름도";
   }
 
   function flowTitles(work) {
     const titles = [];
     for (const flow of work.flowGroups) {
-      for (const part of String(flow.sourceText).split(/\s*▶\s*|\n+/)) {
+      for (const part of String(flow.sourceText).split(/\s*[▶⇒→]\s*|\n+/)) {
         const title = part.trim();
         if (title && !titles.some((item) => normalize(item) === normalize(title))) titles.push(title);
       }
@@ -101,10 +97,6 @@
       if (source.includes(normalize(term))) score += 10;
     }
     return score;
-  }
-
-  function uniquePages(blocks) {
-    return [...new Set(blocks.map((block) => block.printedPage))];
   }
 
   function cleanSourceHeading(title) {
@@ -226,7 +218,6 @@
         lawBlocks,
         tipBlocks,
         summary,
-        pages: uniquePages(stepBlocks),
       };
     });
 
@@ -971,10 +962,7 @@
     renderResources(work, step);
     renderFaqs(work, step, requestedFaqNumber);
 
-    const firstBlock = step.blocks[0];
-    byId("source-page-link").href = firstBlock
-      ? `${data.downloads.manual}#page=${firstBlock.pdfPage}`
-      : data.downloads.manual;
+    byId("source-page-link").href = data.downloads.manual;
 
     const prevButton = byId("prev-step");
     const nextButton = byId("next-step");

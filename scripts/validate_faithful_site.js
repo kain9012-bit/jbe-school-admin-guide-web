@@ -42,11 +42,11 @@ function validateChapter(data, expectedPages, label) {
     `${label}에 임의 단계 필드가 남아 있습니다.`
   );
 
-  // 본문 블록은 모두 원문 쪽 정보를 가지고 있어야 합니다.
+  // 본문 블록은 한글파일에서 만들어 냅니다. 이름과 내용이 있어야 합니다.
   const blocks = data.sections.flatMap((section) => section.contentBlocks);
   requireCondition(
-    blocks.every((block) => Number.isInteger(block.pdfPage) && block.printedPage != null),
-    `${label} 본문 블록에 원문 쪽 정보가 없습니다.`
+    blocks.every((block) => typeof block.id === "string" && typeof block.title === "string"),
+    `${label} 본문 블록에 이름표가 없습니다.`
   );
 
   requireCondition(
@@ -74,7 +74,7 @@ for (const forbidden of ["문서 필요성 판단", "업무의 목적과 수신 
 }
 
 // 통합검색은 두 편의 업무·원문·서식·FAQ를 모두 담습니다.
-requireCondition(searchIndex.length === 358, `통합검색 항목 수 오류: ${searchIndex.length}`);
+requireCondition(searchIndex.length === 313, `통합검색 항목 수 오류: ${searchIndex.length}`);
 requireCondition(
   searchIndex.every((item) => item.chapterId === "01" || item.chapterId === "03"),
   "공개하지 않은 편이 통합검색에 들어 있습니다."

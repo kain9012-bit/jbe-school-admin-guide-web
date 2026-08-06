@@ -21,14 +21,13 @@ const problems = [];
 const SECTION_MARK = /^세부내용\s+(\S.*)$/;
 const squash = (value) => String(value || "").replace(/\s+/g, "");
 
-// 원문 쪽 글자에 있는 소제목 표시를 지면 순서 그대로 모읍니다.
+// 매뉴얼이 붙여 둔 소제목을 원문 차례 그대로 모읍니다.
+// 한글파일에서 '세부내용' 표로 표시된 자리입니다.
 function marksInSource(work) {
   const names = [];
-  for (const page of work.sourcePages) {
-    for (const line of String(page.text).split(/\r?\n/)) {
-      const found = SECTION_MARK.exec(line.trim());
-      if (found) names.push(squash(found[1]));
-    }
+  for (const block of work.contentBlocks) {
+    const found = SECTION_MARK.exec(String(block.title).trim());
+    if (found) names.push(squash(found[1]));
   }
   return names;
 }
@@ -75,7 +74,19 @@ for (const [chapterId, key] of [
     // 번호 소제목이 본문 줄에 묻혀 있으면 목차에서 사라집니다.
     // '7 . 전보'처럼 번호와 마침표 사이가 벌어진 경우에 생기던 문제입니다.
     for (const block of work.contentBlocks) {
-      for (const line of String(block.body || "").split(/\r?\n/)) {
+      // TIP 상자 안에는 '1. 검토자 부재 시의 경우'처럼 번호 목록이 들어갑니다.
+      // 상자 안 목록은 소제목이 아니므로 보지 않습니다.
+      if (block.title === "TIP") continue;
+      // 표 안에 든 줄은 보지 않습니다. 표 칸에는 '1. 이용 온라인 서약 서명'처럼
+      // 번호가 붙은 항목이 얼마든지 들어갑니다. 그것은 소제목이 아닙니다.
+      const inTable = new Set();
+      for (const table of block.tables || []) {
+        for (let offset = 0; offset < (table.lineCount || 0); offset += 1) {
+          inTable.add((table.lineStart || 0) + offset);
+        }
+      }
+      for (const [index, line] of String(block.body || "").split(/\r?\n/).entries()) {
+        if (inTable.has(index)) continue;
         // '1.8cm의 정사각형' 같은 치수는 소제목이 아닙니다.
         if (/^\d+\s*\.\s*(?!\d)\S/.test(line.trim())) {
           problems.push(

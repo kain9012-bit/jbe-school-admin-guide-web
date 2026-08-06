@@ -272,15 +272,13 @@
     const tables = Array.isArray(block && block.tables) ? block.tables : [];
     if (!tables.length) return null;
 
-    // 어느 줄이 어느 표에 담겼는지는 표를 붙일 때 적어 두었습니다(sourceLines).
-    // 본문 줄을 차례대로 훑으면서 표에 담긴 줄을 만나면 그 자리에 표를 그립니다.
-    // 그래야 한 소제목 안에 표가 둘 이상일 때도 원문 차례가 지켜집니다.
-    const remaining = tables.map((table) => new Map());
+    // 어느 줄이 어느 표인지는 본문을 만들 때 자리로 적어 두었습니다.
+    // 줄 글자로 찾으면 같은 글이 든 표가 둘일 때 한쪽으로 몰립니다.
+    const owners = new Map();
     for (const [index, table] of tables.entries()) {
-      for (const line of table.sourceLines || []) {
-        const value = normalizeLine(line);
-        remaining[index].set(value, (remaining[index].get(value) || 0) + 1);
-      }
+      const start = table.lineStart ?? 0;
+      const count = table.lineCount ?? (table.sourceLines || []).length;
+      for (let offset = 0; offset < count; offset += 1) owners.set(start + offset, index);
     }
 
     const caption =
@@ -300,14 +298,12 @@
       buffer = [];
     };
 
-    for (const line of bodyLines(block.body)) {
-      const value = normalizeLine(line);
-      const owner = remaining.findIndex((counts) => (counts.get(value) || 0) > 0);
+    for (const [index, line] of bodyLines(block.body).entries()) {
+      const owner = owners.has(index) ? owners.get(index) : -1;
       if (owner < 0) {
         buffer.push(line);
         continue;
       }
-      remaining[owner].set(value, remaining[owner].get(value) - 1);
       if (drawn.has(owner)) continue;
       drawn.add(owner);
       flush();
