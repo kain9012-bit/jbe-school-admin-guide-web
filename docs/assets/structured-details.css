@@ -130,8 +130,11 @@
 }
 
 .source-criteria-table {
+  /* 열이 많은 표는 폭에 맞춰 우겨넣지 않고 가로로 넘겨 보게 합니다.
+     그러지 않으면 '질병휴직'이 '질병휴 / 직'처럼 글자 사이에서 끊깁니다.
+     열 하나에 최소 이만큼은 주도록 --table-columns로 계산합니다. */
   width: 100%;
-  min-width: 56rem;
+  min-width: max(56rem, calc(var(--table-columns, 4) * 10.5rem));
   border-collapse: collapse;
   table-layout: fixed;
   color: var(--guide-ink);
@@ -141,7 +144,11 @@
 
 .source-criteria-table th,
 .source-criteria-table td {
-  padding: 1.2rem 1.4rem;
+  padding: 1.1rem 1.2rem;
+  /* 낱말 가운데를 끊지 않습니다. 자리가 모자라면 가로 스크롤로 넘깁니다.
+     break-word를 함께 두면 한글이 여전히 낱말 가운데에서 끊깁니다. */
+  word-break: keep-all;
+  overflow-wrap: normal;
   border-top: 1px solid var(--guide-line);
   border-right: 1px solid var(--guide-line);
   vertical-align: top;

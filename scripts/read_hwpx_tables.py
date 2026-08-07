@@ -64,6 +64,9 @@ def read_table(table: ET.Element) -> dict:
             continue
         address = next((node for node in cell if local_name(node.tag) == "cellAddr"), None)
         span = next((node for node in cell if local_name(node.tag) == "cellSpan"), None)
+        # 칸 너비도 함께 읽습니다. 매뉴얼을 만든 사람이 정해 둔 열 너비이므로
+        # 화면에서도 그대로 쓰면 사람이 보기에 가장 자연스럽습니다.
+        size = next((node for node in cell if local_name(node.tag) == "cellSz"), None)
         if address is None:
             continue
         cells.append(
@@ -72,6 +75,7 @@ def read_table(table: ET.Element) -> dict:
                 "row": int(address.get("rowAddr", "0")),
                 "colSpan": int(span.get("colSpan", "1")) if span is not None else 1,
                 "rowSpan": int(span.get("rowSpan", "1")) if span is not None else 1,
+                "width": int(size.get("width", "0")) if size is not None else 0,
                 "text": cell_text(cell),
             }
         )

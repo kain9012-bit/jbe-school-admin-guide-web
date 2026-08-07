@@ -180,17 +180,27 @@
     return result;
   }
 
-  function spannedTableMarkup(caption, headers, rows) {
+  function spannedTableMarkup(caption, headers, rows, sourceWidths) {
     // 머리글과 본문을 <thead>·<tbody>로 나누면, 머리글 칸이 아래로 걸친 병합
     // (구 분: 2줄 차지)이 끊깁니다. 한 덩어리로 그리고 첫 줄만 머리글로 표시합니다.
     const grid = visibleCells([headers, ...rows]);
     const columnCount = headers.reduce((total, cell) => total + (cell.colSpan || 1), 0);
-    const widths = Array.from({ length: columnCount }, () => 100 / columnCount);
+
+    // 열 너비는 매뉴얼을 만든 사람이 정해 둔 값을 그대로 씁니다.
+    // 없을 때만 칸에 든 글 길이를 보고 정합니다. 똑같이 나누면
+    // '기본·전문·기타교육시간' 같은 긴 칸이 세로로 눌립니다.
+    const widths =
+      Array.isArray(sourceWidths) && sourceWidths.length === columnCount
+        ? sourceWidths
+        : measuredWidths(grid, columnCount);
     return `
       <div class="source-table-scroll">
-        <table class="source-criteria-table" data-column-layout="${widths
-          .map((width) => width.toFixed(1))
+        <table class="source-criteria-table" style="--table-columns: ${columnCount}" data-column-layout="${widths
+          .map((width) => Number(width).toFixed(1))
           .join("-")}" aria-label="${escapeHtml(caption)}">
+          <colgroup>
+            ${widths.map((width) => `<col style="width: ${Number(width).toFixed(2)}%" />`).join("")}
+          </colgroup>
           <tbody>
             ${grid
               .map(
@@ -224,11 +234,31 @@
   // 표 안의 줄바꿈은 항목 구분입니다. 한 칸 안에서 목록으로 보여 줍니다.
   const unwrap = (value) => String(value ?? "");
 
+  // 원문 너비가 없는 표는 칸에 든 글의 길이로 너비를 정합니다.
+  // 여러 칸에 걸친 칸은 자기 몫만큼만 나눠 가집니다.
+  function measuredWidths(grid, columnCount) {
+    const longest = Array.from({ length: columnCount }, () => 1);
+    for (const row of grid) {
+      for (const cell of row) {
+        const span = cell.colSpan || 1;
+        const each = visualLength(normalizeLine(cell.text)) / span;
+        for (let offset = 0; offset < span; offset += 1) {
+          const column = cell.column + offset;
+          if (column < columnCount) longest[column] = Math.max(longest[column], each);
+        }
+      }
+    }
+    // 너무 좁거나 너무 넓어지지 않도록 눌러 줍니다.
+    const eased = longest.map((value) => Math.sqrt(Math.min(value, 40)) + 1.2);
+    const total = eased.reduce((sum, value) => sum + value, 0);
+    return eased.map((value) => Number(((value / total) * 100).toFixed(2)));
+  }
+
   function tableMarkup(caption, headers, rows) {
     const widths = contentAwareColumnWidths(headers, rows);
     return `
       <div class="source-table-scroll">
-        <table class="source-criteria-table" data-column-layout="${widths
+        <table class="source-criteria-table" style="--table-columns: ${columnCount}" data-column-layout="${widths
           .map((width) => width.toFixed(1))
           .join("-")}" aria-label="${escapeHtml(caption)}">
           <colgroup>
@@ -304,7 +334,7 @@
       const headerCells = (table.headers || []).map((cell) =>
         typeof cell === "string" ? { text: cell, colSpan: 1, rowSpan: 1 } : cell
       );
-      pieces.push(spannedTableMarkup(caption, headerCells, table.rows));
+      pieces.push(spannedTableMarkup(caption, headerCells, table.rows, table.widths));
     }
     flush();
 
