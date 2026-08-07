@@ -134,9 +134,11 @@ requireCondition(
   app.includes("squash(raw) === squash(currentStepTitle)"),
   "항목 안에서 바로 위 소제목을 다시 적고 있습니다."
 );
+// 매뉴얼이 쓰는 글머리표는 한곳(MARKERS)에 모아 두었습니다.
+// 여기 빠진 기호가 있으면 그 줄이 앞줄 뒤에 붙습니다.
 requireCondition(
-  app.includes("[•‣▶※*]"),
-  "별표로 시작하는 줄이 앞 항목에 붙어 버립니다.",
+  app.includes('const MARKERS = "•‣▸▹▶▪□○◦※*"'),
+  "글머리표 목록이 한곳에 모여 있지 않습니다. 빠진 기호가 생기면 줄이 앞줄에 붙습니다.",
 );
 
 const indexHtml = fs.readFileSync(path.join(root, "docs/index.html"), "utf8");

@@ -44,6 +44,14 @@
   let currentStepTitle = "";
   let lastFocusedElement = null;
 
+  // 매뉴얼이 쓰는 글머리표를 한곳에 모아 둡니다.
+  // 한 군데라도 빠지면 그 줄이 글머리표로 안 보여 앞줄 뒤에 붙어 버립니다.
+  //   '지방공무원 임용령 제28조… ▸정의' ← ▸를 빠뜨려 생겼던 일입니다.
+  // 판마다 쓰는 기호가 다릅니다. ▸(U+25B8)와 ▶(U+25B6)는 다른 글자입니다.
+  const MARKERS = "•‣▸▹▶▪□○◦※*";
+  const MARKER_CLASS = `[${MARKERS}]`;
+  const ITEM_START = new RegExp(`^(?:${MARKER_CLASS}|[-–]\\s|\\d+[.)]\\s|[가-힣]\\.\\s)`);
+
   // 업무 흐름도는 화면 위쪽에 그림으로 따로 보여 주므로 본문에서는 뺍니다.
   function isSourceFlowBlock(work, block) {
     return block.title === "업무 흐름도";
@@ -467,9 +475,7 @@
       .filter(Boolean);
     const items = [];
     for (const line of lines) {
-      const startsItem =
-        /^(?:[•‣▶※*]|[-–]\s|\d+[.)]\s|[가-힣]\.\s)/.test(line) ||
-        line.includes(" : ");
+      const startsItem = ITEM_START.test(line) || line.includes(" : ");
       if (!items.length || startsItem) items.push(line);
       else items[items.length - 1] += ` ${line}`;
     }
@@ -490,9 +496,7 @@
     }
     const items = [];
     for (const line of lines) {
-      const startsItem =
-        /^(?:[•‣▶※*]|[-–]\s|\d+[.)]\s|[가-힣]\.\s)/.test(line) ||
-        line.includes(" : ");
+      const startsItem = ITEM_START.test(line) || line.includes(" : ");
       if (!items.length || startsItem) items.push(line);
       else items[items.length - 1] += ` ${line}`;
     }
@@ -506,8 +510,13 @@
   //   - 또는 –   가장 안쪽
   // 숫자가 작을수록 바깥입니다. 실제 들여쓰기 단계는 그 묶음에 나온 기호만으로
   // 다시 매기므로, ‣로만 시작하는 묶음은 ‣가 맨 바깥이 됩니다.
-  const MARKER_DEPTH = { "•": 0, "▶": 0, "‣": 1, "※": 1.5, "*": 1.5, "-": 2, "–": 2 };
-  const MARKER_RE = /^([•‣▶※*]|[-–])\s*(.*)$/;
+  const MARKER_DEPTH = {
+    "•": 0, "▶": 0, "▸": 0, "▹": 0, "▪": 0, "□": 0, "‣": 0,
+    "○": 1, "◦": 1,
+    "※": 1.5, "*": 1.5,
+    "-": 2, "–": 2,
+  };
+  const MARKER_RE = new RegExp(`^(${MARKER_CLASS}|[-–])\\s*(.*)$`);
 
   function markerOf(item) {
     return MARKER_RE.exec(String(item));
@@ -760,7 +769,7 @@
           .map((block) => {
             const references = String(block.body || block.title)
               .split(/\r?\n/)
-              .map((line) => line.replace(/^[•‣▶]\s*/, "").trim())
+              .map((line) => line.replace(new RegExp(`^${MARKER_CLASS}\\s*`), "").trim())
               .filter(Boolean);
             // 쪽 정보는 바로 아래 '원문 위치' 칸에 있으므로 여기서는 적지 않습니다.
             return `

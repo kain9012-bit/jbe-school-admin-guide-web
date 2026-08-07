@@ -46,7 +46,8 @@
     for (const rawLine of lines) {
       const line = normalizeLine(rawLine);
       if (!line) continue;
-      const startsItem = /^(?:[•‣▶※]|[-–]\s|\d+[.)]\s|[가-힣]\.\s)/.test(line);
+      // 매뉴얼이 쓰는 글머리표는 판마다 다릅니다. ▸와 ▶는 다른 글자입니다.
+      const startsItem = /^(?:[•‣▸▹▶▪□○◦※*]|[-–]\s|\d+[.)]\s|[가-힣]\.\s)/.test(line);
       if (!items.length || startsItem) items.push(line);
       else items[items.length - 1] += ` ${line}`;
     }
@@ -58,7 +59,7 @@
     if (!items.length) return "—";
     if (items.length === 1) return escapeHtml(items[0]);
     return `<ul>${items
-      .map((item) => `<li>${escapeHtml(item.replace(/^[•‣▶]\s*/, ""))}</li>`)
+      .map((item) => `<li>${escapeHtml(item.replace(/^[•‣▸▹▶▪□○◦]\s*/, ""))}</li>`)
       .join("")}</ul>`;
   }
 
@@ -388,7 +389,9 @@
 
     for (const rawLine of lines) {
       const line = normalizeLine(rawLine);
-      let match = line.match(/^([‣•])\s*(.+)$/);
+      // 매뉴얼 판마다 글머리표가 다릅니다. ▸(U+25B8)와 ▶(U+25B6)는 다른 글자입니다.
+      // 여기 빠진 기호는 글머리표로 안 보여 앞줄 뒤에 붙어 버립니다.
+      let match = line.match(/^([‣•▸▹▪□○◦])\s*(.+)$/);
       if (match) {
         const item = { marker: match[1], text: match[2], level: 0, type: "primary" };
         items.push(item);
@@ -397,7 +400,7 @@
         continue;
       }
 
-      match = line.match(/^(▶)\s*(.+)$/);
+      match = line.match(/^([▶])\s*(.+)$/);
       if (match) {
         const item = {
           marker: match[1],
@@ -430,7 +433,7 @@
         continue;
       }
 
-      match = line.match(/^(※|☞)\s*(.+)$/);
+      match = line.match(/^(※|☞|\*)\s*(.+)$/);
       if (match) {
         items.push({
           marker: match[1],
