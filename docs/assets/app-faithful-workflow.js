@@ -428,8 +428,10 @@
 
     diagram.innerHTML = lines
       .map((line) => {
+        // 매뉴얼 판마다 화살표가 다릅니다. PDF는 '▶', 한글파일은 '⇒'를 씁니다.
+        // 한 가지만 보면 흐름도가 통째로 한 덩어리가 되어 버립니다.
         const steps = line
-          .split(/\s*▶\s*/)
+          .split(/\s*[▶⇒→]\s*/)
           .map((part) => part.trim())
           .filter(Boolean);
         return `
