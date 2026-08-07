@@ -153,20 +153,17 @@
     return `${colSpan}${rowSpan}`;
   }
 
-  // 한글은 병합에 가려진 자리도 빈 칸으로 남겨 둡니다.
-  // 그대로 그리면 칸이 밀리므로, 가려진 자리는 빼고 그립니다.
+  // 칸이 격자에서 어디에 있는지는 한글파일에 적힌 주소(column)를 씁니다.
+  // 주소가 없는 표는 칸 하나가 격자 한 칸씩 차례대로 놓인 것으로 봅니다.
+  // 차례만 보고 자리를 세면, 병합된 칸이 있는 표가 통째로 밀립니다.
   function visibleCells(rows) {
     const covered = rows.map(() => []);
     const result = [];
     for (const [rowIndex, row] of rows.entries()) {
       const line = [];
-      let column = 0;
-      for (const cell of row) {
-        // 가려진 자리에도 빈 칸이 하나씩 들어 있습니다. 그 칸은 그리지 않고 넘어갑니다.
-        if (covered[rowIndex][column]) {
-          column += 1;
-          continue;
-        }
+      for (const [index, cell] of row.entries()) {
+        const column = Number.isInteger(cell.column) ? cell.column : index;
+        if (covered[rowIndex][column]) continue;
         const colSpan = cell.colSpan || 1;
         const rowSpan = cell.rowSpan || 1;
         for (let down = 0; down < rowSpan; down += 1) {
@@ -177,7 +174,6 @@
           }
         }
         line.push({ ...cell, column });
-        column += colSpan;
       }
       result.push(line);
     }
@@ -185,37 +181,34 @@
   }
 
   function spannedTableMarkup(caption, headers, rows) {
-    const text = (cell) => normalizeLine(cell && cell.text);
+    // 머리글과 본문을 <thead>·<tbody>로 나누면, 머리글 칸이 아래로 걸친 병합
+    // (구 분: 2줄 차지)이 끊깁니다. 한 덩어리로 그리고 첫 줄만 머리글로 표시합니다.
+    const grid = visibleCells([headers, ...rows]);
     const columnCount = headers.reduce((total, cell) => total + (cell.colSpan || 1), 0);
     const widths = Array.from({ length: columnCount }, () => 100 / columnCount);
-    const body = visibleCells(rows);
     return `
       <div class="source-table-scroll">
         <table class="source-criteria-table" data-column-layout="${widths
           .map((width) => width.toFixed(1))
           .join("-")}" aria-label="${escapeHtml(caption)}">
-          <thead>
-            <tr>${headers
-              .map((cell) => `<th scope="col"${spanAttributes(cell)}>${escapeHtml(text(cell))}</th>`)
-              .join("")}</tr>
-          </thead>
           <tbody>
-            ${body
+            ${grid
               .map(
-                (cells) => `
+                (cells, rowIndex) => `
                   <tr>
                     ${cells
                       .map((cell) => {
                         // 원문에서 비어 있는 칸은 비워 둡니다.
-                        // 줄표를 찍으면 없는 내용을 있는 것처럼 보이게 합니다.
                         const lines = bodyLines(unwrap(cell.text));
                         const content = lines.length ? cellMarkup(lines) : "";
-                        // 첫 칸만 행 머리입니다. 위 칸이 여러 줄을 차지해 첫 칸이
-                        // 가려진 줄에서는 그다음 칸이 행 머리가 아닙니다.
-                        if (cell.column === 0) {
-                          return `<th scope="row"${spanAttributes(cell)}>${content}</th>`;
+                        const span = spanAttributes(cell);
+                        if (rowIndex === 0) {
+                          return `<th scope="col"${span}>${content}</th>`;
                         }
-                        return `<td${spanAttributes(cell)}>${content}</td>`;
+                        if (cell.column === 0) {
+                          return `<th scope="row"${span}>${content}</th>`;
+                        }
+                        return `<td${span}>${content}</td>`;
                       })
                       .join("")}
                   </tr>
