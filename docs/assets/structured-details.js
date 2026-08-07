@@ -186,16 +186,19 @@
     const grid = visibleCells([headers, ...rows]);
     const columnCount = headers.reduce((total, cell) => total + (cell.colSpan || 1), 0);
 
-    // 열 너비는 매뉴얼을 만든 사람이 정해 둔 값을 그대로 씁니다.
-    // 없을 때만 칸에 든 글 길이를 보고 정합니다. 똑같이 나누면
-    // '기본·전문·기타교육시간' 같은 긴 칸이 세로로 눌립니다.
-    const widths =
+    // 열 너비는 매뉴얼을 만든 사람이 정해 둔 비율을 바탕으로 하되,
+    // 어느 열도 자기 낱말보다 좁아지지 않게 손봅니다.
+    // 그래야 가로 스크롤 없이 한 화면에 들어가면서 글자도 안 끊깁니다.
+    const base =
       Array.isArray(sourceWidths) && sourceWidths.length === columnCount
         ? sourceWidths
         : measuredWidths(grid, columnCount);
+    const widths = fitWidths(base, grid, columnCount);
     return `
       <div class="source-table-scroll">
-        <table class="source-criteria-table" style="--table-columns: ${columnCount}" data-column-layout="${widths
+        <table class="source-criteria-table" style="--table-columns: ${columnCount}" data-wide="${
+          columnCount >= 7 ? 1 : 0
+        }" data-column-layout="${widths
           .map((width) => Number(width).toFixed(1))
           .join("-")}" aria-label="${escapeHtml(caption)}">
           <colgroup>
@@ -234,6 +237,39 @@
   // 표 안의 줄바꿈은 항목 구분입니다. 한 칸 안에서 목록으로 보여 줍니다.
   const unwrap = (value) => String(value ?? "");
 
+  // 열마다 '이보다 좁으면 낱말이 끊긴다' 하는 최소 몫을 구해,
+  // 원문 비율이 그보다 좁은 열만 넓혀 줍니다. 넓힌 만큼은 여유 있는
+  // 열에서 비례로 덜어 옵니다. 전체는 늘 100%라 가로 스크롤이 없습니다.
+  function fitWidths(base, grid, columnCount) {
+    const longestWord = Array.from({ length: columnCount }, () => 1);
+    for (const row of grid) {
+      for (const cell of row) {
+        const span = cell.colSpan || 1;
+        // 여러 칸에 걸친 칸은 자기 몫만큼만 요구합니다.
+        const words = normalizeLine(cell.text).split(/\s+/).filter(Boolean);
+        const longest = words.reduce((most, word) => Math.max(most, visualLength(word)), 0) / span;
+        for (let offset = 0; offset < span; offset += 1) {
+          const column = cell.column + offset;
+          if (column < columnCount) {
+            longestWord[column] = Math.max(longestWord[column], longest);
+          }
+        }
+      }
+    }
+
+    // 낱말 길이를 백분율 몫으로 바꿉니다. 표 전체를 낱말 길이로 나눈 값이
+    // '딱 맞는' 몫입니다. 칸 여백이 있으니 조금 넉넉히 잡고,
+    // 아주 좁은 열이 생기지 않도록 바닥값도 둡니다.
+    const totalWord = longestWord.reduce((sum, value) => sum + value, 0) || 1;
+    const floors = longestWord.map((value) =>
+      Math.max((value / totalWord) * 100 * 1.05, 100 / columnCount / 2.2)
+    );
+
+    const widths = base.map((value, index) => Math.max(value, floors[index]));
+    const total = widths.reduce((sum, value) => sum + value, 0);
+    return widths.map((value) => Number(((value / total) * 100).toFixed(2)));
+  }
+
   // 원문 너비가 없는 표는 칸에 든 글의 길이로 너비를 정합니다.
   // 여러 칸에 걸친 칸은 자기 몫만큼만 나눠 가집니다.
   function measuredWidths(grid, columnCount) {
@@ -258,7 +294,9 @@
     const widths = contentAwareColumnWidths(headers, rows);
     return `
       <div class="source-table-scroll">
-        <table class="source-criteria-table" style="--table-columns: ${columnCount}" data-column-layout="${widths
+        <table class="source-criteria-table" style="--table-columns: ${columnCount}" data-wide="${
+          columnCount >= 7 ? 1 : 0
+        }" data-column-layout="${widths
           .map((width) => width.toFixed(1))
           .join("-")}" aria-label="${escapeHtml(caption)}">
           <colgroup>

@@ -130,16 +130,26 @@
 }
 
 .source-criteria-table {
-  /* 열이 많은 표는 폭에 맞춰 우겨넣지 않고 가로로 넘겨 보게 합니다.
-     그러지 않으면 '질병휴직'이 '질병휴 / 직'처럼 글자 사이에서 끊깁니다.
-     열 하나에 최소 이만큼은 주도록 --table-columns로 계산합니다. */
+  /* 표는 주어진 폭 안에 들어갑니다. 가로 스크롤은 좁은 화면에서만 씁니다.
+     열 너비는 원문 비율을 바탕으로 하되, 어느 열도 자기 낱말보다
+     좁아지지 않도록 미리 계산해 둡니다(structured-details.js). */
   width: 100%;
-  min-width: max(56rem, calc(var(--table-columns, 4) * 10.5rem));
+  min-width: min(100%, calc(var(--table-columns, 4) * 6.4rem));
   border-collapse: collapse;
   table-layout: fixed;
   color: var(--guide-ink);
   font-size: 1.4rem;
   line-height: 1.65;
+}
+
+/* 열이 많으면 글자와 여백을 조금 줄여 한 화면에 담습니다. */
+.source-criteria-table[data-wide="1"] {
+  font-size: 1.3rem;
+}
+
+.source-criteria-table[data-wide="1"] th,
+.source-criteria-table[data-wide="1"] td {
+  padding: 0.9rem 0.8rem;
 }
 
 .source-criteria-table th,

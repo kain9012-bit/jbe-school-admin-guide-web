@@ -53,6 +53,12 @@ for (const name of jobs) {
     skipped += 1;
     continue;
   }
+  // 표가 폭 안에 들어가는지 보는 검증은 브라우저와 로컬 서버가 필요합니다.
+  if (name === "validate_table_fit.mjs" && !existsSync(path.join(root, "node_modules/playwright"))) {
+    console.log(`${name.padEnd(40)} 건너뜀 (playwright 필요)`);
+    skipped += 1;
+    continue;
+  }
   if (name.endsWith(".py") && !python) {
     console.log(`${name.padEnd(40)} 건너뜀 (파이썬 3을 찾지 못했습니다)`);
     skipped += 1;
