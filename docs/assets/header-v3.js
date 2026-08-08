@@ -86,7 +86,7 @@
                       )}</span>
                       <span class="chapter-work-copy">
                         <strong>${escapeHtml(item.title)}</strong>
-                        <small>원문 ${escapeHtml(item.description)}</small>
+                        <small>${escapeHtml(item.steps ? `세부 ${item.steps}단계` : "원문 보기")}</small>
                       </span>
                       <span aria-hidden="true">→</span>
                     </a>

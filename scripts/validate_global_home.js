@@ -160,6 +160,20 @@ requireCondition(
   "편별 화면의 홈 이동이 19개 편 통합 홈으로 연결되지 않습니다."
 );
 
+// 업무 '목록'에는 검색 카드용 긴 설명(소제목 나열)을 쓰면 안 됩니다.
+// 목록 칸마다 여섯 줄씩 늘어져 한 번 사고가 났습니다. 홈과 분야 대화상자 모두 봅니다.
+for (const asset of ["global-home.js", "header-v3.js"]) {
+  const source = fs.readFileSync(path.join(root, "docs/assets", asset), "utf8");
+  requireCondition(
+    !source.includes("item.description"),
+    `${asset}가 업무 목록에 검색용 긴 설명을 그대로 씁니다.`
+  );
+  requireCondition(
+    source.includes("세부 ${item.steps}단계"),
+    `${asset}의 업무 목록에 '세부 N단계' 표시가 없습니다.`
+  );
+}
+
 // 검색은 치는 동안 결과를 보여 주되, 한 글자마다 다시 찾아 화면이 튀면 안 됩니다.
 // 손을 멈춘 뒤 잠깐 기다렸다 찾아야 합니다.
 // 찾을 자료 종류도 고를 수 있어야 합니다.
