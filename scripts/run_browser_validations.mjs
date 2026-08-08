@@ -23,6 +23,25 @@ const GROUPS = [
 ];
 
 let failed = 0;
+
+// 카드 높이는 편을 나눌 필요가 없어 한 번만 돕니다.
+{
+  const result = spawnSync("node", [path.join(root, "scripts", "validate_card_heights.mjs")], {
+    cwd: root,
+    encoding: "utf8",
+  });
+  const ok = result.status === 0;
+  console.log(`${"validate_card_heights.mjs".padEnd(28)} 전체      ${ok ? "통과" : "실패"}`);
+  if (!ok) {
+    failed += 1;
+    `${result.stdout || ""}${result.stderr || ""}`
+      .trim()
+      .split("\n")
+      .slice(0, 8)
+      .forEach((line) => console.log(`    ${line}`));
+  }
+}
+
 for (const job of ["validate_render_smoke.mjs", "validate_table_fit.mjs"]) {
   for (const chapters of GROUPS) {
     const result = spawnSync(

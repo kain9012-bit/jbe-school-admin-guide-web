@@ -15,7 +15,9 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.6rem;
   margin-top: 3rem;
-  align-items: start;
+  /* 늘여서 맞춥니다(stretch). start로 두면 '학교발전기금 및 세입세출외현금'처럼
+     이름이 두 줄인 카드만 키가 커져 같은 줄 카드끼리 높이가 어긋납니다. */
+  align-items: stretch;
 }
 
 /* 분야 하나는 카드와 업무 목록을 함께 담습니다.
@@ -180,8 +182,15 @@ button.global-chapter-card {
   list-style: none;
 }
 
+/* 칸 안을 꽉 채워야 이름이 두 줄인 카드와 한 줄인 카드의 높이가 같아집니다.
+   그러지 않으면 한 줄에 놓인 카드끼리 높이가 들쭉날쭉해 보입니다. */
+.global-work-list > li {
+  display: grid;
+}
+
 .global-work-link {
   display: grid;
+  height: 100%;
   grid-template-columns: auto minmax(0, 1fr) auto;
   gap: 1.2rem;
   align-items: center;

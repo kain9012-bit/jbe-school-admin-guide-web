@@ -39,7 +39,11 @@ const jobs = readdirSync(scripts)
   .sort();
 
 const hasKordoc = existsSync(path.join(root, "node_modules/kordoc"));
-const BROWSER_JOBS = new Set(["validate_render_smoke.mjs", "validate_table_fit.mjs"]);
+const BROWSER_JOBS = new Set([
+  "validate_render_smoke.mjs",
+  "validate_table_fit.mjs",
+  "validate_card_heights.mjs",
+]);
 let failed = 0;
 let skipped = 0;
 

@@ -167,12 +167,22 @@
   margin: 0;
   padding: 0.2rem;
   list-style: none;
-  align-items: start;
+  /* 늘여서 맞춥니다. start로 두면 이름이 두 줄인 분야만 키가 커집니다. */
+  align-items: stretch;
 }
 
 /* 업무 목록이 열린 분야는 한 줄 전체를 씁니다. */
+.chapter-item {
+  display: flex;
+  flex-direction: column;
+}
+
 .chapter-item:has([aria-expanded="true"]) {
   grid-column: 1 / -1;
+}
+
+.chapter-item > .chapter-link {
+  flex: 1 0 auto;
 }
 
 .chapter-link {
@@ -251,8 +261,14 @@ button.chapter-link:focus-visible {
   list-style: none;
 }
 
+/* 칸 안을 꽉 채워야 이름이 두 줄인 카드와 한 줄인 카드의 높이가 같아집니다. */
+.chapter-works ul > li {
+  display: grid;
+}
+
 .chapter-works a {
   display: grid;
+  height: 100%;
   grid-template-columns: auto minmax(0, 1fr) auto;
   gap: 1.2rem;
   align-items: center;
