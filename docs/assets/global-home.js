@@ -352,9 +352,8 @@
         const kind = searchKindOf(head);
         // 묶음 머리글에는 그 업무가 무엇을 다루는지 적습니다.
         // 여기까지 발췌를 넣으면 바로 아래 항목과 똑같은 글이 두 번 나옵니다.
-        const lead = head.description
-          ? escapeHtml(head.description)
-          : snippetMarkup(head.text, trimmed);
+        // 적을 것이 없으면 줄을 빼야지, 업무 이름을 한 번 더 적으면 안 됩니다.
+        const lead = head.description ? escapeHtml(head.description) : "";
         const inside = group.hits
           .filter((entry) => entry.item !== head)
           .slice(0, 4)
@@ -382,7 +381,7 @@
                 <span>${escapeHtml(labelOf(head))}</span>
               </div>
               <h3>${escapeHtml(String(head.title).replace(/^세부내용\s+/, ""))}</h3>
-              <p>${lead}</p>
+              ${lead ? `<p>${lead}</p>` : ""}
             </a>
             ${inside ? `<div class="search-hits">${inside}</div>` : ""}
             ${more ? `<p class="search-more">이 업무 안에 ${more}곳 더 있습니다.</p>` : ""}

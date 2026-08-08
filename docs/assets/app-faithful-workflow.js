@@ -1032,6 +1032,10 @@
       currentStepId = "";
       workView.hidden = true;
       overviewView.hidden = false;
+      // 업무 목록은 처음 열 때가 아니라 이 화면을 보여 줄 때 그립니다.
+      // 그리지 않으면 업무 화면에서 '자료 내려받기'로 돌아왔을 때
+      // '어떤 업무를 처리하시나요?' 아래가 텅 비어 있습니다.
+      if (!workGrid.childElementCount) renderOverview();
       breadcrumb.innerHTML = `
         <li class="home"><a href="${escapeHtml(globalHomeHref())}">홈</a></li>
         <li><span>${escapeHtml(chapterName())}</span></li>
@@ -1139,9 +1143,8 @@
         // 업무 자체가 걸린 것이 아니라면 맞은 조각의 글을 발췌합니다.
         // 묶음 머리글에는 그 업무가 무엇을 다루는지 적습니다.
         // 여기까지 발췌를 넣으면 바로 아래 항목과 똑같은 글이 두 번 나옵니다.
-        const lead = head.description
-          ? escapeHtml(head.description)
-          : snippetMarkup(head.text, trimmed);
+        // 적을 것이 없으면 줄을 빼야지, 업무 이름을 한 번 더 적으면 안 됩니다.
+        const lead = head.description ? escapeHtml(head.description) : "";
         const inside = group.hits
           .filter((entry) => entry.item !== head)
           .slice(0, 4)
@@ -1169,7 +1172,7 @@
                 <span>${escapeHtml(chapterName(head))}</span>
               </div>
               <h3>${escapeHtml(String(head.title).replace(/^세부내용\s+/, ""))}</h3>
-              <p>${lead}</p>
+              ${lead ? `<p>${lead}</p>` : ""}
             </a>
             ${inside ? `<div class="search-hits">${inside}</div>` : ""}
             ${more ? `<p class="search-more">이 업무 안에 ${more}곳 더 있습니다.</p>` : ""}
