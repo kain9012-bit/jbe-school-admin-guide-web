@@ -28,10 +28,17 @@ from xml.etree import ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 SECTION_RE = re.compile(r"^Contents/section(\d+)\.xml$")
 
-SOURCES = {
-    "1": ROOT / "source" / "manual-hwpx" / "제1편 행정업무 및 보안_251021.hwpx",
-    "3": ROOT / "source" / "manual-hwpx" / "제3편 인사관리_251021.hwpx",
-}
+def sources() -> dict[str, Path]:
+    """source/manual-hwpx 안의 편별 한글파일을 모두 찾습니다."""
+    found: dict[str, Path] = {}
+    for path in sorted((ROOT / "source" / "manual-hwpx").glob("*.hwpx")):
+        match = re.match(r"제(\d+)편", path.name)
+        if match:
+            found[match.group(1)] = path
+    return found
+
+
+SOURCES = sources()
 
 
 def local_name(tag: str) -> str:

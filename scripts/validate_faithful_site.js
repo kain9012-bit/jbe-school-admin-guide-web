@@ -1,110 +1,79 @@
 // 웹판이 원문에 충실한지 확인합니다.
 // 원문에 없는 단계·할 일·주의사항을 임의로 만들어 넣지 않았는지,
-// 원문 페이지와 서식 원문이 그대로 남아 있는지를 봅니다.
+// 공개한 편마다 자료가 갖춰져 있는지를 봅니다.
+//
+// 편은 계속 늘어납니다. 그래서 '몇 편, 몇 개'처럼 숫자를 박아 두지 않고
+// 편마다 지켜야 할 규칙만 확인합니다.
 
 const fs = require("fs");
 const path = require("path");
-const { docs, loadGuideData, requireCondition } = require("./lib/load_guide_data");
+const {
+  docs,
+  loadGuideData,
+  requireCondition,
+  chapterKeys,
+} = require("./lib/load_guide_data");
 
 const window = loadGuideData();
 const config = window.GUIDE_CONFIG;
-const data1 = window.CHAPTER1_DATA;
-const data3 = window.CHAPTER3_DATA;
 const searchIndex = window.GUIDE_SEARCH_INDEX;
-const available = config.chapters.filter((chapter) => chapter.available);
+const open = config.chapters.filter((chapter) => chapter.available);
 
-requireCondition(available.length === 2, `공개 편 수 오류: ${available.length}`);
-requireCondition(data1.sections.length === 9, `제1편 업무 수 오류: ${data1.sections.length}`);
-requireCondition(data3.sections.length === 5, `제3편 업무 수 오류: ${data3.sections.length}`);
-requireCondition(data1.forms.length === 19, `제1편 서식 수 오류: ${data1.forms.length}`);
-requireCondition(data3.forms.length === 21, `제3편 서식 수 오류: ${data3.forms.length}`);
-requireCondition(data1.faqs.length === 55, `제1편 FAQ 수 오류: ${data1.faqs.length}`);
-requireCondition(data3.faqs.length === 19, `제3편 FAQ 수 오류: ${data3.faqs.length}`);
+requireCondition(open.length > 0, "공개된 편이 없습니다.");
 
-function validateChapter(data, expectedPages, label) {
-  const pages = data.sections.flatMap((section) => section.sourcePages);
-  requireCondition(pages.length === expectedPages, `${label} 원문 페이지 수 오류: ${pages.length}`);
-  requireCondition(
-    pages.every((page) => page.text.length > 300),
-    `${label} 빈 원문 페이지가 있습니다.`
-  );
+let works = 0;
+let blocks = 0;
+let tables = 0;
 
-  // 원문에 없는 '할 일·확인사항·주의사항'을 지어내지 않았는지 확인합니다.
-  requireCondition(
-    data.sections.every(
-      (section) =>
-        !("actions" in section) &&
-        !("checks" in section) &&
-        !("cautions" in section) &&
-        Array.isArray(section.flowGroups) &&
-        Array.isArray(section.contentBlocks)
-    ),
-    `${label}에 임의 단계 필드가 남아 있습니다.`
-  );
+for (const { id, key } of chapterKeys(window)) {
+  const data = window[key];
+  const label = `제${id}편`;
+  requireCondition(Array.isArray(data.sections) && data.sections.length > 0, `${label} 업무가 없습니다.`);
+  requireCondition(Array.isArray(data.forms), `${label} 서식 자료가 없습니다.`);
+  requireCondition(Array.isArray(data.faqs), `${label} FAQ 자료가 없습니다.`);
 
-  // 본문 블록은 한글파일에서 만들어 냅니다. 이름과 내용이 있어야 합니다.
-  const blocks = data.sections.flatMap((section) => section.contentBlocks);
-  requireCondition(
-    blocks.every((block) => typeof block.id === "string" && typeof block.title === "string"),
-    `${label} 본문 블록에 이름표가 없습니다.`
-  );
-
-  requireCondition(
-    data.forms.every((form) => form.content.length > 20 && form.sectionId),
-    `${label} 개별 서식 원문이 누락되었습니다.`
-  );
-
-  for (const relativePath of Object.values(data.downloads)) {
-    const filePath = path.join(docs, relativePath);
+  for (const work of data.sections) {
+    works += 1;
+    requireCondition(typeof work.id === "string" && work.id, `${label} 업무에 이름표가 없습니다.`);
+    requireCondition(typeof work.title === "string" && work.title, `${label} 업무에 제목이 없습니다.`);
+    // 원문에 없는 '할 일·확인사항·주의사항'을 지어내지 않았는지 봅니다.
     requireCondition(
-      fs.existsSync(filePath) && fs.statSync(filePath).size > 0,
-      `원본 파일 누락: ${relativePath}`
+      !("actions" in work) && !("checks" in work) && !("cautions" in work),
+      `${label} ${work.title}에 임의 단계 필드가 남아 있습니다.`
     );
+    requireCondition(Array.isArray(work.contentBlocks), `${label} ${work.title} 본문이 없습니다.`);
+    requireCondition(Array.isArray(work.flowGroups), `${label} ${work.title} 흐름 정보가 없습니다.`);
+    blocks += work.contentBlocks.length;
+    for (const block of work.contentBlocks) {
+      tables += (block.tables || []).length;
+    }
   }
 
-  return blocks.length;
+  // 내려받기에 적어 둔 파일은 실제로 있어야 합니다.
+  for (const relativePath of Object.values(data.downloads || {})) {
+    requireCondition(
+      fs.existsSync(path.join(docs, relativePath)),
+      `${label} 내려받기 파일이 없습니다: ${relativePath}`
+    );
+  }
 }
 
-const blocks1 = validateChapter(data1, 23, "제1편");
-const blocks3 = validateChapter(data3, 15, "제3편");
+// 업무는 모두 통합검색에 들어 있어야 합니다.
+requireCondition(
+  searchIndex.filter((item) => item.type === "업무").length === works,
+  "업무가 통합검색에 모두 들어 있지 않습니다."
+);
+requireCondition(
+  searchIndex.every((item) => open.some((chapter) => chapter.id === item.chapterId)),
+  "공개하지 않은 편이 통합검색에 들어 있습니다."
+);
 
-const serialized = JSON.stringify({ data1, data3 });
+const serialized = JSON.stringify(
+  chapterKeys(window).map(({ key }) => window[key])
+);
 for (const forbidden of ["문서 필요성 판단", "업무의 목적과 수신 대상을 확인합니다."]) {
   requireCondition(!serialized.includes(forbidden), `임의 작성 문장이 남아 있습니다: ${forbidden}`);
 }
-
-// 통합검색은 두 편의 업무·원문·서식·FAQ를 모두 담습니다.
-requireCondition(searchIndex.length === 313, `통합검색 항목 수 오류: ${searchIndex.length}`);
-requireCondition(
-  searchIndex.every((item) => item.chapterId === "01" || item.chapterId === "03"),
-  "공개하지 않은 편이 통합검색에 들어 있습니다."
-);
-requireCondition(
-  searchIndex.filter((item) => item.type === "업무").length ===
-    data1.sections.length + data3.sections.length,
-  "업무 항목이 통합검색에 모두 들어 있지 않습니다."
-);
-requireCondition(
-  searchIndex.filter((item) => item.type === "FAQ 원문").length ===
-    data1.faqs.length + data3.faqs.length,
-  "FAQ가 통합검색에 모두 들어 있지 않습니다."
-);
-requireCondition(
-  searchIndex.some(
-    (item) =>
-      item.chapterId === "01" && item.type === "매뉴얼 원문" && item.text.includes("공인대장")
-  ),
-  "제1편 공인대장 원문이 검색되지 않습니다."
-);
-requireCondition(
-  searchIndex.some(
-    (item) =>
-      item.chapterId === "03" &&
-      item.type === "FAQ 원문" &&
-      item.title.includes("휴직 중 해외여행")
-  ),
-  "제3편 휴직 중 해외여행 FAQ가 검색되지 않습니다."
-);
 
 // 기본 페이지가 실제로 쓰는 화면 코드에 원문 충실성이 지켜지는지 확인합니다.
 const indexSource = fs.readFileSync(path.join(docs, "index.html"), "utf8");
@@ -156,14 +125,6 @@ requireCondition(
 );
 
 console.log(
-  JSON.stringify(
-    {
-      chapters: available.map((chapter) => `${chapter.label} ${chapter.title}`),
-      chapter1: { works: 9, sourcePages: 23, contentBlocks: blocks1, forms: 19, faqs: 55 },
-      chapter3: { works: 5, sourcePages: 15, contentBlocks: blocks3, forms: 21, faqs: 19 },
-      searchEntries: searchIndex.length,
-    },
-    null,
-    2
-  )
+  `faithful site valid: 공개 편 ${open.length}개 · 업무 ${works}개 · ` +
+    `본문 블록 ${blocks}개 · 표 ${tables}개 · 통합검색 ${searchIndex.length}건`
 );

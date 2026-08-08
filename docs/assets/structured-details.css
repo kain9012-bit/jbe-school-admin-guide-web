@@ -135,6 +135,13 @@
      좁아지지 않도록 미리 계산해 둡니다(structured-details.js). */
   width: 100%;
   min-width: min(100%, calc(var(--table-columns, 4) * 6.4rem));
+}
+
+/* 열이 아주 많은 표(수당표 22열 등)는 폭에 우겨넣으면 오히려 못 읽습니다.
+   이때만 가로로 넘겨 봅니다. */
+.source-criteria-table[data-scroll="1"] {
+  /* 낱말이 끊기지 않으려면 이만큼은 있어야 한다고 미리 재 둔 값입니다. */
+  min-width: var(--table-min, 90rem);
   border-collapse: collapse;
   table-layout: fixed;
   color: var(--guide-ink);

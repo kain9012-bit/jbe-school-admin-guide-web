@@ -24,7 +24,8 @@ window.GUIDE_CONFIG = {
       18: "신설학교 설립 및 개교",
       19: "학교폐지 및 통폐합",
     };
-    const available = new Set([1, 3]);
+    // 19편 모두 매뉴얼 한글파일에서 만들어 공개합니다.
+    const available = new Set(Array.from({ length: 19 }, (_, index) => index + 1));
 
     return Array.from({ length: 19 }, (_, index) => {
       const number = index + 1;

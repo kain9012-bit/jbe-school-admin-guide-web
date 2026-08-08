@@ -194,12 +194,18 @@
       Array.isArray(sourceWidths) && sourceWidths.length === columnCount
         ? sourceWidths
         : measuredWidths(grid, columnCount);
-    const widths = fitWidths(base, grid, columnCount);
+    // 폭 안에 들어갈 수 있으면 맞추고, 못 들어가면 가로로 넘겨 봅니다.
+    // 우겨넣으면 낱말이 가운데에서 끊겨 오히려 못 읽습니다.
+    const needs = neededWidth(grid, columnCount);
+    const scrolls = needs > 690;
+    const widths = fitWidths(base, grid, columnCount, scrolls ? needs : 730);
     return `
       <div class="source-table-scroll">
-        <table class="source-criteria-table" style="--table-columns: ${columnCount}" data-wide="${
+        <table class="source-criteria-table" style="--table-columns: ${columnCount}; --table-min: ${Math.round(
+          needs
+        )}px" data-wide="${
           columnCount >= 7 ? 1 : 0
-        }" data-column-layout="${widths
+        }" data-scroll="${scrolls ? 1 : 0}" data-column-layout="${widths
           .map((width) => Number(width).toFixed(1))
           .join("-")}" aria-label="${escapeHtml(caption)}">
           <colgroup>
@@ -236,12 +242,41 @@
   }
 
   // 표 안의 줄바꿈은 항목 구분입니다. 한 칸 안에서 목록으로 보여 줍니다.
-  const unwrap = (value) => String(value ?? "");
+  // 화살표로 이어 붙인 긴 덩어리('승인요청각급학교→교육지원청…')는 띄어쓰기가
+  // 없어 한 줄로 뻗습니다. 화살표 뒤에서 줄이 바뀔 수 있게 보이지 않는 자리를
+  // 넣어 둡니다. 글자는 그대로입니다.
+  const unwrap = (value) =>
+    String(value ?? "")
+      .replace(/([→⇒⇨▶►])/g, "$1\u200B")
+      // 원문에서 줄이 나뉘어 있던 자리가 한 덩어리로 붙기도 합니다.
+      // 나열 문구('교량,터널,철도,…')는 띄어쓰기가 없어 한 줄로 뻗습니다.
+      // 쉼표·가운뎃점 뒤, 괄호 앞뒤도 줄을 바꿀 수 있는 자리로 둡니다.
+      .replace(/([,、·・‧\-–—])(?=\S)/g, "$1\u200B")
+      .replace(/(\))(?=[가-힣])/g, "$1\u200B")
+      .replace(/([가-힣\d])(?=[([])/g, "$1\u200B");
 
   // 열마다 '이보다 좁으면 낱말이 끊긴다' 하는 최소 몫을 구해,
   // 원문 비율이 그보다 좁은 열만 넓혀 줍니다. 넓힌 만큼은 여유 있는
   // 열에서 비례로 덜어 옵니다. 전체는 늘 100%라 가로 스크롤이 없습니다.
-  function fitWidths(base, grid, columnCount) {
+  // 이 표를 낱말이 끊기지 않게 그리려면 가로로 몇 픽셀이 필요한지 어림합니다.
+  // 한글 한 글자를 약 13px, 칸 좌우 여백을 약 20px로 봅니다.
+  function neededWidth(grid, columnCount) {
+    const longest = Array.from({ length: columnCount }, () => 1);
+    for (const row of grid) {
+      for (const cell of row) {
+        const span = cell.colSpan || 1;
+        const words = normalizeLine(cell.text).split(/\s+/).filter(Boolean);
+        const most = words.reduce((top, word) => Math.max(top, visualLength(word)), 0) / span;
+        for (let offset = 0; offset < span; offset += 1) {
+          const column = cell.column + offset;
+          if (column < columnCount) longest[column] = Math.max(longest[column], most);
+        }
+      }
+    }
+    return longest.reduce((sum, value) => sum + value * 18 + 34, 0);
+  }
+
+  function fitWidths(base, grid, columnCount, availablePx) {
     const longestWord = Array.from({ length: columnCount }, () => 1);
     for (const row of grid) {
       for (const cell of row) {
@@ -258,15 +293,28 @@
       }
     }
 
-    // 낱말 길이를 백분율 몫으로 바꿉니다. 표 전체를 낱말 길이로 나눈 값이
-    // '딱 맞는' 몫입니다. 칸 여백이 있으니 조금 넉넉히 잡고,
-    // 아주 좁은 열이 생기지 않도록 바닥값도 둡니다.
-    const totalWord = longestWord.reduce((sum, value) => sum + value, 0) || 1;
+    // 최소 몫은 글자 수 비율이 아니라 실제 픽셀로 잡습니다.
+    // 비율로 잡으면 표가 큰 경우 짧은 낱말의 몫이 지나치게 깎여 끊깁니다.
+    // 한글 한 글자 약 15px, 칸 좌우 여백 약 28px로 봅니다.
     const floors = longestWord.map((value) =>
-      Math.max((value / totalWord) * 100 * 1.05, 100 / columnCount / 2.2)
+      Math.min(((value * 18 + 34) / availablePx) * 100, 60)
     );
 
-    const widths = base.map((value, index) => Math.max(value, floors[index]));
+    // 최소 몫은 반드시 지킵니다. 남는 자리만 원문 비율대로 나눠 줍니다.
+    // 이렇게 해야 어느 열도 자기 낱말보다 좁아지지 않습니다.
+    const floorTotal = floors.reduce((sum, value) => sum + value, 0);
+    if (floorTotal >= 100) {
+      return floors.map((value) => Number(((value / floorTotal) * 100).toFixed(2)));
+    }
+
+    // 원문 너비가 열 수와 맞지 않는 표가 있습니다(표 안에 표가 든 경우).
+    // 그럴 때는 고르게 나눈 값을 바탕으로 삼습니다. 없는 값을 쓰면 NaN이 됩니다.
+    const safeBase = floors.map((_, index) =>
+      Number.isFinite(base[index]) ? base[index] : 100 / floors.length
+    );
+    const baseTotal = safeBase.reduce((sum, value) => sum + value, 0) || 1;
+    const spare = 100 - floorTotal;
+    const widths = floors.map((value, index) => value + (safeBase[index] / baseTotal) * spare);
     const total = widths.reduce((sum, value) => sum + value, 0);
     return widths.map((value) => Number(((value / total) * 100).toFixed(2)));
   }
@@ -295,9 +343,11 @@
     const widths = contentAwareColumnWidths(headers, rows);
     return `
       <div class="source-table-scroll">
-        <table class="source-criteria-table" style="--table-columns: ${columnCount}" data-wide="${
+        <table class="source-criteria-table" style="--table-columns: ${columnCount}; --table-min: ${Math.round(
+          needs
+        )}px" data-wide="${
           columnCount >= 7 ? 1 : 0
-        }" data-column-layout="${widths
+        }" data-scroll="${scrolls ? 1 : 0}" data-column-layout="${widths
           .map((width) => width.toFixed(1))
           .join("-")}" aria-label="${escapeHtml(caption)}">
           <colgroup>

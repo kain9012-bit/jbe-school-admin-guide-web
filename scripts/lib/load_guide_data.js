@@ -8,24 +8,31 @@ const vm = require("vm");
 const root = path.resolve(__dirname, "../..");
 const docs = path.join(root, "docs");
 
-const ASSET_ORDER = [
-  "assets/guide-config.js",
-  "assets/chapter1-data.js",
-  "assets/chapter1-steps.js",
-  "assets/chapter3-data.js",
-  "assets/chapter3-steps.js",
-  "assets/workflow-layout.js",
-  "assets/form-assets.js",
-  "assets/guide-search-index.js",
-];
+function runScript(context, relativePath) {
+  const filePath = path.join(docs, relativePath);
+  if (!fs.existsSync(filePath)) return false;
+  vm.runInContext(fs.readFileSync(filePath, "utf8"), context, { filename: filePath });
+  return true;
+}
 
+// 공개된 편을 모두 읽습니다. 편이 늘어나도 여기를 고칠 일이 없습니다.
 function loadGuideData() {
   const context = vm.createContext({ window: {} });
-  for (const relativePath of ASSET_ORDER) {
-    const filePath = path.join(docs, relativePath);
-    vm.runInContext(fs.readFileSync(filePath, "utf8"), context, { filename: filePath });
+  runScript(context, "assets/guide-config.js");
+  for (const chapter of context.window.GUIDE_CONFIG.chapters.filter((item) => item.available)) {
+    runScript(context, chapter.dataScript);
   }
+  runScript(context, "assets/workflow-layout.js");
+  runScript(context, "assets/form-assets.js");
+  runScript(context, "assets/guide-search-index.js");
   return context.window;
+}
+
+// 공개된 편의 자료 전역 이름 목록입니다. 검증 스크립트가 함께 씁니다.
+function chapterKeys(window) {
+  return window.GUIDE_CONFIG.chapters
+    .filter((chapter) => chapter.available)
+    .map((chapter) => ({ id: chapter.id, key: chapter.dataGlobal }));
 }
 
 function requireCondition(condition, message) {
@@ -92,4 +99,5 @@ function checkWorkflowLayout(work, layout) {
   return layout.length;
 }
 
-module.exports = { root, docs, loadGuideData, requireCondition, checkWorkflowLayout };
+module.exports = {
+  chapterKeys, root, docs, loadGuideData, requireCondition, checkWorkflowLayout };

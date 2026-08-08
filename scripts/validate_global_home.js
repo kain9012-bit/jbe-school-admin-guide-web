@@ -43,12 +43,16 @@ requireCondition(
     JSON.stringify(expectedTitles),
   "19개 편의 제목이 공식 목록과 일치하지 않습니다."
 );
-requireCondition(
-  JSON.stringify(
-    config.chapters.filter((chapter) => chapter.available).map((chapter) => chapter.id)
-  ) === JSON.stringify(["01", "03"]),
-  "현재 웹판 제공 편 표시가 제1·3편과 일치하지 않습니다."
-);
+// 공개하는 편은 늘어납니다. 목록을 박아 두지 않고,
+// 공개한 편마다 자료 파일이 실제로 있는지를 봅니다.
+const open = config.chapters.filter((chapter) => chapter.available);
+requireCondition(open.length > 0, "공개된 편이 하나도 없습니다.");
+for (const chapter of open) {
+  requireCondition(
+    fs.existsSync(path.join(root, "docs", chapter.dataScript)),
+    `${chapter.label} 자료 파일이 없습니다: ${chapter.dataScript}`
+  );
+}
 
 // 편만 지정한 주소는 따로 화면을 갖지 않고 통합 홈에서 그 분야를 펼쳐야 합니다.
 const workflowBootstrap = fs.readFileSync(

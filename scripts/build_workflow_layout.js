@@ -18,7 +18,7 @@
 
 const fs = require("fs");
 const path = require("path");
-const { loadGuideData } = require("./lib/load_guide_data");
+const { loadGuideData, chapterKeys } = require("./lib/load_guide_data");
 
 const root = path.resolve(__dirname, "..");
 const target = path.join(root, "docs/assets/workflow-layout.js");
@@ -68,7 +68,7 @@ const window = loadGuideData();
 const layout = {};
 const report = [];
 
-for (const key of ["CHAPTER1_DATA", "CHAPTER3_DATA"]) {
+for (const { key } of chapterKeys(window)) {
   for (const work of window[key].sections) {
     const sections = sectionsOf(work);
     layout[work.id] = sections;
@@ -80,7 +80,7 @@ for (const key of ["CHAPTER1_DATA", "CHAPTER3_DATA"]) {
 }
 
 // 빠지거나 겹치거나 순서가 뒤바뀐 블록이 없어야 합니다.
-for (const key of ["CHAPTER1_DATA", "CHAPTER3_DATA"]) {
+for (const { key } of chapterKeys(window)) {
   for (const work of window[key].sections) {
     const assigned = layout[work.id].flatMap((section) => section.blocks);
     const source = work.contentBlocks.map((block) => block.id);

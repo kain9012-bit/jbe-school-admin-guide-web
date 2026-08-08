@@ -53,8 +53,15 @@ for (const name of jobs) {
     skipped += 1;
     continue;
   }
-  // 표가 폭 안에 들어가는지 보는 검증은 브라우저와 로컬 서버가 필요합니다.
-  if (name === "validate_table_fit.mjs" && !existsSync(path.join(root, "node_modules/playwright"))) {
+  // 표가 폭 안에 들어가는지 보는 검증은 브라우저로 121개 업무를 열어야 해서
+  // 오래 걸립니다. 여기서는 돌리지 않고 따로 편을 나눠 돌립니다.
+  //   node scripts/validate_table_fit.mjs --chapters 01,02,03
+  if (name === "validate_table_fit.mjs") {
+    console.log(`${name.padEnd(40)} 건너뜀 (따로 돌립니다: --chapters 로 편을 나눠서)`);
+    skipped += 1;
+    continue;
+  }
+  if (false && !existsSync(path.join(root, "node_modules/playwright"))) {
     console.log(`${name.padEnd(40)} 건너뜀 (playwright 필요)`);
     skipped += 1;
     continue;
