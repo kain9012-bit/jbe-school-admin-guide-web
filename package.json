@@ -5,7 +5,8 @@
   "scripts": {
     "build:source": "python3 scripts/read_hwpx_tables.py && node scripts/build_chapters_from_hwpx.mjs && node scripts/build_workflow_layout.js && node scripts/build_structured_search_index.js",
     "check": "node scripts/run_all_validations.mjs",
-    "serve": "python3 -m http.server 8899 --directory docs"
+    "serve": "python3 -m http.server 8899 --directory docs",
+    "validate:browser": "node scripts/run_browser_validations.mjs"
   },
   "devDependencies": {
     "kordoc": "^4.4.0",

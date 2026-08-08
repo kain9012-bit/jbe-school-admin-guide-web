@@ -39,6 +39,7 @@ const jobs = readdirSync(scripts)
   .sort();
 
 const hasKordoc = existsSync(path.join(root, "node_modules/kordoc"));
+const BROWSER_JOBS = new Set(["validate_render_smoke.mjs", "validate_table_fit.mjs"]);
 let failed = 0;
 let skipped = 0;
 
@@ -53,16 +54,12 @@ for (const name of jobs) {
     skipped += 1;
     continue;
   }
-  // 표가 폭 안에 들어가는지 보는 검증은 브라우저로 121개 업무를 열어야 해서
-  // 오래 걸립니다. 여기서는 돌리지 않고 따로 편을 나눠 돌립니다.
-  //   node scripts/validate_table_fit.mjs --chapters 01,02,03
-  if (name === "validate_table_fit.mjs") {
+  // 브라우저를 띄워 보는 검증은 업무 121개를 실제로 열어야 해서 오래 걸립니다.
+  // 여기서 같이 돌리면 중간에 끊겨 '실패'로 보이므로 따로 돌립니다.
+  //   node scripts/validate_render_smoke.mjs --chapters 01,02,03
+  //   node scripts/validate_table_fit.mjs    --chapters 01,02,03
+  if (BROWSER_JOBS.has(name)) {
     console.log(`${name.padEnd(40)} 건너뜀 (따로 돌립니다: --chapters 로 편을 나눠서)`);
-    skipped += 1;
-    continue;
-  }
-  if (false && !existsSync(path.join(root, "node_modules/playwright"))) {
-    console.log(`${name.padEnd(40)} 건너뜀 (playwright 필요)`);
     skipped += 1;
     continue;
   }
