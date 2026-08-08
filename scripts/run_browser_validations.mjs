@@ -24,14 +24,14 @@ const GROUPS = [
 
 let failed = 0;
 
-// 카드 높이는 편을 나눌 필요가 없어 한 번만 돕니다.
-{
-  const result = spawnSync("node", [path.join(root, "scripts", "validate_card_heights.mjs")], {
+// 편을 나눌 필요 없이 한 번만 돌면 되는 것들입니다.
+for (const job of ["validate_card_heights.mjs", "validate_download_links.mjs"]) {
+  const result = spawnSync("node", [path.join(root, "scripts", job)], {
     cwd: root,
     encoding: "utf8",
   });
   const ok = result.status === 0;
-  console.log(`${"validate_card_heights.mjs".padEnd(28)} 전체      ${ok ? "통과" : "실패"}`);
+  console.log(`${job.padEnd(28)} 전체      ${ok ? "통과" : "실패"}`);
   if (!ok) {
     failed += 1;
     `${result.stdout || ""}${result.stderr || ""}`

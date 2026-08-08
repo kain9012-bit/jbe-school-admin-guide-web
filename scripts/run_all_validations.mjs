@@ -43,6 +43,7 @@ const BROWSER_JOBS = new Set([
   "validate_render_smoke.mjs",
   "validate_table_fit.mjs",
   "validate_card_heights.mjs",
+  "validate_download_links.mjs",
 ]);
 let failed = 0;
 let skipped = 0;

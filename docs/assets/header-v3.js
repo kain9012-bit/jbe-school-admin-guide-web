@@ -12,6 +12,23 @@
       (chapter) => chapter.id === requestedId && chapter.available
     ) || null;
 
+
+  // 내려받기 단추 하나를 잇습니다. 그 편에 없는 자료면 단추를 감춥니다.
+  // 감추지 않으면 주소가 'undefined'가 되어 누를 때 404가 납니다.
+  function setDownload(link, href, fileName) {
+    if (!href) {
+      link.hidden = true;
+      link.setAttribute("aria-hidden", "true");
+      link.tabIndex = -1;
+      return;
+    }
+    link.hidden = false;
+    link.removeAttribute("aria-hidden");
+    link.removeAttribute("tabindex");
+    link.href = href;
+    if (fileName) link.setAttribute("download", fileName);
+  }
+
   function chapterName(chapter) {
     if (!chapter) return "전체 업무";
     return chapter.title ? `${chapter.label} ${chapter.title}` : chapter.label;
@@ -204,19 +221,32 @@
     document.querySelectorAll("[data-section-count]").forEach((target) => {
       target.textContent = String(data.sections.length);
     });
+    // 원문 단추입니다. PDF가 있는 편은 PDF로, 없는 편은 한글 원문으로 잇습니다.
+    // 예전에는 PDF가 없는 편에서도 주소가 'undefined'가 되어 눌렀을 때
+    // 404가 났습니다. PDF는 제1·3편에만 있고 한글 원문은 19편 모두 있습니다.
+    const original = data.downloads.manual
+      ? { href: data.downloads.manual, label: "원문 PDF", chapterLabel: `${chapter.label} PDF 보기` }
+      : {
+          href: data.downloads.hwpx,
+          label: "원문 한글파일",
+          chapterLabel: `${chapter.label} 한글 원문`,
+          fileName: `${fullName} 매뉴얼.hwpx`,
+        };
     document.querySelectorAll("[data-download='manual']").forEach((link) => {
-      link.href = data.downloads.manual;
-      if (link.dataset.label === "chapter") link.textContent = `${chapter.label} PDF 보기`;
+      setDownload(link, original.href, original.fileName);
+      const text = link.dataset.label === "chapter" ? original.chapterLabel : original.label;
+      // 화살표 같은 장식은 그대로 두고 글자만 바꿉니다.
+      const slot = link.querySelector("span:not([aria-hidden])");
+      if (slot) slot.textContent = text;
+      else link.textContent = text;
     });
     // 저장되는 파일 이름을 무엇인지 알아볼 수 있게 정해 줍니다.
     // 정해 주지 않으면 'chapter1-forms.hwpx'가 그대로 이름이 됩니다.
     document.querySelectorAll("[data-download='forms']").forEach((link) => {
-      link.href = data.downloads.forms;
-      link.setAttribute("download", `${fullName} 서식·예시 모음.hwpx`);
+      setDownload(link, data.downloads.forms, `${fullName} 서식·예시 모음.hwpx`);
     });
     document.querySelectorAll("[data-download='faq']").forEach((link) => {
-      link.href = data.downloads.faq;
-      link.setAttribute("download", `${fullName} 자주 묻는 질문.hwp`);
+      setDownload(link, data.downloads.faq, `${fullName} 자주 묻는 질문.hwp`);
     });
   }
 
