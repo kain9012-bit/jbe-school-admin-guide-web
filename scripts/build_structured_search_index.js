@@ -36,9 +36,13 @@ for (const chapter of context.window.GUIDE_CONFIG.chapters.filter((item) => item
       type: "업무",
       workTitle: work.title,
       title: work.title,
-      // 업무 카드에는 그 업무가 무엇을 다루는지 보여 줍니다.
+      // 검색 결과 카드에 그 업무가 무엇을 다루는지 한 줄로 보여 줍니다.
       // 예전에는 쪽수를 적었는데, 쪽 표시를 없앤 뒤로 'undefined쪽'만 남아 있었습니다.
       description: description(subtitles.join(" · "), 160),
+      // 홈의 업무 목록에는 위 설명이 너무 깁니다. 카드가 여섯 줄로 늘어납니다.
+      // 목록에서는 몇 단계짜리 업무인지만 보여 줍니다.
+      steps: work.contentBlocks.filter((block) => /^세부내용\s/.test(String(block.title || "")))
+        .length,
       text: [work.title, ...subtitles].join("\n"),
       workId: work.id,
     });

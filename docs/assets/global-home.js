@@ -86,7 +86,7 @@
                     <span class="global-work-number">${String(index + 1).padStart(2, "0")}</span>
                     <span class="global-work-copy">
                       <strong>${escapeHtml(item.title)}</strong>
-                      <small>원문 ${escapeHtml(item.description)}</small>
+                      <small>${escapeHtml(item.steps ? `세부 ${item.steps}단계` : "원문 보기")}</small>
                     </span>
                     <span class="global-work-arrow" aria-hidden="true">→</span>
                   </a>
