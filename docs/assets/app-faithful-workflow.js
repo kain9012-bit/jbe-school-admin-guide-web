@@ -1111,7 +1111,7 @@
     const trimmed = query.trim();
     if (!trimmed) {
       searchStatus.textContent =
-        "업무명이나 궁금한 문장을 입력하세요. 치는 동안 결과가 나옵니다.";
+        "업무명이나 궁금한 문장을 입력하고 검색을 누르세요.";
       searchResults.innerHTML = "";
       return;
     }
@@ -1227,13 +1227,8 @@
     runSearch(searchInput.value);
   });
   bindSearchFilters();
-  // 치는 동안 결과를 보여 줍니다. 한 글자마다 다시 찾으면 화면이 튀므로
-  // 손을 멈춘 뒤 잠깐 기다렸다가 찾습니다.
-  let searchTimer = 0;
-  searchInput.addEventListener("input", () => {
-    clearTimeout(searchTimer);
-    searchTimer = setTimeout(() => runSearch(searchInput.value), 180);
-  });
+  // 결과는 검색 단추나 Enter를 눌렀을 때만 바꿉니다.
+  // 치는 동안 바뀌면 읽는 중에 결과가 사라져 오히려 불편합니다.
   // 검색 입력칸에서 Esc를 누르면 브라우저가 입력값만 지우고 이벤트를 멈추므로
   // 대화상자를 직접 닫아 줍니다.
   searchDialog.addEventListener("keydown", (event) => {

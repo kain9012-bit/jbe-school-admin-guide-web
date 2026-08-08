@@ -174,15 +174,14 @@ for (const asset of ["global-home.js", "header-v3.js"]) {
   );
 }
 
-// 검색은 치는 동안 결과를 보여 주되, 한 글자마다 다시 찾아 화면이 튀면 안 됩니다.
-// 손을 멈춘 뒤 잠깐 기다렸다 찾아야 합니다.
+// 검색은 검색 단추나 Enter를 눌렀을 때만 결과를 바꿔야 합니다.
+// 치는 동안 바뀌면 읽는 중에 결과가 사라져 오히려 불편합니다.
 // 찾을 자료 종류도 고를 수 있어야 합니다.
 for (const asset of ["global-home.js", "app-faithful-workflow.js"]) {
   const source = fs.readFileSync(path.join(root, "docs/assets", asset), "utf8");
-  const live = source.includes('searchInput.addEventListener("input"');
   requireCondition(
-    !live || /clearTimeout\(searchTimer\)/.test(source),
-    `${asset}가 한 글자마다 곧바로 다시 찾습니다. 잠깐 기다렸다 찾아야 합니다.`
+    !source.includes('searchInput.addEventListener("input"'),
+    `${asset}가 글자를 칠 때마다 검색 결과를 바꿉니다.`
   );
   requireCondition(
     source.includes("SEARCH_SCOPES") && source.includes("function bindSearchFilters()"),
