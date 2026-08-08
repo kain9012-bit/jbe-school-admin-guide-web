@@ -12,7 +12,10 @@
   const hasWorkRoute = /(^|&)work=/.test(location.hash.replace(/^#/, ""));
   const goHomeWithChapter = Boolean(requested) && !hasWorkRoute;
   const activeChapter = goHomeWithChapter ? null : requested || null;
-  const version = "20260731-home-only";
+  // 자산마다 파일 내용에서 뽑은 번호가 있습니다(scripts/stamp_asset_versions.js).
+  // 예전에는 여기에 날짜를 손으로 적어 두었는데 한 번도 고치지 않아,
+  // 화면 코드를 고쳐도 이용자에게는 예전 파일이 그대로 나갔습니다.
+  const assetVersions = window.GUIDE_ASSET_VERSIONS || {};
 
   window.ACTIVE_GUIDE_CHAPTER = activeChapter;
   window.GUIDE_HOME_OPEN_CHAPTER = goHomeWithChapter ? requested.id : "";
@@ -24,7 +27,8 @@
   function loadScript(src) {
     return new Promise((resolve, reject) => {
       const script = document.createElement("script");
-      script.src = `${src}${src.includes("?") ? "&" : "?"}v=${version}`;
+      const version = assetVersions[src];
+      script.src = version ? `${src}${src.includes("?") ? "&" : "?"}v=${version}` : src;
       script.onload = resolve;
       script.onerror = () => reject(new Error(`${src} 파일을 불러오지 못했습니다.`));
       document.body.appendChild(script);

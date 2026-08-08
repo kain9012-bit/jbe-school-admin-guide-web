@@ -2,6 +2,10 @@ const fs = require("fs");
 const path = require("path");
 const vm = require("vm");
 
+// 자산 주소에는 파일이 바뀔 때마다 달라지는 번호가 붙습니다(assets/x.js?v=1a2b3c).
+// 여기서는 그 번호를 떼고 봅니다. 번호 자체는 validate_asset_versions.js가 봅니다.
+const stripAssetVersions = (html) => html.replace(/\?v=[0-9a-z-]+(?=")/gi, "");
+
 const root = path.resolve(__dirname, "..");
 const context = { window: {} };
 vm.createContext(context);
@@ -129,7 +133,9 @@ requireCondition(
 );
 
 for (const filename of ["index.html"]) {
-  const html = fs.readFileSync(path.join(root, "docs", filename), "utf8");
+  const html = stripAssetVersions(
+    fs.readFileSync(path.join(root, "docs", filename), "utf8")
+  );
   requireCondition(
     html.includes('href="assets/global-home.css"'),
     `${filename}에 통합 홈 스타일이 연결되지 않았습니다.`
@@ -175,7 +181,9 @@ for (const asset of ["global-home.js", "app-faithful-workflow.js"]) {
 }
 
 for (const filename of ["index.html"]) {
-  const html = fs.readFileSync(path.join(root, "docs", filename), "utf8");
+  const html = stripAssetVersions(
+    fs.readFileSync(path.join(root, "docs", filename), "utf8")
+  );
   for (const scope of ["all", "manual", "faq", "form"]) {
     requireCondition(
       html.includes(`data-search-scope="${scope}"`),
@@ -204,7 +212,9 @@ requireCondition(
 );
 
 for (const filename of ["index.html"]) {
-  const html = fs.readFileSync(path.join(root, "docs", filename), "utf8");
+  const html = stripAssetVersions(
+    fs.readFileSync(path.join(root, "docs", filename), "utf8")
+  );
   requireCondition(
     html.includes('id="chapter-dialog-note"'),
     `${filename}의 분야 선택 창 안내 문구가 갱신되지 않습니다.`
@@ -218,7 +228,9 @@ for (const filename of ["index.html"]) {
 // 이용자에게 보이는 문구에 편 수 같은 내부 기준 표현이 없어야 합니다.
 const jargon = ["19개 편", "제19편", "전체 19개"];
 for (const filename of ["index.html"]) {
-  const html = fs.readFileSync(path.join(root, "docs", filename), "utf8");
+  const html = stripAssetVersions(
+    fs.readFileSync(path.join(root, "docs", filename), "utf8")
+  );
   for (const word of jargon) {
     requireCondition(!html.includes(word), `${filename}에 내부 기준 표현 '${word}'이 남아 있습니다.`);
   }

@@ -7,6 +7,10 @@ const fs = require("fs");
 const path = require("path");
 const vm = require("vm");
 
+// 자산 주소에는 파일이 바뀔 때마다 달라지는 번호가 붙습니다(assets/x.js?v=1a2b3c).
+// 여기서는 그 번호를 떼고 봅니다. 번호 자체는 validate_asset_versions.js가 봅니다.
+const stripAssetVersions = (html) => html.replace(/\?v=[0-9a-z-]+(?=")/gi, "");
+
 const root = path.resolve(__dirname, "..");
 const docs = path.join(root, "docs");
 
@@ -159,7 +163,7 @@ for (const asset of ["global-home.js", "app-faithful-workflow.js"]) {
   );
 }
 
-const indexHtml = fs.readFileSync(path.join(docs, "index.html"), "utf8");
+const indexHtml = stripAssetVersions(fs.readFileSync(path.join(docs, "index.html"), "utf8"));
 requireCondition(
   indexHtml.includes("assets/search-query.js"),
   "index.html에 검색 규칙이 연결되지 않았습니다."

@@ -7,6 +7,10 @@
 
 const fs = require("fs");
 const path = require("path");
+
+// 자산 주소에는 파일이 바뀔 때마다 달라지는 번호가 붙습니다(assets/x.js?v=1a2b3c).
+// 여기서는 그 번호를 떼고 봅니다. 번호 자체는 validate_asset_versions.js가 봅니다.
+const stripAssetVersions = (html) => html.replace(/\?v=[0-9a-z-]+(?=")/gi, "");
 const {
   docs,
   loadGuideData,
@@ -76,7 +80,7 @@ for (const forbidden of ["문서 필요성 판단", "업무의 목적과 수신 
 }
 
 // 기본 페이지가 실제로 쓰는 화면 코드에 원문 충실성이 지켜지는지 확인합니다.
-const indexSource = fs.readFileSync(path.join(docs, "index.html"), "utf8");
+const indexSource = stripAssetVersions(fs.readFileSync(path.join(docs, "index.html"), "utf8"));
 const bootstrapSource = fs.readFileSync(
   path.join(docs, "assets", "guide-bootstrap-workflow.js"),
   "utf8"

@@ -10,6 +10,10 @@ const fs = require("fs");
 const path = require("path");
 const { loadGuideData, requireCondition } = require("./lib/load_guide_data");
 
+// 자산 주소에는 파일이 바뀔 때마다 달라지는 번호가 붙습니다(assets/x.js?v=1a2b3c).
+// 여기서는 그 번호를 떼고 봅니다. 번호 자체는 validate_asset_versions.js가 봅니다.
+const stripAssetVersions = (html) => html.replace(/\?v=[0-9a-z-]+(?=")/gi, "");
+
 const root = path.resolve(__dirname, "..");
 const window = loadGuideData();
 const layouts = window.GUIDE_WORKFLOW_LAYOUT;
@@ -141,7 +145,9 @@ requireCondition(
   "글머리표 목록이 한곳에 모여 있지 않습니다. 빠진 기호가 생기면 줄이 앞줄에 붙습니다.",
 );
 
-const indexHtml = fs.readFileSync(path.join(root, "docs/index.html"), "utf8");
+const indexHtml = stripAssetVersions(
+  fs.readFileSync(path.join(root, "docs/index.html"), "utf8")
+);
 requireCondition(
   indexHtml.includes('<ul id="step-actions">'),
   "본문 목록이 번호 매기는 목록이라 원문 번호와 겹쳐 보입니다."
