@@ -154,13 +154,15 @@ requireCondition(
   "편별 화면의 홈 이동이 19개 편 통합 홈으로 연결되지 않습니다."
 );
 
-// 검색은 글자를 칠 때마다가 아니라 검색을 눌렀을 때만 결과를 바꿔야 하고,
-// 찾을 자료 종류를 고를 수 있어야 합니다.
+// 검색은 치는 동안 결과를 보여 주되, 한 글자마다 다시 찾아 화면이 튀면 안 됩니다.
+// 손을 멈춘 뒤 잠깐 기다렸다 찾아야 합니다.
+// 찾을 자료 종류도 고를 수 있어야 합니다.
 for (const asset of ["global-home.js", "app-faithful-workflow.js"]) {
   const source = fs.readFileSync(path.join(root, "docs/assets", asset), "utf8");
+  const live = source.includes('searchInput.addEventListener("input"');
   requireCondition(
-    !source.includes('searchInput.addEventListener("input"'),
-    `${asset}가 글자를 칠 때마다 검색 결과를 바꿉니다.`
+    !live || /clearTimeout\(searchTimer\)/.test(source),
+    `${asset}가 한 글자마다 곧바로 다시 찾습니다. 잠깐 기다렸다 찾아야 합니다.`
   );
   requireCondition(
     source.includes("SEARCH_SCOPES") && source.includes("function bindSearchFilters()"),
@@ -174,7 +176,7 @@ for (const asset of ["global-home.js", "app-faithful-workflow.js"]) {
 
 for (const filename of ["index.html"]) {
   const html = fs.readFileSync(path.join(root, "docs", filename), "utf8");
-  for (const scope of ["all", "work", "faq", "form"]) {
+  for (const scope of ["all", "manual", "faq", "form"]) {
     requireCondition(
       html.includes(`data-search-scope="${scope}"`),
       `${filename}에 '${scope}' 검색 종류 버튼이 없습니다.`

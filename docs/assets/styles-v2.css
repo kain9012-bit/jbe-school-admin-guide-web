@@ -1099,6 +1099,91 @@ input {
   -webkit-box-orient: vertical;
 }
 
+/* 한 업무에서 여러 군데가 맞으면 업무를 머리로 두고 그 아래에 모읍니다.
+   묶지 않으면 한 업무의 조각이 첫 화면을 통째로 차지합니다. */
+.search-group {
+  border: 1px solid var(--guide-line);
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.search-group .search-result {
+  border: 0;
+  border-radius: 0;
+}
+
+.search-hits {
+  display: grid;
+  border-top: 1px solid var(--guide-line);
+}
+
+.search-hit {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.4rem 0.8rem;
+  align-items: baseline;
+  padding: 0.9rem 1.8rem;
+  color: var(--guide-ink);
+  text-decoration: none;
+  background: var(--guide-surface-soft, #f8f9fb);
+}
+
+.search-hit + .search-hit {
+  border-top: 1px solid var(--guide-line);
+}
+
+.search-hit:hover,
+.search-hit:focus-visible {
+  background: var(--guide-blue-pale);
+}
+
+.search-hit-kind {
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  color: var(--guide-muted);
+  background: #fff;
+  border: 1px solid var(--guide-line);
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.search-hit-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+.search-hit-text {
+  grid-column: 2;
+  overflow: hidden;
+  color: var(--guide-muted);
+  font-size: 1.35rem;
+  line-height: 1.5;
+  word-break: keep-all;
+  overflow-wrap: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* 어디가 맞았는지 보여 줍니다. 노란 형광펜은 눈이 아파 옅게 칠합니다. */
+.search-results mark {
+  padding: 0 0.1em;
+  border-radius: 0.2rem;
+  color: var(--guide-blue-dark);
+  background: var(--guide-blue-pale);
+  font-weight: 700;
+}
+
+.search-more {
+  margin: 0;
+  padding: 0.7rem 1.8rem 0.9rem;
+  border-top: 1px solid var(--guide-line);
+  color: var(--guide-muted);
+  font-size: 1.3rem;
+}
+
 mark {
   color: inherit;
   background: #fff1a6;

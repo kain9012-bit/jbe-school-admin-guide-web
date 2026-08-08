@@ -1052,13 +1052,14 @@
   }
 
   // 찾는 자료 종류를 골라 결과를 좁힐 수 있게 합니다.
+  // 예전에는 '업무' 단추가 매뉴얼 본문까지 함께 남겨 아무것도 걸러지지 않았습니다.
   const SEARCH_SCOPES = {
     all: { label: "전체", types: ["업무", "매뉴얼 원문", "FAQ 원문", "서식·예시 원문"] },
-    work: { label: "업무", types: ["업무", "매뉴얼 원문"] },
+    manual: { label: "매뉴얼", types: ["업무", "매뉴얼 원문"] },
     faq: { label: "질문", types: ["FAQ 원문"] },
     form: { label: "서식", types: ["서식·예시 원문"] },
   };
-  const SEARCH_KIND_LABELS = { work: "업무", faq: "질문", form: "서식" };
+  const SEARCH_KIND_LABELS = { work: "본문", faq: "질문", form: "서식" };
   let currentSearchScope = "all";
 
   function searchKindOf(item) {
@@ -1083,49 +1084,99 @@
       : `?chapter=${encodeURIComponent(item.chapterId)}${hash}`;
   }
 
+  // 검색어가 나온 자리를 잘라 굵게 보여 줍니다.
+  // 첫 줄만 보여 주면 '이 결과가 왜 나왔는지'를 알 수 없습니다.
+  // 색인의 text는 맨 앞에 업무 이름을 달고 있습니다. 발췌에 그대로 쓰면
+  // 항목마다 같은 업무 이름으로 시작해 읽기 어렵습니다.
+  function bodyOf(item) {
+    const lines = String(item.text || "").split("\n");
+    return lines.length > 1 ? lines.slice(1).join(" ") : lines[0] || "";
+  }
+
+  function snippetMarkup(text, query) {
+    const pieces = window.GUIDE_SEARCH.snippet(text, query, 150);
+    if (!pieces.length) return "";
+    return pieces
+      .map((piece) =>
+        piece.hit ? `<mark>${escapeHtml(piece.text)}</mark>` : escapeHtml(piece.text)
+      )
+      .join("");
+  }
+
   function runSearch(query) {
     const trimmed = query.trim();
     if (!trimmed) {
       searchStatus.textContent =
-        "업무명이나 궁금한 문장을 입력하고 검색을 누르세요.";
+        "업무명이나 궁금한 문장을 입력하세요. 치는 동안 결과가 나옵니다.";
       searchResults.innerHTML = "";
       return;
     }
     const scope = SEARCH_SCOPES[currentSearchScope] || SEARCH_SCOPES.all;
     const found = window.GUIDE_SEARCH.search(allChapterSearchIndex, trimmed, {
       types: scope.types,
-      limit: 30,
+      limit: 300,
     });
-    const results = found.results;
+    const groups = window.GUIDE_SEARCH.groupByWork(found.results).slice(0, 20);
 
     const where = currentSearchScope === "all" ? "" : `${scope.label}에서 `;
-    const shown =
-      found.total > results.length ? ` (관련 높은 ${results.length}건 표시)` : "";
-    searchStatus.textContent = results.length
-      ? `${where}‘${trimmed}’ 검색 결과 ${found.total}건${shown}`
+    searchStatus.textContent = found.total
+      ? `${where}‘${trimmed}’ 검색 결과 업무 ${groups.length}곳 · 원문 ${found.total}건`
       : `${where}‘${trimmed}’과 일치하는 원문이 없습니다.`;
-    searchResults.innerHTML = results.length
-      ? results
+
+    if (!found.total) {
+      searchResults.innerHTML = `<p class="empty-state">${
+        currentSearchScope === "all"
+          ? "원문에 그 말이 없습니다. 매뉴얼에 쓰인 다른 말로 찾아보세요."
+          : `${scope.label}에는 없습니다. 전체로 바꿔 찾아보세요.`
+      }</p>`;
+      return;
+    }
+
+    searchResults.innerHTML = groups
+      .map((group) => {
+        const head = group.work;
+        const kind = searchKindOf(head);
+        // 업무 자체가 걸린 것이 아니라면 맞은 조각의 글을 발췌합니다.
+        // 묶음 머리글에는 그 업무가 무엇을 다루는지 적습니다.
+        // 여기까지 발췌를 넣으면 바로 아래 항목과 똑같은 글이 두 번 나옵니다.
+        const lead = head.description
+          ? escapeHtml(head.description)
+          : snippetMarkup(head.text, trimmed);
+        const inside = group.hits
+          .filter((entry) => entry.item !== head)
+          .slice(0, 4)
           .map(
-            ({ item }) => `
-              <a class="search-result" href="${escapeHtml(searchResultHref(item))}">
-                <div class="search-result-meta">
-                  <span class="search-result-kind kind-${escapeHtml(
-                    searchKindOf(item)
-                  )}">${escapeHtml(SEARCH_KIND_LABELS[searchKindOf(item)])}</span>
-                  <span>${escapeHtml(chapterName(item))}</span>
-                </div>
-                <h3>${escapeHtml(item.title)}</h3>
-                <p>${escapeHtml(item.description)}</p>
-              </a>
-            `
+            (entry) => `
+              <a class="search-hit" href="${escapeHtml(searchResultHref(entry.item))}">
+                <span class="search-hit-kind kind-${escapeHtml(
+                  searchKindOf(entry.item)
+                )}">${escapeHtml(SEARCH_KIND_LABELS[searchKindOf(entry.item)])}</span>
+                <span class="search-hit-title">${escapeHtml(
+                  String(entry.item.title).replace(/^세부내용\s+/, "") || "본문"
+                )}</span>
+                <span class="search-hit-text">${snippetMarkup(bodyOf(entry.item), trimmed)}</span>
+              </a>`
           )
-          .join("")
-      : `<p class="empty-state">${
-          currentSearchScope === "all"
-            ? "원문에 사용된 다른 단어나 문장으로 검색해 보세요."
-            : `${scope.label}에는 없습니다. 전체로 바꿔 찾아보세요.`
-        }</p>`;
+          .join("");
+        const more = group.hits.length > 5 ? group.hits.length - 5 : 0;
+        return `
+          <section class="search-group">
+            <a class="search-result" href="${escapeHtml(searchResultHref(head))}">
+              <div class="search-result-meta">
+                <span class="search-result-kind kind-${escapeHtml(kind)}">${escapeHtml(
+                  SEARCH_KIND_LABELS[kind]
+                )}</span>
+                <span>${escapeHtml(chapterName(head))}</span>
+              </div>
+              <h3>${escapeHtml(String(head.title).replace(/^세부내용\s+/, ""))}</h3>
+              <p>${lead}</p>
+            </a>
+            ${inside ? `<div class="search-hits">${inside}</div>` : ""}
+            ${more ? `<p class="search-more">이 업무 안에 ${more}곳 더 있습니다.</p>` : ""}
+          </section>
+        `;
+      })
+      .join("");
   }
 
   function bindSearchFilters() {
@@ -1173,8 +1224,13 @@
     runSearch(searchInput.value);
   });
   bindSearchFilters();
-  // 글자를 칠 때마다 결과가 바뀌면 읽기 어려우므로
-  // 검색 버튼을 누르거나 Enter를 쳤을 때만 결과를 바꿉니다.
+  // 치는 동안 결과를 보여 줍니다. 한 글자마다 다시 찾으면 화면이 튀므로
+  // 손을 멈춘 뒤 잠깐 기다렸다가 찾습니다.
+  let searchTimer = 0;
+  searchInput.addEventListener("input", () => {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(() => runSearch(searchInput.value), 180);
+  });
   // 검색 입력칸에서 Esc를 누르면 브라우저가 입력값만 지우고 이벤트를 멈추므로
   // 대화상자를 직접 닫아 줍니다.
   searchDialog.addEventListener("keydown", (event) => {
