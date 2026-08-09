@@ -973,6 +973,11 @@
     renderResources(work, step);
     renderFaqs(work, step, requestedFaqNumber);
 
+    // 단계 화면의 원문 단추도 공식 매뉴얼 PDF만 가리킵니다.
+    // 그 편 PDF가 없으면 감춥니다.
+    const sourceLink = byId("source-page-link");
+    sourceLink.hidden = !data.downloads.manual;
+    if (data.downloads.manual) sourceLink.href = data.downloads.manual;
 
     const prevButton = byId("prev-step");
     const nextButton = byId("next-step");

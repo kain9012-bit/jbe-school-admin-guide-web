@@ -221,8 +221,14 @@
     document.querySelectorAll("[data-section-count]").forEach((target) => {
       target.textContent = String(data.sections.length);
     });
-    // 매뉴얼 원문은 교육청이 한글파일로만 배포합니다. 공식 PDF가 없으므로
-    // '원문 PDF' 단추는 두지 않습니다. 아닌 것을 원문이라고 붙일 수는 없습니다.
+    // 원문 단추는 교육청이 배포한 공식 매뉴얼 PDF만 가리킵니다.
+    // 그 편 PDF가 아직 없으면 단추를 감춥니다. 한글 원문 같은 다른 파일을
+    // 대신 붙이면 공식 자료가 아닌 것을 '원문'이라고 내놓는 셈입니다.
+    //   PDF 받기: node scripts/fetch_official_manuals.mjs
+    document.querySelectorAll("[data-download='manual']").forEach((link) => {
+      setDownload(link, data.downloads.manual);
+      if (link.dataset.label === "chapter") link.textContent = `${chapter.label} PDF 보기`;
+    });
     // 저장되는 파일 이름을 무엇인지 알아볼 수 있게 정해 줍니다.
     // 정해 주지 않으면 'chapter1-forms.hwpx'가 그대로 이름이 됩니다.
     document.querySelectorAll("[data-download='forms']").forEach((link) => {
@@ -231,14 +237,6 @@
     document.querySelectorAll("[data-download='faq']").forEach((link) => {
       setDownload(link, data.downloads.faq, `${fullName} 자주 묻는 질문.hwp`);
     });
-
-    // 내려받을 것이 하나도 없는 편에서는 '원본 자료' 상자를 통째로 감춥니다.
-    // 그러지 않으면 단추 없는 빈 상자만 덩그러니 남습니다.
-    const downloads = document.getElementById("downloads");
-    if (downloads) {
-      const any = [...downloads.querySelectorAll("a[data-download]")].some((link) => !link.hidden);
-      downloads.hidden = !any;
-    }
   }
 
   function patchGeneratedContext() {
