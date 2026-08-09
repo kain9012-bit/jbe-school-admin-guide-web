@@ -236,9 +236,6 @@
     document.querySelectorAll("[data-current-chapter]").forEach((target) => {
       target.textContent = "전체 업무";
     });
-    document.querySelectorAll(".pdf-link").forEach((link) => {
-      link.hidden = true;
-    });
     // 통합 홈에는 분야 목록이 화면에 이미 펼쳐져 있으므로
     // 같은 일을 하는 상단의 분야 선택 버튼은 숨깁니다.
     document.querySelectorAll(".global-nav-item.chapter-select").forEach((button) => {

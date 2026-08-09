@@ -973,23 +973,6 @@
     renderResources(work, step);
     renderFaqs(work, step, requestedFaqNumber);
 
-    // 원문 단추입니다. PDF가 있는 편은 PDF로, 없는 편은 한글 원문으로 잇습니다.
-    // PDF는 제1·3편에만 있습니다. 예전에는 나머지 편에서 주소가 'undefined'가 되어
-    // 눌렀을 때 404가 났습니다.
-    const sourceLink = byId("source-page-link");
-    if (data.downloads.manual) {
-      sourceLink.hidden = false;
-      sourceLink.href = data.downloads.manual;
-      sourceLink.textContent = "원문 PDF";
-      sourceLink.removeAttribute("download");
-    } else if (data.downloads.hwpx) {
-      sourceLink.hidden = false;
-      sourceLink.href = data.downloads.hwpx;
-      sourceLink.textContent = "원문 한글파일";
-      sourceLink.setAttribute("download", `${activeChapter.label} ${activeChapter.title} 매뉴얼.hwpx`);
-    } else {
-      sourceLink.hidden = true;
-    }
 
     const prevButton = byId("prev-step");
     const nextButton = byId("next-step");

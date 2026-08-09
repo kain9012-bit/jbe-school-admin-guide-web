@@ -1,8 +1,8 @@
 // 이 파일은 scripts/stamp_asset_versions.js가 만들어 냅니다.
 // 손으로 고치지 마세요. 자산을 바꾼 뒤 스크립트를 다시 실행하세요.
 window.GUIDE_ASSET_VERSIONS = {
-  "assets/app-faithful-workflow.js": "91517493",
-  "assets/asset-versions.js": "819dfcde",
+  "assets/app-faithful-workflow.js": "1e160043",
+  "assets/asset-versions.js": "ff3f7483",
   "assets/chapter1-data.js": "5c660ca3",
   "assets/chapter10-data.js": "768828bc",
   "assets/chapter11-data.js": "d4b167f4",
@@ -24,12 +24,12 @@ window.GUIDE_ASSET_VERSIONS = {
   "assets/chapter9-data.js": "678fc2a3",
   "assets/form-assets.js": "6935f663",
   "assets/global-home.css": "57572afd",
-  "assets/global-home.js": "72e84b37",
+  "assets/global-home.js": "81bbe842",
   "assets/guide-bootstrap-workflow.js": "96883ad7",
   "assets/guide-config.js": "3965322c",
   "assets/guide-search-index.js": "7190a8f9",
   "assets/header-v3.css": "b5093f7f",
-  "assets/header-v3.js": "98da2973",
+  "assets/header-v3.js": "85d62d65",
   "assets/search-query.js": "aaad7f5c",
   "assets/semantic-workflow.css": "59154615",
   "assets/structured-details.css": "0976d2c5",
