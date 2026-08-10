@@ -1351,3 +1351,29 @@ mark {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* 화면을 정하는 동안 잠깐 보여 주는 글입니다.
+   빨리 끝나면 아예 안 보이도록 0.4초 뒤에 서서히 나타나게 합니다.
+   곧바로 띄우면 이 글이 오히려 깜빡임이 됩니다. */
+.view-loading {
+  margin: 0;
+  padding: 12rem 2rem;
+  color: var(--guide-muted);
+  font-size: 1.5rem;
+  text-align: center;
+  opacity: 0;
+  animation: view-loading-in 200ms ease 400ms forwards;
+}
+
+@keyframes view-loading-in {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .view-loading {
+    animation-delay: 400ms;
+    animation-duration: 1ms;
+  }
+}

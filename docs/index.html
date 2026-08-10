@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#0b50d0" />
     <title>학교행정업무 길라잡이 웹판</title>
     <link rel="stylesheet" href="vendor/krds/krds.min.css?v=80ac1fcd" />
-    <link rel="stylesheet" href="assets/styles-v2.css?v=b9565dd3" />
+    <link rel="stylesheet" href="assets/styles-v2.css?v=b56e98f1" />
     <link rel="stylesheet" href="assets/header-v3.css?v=b5093f7f" />
     <link rel="stylesheet" href="assets/workflow-faithful.css?v=2c36d125" />
     <link rel="stylesheet" href="assets/semantic-workflow.css?v=59154615" />
@@ -83,7 +83,11 @@
     </div>
 
     <main id="main-content" tabindex="-1">
-      <section id="overview-view" class="view">
+      <!-- 화면 코드가 어느 화면을 보여 줄지 정하기 전까지는 둘 다 감춥니다.
+           감추지 않으면 홈에서 업무를 고를 때 편 개요 화면이 0.7초쯤 먼저 보였다가
+           업무 화면으로 바뀌어, 엉뚱한 페이지를 한 번 거치는 것처럼 보입니다. -->
+      <p class="view-loading" id="view-loading">불러오는 중입니다…</p>
+      <section id="overview-view" class="view" hidden>
         <div class="guide-hero">
           <div class="inner">
             <div class="hero-copy">
@@ -289,7 +293,7 @@
     </dialog>
 
     <script src="vendor/krds/krds.min.js?v=579109fc"></script>
-    <script src="assets/asset-versions.js?v=406337e3"></script>
+    <script src="assets/asset-versions.js?v=f176c61e"></script>
     <script src="assets/guide-config.js?v=3965322c"></script>
     <script src="assets/guide-search-index.js?v=7190a8f9"></script>
     <script src="assets/search-query.js?v=aaad7f5c"></script>

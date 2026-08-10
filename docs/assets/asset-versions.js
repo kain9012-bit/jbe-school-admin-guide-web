@@ -1,8 +1,8 @@
 // 이 파일은 scripts/stamp_asset_versions.js가 만들어 냅니다.
 // 손으로 고치지 마세요. 자산을 바꾼 뒤 스크립트를 다시 실행하세요.
 window.GUIDE_ASSET_VERSIONS = {
-  "assets/app-faithful-workflow.js": "7cc5075a",
-  "assets/asset-versions.js": "e60953c5",
+  "assets/app-faithful-workflow.js": "d286641e",
+  "assets/asset-versions.js": "89e341d6",
   "assets/chapter1-data.js": "5c660ca3",
   "assets/chapter10-data.js": "57e91d27",
   "assets/chapter11-data.js": "86e77e66",
@@ -24,7 +24,7 @@ window.GUIDE_ASSET_VERSIONS = {
   "assets/chapter9-data.js": "7ae30ba6",
   "assets/form-assets.js": "6935f663",
   "assets/global-home.css": "57572afd",
-  "assets/global-home.js": "72e84b37",
+  "assets/global-home.js": "d0c80999",
   "assets/guide-bootstrap-workflow.js": "96883ad7",
   "assets/guide-config.js": "3965322c",
   "assets/guide-search-index.js": "7190a8f9",
@@ -34,7 +34,7 @@ window.GUIDE_ASSET_VERSIONS = {
   "assets/semantic-workflow.css": "59154615",
   "assets/structured-details.css": "0976d2c5",
   "assets/structured-details.js": "d11d44a7",
-  "assets/styles-v2.css": "b9565dd3",
+  "assets/styles-v2.css": "b56e98f1",
   "assets/workflow-faithful.css": "2c36d125",
   "assets/workflow-layout.js": "1f27cdc4",
   "vendor/krds/krds.min.css": "80ac1fcd",

@@ -150,6 +150,38 @@ await page.waitForTimeout(900);
   expect(!now.work, "없는 업무 주소인데 빈 업무 화면이 나옵니다.");
 }
 
+// 7. 홈에서 업무를 고를 때, 가는 도중에 엉뚱한 화면이 비치면 안 됩니다.
+//    예전에는 편 개요 화면이 0.7초쯤 먼저 보였다가 업무 화면으로 바뀌었습니다.
+await page.goto(`${base}/index.html`, { waitUntil: "load" });
+await page.waitForTimeout(700);
+await page.evaluate(() => document.querySelector('[data-toggle-chapter="13"]')?.click());
+await page.waitForTimeout(400);
+page.evaluate(() => document.querySelector(".global-work-panel.is-open a.global-work-link")?.click());
+{
+  let sawOverview = false;
+  let reachedWork = false;
+  for (let tries = 0; tries < 30 && !reachedWork; tries += 1) {
+    await page.waitForTimeout(60);
+    const seen = await page
+      .evaluate(() => {
+        const overview = document.getElementById("overview-view");
+        const work = document.getElementById("work-view");
+        return {
+          overview: Boolean(overview) && !overview.hidden,
+          work: Boolean(work) && !work.hidden,
+          home: document.body.classList.contains("global-home-mode"),
+        };
+      })
+      .catch(() => null);
+    if (!seen) continue;
+    // 통합 홈 화면이 아닌데 개요가 보이면, 그것이 스쳐 가는 엉뚱한 화면입니다.
+    if (seen.overview && !seen.home) sawOverview = true;
+    if (seen.work) reachedWork = true;
+  }
+  expect(reachedWork, "홈에서 업무를 골랐는데 업무 화면이 열리지 않습니다.");
+  expect(!sawOverview, "홈에서 업무로 가는 도중에 편 개요 화면이 잠깐 비칩니다.");
+}
+
 await browser.close();
 if (server) server.kill();
 

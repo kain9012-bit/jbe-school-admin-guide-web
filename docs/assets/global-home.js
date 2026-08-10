@@ -132,7 +132,14 @@
     });
   }
 
+  // 화면을 정했으니 '불러오는 중' 자리는 없앱니다.
+  function clearBootNote() {
+    const note = document.getElementById("view-loading");
+    if (note) note.remove();
+  }
+
   function renderGlobalHome() {
+    clearBootNote();
     const available = config.chapters.filter((chapter) => chapter.available);
     document.body.classList.add("global-home-mode");
     workView.hidden = true;

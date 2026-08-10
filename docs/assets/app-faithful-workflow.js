@@ -1029,7 +1029,14 @@
     else if (!stayedInSameWork) window.scrollTo({ top: 0, behavior: "instant" });
   }
 
+  // 화면을 정했으니 '불러오는 중' 자리는 없앱니다.
+  function clearBootNote() {
+    const note = document.getElementById("view-loading");
+    if (note) note.remove();
+  }
+
   function renderRoute() {
+    clearBootNote();
     const raw = location.hash.replace(/^#/, "");
     if (!raw || raw === "overview" || raw === "downloads") {
       currentWorkId = "";
