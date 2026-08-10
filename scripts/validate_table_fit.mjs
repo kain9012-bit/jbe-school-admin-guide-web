@@ -4,9 +4,18 @@
 //   · 모든 열을 똑같이 나눠 긴 칸이 세로로 눌린 적이 있고
 //   · 가로 스크롤로 미뤄 놓고 고쳤다고 한 적이 있습니다.
 //
-// 그래서 두 가지를 기계로 확인합니다.
+// 그래서 세 가지를 기계로 확인합니다.
 //   1. 가로 스크롤이 생기지 않는다 (표가 폭 안에 들어간다)
 //   2. 칸 안에서 낱말이 가운데에서 끊기지 않는다
+//   3. 그림형 표는 격자로 그리지 않는다
+//
+// 3번은 매뉴얼이 흐름도·구성도를 표 칸에 그려 넣은 자리를 말합니다.
+// 칸 하나에 '≫'만 넣어 화살표를 그리고, 자리를 맞추려고 빈 칸을 늘어놓습니다.
+// 그것은 표가 아니라 그림이라, 그대로 격자로 옮기면 빈 칸만 줄줄이 보이고
+// 화살표가 한 칸을 차지해 어디서 어디로 가는 흐름인지 알 수 없습니다.
+//   예) 제19편 물품 관리 처리 절차, 제19편 기타 관리, 제13편 성과평가위원회 구성도
+// 이런 표는 흐름도로 그려야 합니다(structured-details.js).
+// 자료가 아니라 화면에 그려진 결과를 보므로, 그리는 쪽 판별이 틀려도 잡힙니다.
 //
 // 서버는 스스로 띄웁니다. 손으로 켜야 하는 검증은 결국 아무도 안 돌립니다.
 //
@@ -113,10 +122,26 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
       ).catch(() => {});
       await page.waitForTimeout(120);
 
-      const found = await page.evaluate(() =>
-        [...document.querySelectorAll("#step-actions .source-table-scroll")].map((box) => {
+      const found = await page.evaluate(() => {
+        // 매뉴얼 판마다 화살표 글자가 다릅니다. 한 가지만 보면 놓칩니다.
+        const ARROW_ONLY = /^[\s≫⇒→⇨⟹⟶▶►»＞>↓⇓▼⇩⇙⇘⇗⇖←⇐⟵◀◁]+$/u;
+        // 이름표로 쓰기에 너무 긴 글이 든 칸은 그림이 아니라 내용입니다.
+        const LABEL_LIMIT = 40;
+        return [...document.querySelectorAll("#step-actions .source-table-scroll")].map((box) => {
           const table = box.querySelector("table");
           const cells = [...table.querySelectorAll("th, td")];
+          const plain = (cell) => cell.textContent.replace(/\s+/g, " ").trim();
+          // 칸 하나가 통째로 화살표인 표는 흐름도를 격자로 옮긴 것입니다.
+          const arrowCells = cells.filter((cell) => {
+            const value = plain(cell);
+            return Boolean(value) && ARROW_ONLY.test(value);
+          }).length;
+          // 짧은 이름표만 든 격자가 절반 넘게 비어 있으면 그림입니다(구성도).
+          const blankCells = cells.filter((cell) => !plain(cell)).length;
+          const drawnAsPicture =
+            cells.length >= 6 &&
+            blankCells * 2 > cells.length &&
+            cells.every((cell) => [...plain(cell)].length <= LABEL_LIMIT);
           // 낱말이 끊겼는지: 칸 안의 글이 줄바꿈 없이 들어갈 수 있는 폭인지 봅니다.
           let tightSample = "";
           const tight = cells.filter((cell) => {
@@ -158,10 +183,14 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
               box.scrollWidth > box.clientWidth + 1 &&
               table.getAttribute("data-scroll") !== "1",
             tight,
+            arrowCells,
+            blankCells,
+            cellCount: cells.length,
+            drawnAsPicture,
             label: table.getAttribute("aria-label") || "",
           };
-        })
-      );
+        });
+      });
 
       for (const table of found) {
         checked += 1;
@@ -173,6 +202,19 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
           problems.push(
             `${where}: 낱말이 끊기는 칸이 ${table.tight}개 있습니다.` +
               (table.sample ? ` ('${table.sample}')` : "")
+          );
+        }
+        // 그림형 표는 격자로 그리지 않습니다.
+        if (table.arrowCells) {
+          problems.push(
+            `${where}: 화살표만 든 칸이 ${table.arrowCells}개 있습니다. ` +
+              "흐름도를 격자로 그렸습니다. 흐름도로 그려야 합니다."
+          );
+        }
+        if (table.drawnAsPicture) {
+          problems.push(
+            `${where}: 짧은 이름표만 든 격자가 ${table.blankCells}/${table.cellCount}칸 비어 있습니다. ` +
+              "그림을 격자로 그렸습니다. 흐름도로 그려야 합니다."
           );
         }
       }

@@ -121,6 +121,136 @@
   gap: 1.8rem;
 }
 
+/* 그림형 표 — 격자가 아니라 흐름도로 그립니다(structured-details.js).
+   칩 모양은 위쪽 '업무 흐름도'와 같습니다. 같은 그림이 두 가지 모양으로
+   보이면 읽는 사람은 서로 다른 것으로 여깁니다.
+
+   선택자를 .source-flow로 한 번 더 감싸 둡니다. 이 흐름도가 놓이는 자리는
+   .task-block 안이고, styles-v2.css의 '.task-block ol'이 목록을 격자로 바꿉니다.
+   그것에 지면 칸이 한 줄에 하나씩 놓이고 화살표가 화면 끝으로 밀려납니다. */
+.source-full-content:has(> .source-flow:only-child) {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.source-full-detail[data-detail-type="flow"] .source-full-content,
+.source-full-content[data-detail-type="flow"] {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.source-flow {
+  display: grid;
+  gap: 1rem;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+}
+
+.source-flow > .source-flow-line {
+  margin: 0;
+  padding: 0;
+}
+
+.source-flow .source-flow-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1rem;
+  align-items: stretch;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+}
+
+.source-flow .source-flow-step {
+  display: flex;
+  max-width: 100%;
+  min-width: 0;
+  flex: 0 1 auto;
+  gap: 1rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* 단계가 하나뿐인 줄(설명이 딸린 세로 흐름)은 폭을 다 씁니다. */
+.source-flow .source-flow-step:only-child {
+  flex: 1 1 100%;
+}
+
+.source-flow .source-flow-card {
+  display: grid;
+  max-width: 100%;
+  min-width: 0;
+  /* 칸은 제 내용만큼만 넓힙니다. 늘려 두면 한 줄에 하나씩만 놓이고
+     화살표가 화면 오른쪽 끝으로 밀려나 어디로 가는 화살표인지 알 수 없습니다. */
+  flex: 0 1 auto;
+  align-content: start;
+  gap: 0.5rem;
+  padding: 0.9rem 1.4rem;
+  background: #fff;
+  border: 1px solid #b1cefb;
+  border-radius: 0.8rem;
+}
+
+.source-flow .source-flow-name {
+  color: var(--guide-blue-dark);
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.55;
+  /* 낱말 가운데를 끊지 않습니다. 자리가 모자라면 줄을 바꿉니다. */
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.source-flow .source-flow-notes {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--guide-muted);
+  font-size: 1.35rem;
+  line-height: 1.65;
+  list-style: none;
+}
+
+.source-flow .source-flow-notes li {
+  min-width: 0;
+  margin: 0;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.source-flow .source-flow-arrow {
+  flex: none;
+  color: var(--guide-blue);
+  font-size: 1.2rem;
+}
+
+.source-flow > .source-flow-down {
+  margin: 0;
+  padding: 0;
+  color: var(--guide-blue);
+  font-size: 1.2rem;
+  line-height: 1;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  /* 좁은 화면에서는 옆으로 잇는 화살표도 아래를 가리키게 둡니다. */
+  .source-flow .source-flow-row,
+  .source-flow .source-flow-step {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .source-flow .source-flow-arrow {
+    text-align: center;
+  }
+}
+
 .source-table-scroll {
   width: 100%;
   overflow-x: auto;
