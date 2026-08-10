@@ -207,8 +207,39 @@
     target.textContent = chapterName(active);
   });
 
+  // 첫 화면으로 되돌립니다. 열어 둔 분야를 접고, 대화상자를 닫고, 맨 위로 올립니다.
+  // 로고를 눌렀는데 아무 일도 일어나지 않으면 눌러도 되는 것인지 알 수 없습니다.
+  function resetToHome() {
+    document.querySelectorAll("dialog[open]").forEach((dialog) => {
+      if (typeof dialog.close === "function") dialog.close();
+      else dialog.removeAttribute("open");
+    });
+    // 홈과 분야 대화상자 양쪽의 펼친 분야를 모두 접습니다.
+    document
+      .querySelectorAll("[data-toggle-chapter][aria-expanded='true'], [data-dialog-chapter][aria-expanded='true']")
+      .forEach((button) => {
+        const panel = document.getElementById(button.getAttribute("aria-controls"));
+        button.setAttribute("aria-expanded", "false");
+        if (panel) {
+          panel.classList.remove("is-open");
+          panel.hidden = true;
+        }
+      });
+    if (typeof history.replaceState === "function") {
+      history.replaceState(null, "", location.pathname);
+    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   document.querySelectorAll("[data-global-home]").forEach((link) => {
     link.href = globalHomeHref();
+    link.addEventListener("click", (event) => {
+      // 편 화면에서는 통합 홈을 새로 불러와야 합니다. 주소가 달라 그대로 둡니다.
+      if (window.ACTIVE_GUIDE_CHAPTER) return;
+      // 이미 통합 홈이면 새로 불러올 것이 없습니다. 그 자리에서 첫 화면으로 되돌립니다.
+      event.preventDefault();
+      resetToHome();
+    });
   });
 
   function applyChapterContext(event) {

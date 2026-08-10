@@ -25,7 +25,11 @@ const GROUPS = [
 let failed = 0;
 
 // 편을 나눌 필요 없이 한 번만 돌면 되는 것들입니다.
-for (const job of ["validate_card_heights.mjs", "validate_download_links.mjs"]) {
+for (const job of [
+  "validate_card_heights.mjs",
+  "validate_download_links.mjs",
+  "validate_navigation.mjs",
+]) {
   const result = spawnSync("node", [path.join(root, "scripts", job)], {
     cwd: root,
     encoding: "utf8",
