@@ -1377,3 +1377,29 @@ mark {
     animation-duration: 1ms;
   }
 }
+
+/* 화면이 나타날 때 아주 짧게 스며들게 합니다.
+   숨김을 풀 때만 돌아가므로, 같은 업무 안에서 소제목만 바꿀 때는
+   화면이 다시 깜빡이지 않습니다. */
+#overview-view:not([hidden]),
+#work-view:not([hidden]) {
+  animation: view-in 180ms ease both;
+}
+
+@keyframes view-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.6rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #overview-view:not([hidden]),
+  #work-view:not([hidden]) {
+    animation-duration: 1ms;
+  }
+}

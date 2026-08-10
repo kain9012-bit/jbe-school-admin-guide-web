@@ -185,7 +185,16 @@
     // 머리글과 본문을 <thead>·<tbody>로 나누면, 머리글 칸이 아래로 걸친 병합
     // (구 분: 2줄 차지)이 끊깁니다. 한 덩어리로 그리고 첫 줄만 머리글로 표시합니다.
     const grid = visibleCells([headers, ...rows]);
-    const columnCount = headers.reduce((total, cell) => total + (cell.colSpan || 1), 0);
+    // 열 수는 모든 행을 봐야 합니다. 머리글 행만 보면, 머리글이 한 칸뿐인데
+    // 아래 행은 세 칸인 표에서 <col>을 하나만 만들어 표가 폭을 넘어갑니다.
+    const columnCount = grid.reduce((most, row) => {
+      let at = 0;
+      for (const cell of row) {
+        const from = cell.column ?? at;
+        at = from + (cell.colSpan || 1);
+      }
+      return Math.max(most, at);
+    }, 0) || headers.reduce((total, cell) => total + (cell.colSpan || 1), 0);
 
     // 열 너비는 매뉴얼을 만든 사람이 정해 둔 비율을 바탕으로 하되,
     // 어느 열도 자기 낱말보다 좁아지지 않게 손봅니다.
@@ -253,7 +262,11 @@
       // 쉼표·가운뎃점 뒤, 괄호 앞뒤도 줄을 바꿀 수 있는 자리로 둡니다.
       .replace(/([,、·・‧\-–—])(?=\S)/g, "$1\u200B")
       .replace(/(\))(?=[가-힣])/g, "$1\u200B")
-      .replace(/([가-힣\d])(?=[([])/g, "$1\u200B");
+      .replace(/([가-힣\d])(?=[([])/g, "$1\u200B")
+      // 꺾쇠·따옴표로 묶은 이름도 앞뒤에서 줄을 바꿀 수 있게 합니다.
+      //   '<예금잔액불부합조서' 같은 긴 이름이 칸을 넘어가던 자리입니다.
+      .replace(/([<〈《「『'"])(?=\S)/g, "$1\u200B")
+      .replace(/(\S)(?=[<〈《「『])/g, "$1\u200B");
 
   // 열마다 '이보다 좁으면 낱말이 끊긴다' 하는 최소 몫을 구해,
   // 원문 비율이 그보다 좁은 열만 넓혀 줍니다. 넓힌 만큼은 여유 있는
