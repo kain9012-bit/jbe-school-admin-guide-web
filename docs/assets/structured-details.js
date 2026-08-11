@@ -178,7 +178,36 @@
       }
       result.push(line);
     }
+    result.covered = covered;
     return result;
+  }
+
+  // 원문에 아예 칸이 없는 자리는 빈 칸을 하나 넣어 자리를 맞춥니다.
+  // 브라우저는 <td>를 앞에서부터 차례로 놓기 때문에, 첫 칸이 세 번째 열에
+  // 있는 줄을 그대로 내보내면 그 칸이 첫 열로 끌려가 표 전체가 밀립니다.
+  //   제14편 TIP 상자가 그랬습니다. 긴 글이 든 칸이 18% 열에 놓여 낱말이 끊겼습니다.
+  // 위에서 걸쳐 내려온 자리는 브라우저가 이미 알고 있으므로 채우지 않습니다.
+  function fillGaps(grid, columnCount) {
+    return grid.map((row, rowIndex) => {
+      const covered = grid.covered[rowIndex] || [];
+      const line = [];
+      let at = 0;
+      for (const cell of row) {
+        let missing = 0;
+        for (let column = at; column < cell.column; column += 1) {
+          if (!covered[column]) missing += 1;
+        }
+        if (missing) line.push({ filler: true, colSpan: missing });
+        line.push(cell);
+        at = cell.column + (cell.colSpan || 1);
+      }
+      let trailing = 0;
+      for (let column = at; column < columnCount; column += 1) {
+        if (!covered[column]) trailing += 1;
+      }
+      if (trailing) line.push({ filler: true, colSpan: trailing });
+      return line;
+    });
   }
 
   // ── 그림형 표 ────────────────────────────────────────────────────────────
@@ -468,12 +497,15 @@
             ${widths.map((width) => `<col style="width: ${Number(width).toFixed(2)}%" />`).join("")}
           </colgroup>
           <tbody>
-            ${grid
+            ${fillGaps(grid, columnCount)
               .map(
                 (cells, rowIndex) => `
                   <tr>
                     ${cells
                       .map((cell) => {
+                        if (cell.filler) {
+                          return `<td${cell.colSpan > 1 ? ` colspan="${cell.colSpan}"` : ""}></td>`;
+                        }
                         // 원문에서 비어 있는 칸은 비워 둡니다.
                         const lines = bodyLines(unwrap(cell.text));
                         const content = lines.length ? cellMarkup(lines) : "";
@@ -515,6 +547,16 @@
       .replace(/([<〈《「『'"])(?=\S)/g, "$1\u200B")
       .replace(/(\S)(?=[<〈《「『])/g, "$1\u200B");
 
+  // 한 칸이 실제로 어디에서 줄을 바꿀 수 있는지는 unwrap이 정합니다.
+  // 너비를 잴 때도 같은 자리에서 끊어야 합니다. 띄어쓰기만 보고 재면
+  // '징수관·재무관·물품관리관·채권관리관·…'이 끊을 수 없는 한 낱말로 잡혀,
+  // 화면에서는 가운뎃점마다 줄이 바뀌는데도 표를 가로로 넘기게 만듭니다.
+  function breakableWords(value) {
+    return unwrap(normalizeLine(value))
+      .split(/[\s\u200B]+/)
+      .filter(Boolean);
+  }
+
   // 열마다 '이보다 좁으면 낱말이 끊긴다' 하는 최소 몫을 구해,
   // 원문 비율이 그보다 좁은 열만 넓혀 줍니다. 넓힌 만큼은 여유 있는
   // 열에서 비례로 덜어 옵니다. 전체는 늘 100%라 가로 스크롤이 없습니다.
@@ -525,7 +567,7 @@
     for (const row of grid) {
       for (const cell of row) {
         const span = cell.colSpan || 1;
-        const words = normalizeLine(cell.text).split(/\s+/).filter(Boolean);
+        const words = breakableWords(cell.text);
         const most = words.reduce((top, word) => Math.max(top, visualLength(word)), 0) / span;
         for (let offset = 0; offset < span; offset += 1) {
           const column = cell.column + offset;
@@ -542,7 +584,7 @@
       for (const cell of row) {
         const span = cell.colSpan || 1;
         // 여러 칸에 걸친 칸은 자기 몫만큼만 요구합니다.
-        const words = normalizeLine(cell.text).split(/\s+/).filter(Boolean);
+        const words = breakableWords(cell.text);
         const longest = words.reduce((most, word) => Math.max(most, visualLength(word)), 0) / span;
         for (let offset = 0; offset < span; offset += 1) {
           const column = cell.column + offset;
