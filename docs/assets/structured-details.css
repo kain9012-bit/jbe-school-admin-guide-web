@@ -116,6 +116,36 @@
   padding-left: 1.8rem;
 }
 
+/* 표·흐름도·상자를 담는 자리에는 바깥 테두리를 그리지 않습니다.
+   안쪽 것이 이미 자기 테두리를 가지고 있어, 그대로 두면 상자가 두 겹으로 보입니다.
+   제1편 직무대리 '1. 정의'가 그랬습니다. */
+.source-full-content[data-detail-type="table"],
+.source-full-content[data-detail-type="flow"],
+.source-full-content[data-detail-type="note"] {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+/* 매뉴얼이 글 한 덩어리를 상자에 넣어 둔 자리입니다.
+   한글파일에서는 칸이 하나뿐인 표로 들어 있지만 표가 아닙니다. */
+.source-note-box {
+  padding: 1.4rem 1.6rem;
+  color: var(--guide-ink);
+  background: #fff;
+  border: 1px solid var(--guide-line);
+  border-radius: 0.8rem;
+  line-height: 1.75;
+}
+
+.source-note-box ul {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
 .source-table-stack {
   display: grid;
   gap: 1.8rem;

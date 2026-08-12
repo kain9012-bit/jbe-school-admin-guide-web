@@ -707,6 +707,8 @@
     let buffer = [];
     const drawn = new Set();
     let drewGrid = false;
+    let drewFlow = false;
+    let drewNote = false;
     const flush = () => {
       if (!buffer.length) return;
       pieces.push(`<div class="source-structured-intro">${cellMarkup(buffer)}</div>`);
@@ -726,9 +728,23 @@
       const headerCells = (table.headers || []).map((cell) =>
         typeof cell === "string" ? { text: cell, colSpan: 1, rowSpan: 1 } : cell
       );
+      // 칸이 하나뿐인 것은 표가 아니라 매뉴얼이 글을 둘러 둔 상자입니다.
+      // 격자로 그리면 머리글 서식이 붙어 글이 통째로 굵어지고,
+      // 표를 담는 바깥 상자와 겹쳐 테두리가 두 겹으로 보입니다.
+      const onlyCells = [...headerCells, ...(table.rows || []).flat()];
+      if (onlyCells.length === 1) {
+        const noteLines = bodyLines(unwrap(onlyCells[0].text));
+        if (noteLines.length) {
+          drewNote = true;
+          pieces.push(`<div class="source-note-box">${cellMarkup(noteLines)}</div>`);
+          continue;
+        }
+      }
+
       // 그림으로 그린 표는 격자로 옮기지 않고 흐름도로 그립니다.
       const flow = flowFromTable(headerCells, table.rows);
       if (flow) {
+        drewFlow = true;
         pieces.push(flowMarkup(caption, flow));
         continue;
       }
@@ -738,10 +754,14 @@
     flush();
 
     if (!drawn.size) return null;
+    // 한 블록에 여러 가지가 섞이면 가장 무거운 것을 이름으로 삼습니다.
+    const kind = drewGrid ? "table" : drewFlow ? "flow" : "note";
+    const label = { table: "표", flow: "흐름도", note: "내용" }[kind];
+    if (!drewGrid && !drewFlow && !drewNote) return null;
     return {
-      summary: `${caption} ${drewGrid ? "표" : "흐름도"}로 보기`,
+      summary: `${caption} ${label}로 보기`,
       html: pieces.join(""),
-      type: drewGrid ? "table" : "flow",
+      type: kind,
     };
   }
 
