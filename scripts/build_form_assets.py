@@ -33,19 +33,17 @@ class ChapterSource:
     combined_svg: Path
 
 
-CHAPTERS = (
+CHAPTERS = tuple(
     ChapterSource(
-        chapter_id="01",
-        hwpx=DOCS / "downloads" / "chapter1-forms.hwpx",
-        combined_svg=ROOT / "tmp" / "chapter1-forms-kordoc.svg",
-    ),
-    ChapterSource(
-        chapter_id="03",
-        hwpx=DOCS / "downloads" / "chapter3-forms.hwpx",
-        combined_svg=ROOT / "tmp" / "chapter3-forms-kordoc.svg",
-    ),
+        chapter_id=chapter_id,
+        hwpx=DOCS / "downloads" / f"chapter{int(chapter_id)}-forms.hwpx",
+        combined_svg=ROOT / "tmp" / f"chapter{int(chapter_id)}-forms-kordoc.svg",
+    )
+    # 게시판에 서식이 올라와 있는 편만 넣습니다. 제8·10편은 원문에 서식이 없습니다.
+    for chapter_id in (
+        "01", "02", "03", "04", "05", "06", "07", "09", "11", "12", "13", "14", "15", "16", "17", "18", "19",
+    )
 )
-
 
 def local_name(tag: str) -> str:
     return tag.rsplit("}", 1)[-1]
@@ -514,9 +512,14 @@ def strip_layout_cache(hwpx: Path, target: Path) -> int:
 def kordoc_render(source_hwpx: Path, target_svg: Path) -> None:
     command = os.environ.get("KORDOC_CLI")
     if not command:
+        # 설치된 kordoc을 바로 씁니다. 환경변수를 손으로 맞추게 하면 아무도 안 돌립니다.
+        installed = ROOT / "node_modules" / "kordoc" / "dist" / "cli.js"
+        if installed.exists():
+            command = f"node {shlex.quote(str(installed))}"
+    if not command:
         raise RuntimeError(
-            "KORDOC_CLI 환경변수에 kordoc CLI 경로를 지정하세요. "
-            "예: KORDOC_CLI='node ./node_modules/kordoc/dist/cli.js'"
+            "kordoc이 없습니다. npm install --omit=optional 로 설치하거나 "
+            "KORDOC_CLI 환경변수에 CLI 경로를 지정하세요."
         )
     target_svg.parent.mkdir(parents=True, exist_ok=True)
     result = subprocess.run(
