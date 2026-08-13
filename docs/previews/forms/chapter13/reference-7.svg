@@ -1,0 +1,457 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 841.88" width="595.28pt" height="841.88pt" font-family="'HCR Batang','함초롬바탕','Hancom Batang',AppleMyungjo,'Noto Serif CJK KR',serif" xml:space="preserve">
+<defs><clipPath id="pgclip0"><rect x="0" y="0" width="595.28" height="841.88"/></clipPath></defs>
+<g data-page="1" transform="translate(0 0)"><rect width="595.28" height="841.88" fill="white" stroke="#c9c7c4" stroke-width="0.75"/><g clip-path="url(#pgclip0)">
+<text x="64.61" y="102.3" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="37.56" lengthAdjust="spacing">[참고7]</text>
+<text x="180.58" y="146.79" font-size="16" font-family="'HY헤드라인M','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="234.1" lengthAdjust="spacing"> 학교 석면 해체·제거 절차흐름도</text>
+<rect x="59.52" y="162.39" width="43.12" height="17.6" fill="#D6D6D6"/>
+<rect x="102.64" y="162.39" width="118.94" height="17.6" fill="#D6D6D6"/>
+<rect x="221.58" y="162.39" width="115.87" height="17.6" fill="#D6D6D6"/>
+<rect x="337.45" y="162.39" width="103.37" height="17.6" fill="#D6D6D6"/>
+<rect x="440.82" y="162.39" width="97.63" height="17.6" fill="#D6D6D6"/>
+<text x="72.35" y="174.34" font-size="9" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="17.46" lengthAdjust="spacing" font-weight="bold">구분</text>
+<text x="127.05" y="174.34" font-size="9" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="70.11" lengthAdjust="spacing" font-weight="bold">발주자 또는 학교</text>
+<text x="245.26" y="174.34" font-size="9" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="68.49" lengthAdjust="spacing" font-weight="bold">해체·제거업자 등</text>
+<text x="376.04" y="174.34" font-size="9" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="26.19" lengthAdjust="spacing" font-weight="bold">감리인</text>
+<text x="461.18" y="174.34" font-size="9" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="56.88" lengthAdjust="spacing" font-weight="bold">석면 모니터단</text>
+<text x="72.35" y="223.25" font-size="9" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="17.46" lengthAdjust="spacing" font-weight="bold">계획</text>
+<text x="72.35" y="235.85" font-size="9" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="17.46" lengthAdjust="spacing" font-weight="bold">단계</text>
+<text x="136.81" y="193.24" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="50.56" lengthAdjust="spacing">대상학교 선정</text>
+<line x1="115.35" y1="185.03" x2="208.86" y2="185.03" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="193.03" x2="208.86" y2="193.03" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="185.03" x2="115.35" y2="193.03" stroke="#000000" stroke-width="0.34"/>
+<line x1="208.86" y1="185.03" x2="208.86" y2="193.03" stroke="#000000" stroke-width="0.34"/>
+<text x="140.79" y="207" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="42.59" lengthAdjust="spacing">작업범위 및 </text>
+<text x="139.08" y="219.8" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="46.01" lengthAdjust="spacing">집행시기 결정</text>
+<line x1="115.35" y1="198.79" x2="208.86" y2="198.79" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="219.59" x2="208.86" y2="219.59" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="198.79" x2="115.35" y2="219.59" stroke="#000000" stroke-width="0.34"/>
+<line x1="208.86" y1="198.79" x2="208.86" y2="219.59" stroke="#000000" stroke-width="0.34"/>
+<text x="126.15" y="237.4" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="62.32" lengthAdjust="spacing">예산편성 및 배정</text>
+<line x1="110.57" y1="229.19" x2="204.08" y2="229.19" stroke="#000000" stroke-width="0.34"/>
+<line x1="110.57" y1="237.19" x2="204.08" y2="237.19" stroke="#000000" stroke-width="0.34"/>
+<line x1="110.57" y1="229.19" x2="110.57" y2="237.19" stroke="#000000" stroke-width="0.34"/>
+<line x1="204.08" y1="229.19" x2="204.08" y2="237.19" stroke="#000000" stroke-width="0.34"/>
+<text x="136.81" y="251.16" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="50.56" lengthAdjust="spacing">석면해체제거 </text>
+<text x="130.93" y="263.96" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="62.32" lengthAdjust="spacing">책임 관리인 지정</text>
+<line x1="115.35" y1="242.95" x2="208.86" y2="242.95" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="263.75" x2="208.86" y2="263.75" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="242.95" x2="115.35" y2="263.75" stroke="#000000" stroke-width="0.34"/>
+<line x1="208.86" y1="242.95" x2="208.86" y2="263.75" stroke="#000000" stroke-width="0.34"/>
+<text x="70.1" y="342.02" font-size="9" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="21.96" lengthAdjust="spacing" font-weight="bold">설계 </text>
+<text x="76.72" y="356.42" font-size="9" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" font-weight="bold">및</text>
+<text x="72.52" y="370.82" font-size="9" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="17.11" lengthAdjust="spacing" font-weight="bold">집행</text>
+<text x="72.52" y="385.22" font-size="9" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="17.11" lengthAdjust="spacing" font-weight="bold">단계</text>
+<text x="134.47" y="283.8" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="53.07" lengthAdjust="spacing">과업지시서 작성</text>
+<text x="115.67" y="294.62" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="90.68" lengthAdjust="spacing">(해체·제거, 석면농도 및 비산</text>
+<text x="115.67" y="305.02" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="15.62" lengthAdjust="spacing">정도 </text>
+<text x="131.29" y="305.02" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="70.98" lengthAdjust="spacing">측정, 폐기물처리, 감리)</text>
+<line x1="110.57" y1="275.59" x2="204.08" y2="275.59" stroke="#000000" stroke-width="0.34"/>
+<line x1="110.57" y1="286.41" x2="204.08" y2="286.41" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="110.57" y1="275.59" x2="110.57" y2="286.41" stroke="#000000" stroke-width="0.34"/>
+<line x1="204.08" y1="275.59" x2="204.08" y2="286.41" stroke="#000000" stroke-width="0.34"/>
+<line x1="110.57" y1="286.41" x2="204.08" y2="286.41" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="110.57" y1="304.81" x2="204.08" y2="304.81" stroke="#000000" stroke-width="0.34"/>
+<line x1="110.57" y1="286.41" x2="110.57" y2="304.81" stroke="#000000" stroke-width="0.34"/>
+<line x1="204.08" y1="286.41" x2="204.08" y2="304.81" stroke="#000000" stroke-width="0.34"/>
+<text x="142.61" y="322.26" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="38.95" lengthAdjust="spacing">감리인 선정</text>
+<text x="122.2" y="333.08" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="79.77" lengthAdjust="spacing">(법정규모 이하도 선정권장)</text>
+<line x1="115.35" y1="314.05" x2="208.86" y2="314.05" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="324.87" x2="208.86" y2="324.87" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="115.35" y1="314.05" x2="115.35" y2="324.87" stroke="#000000" stroke-width="0.34"/>
+<line x1="208.86" y1="314.05" x2="208.86" y2="324.87" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="324.87" x2="208.86" y2="324.87" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="115.35" y1="332.87" x2="208.86" y2="332.87" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="324.87" x2="115.35" y2="332.87" stroke="#000000" stroke-width="0.34"/>
+<line x1="208.86" y1="324.87" x2="208.86" y2="332.87" stroke="#000000" stroke-width="0.34"/>
+<text x="130.85" y="347.2" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="62.46" lengthAdjust="spacing">해체·제거업자 선정</text>
+<text x="131.4" y="358.02" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="61.37" lengthAdjust="spacing">(부적격 업자 배제,</text>
+<text x="130.27" y="368.42" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="63.63" lengthAdjust="spacing">최소 45일 전 선정)</text>
+<line x1="115.35" y1="338.99" x2="208.86" y2="338.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="349.81" x2="208.86" y2="349.81" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="115.35" y1="338.99" x2="115.35" y2="349.81" stroke="#000000" stroke-width="0.34"/>
+<line x1="208.86" y1="338.99" x2="208.86" y2="349.81" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="349.81" x2="208.86" y2="349.81" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="115.35" y1="368.21" x2="208.86" y2="368.21" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="349.81" x2="115.35" y2="368.21" stroke="#000000" stroke-width="0.34"/>
+<line x1="208.86" y1="349.81" x2="208.86" y2="368.21" stroke="#000000" stroke-width="0.34"/>
+<text x="123.31" y="385.66" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="77.56" lengthAdjust="spacing">석면(비산)농도 측정기관 선정</text>
+<text x="122.68" y="396.48" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="78.81" lengthAdjust="spacing">(분리발주, 이해관계자 배제)</text>
+<line x1="115.35" y1="377.45" x2="208.86" y2="377.45" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="388.27" x2="208.86" y2="388.27" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="115.35" y1="377.45" x2="115.35" y2="388.27" stroke="#000000" stroke-width="0.34"/>
+<line x1="208.86" y1="377.45" x2="208.86" y2="388.27" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="388.27" x2="208.86" y2="388.27" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="115.35" y1="396.27" x2="208.86" y2="396.27" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="388.27" x2="115.35" y2="396.27" stroke="#000000" stroke-width="0.34"/>
+<line x1="208.86" y1="388.27" x2="208.86" y2="396.27" stroke="#000000" stroke-width="0.34"/>
+<text x="118.39" y="413.78" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="77.84" lengthAdjust="spacing">폐기물 처리업자 선정</text>
+<line x1="110.57" y1="405.57" x2="204.08" y2="405.57" stroke="#000000" stroke-width="0.34"/>
+<line x1="110.57" y1="413.57" x2="204.08" y2="413.57" stroke="#000000" stroke-width="0.34"/>
+<line x1="110.57" y1="405.57" x2="110.57" y2="413.57" stroke="#000000" stroke-width="0.34"/>
+<line x1="204.08" y1="405.57" x2="204.08" y2="413.57" stroke="#000000" stroke-width="0.34"/>
+<text x="130.2" y="427.84" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="63.77" lengthAdjust="spacing">석면 모니터단 구성</text>
+<text x="125.87" y="438.66" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="72.44" lengthAdjust="spacing">(구성방안 부록1 참고)</text>
+<line x1="115.35" y1="419.63" x2="208.86" y2="419.63" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="430.45" x2="208.86" y2="430.45" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="115.35" y1="419.63" x2="115.35" y2="430.45" stroke="#000000" stroke-width="0.34"/>
+<line x1="208.86" y1="419.63" x2="208.86" y2="430.45" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="430.45" x2="208.86" y2="430.45" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="115.35" y1="438.45" x2="208.86" y2="438.45" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="430.45" x2="115.35" y2="438.45" stroke="#000000" stroke-width="0.34"/>
+<line x1="208.86" y1="430.45" x2="208.86" y2="438.45" stroke="#000000" stroke-width="0.34"/>
+<text x="354.32" y="333.47" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="74.47" lengthAdjust="spacing">석면 지도 적정성 검토</text>
+<line x1="345.38" y1="322.43" x2="427.57" y2="322.43" stroke="#000000" stroke-width="0.34"/>
+<line x1="345.38" y1="338.91" x2="427.57" y2="338.91" stroke="#000000" stroke-width="0.34"/>
+<line x1="345.38" y1="322.43" x2="345.38" y2="338.91" stroke="#000000" stroke-width="0.34"/>
+<line x1="427.57" y1="322.43" x2="427.57" y2="338.91" stroke="#000000" stroke-width="0.34"/>
+<text x="456.25" y="434.78" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="77.35" lengthAdjust="spacing">석면 모니터단 자체 교육</text>
+<line x1="448.75" y1="423.74" x2="530.94" y2="423.74" stroke="#000000" stroke-width="0.34"/>
+<line x1="448.75" y1="440.22" x2="530.94" y2="440.22" stroke="#000000" stroke-width="0.34"/>
+<line x1="448.75" y1="423.74" x2="448.75" y2="440.22" stroke="#000000" stroke-width="0.34"/>
+<line x1="530.94" y1="423.74" x2="530.94" y2="440.22" stroke="#000000" stroke-width="0.34"/>
+<text x="72.35" y="586.69" font-size="9" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="17.46" lengthAdjust="spacing" font-weight="bold">해체</text>
+<text x="79.64" y="601.09" font-size="9" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" font-weight="bold">·</text>
+<text x="72.35" y="615.49" font-size="9" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="17.46" lengthAdjust="spacing" font-weight="bold">제거</text>
+<text x="72.35" y="629.89" font-size="9" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="17.46" lengthAdjust="spacing" font-weight="bold">단계</text>
+<text x="122.62" y="460.32" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="78.94" lengthAdjust="spacing">석면 해체·제거 설명회 개최</text>
+<text x="122.95" y="471.14" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="78.27" lengthAdjust="spacing">(학생, 교직원, 학부모 등)</text>
+<line x1="115.35" y1="452.11" x2="208.86" y2="452.11" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="462.93" x2="208.86" y2="462.93" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="115.35" y1="452.11" x2="115.35" y2="462.93" stroke="#000000" stroke-width="0.34"/>
+<line x1="208.86" y1="452.11" x2="208.86" y2="462.93" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="462.93" x2="208.86" y2="462.93" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="115.35" y1="470.93" x2="208.86" y2="470.93" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="462.93" x2="115.35" y2="470.93" stroke="#000000" stroke-width="0.34"/>
+<line x1="208.86" y1="462.93" x2="208.86" y2="470.93" stroke="#000000" stroke-width="0.34"/>
+<text x="136.81" y="488.44" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="50.56" lengthAdjust="spacing">작업계획 검토</text>
+<line x1="115.35" y1="480.23" x2="208.86" y2="480.23" stroke="#000000" stroke-width="0.57"/>
+<line x1="115.35" y1="488.23" x2="208.86" y2="488.23" stroke="#000000" stroke-width="0.57"/>
+<line x1="115.35" y1="480.23" x2="115.35" y2="488.23" stroke="#000000" stroke-width="0.57"/>
+<line x1="208.86" y1="480.23" x2="208.86" y2="488.23" stroke="#000000" stroke-width="0.57"/>
+<text x="131.13" y="476.46" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="56.71" lengthAdjust="spacing">감리인 지정 신고</text>
+<text x="123.11" y="487.28" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="72.76" lengthAdjust="spacing">발주자 → 지방자치단체</text>
+<line x1="112.75" y1="468.25" x2="206.26" y2="468.25" stroke="#000000" stroke-width="0.34"/>
+<line x1="112.75" y1="479.07" x2="206.26" y2="479.07" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="112.75" y1="468.25" x2="112.75" y2="479.07" stroke="#000000" stroke-width="0.34"/>
+<line x1="206.26" y1="468.25" x2="206.26" y2="479.07" stroke="#000000" stroke-width="0.34"/>
+<line x1="112.75" y1="479.07" x2="206.26" y2="479.07" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="112.75" y1="487.07" x2="206.26" y2="487.07" stroke="#000000" stroke-width="0.34"/>
+<line x1="112.75" y1="479.07" x2="112.75" y2="487.07" stroke="#000000" stroke-width="0.34"/>
+<line x1="206.26" y1="479.07" x2="206.26" y2="487.07" stroke="#000000" stroke-width="0.34"/>
+<text x="134.52" y="532.56" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="60.13" lengthAdjust="spacing">석면비산측정 확인</text>
+<text x="126.29" y="543.38" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="76.61" lengthAdjust="spacing">측정완료 후 누리집 게시</text>
+<line x1="112.75" y1="524.35" x2="206.26" y2="524.35" stroke="#000000" stroke-width="0.34"/>
+<line x1="112.75" y1="535.17" x2="206.26" y2="535.17" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="112.75" y1="524.35" x2="112.75" y2="535.17" stroke="#000000" stroke-width="0.34"/>
+<line x1="206.26" y1="524.35" x2="206.26" y2="535.17" stroke="#000000" stroke-width="0.34"/>
+<line x1="112.75" y1="535.17" x2="206.26" y2="535.17" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="112.75" y1="543.17" x2="206.26" y2="543.17" stroke="#000000" stroke-width="0.34"/>
+<line x1="112.75" y1="535.17" x2="112.75" y2="543.17" stroke="#000000" stroke-width="0.34"/>
+<line x1="206.26" y1="535.17" x2="206.26" y2="543.17" stroke="#000000" stroke-width="0.34"/>
+<text x="134.53" y="601.26" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="60.13" lengthAdjust="spacing">석면농도측정 확인</text>
+<text x="125.49" y="612.08" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="78.22" lengthAdjust="spacing">측정완료 후 누리집 게시</text>
+<line x1="112.76" y1="593.05" x2="206.27" y2="593.05" stroke="#000000" stroke-width="0.34"/>
+<line x1="112.76" y1="603.87" x2="206.27" y2="603.87" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="112.76" y1="593.05" x2="112.76" y2="603.87" stroke="#000000" stroke-width="0.34"/>
+<line x1="206.27" y1="593.05" x2="206.27" y2="603.87" stroke="#000000" stroke-width="0.34"/>
+<line x1="112.76" y1="603.87" x2="206.27" y2="603.87" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="112.76" y1="611.87" x2="206.27" y2="611.87" stroke="#000000" stroke-width="0.34"/>
+<line x1="112.76" y1="603.87" x2="112.76" y2="611.87" stroke="#000000" stroke-width="0.34"/>
+<line x1="206.27" y1="603.87" x2="206.27" y2="611.87" stroke="#000000" stroke-width="0.34"/>
+<text x="126.05" y="687" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="72.07" lengthAdjust="spacing">(잔재물 조사 합격 시)</text>
+<text x="134.88" y="697.82" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="54.41" lengthAdjust="spacing">준공검사 및 승인</text>
+<line x1="115.35" y1="678.79" x2="208.86" y2="678.79" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="689.61" x2="208.86" y2="689.61" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="115.35" y1="678.79" x2="115.35" y2="689.61" stroke="#000000" stroke-width="0.34"/>
+<line x1="208.86" y1="678.79" x2="208.86" y2="689.61" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="689.61" x2="208.86" y2="689.61" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="115.35" y1="697.61" x2="208.86" y2="697.61" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="689.61" x2="115.35" y2="697.61" stroke="#000000" stroke-width="0.34"/>
+<line x1="208.86" y1="689.61" x2="208.86" y2="697.61" stroke="#000000" stroke-width="0.34"/>
+<text x="120.45" y="713.56" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="93.48" lengthAdjust="spacingAndGlyphs">잔재물 조사 결과 누리집 </text>
+<text x="159.43" y="723.96" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="15.52" lengthAdjust="spacing">게시</text>
+<line x1="115.35" y1="705.35" x2="208.86" y2="705.35" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="723.75" x2="208.86" y2="723.75" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="705.35" x2="115.35" y2="723.75" stroke="#000000" stroke-width="0.34"/>
+<line x1="208.86" y1="705.35" x2="208.86" y2="723.75" stroke="#000000" stroke-width="0.34"/>
+<text x="126.67" y="739.58" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="70.83" lengthAdjust="spacing">감리 결과보고서 제출</text>
+<text x="125.71" y="750.4" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="72.76" lengthAdjust="spacing">발주자 → 지방자치단체</text>
+<line x1="115.35" y1="731.37" x2="208.86" y2="731.37" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="742.19" x2="208.86" y2="742.19" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="115.35" y1="731.37" x2="115.35" y2="742.19" stroke="#000000" stroke-width="0.34"/>
+<line x1="208.86" y1="731.37" x2="208.86" y2="742.19" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="742.19" x2="208.86" y2="742.19" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="115.35" y1="750.19" x2="208.86" y2="750.19" stroke="#000000" stroke-width="0.34"/>
+<line x1="115.35" y1="742.19" x2="115.35" y2="750.19" stroke="#000000" stroke-width="0.34"/>
+<line x1="208.86" y1="742.19" x2="208.86" y2="750.19" stroke="#000000" stroke-width="0.34"/>
+<rect x="232.75" y="452.73" width="93.51" height="10.82" fill="#BFBFBF"/>
+<text x="252.95" y="460.94" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="53.07" lengthAdjust="spacing">작업계획서 작성</text>
+<line x1="232.75" y1="452.73" x2="326.26" y2="452.73" stroke="#000000" stroke-width="0.34"/>
+<line x1="232.75" y1="463.55" x2="326.26" y2="463.55" stroke="#000000" stroke-width="0.34"/>
+<line x1="232.75" y1="452.73" x2="232.75" y2="463.55" stroke="#000000" stroke-width="0.34"/>
+<line x1="326.26" y1="452.73" x2="326.26" y2="463.55" stroke="#000000" stroke-width="0.34"/>
+<rect x="232.75" y="468.41" width="93.51" height="10.82" fill="#BFBFBF"/>
+<text x="242.9" y="476.62" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="73.16" lengthAdjust="spacing">집기류 이동, 사전청소</text>
+<line x1="232.75" y1="468.41" x2="326.26" y2="468.41" stroke="#1C3D62" stroke-width="0.34"/>
+<line x1="232.75" y1="479.23" x2="326.26" y2="479.23" stroke="#1C3D62" stroke-width="0.34"/>
+<line x1="232.75" y1="468.41" x2="232.75" y2="479.23" stroke="#1C3D62" stroke-width="0.34"/>
+<line x1="326.26" y1="468.41" x2="326.26" y2="479.23" stroke="#1C3D62" stroke-width="0.34"/>
+<rect x="229.51" y="484.09" width="93.51" height="8" fill="#BFBFBF"/>
+<text x="245.09" y="492.3" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="62.32" lengthAdjust="spacing">비닐보양 및 밀폐</text>
+<line x1="229.51" y1="484.09" x2="323.02" y2="484.09" stroke="#000000" stroke-width="0.34"/>
+<line x1="229.51" y1="492.09" x2="323.02" y2="492.09" stroke="#000000" stroke-width="0.34"/>
+<line x1="229.51" y1="484.09" x2="229.51" y2="492.09" stroke="#000000" stroke-width="0.34"/>
+<line x1="323.02" y1="484.09" x2="323.02" y2="492.09" stroke="#000000" stroke-width="0.34"/>
+<rect x="232.75" y="498.57" width="93.51" height="10.82" fill="#BFBFBF"/>
+<rect x="232.75" y="509.39" width="93.51" height="8" fill="#BFBFBF"/>
+<text x="239.8" y="506.78" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="89.57" lengthAdjust="spacing">석면작업 신고 및 필증교부</text>
+<text x="252.54" y="517.6" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="64.08" lengthAdjust="spacing">(지방노동관서, 7일 전)</text>
+<line x1="232.75" y1="498.57" x2="326.26" y2="498.57" stroke="#000000" stroke-width="0.34"/>
+<line x1="232.75" y1="509.39" x2="326.26" y2="509.39" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="232.75" y1="498.57" x2="232.75" y2="509.39" stroke="#000000" stroke-width="0.34"/>
+<line x1="326.26" y1="498.57" x2="326.26" y2="509.39" stroke="#000000" stroke-width="0.34"/>
+<line x1="232.75" y1="509.39" x2="326.26" y2="509.39" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="232.75" y1="517.39" x2="326.26" y2="517.39" stroke="#000000" stroke-width="0.34"/>
+<line x1="232.75" y1="509.39" x2="232.75" y2="517.39" stroke="#000000" stroke-width="0.34"/>
+<line x1="326.26" y1="509.39" x2="326.26" y2="517.39" stroke="#000000" stroke-width="0.34"/>
+<text x="242.39" y="531.66" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="74.18" lengthAdjust="spacing">설비 해체·제거(필요시)</text>
+<line x1="232.75" y1="523.45" x2="326.26" y2="523.45" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="232.75" y1="534.27" x2="326.26" y2="534.27" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="232.75" y1="523.45" x2="232.75" y2="534.27" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="326.26" y1="523.45" x2="326.26" y2="534.27" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<rect x="232.75" y="537.51" width="93.51" height="10.82" fill="#BFBFBF"/>
+<rect x="232.75" y="548.33" width="93.51" height="8" fill="#E9AE2B"/>
+<text x="246.43" y="545.72" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="66.1" lengthAdjust="spacing">석면 해체·제거 실시</text>
+<text x="248.1" y="556.54" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="62.78" lengthAdjust="spacing">주변 비산정도측정</text>
+<line x1="232.75" y1="537.51" x2="326.26" y2="537.51" stroke="#000000" stroke-width="0.34"/>
+<line x1="232.75" y1="548.33" x2="326.26" y2="548.33" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="232.75" y1="537.51" x2="232.75" y2="548.33" stroke="#000000" stroke-width="0.34"/>
+<line x1="326.26" y1="537.51" x2="326.26" y2="548.33" stroke="#000000" stroke-width="0.34"/>
+<line x1="232.75" y1="548.33" x2="326.26" y2="548.33" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="232.75" y1="556.33" x2="326.26" y2="556.33" stroke="#000000" stroke-width="0.34"/>
+<line x1="232.75" y1="548.33" x2="232.75" y2="556.33" stroke="#000000" stroke-width="0.34"/>
+<line x1="326.26" y1="548.33" x2="326.26" y2="556.33" stroke="#000000" stroke-width="0.34"/>
+<rect x="232.75" y="562.44" width="93.51" height="23.62" fill="#9BE5C8"/>
+<rect x="232.75" y="586.06" width="93.51" height="8" fill="#9BE5C8"/>
+<text x="237.85" y="570.65" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="83.28" lengthAdjust="spacing">폐기물 처리계획 제출 및 </text>
+<text x="254.12" y="583.45" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="50.74" lengthAdjust="spacing">지정폐기물 처리</text>
+<text x="257" y="594.27" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="44.96" lengthAdjust="spacing">(지방자치단체)</text>
+<line x1="232.75" y1="562.44" x2="326.26" y2="562.44" stroke="#000000" stroke-width="0.34"/>
+<line x1="232.75" y1="586.06" x2="326.26" y2="586.06" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="232.75" y1="562.44" x2="232.75" y2="586.06" stroke="#000000" stroke-width="0.34"/>
+<line x1="326.26" y1="562.44" x2="326.26" y2="586.06" stroke="#000000" stroke-width="0.34"/>
+<line x1="232.75" y1="586.06" x2="326.26" y2="586.06" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="232.75" y1="594.06" x2="326.26" y2="594.06" stroke="#000000" stroke-width="0.34"/>
+<line x1="232.75" y1="586.06" x2="232.75" y2="594.06" stroke="#000000" stroke-width="0.34"/>
+<line x1="326.26" y1="586.06" x2="326.26" y2="594.06" stroke="#000000" stroke-width="0.34"/>
+<rect x="232.75" y="604.93" width="93.51" height="10.82" fill="#BFBFBF"/>
+<text x="245.04" y="613.14" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="68.89" lengthAdjust="spacing" font-weight="bold">잔재물 확인 및 청소</text>
+<line x1="232.75" y1="604.93" x2="326.26" y2="604.93" stroke="#000000" stroke-width="0.34"/>
+<line x1="232.75" y1="615.75" x2="326.26" y2="615.75" stroke="#000000" stroke-width="0.34"/>
+<line x1="232.75" y1="604.93" x2="232.75" y2="615.75" stroke="#000000" stroke-width="0.34"/>
+<line x1="326.26" y1="604.93" x2="326.26" y2="615.75" stroke="#000000" stroke-width="0.34"/>
+<rect x="232.75" y="620.61" width="93.51" height="8" fill="#E9AE2B"/>
+<text x="242.57" y="628.82" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="73.84" lengthAdjust="spacing">작업장 석면농도측정</text>
+<line x1="232.75" y1="620.61" x2="326.26" y2="620.61" stroke="#000000" stroke-width="0.34"/>
+<line x1="232.75" y1="628.61" x2="326.26" y2="628.61" stroke="#000000" stroke-width="0.34"/>
+<line x1="232.75" y1="620.61" x2="232.75" y2="628.61" stroke="#000000" stroke-width="0.34"/>
+<line x1="326.26" y1="620.61" x2="326.26" y2="628.61" stroke="#000000" stroke-width="0.34"/>
+<rect x="232.75" y="636.29" width="93.51" height="8" fill="#BFBFBF"/>
+<text x="261.97" y="644.5" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="35.04" lengthAdjust="spacing">보양 제거</text>
+<line x1="232.75" y1="636.29" x2="326.26" y2="636.29" stroke="#000000" stroke-width="0.34"/>
+<line x1="232.75" y1="644.29" x2="326.26" y2="644.29" stroke="#000000" stroke-width="0.34"/>
+<line x1="232.75" y1="636.29" x2="232.75" y2="644.29" stroke="#000000" stroke-width="0.34"/>
+<line x1="326.26" y1="636.29" x2="326.26" y2="644.29" stroke="#000000" stroke-width="0.34"/>
+<rect x="232.75" y="664.75" width="93.51" height="10.82" fill="#E9AE2B"/>
+<rect x="232.75" y="675.57" width="93.51" height="8" fill="#E9AE2B"/>
+<text x="267.89" y="672.96" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="23.19" lengthAdjust="spacing">청소 후</text>
+<text x="241.98" y="683.78" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="75.01" lengthAdjust="spacing">(석면모니터단과 협의)</text>
+<line x1="232.75" y1="664.75" x2="326.26" y2="664.75" stroke="#000000" stroke-width="0.34"/>
+<line x1="232.75" y1="675.57" x2="326.26" y2="675.57" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="232.75" y1="664.75" x2="232.75" y2="675.57" stroke="#000000" stroke-width="0.34"/>
+<line x1="326.26" y1="664.75" x2="326.26" y2="675.57" stroke="#000000" stroke-width="0.34"/>
+<line x1="232.75" y1="675.57" x2="326.26" y2="675.57" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="232.75" y1="683.57" x2="326.26" y2="683.57" stroke="#000000" stroke-width="0.34"/>
+<line x1="232.75" y1="675.57" x2="232.75" y2="683.57" stroke="#000000" stroke-width="0.34"/>
+<line x1="326.26" y1="675.57" x2="326.26" y2="683.57" stroke="#000000" stroke-width="0.34"/>
+<rect x="232.75" y="691.25" width="93.51" height="10.82" fill="#BFBFBF"/>
+<rect x="232.75" y="702.07" width="93.51" height="8" fill="#BFBFBF"/>
+<text x="243.45" y="699.46" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="72.07" lengthAdjust="spacing">(잔재물 조사 합격 시)</text>
+<text x="242.51" y="710.28" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="73.95" lengthAdjust="spacing">작업완료 및 결과보고</text>
+<line x1="232.75" y1="691.25" x2="326.26" y2="691.25" stroke="#000000" stroke-width="0.34"/>
+<line x1="232.75" y1="702.07" x2="326.26" y2="702.07" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="232.75" y1="691.25" x2="232.75" y2="702.07" stroke="#000000" stroke-width="0.34"/>
+<line x1="326.26" y1="691.25" x2="326.26" y2="702.07" stroke="#000000" stroke-width="0.34"/>
+<line x1="232.75" y1="702.07" x2="326.26" y2="702.07" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="232.75" y1="710.07" x2="326.26" y2="710.07" stroke="#000000" stroke-width="0.34"/>
+<line x1="232.75" y1="702.07" x2="232.75" y2="710.07" stroke="#000000" stroke-width="0.34"/>
+<line x1="326.26" y1="702.07" x2="326.26" y2="710.07" stroke="#000000" stroke-width="0.34"/>
+<text x="365.87" y="459.32" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="56.71" lengthAdjust="spacing">감리계획서 제출 </text>
+<text x="364.1" y="470.14" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="60.27" lengthAdjust="spacing">(작업계획서 검토)</text>
+<line x1="349.45" y1="451.11" x2="428.81" y2="451.11" stroke="#000000" stroke-width="0.34"/>
+<line x1="349.45" y1="461.93" x2="428.81" y2="461.93" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="349.45" y1="451.11" x2="349.45" y2="461.93" stroke="#000000" stroke-width="0.34"/>
+<line x1="428.81" y1="451.11" x2="428.81" y2="461.93" stroke="#000000" stroke-width="0.34"/>
+<line x1="349.45" y1="461.93" x2="428.81" y2="461.93" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="349.45" y1="469.93" x2="428.81" y2="469.93" stroke="#000000" stroke-width="0.34"/>
+<line x1="349.45" y1="461.93" x2="349.45" y2="469.93" stroke="#000000" stroke-width="0.34"/>
+<line x1="428.81" y1="461.93" x2="428.81" y2="469.93" stroke="#000000" stroke-width="0.34"/>
+<text x="354.55" y="547.93" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="69.16" lengthAdjust="spacing">감리일지 작성 및 </text>
+<text x="362.08" y="560.73" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="54.09" lengthAdjust="spacing">상주감리(감리원)</text>
+<line x1="349.45" y1="476.04" x2="428.81" y2="476.04" stroke="#000000" stroke-width="0.34"/>
+<line x1="349.45" y1="627.01" x2="428.81" y2="627.01" stroke="#000000" stroke-width="0.34"/>
+<line x1="349.45" y1="476.04" x2="349.45" y2="627.01" stroke="#000000" stroke-width="0.34"/>
+<line x1="428.81" y1="476.04" x2="428.81" y2="627.01" stroke="#000000" stroke-width="0.34"/>
+<text x="369.87" y="643.27" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="38.52" lengthAdjust="spacing">감리인 확인</text>
+<line x1="349.45" y1="635.06" x2="428.81" y2="635.06" stroke="#000000" stroke-width="0.34"/>
+<line x1="349.45" y1="643.06" x2="428.81" y2="643.06" stroke="#000000" stroke-width="0.34"/>
+<line x1="349.45" y1="635.06" x2="349.45" y2="643.06" stroke="#000000" stroke-width="0.34"/>
+<line x1="428.81" y1="635.06" x2="428.81" y2="643.06" stroke="#000000" stroke-width="0.34"/>
+<text x="369.87" y="655.78" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="38.52" lengthAdjust="spacing">잔재물 조사</text>
+<text x="356.27" y="671.76" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="65.72" lengthAdjust="spacing">(석면 모니터단 합동)</text>
+<line x1="349.45" y1="647.57" x2="428.81" y2="647.57" stroke="#000000" stroke-width="0.34"/>
+<line x1="349.45" y1="658.39" x2="428.81" y2="658.39" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="349.45" y1="647.57" x2="349.45" y2="658.39" stroke="#000000" stroke-width="0.34"/>
+<line x1="428.81" y1="647.57" x2="428.81" y2="658.39" stroke="#000000" stroke-width="0.34"/>
+<line x1="349.45" y1="658.39" x2="428.81" y2="658.39" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="349.45" y1="679.53" x2="428.81" y2="679.53" stroke="#000000" stroke-width="0.34"/>
+<line x1="349.45" y1="658.39" x2="349.45" y2="679.53" stroke="#000000" stroke-width="0.34"/>
+<line x1="428.81" y1="658.39" x2="428.81" y2="679.53" stroke="#000000" stroke-width="0.34"/>
+<text x="368.54" y="692.58" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="41.18" lengthAdjust="spacing">잔재물 조사 </text>
+<text x="370.3" y="702.18" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="37.66" lengthAdjust="spacing">보고서 제출</text>
+<text x="362.64" y="711.6" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="52.97" lengthAdjust="spacing">감리인 → 발주자</text>
+<line x1="349.45" y1="684.37" x2="428.81" y2="684.37" stroke="#000000" stroke-width="0.34"/>
+<line x1="349.45" y1="701.97" x2="428.81" y2="701.97" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="349.45" y1="684.37" x2="349.45" y2="701.97" stroke="#000000" stroke-width="0.34"/>
+<line x1="428.81" y1="684.37" x2="428.81" y2="701.97" stroke="#000000" stroke-width="0.34"/>
+<line x1="349.45" y1="701.97" x2="428.81" y2="701.97" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="349.45" y1="715.62" x2="428.81" y2="715.62" stroke="#000000" stroke-width="0.34"/>
+<line x1="349.45" y1="701.97" x2="349.45" y2="715.62" stroke="#000000" stroke-width="0.34"/>
+<line x1="428.81" y1="701.97" x2="428.81" y2="715.62" stroke="#000000" stroke-width="0.34"/>
+<text x="356.64" y="735.25" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="64.98" lengthAdjust="spacing">감리완료보고서 제출</text>
+<text x="362.64" y="748.9" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="52.97" lengthAdjust="spacing">감리인 → 발주자</text>
+<line x1="349.45" y1="725.62" x2="428.81" y2="725.62" stroke="#000000" stroke-width="0.34"/>
+<line x1="349.45" y1="739.27" x2="428.81" y2="739.27" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="349.45" y1="725.62" x2="349.45" y2="739.27" stroke="#000000" stroke-width="0.34"/>
+<line x1="428.81" y1="725.62" x2="428.81" y2="739.27" stroke="#000000" stroke-width="0.34"/>
+<line x1="349.45" y1="739.27" x2="428.81" y2="739.27" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="349.45" y1="752.92" x2="428.81" y2="752.92" stroke="#000000" stroke-width="0.34"/>
+<line x1="349.45" y1="739.27" x2="349.45" y2="752.92" stroke="#000000" stroke-width="0.34"/>
+<line x1="428.81" y1="739.27" x2="428.81" y2="752.92" stroke="#000000" stroke-width="0.34"/>
+<text x="459.09" y="464.9" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="61.49" lengthAdjust="spacing">설명회 참여 및 지원</text>
+<line x1="448.75" y1="451.03" x2="530.94" y2="451.03" stroke="#000000" stroke-width="0.34"/>
+<line x1="448.75" y1="473.17" x2="530.94" y2="473.17" stroke="#000000" stroke-width="0.34"/>
+<line x1="448.75" y1="451.03" x2="448.75" y2="473.17" stroke="#000000" stroke-width="0.34"/>
+<line x1="530.94" y1="451.03" x2="530.94" y2="473.17" stroke="#000000" stroke-width="0.34"/>
+<text x="456.57" y="487.94" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="76.72" lengthAdjust="spacing">집기류반출, 청소상태 등 확인</text>
+<line x1="448.75" y1="479.73" x2="530.94" y2="479.73" stroke="#000000" stroke-width="0.34"/>
+<line x1="448.75" y1="490.55" x2="530.94" y2="490.55" stroke="#000000" stroke-width="0.34"/>
+<line x1="448.75" y1="479.73" x2="448.75" y2="490.55" stroke="#000000" stroke-width="0.34"/>
+<line x1="530.94" y1="479.73" x2="530.94" y2="490.55" stroke="#000000" stroke-width="0.34"/>
+<text x="453.85" y="501.7" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="71.96" lengthAdjust="spacing">비닐보양, 밀폐여부 </text>
+<text x="483" y="514.5" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="13.66" lengthAdjust="spacing">확인</text>
+<line x1="448.75" y1="493.49" x2="530.94" y2="493.49" stroke="#000000" stroke-width="0.34"/>
+<line x1="448.75" y1="514.29" x2="530.94" y2="514.29" stroke="#000000" stroke-width="0.34"/>
+<line x1="448.75" y1="493.49" x2="448.75" y2="514.29" stroke="#000000" stroke-width="0.34"/>
+<line x1="530.94" y1="493.49" x2="530.94" y2="514.29" stroke="#000000" stroke-width="0.34"/>
+<text x="459.88" y="635.69" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="59.47" lengthAdjust="spacing">석면농도측정 확인</text>
+<line x1="449.94" y1="626.06" x2="529.3" y2="626.06" stroke="#000000" stroke-width="0.34"/>
+<line x1="449.94" y1="639.71" x2="529.3" y2="639.71" stroke="#000000" stroke-width="0.34"/>
+<line x1="449.94" y1="626.06" x2="449.94" y2="639.71" stroke="#000000" stroke-width="0.34"/>
+<line x1="529.3" y1="626.06" x2="529.3" y2="639.71" stroke="#000000" stroke-width="0.34"/>
+<text x="467.44" y="680.76" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="54.56" lengthAdjust="spacing">잔재물 조사 등</text>
+<text x="460.31" y="694.41" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="68.81" lengthAdjust="spacing">(조사방법 부록3 참고)</text>
+<line x1="449.94" y1="671.13" x2="529.3" y2="671.13" stroke="#000000" stroke-width="0.34"/>
+<line x1="449.94" y1="684.78" x2="529.3" y2="684.78" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="449.94" y1="671.13" x2="449.94" y2="684.78" stroke="#000000" stroke-width="0.34"/>
+<line x1="529.3" y1="671.13" x2="529.3" y2="684.78" stroke="#000000" stroke-width="0.34"/>
+<line x1="449.94" y1="684.78" x2="529.3" y2="684.78" stroke="#000000" stroke-width="0.34" stroke-dasharray="3,1.5"/>
+<line x1="449.94" y1="698.43" x2="529.3" y2="698.43" stroke="#000000" stroke-width="0.34"/>
+<line x1="449.94" y1="684.78" x2="449.94" y2="698.43" stroke="#000000" stroke-width="0.34"/>
+<line x1="529.3" y1="684.78" x2="529.3" y2="698.43" stroke="#000000" stroke-width="0.34"/>
+<line x1="59.52" y1="162.39" x2="102.64" y2="162.39" stroke="#000000" stroke-width="1.13"/>
+<line x1="59.52" y1="179.99" x2="102.64" y2="179.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="59.52" y1="162.39" x2="59.52" y2="179.99" stroke="#000000" stroke-width="1.13"/>
+<line x1="102.64" y1="162.39" x2="102.64" y2="179.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="102.64" y1="162.39" x2="221.58" y2="162.39" stroke="#000000" stroke-width="1.13"/>
+<line x1="102.64" y1="179.99" x2="221.58" y2="179.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="102.64" y1="162.39" x2="102.64" y2="179.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="221.58" y1="162.39" x2="221.58" y2="179.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="221.58" y1="162.39" x2="337.45" y2="162.39" stroke="#000000" stroke-width="1.13"/>
+<line x1="221.58" y1="179.99" x2="337.45" y2="179.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="221.58" y1="162.39" x2="221.58" y2="179.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="337.45" y1="162.39" x2="337.45" y2="179.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="337.45" y1="162.39" x2="440.82" y2="162.39" stroke="#000000" stroke-width="1.13"/>
+<line x1="337.45" y1="179.99" x2="440.82" y2="179.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="337.45" y1="162.39" x2="337.45" y2="179.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="440.82" y1="162.39" x2="440.82" y2="179.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="440.82" y1="162.39" x2="538.45" y2="162.39" stroke="#000000" stroke-width="1.13"/>
+<line x1="440.82" y1="179.99" x2="538.45" y2="179.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="440.82" y1="162.39" x2="440.82" y2="179.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="538.45" y1="162.39" x2="538.45" y2="179.99" stroke="#000000" stroke-width="1.13"/>
+<line x1="59.52" y1="179.99" x2="102.64" y2="179.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="59.52" y1="272.8" x2="102.64" y2="272.8" stroke="#000000" stroke-width="0.57"/>
+<line x1="59.52" y1="179.99" x2="59.52" y2="272.8" stroke="#000000" stroke-width="1.13"/>
+<line x1="102.64" y1="179.99" x2="102.64" y2="272.8" stroke="#000000" stroke-width="0.34"/>
+<line x1="102.64" y1="179.99" x2="221.58" y2="179.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="102.64" y1="272.8" x2="221.58" y2="272.8" stroke="#000000" stroke-width="0.57"/>
+<line x1="102.64" y1="179.99" x2="102.64" y2="272.8" stroke="#000000" stroke-width="0.34"/>
+<line x1="221.58" y1="179.99" x2="221.58" y2="272.8" stroke="#000000" stroke-width="0.34"/>
+<line x1="221.58" y1="179.99" x2="337.45" y2="179.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="221.58" y1="272.8" x2="337.45" y2="272.8" stroke="#000000" stroke-width="0.57"/>
+<line x1="221.58" y1="179.99" x2="221.58" y2="272.8" stroke="#000000" stroke-width="0.34"/>
+<line x1="337.45" y1="179.99" x2="337.45" y2="272.8" stroke="#000000" stroke-width="0.34"/>
+<line x1="337.45" y1="179.99" x2="440.82" y2="179.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="337.45" y1="272.8" x2="440.82" y2="272.8" stroke="#000000" stroke-width="0.57"/>
+<line x1="337.45" y1="179.99" x2="337.45" y2="272.8" stroke="#000000" stroke-width="0.34"/>
+<line x1="440.82" y1="179.99" x2="440.82" y2="272.8" stroke="#000000" stroke-width="0.34"/>
+<line x1="440.82" y1="179.99" x2="538.45" y2="179.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="440.82" y1="272.8" x2="538.45" y2="272.8" stroke="#000000" stroke-width="0.57"/>
+<line x1="440.82" y1="179.99" x2="440.82" y2="272.8" stroke="#000000" stroke-width="0.34"/>
+<line x1="538.45" y1="179.99" x2="538.45" y2="272.8" stroke="#000000" stroke-width="1.13"/>
+<line x1="59.52" y1="272.8" x2="102.64" y2="272.8" stroke="#000000" stroke-width="0.57"/>
+<line x1="59.52" y1="448.13" x2="102.64" y2="448.13" stroke="#000000" stroke-width="0.57"/>
+<line x1="59.52" y1="272.8" x2="59.52" y2="448.13" stroke="#000000" stroke-width="1.13"/>
+<line x1="102.64" y1="272.8" x2="102.64" y2="448.13" stroke="#000000" stroke-width="0.34"/>
+<line x1="102.64" y1="272.8" x2="221.58" y2="272.8" stroke="#000000" stroke-width="0.57"/>
+<line x1="102.64" y1="448.13" x2="221.58" y2="448.13" stroke="#000000" stroke-width="0.57"/>
+<line x1="102.64" y1="272.8" x2="102.64" y2="448.13" stroke="#000000" stroke-width="0.34"/>
+<line x1="221.58" y1="272.8" x2="221.58" y2="448.13" stroke="#000000" stroke-width="0.34"/>
+<line x1="221.58" y1="272.8" x2="337.45" y2="272.8" stroke="#000000" stroke-width="0.57"/>
+<line x1="221.58" y1="448.13" x2="337.45" y2="448.13" stroke="#000000" stroke-width="0.57"/>
+<line x1="221.58" y1="272.8" x2="221.58" y2="448.13" stroke="#000000" stroke-width="0.34"/>
+<line x1="337.45" y1="272.8" x2="337.45" y2="448.13" stroke="#000000" stroke-width="0.34"/>
+<line x1="337.45" y1="272.8" x2="440.82" y2="272.8" stroke="#000000" stroke-width="0.57"/>
+<line x1="337.45" y1="448.13" x2="440.82" y2="448.13" stroke="#000000" stroke-width="0.57"/>
+<line x1="337.45" y1="272.8" x2="337.45" y2="448.13" stroke="#000000" stroke-width="0.34"/>
+<line x1="440.82" y1="272.8" x2="440.82" y2="448.13" stroke="#000000" stroke-width="0.34"/>
+<line x1="440.82" y1="272.8" x2="538.45" y2="272.8" stroke="#000000" stroke-width="0.57"/>
+<line x1="440.82" y1="448.13" x2="538.45" y2="448.13" stroke="#000000" stroke-width="0.57"/>
+<line x1="440.82" y1="272.8" x2="440.82" y2="448.13" stroke="#000000" stroke-width="0.34"/>
+<line x1="538.45" y1="272.8" x2="538.45" y2="448.13" stroke="#000000" stroke-width="1.13"/>
+<line x1="59.52" y1="448.13" x2="102.64" y2="448.13" stroke="#000000" stroke-width="0.57"/>
+<line x1="59.52" y1="762.15" x2="102.64" y2="762.15" stroke="#000000" stroke-width="1.13"/>
+<line x1="59.52" y1="448.13" x2="59.52" y2="762.15" stroke="#000000" stroke-width="1.13"/>
+<line x1="102.64" y1="448.13" x2="102.64" y2="762.15" stroke="#000000" stroke-width="0.34"/>
+<line x1="102.64" y1="448.13" x2="221.58" y2="448.13" stroke="#000000" stroke-width="0.57"/>
+<line x1="102.64" y1="762.15" x2="221.58" y2="762.15" stroke="#000000" stroke-width="1.13"/>
+<line x1="102.64" y1="448.13" x2="102.64" y2="762.15" stroke="#000000" stroke-width="0.34"/>
+<line x1="221.58" y1="448.13" x2="221.58" y2="762.15" stroke="#000000" stroke-width="0.34"/>
+<line x1="221.58" y1="448.13" x2="337.45" y2="448.13" stroke="#000000" stroke-width="0.57"/>
+<line x1="221.58" y1="762.15" x2="337.45" y2="762.15" stroke="#000000" stroke-width="1.13"/>
+<line x1="221.58" y1="448.13" x2="221.58" y2="762.15" stroke="#000000" stroke-width="0.34"/>
+<line x1="337.45" y1="448.13" x2="337.45" y2="762.15" stroke="#000000" stroke-width="0.34"/>
+<line x1="337.45" y1="448.13" x2="440.82" y2="448.13" stroke="#000000" stroke-width="0.57"/>
+<line x1="337.45" y1="762.15" x2="440.82" y2="762.15" stroke="#000000" stroke-width="1.13"/>
+<line x1="337.45" y1="448.13" x2="337.45" y2="762.15" stroke="#000000" stroke-width="0.34"/>
+<line x1="440.82" y1="448.13" x2="440.82" y2="762.15" stroke="#000000" stroke-width="0.34"/>
+<line x1="440.82" y1="448.13" x2="538.45" y2="448.13" stroke="#000000" stroke-width="0.57"/>
+<line x1="440.82" y1="762.15" x2="538.45" y2="762.15" stroke="#000000" stroke-width="1.13"/>
+<line x1="440.82" y1="448.13" x2="440.82" y2="762.15" stroke="#000000" stroke-width="0.34"/>
+<line x1="538.45" y1="448.13" x2="538.45" y2="762.15" stroke="#000000" stroke-width="1.13"/>
+<text x="56.69" y="779.61" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="10.32" lengthAdjust="spacing">주)</text>
+<text x="75.01" y="779.61" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="58.32" lengthAdjust="spacing" fill="#4D4D4D">■ 해체제거업자</text>
+<text x="149.33" y="779.61" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="73.84" lengthAdjust="spacing" fill="#FF843A">■ 석면농도측정기관</text>
+<text x="235.17" y="779.61" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="70.08" lengthAdjust="spacing" fill="#289B6E"> ■ 폐기물처리업자</text>
+</g></g>
+</svg>

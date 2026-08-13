@@ -1,0 +1,278 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 1707.72" width="595.28pt" height="1707.72pt" font-family="'HCR Batang','함초롬바탕','Hancom Batang',AppleMyungjo,'Noto Serif CJK KR',serif" xml:space="preserve">
+<defs><clipPath id="pgclip0"><rect x="0" y="0" width="595.28" height="841.86"/></clipPath></defs>
+<g data-page="1" transform="translate(0 0)"><rect width="595.28" height="841.86" fill="white" stroke="#c9c7c4" stroke-width="0.75"/><g clip-path="url(#pgclip0)">
+<text x="64.61" y="101.64" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="37.56" lengthAdjust="spacing">[서식4]</text>
+<text x="205.33" y="140.67" font-size="20" font-family="'HY견고딕','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="184.6" lengthAdjust="spacing">물품관리 실태점검표</text>
+<text x="66.69" y="170.72" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="107.64" lengthAdjust="spacing">▣ 기관(학교)명 : </text>
+<rect x="72.24" y="177.87" width="18.6" height="60.97" fill="#DFE6F7"/>
+<rect x="90.84" y="177.87" width="44.07" height="60.97" fill="#DFE6F7"/>
+<rect x="134.91" y="177.87" width="259.15" height="60.97" fill="#DFE6F7"/>
+<rect x="394.06" y="177.87" width="128.97" height="24.97" fill="#DFE6F7"/>
+<rect x="394.06" y="202.84" width="31.94" height="36" fill="#DFE6F7"/>
+<rect x="426" y="202.84" width="97.03" height="36" fill="#DFE6F7"/>
+<text x="73.8" y="212.91" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" font-weight="bold">순</text>
+<text x="100.26" y="212.91" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="25.22" lengthAdjust="spacing" font-weight="bold">항목</text>
+<text x="232.37" y="212.91" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" font-weight="bold">내</text>
+<text x="283.98" y="212.91" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" font-weight="bold">용</text>
+<text x="430.06" y="194.91" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="56.94" lengthAdjust="spacing" font-weight="bold">자체 점검</text>
+<text x="395.47" y="214.45" font-size="12" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="29.12" lengthAdjust="spacing" font-weight="bold">일치</text>
+<text x="398.39" y="226.45" font-size="12" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="23.28" lengthAdjust="spacing" font-weight="bold">여부</text>
+<text x="395.64" y="238.45" font-size="12" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="28.76" lengthAdjust="spacing" font-weight="bold">(O,X)</text>
+<text x="448.23" y="225.04" font-size="12" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="52.56" lengthAdjust="spacing" font-weight="bold">점검 결과</text>
+<text x="76.53" y="297.3" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif">1</text>
+<text x="97.25" y="288.84" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="31.24" lengthAdjust="spacing" font-weight="bold">물품</text>
+<text x="97.25" y="305.76" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="31.24" lengthAdjust="spacing" font-weight="bold">대장</text>
+<text x="141.32" y="255.55" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="239.38" lengthAdjust="spacing">〇 물품관리대장과 실제 보유 물품 일치 여부</text>
+<text x="161.05" y="272.47" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="226.58" lengthAdjust="spacing">(고가품 및 이동성이 높은 물품 위주: </text>
+<text x="141.32" y="289.39" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="113.7" lengthAdjust="spacing">노트북, 태블릿PC 등)</text>
+<text x="141.32" y="326.37" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="165.44" lengthAdjust="spacing">〇 물품취득 후 대장 반영 여부</text>
+<text x="76.53" y="400.86" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif">2</text>
+<text x="97.25" y="392.4" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="31.24" lengthAdjust="spacing" font-weight="bold">정수</text>
+<text x="97.25" y="409.32" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="31.24" lengthAdjust="spacing" font-weight="bold">물품</text>
+<text x="141.32" y="376.03" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="193.99" lengthAdjust="spacing">〇 정수물품 보유 현황 및 일치 여부</text>
+<text x="141.32" y="425.69" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="193.99" lengthAdjust="spacing">〇 정수물품 변경 시 승인 절차 여부</text>
+<text x="76.53" y="500.18" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif">3</text>
+<text x="97.25" y="491.72" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="31.24" lengthAdjust="spacing" font-weight="bold">물품</text>
+<text x="97.25" y="508.64" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="31.24" lengthAdjust="spacing" font-weight="bold">처분</text>
+<text x="141.32" y="475.35" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="216.68" lengthAdjust="spacing">〇 물품 불용결정 및 처분의 적정성 여부</text>
+<text x="141.32" y="516.55" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="246.32" lengthAdjust="spacing">〇 물품 불용결정 및 처분 시 객관적 </text>
+<text x="141.32" y="533.47" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="102.49" lengthAdjust="spacing">증빙자료 첨부 여부</text>
+<text x="76.53" y="599.5" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif">4</text>
+<text x="97.25" y="591.04" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="31.24" lengthAdjust="spacing" font-weight="bold">물품</text>
+<text x="97.25" y="607.96" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="31.24" lengthAdjust="spacing" font-weight="bold">관리</text>
+<text x="141.32" y="574.67" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="252.37" lengthAdjust="spacing">〇 보유물품에 대한 전자태그(스티커) 부착 여부</text>
+<text x="141.32" y="624.33" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="165.44" lengthAdjust="spacing">〇 장기 미사용 물품 정리 여부</text>
+<line x1="72.24" y1="177.87" x2="90.84" y2="177.87" stroke="#000000" stroke-width="1.13"/>
+<line x1="72.24" y1="238.84" x2="90.84" y2="238.84" stroke="#000000" stroke-width="1.42"/>
+<line x1="72.24" y1="177.87" x2="72.24" y2="238.84" stroke="#000000" stroke-width="1.13"/>
+<line x1="90.84" y1="177.87" x2="90.84" y2="238.84" stroke="#000000" stroke-width="0.34"/>
+<line x1="90.84" y1="177.87" x2="134.91" y2="177.87" stroke="#000000" stroke-width="1.13"/>
+<line x1="90.84" y1="238.84" x2="134.91" y2="238.84" stroke="#000000" stroke-width="1.42"/>
+<line x1="90.84" y1="177.87" x2="90.84" y2="238.84" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="177.87" x2="134.91" y2="238.84" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="177.87" x2="394.06" y2="177.87" stroke="#000000" stroke-width="1.13"/>
+<line x1="134.91" y1="238.84" x2="394.06" y2="238.84" stroke="#000000" stroke-width="1.42"/>
+<line x1="134.91" y1="177.87" x2="134.91" y2="238.84" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="177.87" x2="394.06" y2="238.84" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="177.87" x2="523.03" y2="177.87" stroke="#000000" stroke-width="1.13"/>
+<line x1="394.06" y1="202.84" x2="523.03" y2="202.84" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="177.87" x2="394.06" y2="202.84" stroke="#000000" stroke-width="0.34"/>
+<line x1="523.03" y1="177.87" x2="523.03" y2="202.84" stroke="#000000" stroke-width="1.13"/>
+<line x1="394.06" y1="202.84" x2="426" y2="202.84" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="238.84" x2="426" y2="238.84" stroke="#000000" stroke-width="1.42"/>
+<line x1="394.06" y1="202.84" x2="394.06" y2="238.84" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="202.84" x2="426" y2="238.84" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="202.84" x2="523.03" y2="202.84" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="238.84" x2="523.03" y2="238.84" stroke="#000000" stroke-width="1.42"/>
+<line x1="426" y1="202.84" x2="426" y2="238.84" stroke="#000000" stroke-width="0.34"/>
+<line x1="523.03" y1="202.84" x2="523.03" y2="238.84" stroke="#000000" stroke-width="1.13"/>
+<line x1="72.24" y1="238.84" x2="90.84" y2="238.84" stroke="#000000" stroke-width="1.42"/>
+<line x1="72.24" y1="346.65" x2="90.84" y2="346.65" stroke="#000000" stroke-width="0.34"/>
+<line x1="72.24" y1="238.84" x2="72.24" y2="346.65" stroke="#000000" stroke-width="1.13"/>
+<line x1="90.84" y1="238.84" x2="90.84" y2="346.65" stroke="#000000" stroke-width="0.34"/>
+<line x1="90.84" y1="238.84" x2="134.91" y2="238.84" stroke="#000000" stroke-width="1.42"/>
+<line x1="90.84" y1="346.65" x2="134.91" y2="346.65" stroke="#000000" stroke-width="0.34"/>
+<line x1="90.84" y1="238.84" x2="90.84" y2="346.65" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="238.84" x2="134.91" y2="346.65" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="238.84" x2="394.06" y2="238.84" stroke="#000000" stroke-width="1.42"/>
+<line x1="134.91" y1="296.99" x2="394.06" y2="296.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="238.84" x2="134.91" y2="296.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="238.84" x2="394.06" y2="296.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="238.84" x2="426" y2="238.84" stroke="#000000" stroke-width="1.42"/>
+<line x1="394.06" y1="296.99" x2="426" y2="296.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="238.84" x2="394.06" y2="296.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="238.84" x2="426" y2="296.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="238.84" x2="523.03" y2="238.84" stroke="#000000" stroke-width="1.42"/>
+<line x1="426" y1="296.99" x2="523.03" y2="296.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="238.84" x2="426" y2="296.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="523.03" y1="238.84" x2="523.03" y2="296.99" stroke="#000000" stroke-width="1.13"/>
+<line x1="134.91" y1="296.99" x2="394.06" y2="296.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="346.65" x2="394.06" y2="346.65" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="296.99" x2="134.91" y2="346.65" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="296.99" x2="394.06" y2="346.65" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="296.99" x2="426" y2="296.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="346.65" x2="426" y2="346.65" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="296.99" x2="394.06" y2="346.65" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="296.99" x2="426" y2="346.65" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="296.99" x2="523.03" y2="296.99" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="346.65" x2="523.03" y2="346.65" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="296.99" x2="426" y2="346.65" stroke="#000000" stroke-width="0.34"/>
+<line x1="523.03" y1="296.99" x2="523.03" y2="346.65" stroke="#000000" stroke-width="1.13"/>
+<line x1="72.24" y1="346.65" x2="90.84" y2="346.65" stroke="#000000" stroke-width="0.34"/>
+<line x1="72.24" y1="445.97" x2="90.84" y2="445.97" stroke="#000000" stroke-width="0.34"/>
+<line x1="72.24" y1="346.65" x2="72.24" y2="445.97" stroke="#000000" stroke-width="1.13"/>
+<line x1="90.84" y1="346.65" x2="90.84" y2="445.97" stroke="#000000" stroke-width="0.34"/>
+<line x1="90.84" y1="346.65" x2="134.91" y2="346.65" stroke="#000000" stroke-width="0.34"/>
+<line x1="90.84" y1="445.97" x2="134.91" y2="445.97" stroke="#000000" stroke-width="0.34"/>
+<line x1="90.84" y1="346.65" x2="90.84" y2="445.97" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="346.65" x2="134.91" y2="445.97" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="346.65" x2="394.06" y2="346.65" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="396.31" x2="394.06" y2="396.31" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="346.65" x2="134.91" y2="396.31" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="346.65" x2="394.06" y2="396.31" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="346.65" x2="426" y2="346.65" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="396.31" x2="426" y2="396.31" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="346.65" x2="394.06" y2="396.31" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="346.65" x2="426" y2="396.31" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="346.65" x2="523.03" y2="346.65" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="396.31" x2="523.03" y2="396.31" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="346.65" x2="426" y2="396.31" stroke="#000000" stroke-width="0.34"/>
+<line x1="523.03" y1="346.65" x2="523.03" y2="396.31" stroke="#000000" stroke-width="1.13"/>
+<line x1="134.91" y1="396.31" x2="394.06" y2="396.31" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="445.97" x2="394.06" y2="445.97" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="396.31" x2="134.91" y2="445.97" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="396.31" x2="394.06" y2="445.97" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="396.31" x2="426" y2="396.31" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="445.97" x2="426" y2="445.97" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="396.31" x2="394.06" y2="445.97" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="396.31" x2="426" y2="445.97" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="396.31" x2="523.03" y2="396.31" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="445.97" x2="523.03" y2="445.97" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="396.31" x2="426" y2="445.97" stroke="#000000" stroke-width="0.34"/>
+<line x1="523.03" y1="396.31" x2="523.03" y2="445.97" stroke="#000000" stroke-width="1.13"/>
+<line x1="72.24" y1="445.97" x2="90.84" y2="445.97" stroke="#000000" stroke-width="0.34"/>
+<line x1="72.24" y1="545.29" x2="90.84" y2="545.29" stroke="#000000" stroke-width="0.34"/>
+<line x1="72.24" y1="445.97" x2="72.24" y2="545.29" stroke="#000000" stroke-width="1.13"/>
+<line x1="90.84" y1="445.97" x2="90.84" y2="545.29" stroke="#000000" stroke-width="0.34"/>
+<line x1="90.84" y1="445.97" x2="134.91" y2="445.97" stroke="#000000" stroke-width="0.34"/>
+<line x1="90.84" y1="545.29" x2="134.91" y2="545.29" stroke="#000000" stroke-width="0.34"/>
+<line x1="90.84" y1="445.97" x2="90.84" y2="545.29" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="445.97" x2="134.91" y2="545.29" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="445.97" x2="394.06" y2="445.97" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="495.63" x2="394.06" y2="495.63" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="445.97" x2="134.91" y2="495.63" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="445.97" x2="394.06" y2="495.63" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="445.97" x2="426" y2="445.97" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="495.63" x2="426" y2="495.63" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="445.97" x2="394.06" y2="495.63" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="445.97" x2="426" y2="495.63" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="445.97" x2="523.03" y2="445.97" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="495.63" x2="523.03" y2="495.63" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="445.97" x2="426" y2="495.63" stroke="#000000" stroke-width="0.34"/>
+<line x1="523.03" y1="445.97" x2="523.03" y2="495.63" stroke="#000000" stroke-width="1.13"/>
+<line x1="134.91" y1="495.63" x2="394.06" y2="495.63" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="545.29" x2="394.06" y2="545.29" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="495.63" x2="134.91" y2="545.29" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="495.63" x2="394.06" y2="545.29" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="495.63" x2="426" y2="495.63" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="545.29" x2="426" y2="545.29" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="495.63" x2="394.06" y2="545.29" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="495.63" x2="426" y2="545.29" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="495.63" x2="523.03" y2="495.63" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="545.29" x2="523.03" y2="545.29" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="495.63" x2="426" y2="545.29" stroke="#000000" stroke-width="0.34"/>
+<line x1="523.03" y1="495.63" x2="523.03" y2="545.29" stroke="#000000" stroke-width="1.13"/>
+<line x1="72.24" y1="545.29" x2="90.84" y2="545.29" stroke="#000000" stroke-width="0.34"/>
+<line x1="72.24" y1="644.61" x2="90.84" y2="644.61" stroke="#000000" stroke-width="1.13"/>
+<line x1="72.24" y1="545.29" x2="72.24" y2="644.61" stroke="#000000" stroke-width="1.13"/>
+<line x1="90.84" y1="545.29" x2="90.84" y2="644.61" stroke="#000000" stroke-width="0.34"/>
+<line x1="90.84" y1="545.29" x2="134.91" y2="545.29" stroke="#000000" stroke-width="0.34"/>
+<line x1="90.84" y1="644.61" x2="134.91" y2="644.61" stroke="#000000" stroke-width="1.13"/>
+<line x1="90.84" y1="545.29" x2="90.84" y2="644.61" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="545.29" x2="134.91" y2="644.61" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="545.29" x2="394.06" y2="545.29" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="594.95" x2="394.06" y2="594.95" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="545.29" x2="134.91" y2="594.95" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="545.29" x2="394.06" y2="594.95" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="545.29" x2="426" y2="545.29" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="594.95" x2="426" y2="594.95" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="545.29" x2="394.06" y2="594.95" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="545.29" x2="426" y2="594.95" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="545.29" x2="523.03" y2="545.29" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="594.95" x2="523.03" y2="594.95" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="545.29" x2="426" y2="594.95" stroke="#000000" stroke-width="0.34"/>
+<line x1="523.03" y1="545.29" x2="523.03" y2="594.95" stroke="#000000" stroke-width="1.13"/>
+<line x1="134.91" y1="594.95" x2="394.06" y2="594.95" stroke="#000000" stroke-width="0.34"/>
+<line x1="134.91" y1="644.61" x2="394.06" y2="644.61" stroke="#000000" stroke-width="1.13"/>
+<line x1="134.91" y1="594.95" x2="134.91" y2="644.61" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="594.95" x2="394.06" y2="644.61" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="594.95" x2="426" y2="594.95" stroke="#000000" stroke-width="0.34"/>
+<line x1="394.06" y1="644.61" x2="426" y2="644.61" stroke="#000000" stroke-width="1.13"/>
+<line x1="394.06" y1="594.95" x2="394.06" y2="644.61" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="594.95" x2="426" y2="644.61" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="594.95" x2="523.03" y2="594.95" stroke="#000000" stroke-width="0.34"/>
+<line x1="426" y1="644.61" x2="523.03" y2="644.61" stroke="#000000" stroke-width="1.13"/>
+<line x1="426" y1="594.95" x2="426" y2="644.61" stroke="#000000" stroke-width="0.34"/>
+<line x1="523.03" y1="594.95" x2="523.03" y2="644.61" stroke="#000000" stroke-width="1.13"/>
+<text x="246.16" y="696.99" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="39.93" lengthAdjust="spacing">202〇.</text>
+<text x="313.25" y="696.99" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif">.</text>
+<text x="344.75" y="696.99" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif">.</text>
+<text x="86.33" y="741.99" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="39.52" lengthAdjust="spacing">점검자</text>
+<text x="139.42" y="741.99" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="37.48" lengthAdjust="spacing">소속 :</text>
+<text x="190.48" y="741.99" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="52.69" lengthAdjust="spacing">〇〇학교</text>
+<text x="297.49" y="741.99" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="24.31" lengthAdjust="spacing">직 :</text>
+<text x="389.7" y="741.99" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="37.48" lengthAdjust="spacing">성명 :</text>
+<text x="440.76" y="741.99" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="68.17" lengthAdjust="spacing">○○○ (인)</text>
+<text x="86.33" y="769.99" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="39.52" lengthAdjust="spacing">확인자</text>
+<text x="139.42" y="769.99" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="37.48" lengthAdjust="spacing">소속 :</text>
+<text x="190.48" y="769.99" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="52.69" lengthAdjust="spacing">〇〇학교</text>
+<text x="297.49" y="769.99" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="24.31" lengthAdjust="spacing">직 :</text>
+<text x="389.7" y="769.99" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="37.48" lengthAdjust="spacing">성명 :</text>
+<text x="440.76" y="769.99" font-size="14" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="68.17" lengthAdjust="spacing">○○○ (인)</text>
+</g></g>
+<g data-page="2" transform="translate(0 865.86)"><rect width="595.28" height="841.86" fill="white" stroke="#c9c7c4" stroke-width="0.75"/><g clip-path="url(#pgclip0)">
+<text x="56.69" y="96.08" font-size="13" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="117.78" lengthAdjust="spacing" font-weight="bold">※ 점검 시 제출서류</text>
+<rect x="61.09" y="115.83" width="64.09" height="26.68" fill="#D3D3EB"/>
+<rect x="125.18" y="115.83" width="406.9" height="26.68" fill="#D3D3EB"/>
+<text x="81.49" y="133.37" font-size="12" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="23.28" lengthAdjust="spacing" font-weight="bold">분류</text>
+<text x="281.88" y="133.37" font-size="12" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="93.48" lengthAdjust="spacing" font-weight="bold">점검 시 제출서류</text>
+<text x="66.19" y="347.26" font-size="12" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="53.88" lengthAdjust="spacing" font-weight="bold">에듀파인 </text>
+<text x="66.19" y="361.66" font-size="12" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="53.88" lengthAdjust="spacing" font-weight="bold">시스템 </text>
+<text x="76.19" y="376.06" font-size="12" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="33.87" lengthAdjust="spacing" font-weight="bold">출력물</text>
+<text x="133.28" y="174.11" font-size="11" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="184.47" lengthAdjust="spacing" font-weight="bold">· 물품관리대장(고가 및 휴대용 물품)</text>
+<text x="143.95" y="191.71" font-size="11" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="364.18" lengthAdjust="spacing">[통합자산관리-물품관리-물품운용및처분관리-물품대장운용관리-물품대장관리]</text>
+<text x="133.28" y="234.91" font-size="11" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="260.7" lengthAdjust="spacing" font-weight="bold">· 검수자산정리대상목록 K-에듀파인 화면(스캔) 1부.</text>
+<text x="144.28" y="252.51" font-size="11" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="372.31" lengthAdjust="spacing">[통합자산관리-물품관리-물품계획및취득관리-물품취득관리-검수자산정리대상목록]</text>
+<text x="133.28" y="295.71" font-size="11" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="276.87" lengthAdjust="spacing" font-weight="bold">· 물품취득대장정리 미승인 K-에듀파인 화면(스캔) 1부.</text>
+<text x="144.28" y="313.31" font-size="11" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="372.31" lengthAdjust="spacing">[통합자산관리-물품관리-물품계획및취득관리-물품취득관리-물품취득대장정리목록]</text>
+<text x="133.28" y="356.51" font-size="11" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="221.65" lengthAdjust="spacing" font-weight="bold">· 정수관리물품현황 K-에듀파인 출력물 1부.</text>
+<text x="144.28" y="374.11" font-size="11" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="319.33" lengthAdjust="spacing">[통합자산관리-물품관리-대장및조회-물품현황-정수관리물품현황]</text>
+<text x="133.28" y="399.71" font-size="11" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="283.36" lengthAdjust="spacing" font-weight="bold">· 2025년 물품수급관리계획보고 K-에듀파인 출력물 1부.</text>
+<text x="144.28" y="417.31" font-size="11" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="370.65" lengthAdjust="spacing">[통합자산관리-물품관리-물품계획및취득관리-물품수급계획관리-물품수급관리계획보고]</text>
+<text x="133.28" y="442.91" font-size="11" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="107.91" lengthAdjust="spacing" font-weight="bold">· 불용물품 처리 대장</text>
+<text x="144.12" y="460.51" font-size="11" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="368.02" lengthAdjust="spacing">[통합자산관리-물품관리-물품운용및처분관리-물품대장운용관리-불용신청관리]</text>
+<text x="144.28" y="478.11" font-size="11" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="362.01" lengthAdjust="spacing">[통합자산관리-물품관리-물품운용및처분관리-물품처분관리-물품처분관리]</text>
+<text x="143.95" y="495.71" font-size="11" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="372.31" lengthAdjust="spacing">[통합자산관리-물품관리-물품운용및처분관리-물품처분관리-물품매각운용계약관리]</text>
+<text x="133.28" y="521.31" font-size="11" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="192.5" lengthAdjust="spacing" font-weight="bold">· 물품 매각대금 세입처리 징수부 1부.</text>
+<text x="70.55" y="604.03" font-size="12" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="45.16" lengthAdjust="spacing" font-weight="bold">결재공문</text>
+<text x="133.28" y="594.88" font-size="11" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="11.55" lengthAdjust="spacing" font-weight="bold">· </text>
+<text x="144.83" y="594.88" font-size="11" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="214.97" lengthAdjust="spacing" font-weight="bold">물품수급관리(변경)계획 결재문서 (내부결재)</text>
+<text x="133.28" y="612.48" font-size="11" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="165.2" lengthAdjust="spacing" font-weight="bold">· 20OO~20OO년 물품 관리전환 </text>
+<text x="298.48" y="612.48" font-size="11" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="96.92" lengthAdjust="spacing" font-weight="bold">결재문서 (내부결재)</text>
+<text x="70.55" y="658.88" font-size="12" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="45.16" lengthAdjust="spacing" font-weight="bold">첨부서류</text>
+<text x="133.28" y="649.73" font-size="11" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="207.88" lengthAdjust="spacing" font-weight="bold">· 20OO~20OO년 불용물품 처분 첨부자료</text>
+<text x="133.28" y="667.33" font-size="11" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="207.13" lengthAdjust="spacing" font-weight="bold"> (경제적 수리한계서, 소견서, 견적서 등) </text>
+<line x1="61.09" y1="115.83" x2="125.18" y2="115.83" stroke="#000000" stroke-width="1.13"/>
+<line x1="61.09" y1="142.51" x2="125.18" y2="142.51" stroke="#000000" stroke-width="1.42"/>
+<line x1="61.09" y1="115.83" x2="61.09" y2="142.51" stroke="#000000" stroke-width="1.13"/>
+<line x1="125.18" y1="115.83" x2="125.18" y2="142.51" stroke="#000000" stroke-width="0.34"/>
+<line x1="125.18" y1="115.83" x2="532.08" y2="115.83" stroke="#000000" stroke-width="1.13"/>
+<line x1="125.18" y1="142.51" x2="532.08" y2="142.51" stroke="#000000" stroke-width="1.42"/>
+<line x1="125.18" y1="115.83" x2="125.18" y2="142.51" stroke="#000000" stroke-width="0.34"/>
+<line x1="532.08" y1="115.83" x2="532.08" y2="142.51" stroke="#000000" stroke-width="1.13"/>
+<line x1="61.09" y1="142.51" x2="125.18" y2="142.51" stroke="#000000" stroke-width="1.42"/>
+<line x1="61.09" y1="572.4" x2="125.18" y2="572.4" stroke="#000000" stroke-width="0.34"/>
+<line x1="61.09" y1="142.51" x2="61.09" y2="572.4" stroke="#000000" stroke-width="1.13"/>
+<line x1="125.18" y1="142.51" x2="125.18" y2="572.4" stroke="#000000" stroke-width="0.34"/>
+<line x1="125.18" y1="142.51" x2="532.08" y2="142.51" stroke="#000000" stroke-width="1.42"/>
+<line x1="125.18" y1="572.4" x2="532.08" y2="572.4" stroke="#000000" stroke-width="0.34"/>
+<line x1="125.18" y1="142.51" x2="125.18" y2="572.4" stroke="#000000" stroke-width="0.34"/>
+<line x1="532.08" y1="142.51" x2="532.08" y2="572.4" stroke="#000000" stroke-width="1.13"/>
+<line x1="61.09" y1="572.4" x2="125.18" y2="572.4" stroke="#000000" stroke-width="0.34"/>
+<line x1="61.09" y1="627.26" x2="125.18" y2="627.26" stroke="#000000" stroke-width="0.34"/>
+<line x1="61.09" y1="572.4" x2="61.09" y2="627.26" stroke="#000000" stroke-width="1.13"/>
+<line x1="125.18" y1="572.4" x2="125.18" y2="627.26" stroke="#000000" stroke-width="0.34"/>
+<line x1="125.18" y1="572.4" x2="532.08" y2="572.4" stroke="#000000" stroke-width="0.34"/>
+<line x1="125.18" y1="627.26" x2="532.08" y2="627.26" stroke="#000000" stroke-width="0.34"/>
+<line x1="125.18" y1="572.4" x2="125.18" y2="627.26" stroke="#000000" stroke-width="0.34"/>
+<line x1="532.08" y1="572.4" x2="532.08" y2="627.26" stroke="#000000" stroke-width="1.13"/>
+<line x1="61.09" y1="627.26" x2="125.18" y2="627.26" stroke="#000000" stroke-width="0.34"/>
+<line x1="61.09" y1="682.1" x2="125.18" y2="682.1" stroke="#000000" stroke-width="1.13"/>
+<line x1="61.09" y1="627.26" x2="61.09" y2="682.1" stroke="#000000" stroke-width="1.13"/>
+<line x1="125.18" y1="627.26" x2="125.18" y2="682.1" stroke="#000000" stroke-width="0.34"/>
+<line x1="125.18" y1="627.26" x2="532.08" y2="627.26" stroke="#000000" stroke-width="0.34"/>
+<line x1="125.18" y1="682.1" x2="532.08" y2="682.1" stroke="#000000" stroke-width="1.13"/>
+<line x1="125.18" y1="627.26" x2="125.18" y2="682.1" stroke="#000000" stroke-width="0.34"/>
+<line x1="532.08" y1="627.26" x2="532.08" y2="682.1" stroke="#000000" stroke-width="1.13"/>
+</g></g>
+</svg>

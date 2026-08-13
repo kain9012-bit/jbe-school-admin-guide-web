@@ -1,0 +1,482 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 1707.76" width="595.28pt" height="1707.76pt" font-family="'HCR Batang','함초롬바탕','Hancom Batang',AppleMyungjo,'Noto Serif CJK KR',serif" xml:space="preserve">
+<defs><clipPath id="pgclip0"><rect x="0" y="0" width="595.28" height="841.88"/></clipPath></defs>
+<g data-page="1" transform="translate(0 0)"><rect width="595.28" height="841.88" fill="white" stroke="#c9c7c4" stroke-width="0.75"/><g clip-path="url(#pgclip0)">
+<text x="63.2" y="90.96" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="37.56" lengthAdjust="spacing">[서식4]</text>
+<text x="56.69" y="109.45" font-size="8" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="141.7" lengthAdjust="spacing">■ 기계설비 유지관리기준 [별지 제4호서식]</text>
+<text x="188.75" y="136.25" font-size="16" font-family="'한양견고딕','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="217.76" lengthAdjust="spacing">기계설비 성능점검 결과보고서</text>
+<text x="508.83" y="159.3" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="24.64" lengthAdjust="spacing">(앞 쪽)</text>
+<text x="66.65" y="217.55" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="38.8" lengthAdjust="spacing" font-weight="bold">점검현장</text>
+<text x="76.35" y="233.55" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing" font-weight="bold">개요</text>
+<text x="131.83" y="175.24" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">명</text>
+<text x="156.53" y="175.24" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">칭</text>
+<text x="128.63" y="187.24" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="12.9" lengthAdjust="spacing">(상</text>
+<text x="156.53" y="187.24" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="12.9" lengthAdjust="spacing">호)</text>
+<text x="349.82" y="181.24" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="38.8" lengthAdjust="spacing">선임자격</text>
+<text x="427.66" y="173.24" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="22.6" lengthAdjust="spacing">특급[</text>
+<text x="460.26" y="173.24" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="30.8" lengthAdjust="spacing">] 고급[</text>
+<text x="501.06" y="173.24" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="8.2" lengthAdjust="spacing">] </text>
+<text x="427.66" y="189.24" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="22.6" lengthAdjust="spacing">중급[</text>
+<text x="460.26" y="189.24" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="30.8" lengthAdjust="spacing">] 초급[</text>
+<text x="501.06" y="189.24" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="8.2" lengthAdjust="spacing">] </text>
+<text x="131.83" y="209.72" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">주</text>
+<text x="156.53" y="209.72" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">소</text>
+<text x="131.83" y="238.19" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">용</text>
+<text x="156.53" y="238.19" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">도</text>
+<text x="342.66" y="230.19" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="53.12" lengthAdjust="spacing">연면적 </text>
+<text x="351.47" y="246.19" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="35.5" lengthAdjust="spacing">(세대수)</text>
+<text x="523.76" y="230.19" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">㎡</text>
+<text x="427.66" y="246.19" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">(</text>
+<text x="510.86" y="246.19" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="22.6" lengthAdjust="spacing">세대)</text>
+<text x="129.63" y="269.85" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="38.8" lengthAdjust="spacing">건물구조</text>
+<text x="196.54" y="269.85" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing">지상</text>
+<text x="245.94" y="269.85" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="37.3" lengthAdjust="spacing">층, 지하</text>
+<text x="313.24" y="269.85" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">층</text>
+<text x="350.32" y="261.85" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="38.8" lengthAdjust="spacing">성능점검</text>
+<text x="355.17" y="277.85" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="29.1" lengthAdjust="spacing">기준일</text>
+<text x="66.65" y="319.14" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="38.8" lengthAdjust="spacing" font-weight="bold">관리주체</text>
+<text x="134.33" y="298.75" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">성</text>
+<text x="154.03" y="298.75" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">명</text>
+<text x="131.28" y="311.75" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="35.5" lengthAdjust="spacing">(대표자)</text>
+<text x="350.32" y="304.33" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="38.8" lengthAdjust="spacing">전화번호</text>
+<text x="139.33" y="331.13" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing">주소</text>
+<text x="66.15" y="367.08" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="107" lengthAdjust="spacing" font-weight="bold">점검대상 기계설비 종류</text>
+<text x="100.25" y="398.88" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="38.8" lengthAdjust="spacing" font-weight="bold">점검기간</text>
+<text x="210.48" y="398.88" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">년</text>
+<text x="235.18" y="398.88" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">월</text>
+<text x="259.88" y="398.88" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">일</text>
+<text x="289.58" y="398.88" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">~</text>
+<text x="320.08" y="398.88" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">년</text>
+<text x="344.78" y="398.88" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">월</text>
+<text x="369.48" y="398.88" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="84.6" lengthAdjust="spacing">일 ( 총 점검일수 :</text>
+<text x="484.08" y="398.88" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">)</text>
+<text x="105.1" y="428.62" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="29.1" lengthAdjust="spacing" font-weight="bold">점검자</text>
+<text x="218.98" y="428.62" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="45.2" lengthAdjust="spacing">상호(명칭)</text>
+<text x="344.92" y="428.62" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="29.1" lengthAdjust="spacing">대표자</text>
+<text x="457.96" y="428.62" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="38.8" lengthAdjust="spacing">등록번호</text>
+<text x="90.55" y="454.86" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="58.2" lengthAdjust="spacing">성능점검업자</text>
+<text x="228.44" y="476.52" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="136.1" lengthAdjust="spacing">점검 참여 기계설비유지관리자</text>
+<text x="109.95" y="496.77" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing">성명</text>
+<text x="222.18" y="496.77" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="38.8" lengthAdjust="spacing">등급구분</text>
+<text x="330.37" y="496.77" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="58.2" lengthAdjust="spacing">수첩발급번호</text>
+<text x="457.96" y="496.77" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="38.8" lengthAdjust="spacing">점검기간</text>
+<text x="75.93" y="612.81" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="369.8" lengthAdjust="spacing">｢기계설비법｣ 제17조제3항에 따라 기계설비 성능점검 결과보고서를 제출합니다.</text>
+<text x="455.79" y="638.81" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">년</text>
+<text x="490.49" y="638.81" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">월</text>
+<text x="525.19" y="638.81" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">일</text>
+<text x="311.19" y="664.81" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="38.8" lengthAdjust="spacing">관리주체</text>
+<text x="469.99" y="664.81" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="64.9" lengthAdjust="spacing">(서명 또는 인)</text>
+<text x="78.93" y="695.11" font-size="12" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="248.16" lengthAdjust="spacing">특별자치시장·특별자치도지사·시장·군수·구청장</text>
+<text x="363.09" y="695.11" font-size="12" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="23.28" lengthAdjust="spacing">귀하</text>
+<text x="74.34" y="747.14" font-size="8" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="31.04" lengthAdjust="spacing">첨부서류</text>
+<text x="122.21" y="740.74" font-size="8" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="178.49" lengthAdjust="spacing"> 1. 기계설비 성능점검 대상 점검표(별지 제3호서식) </text>
+<text x="122.21" y="753.54" font-size="8" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="311.66" lengthAdjust="spacing"> 2. [별표 3]에 따른 기계설비 시스템 검토, 성능개선 계획 수립 및 에너지사용량 검토 결과 </text>
+<text x="415.25" y="771.21" font-size="8" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="118.22" lengthAdjust="spacing">210mm×297mm[백상지 80g/㎡]</text>
+<line x1="58.1" y1="161.91" x2="537.74" y2="161.91" stroke="#000000" stroke-width="1.13"/>
+<line x1="58.1" y1="161.91" x2="116.84" y2="161.91" stroke="#000000" stroke-width="1.13"/>
+<line x1="58.1" y1="282.18" x2="116.84" y2="282.18" stroke="#000000" stroke-width="0.34"/>
+<line x1="116.84" y1="161.91" x2="116.84" y2="282.18" stroke="#000000" stroke-width="0.34"/>
+<line x1="116.84" y1="161.91" x2="184.07" y2="161.91" stroke="#000000" stroke-width="1.13"/>
+<line x1="116.84" y1="193.57" x2="184.07" y2="193.57" stroke="#000000" stroke-width="0.34"/>
+<line x1="116.84" y1="161.91" x2="116.84" y2="193.57" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="161.91" x2="184.07" y2="193.57" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="161.91" x2="339.25" y2="161.91" stroke="#000000" stroke-width="1.13"/>
+<line x1="184.07" y1="193.57" x2="339.25" y2="193.57" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="161.91" x2="184.07" y2="193.57" stroke="#000000" stroke-width="0.34"/>
+<line x1="339.25" y1="161.91" x2="339.25" y2="193.57" stroke="#000000" stroke-width="0.34"/>
+<line x1="339.25" y1="161.91" x2="403.05" y2="161.91" stroke="#000000" stroke-width="1.13"/>
+<line x1="339.25" y1="193.57" x2="403.05" y2="193.57" stroke="#000000" stroke-width="0.34"/>
+<line x1="339.25" y1="161.91" x2="339.25" y2="193.57" stroke="#000000" stroke-width="0.34"/>
+<line x1="403.05" y1="161.91" x2="403.05" y2="193.57" stroke="#000000" stroke-width="0.34"/>
+<line x1="403.05" y1="161.91" x2="537.74" y2="161.91" stroke="#000000" stroke-width="1.13"/>
+<line x1="403.05" y1="193.57" x2="537.74" y2="193.57" stroke="#000000" stroke-width="0.34"/>
+<line x1="403.05" y1="161.91" x2="403.05" y2="193.57" stroke="#000000" stroke-width="0.34"/>
+<line x1="116.84" y1="193.57" x2="184.07" y2="193.57" stroke="#000000" stroke-width="0.34"/>
+<line x1="116.84" y1="218.86" x2="184.07" y2="218.86" stroke="#000000" stroke-width="0.34"/>
+<line x1="116.84" y1="193.57" x2="116.84" y2="218.86" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="193.57" x2="184.07" y2="218.86" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="193.57" x2="537.74" y2="193.57" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="218.86" x2="537.74" y2="218.86" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="193.57" x2="184.07" y2="218.86" stroke="#000000" stroke-width="0.34"/>
+<line x1="116.84" y1="218.86" x2="184.07" y2="218.86" stroke="#000000" stroke-width="0.34"/>
+<line x1="116.84" y1="250.52" x2="184.07" y2="250.52" stroke="#000000" stroke-width="0.34"/>
+<line x1="116.84" y1="218.86" x2="116.84" y2="250.52" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="218.86" x2="184.07" y2="250.52" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="218.86" x2="339.25" y2="218.86" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="250.52" x2="339.25" y2="250.52" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="218.86" x2="184.07" y2="250.52" stroke="#000000" stroke-width="0.34"/>
+<line x1="339.25" y1="218.86" x2="339.25" y2="250.52" stroke="#000000" stroke-width="0.34"/>
+<line x1="339.25" y1="218.86" x2="403.05" y2="218.86" stroke="#000000" stroke-width="0.34"/>
+<line x1="339.25" y1="250.52" x2="403.05" y2="250.52" stroke="#000000" stroke-width="0.34"/>
+<line x1="339.25" y1="218.86" x2="339.25" y2="250.52" stroke="#000000" stroke-width="0.34"/>
+<line x1="403.05" y1="218.86" x2="403.05" y2="250.52" stroke="#000000" stroke-width="0.34"/>
+<line x1="403.05" y1="218.86" x2="537.74" y2="218.86" stroke="#000000" stroke-width="0.34"/>
+<line x1="403.05" y1="250.52" x2="537.74" y2="250.52" stroke="#000000" stroke-width="0.34"/>
+<line x1="403.05" y1="218.86" x2="403.05" y2="250.52" stroke="#000000" stroke-width="0.34"/>
+<line x1="116.84" y1="250.52" x2="184.07" y2="250.52" stroke="#000000" stroke-width="0.34"/>
+<line x1="116.84" y1="282.18" x2="184.07" y2="282.18" stroke="#000000" stroke-width="0.34"/>
+<line x1="116.84" y1="250.52" x2="116.84" y2="282.18" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="250.52" x2="184.07" y2="282.18" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="250.52" x2="339.25" y2="250.52" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="282.18" x2="339.25" y2="282.18" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="250.52" x2="184.07" y2="282.18" stroke="#000000" stroke-width="0.34"/>
+<line x1="339.25" y1="250.52" x2="339.25" y2="282.18" stroke="#000000" stroke-width="0.34"/>
+<line x1="339.25" y1="250.52" x2="403.05" y2="250.52" stroke="#000000" stroke-width="0.34"/>
+<line x1="339.25" y1="282.18" x2="403.05" y2="282.18" stroke="#000000" stroke-width="0.34"/>
+<line x1="339.25" y1="250.52" x2="339.25" y2="282.18" stroke="#000000" stroke-width="0.34"/>
+<line x1="403.05" y1="250.52" x2="403.05" y2="282.18" stroke="#000000" stroke-width="0.34"/>
+<line x1="403.05" y1="250.52" x2="537.74" y2="250.52" stroke="#000000" stroke-width="0.34"/>
+<line x1="403.05" y1="282.18" x2="537.74" y2="282.18" stroke="#000000" stroke-width="0.34"/>
+<line x1="403.05" y1="250.52" x2="403.05" y2="282.18" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="282.18" x2="537.74" y2="282.18" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="288.84" x2="537.74" y2="288.84" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="288.84" x2="116.84" y2="288.84" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="342.44" x2="116.84" y2="342.44" stroke="#000000" stroke-width="0.34"/>
+<line x1="116.84" y1="288.84" x2="116.84" y2="342.44" stroke="#000000" stroke-width="0.34"/>
+<line x1="116.84" y1="288.84" x2="184.07" y2="288.84" stroke="#000000" stroke-width="0.34"/>
+<line x1="116.84" y1="312.81" x2="184.07" y2="312.81" stroke="#000000" stroke-width="0.34"/>
+<line x1="116.84" y1="288.84" x2="116.84" y2="312.81" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="288.84" x2="184.07" y2="312.81" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="288.84" x2="339.25" y2="288.84" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="312.81" x2="339.25" y2="312.81" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="288.84" x2="184.07" y2="312.81" stroke="#000000" stroke-width="0.34"/>
+<line x1="339.25" y1="288.84" x2="339.25" y2="312.81" stroke="#000000" stroke-width="0.34"/>
+<line x1="339.25" y1="288.84" x2="403.05" y2="288.84" stroke="#000000" stroke-width="0.34"/>
+<line x1="339.25" y1="312.81" x2="403.05" y2="312.81" stroke="#000000" stroke-width="0.34"/>
+<line x1="339.25" y1="288.84" x2="339.25" y2="312.81" stroke="#000000" stroke-width="0.34"/>
+<line x1="403.05" y1="288.84" x2="403.05" y2="312.81" stroke="#000000" stroke-width="0.34"/>
+<line x1="403.05" y1="288.84" x2="537.74" y2="288.84" stroke="#000000" stroke-width="0.34"/>
+<line x1="403.05" y1="312.81" x2="537.74" y2="312.81" stroke="#000000" stroke-width="0.34"/>
+<line x1="403.05" y1="288.84" x2="403.05" y2="312.81" stroke="#000000" stroke-width="0.34"/>
+<line x1="116.84" y1="312.81" x2="184.07" y2="312.81" stroke="#000000" stroke-width="0.34"/>
+<line x1="116.84" y1="342.44" x2="184.07" y2="342.44" stroke="#000000" stroke-width="0.34"/>
+<line x1="116.84" y1="312.81" x2="116.84" y2="342.44" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="312.81" x2="184.07" y2="342.44" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="312.81" x2="537.74" y2="312.81" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="342.44" x2="537.74" y2="342.44" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="312.81" x2="184.07" y2="342.44" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="342.44" x2="184.07" y2="342.44" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="384.72" x2="184.07" y2="384.72" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="342.44" x2="184.07" y2="384.72" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="342.44" x2="537.74" y2="342.44" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="384.72" x2="537.74" y2="384.72" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="342.44" x2="184.07" y2="384.72" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="384.72" x2="184.07" y2="384.72" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="406.04" x2="184.07" y2="406.04" stroke="#000000" stroke-width="0.43"/>
+<line x1="184.07" y1="384.72" x2="184.07" y2="406.04" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="384.72" x2="537.74" y2="384.72" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="406.04" x2="537.74" y2="406.04" stroke="#000000" stroke-width="0.43"/>
+<line x1="184.07" y1="384.72" x2="184.07" y2="406.04" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="406.04" x2="537.74" y2="406.04" stroke="#000000" stroke-width="0.43"/>
+<line x1="58.1" y1="412.7" x2="537.74" y2="412.7" stroke="#000000" stroke-width="0.43"/>
+<line x1="58.1" y1="412.7" x2="184.07" y2="412.7" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="437.53" x2="184.07" y2="437.53" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="412.7" x2="184.07" y2="437.53" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="412.7" x2="301.96" y2="412.7" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="437.53" x2="301.96" y2="437.53" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="412.7" x2="184.07" y2="437.53" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="412.7" x2="301.96" y2="437.53" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="412.7" x2="419.85" y2="412.7" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="437.53" x2="419.85" y2="437.53" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="412.7" x2="301.96" y2="437.53" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="412.7" x2="419.85" y2="437.53" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="412.7" x2="537.74" y2="412.7" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="437.53" x2="537.74" y2="437.53" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="412.7" x2="419.85" y2="437.53" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="437.53" x2="184.07" y2="437.53" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="465.19" x2="184.07" y2="465.19" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="437.53" x2="184.07" y2="465.19" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="437.53" x2="301.96" y2="437.53" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="465.19" x2="301.96" y2="465.19" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="437.53" x2="184.07" y2="465.19" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="437.53" x2="301.96" y2="465.19" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="437.53" x2="419.85" y2="437.53" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="465.19" x2="419.85" y2="465.19" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="437.53" x2="301.96" y2="465.19" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="437.53" x2="419.85" y2="465.19" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="437.53" x2="537.74" y2="437.53" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="465.19" x2="537.74" y2="465.19" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="437.53" x2="419.85" y2="465.19" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="465.19" x2="537.74" y2="465.19" stroke="#000000" stroke-width="0.71"/>
+<line x1="58.1" y1="480.85" x2="537.74" y2="480.85" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="480.85" x2="184.07" y2="480.85" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="505.68" x2="184.07" y2="505.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="480.85" x2="184.07" y2="505.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="480.85" x2="301.96" y2="480.85" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="505.68" x2="301.96" y2="505.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="480.85" x2="184.07" y2="505.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="480.85" x2="301.96" y2="505.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="480.85" x2="419.85" y2="480.85" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="505.68" x2="419.85" y2="505.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="480.85" x2="301.96" y2="505.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="480.85" x2="419.85" y2="505.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="480.85" x2="537.74" y2="480.85" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="505.68" x2="537.74" y2="505.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="480.85" x2="419.85" y2="505.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="505.68" x2="184.07" y2="505.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="526.38" x2="184.07" y2="526.38" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="505.68" x2="184.07" y2="526.38" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="505.68" x2="301.96" y2="505.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="526.38" x2="301.96" y2="526.38" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="505.68" x2="184.07" y2="526.38" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="505.68" x2="301.96" y2="526.38" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="505.68" x2="419.85" y2="505.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="526.38" x2="419.85" y2="526.38" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="505.68" x2="301.96" y2="526.38" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="505.68" x2="419.85" y2="526.38" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="505.68" x2="537.74" y2="505.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="526.38" x2="537.74" y2="526.38" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="505.68" x2="419.85" y2="526.38" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="526.38" x2="184.07" y2="526.38" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="547.08" x2="184.07" y2="547.08" stroke="#000000" stroke-width="0.71"/>
+<line x1="184.07" y1="526.38" x2="184.07" y2="547.08" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="526.38" x2="301.96" y2="526.38" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="547.08" x2="301.96" y2="547.08" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="526.38" x2="184.07" y2="547.08" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="526.38" x2="301.96" y2="547.08" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="526.38" x2="419.85" y2="526.38" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="547.08" x2="419.85" y2="547.08" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="526.38" x2="301.96" y2="547.08" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="526.38" x2="419.85" y2="547.08" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="526.38" x2="537.74" y2="526.38" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="547.08" x2="537.74" y2="547.08" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="526.38" x2="419.85" y2="547.08" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="547.08" x2="184.07" y2="547.08" stroke="#000000" stroke-width="0.71"/>
+<line x1="58.1" y1="567.78" x2="184.07" y2="567.78" stroke="#000000" stroke-width="0.71"/>
+<line x1="184.07" y1="547.08" x2="184.07" y2="567.78" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="547.08" x2="301.96" y2="547.08" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="567.78" x2="301.96" y2="567.78" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="547.08" x2="184.07" y2="567.78" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="547.08" x2="301.96" y2="567.78" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="547.08" x2="419.85" y2="547.08" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="567.78" x2="419.85" y2="567.78" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="547.08" x2="301.96" y2="567.78" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="547.08" x2="419.85" y2="567.78" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="547.08" x2="537.74" y2="547.08" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="567.78" x2="537.74" y2="567.78" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="547.08" x2="419.85" y2="567.78" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="567.78" x2="184.07" y2="567.78" stroke="#000000" stroke-width="0.71"/>
+<line x1="58.1" y1="588.48" x2="184.07" y2="588.48" stroke="#000000" stroke-width="0.71"/>
+<line x1="184.07" y1="567.78" x2="184.07" y2="588.48" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="567.78" x2="301.96" y2="567.78" stroke="#000000" stroke-width="0.34"/>
+<line x1="184.07" y1="588.48" x2="301.96" y2="588.48" stroke="#000000" stroke-width="0.28"/>
+<line x1="184.07" y1="567.78" x2="184.07" y2="588.48" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="567.78" x2="301.96" y2="588.48" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="567.78" x2="419.85" y2="567.78" stroke="#000000" stroke-width="0.34"/>
+<line x1="301.96" y1="588.48" x2="419.85" y2="588.48" stroke="#000000" stroke-width="0.28"/>
+<line x1="301.96" y1="567.78" x2="301.96" y2="588.48" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="567.78" x2="419.85" y2="588.48" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="567.78" x2="537.74" y2="567.78" stroke="#000000" stroke-width="0.34"/>
+<line x1="419.85" y1="588.48" x2="537.74" y2="588.48" stroke="#000000" stroke-width="0.28"/>
+<line x1="419.85" y1="567.78" x2="419.85" y2="588.48" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="588.48" x2="537.74" y2="588.48" stroke="#000000" stroke-width="1.13"/>
+<line x1="58.1" y1="715.68" x2="537.74" y2="715.68" stroke="#666666" stroke-width="1.98"/>
+<line x1="58.1" y1="725.68" x2="537.74" y2="725.68" stroke="#5D5D5D" stroke-width="0.34"/>
+<line x1="58.1" y1="725.68" x2="117.11" y2="725.68" stroke="#5D5D5D" stroke-width="0.34"/>
+<line x1="58.1" y1="763" x2="117.11" y2="763" stroke="#5D5D5D" stroke-width="0.34"/>
+<line x1="117.11" y1="725.68" x2="117.11" y2="763" stroke="#5D5D5D" stroke-width="0.34"/>
+<line x1="117.11" y1="725.68" x2="537.74" y2="725.68" stroke="#5D5D5D" stroke-width="0.34"/>
+<line x1="117.11" y1="763" x2="537.74" y2="763" stroke="#5D5D5D" stroke-width="0.34"/>
+<line x1="117.11" y1="725.68" x2="117.11" y2="763" stroke="#5D5D5D" stroke-width="0.34"/>
+</g></g>
+<g data-page="2" transform="translate(0 865.88)"><rect width="595.28" height="841.88" fill="white" stroke="#c9c7c4" stroke-width="0.75"/><g clip-path="url(#pgclip0)">
+<rect x="58.1" y="720.96" width="481.48" height="22.25" fill="#D8D8D8"/>
+<text x="514.67" y="83.46" font-size="8" font-family="'Dotum','돋움','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="20.64" lengthAdjust="spacing">(뒤쪽)</text>
+<text x="250.03" y="107.18" font-size="13" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="94.77" lengthAdjust="spacing" font-weight="bold">점검결과 내역서</text>
+<text x="83.75" y="135.1" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="43.8" lengthAdjust="spacing">현장 명칭</text>
+<text x="273.78" y="135.1" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">주</text>
+<text x="293.48" y="135.1" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif">소</text>
+<text x="86.25" y="205.73" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="38.8" lengthAdjust="spacing">점검결과</text>
+<text x="83.05" y="221.73" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="45.2" lengthAdjust="spacing">(특기사항)</text>
+<text x="73.35" y="293.91" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="64.6" lengthAdjust="spacing">점검자(대표자)</text>
+<text x="172.33" y="293.91" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing">직위</text>
+<text x="286.73" y="293.91" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="19.4" lengthAdjust="spacing">성명</text>
+<text x="440.63" y="293.91" font-size="9" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="58.41" lengthAdjust="spacing" fill="#7F7F7F">(서명 또는 인)</text>
+<text x="93.45" y="331.99" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="24.4" lengthAdjust="spacing">구 분</text>
+<text x="162.91" y="331.99" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="38.8" lengthAdjust="spacing">점검결과</text>
+<text x="347.32" y="331.99" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="53.5" lengthAdjust="spacing">부적합 내역</text>
+<text x="86.1" y="352.37" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="39.1" lengthAdjust="spacing">열원 및 </text>
+<text x="81.4" y="368.37" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="48.5" lengthAdjust="spacing">냉난방설비</text>
+<text x="76.55" y="392.03" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="58.2" lengthAdjust="spacing">공기조화설비</text>
+<text x="86.25" y="423.69" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="38.8" lengthAdjust="spacing">환기설비</text>
+<text x="76.55" y="455.35" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="58.2" lengthAdjust="spacing">위생기구설비</text>
+<text x="71.7" y="487.01" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="67.9" lengthAdjust="spacing">급수ㆍ급탕설비</text>
+<text x="59.51" y="510.67" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="92.28" lengthAdjust="spacing">오·배수통기 및 </text>
+<text x="76.55" y="526.67" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="58.2" lengthAdjust="spacing">우수배수설비</text>
+<text x="59.51" y="542.33" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="92.28" lengthAdjust="spacing">오수정화 및 </text>
+<text x="76.55" y="558.33" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="58.2" lengthAdjust="spacing">물재이용설비</text>
+<text x="86.25" y="581.99" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="38.8" lengthAdjust="spacing">배관설비</text>
+<text x="86.25" y="613.65" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="38.8" lengthAdjust="spacing">덕트설비</text>
+<text x="86.25" y="645.31" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="38.8" lengthAdjust="spacing">보온설비</text>
+<text x="76.55" y="676.97" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="58.2" lengthAdjust="spacing">자동제어설비</text>
+<text x="59.51" y="700.63" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="92.28" lengthAdjust="spacing">방음·방진·</text>
+<text x="83.75" y="716.63" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="43.8" lengthAdjust="spacing">내진 설비</text>
+<text x="274.2" y="735.59" font-size="10" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="53.8" lengthAdjust="spacing">작 성 방 법</text>
+<text x="63.2" y="759.41" font-size="8" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="232.76" lengthAdjust="spacing">1. 점검결과에는 [ 적합 ㅇ, 부적합 X, 해당없음 / ]을 표기한다.</text>
+<text x="63.2" y="771.41" font-size="8" font-family="'DotumChe','돋움체','Dotum','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="325.12" lengthAdjust="spacing">2. 부적합 내역에는 점검대상 기계설비의 성능점검 결과에 따른 부적합 내역을 작성한다. </text>
+<line x1="58.1" y1="87.63" x2="539.58" y2="87.63" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="87.63" x2="539.58" y2="87.63" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="117.62" x2="539.58" y2="117.62" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="117.62" x2="155.92" y2="117.62" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="145.58" x2="155.92" y2="145.58" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="117.62" x2="155.92" y2="145.58" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="117.62" x2="256.57" y2="117.62" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="145.58" x2="256.57" y2="145.58" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="117.62" x2="155.92" y2="145.58" stroke="#000000" stroke-width="0.34"/>
+<line x1="256.57" y1="117.62" x2="256.57" y2="145.58" stroke="#000000" stroke-width="0.34"/>
+<line x1="256.57" y1="117.62" x2="323.26" y2="117.62" stroke="#000000" stroke-width="0.34"/>
+<line x1="256.57" y1="145.58" x2="323.26" y2="145.58" stroke="#000000" stroke-width="0.34"/>
+<line x1="256.57" y1="117.62" x2="256.57" y2="145.58" stroke="#000000" stroke-width="0.34"/>
+<line x1="323.26" y1="117.62" x2="323.26" y2="145.58" stroke="#000000" stroke-width="0.34"/>
+<line x1="323.26" y1="117.62" x2="539.58" y2="117.62" stroke="#000000" stroke-width="0.34"/>
+<line x1="323.26" y1="145.58" x2="539.58" y2="145.58" stroke="#000000" stroke-width="0.34"/>
+<line x1="323.26" y1="117.62" x2="323.26" y2="145.58" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="145.58" x2="155.92" y2="145.58" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="274.88" x2="155.92" y2="274.88" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="145.58" x2="155.92" y2="274.88" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="145.58" x2="539.58" y2="145.58" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="274.88" x2="539.58" y2="274.88" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="145.58" x2="155.92" y2="274.88" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="274.88" x2="155.92" y2="274.88" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="305.94" x2="155.92" y2="305.94" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="274.88" x2="155.92" y2="305.94" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="274.88" x2="539.58" y2="274.88" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="305.94" x2="539.58" y2="305.94" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="274.88" x2="155.92" y2="305.94" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="305.94" x2="539.58" y2="305.94" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="315.94" x2="539.58" y2="315.94" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="315.94" x2="155.92" y2="315.94" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="341.04" x2="155.92" y2="341.04" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="315.94" x2="155.92" y2="341.04" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="315.94" x2="211.56" y2="315.94" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="341.04" x2="211.56" y2="341.04" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="315.94" x2="155.92" y2="341.04" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="315.94" x2="211.56" y2="341.04" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="315.94" x2="539.58" y2="315.94" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="341.04" x2="539.58" y2="341.04" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="315.94" x2="211.56" y2="341.04" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="341.04" x2="155.92" y2="341.04" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="372.7" x2="155.92" y2="372.7" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="341.04" x2="155.92" y2="372.7" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="341.04" x2="211.56" y2="341.04" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="372.7" x2="211.56" y2="372.7" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="341.04" x2="155.92" y2="372.7" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="341.04" x2="211.56" y2="372.7" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="341.04" x2="539.58" y2="341.04" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="372.7" x2="539.58" y2="372.7" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="341.04" x2="211.56" y2="372.7" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="372.7" x2="155.92" y2="372.7" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="404.36" x2="155.92" y2="404.36" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="372.7" x2="155.92" y2="404.36" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="372.7" x2="211.56" y2="372.7" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="404.36" x2="211.56" y2="404.36" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="372.7" x2="155.92" y2="404.36" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="372.7" x2="211.56" y2="404.36" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="372.7" x2="539.58" y2="372.7" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="404.36" x2="539.58" y2="404.36" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="372.7" x2="211.56" y2="404.36" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="404.36" x2="155.92" y2="404.36" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="436.02" x2="155.92" y2="436.02" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="404.36" x2="155.92" y2="436.02" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="404.36" x2="211.56" y2="404.36" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="436.02" x2="211.56" y2="436.02" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="404.36" x2="155.92" y2="436.02" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="404.36" x2="211.56" y2="436.02" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="404.36" x2="539.58" y2="404.36" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="436.02" x2="539.58" y2="436.02" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="404.36" x2="211.56" y2="436.02" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="436.02" x2="155.92" y2="436.02" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="467.68" x2="155.92" y2="467.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="436.02" x2="155.92" y2="467.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="436.02" x2="211.56" y2="436.02" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="467.68" x2="211.56" y2="467.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="436.02" x2="155.92" y2="467.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="436.02" x2="211.56" y2="467.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="436.02" x2="539.58" y2="436.02" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="467.68" x2="539.58" y2="467.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="436.02" x2="211.56" y2="467.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="467.68" x2="155.92" y2="467.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="499.34" x2="155.92" y2="499.34" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="467.68" x2="155.92" y2="499.34" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="467.68" x2="211.56" y2="467.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="499.34" x2="211.56" y2="499.34" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="467.68" x2="155.92" y2="499.34" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="467.68" x2="211.56" y2="499.34" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="467.68" x2="539.58" y2="467.68" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="499.34" x2="539.58" y2="499.34" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="467.68" x2="211.56" y2="499.34" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="499.34" x2="155.92" y2="499.34" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="531" x2="155.92" y2="531" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="499.34" x2="155.92" y2="531" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="499.34" x2="211.56" y2="499.34" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="531" x2="211.56" y2="531" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="499.34" x2="155.92" y2="531" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="499.34" x2="211.56" y2="531" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="499.34" x2="539.58" y2="499.34" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="531" x2="539.58" y2="531" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="499.34" x2="211.56" y2="531" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="531" x2="155.92" y2="531" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="562.66" x2="155.92" y2="562.66" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="531" x2="155.92" y2="562.66" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="531" x2="211.56" y2="531" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="562.66" x2="211.56" y2="562.66" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="531" x2="155.92" y2="562.66" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="531" x2="211.56" y2="562.66" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="531" x2="539.58" y2="531" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="562.66" x2="539.58" y2="562.66" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="531" x2="211.56" y2="562.66" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="562.66" x2="155.92" y2="562.66" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="594.32" x2="155.92" y2="594.32" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="562.66" x2="155.92" y2="594.32" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="562.66" x2="211.56" y2="562.66" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="594.32" x2="211.56" y2="594.32" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="562.66" x2="155.92" y2="594.32" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="562.66" x2="211.56" y2="594.32" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="562.66" x2="539.58" y2="562.66" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="594.32" x2="539.58" y2="594.32" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="562.66" x2="211.56" y2="594.32" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="594.32" x2="155.92" y2="594.32" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="625.98" x2="155.92" y2="625.98" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="594.32" x2="155.92" y2="625.98" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="594.32" x2="211.56" y2="594.32" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="625.98" x2="211.56" y2="625.98" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="594.32" x2="155.92" y2="625.98" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="594.32" x2="211.56" y2="625.98" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="594.32" x2="539.58" y2="594.32" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="625.98" x2="539.58" y2="625.98" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="594.32" x2="211.56" y2="625.98" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="625.98" x2="155.92" y2="625.98" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="657.64" x2="155.92" y2="657.64" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="625.98" x2="155.92" y2="657.64" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="625.98" x2="211.56" y2="625.98" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="657.64" x2="211.56" y2="657.64" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="625.98" x2="155.92" y2="657.64" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="625.98" x2="211.56" y2="657.64" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="625.98" x2="539.58" y2="625.98" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="657.64" x2="539.58" y2="657.64" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="625.98" x2="211.56" y2="657.64" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="657.64" x2="155.92" y2="657.64" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="689.3" x2="155.92" y2="689.3" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="657.64" x2="155.92" y2="689.3" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="657.64" x2="211.56" y2="657.64" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="689.3" x2="211.56" y2="689.3" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="657.64" x2="155.92" y2="689.3" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="657.64" x2="211.56" y2="689.3" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="657.64" x2="539.58" y2="657.64" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="689.3" x2="539.58" y2="689.3" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="657.64" x2="211.56" y2="689.3" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="689.3" x2="155.92" y2="689.3" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="720.96" x2="155.92" y2="720.96" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="689.3" x2="155.92" y2="720.96" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="689.3" x2="211.56" y2="689.3" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="720.96" x2="211.56" y2="720.96" stroke="#000000" stroke-width="0.34"/>
+<line x1="155.92" y1="689.3" x2="155.92" y2="720.96" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="689.3" x2="211.56" y2="720.96" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="689.3" x2="539.58" y2="689.3" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="720.96" x2="539.58" y2="720.96" stroke="#000000" stroke-width="0.34"/>
+<line x1="211.56" y1="689.3" x2="211.56" y2="720.96" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="720.96" x2="539.58" y2="720.96" stroke="#000000" stroke-width="1.13"/>
+<line x1="58.1" y1="743.21" x2="539.58" y2="743.21" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="743.21" x2="539.58" y2="743.21" stroke="#000000" stroke-width="0.34"/>
+<line x1="58.1" y1="782.01" x2="539.58" y2="782.01" stroke="#000000" stroke-width="0.34"/>
+</g></g>
+</svg>

@@ -710,14 +710,38 @@ def write_assets_script(all_assets: dict[str, dict[str, dict[str, object]]]) -> 
     output.write_text(f"window.FORM_ASSETS = {json_text};\n", encoding="utf-8")
 
 
+# 나눠 돌릴 때 앞서 만들어 둔 편을 잃지 않도록 지금 파일을 읽어 둡니다.
+def read_existing_assets() -> dict[str, dict[str, dict[str, object]]]:
+    target = DOCS / "assets" / "form-assets.js"
+    if not target.exists():
+        return {}
+    raw = target.read_text(encoding="utf-8")
+    start = raw.find("{")
+    end = raw.rfind("}")
+    if start < 0 or end < 0:
+        return {}
+    try:
+        return json.loads(raw[start : end + 1])
+    except json.JSONDecodeError:
+        return {}
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="통합 HWPX와 kordoc SVG를 서식별 다운로드·미리보기 자산으로 분리합니다."
     )
-    parser.parse_args()
+    # 편이 많아 한 번에 오래 걸립니다. 나눠 돌릴 수 있게 해 둡니다.
+    # 이미 만들어 둔 편은 form-assets.js에 그대로 남습니다.
+    parser.add_argument("--chapters", help="쉼표로 나눈 편 번호 (예: 02,04,05)")
+    options = parser.parse_args()
+    only = set(options.chapters.split(",")) if options.chapters else None
 
     all_assets: dict[str, dict[str, dict[str, object]]] = {}
+    if only:
+        all_assets.update(read_existing_assets())
     for source in CHAPTERS:
+        if only and source.chapter_id not in only:
+            continue
         all_assets[source.chapter_id] = build_chapter(source)
     write_assets_script(all_assets)
 

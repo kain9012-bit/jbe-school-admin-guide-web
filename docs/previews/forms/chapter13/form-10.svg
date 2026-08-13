@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 841.88" width="595.28pt" height="841.88pt" font-family="'HCR Batang','함초롬바탕','Hancom Batang',AppleMyungjo,'Noto Serif CJK KR',serif" xml:space="preserve">
+<defs><clipPath id="pgclip0"><rect x="0" y="0" width="595.28" height="841.88"/></clipPath></defs>
+<g data-page="1" transform="translate(0 0)"><rect width="595.28" height="841.88" fill="white" stroke="#c9c7c4" stroke-width="0.75"/><g clip-path="url(#pgclip0)">
+<text x="63.2" y="90.96" font-size="12" font-family="'새굴림','Malgun Gothic','HCR Dotum','Noto Sans KR',sans-serif" textLength="44.16" lengthAdjust="spacing">[서식10]</text>
+<text x="192.6" y="133.95" font-size="18" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="219.06" lengthAdjust="spacing">소방시설 자체 점검 기록부</text>
+<rect x="58.09" y="170.85" width="75.13" height="44.18" fill="#D6D6D6"/>
+<rect x="133.22" y="170.85" width="83.62" height="44.18" fill="#D6D6D6"/>
+<rect x="216.84" y="170.85" width="106.26" height="44.18" fill="#D6D6D6"/>
+<rect x="323.1" y="170.85" width="83.62" height="44.18" fill="#D6D6D6"/>
+<rect x="406.72" y="170.85" width="77.96" height="44.18" fill="#D6D6D6"/>
+<rect x="484.68" y="170.85" width="52.49" height="44.18" fill="#D6D6D6"/>
+<text x="63.56" y="197.14" font-size="12" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="64.2" lengthAdjust="spacing">① 점검일자</text>
+<text x="142.93" y="197.14" font-size="12" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="64.2" lengthAdjust="spacing">② 점검시설</text>
+<text x="237.87" y="197.14" font-size="12" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="64.2" lengthAdjust="spacing">③ 점검내용</text>
+<text x="332.81" y="197.14" font-size="12" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="64.2" lengthAdjust="spacing">④ 점검결과</text>
+<text x="413.61" y="197.14" font-size="12" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="64.2" lengthAdjust="spacing">⑤ 결과조치</text>
+<text x="490.47" y="197.14" font-size="12" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="40.92" lengthAdjust="spacing">⑥ 비고</text>
+<line x1="58.09" y1="170.85" x2="133.22" y2="170.85" stroke="#000000" stroke-width="0.85"/>
+<line x1="58.09" y1="215.03" x2="133.22" y2="215.03" stroke="#000000" stroke-width="0.43"/>
+<line x1="58.09" y1="170.85" x2="58.09" y2="215.03" stroke="#000000" stroke-width="0.85"/>
+<line x1="133.22" y1="170.85" x2="133.22" y2="215.03" stroke="#000000" stroke-width="0.34"/>
+<line x1="133.22" y1="170.85" x2="216.84" y2="170.85" stroke="#000000" stroke-width="0.85"/>
+<line x1="133.22" y1="215.03" x2="216.84" y2="215.03" stroke="#000000" stroke-width="0.43"/>
+<line x1="133.22" y1="170.85" x2="133.22" y2="215.03" stroke="#000000" stroke-width="0.34"/>
+<line x1="216.84" y1="170.85" x2="216.84" y2="215.03" stroke="#000000" stroke-width="0.34"/>
+<line x1="216.84" y1="170.85" x2="323.1" y2="170.85" stroke="#000000" stroke-width="0.85"/>
+<line x1="216.84" y1="215.03" x2="323.1" y2="215.03" stroke="#000000" stroke-width="0.43"/>
+<line x1="216.84" y1="170.85" x2="216.84" y2="215.03" stroke="#000000" stroke-width="0.34"/>
+<line x1="323.1" y1="170.85" x2="323.1" y2="215.03" stroke="#000000" stroke-width="0.34"/>
+<line x1="323.1" y1="170.85" x2="406.72" y2="170.85" stroke="#000000" stroke-width="0.85"/>
+<line x1="323.1" y1="215.03" x2="406.72" y2="215.03" stroke="#000000" stroke-width="0.43"/>
+<line x1="323.1" y1="170.85" x2="323.1" y2="215.03" stroke="#000000" stroke-width="0.34"/>
+<line x1="406.72" y1="170.85" x2="406.72" y2="215.03" stroke="#000000" stroke-width="0.34"/>
+<line x1="406.72" y1="170.85" x2="484.68" y2="170.85" stroke="#000000" stroke-width="0.85"/>
+<line x1="406.72" y1="215.03" x2="484.68" y2="215.03" stroke="#000000" stroke-width="0.43"/>
+<line x1="406.72" y1="170.85" x2="406.72" y2="215.03" stroke="#000000" stroke-width="0.34"/>
+<line x1="484.68" y1="170.85" x2="484.68" y2="215.03" stroke="#000000" stroke-width="0.34"/>
+<line x1="484.68" y1="170.85" x2="537.17" y2="170.85" stroke="#000000" stroke-width="0.85"/>
+<line x1="484.68" y1="215.03" x2="537.17" y2="215.03" stroke="#000000" stroke-width="0.43"/>
+<line x1="484.68" y1="170.85" x2="484.68" y2="215.03" stroke="#000000" stroke-width="0.34"/>
+<line x1="537.17" y1="170.85" x2="537.17" y2="215.03" stroke="#000000" stroke-width="0.85"/>
+<line x1="58.09" y1="215.03" x2="133.22" y2="215.03" stroke="#000000" stroke-width="0.43"/>
+<line x1="58.09" y1="651.56" x2="133.22" y2="651.56" stroke="#000000" stroke-width="0.85"/>
+<line x1="58.09" y1="215.03" x2="58.09" y2="651.56" stroke="#000000" stroke-width="0.85"/>
+<line x1="133.22" y1="215.03" x2="133.22" y2="651.56" stroke="#000000" stroke-width="0.34"/>
+<line x1="133.22" y1="215.03" x2="216.84" y2="215.03" stroke="#000000" stroke-width="0.43"/>
+<line x1="133.22" y1="651.56" x2="216.84" y2="651.56" stroke="#000000" stroke-width="0.85"/>
+<line x1="133.22" y1="215.03" x2="133.22" y2="651.56" stroke="#000000" stroke-width="0.34"/>
+<line x1="216.84" y1="215.03" x2="216.84" y2="651.56" stroke="#000000" stroke-width="0.34"/>
+<line x1="216.84" y1="215.03" x2="323.1" y2="215.03" stroke="#000000" stroke-width="0.43"/>
+<line x1="216.84" y1="651.56" x2="323.1" y2="651.56" stroke="#000000" stroke-width="0.85"/>
+<line x1="216.84" y1="215.03" x2="216.84" y2="651.56" stroke="#000000" stroke-width="0.34"/>
+<line x1="323.1" y1="215.03" x2="323.1" y2="651.56" stroke="#000000" stroke-width="0.34"/>
+<line x1="323.1" y1="215.03" x2="406.72" y2="215.03" stroke="#000000" stroke-width="0.43"/>
+<line x1="323.1" y1="651.56" x2="406.72" y2="651.56" stroke="#000000" stroke-width="0.85"/>
+<line x1="323.1" y1="215.03" x2="323.1" y2="651.56" stroke="#000000" stroke-width="0.34"/>
+<line x1="406.72" y1="215.03" x2="406.72" y2="651.56" stroke="#000000" stroke-width="0.34"/>
+<line x1="406.72" y1="215.03" x2="484.68" y2="215.03" stroke="#000000" stroke-width="0.43"/>
+<line x1="406.72" y1="651.56" x2="484.68" y2="651.56" stroke="#000000" stroke-width="0.85"/>
+<line x1="406.72" y1="215.03" x2="406.72" y2="651.56" stroke="#000000" stroke-width="0.34"/>
+<line x1="484.68" y1="215.03" x2="484.68" y2="651.56" stroke="#000000" stroke-width="0.34"/>
+<line x1="484.68" y1="215.03" x2="537.17" y2="215.03" stroke="#000000" stroke-width="0.43"/>
+<line x1="484.68" y1="651.56" x2="537.17" y2="651.56" stroke="#000000" stroke-width="0.85"/>
+<line x1="484.68" y1="215.03" x2="484.68" y2="651.56" stroke="#000000" stroke-width="0.34"/>
+<line x1="537.17" y1="215.03" x2="537.17" y2="651.56" stroke="#000000" stroke-width="0.85"/>
+<text x="266.65" y="703.36" font-size="12" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="68.04" lengthAdjust="spacing">점검 담당자:</text>
+<text x="460.69" y="703.36" font-size="12" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="77.88" lengthAdjust="spacing">(서명 또는 인)</text>
+<text x="266.65" y="727.36" font-size="12" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="68.04" lengthAdjust="spacing">관리 책임자:</text>
+<text x="460.69" y="727.36" font-size="12" font-family="'휴먼명조','HCR Batang','Batang','Noto Serif KR',serif" textLength="77.88" lengthAdjust="spacing">(서명 또는 인)</text>
+</g></g>
+</svg>
