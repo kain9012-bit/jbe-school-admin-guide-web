@@ -711,7 +711,7 @@
     let drewNote = false;
     const flush = () => {
       if (!buffer.length) return;
-      pieces.push(`<div class="source-structured-intro">${cellMarkup(buffer)}</div>`);
+      pieces.push(`<div class="source-structured-intro">${bodyItemsMarkup(buffer)}</div>`);
       buffer = [];
     };
 
@@ -763,6 +763,34 @@
       html: pieces.join(""),
       type: kind,
     };
+  }
+
+  // 표가 든 칸에서, 표 앞뒤에 붙은 본문 줄을 그립니다.
+  //
+  // 예전에는 표 칸을 그리는 cellMarkup으로 그렸습니다. 그것은 칸 안의 글이라
+  // 글머리표를 떼어 냅니다. 그래서 표가 있는 항목만 '▸'가 사라져, 표가 없는
+  // 항목과 생김새가 달랐습니다.
+  //
+  // 표가 없는 항목을 그리는 쪽(app-faithful-workflow.js)과 같은 클래스를 씁니다.
+  // 클래스가 같아야 기호 칸 너비·들여쓰기가 저절로 같아집니다.
+  function bodyItemsMarkup(lines) {
+    const items = sourceOutlineItems(lines.join("\n"));
+    if (!items.length) return "—";
+    return `<ul class="semantic-summary-list">${items
+      .map((item) =>
+        item.marker
+          ? `<li class="semantic-summary-item" style="--summary-level: ${item.level}">
+              <span class="semantic-summary-marker" aria-hidden="true">${escapeHtml(
+                item.marker
+              )}</span>
+              <span class="semantic-summary-text">${escapeHtml(item.text)}</span>
+            </li>`
+          : `<li class="semantic-summary-item semantic-summary-plain"
+                 style="--summary-level: ${item.level}">
+              <span class="semantic-summary-text">${escapeHtml(item.text)}</span>
+            </li>`
+      )
+      .join("")}</ul>`;
   }
 
   function sourceOutlineItems(body) {

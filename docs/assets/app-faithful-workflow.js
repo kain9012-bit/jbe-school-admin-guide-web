@@ -411,6 +411,51 @@
 
   }
 
+  // 흐름도에서 옆으로 잇는 화살표입니다. 아래로 내리긋는 ⇓ ⇙ ⇘ 는 아닙니다.
+  const FLOW_ARROW = /[▶⇒→➡]/;
+
+  // 원문이 한 줄에 다 못 담아 끊어 놓은 흐름을 도로 한 줄로 잇습니다.
+  //
+  // 끊긴 자리는 두 가지 모습입니다.
+  //   … 공개여부 결정 ⇒        ← 앞줄이 화살표로 끝남
+  //   정보공개심의회 ⇒ 결과 통지
+  //
+  //   … 공시정보 확인 및 마감
+  //   ⇒ 관리자 마감 및 상신 …   ← 뒷줄이 화살표로 시작함
+  //
+  // 둘 다 아니면서 이름 한가운데가 잘린 것도 있습니다('… ⇒ 교육지원청' /
+  // '확정 및 제출 ⇒ …'). 이때는 앞줄 끝 토막이 짧은 것을 신호로 봅니다.
+  // 다만 '[기안 시] …', '․ 근무지외 출장: …', '급식 관리(…)'처럼 진짜로 다른
+  // 흐름을 새로 시작하는 줄이 있어, 그런 줄은 이어 붙이지 않습니다.
+  const FLOW_NEW_ROW = /^[[(［(•‣▪□○◦※*․·\-–]/;
+  const TAIL_LIMIT = 6;
+
+  function joinWrappedFlowLines(lines) {
+    const out = [];
+    for (const line of lines) {
+      const previous = out[out.length - 1];
+      if (!previous) {
+        out.push(line);
+        continue;
+      }
+      const continued =
+        FLOW_ARROW.test(previous.slice(-1)) || FLOW_ARROW.test(line[0]);
+      // 이름이 잘린 경우: 앞줄이 짧은 토막으로 끝나고, 뒷줄이 새 흐름의 모양이
+      // 아니면서 화살표를 가지고 있을 때만 잇습니다.
+      const tail = previous.split(/\s*[▶⇒→➡]\s*/).filter(Boolean).pop() || "";
+      const cut =
+        !continued &&
+        FLOW_ARROW.test(line) &&
+        !FLOW_NEW_ROW.test(line) &&
+        !/[)）]$/.test(tail) &&
+        [...tail].length <= TAIL_LIMIT;
+
+      if (continued || cut) out[out.length - 1] = `${previous} ${line}`;
+      else out.push(line);
+    }
+    return out;
+  }
+
   // 매뉴얼의 업무 흐름도를 그대로 보여 줍니다.
   // 누르는 곳이 아니라 이 업무가 어떤 순서로 이뤄지는지 알려 주는 그림입니다.
   function renderWorkFlowDiagram(work) {
@@ -427,11 +472,17 @@
 
     // 흐름이 여러 줄이면 줄마다 따로 그립니다.
     // '[접수 시] …', '[기안 시] …'처럼 서로 다른 흐름이기 때문입니다.
-    const lines = flows.flatMap((flow) =>
-      String(flow.sourceText)
-        .split(/\r?\n/)
-        .map((line) => line.trim())
-        .filter(Boolean)
+    //
+    // 그런데 대부분은 서로 다른 흐름이 아니라, 원문에서 한 줄에 다 안 들어가
+    // 끊어 놓은 것입니다. 그대로 두면 끊긴 자리의 화살표가 사라져 여섯 칸짜리
+    // 흐름이 세 칸씩 두 도막으로 보입니다.
+    const lines = joinWrappedFlowLines(
+      flows.flatMap((flow) =>
+        String(flow.sourceText)
+          .split(/\r?\n/)
+          .map((line) => line.trim())
+          .filter(Boolean)
+      )
     );
 
     diagram.innerHTML = lines
