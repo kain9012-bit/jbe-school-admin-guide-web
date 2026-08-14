@@ -180,6 +180,51 @@ for (const down of [900, 900, 900]) {
   );
 }
 
+// 5-3. 머리글에 같은 곳으로 가는 항목이 둘 있으면 안 됩니다.
+//      '다른 업무 보기'가 바로 밑 빵부스러기 '홈'과 주소까지 똑같았습니다.
+await page.goto(`${base}/index.html?chapter=02#work=c02-w01`, { waitUntil: "load" });
+await page.waitForTimeout(900);
+{
+  const now = await page.evaluate(() => {
+    const shown = (node) => {
+      const box = node.getBoundingClientRect();
+      return box.width > 0 && box.height > 0 && getComputedStyle(node).display !== "none";
+    };
+    const home = document.querySelector(".breadcrumb a");
+    const twins = [...document.querySelectorAll(".global-nav a[href], .mobile-global-nav a[href]")]
+      .filter((link) => home && link.href === home.href)
+      .map((link) => link.textContent.replace(/\s+/g, " ").trim());
+    return {
+      집주소: home ? home.getAttribute("href") : null,
+      겹침: twins,
+      차림표: [...document.querySelectorAll(".global-nav > *")].filter(shown).length,
+    };
+  });
+  expect(now.집주소 !== null, "업무 화면에 '홈'으로 돌아가는 빵부스러기가 없습니다.");
+  expect(
+    now.겹침.length === 0,
+    `머리글의 '${now.겹침.join("·")}'이 빵부스러기 '홈'과 같은 곳으로 갑니다.`
+  );
+  expect(now.차림표 > 0, "업무 화면 머리글이 통째로 비었습니다.");
+}
+
+// 5-4. 통합 홈의 '업무 분야'는 남아 있어야 합니다. 거기서는 분야 목록으로 내려가는
+//      유일한 길이라, 업무 화면에서 지우면서 같이 지우면 안 됩니다.
+await page.goto(`${base}/index.html`, { waitUntil: "load" });
+await page.waitForTimeout(900);
+{
+  const link = await page.$(".global-nav [data-home-chapters]");
+  expect(Boolean(link), "통합 홈 머리글에 '업무 분야'가 없습니다.");
+  if (link) {
+    await link.click();
+    await page.waitForTimeout(700);
+    expect(
+      (await state()).y > 200,
+      "통합 홈에서 '업무 분야'를 눌러도 분야 목록으로 내려가지 않습니다."
+    );
+  }
+}
+
 // 6. 없는 업무 주소로 들어오면 빈 화면 대신 홈으로 안내해야 합니다.
 await page.goto(`${base}/index.html?chapter=04#work=no-such-work`, { waitUntil: "load" });
 await page.waitForTimeout(900);

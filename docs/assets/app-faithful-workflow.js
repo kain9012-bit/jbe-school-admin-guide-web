@@ -1511,16 +1511,12 @@
   });
   window.addEventListener("hashchange", renderRoute);
 
-  // 편만 지정한 주소는 더 이상 따로 화면을 갖지 않으므로
-  // 상단의 '업무 흐름'은 그 분야를 펼친 홈으로 보냅니다.
-  document
-    .querySelectorAll('.global-nav a[href="#overview"], .mobile-global-nav a[href="#overview"]')
-    .forEach((link) => {
-      link.href = chapterHomeHref();
-      const label = link.querySelector("span");
-      if (label) label.textContent = "다른 업무 보기";
-      else link.textContent = "다른 업무 보기";
-    });
+  // 이 항목은 통합 홈에서만 쓰입니다(화면 아래 분야 목록으로 내려가는 길).
+  // 업무 화면에서는 바로 밑의 '홈'(빵부스러기)과 가는 곳이 똑같아 지웁니다.
+  // 업무를 옮기는 길은 '업무 분야 ⌄'·'홈'·왼쪽 업무 목록으로 이미 셋입니다.
+  document.querySelectorAll("[data-home-chapters]").forEach((link) => {
+    link.hidden = true;
+  });
 
   ensureFormDialog();
   renderSearchExamples();
