@@ -116,6 +116,41 @@ for (const [chapterId, key] of [
   }
 }
 
+// 본문 줄 속에 소제목이 숨어 있으면 안 됩니다. 19편 전부를 봅니다.
+//
+// 원문이 점을 빠뜨린 소제목이 있습니다. 제2편 정보공개의
+// '3 접수 및 이송(정보공개 담당 부서)'가 그렇습니다. 만드는 쪽이 점을 보고
+// 소제목을 가르므로, 점이 없으면 앞 소제목 밑에 딸린 잔글씨가 되어 1·2·4와
+// 생김새가 달라집니다.
+//
+// 표에서 뽑아 온 줄은 첫 칸이 숫자인 것이 흔하므로 빼고 봅니다.
+let hiddenHeadings = 0;
+for (const key of Object.keys(window)) {
+  if (!/^CHAPTER\d+_DATA$/.test(key)) continue;
+  const data = window[key];
+  const where = data.meta?.chapter || key;
+  for (const work of data.sections || []) {
+    for (const block of work.contentBlocks || []) {
+      const numbered = /^(\d+)\s*\./.exec(String(block.title || "").trim());
+      if (!numbered) continue;
+      const lines = String(block.body || "").split("\n");
+      lines.forEach((line, at) => {
+        const found = /^(\d+)\s+(?![\d~·\-])\S/.exec(line.trim());
+        if (!found || Number(found[1]) !== Number(numbered[1]) + 1) return;
+        const inTable = (block.tables || []).some(
+          (table) => at >= table.lineStart && at < table.lineStart + table.lineCount
+        );
+        if (inTable) return;
+        hiddenHeadings += 1;
+        problems.push(
+          `${where} ${work.title} [${excerpt(block.title, 30)}] 본문에 ` +
+            `소제목이 숨어 있습니다: ${excerpt(line, 40)}`
+        );
+      });
+    }
+  }
+}
+
 // 화면 코드가 실제로 이 규칙을 지키는지 확인합니다.
 const app = fs.readFileSync(
   path.join(root, "docs/assets/app-faithful-workflow.js"),
@@ -161,5 +196,6 @@ if (problems.length) {
 
 console.log(
   `block presentation valid: 본문 블록 ${checkedBlocks}개 확인 ` +
-    `본문 없는 구조 표시 ${emptyStructural}개 제외, 제목만 있는 항목 ${headingOnly}개 유지`
+    `본문 없는 구조 표시 ${emptyStructural}개 제외, 제목만 있는 항목 ${headingOnly}개 유지, ` +
+    `본문에 숨은 소제목 ${hiddenHeadings}개`
 );
