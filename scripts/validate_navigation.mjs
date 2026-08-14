@@ -142,6 +142,44 @@ expect(
   "소제목만 바꿨는데 읽던 자리가 사라집니다."
 );
 
+// 5-2. 아무리 내려도 머리글은 화면 맨 위에 붙어 있어야 합니다.
+//      KRDS 기본 스타일이 body 높이를 화면 높이에 못 박아 두어(height:100%),
+//      한 화면 남짓 내리면 붙박이 머리글이 body 상자 끝을 지나며 사라졌습니다.
+//      옆의 업무 목록도 머리글에 가리면 제목 줄이 안 보입니다.
+await page.goto(`${base}/index.html?chapter=13#work=c13-w01`, { waitUntil: "load" });
+await page.waitForTimeout(900);
+for (const down of [900, 900, 900]) {
+  await page.mouse.wheel(0, down);
+  await page.waitForTimeout(350);
+}
+{
+  const now = await page.evaluate(() => {
+    const header = document.getElementById("krds-header").getBoundingClientRect();
+    const nav = document.querySelector(".krds-side-navigation");
+    const style = nav ? getComputedStyle(nav) : null;
+    return {
+      y: Math.round(window.scrollY),
+      top: Math.round(header.top),
+      height: Math.round(header.height),
+      // 업무 목록이 멈춰 서는 자리입니다. 목록이 화면보다 길면 끝까지 따라
+      // 내려가므로 실제 위치가 아니라 이 멈춤선을 봅니다.
+      besideStop: style && style.position === "sticky" ? parseFloat(style.top) : null,
+    };
+  });
+  expect(
+    now.y > 400,
+    `머리글을 보려고 내렸는데 ${now.y}px밖에 안 내려갑니다. 확인이 안 됩니다.`
+  );
+  expect(
+    now.top === 0,
+    `${now.y}px 내렸더니 머리글이 ${now.top}px로 밀려 올라가 사라졌습니다.`
+  );
+  expect(
+    now.besideStop === null || now.besideStop >= now.height,
+    `업무 목록이 머리글에 가립니다 (멈춤선 ${now.besideStop}px, 머리글 높이 ${now.height}px).`
+  );
+}
+
 // 6. 없는 업무 주소로 들어오면 빈 화면 대신 홈으로 안내해야 합니다.
 await page.goto(`${base}/index.html?chapter=04#work=no-such-work`, { waitUntil: "load" });
 await page.waitForTimeout(900);

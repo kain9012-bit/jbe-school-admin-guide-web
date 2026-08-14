@@ -44,6 +44,12 @@ body {
   color: var(--guide-ink);
   font-family: "Pretendard GOV", sans-serif;
   background: #fff;
+  /* KRDS 기본 스타일이 body 높이를 화면 높이에 못 박아 두었습니다(height:100%).
+     머리글은 position:sticky 라 body 상자 안에서만 붙어 있을 수 있어, 한 화면
+     남짓 내리면 상자 끝을 지나며 같이 밀려 올라가 사라졌습니다.
+     내용만큼 자라게 두면 끝까지 붙어 있습니다. */
+  height: auto;
+  min-height: 100%;
 }
 
 button,
@@ -522,7 +528,9 @@ input {
 
 .krds-side-navigation {
   position: sticky;
-  top: 2rem;
+  /* 머리글(8.1rem)이 화면 맨 위에 붙어 있으므로 그 아래에 섭니다.
+     2rem만 두면 업무 목록의 제목 줄이 머리글에 가립니다. */
+  top: 10rem;
   padding: 0;
   background: #fff;
   border: 1px solid var(--guide-line);
