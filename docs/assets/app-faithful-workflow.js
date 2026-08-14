@@ -900,6 +900,11 @@
 
   let previewToken = 0;
 
+  // 서식을 열면 늘 첫 쪽부터 보여야 합니다.
+  function toFirstPage(viewport) {
+    if (viewport) viewport.scrollTo({ top: 0, left: 0 });
+  }
+
   function openForm(formId) {
     const form = getForm(formId);
     if (!form) return;
@@ -917,7 +922,6 @@
 
     byId("form-source-title").textContent = `${form.id} ${form.title}`;
     setFormPreviewZoom(100);
-    viewport.scrollTo({ top: 0, left: 0 });
     sheet.hidden = true;
     sheet.innerHTML = "";
     sheet.dataset.ready = "no";
@@ -934,6 +938,8 @@
       inlinePreview(asset, token).then((ready) => {
         if (ready && token === previewToken) {
           status.textContent = `${asset.pageCount}쪽 · 글자를 끌어서 복사할 수 있습니다`;
+          // 내용이 다 들어와 길이가 늘어난 뒤에 한 번 더 첫 쪽으로 올립니다.
+          toFirstPage(viewport);
         }
       });
       // 붙여 넣기용 표를 화면 밖에 미리 깔아 둡니다. '복사'를 누를 때만 씁니다.
@@ -968,6 +974,9 @@
     const dialog = byId("form-source-dialog");
     if (typeof dialog.showModal === "function") dialog.showModal();
     else dialog.setAttribute("open", "");
+    // 창을 띄운 다음에 올려야 합니다. 닫혀 있는 동안(display:none)에는 올려도
+    // 먹지 않고, 창이 다시 뜰 때 브라우저가 아까 내려 둔 자리를 되살립니다.
+    toFirstPage(viewport);
   }
 
   function renderResources(work, step) {

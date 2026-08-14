@@ -218,6 +218,29 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
     }
   }
 
+  // 서식을 열면 늘 첫 쪽부터 보여야 합니다.
+  // 창이 닫혀 있는 동안(display:none) 올려 두면 먹지 않고, 창이 다시 뜰 때
+  // 브라우저가 아까 내려 둔 자리를 되살립니다. 그러면 다음에 연 서식이
+  // 한복판부터 보입니다.
+  await page.evaluate(() => {
+    document.getElementById("form-preview-viewport").scrollTop = 900;
+  });
+  await page.click("[data-close-form]");
+  await page.click(`[data-form-id="${form.id}"]`);
+  await page
+    .waitForFunction(() => document.getElementById("form-preview-sheet")?.dataset.ready === "yes", {
+      timeout: 8000,
+    })
+    .catch(() => null);
+  const back = await page.evaluate(
+    () => document.getElementById("form-preview-viewport").scrollTop
+  );
+  if (back > 4) {
+    problems.push(
+      `제${chapterId}편 ${form.id}: 다시 열었더니 ${Math.round(back)}px 내려간 자리부터 보입니다.`
+    );
+  }
+
   checked += 1;
   if (!seen.imageHidden) {
     problems.push(`제${chapterId}편 ${form.id}: 그림 미리보기가 그대로 남아 있습니다.`);
