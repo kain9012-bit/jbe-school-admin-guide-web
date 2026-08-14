@@ -151,17 +151,38 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
     for (const block of marked) {
       if (!block.hasTable || !block.count) continue;
       blocksChecked += 1;
-      const shown = await page.evaluate((blockId) => {
+      const seen = await page.evaluate((blockId) => {
         const li = document.querySelector(`[data-source-block="${CSS.escape(blockId)}"]`);
         if (!li) return null;
-        return li.querySelectorAll(".semantic-summary-marker").length;
+        // 같은 기호는 같은 자리에서 시작해야 합니다. 표 앞뒤가 따로 놀면
+        // 표 앞의 '-'와 표 뒤의 '-'가 다른 만큼 들여쓰기됩니다.
+        const places = {};
+        li.querySelectorAll(".semantic-summary-item").forEach((item) => {
+          const mark = item.querySelector(".semantic-summary-marker");
+          if (!mark) return;
+          const key = mark.textContent.trim();
+          (places[key] = places[key] || []).push(getComputedStyle(item).marginLeft);
+        });
+        return {
+          markers: li.querySelectorAll(".semantic-summary-marker").length,
+          places,
+        };
       }, block.id);
-      if (shown === null) continue;
-      if (shown < block.count) {
+      if (seen === null) continue;
+      if (seen.markers < block.count) {
         problems.push(
           `제${chapterId}편 ${work.title} [${String(block.title).slice(0, 24)}]: ` +
-            `원문 글머리표 ${block.count}개 중 화면에 ${shown}개만 남았습니다.`
+            `원문 글머리표 ${block.count}개 중 화면에 ${seen.markers}개만 남았습니다.`
         );
+      }
+      for (const [marker, places] of Object.entries(seen.places)) {
+        const kinds = [...new Set(places)];
+        if (kinds.length > 1) {
+          problems.push(
+            `제${chapterId}편 ${work.title} [${String(block.title).slice(0, 24)}]: ` +
+              `'${marker}'가 자리를 달리해 섭니다 (${kinds.join(", ")}).`
+          );
+        }
       }
     }
   }

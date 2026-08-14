@@ -102,8 +102,16 @@
   display: none;
 }
 
+/* 글·표·흐름도·상자 사이는 어디서나 같은 만큼 띄웁니다.
+   예전에는 글 아래쪽만 띄워 두어, 표 바로 다음에 오는 글이 표에 달라붙고
+   그 대목만 줄 간격이 좁아 보였습니다. */
+.source-full-content {
+  display: grid;
+  gap: 1.6rem;
+}
+
 .source-structured-intro {
-  margin-bottom: 1.2rem;
+  margin: 0;
   color: var(--guide-muted);
   line-height: 1.7;
 }

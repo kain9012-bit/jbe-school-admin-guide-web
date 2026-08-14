@@ -223,8 +223,11 @@
 
   // 매뉴얼 판마다 화살표 글자가 다릅니다. 여기 빠진 글자는 그냥 글로 보여
   // 그 표가 흐름도로 바뀌지 않습니다.
-  const ARROW_ONLY = /^[\s≫⇒→⇨⟹⟶▶►»＞>↓⇓▼⇩⇙⇘⇗⇖←⇐⟵◀◁]+$/u;
-  const SIDE_ARROW = /^[\s≫⇒→⇨⟹⟶▶►»＞>]+$/u;
+  // ➡(U+27A1)는 매뉴얼이 표 안에서 가장 많이 쓰는 화살표입니다(52칸).
+  // 이것이 빠져 있어서, 같은 모양의 그림형 표인데도 어떤 것은 흐름도로,
+  // 어떤 것은 격자로 그려졌습니다.
+  const ARROW_ONLY = /^[\s≫⇒→⇨⟹⟶➡➔➜▶►»＞>↓⇓▼⇩⇙⇘⇗⇖←⇐⟵◀◁]+$/u;
+  const SIDE_ARROW = /^[\s≫⇒→⇨⟹⟶➡➔➜▶►»＞>]+$/u;
   const DOWN_ARROW = /[↓⇓▼⇩⇙⇘]/u;
   // 이름표로 쓰기에 너무 긴 글이 든 칸은 그림이 아니라 내용입니다.
   const FLOW_LABEL_LIMIT = 40;
@@ -703,6 +706,12 @@
         .split(/\s*:\s*/)[0]
         .trim() || "표";
 
+    // 들여쓰기 단계는 표 앞뒤를 통틀어 한 번에 정합니다.
+    // 도막마다 따로 정하면 표 앞의 '-'와 표 뒤의 '-'가 다른 자리에 섭니다.
+    const depths = markerDepths(
+      bodyLines(block.body).filter((line, index) => !owners.has(index))
+    );
+
     const pieces = [];
     let buffer = [];
     const drawn = new Set();
@@ -711,7 +720,9 @@
     let drewNote = false;
     const flush = () => {
       if (!buffer.length) return;
-      pieces.push(`<div class="source-structured-intro">${bodyItemsMarkup(buffer)}</div>`);
+      pieces.push(
+        `<div class="source-structured-intro">${bodyItemsMarkup(buffer, depths)}</div>`
+      );
       buffer = [];
     };
 
@@ -773,23 +784,52 @@
   //
   // 표가 없는 항목을 그리는 쪽(app-faithful-workflow.js)과 같은 클래스를 씁니다.
   // 클래스가 같아야 기호 칸 너비·들여쓰기가 저절로 같아집니다.
-  function bodyItemsMarkup(lines) {
+  // 글머리표가 나타내는 깊이입니다. app-faithful-workflow.js의 MARKER_DEPTH와
+  // 같아야 합니다. 다르면 표가 든 항목과 없는 항목의 들여쓰기가 어긋납니다.
+  // (scripts/validate_source_presentation.mjs가 두 표가 같은지 봅니다.)
+  const MARKER_DEPTH = {
+    "•": 0, "▶": 0, "▸": 0, "▹": 0, "▪": 0, "□": 0, "‣": 0,
+    "○": 1, "◦": 1,
+    "※": 1.5, "*": 1.5,
+    "-": 2, "–": 2,
+  };
+
+  // 한 항목에 나온 기호만 모아 0, 1, 2… 단계로 다시 매깁니다.
+  // '▸'로만 이뤄진 항목은 '▸'가 맨 바깥이 됩니다.
+  function markerDepths(lines) {
+    const found = new Set();
+    for (const item of sourceOutlineItems(lines.join("\n"))) {
+      const depth = MARKER_DEPTH[item.marker];
+      if (depth !== undefined) found.add(depth);
+    }
+    return [...found].sort((a, b) => a - b);
+  }
+
+  function levelOf(marker, depths) {
+    const depth = MARKER_DEPTH[marker];
+    if (depth === undefined) return 0;
+    const level = depths.indexOf(depth);
+    return level < 0 ? 0 : level;
+  }
+
+  function bodyItemsMarkup(lines, depths = markerDepths(lines)) {
     const items = sourceOutlineItems(lines.join("\n"));
     if (!items.length) return "—";
     return `<ul class="semantic-summary-list">${items
-      .map((item) =>
-        item.marker
-          ? `<li class="semantic-summary-item" style="--summary-level: ${item.level}">
+      .map((item) => {
+        const level = levelOf(item.marker, depths);
+        return item.marker
+          ? `<li class="semantic-summary-item" style="--summary-level: ${level}">
               <span class="semantic-summary-marker" aria-hidden="true">${escapeHtml(
                 item.marker
               )}</span>
               <span class="semantic-summary-text">${escapeHtml(item.text)}</span>
             </li>`
           : `<li class="semantic-summary-item semantic-summary-plain"
-                 style="--summary-level: ${item.level}">
+                 style="--summary-level: ${level}">
               <span class="semantic-summary-text">${escapeHtml(item.text)}</span>
-            </li>`
-      )
+            </li>`;
+      })
       .join("")}</ul>`;
   }
 

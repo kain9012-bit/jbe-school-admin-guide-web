@@ -124,7 +124,7 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
 
       const found = await page.evaluate(() => {
         // 매뉴얼 판마다 화살표 글자가 다릅니다. 한 가지만 보면 놓칩니다.
-        const ARROW_ONLY = /^[\s≫⇒→⇨⟹⟶▶►»＞>↓⇓▼⇩⇙⇘⇗⇖←⇐⟵◀◁]+$/u;
+        const ARROW_ONLY = /^[\s≫⇒→⇨⟹⟶➡➔➜▶►»＞>↓⇓▼⇩⇙⇘⇗⇖←⇐⟵◀◁]+$/u;
         // 이름표로 쓰기에 너무 긴 글이 든 칸은 그림이 아니라 내용입니다.
         const LABEL_LIMIT = 40;
         return [...document.querySelectorAll("#step-actions .source-table-scroll")].map((box) => {
