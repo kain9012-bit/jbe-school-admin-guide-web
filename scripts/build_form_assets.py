@@ -221,6 +221,30 @@ def clone_section_slice(source_xml: bytes, start: int, end: int) -> bytes:
     return ET.tostring(output_root, encoding="utf-8", xml_declaration=True)
 
 
+# 원문 첫 태그에 적힌 이름공간(xmlns:...)을 결과에도 그대로 답니다.
+#
+# 파이썬은 XML을 다시 쓸 때 '지금 쓰이는' 이름공간만 남기고 나머지를 지웁니다.
+# 그래서 원문에 14개가 적혀 있던 것이 1개로 줄어듭니다. content.hpf는 한글이
+# 꾸러미를 알아보는 설명서라, 여기서 이름공간이 사라지면 원문과 다른 파일이 됩니다.
+def restore_namespaces(original: bytes, rewritten: bytes) -> bytes:
+    source = re.search(rb"<[A-Za-z0-9_.:-]+([^>]*)>", original)
+    target = re.search(rb"<([A-Za-z0-9_.:-]+)([^>]*)>", rewritten[rewritten.index(b"?>") + 2 :])
+    if not source or not target:
+        return rewritten
+    have = set(re.findall(rb'xmlns:([A-Za-z0-9_.-]+)=', target.group(2)))
+    missing = b"".join(
+        b' xmlns:%s="%s"' % (prefix, uri)
+        for prefix, uri in re.findall(rb'xmlns:([A-Za-z0-9_.-]+)="([^"]+)"', source.group(1))
+        if prefix not in have
+    )
+    if not missing:
+        return rewritten
+    head = rewritten[: rewritten.index(b"?>") + 2]
+    body = rewritten[rewritten.index(b"?>") + 2 :]
+    opening = target.group(0)
+    return head + body.replace(opening, opening[:-1] + missing + b">", 1)
+
+
 def rewrite_content_hpf(content_hpf: bytes, marker: str) -> bytes:
     root = parse_xml(content_hpf)
     metadata = next((node for node in root if local_name(node.tag) == "metadata"), None)
@@ -283,7 +307,7 @@ def rewrite_content_hpf(content_hpf: bytes, marker: str) -> bytes:
     )
     spine.insert(header_index + 1, section_ref)
 
-    return ET.tostring(root, encoding="utf-8", xml_declaration=True)
+    return restore_namespaces(content_hpf, ET.tostring(root, encoding="utf-8", xml_declaration=True))
 
 
 def rewrite_header_xml(header_xml: bytes) -> bytes:

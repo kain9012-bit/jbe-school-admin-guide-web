@@ -347,12 +347,6 @@ button.chapter-link:focus-visible {
   color: var(--guide-muted);
 }
 
-.chapter-dialog-note {
-  margin: 2rem 0 0;
-  color: var(--guide-muted);
-  font-size: 1.4rem;
-}
-
 .load-error {
   padding-block: 8rem;
 }

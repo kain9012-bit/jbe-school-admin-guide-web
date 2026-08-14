@@ -18,9 +18,13 @@ ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
 SECTION_RE = re.compile(r"^Contents/section(\d+)\.xml$")
 
+# 게시판에 서식이 올라와 있는 편입니다. build_form_assets.py와 같은 목록입니다.
 CHAPTERS = {
-    "01": DOCS / "downloads" / "chapter1-forms.hwpx",
-    "03": DOCS / "downloads" / "chapter3-forms.hwpx",
+    chapter_id: DOCS / "downloads" / f"chapter{int(chapter_id)}-forms.hwpx"
+    for chapter_id in (
+        "01", "02", "03", "04", "05", "06", "07", "09",
+        "11", "12", "13", "14", "15", "16", "17", "18", "19",
+    )
 }
 
 problems: list[str] = []

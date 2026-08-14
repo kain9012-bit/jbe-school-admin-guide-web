@@ -228,9 +228,10 @@ for (const filename of ["index.html"]) {
   const html = stripAssetVersions(
     fs.readFileSync(path.join(root, "docs", filename), "utf8")
   );
+  // 편이 다 열린 뒤로는 '순차적으로 열립니다' 안내가 사실과 다릅니다.
   requireCondition(
-    html.includes('id="chapter-dialog-note"'),
-    `${filename}의 분야 선택 창 안내 문구가 갱신되지 않습니다.`
+    !html.includes("순차적으로 열립니다") && !html.includes("자료 검수"),
+    `${filename}에 아직 안 열린 분야가 있다는 옛 안내가 남아 있습니다.`
   );
   requireCondition(
     !html.includes("제1편 시범 콘텐츠만"),

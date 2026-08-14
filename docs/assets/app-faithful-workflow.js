@@ -639,9 +639,105 @@
   function setFormPreviewZoom(nextZoom) {
     formPreviewZoom = Math.max(60, Math.min(200, nextZoom));
     const image = byId("form-preview-image");
+    const sheet = byId("form-preview-sheet");
     const output = byId("form-preview-zoom");
     if (image) image.style.width = `${formPreviewZoom}%`;
+    if (sheet) sheet.style.width = `${formPreviewZoom}%`;
     if (output) output.textContent = `${formPreviewZoom}%`;
+  }
+
+  // 미리보기 그림(SVG)을 <img>로 걸면 그림 한 장이라 글자를 끌어 담을 수 없습니다.
+  // 같은 파일을 화면 안에 그대로 펼쳐 넣으면 글자가 진짜 글자로 남아
+  // 마우스로 긁어 복사할 수 있습니다. 보이는 모습은 달라지지 않습니다.
+  const previewCache = new Map();
+
+  async function inlinePreview(asset, token) {
+    const sheet = byId("form-preview-sheet");
+    const image = byId("form-preview-image");
+    if (!sheet) return false;
+
+    let markup = previewCache.get(asset.preview);
+    if (markup === undefined) {
+      try {
+        const answer = await fetch(asset.preview);
+        markup = answer.ok ? await answer.text() : null;
+      } catch (error) {
+        markup = null;
+      }
+      previewCache.set(asset.preview, markup);
+    }
+    // 받아 오는 동안 다른 서식으로 넘어갔으면 늦게 온 것을 버립니다.
+    if (token !== previewToken) return false;
+    if (!markup || !markup.includes("<svg")) return false;
+
+    sheet.innerHTML = markup;
+    const drawn = sheet.querySelector("svg");
+    if (!drawn) {
+      sheet.innerHTML = "";
+      return false;
+    }
+    // 원본에 박힌 크기를 지워야 창 너비에 맞춰 늘었다 줄었다 합니다.
+    drawn.removeAttribute("width");
+    drawn.removeAttribute("height");
+    sheet.hidden = false;
+    if (image) image.hidden = true;
+    return true;
+  }
+
+  // 화면에 펼쳐 둔 글자를 줄 단위로 모읍니다. 같은 높이에 놓인 글자가 한 줄입니다.
+  // 쪽마다 높이를 0부터 다시 세므로, 쪽을 먼저 나누지 않으면 1쪽과 2쪽 글이 섞입니다.
+  function textOfPage(scope) {
+    const lines = new Map();
+    scope.querySelectorAll("text").forEach((node) => {
+      const value = node.textContent.trim();
+      if (!value) return;
+      // 글자 아래끝 위치가 조금씩 다를 수 있어 1pt 단위로 뭉칩니다.
+      const row = Math.round(Number(node.getAttribute("y") || 0));
+      const at = Number(node.getAttribute("x") || 0);
+      if (!lines.has(row)) lines.set(row, []);
+      lines.get(row).push({ at, value });
+    });
+    return [...lines.entries()]
+      .sort((a, b) => a[0] - b[0])
+      .map(([, cells]) =>
+        cells
+          .sort((a, b) => a.at - b.at)
+          .map((cell) => cell.value)
+          .join(" ")
+      )
+      .join("\n");
+  }
+
+  function previewText() {
+    const sheet = byId("form-preview-sheet");
+    if (!sheet || sheet.hidden) return "";
+    const pages = [...sheet.querySelectorAll("[data-page]")];
+    const scopes = pages.length ? pages : [sheet];
+    return scopes
+      .map(textOfPage)
+      .filter(Boolean)
+      .join("\n\n");
+  }
+
+  async function copyPreviewText() {
+    const status = byId("form-preview-status");
+    // 긁어 둔 곳이 있으면 그것만, 없으면 서식 전체를 담습니다.
+    const picked = String(window.getSelection?.() || "").trim();
+    const value = picked || previewText();
+    if (!value) {
+      if (status) status.textContent = "복사할 글자가 없습니다.";
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(value);
+      if (status) {
+        status.textContent = picked
+          ? "긁어 둔 글자를 복사했습니다."
+          : "서식 글자를 모두 복사했습니다.";
+      }
+    } catch (error) {
+      if (status) status.textContent = "복사하지 못했습니다. 직접 긁어서 복사해 주세요.";
+    }
   }
 
   function ensureFormDialog() {
@@ -666,9 +762,11 @@
                   <output id="form-preview-zoom">100%</output>
                   <button type="button" data-form-zoom-in aria-label="미리보기 확대">＋</button>
                   <button type="button" data-form-zoom-reset>화면 맞춤</button>
+                  <button type="button" data-form-copy-text>글자 복사</button>
                 </div>
               </div>
               <div class="form-preview-viewport" id="form-preview-viewport" tabindex="0">
+                <div class="form-preview-sheet" id="form-preview-sheet" hidden></div>
                 <img class="form-preview-image" id="form-preview-image" alt="" draggable="false" />
                 <p class="form-preview-fallback" id="form-preview-fallback" hidden>
                   미리보기를 준비하지 못했습니다. 아래 HWPX 파일을 내려받아 확인해 주세요.
@@ -699,7 +797,12 @@
     dialog
       .querySelector("[data-form-zoom-reset]")
       .addEventListener("click", () => setFormPreviewZoom(100));
+    dialog
+      .querySelector("[data-form-copy-text]")
+      .addEventListener("click", copyPreviewText);
   }
+
+  let previewToken = 0;
 
   function openForm(formId) {
     const form = getForm(formId);
@@ -708,21 +811,31 @@
 
     const asset = getFormAsset(formId);
     const image = byId("form-preview-image");
+    const sheet = byId("form-preview-sheet");
     const fallback = byId("form-preview-fallback");
     const download = byId("form-download-link");
     const status = byId("form-preview-status");
     const viewport = byId("form-preview-viewport");
+    const token = (previewToken += 1);
 
     byId("form-source-title").textContent = `${form.id} ${form.title}`;
     setFormPreviewZoom(100);
     viewport.scrollTo({ top: 0, left: 0 });
+    sheet.hidden = true;
+    sheet.innerHTML = "";
 
     if (asset) {
+      // 먼저 그림으로 띄워 두고, 글자를 담은 것이 오면 조용히 바꿔 답니다.
       image.hidden = false;
       image.src = asset.preview;
       image.alt = `${form.id} ${form.title} 원본 문서 미리보기`;
       fallback.hidden = true;
       status.textContent = `${asset.pageCount}쪽 · HWPX 원본 배치`;
+      inlinePreview(asset, token).then((ready) => {
+        if (ready && token === previewToken) {
+          status.textContent = `${asset.pageCount}쪽 · 글자를 끌어서 복사할 수 있습니다`;
+        }
+      });
       download.hidden = false;
       download.href = asset.download;
       // 저장되는 파일 이름을 서식 이름으로 정해 줍니다.

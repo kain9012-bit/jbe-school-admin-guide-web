@@ -120,13 +120,6 @@
 
     bindChapterToggles();
 
-    const available = config.chapters.filter((chapter) => chapter.available);
-    const note = document.getElementById("chapter-dialog-note");
-    if (note) {
-      note.textContent = `현재 ${available
-        .map((chapter) => chapter.title)
-        .join("·")} 분야를 볼 수 있으며, 나머지는 자료 검수 후 순차적으로 열립니다.`;
-    }
   }
 
   // 분야를 누르면 그 자리에서 업무 목록이 펼쳐집니다.

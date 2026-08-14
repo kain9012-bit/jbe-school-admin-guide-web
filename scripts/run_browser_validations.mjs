@@ -1,7 +1,8 @@
-// 브라우저를 띄워 보는 검증 두 가지를 편을 나눠 차례로 돌립니다.
+// 브라우저를 띄워 보는 검증을 편을 나눠 차례로 돌립니다.
 //
-//   · validate_render_smoke.mjs  업무 121개를 다 열어 보고 오류·빈칸·넘침 확인
-//   · validate_table_fit.mjs     표가 폭 안에 들어가고 낱말이 안 끊기는지 확인
+//   · validate_render_smoke.mjs    업무 121개를 다 열어 보고 오류·빈칸·넘침 확인
+//   · validate_table_fit.mjs       표가 폭 안에 들어가고 낱말이 안 끊기는지 확인
+//   · validate_form_text_copy.mjs  서식 미리보기 글자를 긁어 복사할 수 있는지 확인
 //
 // 19편을 한 번에 열면 오래 걸려 중간에 끊깁니다. 그래서 몇 편씩 나눠 돌립니다.
 //
@@ -46,7 +47,11 @@ for (const job of [
   }
 }
 
-for (const job of ["validate_render_smoke.mjs", "validate_table_fit.mjs"]) {
+for (const job of [
+  "validate_render_smoke.mjs",
+  "validate_table_fit.mjs",
+  "validate_form_text_copy.mjs",
+]) {
   for (const chapters of GROUPS) {
     const result = spawnSync(
       "node",
