@@ -640,12 +640,9 @@
     formPreviewZoom = Math.max(60, Math.min(200, nextZoom));
     const image = byId("form-preview-image");
     const sheet = byId("form-preview-sheet");
-    const tables = byId("form-preview-tables");
     const output = byId("form-preview-zoom");
     if (image) image.style.width = `${formPreviewZoom}%`;
     if (sheet) sheet.style.width = `${formPreviewZoom}%`;
-    // 표 보기는 폭을 늘리는 대신 글자를 키웁니다. 칸이 옆으로 넘치지 않게 합니다.
-    if (tables) tables.style.fontSize = `${(formPreviewZoom / 100) * 1.4}rem`;
     if (output) output.textContent = `${formPreviewZoom}%`;
   }
 
@@ -728,8 +725,8 @@
   //
   // 한글파일 안에는 표가 표로 들어 있습니다. 그것을 미리 <table>로 꺼내
   // 서식마다 한 장씩 저장해 두었습니다(scripts/build_form_tables.mjs).
-  // 붙여 넣을 때는 이 조각을 씁니다. 한글·엑셀·워드는 text/html 을 받으면
-  // 칸을 그대로 알아봅니다.
+  // 그 조각을 화면 밖에 깔아 두었다가 복사할 때만 씁니다. 화면에 보이는 것은
+  // 예나 지금이나 원본 그대로의 미리보기 하나뿐입니다.
   const tableCache = new Map();
 
   function tablePath(asset) {
@@ -751,101 +748,90 @@
     return tableCache.get(where);
   }
 
-  // 표를 글로만 붙일 곳(메모장 등)을 위해 칸을 탭으로 벌려 둡니다.
-  function textOfMarkup(scope) {
-    const lines = [];
-    scope.childNodes.forEach((node) => {
-      if (node.nodeType !== 1) return;
-      if (node.tagName === "TABLE") {
-        node.querySelectorAll("tr").forEach((row) => {
-          lines.push(
-            [...row.children].map((cell) => cell.textContent.trim()).join("\t")
-          );
-        });
-        lines.push("");
-        return;
-      }
-      const value = node.textContent.trim();
-      if (value) lines.push(value);
+  // 표 모양이 한글까지 살아 가려면 표에 선이 그어져 있어야 합니다.
+  // 스타일시트에만 적어 두면 복사할 때 딸려 가지 않을 수 있어 칸마다 직접 답니다.
+  function drawBorders(scope) {
+    scope.querySelectorAll("table").forEach((table) => {
+      table.setAttribute("border", "1");
+      table.style.borderCollapse = "collapse";
+      table.style.width = "100%";
     });
-    return lines.join("\n").replace(/\n{3,}/g, "\n\n").trim();
+    scope.querySelectorAll("th, td").forEach((cell) => {
+      cell.style.border = "1px solid #000";
+      cell.style.padding = "2px 4px";
+      cell.style.verticalAlign = "top";
+    });
   }
 
-  async function putOnClipboard(html, text) {
-    // 표째로 붙이려면 text/html 도 같이 담아야 합니다. 옛 브라우저는 글자만 담습니다.
-    if (html && window.ClipboardItem && navigator.clipboard?.write) {
-      await navigator.clipboard.write([
-        new ClipboardItem({
-          "text/html": new Blob([html], { type: "text/html" }),
-          "text/plain": new Blob([text], { type: "text/plain" }),
-        }),
-      ]);
-      return true;
+  // 붙여 넣기는 사람이 긁어서 Ctrl+C 한 것과 똑같은 길로 갑니다.
+  //
+  // navigator.clipboard.write 로 text/html 을 담아도 한글은 글자만 받아 갑니다.
+  // 브라우저가 진짜 선택 영역을 복사할 때 만들어 주는 CF_HTML(윈도우 클립보드가
+  // 쓰는 모양)이 아니기 때문입니다. 그래서 화면 밖에 깔아 둔 표를 잠깐 선택해
+  // 두고 복사 명령을 부릅니다. 한글·엑셀·워드가 표로 알아봅니다.
+  function copyBySelecting(node) {
+    const selection = window.getSelection();
+    const before = selection.rangeCount ? selection.getRangeAt(0).cloneRange() : null;
+    const range = document.createRange();
+    range.selectNodeContents(node);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    let done = false;
+    try {
+      done = document.execCommand("copy");
+    } catch (error) {
+      done = false;
     }
-    await navigator.clipboard.writeText(text);
-    return false;
+    selection.removeAllRanges();
+    // 사람이 긁어 두었던 곳은 되돌려 놓습니다.
+    if (before) selection.addRange(before);
+    return done;
   }
 
   async function copyPreviewText() {
     const status = byId("form-preview-status");
-    const tables = byId("form-preview-tables");
+    const source = byId("form-copy-source");
     const selection = window.getSelection?.();
     const picked = String(selection || "").trim();
 
-    let html = "";
-    let text = picked;
+    // 1) 긁어 둔 곳이 있으면 그것을 그대로 복사합니다.
     if (picked) {
-      // 긁어 둔 곳이 표 안이면 그 칸 구조까지 그대로 떼어 옵니다.
-      const holder = document.createElement("div");
-      holder.appendChild(selection.getRangeAt(0).cloneContents());
-      if (holder.querySelector("table")) {
-        html = holder.innerHTML;
-        text = textOfMarkup(holder) || picked;
+      const done = document.execCommand ? document.execCommand("copy") : false;
+      if (!done) {
+        try {
+          await navigator.clipboard.writeText(picked);
+        } catch (error) {
+          if (status) status.textContent = "복사하지 못했습니다. Ctrl+C를 눌러 주세요.";
+          return;
+        }
       }
-    } else if (tables && tables.dataset.ready === "yes") {
-      html = tables.innerHTML;
-      text = textOfMarkup(tables);
-    } else {
-      text = previewText();
+      if (status) status.textContent = "긁어 둔 곳을 복사했습니다.";
+      return;
     }
 
+    // 2) 아무 데도 안 긁었으면 서식 전체를 표째로 담습니다.
+    if (source && source.dataset.ready === "yes" && copyBySelecting(source)) {
+      const count = source.querySelectorAll("table").length;
+      if (status) {
+        status.textContent = count
+          ? `서식 전체를 복사했습니다. 표 ${count}개가 표 그대로 붙습니다.`
+          : "서식 전체를 복사했습니다.";
+      }
+      return;
+    }
+
+    // 3) 붙여 넣기용 조각이 없으면 화면에 뜬 글자만이라도 담습니다.
+    const text = previewText();
     if (!text) {
       if (status) status.textContent = "복사할 것이 없습니다.";
       return;
     }
     try {
-      const rich = await putOnClipboard(html, text);
-      if (status) {
-        status.textContent = picked
-          ? `긁어 둔 곳을 복사했습니다${rich && html ? " (표 모양 그대로)" : ""}.`
-          : rich && html
-            ? "서식을 표째로 복사했습니다. 한글·엑셀에 그대로 붙습니다."
-            : "서식 글자를 모두 복사했습니다.";
-      }
+      await navigator.clipboard.writeText(text);
+      if (status) status.textContent = "서식 글자를 모두 복사했습니다.";
     } catch (error) {
       if (status) status.textContent = "복사하지 못했습니다. 직접 긁어서 복사해 주세요.";
     }
-  }
-
-  // 보는 방법 두 가지: 원본 모습(그림 그대로) / 표 보기(칸이 살아 있는 표).
-  function setPreviewMode(mode) {
-    const dialog = byId("form-source-dialog");
-    if (!dialog) return;
-    const tables = byId("form-preview-tables");
-    const sheet = byId("form-preview-sheet");
-    const image = byId("form-preview-image");
-    const asTable = mode === "table" && tables.dataset.ready === "yes";
-    // 그림 대신 펼쳐 넣은 것이 준비되면 그것을, 아니면 옛 그림을 보여 줍니다.
-    const spread = sheet.dataset.ready === "yes";
-    tables.hidden = !asTable;
-    sheet.hidden = asTable || !spread;
-    image.hidden = asTable || spread;
-    dialog.querySelectorAll("[data-form-view]").forEach((button) => {
-      button.setAttribute(
-        "aria-pressed",
-        String(button.dataset.formView === (asTable ? "table" : "sheet"))
-      );
-    });
   }
 
   function ensureFormDialog() {
@@ -866,10 +852,6 @@
               <div class="form-preview-toolbar" aria-label="미리보기 도구">
                 <span id="form-preview-status"></span>
                 <div class="form-preview-controls">
-                  <span class="form-preview-views" role="group" aria-label="보는 방법">
-                    <button type="button" data-form-view="sheet" aria-pressed="true">원본 모습</button>
-                    <button type="button" data-form-view="table" aria-pressed="false">표로 보기</button>
-                  </span>
                   <button type="button" data-form-zoom-out aria-label="미리보기 축소">−</button>
                   <output id="form-preview-zoom">100%</output>
                   <button type="button" data-form-zoom-in aria-label="미리보기 확대">＋</button>
@@ -879,13 +861,14 @@
               </div>
               <div class="form-preview-viewport" id="form-preview-viewport" tabindex="0">
                 <div class="form-preview-sheet" id="form-preview-sheet" hidden></div>
-                <div class="form-preview-tables" id="form-preview-tables" hidden></div>
                 <img class="form-preview-image" id="form-preview-image" alt="" draggable="false" />
                 <p class="form-preview-fallback" id="form-preview-fallback" hidden>
                   미리보기를 준비하지 못했습니다. 아래 HWPX 파일을 내려받아 확인해 주세요.
                 </p>
               </div>
             </div>
+            <!-- 붙여 넣기용 표입니다. 복사할 때만 잠깐 선택하며 화면에는 안 보입니다. -->
+            <div class="form-copy-source" id="form-copy-source" aria-hidden="true"></div>
             <footer>
               <span class="form-download-note" id="form-download-note"></span>
               <a class="krds-btn primary" id="form-download-link" href="" download>
@@ -913,9 +896,6 @@
     dialog
       .querySelector("[data-form-copy-text]")
       .addEventListener("click", copyPreviewText);
-    dialog.querySelectorAll("[data-form-view]").forEach((button) => {
-      button.addEventListener("click", () => setPreviewMode(button.dataset.formView));
-    });
   }
 
   let previewToken = 0;
@@ -928,7 +908,7 @@
     const asset = getFormAsset(formId);
     const image = byId("form-preview-image");
     const sheet = byId("form-preview-sheet");
-    const tables = byId("form-preview-tables");
+    const source = byId("form-copy-source");
     const fallback = byId("form-preview-fallback");
     const download = byId("form-download-link");
     const status = byId("form-preview-status");
@@ -941,10 +921,8 @@
     sheet.hidden = true;
     sheet.innerHTML = "";
     sheet.dataset.ready = "no";
-    tables.hidden = true;
-    tables.innerHTML = "";
-    tables.dataset.ready = "no";
-    setPreviewMode("sheet");
+    source.innerHTML = "";
+    source.dataset.ready = "no";
 
     if (asset) {
       // 먼저 그림으로 띄워 두고, 글자를 담은 것이 오면 조용히 바꿔 답니다.
@@ -958,15 +936,16 @@
           status.textContent = `${asset.pageCount}쪽 · 글자를 끌어서 복사할 수 있습니다`;
         }
       });
-      // 표째로 붙여 넣을 조각은 있을 때만 '표로 보기'를 켭니다.
+      // 붙여 넣기용 표를 화면 밖에 미리 깔아 둡니다. '복사'를 누를 때만 씁니다.
       loadFormTables(asset).then((markup) => {
         if (!markup || token !== previewToken) return;
-        tables.innerHTML = markup;
-        tables.dataset.ready = "yes";
-        const count = tables.querySelectorAll("table").length;
-        status.textContent = count
-          ? `${asset.pageCount}쪽 · 표 ${count}개를 표째로 복사할 수 있습니다`
-          : status.textContent;
+        source.innerHTML = markup;
+        drawBorders(source);
+        source.dataset.ready = "yes";
+        const count = source.querySelectorAll("table").length;
+        if (count) {
+          status.textContent = `${asset.pageCount}쪽 · 표 ${count}개를 표째로 복사할 수 있습니다`;
+        }
       });
       download.hidden = false;
       download.href = asset.download;

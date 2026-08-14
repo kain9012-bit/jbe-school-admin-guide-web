@@ -218,66 +218,16 @@
   cursor: text;
 }
 
-/* 표째로 붙여 넣을 수 있는 보기입니다. 칸이 진짜 표라 긁으면 칸까지 따라옵니다. */
-.form-preview-tables {
-  max-width: 96rem;
-  margin: 0 auto;
-  padding: 3.2rem;
-  background: #fff;
-  box-shadow: 0 0.8rem 2.4rem rgba(19, 20, 22, 0.16);
-  color: var(--guide-ink);
-  font-size: 1.4rem;
-  line-height: 1.7;
-}
-
-.form-preview-tables p {
-  margin: 0 0 0.8rem;
-  white-space: pre-wrap;
-}
-
-.form-preview-tables table {
-  width: 100%;
-  margin: 1.2rem 0 2rem;
-  border-collapse: collapse;
-  table-layout: fixed;
-}
-
-.form-preview-tables th,
-.form-preview-tables td {
-  padding: 0.5rem 0.7rem;
-  border: 1px solid #b9bec6;
-  text-align: left;
-  vertical-align: top;
-  /* 빈 입력란도 칸으로 보이게 최소 높이를 둡니다. */
-  min-height: 2.4rem;
-  overflow-wrap: anywhere;
-}
-
-.form-preview-tables th {
-  background: #f2f4f7;
-  font-weight: 700;
-}
-
-.form-preview-views {
-  display: inline-flex;
-  overflow: hidden;
-  margin-right: 0.6rem;
-  border: 1px solid var(--guide-line);
-  border-radius: 0.6rem;
-}
-
-.form-preview-controls .form-preview-views button {
-  border: 0;
-  border-radius: 0;
-}
-
-.form-preview-controls .form-preview-views button + button {
-  border-left: 1px solid var(--guide-line);
-}
-
-.form-preview-controls .form-preview-views button[aria-pressed="true"] {
-  background: var(--guide-blue);
-  color: #fff;
+/* 붙여 넣기용 표입니다. 화면 밖에 두고 복사할 때만 잠깐 선택합니다.
+   display:none 이나 visibility:hidden 으로 감추면 선택이 되지 않아,
+   자리만 화면 밖으로 밀어 둡니다. */
+.form-copy-source {
+  position: fixed;
+  top: 0;
+  left: -200vw;
+  width: 90rem;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .form-preview-fallback {

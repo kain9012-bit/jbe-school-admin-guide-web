@@ -3,12 +3,14 @@
 // 미리보기는 오랫동안 <img>로 걸려 있었습니다. 그림 한 장이라 화면에서는
 // 글자로 보여도 끌어 담을 수 없었습니다. 지금은 같은 SVG를 화면 안에 그대로
 // 펼쳐 넣어 글자가 진짜 글자로 남습니다. 표는 한글파일에서 꺼낸 <table> 조각을
-// 따로 두어 '표로 보기'에서 칸째로 복사합니다. 둘 다 유지되는지 봅니다.
+// 화면 밖에 깔아 두었다가 '복사'를 누를 때 씁니다. 둘 다 유지되는지 봅니다.
 //   1. 서식을 열면 그림 대신 펼쳐 넣은 것이 보인다
 //   2. 그 안에 글자 마디가 넉넉히 들어 있다
 //   3. 마우스로 긁으면 글자가 잡힌다
 //   4. 붙여 넣기용 조각이 서식마다 있다
-//   5. '표로 보기'를 누르면 진짜 표가 뜬다
+//   5. '복사'를 누르면 클립보드에 표(text/html)가 실제로 담긴다
+//
+// 5번이 핵심입니다. 글자만 담기면 한글에 붙여도 줄글이 됩니다.
 //
 // 사용법: node scripts/validate_form_text_copy.mjs [--chapters 01,12]
 
@@ -79,7 +81,10 @@ function tablesInFile(chapterId, marker) {
 }
 
 const browser = await chromium.launch({ channel: "chromium" });
-const page = await browser.newPage({ viewport: { width: 1280, height: 1000 } });
+// 클립보드에 무엇이 담겼는지 읽어 봐야 하므로 미리 허락을 받아 둡니다.
+const context = await browser.newContext({ viewport: { width: 1280, height: 1000 } });
+await context.grantPermissions(["clipboard-read", "clipboard-write"]);
+const page = await context.newPage();
 
 for (const { id: chapterId, key } of chapterKeys(window)) {
   if (only && !only.has(chapterId)) continue;
@@ -148,38 +153,68 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
     );
   }
 
-  // '표로 보기'로 바꾸면 진짜 표가 떠야 합니다. 그래야 긁을 때 칸이 따라옵니다.
-  const asTable = await page
-    .waitForFunction(() => document.getElementById("form-preview-tables")?.dataset.ready === "yes", {
+  // 붙여 넣기용 표가 화면 밖에 깔려야 합니다. 화면에는 보이면 안 됩니다.
+  const laid = await page
+    .waitForFunction(() => document.getElementById("form-copy-source")?.dataset.ready === "yes", {
       timeout: 8000,
     })
     .then(() => true)
     .catch(() => false);
-  if (!asTable) {
+  const expected = tablesInFile(chapterId, form.id);
+  if (!laid) {
     problems.push(`제${chapterId}편 ${form.id}: 붙여 넣기용 조각을 화면이 읽지 못했습니다.`);
   } else {
-    await page.click('[data-form-view="table"]');
-    const table = await page.evaluate(() => {
-      const box = document.getElementById("form-preview-tables");
-      const sheet = document.getElementById("form-preview-sheet");
+    const source = await page.evaluate(() => {
+      const box = document.getElementById("form-copy-source");
+      const where = box.getBoundingClientRect();
       return {
-        shown: !box.hidden && Boolean(sheet.hidden),
         tables: box.querySelectorAll("table").length,
         cells: box.querySelectorAll("td, th").length,
+        // 화면 밖으로 밀려 있어야 미리보기를 가리지 않습니다.
+        offscreen: where.right <= 0 || where.left >= window.innerWidth,
       };
     });
-    if (!table.shown) {
-      problems.push(`제${chapterId}편 ${form.id}: '표로 보기'를 눌러도 바뀌지 않습니다.`);
-    }
-    // 조각에 든 표가 하나도 빠짐없이 화면에 떠야 합니다.
-    const expected = tablesInFile(chapterId, form.id);
-    if (table.tables !== expected) {
+    if (source.tables !== expected) {
       problems.push(
-        `제${chapterId}편 ${form.id}: 표가 조각에는 ${expected}개인데 화면에는 ${table.tables}개입니다.`
+        `제${chapterId}편 ${form.id}: 표가 조각에는 ${expected}개인데 화면에는 ${source.tables}개입니다.`
       );
     }
-    if (expected && table.cells < 4) {
-      problems.push(`제${chapterId}편 ${form.id}: 표는 떴는데 칸이 ${table.cells}개뿐입니다.`);
+    if (expected && source.cells < 4) {
+      problems.push(`제${chapterId}편 ${form.id}: 표는 깔렸는데 칸이 ${source.cells}개뿐입니다.`);
+    }
+    if (!source.offscreen) {
+      problems.push(`제${chapterId}편 ${form.id}: 붙여 넣기용 표가 화면 안에 보입니다.`);
+    }
+
+    // 여기가 핵심입니다. '복사'를 누르면 클립보드에 표가 실제로 담겨야 합니다.
+    await page.click("[data-form-copy-text]");
+    const copied = await page.evaluate(async () => {
+      try {
+        const items = await navigator.clipboard.read();
+        for (const item of items) {
+          if (item.types.includes("text/html")) {
+            return await (await item.getType("text/html")).text();
+          }
+        }
+      } catch (error) {
+        return "";
+      }
+      return "";
+    });
+    const pasted = (copied.match(/<table/g) || []).length;
+    if (expected && pasted !== expected) {
+      problems.push(
+        `제${chapterId}편 ${form.id}: 복사한 것에 표가 ${pasted}개뿐입니다(조각에는 ${expected}개). 한글에 붙이면 줄글이 됩니다.`
+      );
+    }
+    // 사람이 긁어서 Ctrl+C 한 것과 같은 길로 갔는지 봅니다.
+    // 그 길로 가면 브라우저가 칸마다 실제 모양(font-family 등)을 적어 넣습니다.
+    // 우리가 만든 글자를 그대로 클립보드에 얹으면 이 흔적이 없고,
+    // 그때는 한글이 표를 못 알아보고 글자만 받아 갑니다.
+    if (expected && !/<table[^>]*style="[^"]*font-family/.test(copied)) {
+      problems.push(
+        `제${chapterId}편 ${form.id}: 표를 브라우저가 아니라 글자로 얹었습니다. 한글이 표로 못 받습니다.`
+      );
     }
   }
 
