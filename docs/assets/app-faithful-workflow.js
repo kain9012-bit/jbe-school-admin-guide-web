@@ -884,6 +884,19 @@
     dialog
       .querySelector("[data-close-form]")
       .addEventListener("click", () => dialog.close());
+
+    // 창 밖 어두운 자리를 눌러도 닫습니다. 오른쪽 위 ×만 있으면 답답합니다.
+    // 다만 미리보기 안에서 글자를 긁다가 손을 창 밖에서 떼는 일이 흔해,
+    // 누른 곳과 뗀 곳이 둘 다 창 밖일 때만 닫습니다. 그러지 않으면
+    // 글자를 긁던 중에 창이 닫혀 버립니다.
+    let startedOutside = false;
+    dialog.addEventListener("mousedown", (event) => {
+      startedOutside = event.target === dialog;
+    });
+    dialog.addEventListener("click", (event) => {
+      if (startedOutside && event.target === dialog) dialog.close();
+      startedOutside = false;
+    });
     dialog
       .querySelector("[data-form-zoom-out]")
       .addEventListener("click", () => setFormPreviewZoom(formPreviewZoom - 20));

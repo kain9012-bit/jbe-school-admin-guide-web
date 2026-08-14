@@ -9,6 +9,7 @@
 //   3. 마우스로 긁으면 글자가 잡힌다
 //   4. 붙여 넣기용 조각이 서식마다 있다
 //   5. '복사'를 누르면 클립보드에 표(text/html)가 실제로 담긴다
+//   6. 다시 열면 첫 쪽부터 보이고, 창 밖을 누르면 닫힌다
 //
 // 5번이 핵심입니다. 글자만 담기면 한글에 붙여도 줄글이 됩니다.
 //
@@ -67,6 +68,7 @@ if (!(await alive(base))) {
 const window = loadGuideData();
 const problems = [];
 let checked = 0;
+let closingChecked = false;
 
 function fragmentPath(chapterId, marker) {
   const asset = window.FORM_ASSETS?.[chapterId]?.[marker];
@@ -239,6 +241,40 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
     problems.push(
       `제${chapterId}편 ${form.id}: 다시 열었더니 ${Math.round(back)}px 내려간 자리부터 보입니다.`
     );
+  }
+
+  // 창을 닫는 방법은 편마다 같으므로 한 번만 봅니다.
+  //   1. 창 밖 어두운 자리를 누르면 닫힌다
+  //   2. 창 안을 눌러서는 닫히지 않는다
+  //   3. 미리보기에서 글자를 긁다가 창 밖에서 손을 떼도 닫히지 않는다
+  if (!closingChecked) {
+    closingChecked = true;
+    const isOpen = () =>
+      page.evaluate(() => Boolean(document.getElementById("form-source-dialog").open));
+
+    await page.mouse.click(10, 10);
+    if (await isOpen()) {
+      problems.push("창 밖을 눌러도 미리보기가 닫히지 않습니다.");
+      // 열린 채로 두면 뒤엣것을 누를 수 없어 나머지를 볼 수 없습니다.
+      await page.evaluate(() => document.getElementById("form-source-dialog").close());
+    }
+
+    await page.click(`[data-form-id="${form.id}"]`);
+    await page.click("#form-preview-status");
+    if (!(await isOpen())) problems.push("창 안을 눌렀는데 미리보기가 닫혔습니다.");
+
+    const box = await page.locator("#form-preview-viewport").boundingBox();
+    await page.mouse.move(box.x + 60, box.y + 120);
+    await page.mouse.down();
+    await page.mouse.move(box.x + 400, box.y + 200, { steps: 8 });
+    await page.mouse.move(10, 880, { steps: 8 });
+    await page.mouse.up();
+    if (!(await isOpen())) {
+      problems.push("글자를 긁다가 창 밖에서 손을 떼니 미리보기가 닫혔습니다.");
+    }
+
+    await page.keyboard.press("Escape");
+    if (await isOpen()) problems.push("Esc를 눌러도 미리보기가 닫히지 않습니다.");
   }
 
   checked += 1;
