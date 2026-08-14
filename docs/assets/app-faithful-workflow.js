@@ -640,9 +640,12 @@
     formPreviewZoom = Math.max(60, Math.min(200, nextZoom));
     const image = byId("form-preview-image");
     const sheet = byId("form-preview-sheet");
+    const tables = byId("form-preview-tables");
     const output = byId("form-preview-zoom");
     if (image) image.style.width = `${formPreviewZoom}%`;
     if (sheet) sheet.style.width = `${formPreviewZoom}%`;
+    // 표 보기는 폭을 늘리는 대신 글자를 키웁니다. 칸이 옆으로 넘치지 않게 합니다.
+    if (tables) tables.style.fontSize = `${(formPreviewZoom / 100) * 1.4}rem`;
     if (output) output.textContent = `${formPreviewZoom}%`;
   }
 
@@ -679,6 +682,7 @@
     // 원본에 박힌 크기를 지워야 창 너비에 맞춰 늘었다 줄었다 합니다.
     drawn.removeAttribute("width");
     drawn.removeAttribute("height");
+    sheet.dataset.ready = "yes";
     sheet.hidden = false;
     if (image) image.hidden = true;
     return true;
@@ -719,25 +723,129 @@
       .join("\n\n");
   }
 
+  // 그림에서 글자만 떼어 오면 칸이 사라집니다. 표는 그림에 선으로만 그려져 있어,
+  // 한글이나 엑셀에 붙이면 줄글이 되어 버립니다.
+  //
+  // 한글파일 안에는 표가 표로 들어 있습니다. 그것을 미리 <table>로 꺼내
+  // 서식마다 한 장씩 저장해 두었습니다(scripts/build_form_tables.mjs).
+  // 붙여 넣을 때는 이 조각을 씁니다. 한글·엑셀·워드는 text/html 을 받으면
+  // 칸을 그대로 알아봅니다.
+  const tableCache = new Map();
+
+  function tablePath(asset) {
+    return asset.preview.replace(/\.svg$/, ".html");
+  }
+
+  async function loadFormTables(asset) {
+    const where = tablePath(asset);
+    if (!tableCache.has(where)) {
+      let markup = null;
+      try {
+        const answer = await fetch(where);
+        markup = answer.ok ? await answer.text() : null;
+      } catch (error) {
+        markup = null;
+      }
+      tableCache.set(where, markup && markup.trim() ? markup : null);
+    }
+    return tableCache.get(where);
+  }
+
+  // 표를 글로만 붙일 곳(메모장 등)을 위해 칸을 탭으로 벌려 둡니다.
+  function textOfMarkup(scope) {
+    const lines = [];
+    scope.childNodes.forEach((node) => {
+      if (node.nodeType !== 1) return;
+      if (node.tagName === "TABLE") {
+        node.querySelectorAll("tr").forEach((row) => {
+          lines.push(
+            [...row.children].map((cell) => cell.textContent.trim()).join("\t")
+          );
+        });
+        lines.push("");
+        return;
+      }
+      const value = node.textContent.trim();
+      if (value) lines.push(value);
+    });
+    return lines.join("\n").replace(/\n{3,}/g, "\n\n").trim();
+  }
+
+  async function putOnClipboard(html, text) {
+    // 표째로 붙이려면 text/html 도 같이 담아야 합니다. 옛 브라우저는 글자만 담습니다.
+    if (html && window.ClipboardItem && navigator.clipboard?.write) {
+      await navigator.clipboard.write([
+        new ClipboardItem({
+          "text/html": new Blob([html], { type: "text/html" }),
+          "text/plain": new Blob([text], { type: "text/plain" }),
+        }),
+      ]);
+      return true;
+    }
+    await navigator.clipboard.writeText(text);
+    return false;
+  }
+
   async function copyPreviewText() {
     const status = byId("form-preview-status");
-    // 긁어 둔 곳이 있으면 그것만, 없으면 서식 전체를 담습니다.
-    const picked = String(window.getSelection?.() || "").trim();
-    const value = picked || previewText();
-    if (!value) {
-      if (status) status.textContent = "복사할 글자가 없습니다.";
+    const tables = byId("form-preview-tables");
+    const selection = window.getSelection?.();
+    const picked = String(selection || "").trim();
+
+    let html = "";
+    let text = picked;
+    if (picked) {
+      // 긁어 둔 곳이 표 안이면 그 칸 구조까지 그대로 떼어 옵니다.
+      const holder = document.createElement("div");
+      holder.appendChild(selection.getRangeAt(0).cloneContents());
+      if (holder.querySelector("table")) {
+        html = holder.innerHTML;
+        text = textOfMarkup(holder) || picked;
+      }
+    } else if (tables && tables.dataset.ready === "yes") {
+      html = tables.innerHTML;
+      text = textOfMarkup(tables);
+    } else {
+      text = previewText();
+    }
+
+    if (!text) {
+      if (status) status.textContent = "복사할 것이 없습니다.";
       return;
     }
     try {
-      await navigator.clipboard.writeText(value);
+      const rich = await putOnClipboard(html, text);
       if (status) {
         status.textContent = picked
-          ? "긁어 둔 글자를 복사했습니다."
-          : "서식 글자를 모두 복사했습니다.";
+          ? `긁어 둔 곳을 복사했습니다${rich && html ? " (표 모양 그대로)" : ""}.`
+          : rich && html
+            ? "서식을 표째로 복사했습니다. 한글·엑셀에 그대로 붙습니다."
+            : "서식 글자를 모두 복사했습니다.";
       }
     } catch (error) {
       if (status) status.textContent = "복사하지 못했습니다. 직접 긁어서 복사해 주세요.";
     }
+  }
+
+  // 보는 방법 두 가지: 원본 모습(그림 그대로) / 표 보기(칸이 살아 있는 표).
+  function setPreviewMode(mode) {
+    const dialog = byId("form-source-dialog");
+    if (!dialog) return;
+    const tables = byId("form-preview-tables");
+    const sheet = byId("form-preview-sheet");
+    const image = byId("form-preview-image");
+    const asTable = mode === "table" && tables.dataset.ready === "yes";
+    // 그림 대신 펼쳐 넣은 것이 준비되면 그것을, 아니면 옛 그림을 보여 줍니다.
+    const spread = sheet.dataset.ready === "yes";
+    tables.hidden = !asTable;
+    sheet.hidden = asTable || !spread;
+    image.hidden = asTable || spread;
+    dialog.querySelectorAll("[data-form-view]").forEach((button) => {
+      button.setAttribute(
+        "aria-pressed",
+        String(button.dataset.formView === (asTable ? "table" : "sheet"))
+      );
+    });
   }
 
   function ensureFormDialog() {
@@ -758,15 +866,20 @@
               <div class="form-preview-toolbar" aria-label="미리보기 도구">
                 <span id="form-preview-status"></span>
                 <div class="form-preview-controls">
+                  <span class="form-preview-views" role="group" aria-label="보는 방법">
+                    <button type="button" data-form-view="sheet" aria-pressed="true">원본 모습</button>
+                    <button type="button" data-form-view="table" aria-pressed="false">표로 보기</button>
+                  </span>
                   <button type="button" data-form-zoom-out aria-label="미리보기 축소">−</button>
                   <output id="form-preview-zoom">100%</output>
                   <button type="button" data-form-zoom-in aria-label="미리보기 확대">＋</button>
                   <button type="button" data-form-zoom-reset>화면 맞춤</button>
-                  <button type="button" data-form-copy-text>글자 복사</button>
+                  <button type="button" data-form-copy-text>복사</button>
                 </div>
               </div>
               <div class="form-preview-viewport" id="form-preview-viewport" tabindex="0">
                 <div class="form-preview-sheet" id="form-preview-sheet" hidden></div>
+                <div class="form-preview-tables" id="form-preview-tables" hidden></div>
                 <img class="form-preview-image" id="form-preview-image" alt="" draggable="false" />
                 <p class="form-preview-fallback" id="form-preview-fallback" hidden>
                   미리보기를 준비하지 못했습니다. 아래 HWPX 파일을 내려받아 확인해 주세요.
@@ -800,6 +913,9 @@
     dialog
       .querySelector("[data-form-copy-text]")
       .addEventListener("click", copyPreviewText);
+    dialog.querySelectorAll("[data-form-view]").forEach((button) => {
+      button.addEventListener("click", () => setPreviewMode(button.dataset.formView));
+    });
   }
 
   let previewToken = 0;
@@ -812,6 +928,7 @@
     const asset = getFormAsset(formId);
     const image = byId("form-preview-image");
     const sheet = byId("form-preview-sheet");
+    const tables = byId("form-preview-tables");
     const fallback = byId("form-preview-fallback");
     const download = byId("form-download-link");
     const status = byId("form-preview-status");
@@ -823,6 +940,11 @@
     viewport.scrollTo({ top: 0, left: 0 });
     sheet.hidden = true;
     sheet.innerHTML = "";
+    sheet.dataset.ready = "no";
+    tables.hidden = true;
+    tables.innerHTML = "";
+    tables.dataset.ready = "no";
+    setPreviewMode("sheet");
 
     if (asset) {
       // 먼저 그림으로 띄워 두고, 글자를 담은 것이 오면 조용히 바꿔 답니다.
@@ -835,6 +957,16 @@
         if (ready && token === previewToken) {
           status.textContent = `${asset.pageCount}쪽 · 글자를 끌어서 복사할 수 있습니다`;
         }
+      });
+      // 표째로 붙여 넣을 조각은 있을 때만 '표로 보기'를 켭니다.
+      loadFormTables(asset).then((markup) => {
+        if (!markup || token !== previewToken) return;
+        tables.innerHTML = markup;
+        tables.dataset.ready = "yes";
+        const count = tables.querySelectorAll("table").length;
+        status.textContent = count
+          ? `${asset.pageCount}쪽 · 표 ${count}개를 표째로 복사할 수 있습니다`
+          : status.textContent;
       });
       download.hidden = false;
       download.href = asset.download;
