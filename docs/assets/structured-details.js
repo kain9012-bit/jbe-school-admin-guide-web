@@ -182,6 +182,58 @@
     return result;
   }
 
+  // 원문이 그림을 그리려고 둘러 둔 빈 줄·빈 열을 걷어냅니다.
+  //
+  // 제4편 시차출퇴근제 개념도가 그렇습니다. 11열 6줄인데 글이 든 곳은
+  // 가운데 네 줄뿐이고, 양옆과 위아래는 그림 여백으로 비워 둔 자리입니다.
+  // 그대로 격자로 옮기면 빈 칸만 줄줄이 보여 무엇을 나타낸 표인지 흐려집니다.
+  //
+  // 가운데 빈 열은 그대로 둡니다. 그것은 여백이 아니라 '이 자리에는 값이 없다'는
+  // 뜻이라, 걷어내면 위아래 줄이 어긋납니다.
+  function trimEmptyEdges(grid, columnCount) {
+    const blank = (cell) => cell.filler || isBlankCell(cell);
+
+    let first = columnCount;
+    let last = -1;
+    for (const row of grid) {
+      for (const cell of row) {
+        if (blank(cell)) continue;
+        // 표 폭을 통째로 가로지르는 칸은 어느 열에 걸리는지를 말해 주지 않습니다.
+        // 제목 띠나 눈금 줄이 그렇습니다. 이것까지 세면 양옆 여백이 안 걷힙니다.
+        if ((cell.colSpan || 1) >= columnCount) continue;
+        first = Math.min(first, cell.column);
+        last = Math.max(last, cell.column + (cell.colSpan || 1) - 1);
+      }
+    }
+    if (last < first) return null;
+
+    const keep = grid.map((row) => row.some((cell) => !blank(cell)));
+    if (!keep.some(Boolean)) return null;
+    // 남길 줄이 몇 번째가 되는지 미리 세어 둡니다. 걸쳐 있는 칸의 줄 수를
+    // 다시 매기는 데 씁니다.
+    const kept = [];
+    keep.forEach((alive, index) => {
+      if (alive) kept.push(index);
+    });
+
+    const rows = kept.map((rowIndex) =>
+      grid[rowIndex]
+        .filter(
+          (cell) => cell.column + (cell.colSpan || 1) - 1 >= first && cell.column <= last
+        )
+        .map((cell) => {
+          const from = Math.max(cell.column, first);
+          const to = Math.min(cell.column + (cell.colSpan || 1) - 1, last);
+          const bottom = rowIndex + (cell.rowSpan || 1) - 1;
+          const down = kept.filter((at) => at >= rowIndex && at <= bottom).length;
+          return { ...cell, column: from - first, colSpan: to - from + 1, rowSpan: down };
+        })
+    );
+
+    if (rows.length === grid.length && last - first + 1 === columnCount) return null;
+    return { rows, columnCount: last - first + 1 };
+  }
+
   // 원문에 아예 칸이 없는 자리는 빈 칸을 하나 넣어 자리를 맞춥니다.
   // 브라우저는 <td>를 앞에서부터 차례로 놓기 때문에, 첫 칸이 세 번째 열에
   // 있는 줄을 그대로 내보내면 그 칸이 첫 열로 끌려가 표 전체가 밀립니다.
@@ -476,10 +528,10 @@
   function spannedTableMarkup(caption, headers, rows, sourceWidths) {
     // 머리글과 본문을 <thead>·<tbody>로 나누면, 머리글 칸이 아래로 걸친 병합
     // (구 분: 2줄 차지)이 끊깁니다. 한 덩어리로 그리고 첫 줄만 머리글로 표시합니다.
-    const grid = visibleCells([headers, ...rows]);
+    let grid = visibleCells([headers, ...rows]);
     // 열 수는 모든 행을 봐야 합니다. 머리글 행만 보면, 머리글이 한 칸뿐인데
     // 아래 행은 세 칸인 표에서 <col>을 하나만 만들어 표가 폭을 넘어갑니다.
-    const columnCount = grid.reduce((most, row) => {
+    let columnCount = grid.reduce((most, row) => {
       let at = 0;
       for (const cell of row) {
         const from = cell.column ?? at;
@@ -487,6 +539,15 @@
       }
       return Math.max(most, at);
     }, 0) || headers.reduce((total, cell) => total + (cell.colSpan || 1), 0);
+
+    // 그림 여백으로 둘러 둔 빈 줄·빈 열을 걷어내고 다시 셉니다.
+    const trimmed = trimEmptyEdges(grid, columnCount);
+    if (trimmed) {
+      grid = visibleCells(trimmed.rows);
+      columnCount = trimmed.columnCount;
+      // 원문 열 너비는 걷어내기 전 열 수에 맞춰 둔 값이라 더는 못 씁니다.
+      sourceWidths = null;
+    }
 
     // 열 너비는 매뉴얼을 만든 사람이 정해 둔 비율을 바탕으로 하되,
     // 어느 열도 자기 낱말보다 좁아지지 않게 손봅니다.
