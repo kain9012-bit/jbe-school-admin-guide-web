@@ -45,6 +45,21 @@ def local_name(tag: str) -> str:
     return tag.rsplit("}", 1)[-1]
 
 
+# 한컴이 함초롬 글꼴의 개인용 영역(PUA)에 넣어 둔 기호입니다. 유니코드에 없는
+# 자리라 그대로 두면 화면에 네모로 보입니다. 원문 PDF에서 그 자리에 무엇이
+# 찍혀 있는지 확인해 바꿔 답니다. build_chapters_from_hwpx.mjs의 HNC_SYMBOL과
+# 같아야 합니다.
+HNC_SYMBOL = {
+    "\U000f003b": "\u21e9",  # 제4편 외부강의 절차도의 아래 화살표
+    "\U000f02fb": "\u2023",  # 제7편 보수작업의 글머리표
+}
+PUA = re.compile("[\U000f0000-\U000ffffd]")
+
+
+def unsymbol(value: str) -> str:
+    return PUA.sub(lambda mark: HNC_SYMBOL.get(mark.group(0), "\u25aa"), value)
+
+
 def cell_text(cell: ET.Element) -> str:
     """칸 안의 글을 문단 차례대로 모읍니다. 문단이 바뀌면 줄을 바꿉니다."""
     lines: list[str] = []
@@ -58,7 +73,7 @@ def cell_text(cell: ET.Element) -> str:
             for node in paragraph.iter()
             if local_name(node.tag) == "t"
         ]
-        line = re.sub(r"\s+", " ", "".join(pieces)).strip()
+        line = re.sub(r"\s+", " ", unsymbol("".join(pieces))).strip()
         if line:
             lines.append(line)
     return "\n".join(lines)

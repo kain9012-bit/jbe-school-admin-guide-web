@@ -284,16 +284,30 @@
   // 이름표로 쓰기에 너무 긴 글이 든 칸은 그림이 아니라 내용입니다.
   const FLOW_LABEL_LIMIT = 40;
 
+  // 판단이 갈리는 절차도에서는 화살표에 이름표가 붙습니다.
+  //   제4편 외부강의 신고 절차도  '⇩Yes'(아래로 가는 길) / '➡ No'(옆으로 새는 길)
+  // 이름표까지 붙은 칸을 그냥 글로 보면 흐름도가 아니라 격자가 됩니다.
+  const ARROW_LABEL = /^(Yes|No|예|아니오|아니요)$/i;
+
   const cellText = (cell) => String((cell && cell.text) || "");
   const isBlankCell = (cell) => !cellText(cell).trim();
-  const isArrowCell = (cell) => {
-    const value = cellText(cell).trim();
-    return Boolean(value) && ARROW_ONLY.test(value);
-  };
-  const isSideArrowCell = (cell) => {
-    const value = cellText(cell).trim();
-    return Boolean(value) && SIDE_ARROW.test(value);
-  };
+
+  // 화살표 부분과 이름표를 갈라 돌려줍니다. 화살표가 아니면 null입니다.
+  function arrowParts(cell, shape) {
+    const value = cellText(cell).replace(/\s+/g, " ").trim();
+    if (!value) return null;
+    if (shape.test(value)) return { label: "" };
+    const at = [...value].findIndex((mark) => !shape.test(mark));
+    if (at <= 0) return null;
+    const head = value.slice(0, at).trim();
+    const tail = value.slice(at).trim();
+    if (!shape.test(head) || !ARROW_LABEL.test(tail)) return null;
+    return { label: tail };
+  }
+
+  const isArrowCell = (cell) => Boolean(arrowParts(cell, ARROW_ONLY));
+  const isSideArrowCell = (cell) => Boolean(arrowParts(cell, SIDE_ARROW));
+  const arrowLabel = (cell) => (arrowParts(cell, ARROW_ONLY) || {}).label || "";
 
   // 한글에서 세로로 쓴 글자는 한 줄에 한 글자씩 들어 있습니다('위\n촉\n위\n원\n1').
   // 그대로 항목으로 나누면 글자 하나짜리 항목이 줄줄이 생깁니다.
@@ -430,7 +444,12 @@
       for (const [index, row] of grid.entries()) {
         if (skipHead && index === 0) continue;
         if (connectors[index]) {
-          if (lines.length && lines[lines.length - 1].type !== "down") lines.push({ type: "down" });
+          if (lines.length && lines[lines.length - 1].type !== "down") {
+            // 아래로 가는 길에 붙은 이름표('Yes')는 화살표와 함께 보여야
+            // 어느 답일 때 이리로 가는지 알 수 있습니다.
+            const mark = row.find((cell) => arrowLabel(cell));
+            lines.push({ type: "down", label: mark ? arrowLabel(mark) : "" });
+          }
           continue;
         }
         // 줄 안에 옆으로 잇는 화살표가 있으면 그 줄이 곧 하나의 흐름입니다.
@@ -438,11 +457,20 @@
         const cells = row.filter((cell) => !isBlankCell(cell) && !isArrowCell(cell));
         if (!cells.length) continue;
         if (chained) {
-          lines.push({
-            type: "steps",
-            linked: true,
-            steps: cells.map((cell) => flowStage([cell])).filter(Boolean),
-          });
+          // 옆으로 새는 길의 이름표('No')는 그 화살표 뒤에 오는 칸에 답니다.
+          const steps = [];
+          let label = "";
+          for (const cell of row) {
+            if (isBlankCell(cell)) continue;
+            if (isArrowCell(cell)) {
+              label = arrowLabel(cell);
+              continue;
+            }
+            const stage = flowStage([cell]);
+            if (stage) steps.push(label ? { ...stage, label } : stage);
+            label = "";
+          }
+          lines.push({ type: "steps", linked: true, steps });
         } else if (
           cells.length >= 2 &&
           cells
@@ -492,9 +520,16 @@
   function flowMarkup(caption, flow) {
     // 화살표는 칸 뒤가 아니라 앞에 답니다. 단계가 많아 줄이 바뀌면 뒤에 단
     // 화살표만 앞 줄 오른쪽 끝에 홀로 남아, 어디로 가는 화살표인지 알 수 없습니다.
+    // 화살표에 붙은 이름표('No')는 화살표 옆에 답니다. 어느 답일 때 이리로
+    // 가는지가 절차도의 뜻 그 자체입니다.
+    const arrow = (label) =>
+      `<span class="source-flow-arrow">▶${
+        label ? `<span class="source-flow-when">${escapeHtml(label)}</span>` : ""
+      }</span>`;
+
     const stepMarkup = (stage, linked, first) => `
       <li class="source-flow-step">
-        ${linked && !first ? '<span class="source-flow-arrow" aria-hidden="true">▶</span>' : ""}
+        ${linked && !first ? arrow(stage.label) : ""}
         <div class="source-flow-card">
           <span class="source-flow-name">${escapeHtml(stage.name)}</span>
           ${
@@ -512,7 +547,11 @@
         ${flow.lines
           .map((line) =>
             line.type === "down"
-              ? '<li class="source-flow-down" aria-hidden="true">▼</li>'
+              ? `<li class="source-flow-down">▼${
+                  line.label
+                    ? `<span class="source-flow-when">${escapeHtml(line.label)}</span>`
+                    : ""
+                }</li>`
               : `<li class="source-flow-line">
                   <ol class="source-flow-row" data-linked="${line.linked ? 1 : 0}">
                     ${line.steps
