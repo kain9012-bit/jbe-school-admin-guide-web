@@ -306,6 +306,18 @@
     row.every((cell) => isArrowCell(cell) || isBlankCell(cell));
 
   // 표를 흐름도의 뼈대로 옮깁니다. 그림형 표가 아니면 null을 돌려줍니다.
+  // 눈금이 그어진 그림은 흐름이 아닙니다.
+  //
+  // 제4편 유연근무제의 시차출퇴근제 개념도가 그렇습니다. 한 칸에 시각이
+  // '07:00 10:00 12:00 …'처럼 늘어서 있고, 그 아래 칸들이 시간대를 나눠
+  // 가집니다. 이것을 칩으로 늘어놓으면 어느 시간대가 어느 시각에 걸리는지가
+  // 사라집니다. 격자로 두어야 위아래가 맞습니다.
+  const AXIS_TICK = /\d{1,2}\s*:\s*\d{2}/g;
+
+  function hasAxis(cells) {
+    return cells.some((cell) => (cellText(cell).match(AXIS_TICK) || []).length >= 3);
+  }
+
   function flowFromTable(headers, rows) {
     const grid = visibleCells([headers, ...(rows || [])]);
     const columnCount = columnExtent(grid);
@@ -407,6 +419,7 @@
     if (
       all.length >= 6 &&
       blanks * 2 > all.length &&
+      !hasAxis(all) &&
       all
         .filter((cell) => !isBlankCell(cell))
         .every((cell) => [...cellText(cell).trim()].length <= FLOW_LABEL_LIMIT)
@@ -504,24 +517,36 @@
               .map(
                 (cells, rowIndex) => `
                   <tr>
-                    ${cells
-                      .map((cell) => {
-                        if (cell.filler) {
-                          return `<td${cell.colSpan > 1 ? ` colspan="${cell.colSpan}"` : ""}></td>`;
-                        }
-                        // 원문에서 비어 있는 칸은 비워 둡니다.
-                        const lines = bodyLines(unwrap(cell.text));
-                        const content = lines.length ? cellMarkup(lines) : "";
-                        const span = spanAttributes(cell);
-                        if (rowIndex === 0) {
-                          return `<th scope="col"${span}>${content}</th>`;
-                        }
-                        if (cell.column === 0) {
-                          return `<th scope="row"${span}>${content}</th>`;
-                        }
-                        return `<td${span}>${content}</td>`;
-                      })
-                      .join("")}
+                    ${(() => {
+                      // 몇 번째 열에 놓인 칸인지 적어 둡니다. 맨 왼쪽 칸만
+                      // 세로선을 긋지 않는데, 이것을 ':first-child'로 가리면
+                      // 위 줄의 칸이 세로로 걸쳐 있는 줄에서 엉뚱한 칸이
+                      // 맨 왼쪽으로 잡혀 표 한가운데 선이 끊깁니다.
+                      let at = 0;
+                      return cells
+                        .map((cell) => {
+                          const column = cell.column ?? at;
+                          at = column + (cell.colSpan || 1);
+                          const edge = column === 0 ? ' data-col="0"' : "";
+                          if (cell.filler) {
+                            return `<td${
+                              cell.colSpan > 1 ? ` colspan="${cell.colSpan}"` : ""
+                            }${edge}></td>`;
+                          }
+                          // 원문에서 비어 있는 칸은 비워 둡니다.
+                          const lines = bodyLines(unwrap(cell.text));
+                          const content = lines.length ? cellMarkup(lines) : "";
+                          const span = spanAttributes(cell);
+                          if (rowIndex === 0) {
+                            return `<th scope="col"${span}${edge}>${content}</th>`;
+                          }
+                          if (column === 0) {
+                            return `<th scope="row"${span}${edge}>${content}</th>`;
+                          }
+                          return `<td${span}${edge}>${content}</td>`;
+                        })
+                        .join("");
+                    })()}
                   </tr>
                 `
               )
@@ -706,12 +731,6 @@
         .split(/\s*:\s*/)[0]
         .trim() || "표";
 
-    // 들여쓰기 단계는 표 앞뒤를 통틀어 한 번에 정합니다.
-    // 도막마다 따로 정하면 표 앞의 '-'와 표 뒤의 '-'가 다른 자리에 섭니다.
-    const depths = markerDepths(
-      bodyLines(block.body).filter((line, index) => !owners.has(index))
-    );
-
     const pieces = [];
     let buffer = [];
     const drawn = new Set();
@@ -720,9 +739,7 @@
     let drewNote = false;
     const flush = () => {
       if (!buffer.length) return;
-      pieces.push(
-        `<div class="source-structured-intro">${bodyItemsMarkup(buffer, depths)}</div>`
-      );
+      pieces.push(`<div class="source-structured-intro">${bodyItemsMarkup(buffer)}</div>`);
       buffer = [];
     };
 
@@ -784,40 +801,29 @@
   //
   // 표가 없는 항목을 그리는 쪽(app-faithful-workflow.js)과 같은 클래스를 씁니다.
   // 클래스가 같아야 기호 칸 너비·들여쓰기가 저절로 같아집니다.
-  // 글머리표가 나타내는 깊이입니다. app-faithful-workflow.js의 MARKER_DEPTH와
-  // 같아야 합니다. 다르면 표가 든 항목과 없는 항목의 들여쓰기가 어긋납니다.
-  // (scripts/validate_source_presentation.mjs가 두 표가 같은지 봅니다.)
-  const MARKER_DEPTH = {
+  // 기호마다 들여쓰기 단계가 정해져 있습니다. 어느 항목에서나 같아야
+  // 같은 기호가 늘 같은 자리에 섭니다.
+  // app-faithful-workflow.js의 MARKER_LEVEL과 같아야 합니다. 다르면 표가 든
+  // 항목과 없는 항목의 들여쓰기가 어긋납니다.
+  // (scripts/validate_source_presentation.mjs가 화면에서 이를 확인합니다.)
+  const MARKER_LEVEL = {
     "•": 0, "▶": 0, "▸": 0, "▹": 0, "▪": 0, "□": 0, "‣": 0,
     "○": 1, "◦": 1,
-    "※": 1.5, "*": 1.5,
+    "※": 1, "*": 1,
     "-": 2, "–": 2,
   };
 
-  // 한 항목에 나온 기호만 모아 0, 1, 2… 단계로 다시 매깁니다.
-  // '▸'로만 이뤄진 항목은 '▸'가 맨 바깥이 됩니다.
-  function markerDepths(lines) {
-    const found = new Set();
-    for (const item of sourceOutlineItems(lines.join("\n"))) {
-      const depth = MARKER_DEPTH[item.marker];
-      if (depth !== undefined) found.add(depth);
-    }
-    return [...found].sort((a, b) => a - b);
+  function levelOf(marker) {
+    const level = MARKER_LEVEL[marker];
+    return level === undefined ? 0 : level;
   }
 
-  function levelOf(marker, depths) {
-    const depth = MARKER_DEPTH[marker];
-    if (depth === undefined) return 0;
-    const level = depths.indexOf(depth);
-    return level < 0 ? 0 : level;
-  }
-
-  function bodyItemsMarkup(lines, depths = markerDepths(lines)) {
+  function bodyItemsMarkup(lines) {
     const items = sourceOutlineItems(lines.join("\n"));
     if (!items.length) return "—";
     return `<ul class="semantic-summary-list">${items
       .map((item) => {
-        const level = levelOf(item.marker, depths);
+        const level = levelOf(item.marker);
         return item.marker
           ? `<li class="semantic-summary-item" style="--summary-level: ${level}">
               <span class="semantic-summary-marker" aria-hidden="true">${escapeHtml(

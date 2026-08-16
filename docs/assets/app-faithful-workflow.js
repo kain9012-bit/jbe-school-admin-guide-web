@@ -554,17 +554,16 @@
     return items.slice(0, 3).map((item) => excerpt(item, 170));
   }
 
-  // 매뉴얼은 글머리 기호로 위계를 나타냅니다.
-  //   • 또는 ▶  가장 바깥
-  //   ‣          그 아래
-  //   ※ 또는 *   앞 항목에 붙는 설명
-  //   - 또는 –   가장 안쪽
-  // 숫자가 작을수록 바깥입니다. 실제 들여쓰기 단계는 그 묶음에 나온 기호만으로
-  // 다시 매기므로, ‣로만 시작하는 묶음은 ‣가 맨 바깥이 됩니다.
-  const MARKER_DEPTH = {
+  // 매뉴얼은 글머리 기호로 위계를 나타냅니다. 기호마다 들여쓰기 단계가
+  // 정해져 있고, 어느 항목에서나 같습니다. 그래야 같은 기호가 늘 같은 자리에
+  // 섭니다. structured-details.js의 MARKER_LEVEL과 같아야 합니다.
+  //   0단계  • ▶ ▸ ▹ ▪ □ ‣   가장 바깥
+  //   1단계  ○ ◦ ※ *          그 아래, 앞 항목에 붙는 설명
+  //   2단계  - –              가장 안쪽
+  const MARKER_LEVEL = {
     "•": 0, "▶": 0, "▸": 0, "▹": 0, "▪": 0, "□": 0, "‣": 0,
     "○": 1, "◦": 1,
-    "※": 1.5, "*": 1.5,
+    "※": 1, "*": 1,
     "-": 2, "–": 2,
   };
   const MARKER_RE = new RegExp(`^(${MARKER_CLASS}|[-–])\\s*(.*)$`);
@@ -573,24 +572,17 @@
     return MARKER_RE.exec(String(item));
   }
 
-  // 한 묶음 안에 나온 기호들만 모아 0, 1, 2… 단계로 다시 매깁니다.
+  // 기호마다 들여쓰기 단계가 정해져 있습니다.
+  //
+  // 예전에는 '그 묶음에 나온 기호만으로 다시 매기는' 방식이었습니다. 그러면
+  // 같은 '▸ 다음 -'인데도 묶음에 ※가 함께 있으면 '-'가 두 단, 없으면 한 단
+  // 들어가 묶음마다 자리가 달라졌습니다. 자리는 기호만 보고 정합니다.
   function summaryLevels(items) {
-    const depths = [
-      ...new Set(
-        items
-          .map((item) => markerOf(item))
-          .filter(Boolean)
-          .map((match) => MARKER_DEPTH[match[1]])
-          .filter((depth) => depth !== undefined)
-      ),
-    ].sort((a, b) => a - b);
-
     return items.map((item) => {
       const match = markerOf(item);
       if (!match) return 0;
-      const depth = MARKER_DEPTH[match[1]];
-      const level = depths.indexOf(depth);
-      return level < 0 ? 0 : level;
+      const level = MARKER_LEVEL[match[1]];
+      return level === undefined ? 0 : level;
     });
   }
 

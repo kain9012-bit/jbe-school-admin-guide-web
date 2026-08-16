@@ -4,10 +4,11 @@
 //   · 모든 열을 똑같이 나눠 긴 칸이 세로로 눌린 적이 있고
 //   · 가로 스크롤로 미뤄 놓고 고쳤다고 한 적이 있습니다.
 //
-// 그래서 세 가지를 기계로 확인합니다.
+// 그래서 네 가지를 기계로 확인합니다.
 //   1. 가로 스크롤이 생기지 않는다 (표가 폭 안에 들어간다)
 //   2. 칸 안에서 낱말이 가운데에서 끊기지 않는다
 //   3. 그림형 표는 격자로 그리지 않는다
+//   4. 표 한가운데 세로선이 끊기지 않는다
 //
 // 3번은 매뉴얼이 흐름도·구성도를 표 칸에 그려 넣은 자리를 말합니다.
 // 칸 하나에 '≫'만 넣어 화살표를 그리고, 자리를 맞추려고 빈 칸을 늘어놓습니다.
@@ -137,11 +138,28 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
             return Boolean(value) && ARROW_ONLY.test(value);
           }).length;
           // 짧은 이름표만 든 격자가 절반 넘게 비어 있으면 그림입니다(구성도).
+          // 다만 눈금이 그어진 그림(시각이 늘어선 개념도)은 흐름이 아니라 도표라,
+          // 칩으로 늘어놓으면 어느 칸이 어느 눈금에 걸리는지가 사라집니다.
+          // 그런 표는 격자로 두는 것이 맞습니다.
+          const hasAxis = cells.some(
+            (cell) => (plain(cell).match(/\d{1,2}\s*:\s*\d{2}/g) || []).length >= 3
+          );
           const blankCells = cells.filter((cell) => !plain(cell)).length;
           const drawnAsPicture =
             cells.length >= 6 &&
             blankCells * 2 > cells.length &&
+            !hasAxis &&
             cells.every((cell) => [...plain(cell)].length <= LABEL_LIMIT);
+          // 세로선이 빠진 칸: 표의 왼쪽 끝이 아닌데 왼쪽 선이 없는 칸입니다.
+          // 세로로 여러 줄을 차지하는 칸이 있으면 ':last-child'로 선을 지우던
+          // 방식이 아랫줄의 선까지 지워, 표 한가운데 선이 끊겼습니다.
+          const tableLeft = table.getBoundingClientRect().left;
+          const openSides = cells.filter((cell) => {
+            if (!cell.clientWidth) return false;
+            const style = getComputedStyle(cell);
+            if (parseFloat(style.borderLeftWidth) > 0) return false;
+            return cell.getBoundingClientRect().left - tableLeft > 2;
+          }).length;
           // 낱말이 끊겼는지: 칸 안의 글이 줄바꿈 없이 들어갈 수 있는 폭인지 봅니다.
           let tightSample = "";
           const tight = cells.filter((cell) => {
@@ -187,6 +205,7 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
             blankCells,
             cellCount: cells.length,
             drawnAsPicture,
+            openSides,
             label: table.getAttribute("aria-label") || "",
           };
         });
@@ -215,6 +234,11 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
           problems.push(
             `${where}: 짧은 이름표만 든 격자가 ${table.blankCells}/${table.cellCount}칸 비어 있습니다. ` +
               "그림을 격자로 그렸습니다. 흐름도로 그려야 합니다."
+          );
+        }
+        if (table.openSides) {
+          problems.push(
+            `${where}: 세로선이 빠진 칸이 ${table.openSides}개 있습니다. 표 한가운데 선이 끊깁니다.`
           );
         }
       }

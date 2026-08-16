@@ -267,13 +267,16 @@
   font-size: 1.2rem;
 }
 
+/* 아래로 내리긋는 화살표는 칸과 같은 쪽에 세웁니다.
+   가운데에 두면 칸은 왼쪽에 서 있는데 화살표만 화면 한복판에 떠서,
+   어느 칸에서 어느 칸으로 가는 화살표인지 알 수 없습니다. */
 .source-flow > .source-flow-down {
   margin: 0;
-  padding: 0;
+  padding-left: 1.6rem;
   color: var(--guide-blue);
   font-size: 1.2rem;
   line-height: 1;
-  text-align: center;
+  text-align: left;
 }
 
 @media (max-width: 767px) {
@@ -335,14 +338,23 @@
   word-break: keep-all;
   overflow-wrap: normal;
   border-top: 1px solid var(--guide-line);
-  border-right: 1px solid var(--guide-line);
+  /* 세로선은 칸의 '왼쪽'에 긋습니다.
+     오른쪽에 긋고 마지막 칸만 지우면, 세로로 여러 줄을 차지하는 칸이 있는 표에서
+     선이 끊깁니다. 그 칸은 첫 줄에만 있어서, 아랫줄들은 그 앞 칸이 마지막 칸이
+     되어 선이 지워지기 때문입니다(제3편 승진의 '연구·지도직' 칸).
+     왼쪽에 그으면 칸마다 제 선을 그으므로 그런 일이 없습니다. */
+  border-left: 1px solid var(--guide-line);
   vertical-align: top;
   text-align: left;
 }
 
-.source-criteria-table th:last-child,
-.source-criteria-table td:last-child {
-  border-right: 0;
+/* 맨 왼쪽 열만 세로선을 긋지 않습니다. 바깥 테두리가 이미 있습니다.
+   ':first-child'로 가리면 안 됩니다. 위 줄의 칸이 세로로 걸쳐 있는 줄에서는
+   그 줄의 첫 칸이 맨 왼쪽이 아니기 때문입니다. 몇 번째 열인지 적어 둔 것을
+   보고 가립니다(structured-details.js). */
+.source-criteria-table th[data-col="0"],
+.source-criteria-table td[data-col="0"] {
+  border-left: 0;
 }
 
 .source-criteria-table thead th {

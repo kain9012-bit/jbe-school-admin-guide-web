@@ -107,8 +107,7 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
       };
     });
 
-    const worthLooking =
-      lines.length > 1 || marked.some((block) => block.hasTable && block.count > 0);
+    const worthLooking = lines.length > 1 || marked.some((block) => block.count > 0);
     if (!worthLooking) continue;
 
     await page.goto(`${base}/index.html?chapter=${chapterId}#work=${work.id}`, {
@@ -181,6 +180,31 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
           problems.push(
             `제${chapterId}편 ${work.title} [${String(block.title).slice(0, 24)}]: ` +
               `'${marker}'가 자리를 달리해 섭니다 (${kinds.join(", ")}).`
+          );
+        }
+      }
+    }
+
+    // 같은 기호는 항목이 달라져도 같은 자리에 서야 합니다.
+    // 항목마다 그 안에 나온 기호로 단계를 다시 매기면, 같은 '▸ 다음 -'인데도
+    // ※가 함께 있는 항목에서만 '-'가 한 단 더 들어갑니다.
+    if (blocks.length) {
+      const places = await page.evaluate(() => {
+        const found = {};
+        document.querySelectorAll("#step-actions .semantic-summary-item").forEach((item) => {
+          const mark = item.querySelector(".semantic-summary-marker");
+          if (!mark) return;
+          const key = mark.textContent.trim();
+          (found[key] = found[key] || []).push(getComputedStyle(item).marginLeft);
+        });
+        return found;
+      });
+      for (const [marker, list] of Object.entries(places)) {
+        const kinds = [...new Set(list)];
+        if (kinds.length > 1) {
+          problems.push(
+            `제${chapterId}편 ${work.title}: 화면 안에서 '${marker}'가 자리를 달리해 섭니다 ` +
+              `(${kinds.join(", ")}).`
           );
         }
       }
