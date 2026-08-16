@@ -14,7 +14,10 @@
      칸을 넘쳐 글자에 달라붙습니다. */
   grid-template-columns: 1.8rem minmax(0, 1fr);
   gap: 0.6rem;
-  margin-left: calc(var(--summary-level, 0) * 2.4rem);
+  /* 한 단은 기호 칸의 절반입니다. 두 단(‣ 아래의 -)이 들어가면 기호가
+     바로 위 항목의 글 시작점에 서서, 딸린 항목임이 보이면서도 과하게
+     밀려 들어가지 않습니다. 한 단을 2.4rem으로 두었더니 너무 깊었습니다. */
+  margin-left: calc(var(--summary-level, 0) * 1.2rem);
 }
 
 /* 기호는 칸 안에서 오른쪽에 붙여 글자와의 사이를 일정하게 둡니다. */
