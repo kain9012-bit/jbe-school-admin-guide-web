@@ -497,9 +497,14 @@
         : measuredWidths(grid, columnCount);
     // 폭 안에 들어갈 수 있으면 맞추고, 못 들어가면 가로로 넘겨 봅니다.
     // 우겨넣으면 낱말이 가운데에서 끊겨 오히려 못 읽습니다.
+    //
+    // 넓은 화면에서 표가 놓이는 자리는 780px쯤입니다(창 1280px 기준 782px).
+    // 예전에는 690px로 보고 그보다 크면 넘겨 버렸는데, 어림값도 실제보다
+    // 커서 들어갈 수 있는 표까지 가로 스크롤이 붙었습니다.
+    const AVAILABLE = 780;
     const needs = neededWidth(grid, columnCount);
-    const scrolls = needs > 690;
-    const widths = fitWidths(base, grid, columnCount, scrolls ? needs : 730);
+    const scrolls = needs > AVAILABLE;
+    const widths = fitWidths(base, grid, columnCount, scrolls ? needs : AVAILABLE);
     return `
       <div class="source-table-scroll">
         <table class="source-criteria-table" style="--table-columns: ${columnCount}; --table-min: ${Math.round(
@@ -588,8 +593,20 @@
   // 열마다 '이보다 좁으면 낱말이 끊긴다' 하는 최소 몫을 구해,
   // 원문 비율이 그보다 좁은 열만 넓혀 줍니다. 넓힌 만큼은 여유 있는
   // 열에서 비례로 덜어 옵니다. 전체는 늘 100%라 가로 스크롤이 없습니다.
+  //
   // 이 표를 낱말이 끊기지 않게 그리려면 가로로 몇 픽셀이 필요한지 어림합니다.
-  // 한글 한 글자를 약 13px, 칸 좌우 여백을 약 20px로 봅니다.
+  // 어림값이 실제보다 크면, 들어갈 수 있는 표까지 가로 스크롤로 밀려납니다.
+  // 제3편 휴직사유 표(9열)가 그랬습니다. 910px이 필요하다고 보았지만
+  // 실제로는 610px이면 들어갑니다.
+  //
+  // 열이 일곱 이상이면 글자와 여백을 줄여 그립니다(structured-details.css의
+  // data-wide). 어림도 그 크기로 해야 맞습니다.
+  //   좁게 그릴 때  글자 13px · 좌우 여백과 선 18px
+  //   보통          글자 15px · 좌우 여백과 선 26px
+  function cellMetrics(columnCount) {
+    return columnCount >= 7 ? { letter: 13.5, frame: 18 } : { letter: 15, frame: 26 };
+  }
+
   function neededWidth(grid, columnCount) {
     const longest = Array.from({ length: columnCount }, () => 1);
     for (const row of grid) {
@@ -603,7 +620,8 @@
         }
       }
     }
-    return longest.reduce((sum, value) => sum + value * 18 + 34, 0);
+    const { letter, frame } = cellMetrics(columnCount);
+    return longest.reduce((sum, value) => sum + value * letter + frame, 0);
   }
 
   function fitWidths(base, grid, columnCount, availablePx) {
@@ -625,9 +643,9 @@
 
     // 최소 몫은 글자 수 비율이 아니라 실제 픽셀로 잡습니다.
     // 비율로 잡으면 표가 큰 경우 짧은 낱말의 몫이 지나치게 깎여 끊깁니다.
-    // 한글 한 글자 약 15px, 칸 좌우 여백 약 28px로 봅니다.
+    const { letter, frame } = cellMetrics(columnCount);
     const floors = longestWord.map((value) =>
-      Math.min(((value * 18 + 34) / availablePx) * 100, 60)
+      Math.min(((value * letter + frame) / availablePx) * 100, 60)
     );
 
     // 최소 몫은 반드시 지킵니다. 남는 자리만 원문 비율대로 나눠 줍니다.
