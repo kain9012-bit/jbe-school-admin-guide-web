@@ -59,6 +59,26 @@
   font-size: 1.8rem;
 }
 
+/* TIP·주의사항은 본문 흐름 안 제자리에 놓입니다. 매뉴얼에서 이 상자는
+   바로 앞 항목에 딸린 말이므로, 자리를 옮기지 않고 색으로만 구별합니다.
+   아래 경계선은 지웁니다. 상자 자체가 이미 테두리를 갖고 있어
+   줄이 하나 더 그어지면 상자가 두 겹으로 보입니다. */
+.action-block .source-detail-tip {
+  margin-block: 0.8rem;
+  padding: 1.8rem 2rem;
+  color: var(--guide-warning);
+  background: var(--guide-warning-bg);
+  border: 1px solid #e9cf9a;
+  border-radius: 1rem;
+  border-bottom: 1px solid #e9cf9a;
+}
+
+.action-block .source-detail-tip > strong {
+  color: var(--guide-warning);
+  font-size: 1.6rem;
+  letter-spacing: 0.02em;
+}
+
 
 /* 매뉴얼의 업무 흐름도 — 누르는 곳이 아니라 순서를 보여 주는 그림입니다. */
 .work-flow-section {

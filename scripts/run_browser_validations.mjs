@@ -4,6 +4,7 @@
 //   · validate_table_fit.mjs       표가 폭 안에 들어가고 낱말이 안 끊기는지 확인
 //   · validate_form_text_copy.mjs  서식 미리보기 글자를 긁어 복사할 수 있는지 확인
 //   · validate_source_presentation.mjs  흐름도가 안 끊기고 글머리표가 남는지 확인
+//   · validate_tip_placement.mjs   TIP 상자가 원문에 놓인 자리에 그려지는지 확인
 //
 // 19편을 한 번에 열면 오래 걸려 중간에 끊깁니다. 그래서 몇 편씩 나눠 돌립니다.
 //
@@ -53,6 +54,7 @@ for (const job of [
   "validate_table_fit.mjs",
   "validate_form_text_copy.mjs",
   "validate_source_presentation.mjs",
+  "validate_tip_placement.mjs",
 ]) {
   for (const chapters of GROUPS) {
     const result = spawnSync(

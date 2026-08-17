@@ -194,12 +194,21 @@
 
     const steps = layout.map((sourceStep, index) => {
       const stepBlocks = sourceStep.blocks.map((id) => blockById.get(id));
-      const tipBlocks = stepBlocks.filter((block) => block.title === "TIP");
+      // TIP 상자는 매뉴얼에서 바로 앞 항목에 딸린 주의사항입니다.
+      // 예전에는 이것만 따로 뽑아 화면 맨 아래 상자에 몰아 넣었습니다.
+      // 그러면 '1. 급여 작업 전 확인사항'의 주의사항과 '5. 관련장부'의 주의사항이
+      // 한 상자에 붙어 버려, 어느 항목 이야기인지 알 수 없게 됩니다.
+      // 그래서 원문에 놓인 그 자리에 그대로 둡니다.
       const classifiedBlocks = stepBlocks
-        .filter((block) => block.title !== "TIP")
         // 업무 흐름도는 위에 그림으로 따로 보여 주므로 본문에 또 넣지 않습니다.
         .filter((block) => !isSourceFlowBlock(work, block) && block.title !== "업무 흐름도")
-        .map(splitLawReferences);
+        .map((block) =>
+          // TIP은 법령 상자를 떼어 내지 않습니다. 상자 안의 줄이 통째로
+          // '근거'로 옮겨 가면 주의사항이 반 토막 납니다.
+          block.title === "TIP"
+            ? { contentBlock: { ...block, tip: true }, lawBlock: null }
+            : splitLawReferences(block)
+        );
       const mainBlocks = classifiedBlocks
         .map((entry) => entry.contentBlock)
         .filter(Boolean);
@@ -207,6 +216,7 @@
         .map((entry) => entry.lawBlock)
         .filter(Boolean);
       const topics = mainBlocks
+        .filter((block) => !block.tip)
         .map((block) => cleanSourceHeading(block.title))
         .filter(
           (title) =>
@@ -224,7 +234,6 @@
         blocks: stepBlocks,
         mainBlocks,
         lawBlocks,
-        tipBlocks,
         summary,
       };
     });
@@ -607,10 +616,11 @@
     // 원문의 항목 번호('1. 정의')는 매뉴얼과 대조할 때 필요하므로 그대로 둡니다.
     // 다만 지금 보고 있는 목차 항목과 같은 제목이면 바로 위에 이미 적혀 있으므로 뺍니다.
     const raw = String(block.title || "").trim();
-    // 'TIP'은 매뉴얼이 TIP 상자임을 표시한 말입니다.
-    // 위에 이미 'TIP·주의사항'이라고 적혀 있으므로 제목으로 다시 내지 않습니다.
-    const heading =
-      generatedTitle || raw === "TIP" || squash(raw) === squash(currentStepTitle)
+    // 'TIP'은 매뉴얼이 TIP 상자임을 표시한 말입니다. 본문 사이에 그대로 놓이므로
+    // 무슨 상자인지 알아볼 수 있게 매뉴얼과 같은 이름을 붙여 줍니다.
+    const heading = block.tip
+      ? "TIP·주의사항"
+      : generatedTitle || squash(raw) === squash(currentStepTitle)
         ? ""
         : raw;
     // 안내서는 읽으라고 만든 문서입니다. 앞 몇 줄만 보여 주고 나머지를 접어 두면
@@ -623,7 +633,9 @@
     const items = block.body && !asTable ? allLogicalItems(block) : [];
 
     return `
-      <li class="source-detail${structural ? " structural-marker" : ""}"
+      <li class="source-detail${structural ? " structural-marker" : ""}${
+        block.tip ? " source-detail-tip" : ""
+      }"
           data-source-block="${escapeHtml(block.id)}">
         ${heading ? `<strong>${escapeHtml(heading)}</strong>` : ""}
         ${
@@ -1258,7 +1270,6 @@
     byId("step-progress").textContent = `전체 ${steps.length}개 항목 중 ${activeIndex + 1}번째`;
     renderSourceBlocks("step-actions", step.mainBlocks);
     renderSourceBlocks("step-checks", []);
-    renderSourceBlocks("step-cautions", step.tipBlocks);
     renderResources(work, step);
     renderFaqs(work, step, requestedFaqNumber);
 

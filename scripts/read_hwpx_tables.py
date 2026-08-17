@@ -60,20 +60,49 @@ def unsymbol(value: str) -> str:
     return PUA.sub(lambda mark: HNC_SYMBOL.get(mark.group(0), "\u25aa"), value)
 
 
-def cell_text(cell: ET.Element) -> str:
-    """칸 안의 글을 문단 차례대로 모읍니다. 문단이 바뀌면 줄을 바꿉니다."""
-    lines: list[str] = []
-    for paragraph in cell.iter():
-        if local_name(paragraph.tag) != "p":
+# 쪽 머리글·꼬리글은 칸에 적힌 글이 아닙니다. 그런데 표가 쪽을 넘어가면
+# 한글이 그 자리에서 머리글을 다시 정의하고, 하필 그 정의를 칸 안의 문단
+# 속에 넣어 둡니다. 아래로 다 훑으면 머리글 글자가 칸 글 한가운데 끼어듭니다.
+#
+#   제7편 '2. 급여 작업' 표
+#   …가장 유의해야 할 작업[제7편 공무원 보수]대상자 생성을 다시 했을 경우…
+#
+# 이러면 이 표는 kordoc이 읽은 글과 글자가 달라져 짝을 찾지 못합니다.
+# 짝을 못 찾은 표는 병합과 열 너비를 통째로 잃고 한 칸짜리 격자가 됩니다.
+# 그래서 머리글·꼬리글·주석 같은 곁가지는 아예 내려가지 않습니다.
+SKIP_SUBTREE = {"header", "footer", "footnote", "endnote", "hiddencomment"}
+
+
+def paragraphs_of(node: ET.Element):
+    """칸 안의 문단을 문서 차례대로 냅니다. 곁가지는 건너뜁니다."""
+    for child in node:
+        name = local_name(child.tag).lower()
+        if name in SKIP_SUBTREE:
+            continue
+        if name == "p":
+            yield child
+        yield from paragraphs_of(child)
+
+
+def text_pieces(node: ET.Element):
+    """문단에 찍힌 글자를 모읍니다. 여기서도 곁가지는 건너뜁니다."""
+    for child in node:
+        name = local_name(child.tag).lower()
+        if name in SKIP_SUBTREE:
             continue
         # <hp:t> 안에 글자 꾸밈 태그가 끼어 있기도 합니다.
         # .text만 읽으면 '유· 초 · 중'이 '유·'로 잘립니다.
-        pieces = [
-            "".join(node.itertext())
-            for node in paragraph.iter()
-            if local_name(node.tag) == "t"
-        ]
-        line = re.sub(r"\s+", " ", unsymbol("".join(pieces))).strip()
+        if name == "t":
+            yield "".join(child.itertext())
+        else:
+            yield from text_pieces(child)
+
+
+def cell_text(cell: ET.Element) -> str:
+    """칸 안의 글을 문단 차례대로 모읍니다. 문단이 바뀌면 줄을 바꿉니다."""
+    lines: list[str] = []
+    for paragraph in paragraphs_of(cell):
+        line = re.sub(r"\s+", " ", unsymbol("".join(text_pieces(paragraph)))).strip()
         if line:
             lines.append(line)
     return "\n".join(lines)

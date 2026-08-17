@@ -1,8 +1,8 @@
 // 이 파일은 scripts/stamp_asset_versions.js가 만들어 냅니다.
 // 손으로 고치지 마세요. 자산을 바꾼 뒤 스크립트를 다시 실행하세요.
 window.GUIDE_ASSET_VERSIONS = {
-  "assets/app-faithful-workflow.js": "0bfd35c1",
-  "assets/asset-versions.js": "0b54a304",
+  "assets/app-faithful-workflow.js": "a6d5e890",
+  "assets/asset-versions.js": "903720d7",
   "assets/chapter1-data.js": "6053c74a",
   "assets/chapter10-data.js": "ed5d828e",
   "assets/chapter11-data.js": "40ee47ba",
@@ -19,7 +19,7 @@ window.GUIDE_ASSET_VERSIONS = {
   "assets/chapter4-data.js": "a62b04de",
   "assets/chapter5-data.js": "58291b3b",
   "assets/chapter6-data.js": "87b22dd1",
-  "assets/chapter7-data.js": "8a3d8d06",
+  "assets/chapter7-data.js": "f73ca802",
   "assets/chapter8-data.js": "4878e1c2",
   "assets/chapter9-data.js": "93e77b62",
   "assets/form-assets.js": "be7335b8",
@@ -27,11 +27,11 @@ window.GUIDE_ASSET_VERSIONS = {
   "assets/global-home.js": "d0c80999",
   "assets/guide-bootstrap-workflow.js": "96883ad7",
   "assets/guide-config.js": "3965322c",
-  "assets/guide-search-index.js": "ac320fff",
+  "assets/guide-search-index.js": "7190a8f9",
   "assets/header-v3.css": "50158e49",
   "assets/header-v3.js": "350c3e8f",
   "assets/search-query.js": "aaad7f5c",
-  "assets/semantic-workflow.css": "59154615",
+  "assets/semantic-workflow.css": "1c36debd",
   "assets/structured-details.css": "33894461",
   "assets/structured-details.js": "2b252b34",
   "assets/styles-v2.css": "b43bc7be",
