@@ -32,6 +32,7 @@ import vm from "node:vm";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { runKordoc } from "./lib/kordoc.mjs";
+import { bagOf, guessSection, sectionScales } from "./lib/form_placement.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const docs = path.join(root, "docs");
@@ -351,26 +352,8 @@ function pickTitle(found, referenced, marker) {
   );
 }
 
-// 본문이 부르지 않는 서식은 글이 가장 많이 겹치는 업무에 답니다.
-const WORDS = /[가-힣]{2,}|[A-Za-z]{3,}/g;
-const STOP = new Set(["경우", "관련", "규정", "사항", "내용", "기준", "처리", "해당", "학교", "교육", "업무", "작성", "제출"]);
-const bagOf = (value) => (String(value || "").match(WORDS) || []).filter((word) => !STOP.has(word));
-
-function guessSection(sections, text) {
-  const asked = new Set(bagOf(text).slice(0, 400));
-  let best = sections[0];
-  let top = -1;
-  for (const section of sections) {
-    const corpus = new Set(
-      bagOf(section.title + " " + (section.contentBlocks || []).map((b) => `${b.title} ${b.body}`).join(" "))
-    );
-    let score = 0;
-    for (const word of asked) if (corpus.has(word)) score += 1;
-    if (score > top) { top = score; best = section; }
-  }
-  return best;
-}
-
+// 서식이 어느 업무의 것인지 짐작하는 규칙은 검증 스크립트도 그대로 씁니다.
+// 두 곳에 같은 규칙을 적어 두면 반드시 한쪽만 고치게 되므로 한 군데에 둡니다.
 // 표 머리글 줄입니다. '신청자 성 명 직 급'처럼 한 글자짜리 칸 이름이
 // 줄줄이 붙은 모양입니다. 이것을 이름으로 쓰면 어느 서식인지 알 수 없습니다.
 function looksLikeHeaderRow(line) {
@@ -433,18 +416,24 @@ for (const chapterId of Object.keys(assets).sort()) {
   const markers = Object.keys(assets[chapterId]);
   const forms = [];
   let named = 0;
+  // 낱말이 어느 업무에 몇 번 나오는지는 편마다 한 번만 세면 됩니다.
+  const scales = sectionScales(data.sections);
 
   for (const marker of markers) {
     const asset = assets[chapterId][marker];
     const found = formText(chapterId, asset.download, marker);
     const reference = findReference(data.sections, marker);
     if (reference && reference.title) named += 1;
-    forms.push({
+    // 이름을 먼저 정합니다. 어느 업무의 서식인지 짐작할 때 이름이 가장
+    // 곧은 실마리이기 때문입니다.
+    const entry = {
       id: marker,
       title: pickTitle(found, reference && reference.title, marker),
-      sectionId: (reference && reference.sectionId) || guessSection(data.sections, found.text).id,
       content: found.text,
-    });
+    };
+    entry.sectionId =
+      (reference && reference.sectionId) || guessSection(data.sections, entry, scales).id;
+    forms.push(entry);
   }
 
   data.forms = forms;
