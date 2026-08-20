@@ -273,103 +273,8 @@
   // 그래서 이런 표는 격자 대신 흐름도로 그립니다. 모양은 업무 흐름도와 같습니다.
   // 여기서 가려내는 기준은 validate_table_fit.mjs가 화면을 보고 다시 확인합니다.
 
-  // 매뉴얼 판마다 화살표 글자가 다릅니다. 여기 빠진 글자는 그냥 글로 보여
-  // 그 표가 흐름도로 바뀌지 않습니다.
-  // ➡(U+27A1)는 매뉴얼이 표 안에서 가장 많이 쓰는 화살표입니다(52칸).
-  // 이것이 빠져 있어서, 같은 모양의 그림형 표인데도 어떤 것은 흐름도로,
-  // 어떤 것은 격자로 그려졌습니다.
-  const ARROW_ONLY = /^[\s≫⇒→⇨⟹⟶➡➔➜▶►»＞>↓⇓▼⇩⇙⇘⇗⇖←⇐⟵◀◁]+$/u;
-  const SIDE_ARROW = /^[\s≫⇒→⇨⟹⟶➡➔➜▶►»＞>]+$/u;
-  const DOWN_ARROW = /[↓⇓▼⇩⇙⇘]/u;
-  // 이름표로 쓰기에 너무 긴 글이 든 칸은 그림이 아니라 내용입니다.
-  const FLOW_LABEL_LIMIT = 40;
-
-  // 판단이 갈리는 절차도에서는 화살표에 이름표가 붙습니다.
-  //   제4편 외부강의 신고 절차도  '⇩Yes'(아래로 가는 길) / '➡ No'(옆으로 새는 길)
-  // 이름표까지 붙은 칸을 그냥 글로 보면 흐름도가 아니라 격자가 됩니다.
-  const ARROW_LABEL = /^(Yes|No|예|아니오|아니요)$/i;
-
   const cellText = (cell) => String((cell && cell.text) || "");
   const isBlankCell = (cell) => !cellText(cell).trim();
-
-  // 화살표 부분과 이름표를 갈라 돌려줍니다. 화살표가 아니면 null입니다.
-  function arrowParts(cell, shape) {
-    const value = cellText(cell).replace(/\s+/g, " ").trim();
-    if (!value) return null;
-    if (shape.test(value)) return { label: "" };
-    const at = [...value].findIndex((mark) => !shape.test(mark));
-    if (at <= 0) return null;
-    const head = value.slice(0, at).trim();
-    const tail = value.slice(at).trim();
-    if (!shape.test(head) || !ARROW_LABEL.test(tail)) return null;
-    return { label: tail };
-  }
-
-  const isArrowCell = (cell) => Boolean(arrowParts(cell, ARROW_ONLY));
-  const isSideArrowCell = (cell) => Boolean(arrowParts(cell, SIDE_ARROW));
-  const arrowLabel = (cell) => (arrowParts(cell, ARROW_ONLY) || {}).label || "";
-
-  // 한글에서 세로로 쓴 글자는 한 줄에 한 글자씩 들어 있습니다('위\n촉\n위\n원\n1').
-  // 그대로 항목으로 나누면 글자 하나짜리 항목이 줄줄이 생깁니다.
-  function flowCellLines(cell) {
-    const lines = cellText(cell)
-      .split(/\r?\n/)
-      .map((line) => line.trim())
-      .filter(Boolean);
-    if (lines.length > 1 && lines.every((line) => [...line].length === 1)) {
-      return [lines.join("")];
-    }
-    if (lines.length > 1 && lines.slice(1).every((line) => [...line].length <= 2)) {
-      return [lines.join(" ")];
-    }
-    return lines;
-  }
-
-  // 한 단계는 이름 한 줄과 그에 딸린 줄들입니다.
-  function flowStage(cells) {
-    const lines = cells.flatMap(flowCellLines);
-    if (!lines.length) return null;
-    return { name: lines[0], notes: lines.slice(1) };
-  }
-
-  function columnExtent(grid) {
-    return grid.reduce((most, row) => {
-      let at = most;
-      for (const cell of row) at = Math.max(at, cell.column + (cell.colSpan || 1));
-      return at;
-    }, 0);
-  }
-
-  // 표를 세로로 가로지르는 '화살표만 든 열'입니다. 이 열이 단계를 나눕니다.
-  // 줄마다 하나씩 놓인 화살표는 단계를 나누는 것이 아니라 그 줄 안의 이음표입니다
-  // (제18편 도로 표지판: 줄마다 '단계 ⇒ 설명'). 그래서 화살표가 하나뿐이거나
-  // 여러 줄에 걸쳐 있는 열만 단계 경계로 봅니다.
-  function flowStageColumns(grid, columnCount) {
-    const found = [];
-    for (let column = 0; column < columnCount; column += 1) {
-      let arrows = 0;
-      let spanning = false;
-      let other = false;
-      for (const row of grid) {
-        for (const cell of row) {
-          if (cell.column !== column) continue;
-          if (isSideArrowCell(cell)) {
-            arrows += 1;
-            if ((cell.rowSpan || 1) > 1) spanning = true;
-          } else if (!isBlankCell(cell)) {
-            other = true;
-          }
-        }
-      }
-      if (arrows && !other && (arrows === 1 || spanning)) found.push(column);
-    }
-    return found;
-  }
-
-  // 아래를 가리키는 화살표만 든 줄입니다. 위아래 단계를 잇습니다.
-  const isConnectorRow = (row) =>
-    row.some((cell) => isArrowCell(cell) && DOWN_ARROW.test(cellText(cell))) &&
-    row.every((cell) => isArrowCell(cell) || isBlankCell(cell));
 
   // 표를 흐름도의 뼈대로 옮깁니다. 그림형 표가 아니면 null을 돌려줍니다.
   // 눈금이 그어진 그림은 흐름이 아닙니다.
@@ -384,185 +289,7 @@
     return cells.some((cell) => (cellText(cell).match(AXIS_TICK) || []).length >= 3);
   }
 
-  function flowFromTable(headers, rows) {
-    const grid = visibleCells([headers, ...(rows || [])]);
-    const columnCount = columnExtent(grid);
-    if (!columnCount) return null;
 
-    // 1) 가로 흐름 — 화살표 열이 단계를 나눕니다.
-    const columns = flowStageColumns(grid, columnCount);
-    if (columns.length) {
-      const bounds = [-1, ...columns, columnCount];
-      const steps = [];
-      for (let index = 0; index < bounds.length - 1; index += 1) {
-        const from = bounds[index] + 1;
-        const to = bounds[index + 1];
-        if (from >= to) continue;
-        const cells = [];
-        for (const row of grid) {
-          for (const cell of row) {
-            if (cell.column < from || cell.column >= to) continue;
-            if (isArrowCell(cell) || isBlankCell(cell)) continue;
-            cells.push(cell);
-          }
-        }
-        const stage = flowStage(cells);
-        if (stage) steps.push(stage);
-      }
-      if (steps.length >= 2) {
-        return { lines: [{ type: "steps", linked: true, steps }] };
-      }
-    }
-
-    // 2) 줄 단위 — 아래로 잇는 화살표 줄, 또는 줄마다 놓인 화살표 열이 있는 표입니다.
-    const arrowColumns = [];
-    for (let column = 0; column < columnCount; column += 1) {
-      let arrows = 0;
-      let other = false;
-      for (const row of grid) {
-        for (const cell of row) {
-          if (cell.column !== column) continue;
-          if (isArrowCell(cell)) arrows += 1;
-          else if (!isBlankCell(cell)) other = true;
-        }
-      }
-      if (arrows && !other) arrowColumns.push(column);
-    }
-    const connectors = grid.map(isConnectorRow);
-    if (connectors.some(Boolean) || arrowColumns.length) {
-      const lines = [];
-      // 세로 흐름의 첫 줄은 대개 '절 차 / 방 법' 같은 머리글입니다.
-      // 단계로 세우면 없는 단계가 하나 생깁니다.
-      const head = grid[0] || [];
-      const skipHead =
-        connectors.some(Boolean) &&
-        !connectors[0] &&
-        head.length >= 2 &&
-        !head.some(isArrowCell) &&
-        head.every((cell) => [...cellText(cell).trim()].length <= 12);
-
-      for (const [index, row] of grid.entries()) {
-        if (skipHead && index === 0) continue;
-        if (connectors[index]) {
-          if (lines.length && lines[lines.length - 1].type !== "down") {
-            // 아래로 가는 길에 붙은 이름표('Yes')는 화살표와 함께 보여야
-            // 어느 답일 때 이리로 가는지 알 수 있습니다.
-            const mark = row.find((cell) => arrowLabel(cell));
-            lines.push({ type: "down", label: mark ? arrowLabel(mark) : "" });
-          }
-          continue;
-        }
-        // 줄 안에 옆으로 잇는 화살표가 있으면 그 줄이 곧 하나의 흐름입니다.
-        const chained = row.some(isSideArrowCell);
-        const cells = row.filter((cell) => !isBlankCell(cell) && !isArrowCell(cell));
-        if (!cells.length) continue;
-        if (chained) {
-          // 옆으로 새는 길의 이름표('No')는 그 화살표 뒤에 오는 칸에 답니다.
-          const steps = [];
-          let label = "";
-          for (const cell of row) {
-            if (isBlankCell(cell)) continue;
-            if (isArrowCell(cell)) {
-              label = arrowLabel(cell);
-              continue;
-            }
-            const stage = flowStage([cell]);
-            if (stage) steps.push(label ? { ...stage, label } : stage);
-            label = "";
-          }
-          lines.push({ type: "steps", linked: true, steps });
-        } else if (
-          cells.length >= 2 &&
-          cells
-            .slice(1)
-            .some((cell) => [...cellText(cell).trim()].length > FLOW_LABEL_LIMIT)
-        ) {
-          // '절차 | 방법'처럼 뒷칸이 설명인 줄은 이름 아래에 설명을 답니다.
-          const stage = flowStage(cells);
-          if (stage) lines.push({ type: "steps", linked: false, steps: [stage] });
-        } else {
-          lines.push({
-            type: "steps",
-            linked: false,
-            steps: cells.map((cell) => flowStage([cell])).filter(Boolean),
-          });
-        }
-      }
-      while (lines.length && lines[lines.length - 1].type === "down") lines.pop();
-      if (lines.filter((line) => line.type === "steps").length >= 2) return { lines };
-    }
-
-    // 3) 배치형 — 화살표는 없고 격자를 그림 종이로만 쓴 표입니다(구성도).
-    //    칸의 절반 넘게가 비어 있고, 글이 든 칸은 모두 짧은 이름표입니다.
-    const all = grid.flat();
-    const blanks = all.filter(isBlankCell).length;
-    if (
-      all.length >= 6 &&
-      blanks * 2 > all.length &&
-      !hasAxis(all) &&
-      all
-        .filter((cell) => !isBlankCell(cell))
-        .every((cell) => [...cellText(cell).trim()].length <= FLOW_LABEL_LIMIT)
-    ) {
-      const lines = [];
-      for (const row of grid) {
-        const cells = row.filter((cell) => !isBlankCell(cell));
-        if (!cells.length) continue;
-        const steps = cells.map((cell) => flowStage([cell])).filter(Boolean);
-        if (steps.length) lines.push({ type: "steps", linked: false, steps });
-      }
-      if (lines.length >= 2) return { lines };
-    }
-
-    return null;
-  }
-
-  function flowMarkup(caption, flow) {
-    // 화살표는 칸 뒤가 아니라 앞에 답니다. 단계가 많아 줄이 바뀌면 뒤에 단
-    // 화살표만 앞 줄 오른쪽 끝에 홀로 남아, 어디로 가는 화살표인지 알 수 없습니다.
-    // 화살표에 붙은 이름표('No')는 화살표 옆에 답니다. 어느 답일 때 이리로
-    // 가는지가 절차도의 뜻 그 자체입니다.
-    const arrow = (label) =>
-      `<span class="source-flow-arrow">▶${
-        label ? `<span class="source-flow-when">${escapeHtml(label)}</span>` : ""
-      }</span>`;
-
-    const stepMarkup = (stage, linked, first) => `
-      <li class="source-flow-step">
-        ${linked && !first ? arrow(stage.label) : ""}
-        <div class="source-flow-card">
-          <span class="source-flow-name">${escapeHtml(stage.name)}</span>
-          ${
-            stage.notes.length
-              ? `<ul class="source-flow-notes">${stage.notes
-                  .map((note) => `<li>${escapeHtml(note)}</li>`)
-                  .join("")}</ul>`
-              : ""
-          }
-        </div>
-      </li>`;
-
-    return `
-      <ol class="source-flow" aria-label="${escapeHtml(caption)} 흐름도">
-        ${flow.lines
-          .map((line) =>
-            line.type === "down"
-              ? `<li class="source-flow-down">▼${
-                  line.label
-                    ? `<span class="source-flow-when">${escapeHtml(line.label)}</span>`
-                    : ""
-                }</li>`
-              : `<li class="source-flow-line">
-                  <ol class="source-flow-row" data-linked="${line.linked ? 1 : 0}">
-                    ${line.steps
-                      .map((stage, index) => stepMarkup(stage, line.linked, index === 0))
-                      .join("")}
-                  </ol>
-                </li>`
-          )
-          .join("")}
-      </ol>`;
-  }
 
   function spannedTableMarkup(caption, headers, rows, sourceWidths) {
     // 머리글과 본문을 <thead>·<tbody>로 나누면, 머리글 칸이 아래로 걸친 병합
@@ -887,13 +614,18 @@
         }
       }
 
-      // 그림으로 그린 표는 격자로 옮기지 않고 흐름도로 그립니다.
-      const flow = flowFromTable(headerCells, table.rows);
-      if (flow) {
-        drewFlow = true;
-        pieces.push(flowMarkup(caption, flow));
-        continue;
-      }
+      // 매뉴얼이 표로 그려 둔 절차도도 표 그대로 그립니다.
+      //
+      // 예전에는 이런 표를 알아보고 카드와 화살표로 다시 그렸습니다. 표에서
+      // 병합과 열 너비를 잃던 시절에는 그편이 나아 보였습니다. 그런데 카드로
+      // 옮기려면 원문의 자리를 버리고 한 줄짜리 차례로 펴야 합니다.
+      // 가지가 갈라지는 그림은 펼 수가 없어 카드 한 장에 열세 줄이 들어가고
+      // (제8편 '촉탁직 노동자 (재)고용'), 상자 크기도 글자 길이대로 제각각이
+      // 되어 원문과 딴판이 됩니다.
+      //
+      // 이제는 한글파일의 칸 주소와 열 너비를 그대로 가져오므로, 원문 자리에
+      // 원문 그대로 그리는 것이 가장 정확합니다. 화살표도 원문이 놓아둔
+      // 칸에 그대로 섭니다.
       drewGrid = true;
       pieces.push(spannedTableMarkup(caption, headerCells, table.rows, table.widths));
     }

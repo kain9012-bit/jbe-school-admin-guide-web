@@ -223,19 +223,13 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
               (table.sample ? ` ('${table.sample}')` : "")
           );
         }
-        // 그림형 표는 격자로 그리지 않습니다.
-        if (table.arrowCells) {
-          problems.push(
-            `${where}: 화살표만 든 칸이 ${table.arrowCells}개 있습니다. ` +
-              "흐름도를 격자로 그렸습니다. 흐름도로 그려야 합니다."
-          );
-        }
-        if (table.drawnAsPicture) {
-          problems.push(
-            `${where}: 짧은 이름표만 든 격자가 ${table.blankCells}/${table.cellCount}칸 비어 있습니다. ` +
-              "그림을 격자로 그렸습니다. 흐름도로 그려야 합니다."
-          );
-        }
+        // 매뉴얼이 표로 그려 둔 절차도는 표 그대로 그립니다.
+        // 예전에는 이런 표를 카드와 화살표로 다시 그렸고, 그러지 않으면
+        // 여기서 잘못이라고 알렸습니다. 카드로 옮기려면 원문의 자리를 버리고
+        // 한 줄짜리 차례로 펴야 하는데, 가지가 갈라지는 그림은 펼 수가 없어
+        // 카드 한 장에 열세 줄이 들어갔습니다(제8편 '촉탁직 노동자 (재)고용').
+        // 이제 한글파일의 칸 주소와 열 너비를 그대로 가져오므로 원문 자리에
+        // 원문 그대로 그립니다. 화살표 칸이 있는 것은 잘못이 아닙니다.
         if (table.openSides) {
           problems.push(
             `${where}: 세로선이 빠진 칸이 ${table.openSides}개 있습니다. 표 한가운데 선이 끊깁니다.`
