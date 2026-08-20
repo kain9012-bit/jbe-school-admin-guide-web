@@ -74,13 +74,21 @@ SKIP_SUBTREE = {"header", "footer", "footnote", "endnote", "hiddencomment"}
 
 
 def paragraphs_of(node: ET.Element):
-    """칸 안의 문단을 문서 차례대로 냅니다. 곁가지는 건너뜁니다."""
+    """칸의 문단을 문서 차례대로 냅니다. 문단 속으로는 내려가지 않습니다.
+
+    한 문단 안에 표나 글상자가 들어앉고, 그 안에 또 문단이 있습니다.
+    그 속의 글은 아래 text_pieces가 자리 그대로 담아 옵니다. 그런데 여기서
+    또 내려가 안쪽 문단을 따로 내면 같은 글이 두 번 실립니다.
+    실제로 제1편 '비전자기록물 이관' 표의 칸 글이 원문의 갑절이 되어,
+    kordoc이 읽은 글과 달라져 표가 짝을 잃었습니다.
+    """
     for child in node:
         name = local_name(child.tag).lower()
         if name in SKIP_SUBTREE:
             continue
         if name == "p":
             yield child
+            continue
         yield from paragraphs_of(child)
 
 
@@ -108,11 +116,37 @@ def cell_text(cell: ET.Element) -> str:
     return "\n".join(lines)
 
 
+def cells_of(table: ET.Element):
+    """이 표의 칸만 냅니다. 칸 안에 든 다른 표로는 내려가지 않습니다.
+
+    칸 안에 표가 또 들어 있는 자리가 있습니다. 아래로 다 훑으면 안쪽 표의
+    칸까지 바깥 표의 칸으로 딸려 옵니다. 두 표의 칸 주소는 서로 다른
+    좌표인데, 이것을 한 격자에 섞어 놓고 (행, 열)로 줄을 세우면
+    격자가 통째로 엉킵니다.
+
+        제7편 '구비서류' 표(3열)
+        XML  : 구분 구분 번호 직무수행 서류명 출퇴근중 번호 구비서류 …
+        kordoc: 구분 구비서류 비고 공통서류 1.공무상요양승인신청서 …
+
+    이렇게 글자가 달라지면 kordoc이 읽은 표와 짝을 찾지 못하고,
+    그 표는 병합과 열 너비를 통째로 잃습니다.
+
+    칸 안의 글은 cell_text가 안쪽 표까지 읽어 옵니다. kordoc도 안쪽 표를
+    바깥 칸의 글로 펴서 담으므로, 그래야 두 쪽의 글자가 같아집니다.
+    """
+    for child in table:
+        name = local_name(child.tag)
+        if name == "tbl":
+            continue
+        if name == "tc":
+            yield child
+            continue
+        yield from cells_of(child)
+
+
 def read_table(table: ET.Element) -> dict:
     cells = []
-    for cell in table.iter():
-        if local_name(cell.tag) != "tc":
-            continue
+    for cell in cells_of(table):
         address = next((node for node in cell if local_name(node.tag) == "cellAddr"), None)
         span = next((node for node in cell if local_name(node.tag) == "cellSpan"), None)
         # 칸 너비도 함께 읽습니다. 매뉴얼을 만든 사람이 정해 둔 열 너비이므로
