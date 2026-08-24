@@ -546,38 +546,58 @@
    원문은 사진을 나란히 놓고 그 아래에 이름을 답니다. 그 모양 그대로,
    한 줄에 든 사진은 옆으로 늘어놓고 좁은 화면에서는 아래로 접습니다. */
 .source-picture-row {
-  display: flex;
-  flex-wrap: wrap;
+  /* 원문은 사진을 한 줄짜리 표에 나란히 놓습니다. 칸 수(--picture-count)만큼
+     폭을 나눠 언제나 한 줄에 세웁니다. 크기로 맞추면 넉 장 가운데 한 장이
+     다음 줄로 내려가 원문과 달라집니다. */
+  display: grid;
+  grid-template-columns: repeat(var(--picture-count, 1), minmax(0, 1fr));
   gap: 0.8rem;
-  align-items: flex-start;
+  align-items: start;
+  justify-items: center;
+  margin: 0.4rem 0;
 }
 
 .source-picture {
-  flex: 0 1 auto;
-  /* 사진이 본문보다 커지지 않게 합니다. 원문에서도 설명에 딸린 크기입니다. */
-  max-width: 100%;
-  max-height: 20rem;
-  width: auto;
+  /* 제 칸 너비에 맞춥니다. 칸이 이미 원문 칸 수만큼 나뉘어 있습니다. */
+  width: 100%;
   height: auto;
   border: 1px solid var(--guide-line);
   border-radius: 0.6rem;
   background: #fff;
 }
 
+/* 한 장뿐이면 폭을 다 쓰지 않습니다. 원문에서도 본문에 딸린 크기입니다. */
+.source-picture-row[style*="--picture-count: 1"] {
+  justify-items: start;
+}
+
+.source-picture-row[style*="--picture-count: 1"] > .source-picture,
+.source-picture-row[style*="--picture-count: 1"] > .source-picture-cell {
+  max-width: 34rem;
+}
+
 /* 사진 아래에 그 사진의 이름을 답니다. 원문 안쪽 표의 아랫줄입니다. */
 .source-picture-cell {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   gap: 0.5rem;
   align-items: center;
-  max-width: 100%;
+  width: 100%;
+  min-width: 0;
 }
 
 .source-picture-caption {
-  max-width: 22rem;
+  max-width: 100%;
   color: var(--guide-muted);
   font-size: 1.3rem;
   line-height: 1.5;
   text-align: center;
   word-break: keep-all;
+}
+
+@media (max-width: 767px) {
+  /* 좁은 화면에서는 넉 장을 한 줄에 세우면 알아볼 수 없습니다. 둘씩 접습니다. */
+  .source-picture-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }

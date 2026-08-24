@@ -90,7 +90,10 @@
     if (captions.some((caption) => !caption || hasPicture(caption))) return "";
     // 이름 줄에는 글머리표가 붙지 않습니다. 붙어 있으면 본문입니다.
     if (/^(?:[•‣▸▹▶▪□○◦※☞*]|[-–]\s)/.test(String(captionLine).trim())) return "";
-    return `<span class="source-picture-row">${names
+    // 원문은 사진을 한 줄짜리 표에 나란히 놓습니다. 칸 수만큼 폭을 나눠
+    // 언제나 한 줄에 서게 합니다. 크기로 맞추면 넉 장 가운데 한 장이
+    // 다음 줄로 내려가 원문과 달라집니다.
+    return `<span class="source-picture-row" style="--picture-count: ${names.length}">${names
       .map(
         (name, at) =>
           `<span class="source-picture-cell">${pictureMarkup(name)}` +
@@ -106,7 +109,7 @@
       const shown = names
         .map((mark) => pictureMarkup(mark.replace(/^\[\[그림:|\]\]$/g, "")))
         .join("");
-      return `<span class="source-picture-row">${shown}</span>`;
+      return `<span class="source-picture-row" style="--picture-count: ${names.length}">${shown}</span>`;
     });
 
   function logicalItems(lines) {

@@ -21,6 +21,9 @@
 //   2. 화면 글에 '[[그림:…]]' 표가 글자로 남지 않는다
 //   3. 그림 자리가 있는 화면에는 그만큼 사진이 그려지고, 다 불러와진다
 //   4. 원문에 이름 줄이 있는 사진 묶음은 사진마다 이름이 붙어 있다
+//   5. 한 줄에 놓인 사진 묶음은 화면에서도 한 줄이다
+//      (원문은 한 줄짜리 표입니다. 크기로 맞추면 넉 장 가운데 한 장이
+//       다음 줄로 내려가 원문과 달라집니다)
 //
 // 사용법: node scripts/validate_manual_pictures.mjs [--chapters 01,02]
 
@@ -189,6 +192,15 @@ for (const [label, count] of wanted) {
         })),
         // 사진 아래에 제 이름이 붙은 칸입니다.
         named: document.querySelectorAll("#step-actions .source-picture-cell").length,
+        // 한 묶음의 사진이 몇 줄에 걸쳐 있는지 봅니다. 원문은 한 줄입니다.
+        wrapped: [...document.querySelectorAll("#step-actions .source-picture-row")]
+          .map((row) => {
+            const tops = [...row.querySelectorAll("img")].map((image) =>
+              Math.round(image.getBoundingClientRect().top)
+            );
+            return { count: tops.length, lines: new Set(tops).size };
+          })
+          .filter((row) => row.count > 1 && row.lines > 1),
         blocks: [...document.querySelectorAll("#step-actions [data-source-block]")].map((node) =>
           node.getAttribute("data-source-block")
         ),
@@ -203,6 +215,12 @@ for (const [label, count] of wanted) {
         if (!picture.ready) {
           problems.push(`제${label}편 ${section.title}: 사진을 불러오지 못했습니다 (${picture.src}).`);
         }
+      }
+      for (const row of found.wrapped) {
+        problems.push(
+          `제${label}편 ${section.title}: 사진 ${row.count}장이 ${row.lines}줄로 접혔습니다. ` +
+            "원문은 한 줄짜리 표입니다."
+        );
       }
       drawnNamed += found.named;
       found.blocks.forEach((id) => seen.add(id));
