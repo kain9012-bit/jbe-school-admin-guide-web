@@ -563,3 +563,21 @@
   border-radius: 0.6rem;
   background: #fff;
 }
+
+/* 사진 아래에 그 사진의 이름을 답니다. 원문 안쪽 표의 아랫줄입니다. */
+.source-picture-cell {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  max-width: 100%;
+}
+
+.source-picture-caption {
+  max-width: 22rem;
+  color: var(--guide-muted);
+  font-size: 1.3rem;
+  line-height: 1.5;
+  text-align: center;
+  word-break: keep-all;
+}

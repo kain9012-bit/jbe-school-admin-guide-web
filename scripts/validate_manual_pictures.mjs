@@ -8,10 +8,19 @@
 // 예전에는 그림 자리를 그냥 지워, 사진 밑에 달린 이름만 남았습니다.
 // 무엇을 설명하는 말인지 알 수 없는 글자 줄이 됩니다.
 //
-// 여기서는 세 가지를 봅니다.
+// 원문은 사진을 안쪽 표에 넣고, 사진 바로 아래 칸에 그 사진의 이름을 적습니다.
+//
+//   [사진] [사진] [사진] [사진]          ← 안쪽 표 윗줄
+//   진행문서파일 / 발생‧논리순 정리 / …   ← 안쪽 표 아랫줄
+//
+// 처음에는 사진만 늘어놓고 이름을 한 줄에 이어 붙여, 어느 이름이 어느
+// 사진의 것인지 알 수 없었습니다. 사진 아래에 제 이름이 붙어야 합니다.
+//
+// 여기서는 네 가지를 봅니다.
 //   1. 본문에 남은 그림 자리마다 그림 파일이 실제로 있다
 //   2. 화면 글에 '[[그림:…]]' 표가 글자로 남지 않는다
 //   3. 그림 자리가 있는 화면에는 그만큼 사진이 그려지고, 다 불러와진다
+//   4. 원문에 이름 줄이 있는 사진 묶음은 사진마다 이름이 붙어 있다
 //
 // 사용법: node scripts/validate_manual_pictures.mjs [--chapters 01,02]
 
@@ -25,6 +34,8 @@ const assets = path.join(docs, "assets");
 
 const MARK = /\[\[그림:([A-Za-z0-9_]+)\]\]/g;
 const problems = [];
+// 원문에 이름 줄이 딸린 사진 수입니다.
+let captioned = 0;
 const wanted = new Map(); // 편 → 그림 자리 수
 
 for (let id = 1; id <= 19; id += 1) {
@@ -44,6 +55,19 @@ for (let id = 1; id <= 19; id += 1) {
         problems.push(`제${label}편 ${where}: 그림 파일이 없습니다 (${found[1]}.jpg).`);
       }
     }
+    // 원문에 이름 줄이 딸린 사진 묶음을 세어 둡니다. 화면에서 그만큼
+    // 이름이 붙어 있어야 합니다.
+    const lines = String(value ?? "").split(/\r?\n/).map((line) => line.trim());
+    lines.forEach((line, at) => {
+      const names = (line.match(MARK) || []).length;
+      MARK.lastIndex = 0;
+      const onlyPictures = names > 0 && !line.replace(MARK, "").replace(/[\s/·]+/g, "");
+      if (names < 2 || !onlyPictures) return;
+      const next = lines[at + 1] || "";
+      if (/^(?:[•‣▸▹▶▪□○◦※☞*]|[-–]\s)/.test(next)) return;
+      const parts = next.split("/").map((part) => part.trim()).filter(Boolean);
+      if (parts.length === names) captioned += names;
+    });
   };
 
   for (const section of data.sections || []) {
@@ -114,6 +138,7 @@ if (!(await alive(base))) {
 const browser = await chromium.launch({ channel: "chromium" });
 const page = await browser.newPage({ viewport: { width: 1280, height: 1000 } });
 let drawn = 0;
+let drawnNamed = 0;
 
 for (const [label, count] of wanted) {
   if (only && !only.has(label)) continue;
@@ -162,6 +187,8 @@ for (const [label, count] of wanted) {
           src: image.getAttribute("src"),
           ready: image.naturalWidth > 0,
         })),
+        // 사진 아래에 제 이름이 붙은 칸입니다.
+        named: document.querySelectorAll("#step-actions .source-picture-cell").length,
         blocks: [...document.querySelectorAll("#step-actions [data-source-block]")].map((node) =>
           node.getAttribute("data-source-block")
         ),
@@ -177,6 +204,7 @@ for (const [label, count] of wanted) {
           problems.push(`제${label}편 ${section.title}: 사진을 불러오지 못했습니다 (${picture.src}).`);
         }
       }
+      drawnNamed += found.named;
       found.blocks.forEach((id) => seen.add(id));
     }
     for (const block of blocks) {
@@ -192,9 +220,20 @@ for (const [label, count] of wanted) {
 await browser.close();
 if (server) server.kill();
 
+// 편을 골라 돌릴 때는 셈이 맞지 않으므로 전체를 돌 때만 봅니다.
+if (!only && drawnNamed < captioned) {
+  problems.push(
+    `원문에 이름 줄이 딸린 사진 ${captioned}장 가운데 ${drawnNamed}장만 이름이 붙었습니다. ` +
+      "사진 아래에 그 사진의 이름이 있어야 합니다."
+  );
+}
+
 if (problems.length) {
   problems.slice(0, 20).forEach((line) => console.error(`  - ${line}`));
   console.error(`\n매뉴얼 그림 문제 ${problems.length}건`);
   process.exit(1);
 }
-console.log(`본문 그림 자리 ${total}곳 · 화면에 그린 사진 ${drawn}장 모두 제대로 나옵니다.`);
+console.log(
+  `본문 그림 자리 ${total}곳 · 화면에 그린 사진 ${drawn}장 · ` +
+    `이름이 딸린 사진 ${captioned}장 모두 제 이름과 함께 나옵니다.`
+);

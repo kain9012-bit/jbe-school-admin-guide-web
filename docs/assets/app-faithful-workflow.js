@@ -534,10 +534,15 @@
       .map((line) => line.trim())
       .filter(Boolean);
     const items = [];
+    let afterPicture = false;
     for (const line of lines) {
-      const startsItem = ITEM_START.test(line) || line.includes(" : ");
+      // 사진 줄은 홀로 섭니다. 앞줄에 붙이면 사진이 글 한가운데 끼어들고,
+      // 사진 바로 다음 줄(원문 안쪽 표의 이름 줄)과도 짝지을 수 없습니다.
+      const picture = pictureOnly(line);
+      const startsItem = picture || afterPicture || ITEM_START.test(line) || line.includes(" : ");
       if (!items.length || startsItem) items.push(line);
       else items[items.length - 1] += ` ${line}`;
+      afterPicture = picture;
     }
     return items;
   }
@@ -595,32 +600,21 @@
     });
   }
 
-  // 매뉴얼 본문에 실린 사진입니다. 빌더가 '[[그림:image7]]'라는 표를 남겨 두고
-  // 화면이 그 자리에 그립니다(structured-details.js와 같은 규칙입니다).
-  const PICTURE_MARK = /\[\[그림:([A-Za-z0-9_]+)\]\]/g;
-  const hasPicture = (value) => {
-    PICTURE_MARK.lastIndex = 0;
-    return PICTURE_MARK.test(String(value || ""));
+  // 사진 그리는 규칙은 structured-details.js 한 군데에 있습니다.
+  // 그 파일이 먼저 실려 window.GUIDE_PICTURES에 놓아 둡니다.
+  const pictures = () => window.GUIDE_PICTURES || null;
+  const withPictures = (html) => {
+    const rule = pictures();
+    return rule ? rule.withPictures(html) : html;
   };
-  const pictureOnly = (value) =>
-    hasPicture(value) && !String(value).replace(PICTURE_MARK, "").replace(/[\s/·]+/g, "");
-  // 사진이 잇달아 나오면 원문처럼 한 줄에 나란히 놓습니다. kordoc이 칸 사이에
-  // 넣어 준 빗금은 사진을 늘어놓고 나면 뜻이 없으므로 지웁니다.
-  const PICTURE_RUN = /(?:\[\[그림:[A-Za-z0-9_]+\]\]\s*(?:[/·]\s*)?)+/g;
-  const withPictures = (html) =>
-    String(html).replace(PICTURE_RUN, (run) => {
-      const chapter = (window.ACTIVE_GUIDE_CHAPTER && window.ACTIVE_GUIDE_CHAPTER.id) || "01";
-      const shown = (run.match(PICTURE_MARK) || [])
-        .map((mark) => mark.replace(/^\[\[그림:|\]\]$/g, ""))
-        .map(
-          (name) =>
-            `<img class="source-picture" src="assets/manual-images/chapter${chapter}/${escapeHtml(
-              name
-            )}.jpg" alt="매뉴얼 그림" loading="lazy" />`
-        )
-        .join("");
-      return `<span class="source-picture-row">${shown}</span>`;
-    });
+  const pairedPictures = (pictureLine, captionLine) => {
+    const rule = pictures();
+    return rule ? rule.pairedPictures(pictureLine, captionLine) : "";
+  };
+  const pictureOnly = (value) => {
+    const rule = pictures();
+    return rule ? rule.pictureOnly(value) : false;
+  };
 
   function summaryItemMarkup(item, level = 0) {
     const match = markerOf(item);
@@ -683,8 +677,18 @@
           items.length
             ? `<ul class="semantic-summary-list">${(() => {
                 const levels = summaryLevels(items);
+                // 사진 줄과 그 다음 이름 줄은 한 덩이로 그립니다.
+                // 원문에서 사진 아래 칸이 그 사진의 이름이기 때문입니다.
+                const eaten = new Set();
                 return items
-                  .map((item, index) => summaryItemMarkup(item, levels[index]))
+                  .map((item, index) => {
+                    if (eaten.has(index)) return "";
+                    const together = pairedPictures(item, items[index + 1]);
+                    if (!together) return summaryItemMarkup(item, levels[index]);
+                    eaten.add(index + 1);
+                    return `<li class="semantic-summary-item semantic-summary-plain"
+                                style="--summary-level: ${levels[index]}">${together}</li>`;
+                  })
                   .join("");
               })()}</ul>`
             : ""

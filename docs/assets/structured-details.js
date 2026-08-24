@@ -63,6 +63,42 @@
   // 넣어 준 빗금은 사진을 늘어놓고 나면 뜻이 없으므로 지웁니다.
   const PICTURE_RUN = /(?:\[\[그림:[A-Za-z0-9_]+\]\]\s*(?:[/·]\s*)?)+/g;
 
+  // 원문은 사진을 안쪽 표에 넣고, 사진 바로 아래 칸에 그 사진의 이름을 적습니다.
+  //
+  //   [사진] [사진] [사진] [사진]          ← 안쪽 표 윗줄
+  //   진행문서파일 / 발생‧논리순 정리 / …   ← 안쪽 표 아랫줄
+  //
+  // kordoc은 그 표를 줄마다 펴서 칸을 ' / '로 잇습니다. 그래서 사진 줄
+  // 다음 줄이 사진마다의 이름입니다. 칸 수가 꼭 같을 때만 짝지어,
+  // 사진 아래에 제 이름을 답니다. 수가 다르면 짝짓지 않습니다.
+  const pictureNames = (line) =>
+    (String(line).match(PICTURE_MARK) || []).map((mark) =>
+      mark.replace(/^\[\[그림:|\]\]$/g, "")
+    );
+
+  function pairedPictures(pictureLine, captionLine) {
+    const names = pictureNames(pictureLine);
+    if (!names.length || !pictureOnly(pictureLine)) return "";
+    // 사진이 둘 이상일 때만 짝짓습니다. 한 장뿐이면 다음 줄이 그 사진의
+    // 이름인지 그냥 본문인지 가릴 길이 없습니다. 실제로 제12편 '전자태그
+    // 부착 예외 기준'에서 뒤따르는 본문 줄을 이름으로 잘못 붙였습니다.
+    if (names.length < 2) return "";
+    const captions = String(captionLine || "")
+      .split("/")
+      .map((part) => part.trim());
+    if (captions.length !== names.length) return "";
+    if (captions.some((caption) => !caption || hasPicture(caption))) return "";
+    // 이름 줄에는 글머리표가 붙지 않습니다. 붙어 있으면 본문입니다.
+    if (/^(?:[•‣▸▹▶▪□○◦※☞*]|[-–]\s)/.test(String(captionLine).trim())) return "";
+    return `<span class="source-picture-row">${names
+      .map(
+        (name, at) =>
+          `<span class="source-picture-cell">${pictureMarkup(name)}` +
+          `<span class="source-picture-caption">${escapeHtml(captions[at])}</span></span>`
+      )
+      .join("")}</span>`;
+  }
+
   // 이미 글자를 안전하게 바꾼 뒤에 부릅니다. 그림 표에는 바뀌는 글자가 없습니다.
   const withPictures = (html) =>
     String(html).replace(PICTURE_RUN, (run) => {
@@ -75,13 +111,20 @@
 
   function logicalItems(lines) {
     const items = [];
+    let afterPicture = false;
     for (const rawLine of lines) {
       const line = normalizeLine(rawLine);
       if (!line) continue;
       // 매뉴얼이 쓰는 글머리표는 판마다 다릅니다. ▸와 ▶는 다른 글자입니다.
-      const startsItem = /^(?:[•‣▸▹▶▪□○◦※*]|[-–]\s|\d+[.)]\s|[가-힣]\.\s)/.test(line);
+      // 사진 줄과 그 다음 이름 줄도 홀로 세웁니다(원문 안쪽 표의 두 줄입니다).
+      const picture = pictureOnly(line);
+      const startsItem =
+        picture ||
+        afterPicture ||
+        /^(?:[•‣▸▹▶▪□○◦※*]|[-–]\s|\d+[.)]\s|[가-힣]\.\s)/.test(line);
       if (!items.length || startsItem) items.push(line);
       else items[items.length - 1] += ` ${line}`;
+      afterPicture = picture;
     }
     return items;
   }
@@ -89,12 +132,19 @@
   function cellMarkup(lines) {
     const items = logicalItems(lines);
     if (!items.length) return "—";
-    // 사진만 든 줄은 한 줄에 나란히 늘어놓습니다.
     const shown = (item) => withPictures(escapeHtml(item));
-    if (items.length === 1) return shown(items[0]);
-    return `<ul>${items
-      .map((item) => `<li>${shown(item.replace(/^[•‣▸▹▶▪□○◦]\s*/, ""))}</li>`)
-      .join("")}</ul>`;
+    const pieces = [];
+    for (let at = 0; at < items.length; at += 1) {
+      const paired = pairedPictures(items[at], items[at + 1]);
+      if (paired) {
+        pieces.push(paired);
+        at += 1;
+        continue;
+      }
+      pieces.push(shown(items[at].replace(/^[•‣▸▹▶▪□○◦]\s*/, "")));
+    }
+    if (pieces.length === 1) return pieces[0];
+    return `<ul>${pieces.map((piece) => `<li>${piece}</li>`).join("")}</ul>`;
   }
 
   function parseTwoColumn(body, schema) {
@@ -705,9 +755,22 @@
   function bodyItemsMarkup(lines) {
     const items = sourceOutlineItems(lines.join("\n"));
     if (!items.length) return "—";
+    // 사진 줄과 그 다음 이름 줄은 한 덩이로 그립니다.
+    const paired = new Set();
+    items.forEach((item, at) => {
+      const next = items[at + 1];
+      if (paired.has(at) || !next) return;
+      if (pairedPictures(item.text, next.text)) paired.add(at + 1);
+    });
     return `<ul class="semantic-summary-list">${items
-      .map((item) => {
+      .map((item, at) => {
+        if (paired.has(at)) return "";
         const level = levelOf(item.marker);
+        const together = items[at + 1] && pairedPictures(item.text, items[at + 1].text);
+        if (together) {
+          return `<li class="semantic-summary-item semantic-summary-plain"
+                      style="--summary-level: ${level}">${together}</li>`;
+        }
         // 사진만 든 줄에는 글머리표를 붙이지 않습니다. 사진이 곧 내용입니다.
         if (pictureOnly(item.text)) {
           return `<li class="semantic-summary-item semantic-summary-plain"
@@ -736,8 +799,19 @@
     let latestPrimary = null;
     let latestNumbered = null;
 
+    let afterPicture = false;
     for (const rawLine of lines) {
       const line = normalizeLine(rawLine);
+      // 사진 줄과 그 다음 이름 줄은 홀로 세웁니다. 원문 안쪽 표의 두 줄이라
+      // 앞줄에 붙여 버리면 사진과 이름을 짝지을 수 없습니다.
+      const picture = pictureOnly(line);
+      if (picture || afterPicture) {
+        items.push({ marker: "", text: line, level: 0, type: "paragraph" });
+        latestPrimary = null;
+        latestNumbered = null;
+        afterPicture = picture;
+        continue;
+      }
       // 매뉴얼 판마다 글머리표가 다릅니다. ▸(U+25B8)와 ▶(U+25B6)는 다른 글자입니다.
       // 여기 빠진 기호는 글머리표로 안 보여 앞줄 뒤에 붙어 버립니다.
       let match = line.match(/^([‣•▸▹▪□○◦])\s*(.+)$/);
@@ -872,5 +946,8 @@
     };
   }
 
+  // 사진 그리는 규칙은 app-faithful-workflow.js도 그대로 씁니다.
+  // 두 곳에 같은 규칙을 적어 두면 반드시 한쪽만 고치게 되므로 여기 한 군데에 둡니다.
+  window.GUIDE_PICTURES = { withPictures, pairedPictures, pictureOnly, hasPicture };
   window.GUIDE_DETAIL_RENDERER = { render };
 })();
