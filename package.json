@@ -3,7 +3,7 @@
   "private": true,
   "description": "전북특별자치도교육청 「학교행정업무 길라잡이」 웹판",
   "scripts": {
-    "build:source": "python3 scripts/read_hwpx_tables.py && node scripts/build_chapters_from_hwpx.mjs && node scripts/build_workflow_layout.js && node scripts/build_structured_search_index.js && node scripts/stamp_asset_versions.js",
+    "build:source": "python3 scripts/read_hwpx_tables.py && python3 scripts/extract_manual_images.py && node scripts/build_chapters_from_hwpx.mjs && node scripts/build_workflow_layout.js && node scripts/build_structured_search_index.js && node scripts/stamp_asset_versions.js",
     "build:extras": "node scripts/render_form_svgs.mjs && python3 scripts/build_form_assets.py && node scripts/build_faqs_from_hwp.mjs && node scripts/build_form_entries.mjs && node scripts/build_form_tables.mjs && node scripts/stamp_asset_versions.js",
     "check": "node scripts/run_all_validations.mjs",
     "serve": "python3 -m http.server 8899 --directory docs",
@@ -24,6 +24,7 @@
     "pdfjs-dist는 kordoc이 4.x를 쓰므로 5.x로 올리지 마세요.",
     "표가 폭 안에 들어가는지는 브라우저로 확인합니다(playwright). 서버는 스스로 띄웁니다.",
     "FAQ·서식은 게시판에서 받은 파일(docs/downloads/chapterN-faq.hwp, chapterN-forms.hwpx)로 만듭니다.",
-    "  npm run build:extras      (서식 미리보기까지 만드느라 10분쯤 걸립니다)"
+    "  npm run build:extras      (서식 미리보기까지 만드느라 10분쯤 걸립니다)",
+    "매뉴얼 본문 사진은 scripts/extract_manual_images.py가 꺼냅니다(Pillow 필요)."
   ]
 }

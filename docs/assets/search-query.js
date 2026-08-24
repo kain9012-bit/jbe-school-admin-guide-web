@@ -352,7 +352,12 @@
         };
       }
       // 묶음 점수는 가장 잘 맞은 것을 따르되, 여러 군데에서 나오면 조금 올립니다.
-      group.score = Math.max(group.score, entry.score) + entry.score * 0.05;
+      // 다만 올려 주는 몫에 뚜껑을 씌웁니다. 뚜껑이 없으면 글이 많은 업무가
+      // 잔 점수를 쌓아 늘 이깁니다. 제7편 보수작업은 블록이 122개라
+      // '육아휴직 신청 방법'에도 1위로 올라왔습니다.
+      group.best = Math.max(group.best || 0, entry.score);
+      group.spread = (group.spread || 0) + entry.score * 0.05;
+      group.score = group.best + Math.min(group.spread, group.best * 0.3);
     }
     const list = [...groups.values()];
     for (const group of list) {

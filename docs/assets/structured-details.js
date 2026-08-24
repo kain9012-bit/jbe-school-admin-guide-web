@@ -41,6 +41,38 @@
     return lines.findIndex((line) => /^구\s*분\s+내\s*용$/.test(normalizeLine(line)));
   }
 
+  // 매뉴얼 본문에 실린 사진입니다. 빌더가 '[[그림:image7]]'라는 표를 남겨
+  // 두고(scripts/build_chapters_from_hwpx.mjs), 화면이 그 자리에 그립니다.
+  // 그림 파일은 scripts/extract_manual_images.py가 편별로 꺼내 둡니다.
+  const PICTURE_MARK = /\[\[그림:([A-Za-z0-9_]+)\]\]/g;
+  const hasPicture = (value) => {
+    PICTURE_MARK.lastIndex = 0;
+    return PICTURE_MARK.test(String(value || ""));
+  };
+  // 그림 표만 든 줄입니다. 글머리표를 붙이지 않고 사진만 늘어놓습니다.
+  const pictureOnly = (value) =>
+    hasPicture(value) && !String(value).replace(PICTURE_MARK, "").replace(/[\s/·]+/g, "");
+
+  function pictureMarkup(name) {
+    const chapter = (window.ACTIVE_GUIDE_CHAPTER && window.ACTIVE_GUIDE_CHAPTER.id) || "01";
+    const src = `assets/manual-images/chapter${chapter}/${escapeHtml(name)}.jpg`;
+    return `<img class="source-picture" src="${src}" alt="매뉴얼 그림" loading="lazy" />`;
+  }
+
+  // 사진이 잇달아 나오면 원문처럼 한 줄에 나란히 놓습니다. kordoc이 칸 사이에
+  // 넣어 준 빗금은 사진을 늘어놓고 나면 뜻이 없으므로 지웁니다.
+  const PICTURE_RUN = /(?:\[\[그림:[A-Za-z0-9_]+\]\]\s*(?:[/·]\s*)?)+/g;
+
+  // 이미 글자를 안전하게 바꾼 뒤에 부릅니다. 그림 표에는 바뀌는 글자가 없습니다.
+  const withPictures = (html) =>
+    String(html).replace(PICTURE_RUN, (run) => {
+      const names = run.match(PICTURE_MARK) || [];
+      const shown = names
+        .map((mark) => pictureMarkup(mark.replace(/^\[\[그림:|\]\]$/g, "")))
+        .join("");
+      return `<span class="source-picture-row">${shown}</span>`;
+    });
+
   function logicalItems(lines) {
     const items = [];
     for (const rawLine of lines) {
@@ -57,9 +89,11 @@
   function cellMarkup(lines) {
     const items = logicalItems(lines);
     if (!items.length) return "—";
-    if (items.length === 1) return escapeHtml(items[0]);
+    // 사진만 든 줄은 한 줄에 나란히 늘어놓습니다.
+    const shown = (item) => withPictures(escapeHtml(item));
+    if (items.length === 1) return shown(items[0]);
     return `<ul>${items
-      .map((item) => `<li>${escapeHtml(item.replace(/^[•‣▸▹▶▪□○◦]\s*/, ""))}</li>`)
+      .map((item) => `<li>${shown(item.replace(/^[•‣▸▹▶▪□○◦]\s*/, ""))}</li>`)
       .join("")}</ul>`;
   }
 
@@ -674,16 +708,23 @@
     return `<ul class="semantic-summary-list">${items
       .map((item) => {
         const level = levelOf(item.marker);
+        // 사진만 든 줄에는 글머리표를 붙이지 않습니다. 사진이 곧 내용입니다.
+        if (pictureOnly(item.text)) {
+          return `<li class="semantic-summary-item semantic-summary-plain"
+                      style="--summary-level: ${level}">${withPictures(
+            escapeHtml(item.text)
+          )}</li>`;
+        }
         return item.marker
           ? `<li class="semantic-summary-item" style="--summary-level: ${level}">
               <span class="semantic-summary-marker" aria-hidden="true">${escapeHtml(
                 item.marker
               )}</span>
-              <span class="semantic-summary-text">${escapeHtml(item.text)}</span>
+              <span class="semantic-summary-text">${withPictures(escapeHtml(item.text))}</span>
             </li>`
           : `<li class="semantic-summary-item semantic-summary-plain"
                  style="--summary-level: ${level}">
-              <span class="semantic-summary-text">${escapeHtml(item.text)}</span>
+              <span class="semantic-summary-text">${withPictures(escapeHtml(item.text))}</span>
             </li>`;
       })
       .join("")}</ul>`;

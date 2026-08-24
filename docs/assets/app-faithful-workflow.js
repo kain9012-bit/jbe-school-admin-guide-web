@@ -595,17 +595,51 @@
     });
   }
 
+  // 매뉴얼 본문에 실린 사진입니다. 빌더가 '[[그림:image7]]'라는 표를 남겨 두고
+  // 화면이 그 자리에 그립니다(structured-details.js와 같은 규칙입니다).
+  const PICTURE_MARK = /\[\[그림:([A-Za-z0-9_]+)\]\]/g;
+  const hasPicture = (value) => {
+    PICTURE_MARK.lastIndex = 0;
+    return PICTURE_MARK.test(String(value || ""));
+  };
+  const pictureOnly = (value) =>
+    hasPicture(value) && !String(value).replace(PICTURE_MARK, "").replace(/[\s/·]+/g, "");
+  // 사진이 잇달아 나오면 원문처럼 한 줄에 나란히 놓습니다. kordoc이 칸 사이에
+  // 넣어 준 빗금은 사진을 늘어놓고 나면 뜻이 없으므로 지웁니다.
+  const PICTURE_RUN = /(?:\[\[그림:[A-Za-z0-9_]+\]\]\s*(?:[/·]\s*)?)+/g;
+  const withPictures = (html) =>
+    String(html).replace(PICTURE_RUN, (run) => {
+      const chapter = (window.ACTIVE_GUIDE_CHAPTER && window.ACTIVE_GUIDE_CHAPTER.id) || "01";
+      const shown = (run.match(PICTURE_MARK) || [])
+        .map((mark) => mark.replace(/^\[\[그림:|\]\]$/g, ""))
+        .map(
+          (name) =>
+            `<img class="source-picture" src="assets/manual-images/chapter${chapter}/${escapeHtml(
+              name
+            )}.jpg" alt="매뉴얼 그림" loading="lazy" />`
+        )
+        .join("");
+      return `<span class="source-picture-row">${shown}</span>`;
+    });
+
   function summaryItemMarkup(item, level = 0) {
     const match = markerOf(item);
+    // 사진만 든 줄에는 글머리표를 붙이지 않습니다. 사진이 곧 내용입니다.
+    if (pictureOnly(match ? match[2] : item)) {
+      return `<li class="semantic-summary-item semantic-summary-plain"
+                 style="--summary-level: ${level}">${withPictures(
+        escapeHtml(match ? match[2] : item)
+      )}</li>`;
+    }
     if (!match) {
       return `<li class="semantic-summary-item semantic-summary-plain"
                  style="--summary-level: ${level}">
-        <span class="semantic-summary-text">${escapeHtml(item)}</span>
+        <span class="semantic-summary-text">${withPictures(escapeHtml(item))}</span>
       </li>`;
     }
     return `<li class="semantic-summary-item" style="--summary-level: ${level}">
       <span class="semantic-summary-marker" aria-hidden="true">${escapeHtml(match[1])}</span>
-      <span class="semantic-summary-text">${escapeHtml(match[2])}</span>
+      <span class="semantic-summary-text">${withPictures(escapeHtml(match[2]))}</span>
     </li>`;
   }
 
