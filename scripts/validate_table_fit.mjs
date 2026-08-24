@@ -211,6 +211,20 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
         });
       });
 
+      // 매뉴얼이 표로 그려 둔 절차도를 카드로 다시 그리지 않는지 봅니다.
+      // 카드로 옮기려면 원문의 자리를 버리고 한 줄짜리 차례로 펴야 하는데,
+      // 가지가 갈라지는 그림은 펼 수가 없어 카드 한 장에 열세 줄이 들어갔습니다
+      // (제8편 '촉탁직 노동자 (재)고용'). 원문 자리에 원문 그대로 그립니다.
+      const redrawn = await page.evaluate(
+        () => document.querySelectorAll("#step-actions .source-flow").length
+      );
+      if (redrawn) {
+        problems.push(
+          `제${chapterId}편 ${work.title} ${step}번째: 원문 표를 카드로 다시 그렸습니다 ` +
+            `(${redrawn}곳). 표는 원문 자리에 표로 그려야 합니다.`
+        );
+      }
+
       for (const table of found) {
         checked += 1;
         const where = `제${chapterId}편 ${work.title} ${step}번째 [${table.label.slice(0, 20)}]`;
