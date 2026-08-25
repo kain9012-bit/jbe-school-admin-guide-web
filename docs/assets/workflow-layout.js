@@ -27,7 +27,8 @@ window.GUIDE_WORKFLOW_LAYOUT = {
     { title: "1. 등록", blocks: ["records-b1","records-b2","records-b3","records-b4","records-b5","records-b6"] },
     { title: "2. 정리 · 편철", blocks: ["records-b7","records-b8","records-b9","records-b10"] },
     { title: "3. 이관·보존", blocks: ["records-b11","records-b12","records-b13","records-b14","records-b15"] },
-    { title: "4. 폐기", blocks: ["records-b16","records-b17","records-b18"] }
+    { title: "4. 폐기", blocks: ["records-b16","records-b17","records-b18"] },
+    { title: "5. 비전자기록물 이관 및 폐기 절차", blocks: ["records-b19"] }
   ],
   "background-check": [
     { title: "1. 신원조사", blocks: ["background-check-b1","background-check-b2","background-check-b3","background-check-b4"] },

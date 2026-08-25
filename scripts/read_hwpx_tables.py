@@ -230,6 +230,113 @@ def read_table(table: ET.Element, fills: dict[str, str]) -> dict:
     return {"rows": rows, "cols": cols, "cells": cells}
 
 
+# ── 도형으로 그린 표 ────────────────────────────────────────────────────
+#
+# 매뉴얼은 절차도를 표가 아니라 네모(hp:rect)와 선(hp:line)으로 그리기도 합니다.
+# 그러면 칸 하나하나가 따로 노는 도형이라, 글자를 읽는 쪽에서는 칸 구분 없이
+# 통째로 이어 붙습니다.
+#
+#   제1편 '5. 비전자기록물 이관 및 폐기 절차'
+#   원문 : ┌업무주체┬주요업무┬업무내용┐
+#          ├학교기록물담당자┼이관대상 추출┼◦K-에듀파인시스템에서…┤
+#   화면 : 업무주체주요업무업무내용학교기록물담당자이관대상 추출◦K-에듀파인…
+#
+# 네모마다 자리(hp:offset)와 크기(hp:curSz)가 적혀 있습니다. 같은 줄에 선
+# 것끼리 묶으면 표로 되살릴 수 있습니다.
+SHAPE_LEAST = 3  # 글자가 든 네모가 이만큼은 있어야 표로 봅니다
+
+
+def clusters(values: list[int], gap: int) -> list[int]:
+    """가까이 붙은 자리를 한 줄(또는 한 열)로 묶어 그 시작값을 냅니다."""
+    starts: list[int] = []
+    for value in sorted(set(values)):
+        if starts and value - starts[-1] <= gap:
+            continue
+        starts.append(value)
+    return starts
+
+
+def slot_of(starts: list[int], value: int) -> int:
+    at = 0
+    for index, start in enumerate(starts):
+        if value >= start:
+            at = index
+    return at
+
+
+def shape_grid(container: ET.Element) -> dict | None:
+    """네모 도형으로 그린 표를 칸 주소가 있는 표로 되살립니다."""
+    boxes = []
+    for rect in container:
+        if local_name(rect.tag) != "rect":
+            continue
+        offset = next((e for e in rect if local_name(e.tag) == "offset"), None)
+        size = next(
+            (e for e in rect if local_name(e.tag) in ("curSz", "orgSz")), None
+        )
+        if offset is None or size is None:
+            continue
+        text = cell_text(rect)
+        if not text.strip():
+            continue
+        boxes.append(
+            {
+                "x": int(offset.get("x", "0")),
+                "y": int(offset.get("y", "0")),
+                "w": int(size.get("width", "0")),
+                "h": int(size.get("height", "0")),
+                "text": text,
+            }
+        )
+    if len(boxes) < SHAPE_LEAST:
+        return None
+
+    widths = sorted(box["w"] for box in boxes)
+    heights = sorted(box["h"] for box in boxes)
+    middle_width = widths[len(widths) // 2] or 1
+    middle_height = heights[len(heights) // 2] or 1
+    columns = clusters([box["x"] for box in boxes], middle_width // 3)
+    rows = clusters([box["y"] for box in boxes], middle_height // 2)
+    if len(columns) < 2 or len(rows) < 2:
+        return None
+
+    cells = []
+    for box in boxes:
+        column = slot_of(columns, box["x"])
+        row = slot_of(rows, box["y"])
+        # 여러 열에 걸쳐 그린 네모가 있습니다. 오른쪽 끝이 어느 열까지
+        # 닿는지를 보고 걸친 칸 수를 셉니다.
+        span = 1
+        for index in range(column + 1, len(columns)):
+            if columns[index] < box["x"] + box["w"] - middle_width // 3:
+                span += 1
+        cells.append(
+            {
+                "col": column,
+                "row": row,
+                "colSpan": span,
+                "rowSpan": 1,
+                "width": box["w"],
+                "text": box["text"],
+                # 네모는 저마다 테두리가 그려져 있습니다.
+                "border": "ssss",
+            }
+        )
+    # 같은 자리에 둘이 겹치면 표로 되살릴 수 없습니다. 그대로 둡니다.
+    seen = {(cell["row"], cell["col"]) for cell in cells}
+    if len(seen) != len(cells):
+        return None
+    cells.sort(key=lambda cell: (cell["row"], cell["col"]))
+    return {
+        "rows": len(rows),
+        "cols": len(columns),
+        "cells": cells,
+        # 도형으로 그린 표라는 표시입니다. 글자가 이어 붙어 오므로 빌더가
+        # 그 자리를 글자로 찾아야 합니다.
+        "shapes": True,
+    }
+
+
 def enclosing(parents: dict, node: ET.Element) -> tuple[ET.Element | None, ET.Element | None]:
     """이 표를 담고 있는 바깥 표와 그 칸을 찾습니다.
 
@@ -268,6 +375,28 @@ def tables_of(path: Path) -> list[dict]:
             index_of = {id(element): len(found) + at for at, element in enumerate(here)}
             for element in here:
                 grid = read_table(element, fills)
+                outer, cell = enclosing(parents, element)
+                if outer is not None and cell is not None and id(outer) in index_of:
+                    address = next(
+                        (node for node in cell if local_name(node.tag) == "cellAddr"), None
+                    )
+                    if address is not None:
+                        grid["parent"] = index_of[id(outer)]
+                        grid["parentCell"] = {
+                            "row": int(address.get("rowAddr", "0")),
+                            "col": int(address.get("colAddr", "0")),
+                        }
+                found.append(grid)
+
+            # 도형으로 그린 표도 같은 목록에 담습니다. 어느 칸(또는 어느
+            # 문단)에 그려져 있는지를 함께 적어 두어야 빌더가 그 자리에
+            # 표를 그립니다.
+            for element in root.iter():
+                if local_name(element.tag) != "container":
+                    continue
+                grid = shape_grid(element)
+                if grid is None:
+                    continue
                 outer, cell = enclosing(parents, element)
                 if outer is not None and cell is not None and id(outer) in index_of:
                     address = next(

@@ -16,6 +16,15 @@
 // 적혀 있습니다(read_hwpx_tables.py의 parent·parentCell). 빌더가 펴진 글줄이
 // 놓인 자리를 찾아 두면(lineStart·lineCount) 화면이 그 자리에 표를 그립니다.
 //
+// 매뉴얼은 절차도를 표가 아니라 네모(hp:rect)와 선으로 그리기도 합니다.
+// 그러면 칸 하나하나가 따로 노는 도형이라 글자가 통째로 이어 붙습니다.
+//
+//   제1편 '5. 비전자기록물 이관 및 폐기 절차'
+//   예전 화면 : 업무주체주요업무업무내용학교기록물담당자이관대상 추출◦K-에듀…
+//
+// 네모마다 자리(hp:offset)와 크기(hp:curSz)가 적혀 있으므로, 같은 줄에 선
+// 것끼리 묶으면 표로 되살릴 수 있습니다. 이것도 여기서 함께 봅니다.
+//
 // 여기서는 세 가지를 봅니다.
 //   1. 원문에서 칸 안에 든 격자(2행 2열 이상)가 화면 자료에도 표로 들어 있다
 //   2. 표가 놓인 자리(lineStart·lineCount)가 본문 줄 수 안에 있다
@@ -92,6 +101,9 @@ function nearPictures(lines, key) {
 let restored = 0;
 let flattened = 0;
 let placed = 0;
+// 도형(네모)으로 그린 표입니다. 한글파일에는 표가 아니라 그림이라,
+// 글자를 읽는 쪽에서는 칸 구분 없이 통째로 이어 붙습니다.
+let shaped = 0;
 const wantedChapters = new Map(); // 편 → 화면에 표로 살아난 안쪽 표 수
 
 for (let id = 1; id <= 19; id += 1) {
@@ -167,7 +179,10 @@ for (let id = 1; id <= 19; id += 1) {
     if (!(grid.rows >= 2 && grid.cols >= 2)) continue;
     const key = bare(grid.cells.map((cell) => cell.text).join(""));
     if (!key) continue;
-    if (drawn.has(key)) continue;
+    if (drawn.has(key)) {
+      if (grid.shapes) shaped += 1;
+      continue;
+    }
     // 화면에 실리지 않은 지면(서식 견본, 편 첫머리 흐름도 상자)은 셈에서
     // 뺍니다. 글줄로 뭉개진 표는 그 글자가 본문에 통째로 이어져 나오므로,
     // 앞머리만 견주지 않고 글자 전부가 그대로 있을 때만 봅니다.
@@ -181,10 +196,25 @@ for (let id = 1; id <= 19; id += 1) {
     if (nearPictures(shownLines, key)) continue;
     flattened += 1;
     problems.push(
-      `제${label}편: 칸 안에 든 ${grid.rows}행 ${grid.cols}열 표가 글줄로 남았습니다 ` +
-        `('${key.slice(0, 40)}…').`
+      grid.shapes
+        ? `제${label}편: 도형으로 그린 ${grid.rows}행 ${grid.cols}열 표가 글줄로 남았습니다 ` +
+          `('${key.slice(0, 40)}…'). 네모마다 적힌 자리로 표를 되살려야 합니다.`
+        : `제${label}편: 칸 안에 든 ${grid.rows}행 ${grid.cols}열 표가 글줄로 남았습니다 ` +
+          `('${key.slice(0, 40)}…').`
     );
   }
+}
+
+// 한글파일에 도형으로 그린 표가 있는데 하나도 못 살렸으면, 되살리는 쪽이
+// 통째로 꺼져 있는 것입니다.
+const shapesInSource = Object.values(allGrids)
+  .flat()
+  .filter((grid) => grid.shapes && grid.rows >= 2 && grid.cols >= 2).length;
+if (shapesInSource && !shaped) {
+  problems.push(
+    `도형으로 그린 표 ${shapesInSource}개가 하나도 표로 살아나지 않았습니다. ` +
+      "python3 scripts/read_hwpx_tables.py && node scripts/build_chapters_from_hwpx.mjs"
+  );
 }
 
 if (!restored) {
@@ -310,5 +340,6 @@ if (!only && !seen) {
 
 console.log(
   `칸 안에 든 표 ${restored}개가 표로 살아났습니다 · 자리 ${placed}곳 모두 본문 안 · ` +
-    `화면에서 확인한 안쪽 표 ${seen}개 · 글줄로 남은 격자 ${flattened}개`
+    `화면에서 확인한 안쪽 표 ${seen}개 · 도형으로 그린 표 ${shaped}개 · ` +
+    `글줄로 남은 격자 ${flattened}개`
 );

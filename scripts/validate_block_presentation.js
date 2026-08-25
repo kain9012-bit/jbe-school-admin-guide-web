@@ -169,8 +169,11 @@ requireCondition(
   app.includes("function isEmptyStructuralBlock("),
   "본문 없는 구조 표시 블록을 걸러 내는 처리가 없습니다."
 );
+// '세부내용 5. 비전자기록물 이관 및 폐기 절차'처럼 앞에 '세부내용'이 붙은
+// 이름도 목차에서 고른 이름과 같은 것으로 봅니다. 그러지 않으면 항목 이름이
+// 바로 위에 크게 적혀 있는데 그 아래에 또 적힙니다.
 requireCondition(
-  app.includes("squash(raw) === squash(currentStepTitle)"),
+  app.includes("squash(asStep) === squash(currentStepTitle)"),
   "항목 안에서 바로 위 소제목을 다시 적고 있습니다."
 );
 // 매뉴얼이 쓰는 글머리표는 한곳(MARKERS)에 모아 두었습니다.

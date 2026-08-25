@@ -646,9 +646,12 @@
     const raw = String(block.title || "").trim();
     // 'TIP'은 매뉴얼이 TIP 상자임을 표시한 말입니다. 본문 사이에 그대로 놓이므로
     // 무슨 상자인지 알아볼 수 있게 매뉴얼과 같은 이름을 붙여 줍니다.
+    // '세부내용 5. 비전자기록물 이관 및 폐기 절차'는 이 항목의 이름 자체입니다.
+    // 목차에서 고른 이름이 바로 위에 크게 적혀 있으므로 두 번 적지 않습니다.
+    const asStep = raw.replace(/^세부내용\s+/, "");
     const heading = block.tip
       ? "TIP·주의사항"
-      : generatedTitle || squash(raw) === squash(currentStepTitle)
+      : generatedTitle || squash(asStep) === squash(currentStepTitle)
         ? ""
         : raw;
     // 안내서는 읽으라고 만든 문서입니다. 앞 몇 줄만 보여 주고 나머지를 접어 두면
