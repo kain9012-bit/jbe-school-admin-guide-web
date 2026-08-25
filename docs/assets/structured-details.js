@@ -132,9 +132,19 @@
     return items;
   }
 
-  function cellMarkup(lines) {
+  // 칸 앞에 붙은 글머리표는 뗍니다. 칸 안에서는 항목이 따로 그려지므로
+  // 기호가 두 번 보이기 때문입니다. 다만 기호 하나가 곧 내용인 칸이 있습니다.
+  //   제1편 기록물 관리 TIP '서가배치'의 '○' 칸
+  //   그 자리에 무엇이 서는지를 ○ 하나로 말합니다. 이것을 글머리표로 보고
+  //   떼어 내면 칸이 통째로 비어, 서가 그림이 빈 격자가 됩니다.
+  const dropMarker = (item) => {
+    const left = item.replace(/^[•‣▸▹▶▪□○◦]\s*/, "");
+    return left.trim() ? left : item;
+  };
+
+  function plainCellMarkup(lines) {
     const items = logicalItems(lines);
-    if (!items.length) return "—";
+    if (!items.length) return "";
     const shown = (item) => withPictures(escapeHtml(item));
     const pieces = [];
     for (let at = 0; at < items.length; at += 1) {
@@ -144,11 +154,69 @@
         at += 1;
         continue;
       }
-      pieces.push(shown(items[at].replace(/^[•‣▸▹▶▪□○◦]\s*/, "")));
+      pieces.push(shown(dropMarker(items[at])));
     }
     if (pieces.length === 1) return pieces[0];
     return `<ul>${pieces.map((piece) => `<li>${piece}</li>`).join("")}</ul>`;
   }
+
+  // 칸 안에 표가 또 그려져 있는 자리입니다.
+  //
+  // 매뉴얼은 칸 안에 표를 그려 넣습니다. 상자 안에 넣은 표, 서가처럼 자리를
+  // 그림으로 그린 표입니다. 한글파일을 읽는 쪽(kordoc)은 그 표를 행마다 한 줄,
+  // 칸 사이는 ' / '로 이어 붙여 바깥 칸의 글로 펴 버립니다.
+  //
+  //   제1편 기록물 관리 TIP '서가배치'
+  //   원문 : ┌ 영구 ┬ 준영구 ┬ 10년 ┐   화면 : 영구 / 준영구 / 10년 / 5년 …
+  //          ├ 2010문서 ┼ ○ ┼ … ┤              2010 문서 / ○ / …
+  //
+  // 빌더가 그 글줄이 놓인 자리를 적어 두었습니다(lineStart·lineCount).
+  // 여기서는 그 자리에 글줄 대신 표를 그립니다. 글줄은 그대로 두어야
+  // 검색이 그 글자를 찾으므로, 빌더는 지우지 않고 자리만 적어 둡니다.
+  // available은 이 칸이 쓸 수 있는 폭입니다. 안쪽 표는 바깥 표의 한 칸
+  // 안에 들어가므로, 바깥 표와 같은 폭으로 재면 반드시 넘칩니다.
+  function cellMarkup(lines, tables, available) {
+    const owned = Array.isArray(tables) ? tables : [];
+    // 글이 아예 없는 칸은 빈 칸으로 둡니다. 예전에 '—'를 넣었더니 원문에서
+    // 비워 둔 자리마다 줄표가 늘어섰습니다.
+    if (!owned.length) return plainCellMarkup(lines);
+    const owners = new Map();
+    owned.forEach((table, index) => {
+      const start = table.lineStart ?? 0;
+      const count = table.lineCount ?? 0;
+      for (let offset = 0; offset < count; offset += 1) owners.set(start + offset, index);
+    });
+    const pieces = [];
+    const drawn = new Set();
+    let buffer = [];
+    const flush = () => {
+      if (!buffer.length) return;
+      const shown = plainCellMarkup(buffer);
+      if (shown) pieces.push(shown);
+      buffer = [];
+    };
+    lines.forEach((line, index) => {
+      const owner = owners.has(index) ? owners.get(index) : -1;
+      if (owner < 0) {
+        buffer.push(line);
+        return;
+      }
+      if (drawn.has(owner)) return;
+      drawn.add(owner);
+      flush();
+      const table = owned[owner];
+      pieces.push(
+        spannedTableMarkup("", headerCellsOf(table), table.rows || [], table.widths, available)
+      );
+    });
+    flush();
+    return pieces.join("");
+  }
+
+  const headerCellsOf = (table) =>
+    (table.headers || []).map((cell) =>
+      typeof cell === "string" ? { text: cell, colSpan: 1, rowSpan: 1 } : cell
+    );
 
   function parseTwoColumn(body, schema) {
     const lines = bodyLines(body);
@@ -191,10 +259,16 @@
     return normalizeLine(source.replace(/<[^>]*>/g, " "));
   }
 
+  // 동그라미 숫자(①②③), 네모·동그라미 기호(■○◦), 로마 숫자(Ⅰ Ⅱ)는 한글
+  // 글꼴에서 한글과 같은 폭으로 그려집니다. 이것을 영문처럼 좁게 세면 그 칸에
+  // 필요한 폭을 너무 적게 잡아, 화면에서 낱말이 가운데에서 끊깁니다.
+  //   제7편 공무원연금 '②③⑥⑦' 칸: 필요 45px인데 39px만 주었습니다.
+  const WIDE_LETTER = /[가-힣一-龥ぁ-ゔァ-ヴー々〆〤\u2460-\u24FF\u2160-\u217F\u25A0-\u25FF\u3000-\u303F\uFF01-\uFF60\u203B]/;
+
   function visualLength(value) {
     return [...plainCellText(value)].reduce((length, character) => {
       if (/\s/.test(character)) return length + 0.35;
-      if (/[가-힣一-龥ぁ-ゔァ-ヴー々〆〤]/.test(character)) return length + 1;
+      if (WIDE_LETTER.test(character)) return length + 1;
       return length + 0.58;
     }, 0);
   }
@@ -378,7 +452,11 @@
 
 
 
-  function spannedTableMarkup(caption, headers, rows, sourceWidths) {
+  // 넓은 화면에서 표가 놓이는 자리는 780px쯤입니다(창 1280px 기준 782px).
+  const AVAILABLE = 780;
+
+  function spannedTableMarkup(caption, headers, rows, sourceWidths, available) {
+    const room = Number(available) > 0 ? Number(available) : AVAILABLE;
     // 머리글과 본문을 <thead>·<tbody>로 나누면, 머리글 칸이 아래로 걸친 병합
     // (구 분: 2줄 차지)이 끊깁니다. 한 덩어리로 그리고 첫 줄만 머리글로 표시합니다.
     let grid = visibleCells([headers, ...rows]);
@@ -412,13 +490,11 @@
     // 폭 안에 들어갈 수 있으면 맞추고, 못 들어가면 가로로 넘겨 봅니다.
     // 우겨넣으면 낱말이 가운데에서 끊겨 오히려 못 읽습니다.
     //
-    // 넓은 화면에서 표가 놓이는 자리는 780px쯤입니다(창 1280px 기준 782px).
     // 예전에는 690px로 보고 그보다 크면 넘겨 버렸는데, 어림값도 실제보다
     // 커서 들어갈 수 있는 표까지 가로 스크롤이 붙었습니다.
-    const AVAILABLE = 780;
     const needs = neededWidth(grid, columnCount);
-    const scrolls = needs > AVAILABLE;
-    const widths = fitWidths(base, grid, columnCount, scrolls ? needs : AVAILABLE);
+    const scrolls = needs > room;
+    const widths = fitWidths(base, grid, columnCount, scrolls ? needs : room);
     return `
       <div class="source-table-scroll">
         <table class="source-criteria-table" style="--table-columns: ${columnCount}; --table-min: ${Math.round(
@@ -454,7 +530,15 @@
                           }
                           // 원문에서 비어 있는 칸은 비워 둡니다.
                           const lines = bodyLines(unwrap(cell.text));
-                          const content = lines.length ? cellMarkup(lines) : "";
+                          // 칸 안에 표가 또 들어 있으면 이 칸이 쓸 수 있는
+                          // 폭만큼만 줍니다. 바깥 표와 같은 폭으로 재면
+                          // 안쪽 표가 반드시 칸을 넘어갑니다.
+                          const share = widths
+                            .slice(column, column + (cell.colSpan || 1))
+                            .reduce((sum, value) => sum + Number(value || 0), 0);
+                          const content = lines.length
+                            ? cellMarkup(lines, cell.tables, (room * share) / 100 - 24)
+                            : "";
                           const span = spanAttributes(cell);
                           if (rowIndex === 0) {
                             return `<th scope="col"${span}${edge}>${content}</th>`;
@@ -685,9 +769,7 @@
       drawn.add(owner);
       flush();
       const table = tables[owner];
-      const headerCells = (table.headers || []).map((cell) =>
-        typeof cell === "string" ? { text: cell, colSpan: 1, rowSpan: 1 } : cell
-      );
+      const headerCells = headerCellsOf(table);
       // 칸이 하나뿐인 것은 표가 아니라 매뉴얼이 글을 둘러 둔 상자입니다.
       // 격자로 그리면 머리글 서식이 붙어 글이 통째로 굵어지고,
       // 표를 담는 바깥 상자와 겹쳐 테두리가 두 겹으로 보입니다.
@@ -696,7 +778,13 @@
         const noteLines = bodyLines(unwrap(onlyCells[0].text));
         if (noteLines.length) {
           drewNote = true;
-          pieces.push(`<div class="source-note-box">${cellMarkup(noteLines)}</div>`);
+          pieces.push(
+            `<div class="source-note-box">${cellMarkup(
+              noteLines,
+              onlyCells[0].tables,
+              AVAILABLE - 40
+            )}</div>`
+          );
           continue;
         }
       }

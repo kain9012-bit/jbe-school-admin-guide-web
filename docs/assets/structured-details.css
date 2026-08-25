@@ -601,3 +601,43 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* 칸 안에 그려진 표입니다.
+   매뉴얼은 상자 안에, 또 표 칸 안에 표를 또 그려 넣습니다(제1편 기록물 관리
+   TIP '서가배치', 제17편 '선금정산 예'). 한글파일을 읽는 쪽은 그 표를 행마다
+   한 줄, 칸 사이는 빗금으로 이어 붙여 바깥 칸의 글로 펴 버립니다. 이제는
+   원문 그대로 표로 그리므로(structured-details.js), 바깥 표 안에서도 제
+   모양이 나오게 여백과 글자 크기를 조금 줄입니다. */
+.source-criteria-table .source-table-scroll,
+.source-note-box .source-table-scroll {
+  margin: 0.6rem 0;
+  border-radius: 0.5rem;
+}
+
+/* 안쪽 표는 바깥 칸의 폭 안에 들어가야 합니다. 열 수로 정한 최소 폭을
+   그대로 두면 반드시 칸을 넘어 가로 스크롤이 생깁니다. 열이 아주 많아
+   넘겨 봐야 하는 표(data-scroll="1")는 그대로 둡니다. */
+.source-criteria-table .source-criteria-table[data-scroll="0"],
+.source-note-box .source-criteria-table[data-scroll="0"] {
+  min-width: 100%;
+}
+
+.source-criteria-table .source-criteria-table,
+.source-note-box .source-criteria-table {
+  font-size: 1.3rem;
+}
+
+.source-criteria-table .source-criteria-table th,
+.source-criteria-table .source-criteria-table td,
+.source-note-box .source-criteria-table th,
+.source-note-box .source-criteria-table td {
+  padding: 0.6rem 0.7rem;
+}
+
+/* 안쪽 표의 첫 열은 이름칸이 아니라 그냥 칸일 때가 많습니다(서가 배치처럼
+   자리를 그림으로 그린 표). 바깥 표처럼 굵게 칠하면 표가 온통 회색이 됩니다. */
+.source-criteria-table .source-criteria-table tbody th,
+.source-note-box .source-criteria-table tbody th {
+  background: transparent;
+  font-weight: 400;
+}

@@ -45,6 +45,7 @@ const BROWSER_JOBS = new Set([
   "validate_card_heights.mjs",
   "validate_download_links.mjs",
   "validate_navigation.mjs",
+  "validate_nested_tables.mjs",
 ]);
 let failed = 0;
 let skipped = 0;

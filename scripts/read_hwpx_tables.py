@@ -173,6 +173,25 @@ def read_table(table: ET.Element) -> dict:
     return {"rows": rows, "cols": cols, "cells": cells}
 
 
+def enclosing(parents: dict, node: ET.Element) -> tuple[ET.Element | None, ET.Element | None]:
+    """이 표를 담고 있는 바깥 표와 그 칸을 찾습니다.
+
+    칸 안에 든 표는 '그 칸의 글'이 아니라 그 칸에 그려진 표입니다.
+    어느 칸에 들었는지 적어 두지 않으면, 나중에 그 표를 되살릴 자리를
+    알 수 없습니다.
+    """
+    cell = None
+    at = parents.get(id(node))
+    while at is not None:
+        name = local_name(at.tag)
+        if name == "tc" and cell is None:
+            cell = at
+        elif name == "tbl":
+            return at, cell
+        at = parents.get(id(at))
+    return None, None
+
+
 def tables_of(path: Path) -> list[dict]:
     with zipfile.ZipFile(path) as archive:
         names = sorted(
@@ -182,10 +201,27 @@ def tables_of(path: Path) -> list[dict]:
         found = []
         for name in names:
             root = ET.fromstring(archive.read(name))
+            # 파이썬 XML에는 부모를 거슬러 올라가는 길이 없어 따로 적어 둡니다.
+            parents = {id(child): node for node in root.iter() for child in node}
             # 표 안에 표가 또 있을 수 있습니다. 바깥 표부터 문서 차례대로 모읍니다.
-            for element in root.iter():
-                if local_name(element.tag) == "tbl":
-                    found.append(read_table(element))
+            here = [
+                element for element in root.iter() if local_name(element.tag) == "tbl"
+            ]
+            index_of = {id(element): len(found) + at for at, element in enumerate(here)}
+            for element in here:
+                grid = read_table(element)
+                outer, cell = enclosing(parents, element)
+                if outer is not None and cell is not None and id(outer) in index_of:
+                    address = next(
+                        (node for node in cell if local_name(node.tag) == "cellAddr"), None
+                    )
+                    if address is not None:
+                        grid["parent"] = index_of[id(outer)]
+                        grid["parentCell"] = {
+                            "row": int(address.get("rowAddr", "0")),
+                            "col": int(address.get("colAddr", "0")),
+                        }
+                found.append(grid)
         return found
 
 

@@ -130,7 +130,11 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
         const LABEL_LIMIT = 40;
         return [...document.querySelectorAll("#step-actions .source-table-scroll")].map((box) => {
           const table = box.querySelector("table");
-          const cells = [...table.querySelectorAll("th, td")];
+          // 이 표가 제 것으로 가진 칸만 봅니다. 칸 안에 표가 또 그려져 있으면
+          // (제1편 기록물 관리 TIP '서가배치') 아래로 다 훑을 때 안쪽 표의 칸까지
+          // 딸려 옵니다. 안쪽 표의 맨 왼쪽 칸은 바깥 표의 왼쪽 끝이 아니므로
+          // '세로선이 빠졌다'고 잘못 알립니다. 안쪽 표는 제 상자로 따로 봅니다.
+          const cells = [...table.querySelectorAll(":scope > tbody > tr > th, :scope > tbody > tr > td")];
           const plain = (cell) => cell.textContent.replace(/\s+/g, " ").trim();
           // 칸 하나가 통째로 화살표인 표는 흐름도를 격자로 옮긴 것입니다.
           const arrowCells = cells.filter((cell) => {
