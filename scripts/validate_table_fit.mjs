@@ -199,6 +199,12 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
           }).length;
           return {
             sample: tightSample,
+            // 매뉴얼이 표로 그림을 그린 자리입니다(서가 배치도, 개념도, 구성도).
+            // 원문에서도 좁은 칸의 글은 두 줄로 접힙니다. 낱말이 안 끊기게
+            // 폭을 넓히면 원문 600px짜리 그림이 1300px로 부풀어 가로로
+            // 넘어갑니다. 그림은 원문 비율 그대로 두고, 접히는 것은 봐 줍니다.
+            // 폭 안에 들어가는지는 아래 overflow로 그대로 봅니다.
+            picture: table.getAttribute("data-picture") === "1",
             columns: table.querySelectorAll("col").length,
             // 열이 아주 많은 표는 가로로 넘겨 보는 것이 맞습니다.
             overflow:
@@ -235,7 +241,7 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
         if (table.overflow) {
           problems.push(`${where}: 표가 폭을 넘어 가로 스크롤이 생깁니다 (${table.columns}열).`);
         }
-        if (table.tight) {
+        if (table.tight && !table.picture) {
           problems.push(
             `${where}: 낱말이 끊기는 칸이 ${table.tight}개 있습니다.` +
               (table.sample ? ` ('${table.sample}')` : "")

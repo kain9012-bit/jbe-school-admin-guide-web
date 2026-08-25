@@ -641,3 +641,28 @@
   background: transparent;
   font-weight: 400;
 }
+
+/* 매뉴얼이 표로 '그림'을 그린 자리입니다(서가 배치도, 시차출퇴근 개념도,
+   성과평가위원회 구성도, 빈 대장 서식). 빈 칸이 곧 모양이라 원문의 자리와
+   비율을 그대로 씁니다. 원문에서도 좁은 칸의 글은 두 줄로 접힙니다.
+   낱말이 안 끊기게 폭을 넓히면 원문 600px짜리 그림이 1300px로 부풀어
+   가로로 넘어갑니다. 여기서는 글자를 줄이고 접히게 둡니다. */
+.source-criteria-table[data-picture="1"] {
+  min-width: 0;
+  font-size: 1.15rem;
+  line-height: 1.35;
+}
+
+.source-criteria-table[data-picture="1"] th,
+.source-criteria-table[data-picture="1"] td {
+  padding: 0.35rem 0.3rem;
+  text-align: center;
+  vertical-align: middle;
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+
+.source-criteria-table[data-picture="1"] tbody th {
+  background: transparent;
+  font-weight: 400;
+}

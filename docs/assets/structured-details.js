@@ -206,7 +206,14 @@
       flush();
       const table = owned[owner];
       pieces.push(
-        spannedTableMarkup("", headerCellsOf(table), table.rows || [], table.widths, available)
+        spannedTableMarkup(
+          "",
+          headerCellsOf(table),
+          table.rows || [],
+          table.widths,
+          available,
+          table.picture
+        )
       );
     });
     flush();
@@ -455,7 +462,15 @@
   // 넓은 화면에서 표가 놓이는 자리는 780px쯤입니다(창 1280px 기준 782px).
   const AVAILABLE = 780;
 
-  function spannedTableMarkup(caption, headers, rows, sourceWidths, available) {
+  // 매뉴얼이 표로 '그림'을 그린 자리입니다(빌더의 drawnAsPicture가 표시합니다).
+  // 서가 배치도, 시차출퇴근 개념도, 성과평가위원회 구성도, 빈 대장 서식처럼
+  // 빈 칸이 곧 모양인 표입니다.
+  //
+  // 이런 표는 원문의 자리와 비율을 그대로 두어야 합니다. 다른 표에 쓰는
+  // '어느 열도 자기 낱말보다 좁아지지 않게' 규칙을 태우면, 원문에서 폭
+  // 162mm(600px 남짓)에 든 서가 그림이 1300px로 부풀어 가로로 넘어갑니다.
+  // 원문에서도 '2010 문서'는 좁은 칸에서 두 줄로 접힙니다. 그것이 원문 모양입니다.
+  function spannedTableMarkup(caption, headers, rows, sourceWidths, available, picture) {
     const room = Number(available) > 0 ? Number(available) : AVAILABLE;
     // 머리글과 본문을 <thead>·<tbody>로 나누면, 머리글 칸이 아래로 걸친 병합
     // (구 분: 2줄 차지)이 끊깁니다. 한 덩어리로 그리고 첫 줄만 머리글로 표시합니다.
@@ -472,7 +487,8 @@
     }, 0) || headers.reduce((total, cell) => total + (cell.colSpan || 1), 0);
 
     // 그림 여백으로 둘러 둔 빈 줄·빈 열을 걷어내고 다시 셉니다.
-    const trimmed = trimEmptyEdges(grid, columnCount);
+    // 그림형 표에서는 그 빈 자리가 곧 그림이므로 걷어내지 않습니다.
+    const trimmed = picture ? null : trimEmptyEdges(grid, columnCount);
     if (trimmed) {
       grid = visibleCells(trimmed.rows);
       columnCount = trimmed.columnCount;
@@ -492,14 +508,15 @@
     //
     // 예전에는 690px로 보고 그보다 크면 넘겨 버렸는데, 어림값도 실제보다
     // 커서 들어갈 수 있는 표까지 가로 스크롤이 붙었습니다.
-    const needs = neededWidth(grid, columnCount);
+    const drawing = Boolean(picture) && Array.isArray(base) && base.length === columnCount;
+    const needs = drawing ? room : neededWidth(grid, columnCount);
     const scrolls = needs > room;
-    const widths = fitWidths(base, grid, columnCount, scrolls ? needs : room);
+    const widths = drawing ? base : fitWidths(base, grid, columnCount, scrolls ? needs : room);
     return `
       <div class="source-table-scroll">
         <table class="source-criteria-table" style="--table-columns: ${columnCount}; --table-min: ${Math.round(
           needs
-        )}px" data-wide="${
+        )}px" data-picture="${drawing ? 1 : 0}" data-wide="${
           columnCount >= 7 ? 1 : 0
         }" data-scroll="${scrolls ? 1 : 0}" data-column-layout="${widths
           .map((width) => Number(width).toFixed(1))
@@ -802,7 +819,9 @@
       // 원문 그대로 그리는 것이 가장 정확합니다. 화살표도 원문이 놓아둔
       // 칸에 그대로 섭니다.
       drewGrid = true;
-      pieces.push(spannedTableMarkup(caption, headerCells, table.rows, table.widths));
+      pieces.push(
+        spannedTableMarkup(caption, headerCells, table.rows, table.widths, 0, table.picture)
+      );
     }
     flush();
 
