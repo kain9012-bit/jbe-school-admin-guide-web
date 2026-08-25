@@ -26,9 +26,13 @@ const path = require("node:path");
 const root = path.resolve(__dirname, "..");
 const assets = path.join(root, "docs", "assets");
 
+// 절차를 잇는 화살표만 든 칸입니다(build_chapters_from_hwpx.mjs와 같은 기준).
+const ARROW_ONLY = /^[\s⇨⇦⇩⇧⇒⇐→←↓↑▶►▼]+$/u;
+
 const problems = [];
 let checked = 0;
 let pictures = 0;
+let flows = 0;
 
 // 칸 안에 든 표도 함께 봅니다. 매뉴얼은 상자 안에, 표 칸 안에 표를 또
 // 그려 넣습니다(제1편 기록물 관리 TIP '서가배치').
@@ -88,6 +92,28 @@ for (let id = 1; id <= 19; id += 1) {
         // 서가 배치도, 시차출퇴근 개념도, 성과평가위원회 구성도, 빈 대장 서식.
         // 여기서는 빈 열·행이 있는 것이 맞습니다. 대신 원문 자리를 그대로
         // 두었는지(열 수와 원문 열 너비 수가 같은지)를 봅니다.
+        // 한 줄기 절차로 그리는 표는 원문이 정말 그 모양일 때만 그렇게 그립니다.
+        // 원문에 없는 모양을 지어내면 원문의 자리를 잃습니다. 예전에 절차도를
+        // 카드로 다시 그렸다가 가지가 갈라지는 그림을 펼 수 없어 카드 한 장에
+        // 열세 줄이 들어갔습니다(제8편 '촉탁직 노동자 (재)고용').
+        if (table.flow) {
+          flows += 1;
+          const cells = table.headers || [];
+          const wrong =
+            (table.rows || []).length > 0 ||
+            cells.length < 3 ||
+            cells.some((cell, at) => {
+              const said = String((cell || {}).text || "").trim();
+              const arrow = ARROW_ONLY.test(said);
+              return at % 2 === 0 ? !said || arrow : !arrow;
+            });
+          if (wrong) {
+            problems.push(
+              `${where}: 원문이 한 줄기 절차가 아닌데 절차로 그리고 있습니다. ` +
+                "상자와 화살표가 번갈아 선 한 줄짜리 표만 이어서 그립니다."
+            );
+          }
+        }
         if (table.picture) {
           pictures += 1;
           const widths = (table.widths || []).length;
@@ -143,8 +169,6 @@ if (fs.existsSync(gridFile)) {
       .replace(/\[\[그림:[^\]]*\]\]/g, "")
       .replace(DECORATION, "");
   // 빌더(drawnAsPicture)와 같은 기준입니다. 다르면 있지도 않은 잘못을 알립니다.
-  // 절차를 잇는 화살표만 든 칸입니다(build_chapters_from_hwpx.mjs와 같은 기준).
-  const ARROW_ONLY = /^[\s⇨⇦⇩⇧⇒⇐→←↓↑▶►▼]+$/u;
   const isPictureGrid = (grid) =>
     grid.cells.filter((cell) => !String(cell.text).trim()).length * 2 > grid.cells.length &&
     grid.cols >= 8;
@@ -211,5 +235,6 @@ if (problems.length) {
 }
 console.log(
   `표 ${checked}개 모두 빈 열·행이 없습니다 ` +
-    `(그림형 표 ${pictures}개는 원문 자리를 그대로 두었습니다).`
+    `(그림형 표 ${pictures}개는 원문 자리를 그대로 두었습니다 · ` +
+    `한 줄기 절차 ${flows}개).`
 );

@@ -229,8 +229,12 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
       // 카드로 옮기려면 원문의 자리를 버리고 한 줄짜리 차례로 펴야 하는데,
       // 가지가 갈라지는 그림은 펼 수가 없어 카드 한 장에 열세 줄이 들어갔습니다
       // (제8편 '촉탁직 노동자 (재)고용'). 원문 자리에 원문 그대로 그립니다.
+      // 다만 원문이 상자와 화살표를 번갈아 세워 둔 한 줄짜리 표는 그대로
+      // 이어서 그립니다. 상자도 화살표도 차례도 원문 그대로이고, 화면 폭에
+      // 맞춰 줄만 바뀝니다. 그런 것은 data-source="chain"으로 표시합니다.
+      // 표시가 없는 흐름도는 원문에 없는 모양을 지어낸 것입니다.
       const redrawn = await page.evaluate(
-        () => document.querySelectorAll("#step-actions .source-flow").length
+        () => document.querySelectorAll('#step-actions .source-flow:not([data-source="chain"])').length
       );
       if (redrawn) {
         problems.push(

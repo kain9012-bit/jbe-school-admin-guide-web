@@ -707,3 +707,75 @@
 .source-criteria-table td[data-arrow="1"] + td:not([data-arrow="1"]) {
   border-left: 1px solid var(--guide-line);
 }
+
+/* 한 줄로 늘어선 절차입니다.
+   원문이 상자와 화살표를 번갈아 세워 둔 자리입니다(1행짜리 표).
+   격자로 그리면 마지막 화살표가 허공에 걸리고, 두 표로 나뉜 절차가 끊겨
+   한 줄기로 보이지 않습니다. 상자도 화살표도 차례도 원문 그대로 두고,
+   화면 폭에 맞춰 줄만 바뀌게 합니다. */
+.source-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 0.6rem 0.4rem;
+  margin: 0.6rem 0;
+}
+
+/* 잇는 표시와 그 뒤의 상자를 한 덩어리로 묶습니다. 따로 두면 줄이 바뀌는
+   자리에서 화살표만 줄 끝에 남아 허공을 가리킵니다. */
+.source-flow-item {
+  display: flex;
+  align-items: stretch;
+  flex: 1 1 var(--flow-width, 28%);
+  min-width: 17rem;
+  gap: 0.4rem;
+}
+
+.source-flow-step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 1.1rem 1.3rem;
+  color: var(--guide-ink);
+  background: #fff;
+  border: 1px solid var(--guide-line);
+  border-radius: 0.8rem;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+/* 잇는 표시입니다. 단계가 아니므로 상자를 두르지 않고, 폭도 거의 차지하지
+   않게 둡니다. 줄이 바뀌는 자리에서는 앞 단계와 뒤 단계를 잇는 표시가
+   줄 끝에 남지 않도록 가운데에 섭니다. */
+.source-flow-link {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  color: var(--guide-muted);
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+/* 첫 상자 앞에는 자리만 두고 표시는 감춥니다. 줄마다 상자의 왼쪽 끝이
+   나란히 서게 하려는 것입니다. */
+.source-flow-link[data-first="1"] {
+  visibility: hidden;
+}
+
+.source-flow-step ul {
+  display: grid;
+  gap: 0.3rem;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+@media (max-width: 767px) {
+  .source-flow-item {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+}

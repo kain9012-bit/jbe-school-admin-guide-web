@@ -500,6 +500,59 @@
     return Boolean(said) && ARROW_ONLY.test(said);
   };
 
+  // 한 줄로 늘어선 절차입니다. 원문이 상자와 화살표를 번갈아 세워 둔 자리를
+  // 빌더가 flow로 표시해 둡니다(build_chapters_from_hwpx.mjs의 stepChain).
+  //
+  //   제1편 신원조사 'e하나로민원 권한신청 및 이용'
+  //   원문 : [1. 서약 서명]⇨[2. 사용 신청]⇨[3. 열람 권한 신청]⇨
+  //          [4. 권한 승인]⇨[5. 정보열람]⇨[6. 결과 확인]
+  //
+  // 격자로 그리면 마지막 화살표가 허공에 걸리고, 두 표가 끊겨 한 줄기 절차로
+  // 보이지 않습니다. 원문이 이어 둔 대로 이어서 그립니다. 상자도 화살표도
+  // 차례도 원문 그대로이고, 다만 화면 폭에 맞춰 줄만 바뀝니다.
+  function flowMarkup(tables) {
+    const steps = [];
+    for (const table of tables) {
+      for (const cell of table.headers || []) {
+        const said = String(cell.text || "").trim();
+        if (!said) continue;
+        // 화살표는 앞 상자와 뒤 상자를 잇는 표시일 뿐입니다. 상자 사이에
+        // 한 번만 세우면 되므로 여기서는 상자만 모읍니다.
+        if (arrowOnly(said)) continue;
+        steps.push({ text: said, width: (table.widths || [])[cell.column] || 0 });
+      }
+    }
+    if (steps.length < 2) return "";
+    // 잇는 표시는 원문에 쓰인 것을 그대로 씁니다.
+    const link =
+      [...tables]
+        .flatMap((table) => table.headers || [])
+        .map((cell) => String(cell.text || "").trim())
+        .find((said) => arrowOnly(said)) || "⇨";
+    // 잇는 표시는 뒤따르는 상자와 한 덩어리로 묶습니다. 따로 두면 줄이 바뀌는
+    // 자리에서 화살표만 줄 끝에 남아 허공을 가리킵니다.
+    // 첫 상자 앞에도 자리는 두되 표시는 감춥니다. 그래야 줄마다 상자의
+    // 왼쪽 끝이 나란히 섭니다.
+    return `
+      <div class="source-flow" data-source="chain" data-steps="${steps.length}">
+        ${steps
+          .map(
+            (step, at) => `
+              <span class="source-flow-item">
+                <span class="source-flow-link"${at ? "" : ' data-first="1"'} aria-hidden="true">${escapeHtml(
+                  link
+                )}</span>
+                <span class="source-flow-step"${
+                  step.width ? ` style="--flow-width: ${Number(step.width).toFixed(1)}%"` : ""
+                }>${cellMarkup(bodyLines(unwrap(step.text)))}</span>
+              </span>
+            `
+          )
+          .join("")}
+      </div>
+    `;
+  }
+
   function borderStyle(code) {
     const said = String(code || "");
     if (said.length !== 4) return "";
@@ -846,6 +899,23 @@
       drawn.add(owner);
       flush();
       const table = tables[owner];
+      // 한 줄기 절차가 표 여러 개로 나뉘어 있으면 이어서 한 덩어리로 그립니다.
+      // 원문에서도 앞 표의 마지막 화살표가 다음 표의 첫 상자를 가리킵니다.
+      if (table.flow) {
+        const chain = [table];
+        for (let next = owner + 1; next < tables.length; next += 1) {
+          if (!tables[next].flow) break;
+          if (drawn.has(next)) break;
+          drawn.add(next);
+          chain.push(tables[next]);
+        }
+        const shown = flowMarkup(chain);
+        if (shown) {
+          drewFlow = true;
+          pieces.push(shown);
+          continue;
+        }
+      }
       const headerCells = headerCellsOf(table);
       // 칸이 하나뿐인 것은 표가 아니라 매뉴얼이 글을 둘러 둔 상자입니다.
       // 격자로 그리면 머리글 서식이 붙어 글이 통째로 굵어지고,
