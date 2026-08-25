@@ -157,6 +157,77 @@ def text_pieces(node: ET.Element):
             yield from text_pieces(child)
 
 
+# 글자가 없는 칸이라고 빈 칸이 아닙니다.
+#
+# 매뉴얼은 절차의 화살표를 글자가 아니라 도형(hp:polygon)으로 그립니다.
+# 칸에 글자가 없으니 빈 칸으로 보이고, 빌더가 그 열을 통째로 걷어냅니다.
+# 그러면 절차가 이어지는 그림이 낱개 상자 여섯 개로 흩어집니다.
+#
+#   제1편 신원조사 '행정정보공동이용 시스템 e하나로민원 권한신청 및 이용'
+#   원문 : [1. 서약 서명] ⇨ [2. 사용 신청] ⇨ [3. 열람 권한 신청] ⇨ …
+#   예전 : [1. 서약 서명] [2. 사용 신청] [3. 열람 권한 신청]
+#
+# 화살표 도형에는 꼭짓점(hp:pt)이 적혀 있습니다. 가장 튀어나온 꼭짓점이
+# 어느 쪽에 있고 그 반대 축의 한가운데인지를 보면 방향을 알 수 있습니다.
+ARROW_MARK = {"right": "\u21e8", "left": "\u21e6", "down": "\u21e9", "up": "\u21e7"}
+# 꼭짓점이 반대 축 한가운데에서 이만큼 안에 있어야 뾰족한 끝으로 봅니다.
+ARROW_MIDDLE = 0.2
+
+
+def arrow_way(shape: ET.Element) -> str:
+    """화살표 도형이 어느 쪽을 가리키는지 봅니다. 화살표가 아니면 빈 글입니다."""
+    points = [
+        (int(pt.get("x", "0")), int(pt.get("y", "0")))
+        for pt in shape.iter()
+        if local_name(pt.tag) == "pt"
+    ]
+    if len(points) < 4:
+        return ""
+    xs = [x for x, _ in points]
+    ys = [y for _, y in points]
+    wide = max(xs) - min(xs)
+    tall = max(ys) - min(ys)
+    if wide <= 0 or tall <= 0:
+        return ""
+    middle_x = (max(xs) + min(xs)) / 2
+    middle_y = (max(ys) + min(ys)) / 2
+    # 네 방향마다, 가장 튀어나온 꼭짓점이 반대 축 한가운데에서 얼마나
+    # 벗어나 있는지를 잽니다. 가장 적게 벗어난 쪽이 뾰족한 끝입니다.
+    off = {
+        "right": abs(min(y for x, y in points if x == max(xs)) - middle_y) / tall,
+        "left": abs(min(y for x, y in points if x == min(xs)) - middle_y) / tall,
+        "down": abs(min(x for x, y in points if y == max(ys)) - middle_x) / wide,
+        "up": abs(min(x for x, y in points if y == min(ys)) - middle_x) / wide,
+    }
+    way = min(off, key=off.get)
+    if off[way] > ARROW_MIDDLE:
+        return ""
+    # 도형을 돌려 놓은 자리가 있습니다. 돌린 만큼 방향도 돌립니다.
+    turn = next((e for e in shape if local_name(e.tag) == "rotationInfo"), None)
+    angle = int(float(turn.get("angle", "0"))) % 360 if turn is not None else 0
+    order = ["right", "down", "left", "up"]
+    way = order[(order.index(way) + round(angle / 90)) % 4]
+    return ARROW_MARK[way]
+
+
+def arrows_in(cell: ET.Element) -> str:
+    """칸에 그려진 화살표 도형을 모읍니다. 칸 안에 든 표로는 내려가지 않습니다."""
+    found = []
+    def walk(node: ET.Element) -> None:
+        for child in node:
+            name = local_name(child.tag)
+            if name in SKIP_SUBTREE or name == "tbl":
+                continue
+            if name == "polygon":
+                mark = arrow_way(child)
+                if mark:
+                    found.append(mark)
+                continue
+            walk(child)
+    walk(cell)
+    return "".join(found)
+
+
 def cell_text(cell: ET.Element) -> str:
     """칸 안의 글을 문단 차례대로 모읍니다. 문단이 바뀌면 줄을 바꿉니다."""
     lines: list[str] = []
@@ -164,6 +235,9 @@ def cell_text(cell: ET.Element) -> str:
         line = re.sub(r"\s+", " ", unsymbol("".join(text_pieces(paragraph)))).strip()
         if line:
             lines.append(line)
+    if not lines:
+        # 글자가 없는 칸이라고 빈 칸이 아닙니다. 화살표가 그려져 있을 수 있습니다.
+        return arrows_in(cell)
     return "\n".join(lines)
 
 

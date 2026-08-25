@@ -143,6 +143,8 @@ if (fs.existsSync(gridFile)) {
       .replace(/\[\[그림:[^\]]*\]\]/g, "")
       .replace(DECORATION, "");
   // 빌더(drawnAsPicture)와 같은 기준입니다. 다르면 있지도 않은 잘못을 알립니다.
+  // 절차를 잇는 화살표만 든 칸입니다(build_chapters_from_hwpx.mjs와 같은 기준).
+  const ARROW_ONLY = /^[\s⇨⇦⇩⇧⇒⇐→←↓↑▶►▼]+$/u;
   const isPictureGrid = (grid) =>
     grid.cells.filter((cell) => !String(cell.text).trim()).length * 2 > grid.cells.length &&
     grid.cols >= 8;
@@ -167,6 +169,27 @@ if (fs.existsSync(gridFile)) {
         }
       }
     }
+    // 절차를 잇는 화살표가 화면에서도 그 자리에 서 있는지 봅니다.
+    // 화살표 칸은 글자가 없어 보여, 빈 열을 걷어내는 규칙에 함께 쓸려 나갑니다.
+    // 그러면 이어지던 절차가 낱개 상자로 흩어집니다
+    // (제1편 신원조사 'e하나로민원 권한신청 및 이용').
+    for (const grid of allGrids[String(id)] || []) {
+      const arrows = grid.cells.filter((cell) => ARROW_ONLY.test(String(cell.text || ""))).length;
+      if (!arrows) continue;
+      const key = bare(grid.cells.map((cell) => cell.text).join(""));
+      const found = onScreen.get(key);
+      if (!found) continue;
+      const drawn = [found.table.headers || [], ...(found.table.rows || [])]
+        .flat()
+        .filter((cell) => cell && ARROW_ONLY.test(String(cell.text || ""))).length;
+      if (drawn >= arrows) continue;
+      problems.push(
+        `제${String(id).padStart(2, "0")}편 ${found.section.title} [${found.block.title}]: ` +
+          `절차를 잇는 화살표 ${arrows}개 가운데 ${drawn}개만 남았습니다. ` +
+          "빈 열을 걷어낼 때 화살표 칸까지 쓸려 나갔습니다."
+      );
+    }
+
     for (const grid of allGrids[String(id)] || []) {
       if (!isPictureGrid(grid)) continue;
       const key = bare(grid.cells.map((cell) => cell.text).join(""));

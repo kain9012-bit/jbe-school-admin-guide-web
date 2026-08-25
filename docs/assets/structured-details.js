@@ -490,6 +490,16 @@
     return px > 8 ? ` style="height:${px}px"` : "";
   }
 
+  // 절차를 잇는 화살표만 든 칸입니다. 매뉴얼은 이 화살표를 글자가 아니라
+  // 도형으로 그려 두는데, 그것을 읽어 와 이 자리에 세웁니다
+  // (scripts/read_hwpx_tables.py의 arrows_in).
+  // 화살표 칸에까지 상자를 그리면 절차가 이어지지 않고 칸 여덟 개로 흩어집니다.
+  const ARROW_ONLY = /^[\s⇨⇦⇩⇧⇒⇐→←↓↑▶►▼]+$/u;
+  const arrowOnly = (value) => {
+    const said = String(value || "").trim();
+    return Boolean(said) && ARROW_ONLY.test(said);
+  };
+
   function borderStyle(code) {
     const said = String(code || "");
     if (said.length !== 4) return "";
@@ -597,10 +607,15 @@
                             ? cellMarkup(lines, cell.tables, (room * share) / 100 - 24)
                             : "";
                           const span = spanAttributes(cell);
+                          // 절차를 잇는 화살표 칸은 상자를 그리지 않습니다.
+                          const arrow = arrowOnly(cell.text) ? ' data-arrow="1"' : "";
                           // 그림형 표에는 머리글 칸이 없습니다. 원문이 표로
                           // 그린 그림이라 첫 줄·첫 열이 이름칸이 아닙니다.
                           if (drawing) {
-                            return `<td${span}${edge}${drawn}>${content}</td>`;
+                            return `<td${span}${edge}${drawn}${arrow}>${content}</td>`;
+                          }
+                          if (arrow) {
+                            return `<td${span}${edge}${arrow}>${content}</td>`;
                           }
                           if (rowIndex === 0) {
                             return `<th scope="col"${span}${edge}>${content}</th>`;

@@ -4,6 +4,10 @@
 합니다. 그러면 칸 하나하나가 따로 노는 도형이라, 글자를 읽는 쪽에서는 칸 구분
 없이 통째로 이어 붙습니다.
 
+표를 쓰더라도 칸과 칸을 잇는 화살표는 도형(hp:polygon)으로 그립니다. 그 칸은
+글자가 없어 빈 칸으로 보이고, 빈 열은 걷히므로 절차가 낱개 상자로 흩어집니다.
+그 화살표가 화면에도 서 있는지 함께 봅니다.
+
     제1편 '5. 비전자기록물 이관 및 폐기 절차'
     원문 : ┌업무주체┬주요업무┬업무내용┐
            ├학교기록물담당자┼이관대상 추출┼◦K-에듀파인시스템에서…┤
@@ -100,19 +104,58 @@ def tables_of(data: dict):
             yield from walk(block.get("tables"))
 
 
+# 절차를 잇는 화살표입니다. 매뉴얼은 이것을 글자가 아니라 도형(hp:polygon)으로
+# 그려 둡니다. 읽지 않으면 그 칸이 빈 칸으로 보이고, 빈 열은 걷히므로 절차가
+# 낱개 상자로 흩어집니다(제1편 신원조사 'e하나로민원 권한신청 및 이용').
+ARROW_MARKS = "⇨⇦⇩⇧⇒⇐→←↓↑▶►▼"
+
+
+def arrow_shapes(path: Path) -> int:
+    """한글파일에서 표 칸에 그려진 화살표 도형을 셉니다."""
+    count = 0
+    with zipfile.ZipFile(path) as archive:
+        for name in sorted(n for n in archive.namelist() if SECTION_RE.match(n)):
+            root = ET.fromstring(archive.read(name))
+            for cell in root.iter():
+                if local_name(cell.tag) != "tc":
+                    continue
+                if text_of(cell).strip():
+                    continue
+                count += sum(
+                    1 for node in cell.iter() if local_name(node.tag) == "polygon"
+                )
+    return count
+
+
+def arrow_cells(data: dict) -> int:
+    """화면 자료에서 화살표만 든 칸을 셉니다."""
+    count = 0
+    for table in tables_of(data):
+        for row in [table.get("headers") or []] + (table.get("rows") or []):
+            for cell in row:
+                said = str((cell or {}).get("text") or "").strip()
+                if said and all(letter in ARROW_MARKS for letter in said):
+                    count += 1
+    return count
+
+
 def main() -> None:
     problems: list[str] = []
     checked = 0
+    arrows_in_source = 0
+    arrows_on_screen = 0
     for path in sorted((ROOT / "source" / "manual-hwpx").glob("*.hwpx")):
         match = re.match(r"제(\d+)편", path.name)
         if not match:
             continue
         chapter = int(match.group(1))
-        wanted = shape_texts(path)
-        if not wanted:
-            continue
         data = chapter_data(chapter)
         if data is None:
+            continue
+        arrows_in_source += arrow_shapes(path)
+        arrows_on_screen += arrow_cells(data)
+        wanted = shape_texts(path)
+        if not wanted:
             continue
         # 화면에 실린 글 전체와, 표로 그려진 것들
         shown = ""
@@ -136,13 +179,23 @@ def main() -> None:
                 f"('{key[:40]}…'). 네모마다 적힌 자리로 표를 되살려야 합니다."
             )
 
+    if arrows_in_source and not arrows_on_screen:
+        problems.append(
+            f"한글파일에 절차를 잇는 화살표 도형이 {arrows_in_source}개 있는데 "
+            "화면에는 하나도 없습니다. 화살표를 안 읽으면 그 칸이 빈 칸으로 보이고, "
+            "빈 열은 걷혀 절차가 낱개 상자로 흩어집니다."
+        )
+
     if problems:
         for line in problems[:20]:
             print(f"  - {line}", file=sys.stderr)
         print(f"\n도형으로 그린 표 문제 {len(problems)}건", file=sys.stderr)
         raise SystemExit(1)
 
-    print(f"도형으로 그린 표 {checked}개가 모두 표로 그려집니다.")
+    print(
+        f"도형으로 그린 표 {checked}개가 모두 표로 그려집니다 · "
+        f"절차를 잇는 화살표 {arrows_on_screen}칸이 화면에 섭니다."
+    )
 
 
 if __name__ == "__main__":

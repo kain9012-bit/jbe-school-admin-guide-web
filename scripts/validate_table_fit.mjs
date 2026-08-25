@@ -160,6 +160,10 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
           const tableLeft = table.getBoundingClientRect().left;
           const openSides = cells.filter((cell) => {
             if (!cell.clientWidth) return false;
+            // 절차를 잇는 화살표 칸은 상자를 그리지 않습니다. 화살표에까지
+            // 테두리를 두르면 화살표가 또 하나의 단계처럼 보입니다.
+            // 원문에서도 이 자리는 칸이 아니라 칸과 칸 사이입니다.
+            if (cell.getAttribute("data-arrow") === "1") return false;
             const style = getComputedStyle(cell);
             if (parseFloat(style.borderLeftWidth) > 0) return false;
             return cell.getBoundingClientRect().left - tableLeft > 2;

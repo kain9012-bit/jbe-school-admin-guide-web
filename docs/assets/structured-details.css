@@ -678,3 +678,32 @@
   background: transparent;
   font-weight: 400;
 }
+
+/* 절차를 잇는 화살표만 든 칸입니다.
+   매뉴얼은 이 화살표를 글자가 아니라 도형(hp:polygon)으로 그려 둡니다.
+   글자가 없다고 그 열을 걷어내면, 이어지던 절차가 낱개 상자로 흩어집니다.
+   화살표 칸에까지 상자를 그리면 화살표가 또 하나의 단계처럼 보이므로
+   테두리와 바탕을 지우고 가운데에 세웁니다. */
+.source-criteria-table td[data-arrow="1"] {
+  padding: 0 0.2rem;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--guide-muted);
+  font-size: 1.7rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* 그림형 표는 칸마다 원문에 적힌 선을 그대로 긋습니다. 여기서 지우면
+   원문이 그어 둔 선까지 사라집니다. 보통 표에서만 상자를 지웁니다. */
+.source-criteria-table:not([data-picture="1"]) td[data-arrow="1"] {
+  border: 0;
+  background: transparent;
+}
+
+/* 화살표 칸 왼쪽의 상자는 오른쪽 선을 그대로 둡니다. 화살표 칸이 선을
+   지웠다고 앞 상자의 테두리까지 열리면 안 됩니다. */
+.source-criteria-table td[data-arrow="1"] + th,
+.source-criteria-table td[data-arrow="1"] + td:not([data-arrow="1"]) {
+  border-left: 1px solid var(--guide-line);
+}
