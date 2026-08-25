@@ -653,16 +653,28 @@
   line-height: 1.35;
 }
 
-.source-criteria-table[data-picture="1"] th,
-.source-criteria-table[data-picture="1"] td {
+/* 아래로 다 훑으면 안 됩니다. 그림형 표의 칸 안에 든 보통 표까지 선이
+   지워져, 그 표 한가운데 세로선이 끊깁니다(제19편 물품 관리 '처리 절차'
+   안의 재물조사 상자). 이 표가 제 것으로 가진 칸만 봅니다. */
+.source-criteria-table[data-picture="1"] > tbody > tr > th,
+.source-criteria-table[data-picture="1"] > tbody > tr > td {
   padding: 0.35rem 0.3rem;
   text-align: center;
   vertical-align: middle;
   word-break: break-all;
   overflow-wrap: anywhere;
+  /* 선은 칸마다 원문에 적힌 대로 긋습니다(structured-details.js의 borderStyle).
+     여기서 한결같이 그으면 서가 그림이 모눈종이가 됩니다. */
+  border: 0;
 }
 
-.source-criteria-table[data-picture="1"] tbody th {
+/* 그림은 상자에 담지 않습니다. 원문에서 그림을 둘러싼 테두리는 없습니다. */
+.source-table-scroll[data-picture="1"] {
+  border: 0;
+  background: transparent;
+}
+
+.source-criteria-table[data-picture="1"] > tbody > tr > th {
   background: transparent;
   font-weight: 400;
 }

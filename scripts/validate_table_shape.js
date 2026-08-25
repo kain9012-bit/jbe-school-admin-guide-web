@@ -98,8 +98,16 @@ for (let id = 1; id <= 19; id += 1) {
             );
           }
           // 그림이 아닌 표에 그림표를 붙이면 빈 열이 그대로 남습니다.
-          if (!blankColumns && !blankRows) {
+          // 빈 칸이 하나도 없으면 그림이 아닙니다(빈 열·행까지 있을 필요는
+          // 없습니다. 그림은 빈 칸이 여기저기 흩어져 있기도 합니다).
+          const cells = [table.headers || [], ...(table.rows || [])].flat();
+          if (!cells.some((cell) => cell && !String(cell.text || "").trim())) {
             problems.push(`${where}: 빈 칸이 없는데 그림형 표로 표시되어 있습니다.`);
+          }
+          // 그림은 칸마다 원문에 적힌 선을 그어야 합니다. 선이 없으면
+          // 화면이 한결같이 그어 모눈종이가 됩니다.
+          if (!cells.some((cell) => cell && cell.border)) {
+            problems.push(`${where}: 그림형 표인데 칸 테두리가 없습니다. read_hwpx_tables.py를 다시 돌리세요.`);
           }
           continue;
         }

@@ -462,6 +462,44 @@
   // 넓은 화면에서 표가 놓이는 자리는 780px쯤입니다(창 1280px 기준 782px).
   const AVAILABLE = 780;
 
+  // 칸마다 어느 쪽에 선을 긋는지가 한글파일에 그대로 적혀 있습니다
+  // (scripts/read_hwpx_tables.py가 네 글자로 적어 둡니다: 왼·오른·위·아래).
+  //
+  // 매뉴얼은 표로 그림을 그릴 때 이 선으로 모양을 만듭니다.
+  //   제1편 기록물 관리 TIP '서가배치'
+  //   굵은 선(1.0mm) = 서가 기둥, 얇은 선(0.12mm) = 선반, 없음 = 트인 쪽
+  //
+  // 이것을 읽지 않고 모든 칸에 똑같은 선을 그으면 서가 그림이 모눈종이가
+  // 됩니다. 실제로 그랬습니다.
+  const LINE = {
+    n: "0",
+    s: "1px solid var(--guide-line)",
+    S: "2px solid var(--guide-muted)",
+    d: "1px dashed var(--guide-line)",
+  };
+
+  // 원문 줄 높이입니다. 빈 대장 서식은 적어 넣을 자리가 곧 내용이라,
+  // 높이를 버리면 빈 줄이 종잇장처럼 납작해집니다(제12편 물품 관리 확인 대장).
+  // 한글 단위는 1/7200인치이므로 96dpi 화면에서는 75로 나눕니다.
+  function rowHeight(cells) {
+    const found = cells
+      .filter((cell) => (cell.rowSpan || 1) === 1 && cell.height > 0)
+      .map((cell) => cell.height);
+    if (!found.length) return "";
+    const px = Math.round(Math.min(...found) / 75);
+    return px > 8 ? ` style="height:${px}px"` : "";
+  }
+
+  function borderStyle(code) {
+    const said = String(code || "");
+    if (said.length !== 4) return "";
+    const side = (letter) => LINE[letter] || LINE.n;
+    return (
+      `border-left:${side(said[0])};border-right:${side(said[1])};` +
+      `border-top:${side(said[2])};border-bottom:${side(said[3])};`
+    );
+  }
+
   // 매뉴얼이 표로 '그림'을 그린 자리입니다(빌더의 drawnAsPicture가 표시합니다).
   // 서가 배치도, 시차출퇴근 개념도, 성과평가위원회 구성도, 빈 대장 서식처럼
   // 빈 칸이 곧 모양인 표입니다.
@@ -513,7 +551,7 @@
     const scrolls = needs > room;
     const widths = drawing ? base : fitWidths(base, grid, columnCount, scrolls ? needs : room);
     return `
-      <div class="source-table-scroll">
+      <div class="source-table-scroll" data-picture="${drawing ? 1 : 0}">
         <table class="source-criteria-table" style="--table-columns: ${columnCount}; --table-min: ${Math.round(
           needs
         )}px" data-picture="${drawing ? 1 : 0}" data-wide="${
@@ -528,7 +566,7 @@
             ${fillGaps(grid, columnCount)
               .map(
                 (cells, rowIndex) => `
-                  <tr>
+                  <tr${drawing ? rowHeight(cells) : ""}>
                     ${(() => {
                       // 몇 번째 열에 놓인 칸인지 적어 둡니다. 맨 왼쪽 칸만
                       // 세로선을 긋지 않는데, 이것을 ':first-child'로 가리면
@@ -540,10 +578,12 @@
                           const column = cell.column ?? at;
                           at = column + (cell.colSpan || 1);
                           const edge = column === 0 ? ' data-col="0"' : "";
+                          // 그림형 표는 칸마다 원문에 적힌 선을 그대로 긋습니다.
+                          const drawn = drawing ? ` style="${borderStyle(cell.border)}"` : "";
                           if (cell.filler) {
                             return `<td${
                               cell.colSpan > 1 ? ` colspan="${cell.colSpan}"` : ""
-                            }${edge}></td>`;
+                            }${edge}${drawn}></td>`;
                           }
                           // 원문에서 비어 있는 칸은 비워 둡니다.
                           const lines = bodyLines(unwrap(cell.text));
@@ -557,6 +597,11 @@
                             ? cellMarkup(lines, cell.tables, (room * share) / 100 - 24)
                             : "";
                           const span = spanAttributes(cell);
+                          // 그림형 표에는 머리글 칸이 없습니다. 원문이 표로
+                          // 그린 그림이라 첫 줄·첫 열이 이름칸이 아닙니다.
+                          if (drawing) {
+                            return `<td${span}${edge}${drawn}>${content}</td>`;
+                          }
                           if (rowIndex === 0) {
                             return `<th scope="col"${span}${edge}>${content}</th>`;
                           }

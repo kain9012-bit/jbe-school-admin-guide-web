@@ -45,6 +45,57 @@ def local_name(tag: str) -> str:
     return tag.rsplit("}", 1)[-1]
 
 
+# 칸마다 어느 쪽에 선을 긋는지가 한글파일에 그대로 적혀 있습니다.
+#
+# 매뉴얼은 표로 그림을 그릴 때 이 선으로 모양을 만듭니다.
+#
+#   제1편 기록물 관리 TIP '서가배치'
+#   굵은 선(1.0mm) = 서가 기둥, 얇은 선(0.12mm) = 선반, NONE = 트인 쪽
+#
+# 이것을 읽지 않고 모든 칸에 똑같은 선을 그으면, 서가 그림이 스물일곱 열짜리
+# 모눈종이가 됩니다. 실제로 그랬습니다.
+#
+# 칸마다 네 쪽을 한 글자씩 적습니다(왼·오른·위·아래).
+#   n 없음   s 얇은 실선   S 굵은 실선(0.4mm 이상)   d 점선
+LINE_NONE = "n"
+
+
+def line_code(kind: str | None, width: str | None) -> str:
+    """선 하나를 한 글자로 줄입니다."""
+    name = (kind or "NONE").upper()
+    if name in ("NONE", ""):
+        return LINE_NONE
+    if "DASH" in name or "DOT" in name:
+        return "d"
+    try:
+        millimetres = float(str(width or "0").replace("mm", "").strip())
+    except ValueError:
+        millimetres = 0.1
+    return "S" if millimetres >= 0.4 else "s"
+
+
+def border_fills(archive: zipfile.ZipFile) -> dict[str, str]:
+    """머리말에 적힌 테두리 모음을 칸 테두리 글자로 바꿔 둡니다."""
+    try:
+        root = ET.fromstring(archive.read("Contents/header.xml"))
+    except KeyError:
+        return {}
+    found: dict[str, str] = {}
+    for element in root.iter():
+        if local_name(element.tag) != "borderFill":
+            continue
+        sides = []
+        for side in ("leftBorder", "rightBorder", "topBorder", "bottomBorder"):
+            border = next((c for c in element if local_name(c.tag) == side), None)
+            sides.append(
+                line_code(border.get("type"), border.get("width"))
+                if border is not None
+                else LINE_NONE
+            )
+        found[element.get("id")] = "".join(sides)
+    return found
+
+
 # 한컴이 함초롬 글꼴의 개인용 영역(PUA)에 넣어 둔 기호입니다. 유니코드에 없는
 # 자리라 그대로 두면 화면에 네모로 보입니다. 원문 PDF에서 그 자리에 무엇이
 # 찍혀 있는지 확인해 바꿔 답니다. build_chapters_from_hwpx.mjs의 HNC_SYMBOL과
@@ -144,7 +195,7 @@ def cells_of(table: ET.Element):
         yield from cells_of(child)
 
 
-def read_table(table: ET.Element) -> dict:
+def read_table(table: ET.Element, fills: dict[str, str]) -> dict:
     cells = []
     for cell in cells_of(table):
         address = next((node for node in cell if local_name(node.tag) == "cellAddr"), None)
@@ -161,7 +212,13 @@ def read_table(table: ET.Element) -> dict:
                 "colSpan": int(span.get("colSpan", "1")) if span is not None else 1,
                 "rowSpan": int(span.get("rowSpan", "1")) if span is not None else 1,
                 "width": int(size.get("width", "0")) if size is not None else 0,
+                # 줄 높이도 읽습니다. 빈 대장 서식은 적어 넣을 자리가 곧
+                # 내용이라, 높이를 버리면 줄이 종잇장처럼 납작해집니다.
+                "height": int(size.get("height", "0")) if size is not None else 0,
                 "text": cell_text(cell),
+                # 이 칸의 네 쪽 테두리입니다. 매뉴얼이 표로 그린 그림은
+                # 이 선이 곧 모양입니다.
+                "border": fills.get(cell.get("borderFillIDRef"), ""),
             }
         )
     if not cells:
@@ -198,6 +255,7 @@ def tables_of(path: Path) -> list[dict]:
             (name for name in archive.namelist() if SECTION_RE.match(name)),
             key=lambda name: int(SECTION_RE.match(name).group(1)),
         )
+        fills = border_fills(archive)
         found = []
         for name in names:
             root = ET.fromstring(archive.read(name))
@@ -209,7 +267,7 @@ def tables_of(path: Path) -> list[dict]:
             ]
             index_of = {id(element): len(found) + at for at, element in enumerate(here)}
             for element in here:
-                grid = read_table(element)
+                grid = read_table(element, fills)
                 outer, cell = enclosing(parents, element)
                 if outer is not None and cell is not None and id(outer) in index_of:
                     address = next(

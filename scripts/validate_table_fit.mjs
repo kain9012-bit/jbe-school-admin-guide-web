@@ -254,7 +254,11 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
         // 카드 한 장에 열세 줄이 들어갔습니다(제8편 '촉탁직 노동자 (재)고용').
         // 이제 한글파일의 칸 주소와 열 너비를 그대로 가져오므로 원문 자리에
         // 원문 그대로 그립니다. 화살표 칸이 있는 것은 잘못이 아닙니다.
-        if (table.openSides) {
+        // 그림형 표는 트인 쪽이 곧 모양입니다(서가 기둥 사이, 흐름도의
+        // 화살표 자리). 칸마다 원문에 적힌 선을 그대로 긋고 있으므로,
+        // 여기서 '선이 빠졌다'고 보면 안 됩니다. 원문 선을 제대로 읽었는지는
+        // validate_table_shape.js가 자료 쪽에서 봅니다.
+        if (table.openSides && !table.picture) {
           problems.push(
             `${where}: 세로선이 빠진 칸이 ${table.openSides}개 있습니다. 표 한가운데 선이 끊깁니다.`
           );
