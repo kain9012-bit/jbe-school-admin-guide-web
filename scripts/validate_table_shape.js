@@ -27,7 +27,67 @@ const root = path.resolve(__dirname, "..");
 const assets = path.join(root, "docs", "assets");
 
 // 절차를 잇는 화살표만 든 칸입니다(build_chapters_from_hwpx.mjs와 같은 기준).
-const ARROW_ONLY = /^[\s⇨⇦⇩⇧⇒⇐→←↓↑▶►▼]+$/u;
+const ARROW_ONLY = /^[\s⇨⇦⇩⇧⇒⇐→←↑↓➡➔➜⟹≫▼▶►]+$/u;
+
+// 세로줄이 통째로 화살표인 자리로 갈린 표인지 셉니다.
+// build_chapters_from_hwpx.mjs의 stepChain과 같은 규칙입니다. 규칙이 다르면
+// 있지도 않은 잘못을 알립니다.
+function chainOf(table) {
+  const rows = [table.headers || [], ...(table.rows || [])];
+  if (!rows.length) return null;
+  let columns = 0;
+  for (const row of rows) {
+    for (const cell of row) {
+      columns = Math.max(columns, (cell.column ?? 0) + (cell.colSpan || 1));
+    }
+  }
+  if (columns < 3) return null;
+  const cover = Array.from({ length: rows.length }, () => new Array(columns).fill(null));
+  rows.forEach((row, at) => {
+    for (const cell of row) {
+      const from = cell.column ?? 0;
+      for (let down = 0; down < (cell.rowSpan || 1); down += 1) {
+        for (let right = 0; right < (cell.colSpan || 1); right += 1) {
+          if (cover[at + down]) cover[at + down][from + right] = cell;
+        }
+      }
+    }
+  });
+  const isLink = [];
+  for (let column = 0; column < columns; column += 1) {
+    let some = false;
+    let all = true;
+    for (let at = 0; at < rows.length; at += 1) {
+      const cell = cover[at][column];
+      if (!cell) continue;
+      const text = String(cell.text || "").trim();
+      if (!text) continue;
+      some = true;
+      if (!ARROW_ONLY.test(text) || (cell.colSpan || 1) > 1) all = false;
+    }
+    isLink.push(some && all);
+  }
+  if (!isLink.some(Boolean)) return null;
+  const steps = [];
+  let from = -1;
+  for (let column = 0; column <= columns; column += 1) {
+    if (column < columns && !isLink[column]) {
+      if (from < 0) from = column;
+      continue;
+    }
+    if (from >= 0) steps.push([from, column - 1]);
+    from = -1;
+  }
+  if (steps.length < 2) return null;
+  for (let at = 1; at < steps.length; at += 1) {
+    let between = false;
+    for (let column = steps[at - 1][1] + 1; column < steps[at][0]; column += 1) {
+      if (isLink[column]) between = true;
+    }
+    if (!between) return null;
+  }
+  return { steps };
+}
 
 const problems = [];
 let checked = 0;
@@ -92,25 +152,26 @@ for (let id = 1; id <= 19; id += 1) {
         // 서가 배치도, 시차출퇴근 개념도, 성과평가위원회 구성도, 빈 대장 서식.
         // 여기서는 빈 열·행이 있는 것이 맞습니다. 대신 원문 자리를 그대로
         // 두었는지(열 수와 원문 열 너비 수가 같은지)를 봅니다.
-        // 한 줄기 절차로 그리는 표는 원문이 정말 그 모양일 때만 그렇게 그립니다.
+        // 절차로 그리는 표는 원문이 정말 그 모양일 때만 그렇게 그립니다.
         // 원문에 없는 모양을 지어내면 원문의 자리를 잃습니다. 예전에 절차도를
         // 카드로 다시 그렸다가 가지가 갈라지는 그림을 펼 수 없어 카드 한 장에
         // 열세 줄이 들어갔습니다(제8편 '촉탁직 노동자 (재)고용').
+        //
+        // 빌더가 적어 둔 단계 구간(flow.steps)이 정말 화살표 열로 갈린
+        // 자리인지 여기서 다시 셉니다.
         if (table.flow) {
           flows += 1;
-          const cells = table.headers || [];
-          const wrong =
-            (table.rows || []).length > 0 ||
-            cells.length < 3 ||
-            cells.some((cell, at) => {
-              const said = String((cell || {}).text || "").trim();
-              const arrow = ARROW_ONLY.test(said);
-              return at % 2 === 0 ? !said || arrow : !arrow;
-            });
-          if (wrong) {
+          const said = chainOf(table);
+          const kept = JSON.stringify((table.flow.steps || []).map((one) => [one[0], one[1]]));
+          if (!said) {
             problems.push(
-              `${where}: 원문이 한 줄기 절차가 아닌데 절차로 그리고 있습니다. ` +
-                "상자와 화살표가 번갈아 선 한 줄짜리 표만 이어서 그립니다."
+              `${where}: 원문이 절차가 아닌데 절차로 그리고 있습니다. ` +
+                "세로줄이 통째로 화살표인 자리로 갈린 표만 이어서 그립니다."
+            );
+          } else if (JSON.stringify(said.steps) !== kept) {
+            problems.push(
+              `${where}: 적어 둔 단계 자리가 원문과 다릅니다 ` +
+                `(원문 ${JSON.stringify(said.steps)}, 적어 둔 것 ${kept}).`
             );
           }
         }
@@ -189,7 +250,9 @@ if (fs.existsSync(gridFile)) {
               .map((cell) => (cell || {}).text || "")
               .join("")
           );
-          if (key && !onScreen.has(key)) onScreen.set(key, { table, section, block });
+          if (!key) continue;
+          if (!onScreen.has(key)) onScreen.set(key, { table, section, block, all: [] });
+          onScreen.get(key).all.push(table);
         }
       }
     }
@@ -203,9 +266,18 @@ if (fs.existsSync(gridFile)) {
       const key = bare(grid.cells.map((cell) => cell.text).join(""));
       const found = onScreen.get(key);
       if (!found) continue;
-      const drawn = [found.table.headers || [], ...(found.table.rows || [])]
-        .flat()
-        .filter((cell) => cell && ARROW_ONLY.test(String(cell.text || ""))).length;
+      // 글자만 견주면 바깥 상자와 안쪽 표가 같은 것으로 보입니다(화살표는
+      // 견줄 때 빼기 때문입니다). 같은 글자를 가진 표 가운데 화살표가 가장
+      // 많이 살아 있는 것을 봅니다. 안쪽 표에 화살표가 그대로 있는데 바깥
+      // 상자만 보고 '다 없어졌다'고 알린 적이 있습니다.
+      const drawn = Math.max(
+        ...(onScreen.get(key).all || [found.table]).map(
+          (one) =>
+            [one.headers || [], ...(one.rows || [])]
+              .flat()
+              .filter((cell) => cell && ARROW_ONLY.test(String(cell.text || ""))).length
+        )
+      );
       if (drawn >= arrows) continue;
       problems.push(
         `제${String(id).padStart(2, "0")}편 ${found.section.title} [${found.block.title}]: ` +

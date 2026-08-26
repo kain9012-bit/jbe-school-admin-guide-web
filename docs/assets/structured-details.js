@@ -500,54 +500,97 @@
     return Boolean(said) && ARROW_ONLY.test(said);
   };
 
-  // 한 줄로 늘어선 절차입니다. 원문이 상자와 화살표를 번갈아 세워 둔 자리를
-  // 빌더가 flow로 표시해 둡니다(build_chapters_from_hwpx.mjs의 stepChain).
+  // 가로로 늘어선 절차입니다. 빌더가 단계의 열 구간을 적어 둡니다
+  // (build_chapters_from_hwpx.mjs의 stepChain → flow.steps).
   //
-  //   제1편 신원조사 'e하나로민원 권한신청 및 이용'
-  //   원문 : [1. 서약 서명]⇨[2. 사용 신청]⇨[3. 열람 권한 신청]⇨
-  //          [4. 권한 승인]⇨[5. 정보열람]⇨[6. 결과 확인]
+  //   제1편 신원조사 (1행 6열)  [1. 서약 서명]⇨[2. 사용 신청]⇨[3. 열람 권한 신청]⇨
+  //   제2편 제증명   (4행 7열)  [교육기관 방문]➡[발급 절차 …여러 줄…]➡[민원서류 수령]
   //
-  // 격자로 그리면 마지막 화살표가 허공에 걸리고, 두 표가 끊겨 한 줄기 절차로
-  // 보이지 않습니다. 원문이 이어 둔 대로 이어서 그립니다. 상자도 화살표도
-  // 차례도 원문 그대로이고, 다만 화면 폭에 맞춰 줄만 바뀝니다.
+  // 격자로 그리면 마지막 화살표가 허공에 걸리고, 표가 여럿으로 나뉜 절차는
+  // 끊겨 한 줄기로 보이지 않습니다. 원문이 이어 둔 대로 이어서 그립니다.
+  // 상자도 화살표도 차례도 원문 그대로이고, 화면 폭에 맞춰 줄만 바뀝니다.
+
+  // 단계 하나가 차지한 열 구간만 잘라 작은 격자를 만듭니다.
+  // 가운데 단계가 여러 줄인 절차가 있어(제2편 '발급 절차'), 단계 하나가
+  // 글 한 조각이 아니라 작은 표일 수 있습니다.
+  function stepGrid(rows, from, to) {
+    const kept = [];
+    for (const row of rows) {
+      const cells = row
+        .filter((cell) => (cell.column ?? 0) >= from && (cell.column ?? 0) <= to)
+        .map((cell) => ({ ...cell, column: (cell.column ?? 0) - from }));
+      kept.push(cells);
+    }
+    // 이 단계에 아무것도 없는 줄은 뺍니다. 옆 단계가 세로로 걸쳐 있어
+    // 생긴 빈 줄입니다.
+    const alive = kept.map((cells) => cells.length > 0);
+    const rowsLeft = alive.filter(Boolean).length;
+    return kept
+      .filter((cells, at) => alive[at])
+      .map((cells) =>
+        cells.map((cell) => ({
+          ...cell,
+          rowSpan: Math.min(cell.rowSpan || 1, rowsLeft),
+        }))
+      );
+  }
+
   function flowMarkup(tables) {
-    const steps = [];
+    const cards = [];
+    let link = "⇨";
     for (const table of tables) {
-      for (const cell of table.headers || []) {
-        const said = String(cell.text || "").trim();
-        if (!said) continue;
-        // 화살표는 앞 상자와 뒤 상자를 잇는 표시일 뿐입니다. 상자 사이에
-        // 한 번만 세우면 되므로 여기서는 상자만 모읍니다.
-        if (arrowOnly(said)) continue;
-        steps.push({ text: said, width: (table.widths || [])[cell.column] || 0 });
+      const chain = table.flow;
+      if (!chain || !Array.isArray(chain.steps)) continue;
+      if (chain.link) link = chain.link;
+      const rows = [table.headers || [], ...(table.rows || [])];
+      for (const [from, to] of chain.steps) {
+        const grid = stepGrid(rows, from, to);
+        if (!grid.length) continue;
+        const width = (table.widths || [])
+          .slice(from, to + 1)
+          .reduce((sum, value) => sum + Number(value || 0), 0);
+        cards.push({ grid, width });
       }
     }
-    if (steps.length < 2) return "";
-    // 잇는 표시는 원문에 쓰인 것을 그대로 씁니다.
-    const link =
-      [...tables]
-        .flatMap((table) => table.headers || [])
-        .map((cell) => String(cell.text || "").trim())
-        .find((said) => arrowOnly(said)) || "⇨";
+    if (cards.length < 2) return "";
+    // 상자 폭은 원문 열 너비를 바탕으로 하되, 너무 좁아지는 단계는 조금
+    // 넓혀 줍니다. 원문에서 10%짜리 열은 종이에서는 읽히지만 화면에서는
+    // 글자가 한 자씩 끊깁니다.
+    const LEAST_SHARE = 15;
+    const raw = cards.map((card) => card.width || 100 / cards.length);
+    const evened = raw.map((value) => Math.max(LEAST_SHARE, (value / raw.reduce((sum, one) => sum + one, 0)) * 100));
+    const total = evened.reduce((sum, one) => sum + one, 0);
+    // 폭을 100%로 꽉 채우면 안 됩니다. 상자 사이 틈만큼 넘쳐서, 브라우저가
+    // 줄이는 대신 마지막 단계를 다음 줄로 내려 버립니다(줄 나눔이 줄이기보다
+    // 먼저 일어납니다). 틈이 들어갈 자리를 남겨 둡니다.
+    const ROOM_FOR_GAPS = 96;
+    const shares = evened.map((value) => (value / total) * ROOM_FOR_GAPS);
+    // 잇는 표시가 차지하는 자리를 빼고 남은 폭을 나눠 가집니다.
+    const room = AVAILABLE - cards.length * 24;
     // 잇는 표시는 뒤따르는 상자와 한 덩어리로 묶습니다. 따로 두면 줄이 바뀌는
     // 자리에서 화살표만 줄 끝에 남아 허공을 가리킵니다.
     // 첫 상자 앞에도 자리는 두되 표시는 감춥니다. 그래야 줄마다 상자의
     // 왼쪽 끝이 나란히 섭니다.
     return `
-      <div class="source-flow" data-source="chain" data-steps="${steps.length}">
-        ${steps
-          .map(
-            (step, at) => `
-              <span class="source-flow-item">
-                <span class="source-flow-link"${at ? "" : ' data-first="1"'} aria-hidden="true">${escapeHtml(
-                  link
-                )}</span>
-                <span class="source-flow-step"${
-                  step.width ? ` style="--flow-width: ${Number(step.width).toFixed(1)}%"` : ""
-                }>${cellMarkup(bodyLines(unwrap(step.text)))}</span>
+      <div class="source-flow" data-source="chain" data-steps="${cards.length}">
+        ${cards
+          .map((card, at) => {
+            const only = card.grid.length === 1 && card.grid[0].length === 1;
+            const mine = (room * shares[at]) / 100 - 8;
+            // 단계가 작은 표면 표로 그립니다. 상자를 또 두르면 테두리가
+            // 두 겹이 되므로 이때는 상자 꾸밈을 뺍니다.
+            const inside = only
+              ? cellMarkup(bodyLines(unwrap(card.grid[0][0].text)))
+              : spannedTableMarkup("", card.grid[0], card.grid.slice(1), null, mine);
+            return `
+              <span class="source-flow-item" style="--flow-width: ${shares[at].toFixed(1)}%">
+                <span class="source-flow-link"${
+                  at ? "" : ' data-first="1"'
+                } aria-hidden="true">${escapeHtml(link)}</span>
+                <span class="source-flow-step"${only ? "" : ' data-table="1"'}>${inside}</span>
               </span>
-            `
-          )
+            `;
+          })
           .join("")}
       </div>
     `;
@@ -903,11 +946,18 @@
       // 원문에서도 앞 표의 마지막 화살표가 다음 표의 첫 상자를 가리킵니다.
       if (table.flow) {
         const chain = [table];
+        // 바로 붙어 있는 표만 잇습니다. 사이에 글줄이 하나라도 있으면 서로
+        // 다른 절차입니다. 자리를 안 보고 이었더니 제8편 '채용 구분'에서
+        // 신규채용 절차와 결원보충 승인절차가 여덟 칸짜리 한 줄로 붙고,
+        // 그 사이에 있어야 할 소제목이 뒤로 밀렸습니다.
+        let after = (table.lineStart ?? 0) + (table.lineCount ?? 0);
         for (let next = owner + 1; next < tables.length; next += 1) {
           if (!tables[next].flow) break;
           if (drawn.has(next)) break;
+          if ((tables[next].lineStart ?? -1) !== after) break;
           drawn.add(next);
           chain.push(tables[next]);
+          after = (tables[next].lineStart ?? 0) + (tables[next].lineCount ?? 0);
         }
         const shown = flowMarkup(chain);
         if (shown) {

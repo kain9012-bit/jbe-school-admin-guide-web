@@ -727,7 +727,9 @@
   display: flex;
   align-items: stretch;
   flex: 1 1 var(--flow-width, 28%);
-  min-width: 17rem;
+  /* 줄이 바뀌지 않게 넉넉히 작게 둡니다. 여기를 크게 잡으면 좁은 단계가
+     줄지 못해, 세 단계짜리 절차의 마지막 단계가 홀로 다음 줄로 내려갑니다. */
+  min-width: 8rem;
   gap: 0.4rem;
 }
 
@@ -778,4 +780,17 @@
     flex: 1 1 100%;
     min-width: 0;
   }
+}
+
+/* 단계 하나가 작은 표인 자리입니다(제2편 '발급 절차'의 가운데 단계).
+   상자를 또 두르면 테두리가 두 겹이 되므로 상자 꾸밈을 뺍니다. */
+.source-flow-step[data-table="1"] {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.source-flow-step[data-table="1"] .source-table-scroll {
+  width: 100%;
+  border-radius: 0.8rem;
 }
