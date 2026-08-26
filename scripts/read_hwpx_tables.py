@@ -229,12 +229,25 @@ def arrows_in(cell: ET.Element) -> str:
 
 
 def cell_text(cell: ET.Element) -> str:
-    """칸 안의 글을 문단 차례대로 모읍니다. 문단이 바뀌면 줄을 바꿉니다."""
+    """칸 안의 글을 문단 차례대로 모읍니다. 문단이 바뀌면 줄을 바꿉니다.
+
+    문단 앞의 공백은 지우지 않고 한 칸으로 줄여 남깁니다. 매뉴얼은 한 문장이
+    길어 다음 줄로 넘길 때 그 줄만 한두 칸 들여 씁니다. 그 들여쓰기가 '앞줄에
+    이어지는 줄'이라는 표시입니다. 지워 버리면 이어지는 줄과 새 항목을 가릴
+    길이 없어, 화면 쪽이 둘 다 앞줄에 붙여 한 덩어리로 만들어 버립니다.
+
+        ◦발신 명의 표시의 마지막 글자가 공인의
+          가운데 오도록 날인            ← 앞줄에 이어지는 줄(들여씀)
+
+        ｢병역법｣ … 훈련에 참가할 때
+        공무에 관하여 국회, 법원, … 소환될 때   ← 저마다 따로 선 사유(안 들여씀)
+    """
     lines: list[str] = []
     for paragraph in paragraphs_of(cell):
-        line = re.sub(r"\s+", " ", unsymbol("".join(text_pieces(paragraph)))).strip()
+        raw = unsymbol("".join(text_pieces(paragraph)))
+        line = re.sub(r"\s+", " ", raw).strip()
         if line:
-            lines.append(line)
+            lines.append((" " if raw[:1].isspace() else "") + line)
     if not lines:
         # 글자가 없는 칸이라고 빈 칸이 아닙니다. 화살표가 그려져 있을 수 있습니다.
         return arrows_in(cell)

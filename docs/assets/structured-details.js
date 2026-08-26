@@ -112,6 +112,29 @@
       return `<span class="source-picture-row" style="--picture-count: ${names.length}">${shown}</span>`;
     });
 
+  // 칸 안의 줄은 원문에서 문단 하나하나입니다(한글파일의 hp:p).
+  // 문단이 바뀌면 화면에서도 줄을 바꿉니다.
+  //
+  //   제4편 휴가 '2. 공가 사유'
+  //   원문 : 사유 열한 가지가 저마다 한 문단
+  //   예전 : 열한 가지가 마침표도 없이 한 문단으로 이어 붙었습니다.
+  //
+  // 다만 한 문장이 길어 다음 줄로 넘긴 자리가 있습니다. 그 줄은 원문에서
+  // 한두 칸 들여 씌어 있습니다. 그것이 '앞줄에 이어지는 줄'이라는 표시입니다.
+  //
+  //   ◦발신 명의 표시의 마지막 글자가 공인의
+  //     가운데 오도록 날인          ← 들여쓴 줄이므로 앞줄에 잇습니다
+  //
+  // 들여쓰기는 한글파일에서 읽어 옵니다(scripts/read_hwpx_tables.py의 cell_text).
+  // 이것을 안 보고 '글머리표 없는 줄은 앞줄에 잇는다'로 두었더니, 저마다
+  // 따로 선 문단 1200여 개가 통째로 한 줄이 됐습니다.
+  //
+  // 글머리표로 시작하는 줄은 들여썼어도 딸린 항목이지 이어지는 줄이 아닙니다.
+  //   설계변경 등으로 … 증액된 공사(설계용역)계약 중
+  //    - 시설공사: 증액 1억원 이상      ← 들여썼지만 따로 선 항목
+  const CONTINUED = /^\s/;
+  const MARKED = /^\s*(?:[•‣▸▹▶▪□○◦※*]|[-–]\s)/;
+
   function logicalItems(lines) {
     const items = [];
     let afterPicture = false;
@@ -124,7 +147,8 @@
       const startsItem =
         picture ||
         afterPicture ||
-        /^(?:[•‣▸▹▶▪□○◦※*]|[-–]\s|\d+[.)]\s|[가-힣]\.\s)/.test(line);
+        !CONTINUED.test(String(rawLine)) ||
+        MARKED.test(String(rawLine));
       if (!items.length || startsItem) items.push(line);
       else items[items.length - 1] += ` ${line}`;
       afterPicture = picture;
