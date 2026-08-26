@@ -9,6 +9,13 @@
 //      같은 화면에서 어떤 항목은 '▸'로 시작하고 어떤 항목은 그냥 시작해
 //      서식이 들쭉날쭉했습니다.
 //
+//   3. 딸린 항목이 거느린 항목보다 안쪽에 선다
+//      TIP 상자에서 '▪ 파면과 해임의 차이점' 아래에 '▸파면: …'이 딸리는데,
+//      둘을 같은 단계로 두어 거느린 '▪'가 오히려 오른쪽에 섰습니다.
+//      여기서는 눈에 보이는 자리(글머리표의 왼쪽 끝)를 픽셀로 잽니다.
+//      단계 표(MARKER_LEVEL)만 견주면 표가 맞아도 기호 칸 너비 때문에
+//      뒤집혀 보이는 것을 놓칩니다.
+//
 // 사용법: node scripts/validate_source_presentation.mjs [--chapters 01,02]
 
 import path from "node:path";
@@ -66,10 +73,18 @@ const ARROW = /[▶⇒→➡]/;
 // 매뉴얼이 쓰는 글머리표입니다. 화면 쪽(MARKERS)과 같아야 합니다.
 const BULLET = /^([‣•▸▹▪□○◦※*]|[-–]\s|[▶])/;
 
+// 글머리표의 위계입니다. 바깥에서 안쪽 차례로 적습니다.
+// 이 차례는 한글파일에서 두 기호가 잇달아 나온 자리의 앞공백을 세어 정했고,
+// scripts/validate_marker_levels.py가 그 셈과 화면 쪽 표를 맞대어 봅니다.
+// 여기서는 화면에 그려진 자리가 정말 그 차례인지 픽셀로 잽니다.
+const MARKER_ORDER = ["•▶▪□○◦", "‣▸▹", "※*", "-–"];
+const depthOf = (marker) => MARKER_ORDER.findIndex((group) => group.includes(marker));
+
 const window = loadGuideData();
 const problems = [];
 let flowsChecked = 0;
 let blocksChecked = 0;
+let nestingChecked = 0;
 
 const browser = await chromium.launch({ channel: "chromium" });
 const page = await browser.newPage({ viewport: { width: 1280, height: 1000 } });
@@ -208,6 +223,42 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
           );
         }
       }
+
+      // 딸린 항목은 거느린 항목보다 안쪽에 서야 합니다.
+      // 단계 표가 아니라 눈에 보이는 자리(글머리표의 왼쪽 끝)를 잽니다.
+      //
+      // 한 목록 안에서만 견줍니다. TIP 상자는 저 혼자 안쪽으로 들어가 있어,
+      // 상자 안의 기호와 상자 밖의 기호를 맞대면 상자 여백까지 함께 재게 됩니다.
+      const lists = await page.evaluate(() => {
+        return [...document.querySelectorAll("#step-actions .semantic-summary-list")].map(
+          (list) => {
+            const found = {};
+            list.querySelectorAll(":scope > .semantic-summary-item").forEach((item) => {
+              const mark = item.querySelector(".semantic-summary-marker");
+              if (!mark) return;
+              const key = mark.textContent.trim();
+              const left = Math.round(mark.getBoundingClientRect().left);
+              if (found[key] === undefined || left < found[key]) found[key] = left;
+            });
+            return found;
+          }
+        );
+      });
+      for (const drawn of lists) {
+        const marks = Object.keys(drawn).filter((mark) => depthOf(mark) >= 0);
+        for (const outer of marks) {
+          for (const inner of marks) {
+            if (depthOf(inner) <= depthOf(outer)) continue;
+            nestingChecked += 1;
+            if (drawn[inner] > drawn[outer]) continue;
+            problems.push(
+              `제${chapterId}편 ${work.title}: '${outer}'에 딸린 '${inner}'가 더 바깥에 섭니다 ` +
+                `('${outer}' ${drawn[outer]}px, '${inner}' ${drawn[inner]}px). ` +
+                "딸린 항목이 거느린 항목보다 안쪽에 서야 위계가 읽힙니다."
+            );
+          }
+        }
+      }
     }
   }
 }
@@ -222,5 +273,6 @@ if (problems.length) {
 }
 console.log(
   `source presentation valid: 흐름도 ${flowsChecked}개 이어짐, ` +
-    `표가 든 항목 ${blocksChecked}개 글머리표 유지`
+    `표가 든 항목 ${blocksChecked}개 글머리표 유지, ` +
+    `글머리표 위아래 ${nestingChecked}짝 자리 확인`
 );
