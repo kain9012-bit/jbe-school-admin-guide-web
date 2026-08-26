@@ -793,4 +793,13 @@
 .source-flow-step[data-table="1"] .source-table-scroll {
   width: 100%;
   border-radius: 0.8rem;
+  /* 한 줄에 나란히 선 단계는 키가 같아야 합니다. 안 맞추면 글이 두 줄인
+     단계만 아래로 튀어나와, 절차가 층계처럼 보입니다.
+     상자(source-flow-item)는 이미 줄 높이만큼 늘어나 있으므로, 그 안의
+     표까지 늘려 주어야 상자 아래가 비지 않습니다. */
+  height: 100%;
+}
+
+.source-flow-step[data-table="1"] .source-criteria-table {
+  height: 100%;
 }

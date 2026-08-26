@@ -103,6 +103,7 @@
 | 셀병합이 풀리고 왼쪽 열이 넓다 | 한글파일 칸 주소(`hp:cellSpan`)와 열 너비(`hp:cellSz`)를 그대로 쓴다 | `validate_table_merges.mjs`, `validate_hwpx_cell_text.py` |
 | 화살표 자리로 비워 둔 열이 남는다 | 글이 든 칸은 '시작하는' 열·행만 채운다. 걸친 칸이 지나간다고 살리지 않는다 | `validate_table_shape.js` |
 | 원문 표를 맘대로 카드로 그린다 | 표는 원문 자리에 표로 그린다 | `validate_table_fit.mjs` |
+| 절차 단계 상자의 키가 제각각이다 | 한 줄에 나란히 선 단계는 키를 맞춘다. 눈에 보이는 상자를 재야 한다(칸은 이미 늘어나 있어 늘 같습니다) | `validate_card_heights.mjs` |
 | 절차인데 그냥 표로 그려 흐름이 안 보인다 | **세로줄이 통째로 화살표인 자리**가 단계의 경계다. 줄 수는 상관없다. 상자·화살표·차례는 원문 그대로, 줄만 화면 폭에 맞춘다 | `validate_table_shape.js`, `validate_table_fit.mjs` |
 | 원문 사진이 다 없어졌다 | 한글파일 `BinData`에서 그림을 꺼내 본문 자리에 그린다 | `validate_manual_pictures.mjs` |
 | 사진만 넣고 이름은 한 줄에 몰아 붙였다 | 원문은 안쪽 표라 사진 아래 칸이 그 사진의 이름이다. 사진마다 제 이름을 단다 | `validate_manual_pictures.mjs` |
