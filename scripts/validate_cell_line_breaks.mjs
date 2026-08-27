@@ -158,6 +158,12 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
             const mine = [...list.children];
             const oneLine = parseFloat(getComputedStyle(list).lineHeight) || 20;
             return {
+              // 아주 좁은 칸에는 기호를 세우지 않습니다. 기호와 사이 여백이
+              // 글자 두어 자 몫을 먹어, 남은 자리로는 한 글자도 못 놓고 칸
+              // 밖으로 넘칩니다(35px짜리 '직위 / 해제' 칸). 그런 칸은 짧은
+              // 이름표를 쌓아 둔 자리라 줄바꿈만으로 이미 갈립니다.
+              // 화면 쪽과 같은 기준을 씁니다(structured-details.js showCellMarks).
+              tooNarrow: list.clientWidth < oneLine * 3,
               count: mine.length,
               // 두 줄 넘게 늘어난 항목이 있는지 봅니다. 한 줄 키의 1.6배를
               // 넘으면 넘어간 줄이 있는 것으로 봅니다.
@@ -170,7 +176,9 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
               }).length,
             };
           });
-          const sinner = lists.find((list) => list.count > 1 && list.wrapped && list.bald);
+          const sinner = lists.find(
+            (list) => list.count > 1 && list.wrapped && list.bald && !list.tooNarrow
+          );
           return {
             text: cell.textContent,
             // 칸 안의 줄은 목록 항목 하나하나로 그려집니다.

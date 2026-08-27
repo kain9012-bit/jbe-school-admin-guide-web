@@ -211,10 +211,15 @@
 .source-criteria-table th,
 .source-criteria-table td {
   padding: 1.1rem 1.2rem;
-  /* 낱말 가운데를 끊지 않습니다. 자리가 모자라면 가로 스크롤로 넘깁니다.
-     break-word를 함께 두면 한글이 여전히 낱말 가운데에서 끊깁니다. */
+  /* 띄어쓴 낱말은 가운데를 끊지 않습니다(keep-all).
+     다만 띄어쓰기 없이 길게 이어진 토막은 접습니다(anywhere). 매뉴얼도
+     그렇게 적혀 있습니다 — 제7편 '대우공무원수당(지방공무원수당등에관한
+     규정제5조의2)'은 원문 79px 칸에서 다섯 줄로 접힙니다.
+     이것을 안 접으면 그 열이 통째로 넓어져 원문 비율이 무너집니다.
+     anywhere는 한 줄에 도저히 안 들어갈 때만 접으므로, 들어가는 낱말은
+     그대로 둡니다. */
   word-break: keep-all;
-  overflow-wrap: normal;
+  overflow-wrap: anywhere;
   border-top: 1px solid var(--guide-line);
   /* 세로선은 칸의 '왼쪽'에 긋습니다.
      오른쪽에 긋고 마지막 칸만 지우면, 세로로 여러 줄을 차지하는 칸이 있는 표에서
@@ -329,7 +334,9 @@
 
 .source-cell-list[data-wrapped="1"] > li {
   display: grid;
-  grid-template-columns: 1.1rem minmax(0, 1fr);
+  /* 기호 칸도 줄어들 수 있게 둡니다. 아주 좁은 칸(35px)에서 기호 칸을
+     고정해 두면 그 줄이 칸 밖으로 넘칩니다. */
+  grid-template-columns: minmax(0, 1.1rem) minmax(0, 1fr);
   gap: 0.4rem;
   align-items: start;
 }

@@ -179,11 +179,21 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
             // 한 칸이 목록으로 그려지기도 합니다. textContent로 통째로 읽으면
             // 항목이 붙어 하나의 긴 낱말처럼 보이므로, 실제 글자 조각마다 잽니다.
             // 보이지 않는 자리(U+200B)도 줄을 바꿀 수 있는 곳이라 함께 끊습니다.
+            //
+            // 한글·한자·가나도 글자마다 줄을 바꿀 수 있는 자리입니다.
+            // 매뉴얼도 그렇게 적혀 있습니다 — '대우공무원수당(지방공무원수당등에
+            // 관한규정제5조의2)'은 원문 79px 칸에서 다섯 줄로 접힙니다.
+            // 이것을 '끊으면 안 되는 낱말'로 보면 그 열이 통째로 넓어져,
+            // 내용이 든 열이 원문 80%에서 55%로 눌립니다.
+            const CJK =
+              /[\u1100-\u11FF\u2E80-\u303F\u3040-\u30FF\u3130-\u318F\u31F0-\u31FF\u3400-\u4DBF\u4E00-\u9FFF\uAC00-\uD7AF\uF900-\uFAFF]/g;
             const walker = document.createTreeWalker(cell, NodeFilter.SHOW_TEXT);
             const words = [];
             for (let node = walker.nextNode(); node; node = walker.nextNode()) {
-              for (const word of node.textContent.split(/[\s\u200B]+/)) {
-                if (word) words.push(word);
+              for (const piece of node.textContent.split(/[\s\u200B]+/)) {
+                for (const word of piece.split(CJK)) {
+                  if (word) words.push(word);
+                }
               }
             }
             if (!words.length) return false;

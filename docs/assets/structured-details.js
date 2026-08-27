@@ -246,14 +246,25 @@
   // 창 너비가 바뀌면 넘어가는 줄도 달라지므로 다시 잽니다.
   function showCellMarks(root) {
     const where = root && root.querySelectorAll ? root : document;
-    where.querySelectorAll(".source-cell-list").forEach((list) => {
+    const lists = [...where.querySelectorAll(".source-cell-list")];
+    // 먼저 기호를 모두 내립니다. 기호를 세운 채로 재면 기호가 밀어낸 만큼
+    // 글이 더 접혀, '접혔으니 기호가 필요하다'가 저 혼자 참이 됩니다.
+    lists.forEach((list) => list.removeAttribute("data-wrapped"));
+    const wrapped = lists.map((list) => {
       const items = [...list.children];
       const oneLine = parseFloat(getComputedStyle(list).lineHeight) || 20;
-      const wrapped =
+      // 아주 좁은 칸에는 기호를 세우지 않습니다. 기호와 사이 여백이 글자
+      // 두어 자 몫을 먹어, 남은 자리로는 한 글자도 못 놓고 칸 밖으로 넘칩니다
+      // (제7편 '신분변동 시 보수지급방법'의 35px짜리 '직위 / 해제' 칸).
+      // 그런 칸은 짧은 이름표를 쌓아 둔 자리라 줄바꿈만으로 이미 갈립니다.
+      if (list.clientWidth < oneLine * 3) return false;
+      return (
         items.length > 1 &&
-        items.some((item) => item.getBoundingClientRect().height > oneLine * 1.6);
-      if (wrapped) list.setAttribute("data-wrapped", "1");
-      else list.removeAttribute("data-wrapped");
+        items.some((item) => item.getBoundingClientRect().height > oneLine * 1.6)
+      );
+    });
+    lists.forEach((list, at) => {
+      if (wrapped[at]) list.setAttribute("data-wrapped", "1");
     });
   }
 
@@ -862,9 +873,36 @@
   // 너비를 잴 때도 같은 자리에서 끊어야 합니다. 띄어쓰기만 보고 재면
   // '징수관·재무관·물품관리관·채권관리관·…'이 끊을 수 없는 한 낱말로 잡혀,
   // 화면에서는 가운뎃점마다 줄이 바뀌는데도 표를 가로로 넘기게 만듭니다.
-  function breakableWords(value) {
+  // 한글·한자·가나는 글자마다 줄을 바꿀 수 있습니다. 매뉴얼도 그렇게 적혀
+  // 있습니다.
+  //
+  //   제7편 보수작업 '대우공무원수당(지방공무원수당등에관한규정제5조의2)'
+  //   원문 칸 너비 79px · 그 칸에서 다섯 줄로 접힙니다(hp:lineseg 5개).
+  //
+  // 이런 글자를 '끊으면 안 되는 낱말' 하나로 보면 그 열이 통째로 넓어지고,
+  // 원문에서 80%였던 내용 열이 55%로 눌립니다. 원문 너비가 있는 표 280개
+  // 가운데 167개가 그렇게 어긋나 있었습니다.
+  //
+  // 끊으면 안 되는 것은 로마자·숫자로 이어진 토막입니다('K-에듀파인', 금액,
+  // 서식 이름). 한글은 원문처럼 어디서든 접힙니다.
+  const CJK =
+    /[\u1100-\u11FF\u2E80-\u303F\u3040-\u30FF\u3130-\u318F\u31F0-\u31FF\u3400-\u4DBF\u4E00-\u9FFF\uAC00-\uD7AF\uF900-\uFAFF]/;
+
+  // 띄어쓰기로 나뉜 낱말입니다. '이 표를 제대로 보려면 가로로 몇 px 필요한가'를
+  // 셀 때 씁니다. 한글도 글자 수만큼 자리를 차지하므로 여기서는 쪼개지 않습니다.
+  // 쪼개면 스물두 열짜리 표가 '다 들어간다'고 나와 열마다 31px로 눌립니다
+  // (제7편 '신분변동 시 보수지급방법').
+  function spacedWords(value) {
     return unwrap(normalizeLine(value))
       .split(/[\s\u200B]+/)
+      .filter(Boolean);
+  }
+
+  // 접을 수 없는 토막입니다. '이 열이 이보다 좁으면 낱말이 끊긴다'를 셀 때
+  // 씁니다. 한글은 글자마다 접히므로 여기서는 쪼갭니다.
+  function breakableWords(value) {
+    return spacedWords(value)
+      .flatMap((word) => word.split(new RegExp(CJK.source, "g")))
       .filter(Boolean);
   }
 
@@ -890,7 +928,7 @@
     for (const row of grid) {
       for (const cell of row) {
         const span = cell.colSpan || 1;
-        const words = breakableWords(cell.text);
+        const words = spacedWords(cell.text);
         const most = words.reduce((top, word) => Math.max(top, visualLength(word)), 0) / span;
         for (let offset = 0; offset < span; offset += 1) {
           const column = cell.column + offset;
@@ -926,22 +964,38 @@
       Math.min(((value * letter + frame) / availablePx) * 100, 60)
     );
 
-    // 최소 몫은 반드시 지킵니다. 남는 자리만 원문 비율대로 나눠 줍니다.
-    // 이렇게 해야 어느 열도 자기 낱말보다 좁아지지 않습니다.
-    const floorTotal = floors.reduce((sum, value) => sum + value, 0);
-    if (floorTotal >= 100) {
+    // 원문 너비가 열 수와 맞지 않는 표가 있습니다(표 안에 표가 든 경우).
+    // 그럴 때는 고르게 나눈 값을 바탕으로 삼습니다. 없는 값을 쓰면 NaN이 됩니다.
+    const given = floors.map((_, index) =>
+      Number.isFinite(base[index]) && base[index] > 0 ? base[index] : 100 / columnCount
+    );
+    const givenTotal = given.reduce((sum, value) => sum + value, 0) || 1;
+    const share = given.map((value) => (value / givenTotal) * 100);
+
+    // 원문이 정해 둔 비율을 그대로 씁니다. 최소 몫에 못 미치는 열만 끌어올리고,
+    // 끌어올린 만큼을 여유 있는 열에서 비례로 덜어 옵니다.
+    //
+    // 예전에는 반대로 했습니다. 모든 열에 최소 몫을 먼저 떼어 주고 남는 자리만
+    // 원문 비율로 나눴습니다. 그러면 칸 여백(26px)까지 열마다 최소 몫으로
+    // 잡혀, 좁은 열이 실제보다 넓어지고 내용이 든 열이 그만큼 눌립니다.
+    //   제7편 보수작업 '지 급 요 령'  원문 80% → 화면 55%
+    const short = share.map((value, index) => Math.max(0, floors[index] - value));
+    const needed = short.reduce((sum, value) => sum + value, 0);
+    if (!needed) return share.map((value) => Number(value.toFixed(2)));
+
+    const slack = share.map((value, index) => Math.max(0, value - floors[index]));
+    const slackTotal = slack.reduce((sum, value) => sum + value, 0);
+    // 덜어 올 자리가 없으면 최소 몫끼리 비례로 나눕니다.
+    if (slackTotal <= 0) {
+      const floorTotal = floors.reduce((sum, value) => sum + value, 0) || 1;
       return floors.map((value) => Number(((value / floorTotal) * 100).toFixed(2)));
     }
 
-    // 원문 너비가 열 수와 맞지 않는 표가 있습니다(표 안에 표가 든 경우).
-    // 그럴 때는 고르게 나눈 값을 바탕으로 삼습니다. 없는 값을 쓰면 NaN이 됩니다.
-    const safeBase = floors.map((_, index) =>
-      Number.isFinite(base[index]) ? base[index] : 100 / floors.length
+    const take = Math.min(needed, slackTotal);
+    const widths = share.map(
+      (value, index) => value + (short[index] / needed) * take - (slack[index] / slackTotal) * take
     );
-    const baseTotal = safeBase.reduce((sum, value) => sum + value, 0) || 1;
-    const spare = 100 - floorTotal;
-    const widths = floors.map((value, index) => value + (safeBase[index] / baseTotal) * spare);
-    const total = widths.reduce((sum, value) => sum + value, 0);
+    const total = widths.reduce((sum, value) => sum + value, 0) || 1;
     return widths.map((value) => Number(((value / total) * 100).toFixed(2)));
   }
 
