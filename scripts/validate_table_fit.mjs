@@ -238,6 +238,10 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
             // 여기서 세지 않습니다.
             standalone: box.parentElement?.classList.contains("source-full-content") === true,
             paper: getComputedStyle(box).backgroundColor,
+            // 표 상자는 좁은 화면에서 가로로만 넘겨 봅니다. 세로로 넘치면
+            // 아래가 잘려 안 보이는 채로 세로 스크롤이 생깁니다.
+            clipped: box.scrollHeight > box.clientHeight + 2,
+            hidden: Math.round(box.scrollHeight - box.clientHeight),
             label: table.getAttribute("aria-label") || "",
           };
         });
@@ -295,6 +299,20 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
         // 바탕까지 함께 지워, 그림만 화면의 옅은 파란 바탕 위에 맨몸으로 떠서
         // 다른 표와 따로 놀았습니다(제4편 유연근무제 '시차 출·퇴근제 개념도').
         // 없는 것은 그림을 두른 '선'이지 그림을 받치는 '종이'가 아닙니다.
+        // 표 상자에 세로 스크롤이 생기면 안 됩니다.
+        //
+        // 절차 단계의 키를 맞추려고 상자에 height: 100% 를 두었더니, 그 상자가
+        // 가로 스크롤 상자(overflow-x: auto)라 못박은 키를 넘는 내용이 잘렸습니다.
+        // 못박힌 키는 줄 높이를 정할 때 제 내용을 세지도 않아, 저만 잘린 채
+        // 다른 단계 높이에 맞춰집니다(제8편 '결원보충 승인절차'의 첫 단계 —
+        // 안의 표는 255px인데 160px만 보였습니다).
+        // 늘리기만 하고 못박지는 않습니다(min-height).
+        if (table.clipped) {
+          problems.push(
+            `${where}: 표 상자에 세로 스크롤이 생겨 아래가 ${table.hidden}px 잘립니다. ` +
+              "표는 가로로만 넘겨 봅니다."
+          );
+        }
         if (table.standalone && CLEAR.test(table.paper)) {
           problems.push(
             `${where}: 본문에 홀로 놓인 표인데 상자 바탕이 없습니다(${table.paper}). ` +
