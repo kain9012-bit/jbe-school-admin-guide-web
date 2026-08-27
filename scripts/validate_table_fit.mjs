@@ -27,6 +27,9 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 
+// 바탕이 없다는 뜻입니다. 투명하면 화면 바탕이 그대로 비칩니다.
+const CLEAR = /^(transparent|rgba\([^)]*,\s*0\s*\))$/;
+
 const require = createRequire(import.meta.url);
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const { loadGuideData } = require(path.join(root, "scripts/lib/load_guide_data.js"));
@@ -220,6 +223,11 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
             cellCount: cells.length,
             drawnAsPicture,
             openSides,
+            // 본문에 홀로 놓인 표인지, 그 상자의 바탕이 무엇인지 봅니다.
+            // 칸 안이나 TIP 상자 안에 든 표는 이미 제 바탕이 있는 자리라
+            // 여기서 세지 않습니다.
+            standalone: box.parentElement?.classList.contains("source-full-content") === true,
+            paper: getComputedStyle(box).backgroundColor,
             label: table.getAttribute("aria-label") || "",
           };
         });
@@ -269,6 +277,18 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
         if (table.openSides && !table.picture) {
           problems.push(
             `${where}: 세로선이 빠진 칸이 ${table.openSides}개 있습니다. 표 한가운데 선이 끊깁니다.`
+          );
+        }
+        // 본문에 홀로 놓인 표는 종류를 가리지 않고 흰 종이 위에 섭니다.
+        //
+        // 그림형 표는 '원문에 그림을 두른 선이 없다'는 이유로 테두리를 지웠는데
+        // 바탕까지 함께 지워, 그림만 화면의 옅은 파란 바탕 위에 맨몸으로 떠서
+        // 다른 표와 따로 놀았습니다(제4편 유연근무제 '시차 출·퇴근제 개념도').
+        // 없는 것은 그림을 두른 '선'이지 그림을 받치는 '종이'가 아닙니다.
+        if (table.standalone && CLEAR.test(table.paper)) {
+          problems.push(
+            `${where}: 본문에 홀로 놓인 표인데 상자 바탕이 없습니다(${table.paper}). ` +
+              "화면 바탕이 그대로 비쳐 다른 표와 따로 놉니다."
           );
         }
       }

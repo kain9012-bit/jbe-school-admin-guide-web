@@ -705,10 +705,25 @@
   border: 0;
 }
 
-/* 그림은 상자에 담지 않습니다. 원문에서 그림을 둘러싼 테두리는 없습니다. */
+/* 그림에는 테두리를 두르지 않습니다. 원문에서 그림을 둘러싼 선은 없습니다.
+   선을 그으면 그림이 제 테두리와 겹쳐 두 겹으로 보입니다. */
 .source-table-scroll[data-picture="1"] {
   border: 0;
   background: transparent;
+}
+
+/* 다만 본문에 홀로 놓인 그림은 흰 바탕 위에 놓습니다.
+   테두리가 없다고 바탕까지 지웠더니, 그림만 화면의 옅은 파란 바탕 위에
+   맨몸으로 떠서 다른 표와 따로 놀았습니다(제4편 유연근무제 '시차 출·퇴근제
+   개념도'). 매뉴얼에서도 그림은 흰 종이 위에 그려져 있습니다. 없는 것은
+   그림을 두른 '선'이지 그림을 받치는 '종이'가 아닙니다.
+
+   칸 안이나 TIP 상자 안에 든 그림은 그대로 둡니다. 이미 제 바탕을 가진
+   자리에 흰 상자를 또 얹으면 상자가 두 겹으로 보입니다. */
+.source-full-content > .source-table-scroll[data-picture="1"] {
+  background: #fff;
+  border-radius: 0.8rem;
+  padding: 0.8rem;
 }
 
 .source-criteria-table[data-picture="1"] > tbody > tr > th {
