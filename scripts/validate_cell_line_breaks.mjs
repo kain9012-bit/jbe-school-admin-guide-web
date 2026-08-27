@@ -16,6 +16,15 @@
 // 앞줄에 이어지는 줄은 원문에서 한두 칸 들여 씌어 있습니다. 그 줄만 앞줄에
 // 붙입니다. 자료에도 그 들여쓰기가 그대로 실려 있습니다.
 //
+// 줄을 바꿔 놓는 것만으로는 모자랍니다. 항목 하나가 두세 줄로 넘어가면
+// 넘어간 줄과 다음 항목의 첫 줄이 같은 자리에서 시작해, 어디서 한 항목이
+// 끝나는지 안 보입니다. 그래서 두 번째로,
+//
+//   여러 줄로 넘어가는 항목이 있는 칸은 항목마다 앞에 기호가 선다
+//
+// 를 함께 봅니다. 원문에 기호가 있으면 그 기호를, 없으면 가운데점(·)을
+// 찍습니다. 짧은 말만 든 칸은 줄바꿈만으로 이미 갈리므로 세지 않습니다.
+//
 // 사용법: node scripts/validate_cell_line_breaks.mjs [--chapters 01,02]
 
 import path from "node:path";
@@ -109,6 +118,7 @@ function countableCells(table, into) {
 
 const window = loadGuideData();
 const problems = [];
+const bald = new Set();
 let checked = 0;
 
 const browser = await chromium.launch({ channel: "chromium" });
@@ -140,15 +150,53 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
       await page.goto(address, { waitUntil: "load" });
       await page.waitForTimeout(220);
       const found = await page.evaluate(() =>
-        [...document.querySelectorAll("#step-actions td, #step-actions th")].map((cell) => ({
-          text: cell.textContent,
-          // 칸 안의 줄은 목록 항목 하나하나로 그려집니다.
-          lines: cell.querySelectorAll(":scope > ul > li").length || 1,
-        }))
+        [...document.querySelectorAll("#step-actions td, #step-actions th")].map((cell) => {
+          const items = [...cell.querySelectorAll(":scope > ul > li")];
+          // 기호를 세울지는 목록 하나하나마다 정합니다. 한 칸에 목록이 둘
+          // 들어가기도 하므로(표 앞뒤에 붙은 글) 여기서도 목록 단위로 봅니다.
+          const lists = [...cell.querySelectorAll(":scope > ul")].map((list) => {
+            const mine = [...list.children];
+            const oneLine = parseFloat(getComputedStyle(list).lineHeight) || 20;
+            return {
+              count: mine.length,
+              // 두 줄 넘게 늘어난 항목이 있는지 봅니다. 한 줄 키의 1.6배를
+              // 넘으면 넘어간 줄이 있는 것으로 봅니다.
+              wrapped: mine.some((item) => item.getBoundingClientRect().height > oneLine * 1.6),
+              // 눈에 보이는 기호만 셉니다. 자리에 담겨 있어도 서식이 감추면
+              // 읽는 사람에게는 없는 것과 같습니다.
+              bald: mine.filter((item) => {
+                const mark = item.querySelector(".source-cell-mark");
+                return !mark || !mark.getBoundingClientRect().width;
+              }).length,
+            };
+          });
+          const sinner = lists.find((list) => list.count > 1 && list.wrapped && list.bald);
+          return {
+            text: cell.textContent,
+            // 칸 안의 줄은 목록 항목 하나하나로 그려집니다.
+            lines: items.length || 1,
+            wrapped: Boolean(sinner),
+            bald: sinner ? sinner.bald : 0,
+            among: sinner ? sinner.count : 0,
+          };
+        })
       );
       for (const cell of found) {
         const key = bare(cell.text);
         drawn.set(key, Math.max(drawn.get(key) || 0, cell.lines));
+        // 여러 줄로 넘어가는 항목이 있는데 기호가 없는 항목이 있으면
+        // 어디서 한 항목이 끝나는지 알 수 없습니다.
+        if (cell.wrapped && cell.bald) {
+          const said = `제${chapterId}편 ${work.title}`;
+          if (!bald.has(said + key)) {
+            bald.add(said + key);
+            problems.push(
+              `${said}: 여러 줄로 넘어가는 항목 ${cell.among}개 가운데 ${cell.bald}개에 ` +
+                `앞 기호가 없습니다 ('${key.slice(0, 32)}…'). 넘어간 줄과 다음 항목이 ` +
+                "같은 자리에서 시작해 어디서 하나가 끝나는지 보이지 않습니다."
+            );
+          }
+        }
       }
     }
 

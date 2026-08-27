@@ -730,6 +730,9 @@
     container.hidden = visible.length === 0;
     target.classList.add("source-detail-list");
     target.innerHTML = visible.map(sourceBlockMarkup).join("");
+    // 칸 안 항목 앞의 기호는 그려 놓은 것을 재 보고 세웁니다.
+    // 그리기 전에는 줄이 몇 개로 넘어가는지 알 수 없습니다.
+    window.GUIDE_DETAIL_RENDERER?.showCellMarks?.(target);
   }
 
   let formPreviewZoom = 100;

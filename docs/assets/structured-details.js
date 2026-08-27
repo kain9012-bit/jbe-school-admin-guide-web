@@ -16,6 +16,18 @@
       .map((line) => line.trim())
       .filter(Boolean);
 
+  // 칸 안의 글은 줄 앞의 공백을 한 칸 남겨 둡니다.
+  // 그 공백이 '앞줄에 이어지는 줄'이라는 원문의 표시입니다
+  // (scripts/read_hwpx_tables.py의 cell_text). 여느 줄처럼 다 털어 내면
+  // 표시가 사라져, 한 문장이 두 항목으로 갈라집니다.
+  //   ◦발신 명의 표시의 마지막 글자가 공인의
+  //     가운데 오도록 날인      ← 앞줄에 이어지는 줄
+  const cellLines = (body) =>
+    String(body || "")
+      .split(/\r?\n/)
+      .map((line) => (/^\s/.test(line) ? ` ${line.trim()}` : line.trim()))
+      .filter((line) => line.trim());
+
   const row = (label, tokens = [label]) => ({ label, tokens });
 
   function matchLabelAt(lines, index, spec) {
@@ -156,15 +168,31 @@
     return items;
   }
 
-  // 칸 앞에 붙은 글머리표는 뗍니다. 칸 안에서는 항목이 따로 그려지므로
-  // 기호가 두 번 보이기 때문입니다. 다만 기호 하나가 곧 내용인 칸이 있습니다.
+  // 칸 앞에 붙은 글머리표를 떼어, 글자와 따로 냅니다.
+  // 기호는 기호 칸에 세우고 글은 글 칸에 세워야 여러 줄로 넘어가는 항목도
+  // 둘째 줄부터 기호 자리만큼 들여써져, 어디서 한 항목이 끝나는지 보입니다.
+  //
+  // 다만 기호 하나가 곧 내용인 칸이 있습니다.
   //   제1편 기록물 관리 TIP '서가배치'의 '○' 칸
   //   그 자리에 무엇이 서는지를 ○ 하나로 말합니다. 이것을 글머리표로 보고
   //   떼어 내면 칸이 통째로 비어, 서가 그림이 빈 격자가 됩니다.
-  const dropMarker = (item) => {
-    const left = item.replace(/^[•‣▸▹▶▪□○◦]\s*/, "");
-    return left.trim() ? left : item;
-  };
+  const CELL_MARKER = /^([•‣▸▹▶▪□○◦※⋅·*]|[-–])\s*/;
+  // 원문에 기호가 없는 항목에 찍는 점입니다. 매뉴얼의 글자가 아니라 화면이
+  // 항목을 가르려고 세우는 표시이므로, 가장 눈에 안 띄는 가운데점을 씁니다.
+  //
+  //   제4편 휴가 '2. 공가 사유'
+  //   사유 열한 가지에 기호가 하나도 없어, 줄만 바꿔 놓으면 여러 줄짜리
+  //   사유가 다음 사유와 붙어 보입니다. 원문 기호가 없는 항목이 3047개입니다.
+  const NO_MARKER = "·";
+
+  function splitMarker(item) {
+    const found = CELL_MARKER.exec(item);
+    if (!found) return { mark: "", text: item };
+    const left = item.slice(found[0].length);
+    // 기호를 떼면 남는 것이 없으면 그 기호가 곧 내용입니다.
+    if (!left.trim()) return { mark: "", text: item };
+    return { mark: found[1], text: left };
+  }
 
   function plainCellMarkup(lines) {
     const items = logicalItems(lines);
@@ -178,10 +206,65 @@
         at += 1;
         continue;
       }
-      pieces.push(shown(dropMarker(items[at])));
+      const { mark, text } = splitMarker(items[at]);
+      pieces.push({ mark, text, html: shown(text) });
     }
-    if (pieces.length === 1) return pieces[0];
-    return `<ul>${pieces.map((piece) => `<li>${piece}</li>`).join("")}</ul>`;
+    // 한 항목뿐이면 목록으로 만들지 않습니다. 가를 것이 없으므로 기호도
+    // 찍지 않습니다. 원문에 기호가 있으면 그것만 그대로 붙여 둡니다.
+    if (pieces.length === 1) {
+      const only = pieces[0];
+      if (typeof only === "string") return only;
+      return only.mark ? `${escapeHtml(only.mark)} ${only.html}` : only.html;
+    }
+    // 기호는 늘 담아 두고, 보일지 말지는 그려 놓은 것을 재서 정합니다
+    // (아래 showCellMarks). 항목이 한 줄에 다 들어가면 줄바꿈만으로 이미
+    // 갈리므로 감춥니다. 몇 글자에서 줄이 넘어가는지는 칸 너비에 따라 달라
+    // 글자 수로 어림잡을 수 없습니다. 실제로 '장학관사, 교육연구관사'처럼
+    // 짧은 말도 좁은 칸에서는 두 줄로 넘어갑니다.
+    return `<ul class="source-cell-list">${pieces
+      .map((piece) => {
+        if (typeof piece === "string") return `<li class="source-cell-plain">${piece}</li>`;
+        const mark = piece.mark || NO_MARKER;
+        return (
+          `<li><span class="source-cell-mark" aria-hidden="true">${escapeHtml(mark)}</span>` +
+          `<span class="source-cell-text">${piece.html}</span></li>`
+        );
+      })
+      .join("")}</ul>`;
+  }
+
+  // 여러 줄로 넘어간 항목이 있는 칸에만 항목 앞 기호를 세웁니다.
+  //
+  // 한 항목이 두세 줄로 넘어가면 넘어간 줄과 다음 항목의 첫 줄이 같은
+  // 자리에서 시작해, 어디서 한 항목이 끝나는지 보이지 않습니다
+  // (제4편 휴가 '2. 공가 사유'). 기호를 세우면 넘어간 줄이 기호 칸만큼
+  // 들여써져 저절로 갈립니다.
+  //
+  // 넘어가지 않는 칸까지 세우면, 좁은 칸 때문에 한 이름표를 두 줄로 끊어
+  // 적은 자리가 목록으로 보입니다('날인' / '위치').
+  //
+  // 창 너비가 바뀌면 넘어가는 줄도 달라지므로 다시 잽니다.
+  function showCellMarks(root) {
+    const where = root && root.querySelectorAll ? root : document;
+    where.querySelectorAll(".source-cell-list").forEach((list) => {
+      const items = [...list.children];
+      const oneLine = parseFloat(getComputedStyle(list).lineHeight) || 20;
+      const wrapped =
+        items.length > 1 &&
+        items.some((item) => item.getBoundingClientRect().height > oneLine * 1.6);
+      if (wrapped) list.setAttribute("data-wrapped", "1");
+      else list.removeAttribute("data-wrapped");
+    });
+  }
+
+  // 검사기 몇 개는 이 파일을 브라우저가 아닌 곳에서 불러 글자만 봅니다.
+  // 그런 자리에는 창도 시계도 없으므로 있을 때만 답니다.
+  let redrawing = 0;
+  if (typeof window.addEventListener === "function") {
+    window.addEventListener("resize", () => {
+      window.clearTimeout(redrawing);
+      redrawing = window.setTimeout(() => showCellMarks(document), 150);
+    });
   }
 
   // 칸 안에 표가 또 그려져 있는 자리입니다.
@@ -604,7 +687,7 @@
             // 단계가 작은 표면 표로 그립니다. 상자를 또 두르면 테두리가
             // 두 겹이 되므로 이때는 상자 꾸밈을 뺍니다.
             const inside = only
-              ? cellMarkup(bodyLines(unwrap(card.grid[0][0].text)))
+              ? cellMarkup(cellLines(unwrap(card.grid[0][0].text)))
               : spannedTableMarkup("", card.grid[0], card.grid.slice(1), null, mine);
             return `
               <span class="source-flow-item" style="--flow-width: ${shares[at].toFixed(1)}%">
@@ -716,7 +799,7 @@
                             }${edge}${drawn}></td>`;
                           }
                           // 원문에서 비어 있는 칸은 비워 둡니다.
-                          const lines = bodyLines(unwrap(cell.text));
+                          const lines = cellLines(unwrap(cell.text));
                           // 칸 안에 표가 또 들어 있으면 이 칸이 쓸 수 있는
                           // 폭만큼만 줍니다. 바깥 표와 같은 폭으로 재면
                           // 안쪽 표가 반드시 칸을 넘어갑니다.
@@ -996,7 +1079,7 @@
       // 표를 담는 바깥 상자와 겹쳐 테두리가 두 겹으로 보입니다.
       const onlyCells = [...headerCells, ...(table.rows || []).flat()];
       if (onlyCells.length === 1) {
-        const noteLines = bodyLines(unwrap(onlyCells[0].text));
+        const noteLines = cellLines(unwrap(onlyCells[0].text));
         if (noteLines.length) {
           drewNote = true;
           pieces.push(
@@ -1266,5 +1349,5 @@
   // 사진 그리는 규칙은 app-faithful-workflow.js도 그대로 씁니다.
   // 두 곳에 같은 규칙을 적어 두면 반드시 한쪽만 고치게 되므로 여기 한 군데에 둡니다.
   window.GUIDE_PICTURES = { withPictures, pairedPictures, pictureOnly, hasPicture };
-  window.GUIDE_DETAIL_RENDERER = { render };
+  window.GUIDE_DETAIL_RENDERER = { render, showCellMarks };
 })();

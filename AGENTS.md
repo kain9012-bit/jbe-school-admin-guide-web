@@ -111,6 +111,7 @@
 | 같은 기호인데 들여쓰기가 다르다 | 기호마다 단계를 고정한다(`MARKER_LEVEL`). 항목마다 다시 매기지 않는다 | `validate_source_presentation.mjs` |
 | 딸린 항목이 거느린 항목보다 바깥에 선다 | 기호의 단계는 **한글파일의 앞공백을 세어** 정한다. 보기 좋아 보이는 순서로 정하지 않는다 | `validate_marker_levels.py`, `validate_source_presentation.mjs` |
 | 여러 문단이 한 줄로 뭉쳐 있다 | 칸 안의 줄은 원문 문단(`hp:p`) 하나하나다. 앞줄에 이어지는 줄은 원문에서 들여 쓴 줄뿐이다 | `validate_cell_lines.py`, `validate_cell_line_breaks.mjs` |
+| 항목이 여러 줄로 넘어가 어디서 끝나는지 안 보인다 | 넘어가는 항목이 있는 칸은 항목마다 앞에 기호를 세운다. 넘어가는지는 **그려 놓은 것을 재서** 정한다(글자 수로 어림잡으면 좁은 칸을 놓친다) | `validate_cell_line_breaks.mjs` |
 | 표에 가로 스크롤이 생긴다 | 원문 열 너비를 쓰되 폭 안에 맞춘다 | `validate_table_fit.mjs` |
 | 표 세로선이 끊긴다 | 병합된 표에서 `:first-child`로 테두리를 지우지 않는다 | `validate_table_fit.mjs` |
 | ▤ 깨진 글자가 보인다 | 함초롬 글꼴 개인용 영역(PUA) 글자를 보통 기호로 바꾼다 | `validate_no_broken_glyphs.js` |
