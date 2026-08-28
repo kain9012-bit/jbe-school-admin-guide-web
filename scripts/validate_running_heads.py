@@ -23,6 +23,35 @@
 줄 전체가 머리글과 같을 때만 봅니다. '【제10편 학교운영위원회】참조'처럼
 본문이 다른 편을 가리키는 말은 머리글이 아닙니다.
 
+글자와 그림을 함께 봅니다
+-------------------------
+
+머리글 글자만 걷어 내면 그 자리에 깔린 **띠 그림**이 그대로 남습니다.
+실제로 그랬습니다. 제8편 교육공무직원 복무 끝에 빨간 네모 띠가 혼자 남아
+'이게 왜 여기 있느냐'는 말을 들었습니다.
+
+그림이 남은 까닭은 글자와 그림이 서로 다른 덩이로 오기 때문입니다. 글자는
+문단으로, 홀로 놓인 그림은 그림 덩이로 옵니다. 문단에만 세운 문지기는
+그림 덩이를 못 봅니다.
+
+무엇이 지면 장식인지도 한글파일이 말해 줍니다. 쪽 바탕은 Contents/
+masterpage*.xml에, 머리글·꼬리글은 hp:header·hp:footer에 따로 적혀 있고,
+그림은 저마다 이름(binaryItemIDRef)으로 불립니다.
+
+    제8편  쪽 바탕에서만 부르는 그림 : image1(쪽 전체 바탕), image2(머리 띠)
+           본문에서 부르는 그림     : image3 image4 image5 image6
+
+쪽 바탕·머리글에서만 부르고 본문은 한 번도 부르지 않는 그림이 지면
+장식입니다. 크기로 어림잡을 일이 아닙니다. 실제로 크기 어림
+(extract_manual_images.py의 is_content)은 이 띠(1240×1754)를 본문 그림으로
+보아 그냥 통과시켰습니다.
+
+두 가지를 봅니다.
+  · 그 그림이 본문 줄에 '[[그림:image2]]'로 실리지 않았는가
+  · 아예 꺼내 두지도 않았는가(docs/assets/manual-images/…)
+꺼내 두기까지 하면 아무도 안 보는 그림이 저장소에 쌓이고, 언젠가 다시
+본문으로 새어 듭니다.
+
 사용법: python3 scripts/validate_running_heads.py
 """
 
@@ -37,6 +66,7 @@ from xml.etree import ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 SECTION_RE = re.compile(r"^Contents/section(\d+)\.xml$")
+MASTER_RE = re.compile(r"^Contents/masterpage\d*\.xml$")
 IMAGE_MARK = re.compile(r"\[\[그림:[^\]]*\]\]")
 
 
@@ -68,6 +98,33 @@ def running_heads(path: Path) -> set[str]:
                     if said:
                         found.add(said)
     return found
+
+
+def decoration_images(path: Path) -> set[str]:
+    """쪽 바탕·머리글에서만 부르는 그림 이름을 모읍니다.
+
+    한글파일은 그림을 이름으로 부릅니다(binaryItemIDRef="image2"). 그 이름이
+    쪽 바탕(masterpage)이나 머리글·꼬리글에서만 나오고 본문에서는 한 번도
+    나오지 않으면, 그것은 지면 장식이지 본문 그림이 아닙니다.
+    """
+    decoration: set[str] = set()
+    body: set[str] = set()
+
+    def walk(node, in_head: bool, into: set[str]) -> None:
+        here = in_head or local_name(node.tag).lower() in ("header", "footer")
+        for name, value in node.attrib.items():
+            if local_name(name) == "binaryItemIDRef" and value:
+                (decoration if here else into).add(value)
+        for child in node:
+            walk(child, here, into)
+
+    with zipfile.ZipFile(path) as archive:
+        for name in sorted(archive.namelist()):
+            if MASTER_RE.match(name):
+                walk(ET.fromstring(archive.read(name)), True, decoration)
+            elif SECTION_RE.match(name):
+                walk(ET.fromstring(archive.read(name)), False, body)
+    return decoration - body
 
 
 def chapter_data(chapter: int) -> dict | None:
@@ -104,6 +161,7 @@ def lines_of(data: dict):
 def main() -> None:
     problems: list[str] = []
     checked = 0
+    watched = 0
     for path in sorted((ROOT / "source" / "manual-hwpx").glob("*.hwpx")):
         match = re.match(r"제(\d+)편", path.name)
         if not match:
@@ -112,6 +170,27 @@ def main() -> None:
         data = chapter_data(chapter)
         if data is None:
             continue
+
+        # 지면 장식 그림입니다. 글자보다 먼저 봅니다. 앞서 글자만 걷어 냈다가
+        # 띠 그림이 그 자리에 남은 적이 있습니다(제8편 교육공무직원 복무).
+        pictures = decoration_images(path)
+        watched += len(pictures)
+        folder = ROOT / "docs" / "assets" / "manual-images" / f"chapter{chapter:02d}"
+        for key in sorted(pictures):
+            mark = f"[[그림:{key}]]"
+            for line, where in lines_of(data):
+                if mark in line:
+                    problems.append(
+                        f"제{chapter:02d}편 {where}: 쪽 바탕·머리글 그림이 본문에 "
+                        f"실렸습니다 ({key})."
+                    )
+                    break
+            for kept in folder.glob(f"{key}.*"):
+                problems.append(
+                    f"제{chapter:02d}편: 쪽 바탕·머리글 그림을 꺼내 두었습니다 "
+                    f"({kept.relative_to(ROOT)}). 본문 그림이 아닙니다."
+                )
+
         heads = running_heads(path)
         if not heads:
             continue
@@ -126,10 +205,13 @@ def main() -> None:
     if problems:
         for line in problems[:20]:
             print(f"  - {line}", file=sys.stderr)
-        print(f"\n본문에 실린 쪽 머리글 {len(problems)}건", file=sys.stderr)
+        print(f"\n본문에 새어 든 지면 장식 {len(problems)}건", file=sys.stderr)
         raise SystemExit(1)
 
-    print(f"쪽 머리글·꼬리글 {checked}가지가 본문에 실리지 않았습니다.")
+    print(
+        f"쪽 머리글·꼬리글 {checked}가지와 지면 장식 그림 {watched}장이 "
+        "본문에 실리지 않았습니다."
+    )
 
 
 if __name__ == "__main__":

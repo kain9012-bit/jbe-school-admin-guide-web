@@ -12756,18 +12756,6 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w05-b10"
   },
   {
-    "chapterId": "08",
-    "chapterLabel": "제8편",
-    "chapterTitle": "교육공무직원",
-    "type": "매뉴얼 원문",
-    "workTitle": "교육공무직원 복무",
-    "title": "[[그림:image2]]",
-    "description": "[[그림:image2]]",
-    "text": "교육공무직원 복무\n\n[[그림:image2]]",
-    "workId": "c08-w05",
-    "blockId": "c08-w05-b11"
-  },
-  {
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",

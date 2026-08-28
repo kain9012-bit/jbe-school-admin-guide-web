@@ -16,6 +16,21 @@ docs/assets/manual-images/chapterNN/ 에 넣고, 어느 편의 어느 이름인�
 tmp/manual-images.json에 적어 둡니다.
 
 본문 그림이 아닌 것은 뺍니다.
+
+먼저 **한글파일이 말해 주는 것**으로 뺍니다.
+  · 쪽 바탕·머리글에서만 부르는 그림(지면 장식)
+
+한글파일은 쪽 바탕을 Contents/masterpage*.xml에, 머리글·꼬리글을
+hp:header·hp:footer에 따로 적어 둡니다. 그림은 저마다 이름으로 불립니다.
+
+    제8편  쪽 바탕에서만 부르는 그림 : image1(쪽 전체 바탕), image2(머리 띠)
+           본문에서 부르는 그림     : image3 image4 image5 image6
+
+본문이 한 번도 부르지 않는 그림은 본문 그림이 아닙니다. 짐작할 것이 없습니다.
+
+그다음 크기로 어림잡습니다. 어림은 어디까지나 어림이라, 위의 것을 대신하지
+못합니다. 실제로 제8편 머리 띠(1240×1754)는 아래 세 가지를 모두 비껴가
+본문 그림으로 꺼내졌고, 교육공무직원 복무 끝에 빨간 네모 띠로 남았습니다.
   · 글머리표로 쓴 아주 작은 그림(가로세로 60점 미만)
   · 편 표지처럼 쪽을 통째로 채운 그림(2000점이 넘는 것)
   · 쪽 머리에 깔린 띠(가로만 아주 긴 것)
@@ -33,6 +48,7 @@ import shutil
 import sys
 import zipfile
 from pathlib import Path
+from xml.etree import ElementTree as ET
 
 try:
     from PIL import Image
@@ -48,6 +64,39 @@ MANIFEST = ROOT / "tmp" / "manual-images.json"
 # 화면이 촘촘한 기기에서도 흐려 보이지 않을 만큼입니다.
 MAX_WIDTH = 900
 QUALITY = 82
+
+
+SECTION_RE = re.compile(r"^Contents/section(\d+)\.xml$")
+MASTER_RE = re.compile(r"^Contents/masterpage\d*\.xml$")
+
+
+def local_name(tag: str) -> str:
+    return tag.rsplit("}", 1)[-1]
+
+
+def decoration_images(archive: zipfile.ZipFile) -> set[str]:
+    """쪽 바탕·머리글에서만 부르는 그림 이름을 모읍니다.
+
+    본문이 한 번이라도 부르는 그림은 빼지 않습니다. 같은 그림을 머리글에도
+    본문에도 쓴 문서가 있으면 본문 쪽을 살려야 하기 때문입니다.
+    """
+    decoration: set[str] = set()
+    body: set[str] = set()
+
+    def walk(node, in_head: bool, into: set[str]) -> None:
+        here = in_head or local_name(node.tag).lower() in ("header", "footer")
+        for name, value in node.attrib.items():
+            if local_name(name) == "binaryItemIDRef" and value:
+                (decoration if here else into).add(value)
+        for child in node:
+            walk(child, here, into)
+
+    for name in sorted(archive.namelist()):
+        if MASTER_RE.match(name):
+            walk(ET.fromstring(archive.read(name)), True, decoration)
+        elif SECTION_RE.match(name):
+            walk(ET.fromstring(archive.read(name)), False, body)
+    return decoration - body
 
 
 def is_content(width: int, height: int) -> bool:
@@ -69,17 +118,22 @@ def main() -> None:
     if OUT.exists():
         shutil.rmtree(OUT)
     manifest: dict[str, dict[str, dict]] = {}
-    kept = dropped = unreadable = 0
+    kept = dropped = unreadable = decoration = 0
 
     for chapter, path in sources:
         label = f"{chapter:02d}"
         found: dict[str, dict] = {}
         with zipfile.ZipFile(path) as archive:
+            skip = decoration_images(archive)
             for name in archive.namelist():
                 if not name.startswith("BinData/"):
                     continue
                 # 본문은 확장자를 떼고 'image7'이라는 이름으로 부릅니다.
                 key = Path(name).stem
+                # 쪽 바탕·머리글에만 깔린 그림입니다. 크기를 재 볼 것도 없습니다.
+                if key in skip:
+                    decoration += 1
+                    continue
                 raw = archive.read(name)
                 try:
                     picture = Image.open(io.BytesIO(raw))
@@ -119,7 +173,8 @@ def main() -> None:
     size = sum(f.stat().st_size for f in OUT.rglob("*.jpg")) if OUT.exists() else 0
     print(
         f"본문 그림 {kept}장 저장 ({size // 1024}KB) · "
-        f"글머리·표지 {dropped}장 제외 · 못 읽음 {unreadable}장",
+        f"지면 장식 {decoration}장 제외 · 글머리·표지 {dropped}장 제외 · "
+        f"못 읽음 {unreadable}장",
         file=sys.stderr,
     )
 
