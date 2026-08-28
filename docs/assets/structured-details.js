@@ -671,20 +671,76 @@
       }
     }
     if (cards.length < 2) return "";
-    // 상자 폭은 원문 열 너비를 바탕으로 하되, 너무 좁아지는 단계는 조금
-    // 넓혀 줍니다. 원문에서 10%짜리 열은 종이에서는 읽히지만 화면에서는
-    // 글자가 한 자씩 끊깁니다.
-    const LEAST_SHARE = 15;
-    const raw = cards.map((card) => card.width || 100 / cards.length);
-    const evened = raw.map((value) => Math.max(LEAST_SHARE, (value / raw.reduce((sum, one) => sum + one, 0)) * 100));
-    const total = evened.reduce((sum, one) => sum + one, 0);
+    // 잇는 표시가 차지하는 자리를 빼고 남은 폭을 나눠 가집니다.
+    const room = AVAILABLE - cards.length * 24;
+
+    // 상자 폭은 원문 열 너비를 그대로 씁니다.
+    const given = cards.map((card) => card.width || 100 / cards.length);
+    const givenTotal = given.reduce((sum, one) => sum + one, 0) || 1;
+    const share = given.map((value) => (value / givenTotal) * 100);
+
+    // 다만 제 내용이 도저히 안 들어가는 단계는 넓혀 줍니다. 원문에서 22%짜리
+    // 칸은 종이(가로 162mm)에서는 넉넉하지만 화면(780px)에서는 안 들어갑니다.
+    // 그러면 그 단계 안에 가로 스크롤이 생겨 글이 잘립니다
+    // (제8편 '결원보충 승인절차'의 첫 단계 — 안에 작은 표가 또 들어 있습니다).
+    //
+    // 예전에는 '어느 단계든 15%는 준다'는 고정값이었습니다. 그것은 단계마다
+    // 무엇이 들었는지 보지 않으므로, 안이 빈 단계도 넓히고 정작 표가 든
+    // 단계는 그대로 두었습니다.
+    const { letter, frame } = cellMetrics(1);
+    // 칸 하나가 드는 폭입니다. 칸 안에 표가 또 들어 있으면 그 표가 드는 폭도
+    // 함께 봅니다. 안쪽 표를 안 보면 겉글자만 재게 되어, 표가 든 단계가
+    // 좁은 채로 남고 그 안에 가로 스크롤이 생깁니다.
+    const cellNeed = (cell) => {
+      const words = spacedWords(cell.text);
+      let need =
+        words.reduce((most, word) => Math.max(most, visualLength(word)), 0) * letter + frame;
+      for (const inner of cell.tables || []) {
+        const rows = [inner.headers || [], ...(inner.rows || [])];
+        const columns = rows.reduce((most, row) => {
+          let at = 0;
+          for (const one of row) {
+            const from = one.column ?? at;
+            at = from + (one.colSpan || 1);
+          }
+          return Math.max(most, at);
+        }, 0);
+        if (columns) need = Math.max(need, neededWidth(rows, columns) + frame);
+      }
+      return need;
+    };
+    const least = cards.map((card) => {
+      let widest = 1;
+      for (const row of card.grid) {
+        // 한 줄에 칸이 여럿이면 그 줄에 드는 폭은 칸마다 드는 폭의 합입니다.
+        let line = 0;
+        for (const cell of row) line += cellNeed(cell);
+        widest = Math.max(widest, line);
+      }
+      // 재는 값과 실제로 그려지는 폭은 몇 px 다릅니다(창 너비, 상자 여백,
+      // 잇는 표시 자리). 그 차이만큼 넉넉히 잡습니다. 모자라면 그 단계 안에
+      // 가로 스크롤이 생겨 글이 잘립니다.
+      const SPARE = 12;
+      return Math.min(((widest + SPARE) / room) * 100, 60);
+    });
+
+    // 모자란 만큼 끌어올리고, 그만큼을 여유 있는 단계에서 비례로 덜어 옵니다.
+    const short = share.map((value, at) => Math.max(0, least[at] - value));
+    const needed = short.reduce((sum, one) => sum + one, 0);
+    const slack = share.map((value, at) => Math.max(0, value - least[at]));
+    const slackTotal = slack.reduce((sum, one) => sum + one, 0);
+    const take = Math.min(needed, slackTotal);
+    const evened = share.map((value, at) =>
+      needed && slackTotal
+        ? value + (short[at] / needed) * take - (slack[at] / slackTotal) * take
+        : value
+    );
+    const total = evened.reduce((sum, one) => sum + one, 0) || 1;
     // 폭을 100%로 꽉 채우면 안 됩니다. 상자 사이 틈만큼 넘쳐서, 브라우저가
     // 줄이는 대신 마지막 단계를 다음 줄로 내려 버립니다(줄 나눔이 줄이기보다
     // 먼저 일어납니다). 틈이 들어갈 자리를 남겨 둡니다.
     const ROOM_FOR_GAPS = 96;
     const shares = evened.map((value) => (value / total) * ROOM_FOR_GAPS);
-    // 잇는 표시가 차지하는 자리를 빼고 남은 폭을 나눠 가집니다.
-    const room = AVAILABLE - cards.length * 24;
     // 잇는 표시는 뒤따르는 상자와 한 덩어리로 묶습니다. 따로 두면 줄이 바뀌는
     // 자리에서 화살표만 줄 끝에 남아 허공을 가리킵니다.
     // 첫 상자 앞에도 자리는 두되 표시는 감춥니다. 그래야 줄마다 상자의

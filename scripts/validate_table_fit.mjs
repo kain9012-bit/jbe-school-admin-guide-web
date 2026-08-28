@@ -242,6 +242,43 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
             // 아래가 잘려 안 보이는 채로 세로 스크롤이 생깁니다.
             clipped: box.scrollHeight > box.clientHeight + 2,
             hidden: Math.round(box.scrollHeight - box.clientHeight),
+            // 절차 단계 안에 든 표입니다. 여기서는 가로 스크롤도 안 됩니다.
+            // 단계는 폭을 우리가 정하는 상자라, 안 들어가면 스크롤을 붙일
+            // 것이 아니라 그 단계를 넓혀야 합니다.
+            inStep: Boolean(box.closest(".source-flow-step")),
+            sideways: Math.round(box.scrollWidth - box.clientWidth),
+            // 같은 줄의 다른 단계에 남는 자리가 얼마나 있는지 봅니다.
+            // 남는 자리가 있는데도 넘친다면 나눠 주기를 잘못한 것이고,
+            // 다들 꽉 찼다면 그 줄에 도저히 안 들어가는 것입니다.
+            //
+            // 글만 든 단계는 글이 접히므로 scrollWidth로는 남는 자리를 알 수
+            // 없습니다. 그려진 줄(line box)을 재어 가장 긴 줄이 상자보다
+            // 얼마나 짧은지를 봅니다.
+            spare: (() => {
+              const flow = box.closest(".source-flow");
+              const mine = box.closest(".source-flow-step");
+              if (!flow) return 0;
+              return [...flow.querySelectorAll(".source-flow-step")]
+                .filter((step) => step !== mine)
+                .reduce((sum, step) => {
+                  // 글자가 실제로 그려진 자리만 봅니다. 목록 항목이나 표는
+                  // 상자를 꽉 채우도록 늘어나 있어, 상자를 재면 늘 꽉 찬 것으로
+                  // 보입니다. 글자를 감싸는 조각(line box)의 오른쪽 끝이
+                  // 상자의 오른쪽 끝에서 얼마나 모자라는지를 잽니다.
+                  const edge = step.getBoundingClientRect();
+                  const walker = document.createTreeWalker(step, NodeFilter.SHOW_TEXT);
+                  let right = edge.left;
+                  for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+                    if (!node.textContent.trim()) continue;
+                    const range = document.createRange();
+                    range.selectNodeContents(node);
+                    for (const rect of range.getClientRects()) {
+                      right = Math.max(right, rect.right);
+                    }
+                  }
+                  return sum + Math.max(0, edge.right - right);
+                }, 0);
+            })(),
             label: table.getAttribute("aria-label") || "",
           };
         });
@@ -311,6 +348,24 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
           problems.push(
             `${where}: 표 상자에 세로 스크롤이 생겨 아래가 ${table.hidden}px 잘립니다. ` +
               "표는 가로로만 넘겨 봅니다."
+          );
+        }
+        // 절차 단계 안의 표가 가로로 넘치면, 그 단계가 좁은 것입니다.
+        //
+        // 단계 폭은 원문 열 너비로 나눕니다. 그런데 원문에서 22%짜리 칸은
+        // 종이(가로 162mm)에서는 넉넉해도 화면(780px)에서는 안 들어갑니다.
+        // 안에 작은 표가 또 들어 있으면 더 그렇습니다. 그럴 때는 그 단계를
+        // 넓히고 여유 있는 단계에서 그만큼 덜어 옵니다
+        // (제8편 '결원보충 승인절차'의 첫 단계 — 66px이 스크롤에 숨었습니다).
+        // 단계 폭은 글자 수로 어림잡아 나눕니다. 어림값과 실제로 그려지는
+        // 폭은 스무 픽셀쯤 차이가 납니다(칸 여백, 화살표 칸의 큰 글자).
+        // 그만큼은 상자가 스스로 삼키므로, 그보다 큰 넘침만 알립니다.
+        const ROUGH = 20;
+        if (table.inStep && table.sideways > ROUGH && table.spare >= table.sideways) {
+          problems.push(
+            `${where}: 절차 단계 안의 표가 가로로 ${table.sideways}px 넘칩니다. ` +
+              `같은 줄의 다른 단계에 ${Math.round(table.spare)}px이 남아 있습니다. ` +
+              "스크롤을 붙일 것이 아니라 그 단계를 넓혀야 합니다."
           );
         }
         if (table.standalone && CLEAR.test(table.paper)) {
