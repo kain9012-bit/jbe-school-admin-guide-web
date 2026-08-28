@@ -85,12 +85,17 @@ const measureFlow = `
     for (const item of document.querySelectorAll("#step-actions .source-flow-item")) {
       const step = item.querySelector(".source-flow-step");
       if (!step) continue;
+      // 한 단계 안에 상자가 둘로 나뉘어 있으면(제12편 '4. 물품취득 후
+      // 출급절차') 눈에 보이는 것은 상자 하나가 아니라 그 묶음입니다.
+      // 상자 하나만 재면 둘로 나뉜 단계가 늘 절반 키로 잡힙니다.
+      const stack = item.querySelector(".source-flow-stack");
       // 표로 그린 단계는 표를 담은 상자가 눈에 보이는 테두리입니다.
       // 표 자체를 재면 그 상자의 테두리 두께만큼 늘 두 픽셀이 모자랍니다.
       const shown =
-        step.getAttribute("data-table") === "1"
+        stack ||
+        (step.getAttribute("data-table") === "1"
           ? step.querySelector(".source-table-scroll")
-          : step;
+          : step);
       if (!shown) continue;
       const box = shown.getBoundingClientRect();
       if (!box.height) continue;

@@ -843,19 +843,52 @@
               </span>
             `;
             }
-            const only = card.grid.length === 1 && card.grid[0].length === 1;
             const mine = (room * shares[at]) / 100 - 8;
-            // 단계가 작은 표면 표로 그립니다. 상자를 또 두르면 테두리가
-            // 두 겹이 되므로 이때는 상자 꾸밈을 뺍니다.
-            const inside = only
-              ? cellMarkup(cellLines(unwrap(card.grid[0][0].text)))
-              : spannedTableMarkup("", card.grid[0], card.grid.slice(1), null, mine);
+            // 한 단계 안에서도 상자가 둘로 나뉘어 있기도 합니다. 원문 테두리가
+            // 그렇게 말합니다 — 그 줄은 양옆이 트이고 위아래에만 선이 있습니다
+            // (빌더의 betweenBoxes).
+            //
+            //   제12편 '4. 물품취득 후 출급절차'
+            //   [물품관리관 / 출납 명령]   ← 상자 하나
+            //           (사이)
+            //   [물품출납공무원 / 물품 출납] ← 또 하나
+            //
+            //   예전 화면 : 넷이 한 상자에 갇히고 그 사이에 빈 칸이 남았습니다.
+            const boxes = [];
+            let part = [];
+            for (const row of card.grid) {
+              const between =
+                row.length > 0 &&
+                row.every((cell) => cell.gap && !String(cell.text || "").trim());
+              if (between) {
+                if (part.length) boxes.push(part);
+                part = [];
+                continue;
+              }
+              part.push(row);
+            }
+            if (part.length) boxes.push(part);
+            const drawn = boxes
+              .map((box) => {
+                const only = box.length === 1 && box[0].length === 1;
+                const inside = only
+                  ? cellMarkup(cellLines(unwrap(box[0][0].text)))
+                  : spannedTableMarkup("", box[0], box.slice(1), null, mine);
+                return `<span class="source-flow-step"${
+                  only ? "" : ' data-table="1"'
+                }>${inside}</span>`;
+              })
+              .join("");
             return `
               <span class="source-flow-item"${room100}>
                 <span class="source-flow-link"${
                   at ? "" : ' data-first="1"'
                 } aria-hidden="true">${escapeHtml(link)}</span>
-                <span class="source-flow-step"${only ? "" : ' data-table="1"'}>${inside}</span>
+                ${
+                  boxes.length > 1
+                    ? `<span class="source-flow-stack">${drawn}</span>`
+                    : drawn
+                }
               </span>
             `;
           })

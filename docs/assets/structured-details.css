@@ -792,6 +792,17 @@
   gap: 0.4rem;
 }
 
+/* 한 단계 안에서 상자가 둘로 나뉜 자리입니다. 원문 테두리가 그 줄의 양옆을
+   트고 위아래에만 선을 그어 둡니다(제12편 '4. 물품취득 후 출급절차').
+   상자를 위아래로 쌓고 그 사이를 띄웁니다. */
+.source-flow-stack {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-width: 0;
+  gap: 0.4rem;
+}
+
 .source-flow-step {
   display: flex;
   flex-direction: column;

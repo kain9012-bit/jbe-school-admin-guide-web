@@ -12,7 +12,7 @@
 //   예전 화면 : 왼쪽 상자 하나에 단계 둘이 갇히고 그 사이에 속이 빈 띠가
 //               남았습니다. ⇩는 오른쪽 상자 안 한 줄로 들어앉았습니다.
 //
-// 세 가지를 봅니다.
+// 네 가지를 봅니다.
 //   · 한 줄의 단계 상자가 **모두** 같은 자리에서 빈 줄을 물고 있으면 안 된다
 //     — 그것이 상자 안에 갇힌 접힌 자리입니다.
 //     단계 하나에만 있는 빈 줄은 여기서 보지 않습니다. 원문이 그 칸에만 둔
@@ -23,6 +23,9 @@
 //     — 세로로 내려가는 절차가 접힌 자리입니다. 화살표가 몇 개든 봅니다.
 //       폭이 모자란 띠는 세로로 병합된 이름칸이 지나가는 자리라 표를 자를 수
 //       없습니다. 그 자리는 선만 지웁니다(빌더의 gapCells).
+//   · 단계 상자 한가운데에 읽을 글이 없는 줄이 없다
+//     — 한 단계 안에서 상자가 둘로 나뉜 자리입니다. 원문이 그 줄의 양옆을
+//       트고 위아래에만 선을 그어 둡니다(제12편 '4. 물품취득 후 출급절차').
 //   · 접힌 자리의 화살표가 제 단계 밑에 선다
 //     — 원문은 오른쪽 끝에서 접기도 하고 왼쪽 끝에서 접기도 합니다.
 //       늘 가운데에 세우면 어디서 접힌 것인지 달라집니다.
@@ -172,6 +175,25 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
             break;
           }
         }
+        // 한 단계 안에서 상자가 둘로 나뉜 자리입니다. 원문이 그 줄의 양옆을
+        // 트고 위아래에만 선을 그어 둔 자리인데, 한 상자로 그리면 그 사이가
+        // 속이 빈 줄로 남습니다(제12편 '4. 물품취득 후 출급절차').
+        const split = [];
+        for (const card of document.querySelectorAll("#step-actions .source-flow-step")) {
+          for (const table of card.querySelectorAll("table")) {
+            const lines = [...table.querySelectorAll("tr")].filter((row) =>
+              row.querySelector("th, td")
+            );
+            lines.forEach((row, at) => {
+              if (at === 0 || at === lines.length - 1) return;
+              const said = [...row.querySelectorAll("th, td")]
+                .map((cell) => cell.textContent.trim())
+                .filter(Boolean);
+              if (said.some((text) => !ARROW.test(text))) return;
+              split.push(card.textContent.replace(/\s+/g, " ").trim().slice(0, 40));
+            });
+          }
+        }
         // 접힌 자리의 화살표가 어느 단계 밑에 섰는지 봅니다.
         const folds = [];
         for (const fold of flows.filter((node) => node.getAttribute("data-fold") === "1")) {
@@ -192,9 +214,15 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
             said: near ? near.textContent.replace(/\s+/g, " ").trim().slice(0, 40) : "",
           });
         }
-        return { lanes: lanes.length, blank, folds, trapped };
+        return { lanes: lanes.length, blank, folds, trapped, split };
       });
       checked += found.lanes;
+      for (const said of found.split) {
+        problems.push(
+          `제${chapterId}편 ${work.title}: 단계 상자 한가운데에 읽을 글이 없는 줄이 ` +
+            `있습니다 ('${said}…'). 원문에서 상자와 상자 **사이**의 자리였습니다.`
+        );
+      }
       for (const said of found.trapped) {
         problems.push(
           `제${chapterId}편 ${work.title}: 표 안에 읽을 글이 없는 줄이 표 폭을 ` +
