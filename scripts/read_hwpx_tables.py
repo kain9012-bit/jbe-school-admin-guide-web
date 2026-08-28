@@ -499,15 +499,52 @@ def tables_of(path: Path) -> list[dict]:
         return found
 
 
+def running_heads(path: Path) -> list[str]:
+    """쪽 머리글·꼬리글에 적힌 글을 모읍니다.
+
+    한글파일은 쪽마다 되풀이되는 머리글을 hp:header·hp:footer 안에 따로
+    적어 둡니다('제8편 교육공무직원', '2025학년도 학교행정업무 길라잡이 ___').
+    본문이 아니라 지면 장식입니다.
+
+    그런데 글자를 읽어 오는 쪽(kordoc)은 이것을 보통 문단처럼 함께 담아
+    옵니다. 그대로 실으면 업무 본문 한가운데에 편 이름과 표지 글이, 머리글에
+    깔린 띠 그림까지 끼어듭니다(제8편 교육공무직원 복무).
+
+    무엇이 머리글인지는 한글파일이 이미 말해 주고 있으므로, 여기서 그 글을
+    그대로 적어 두고 빌더가 그 문단만 걷어 냅니다.
+    """
+    found: set[str] = set()
+    with zipfile.ZipFile(path) as archive:
+        for name in sorted(n for n in archive.namelist() if SECTION_RE.match(n)):
+            root = ET.fromstring(archive.read(name))
+            for node in root.iter():
+                if local_name(node.tag).lower() not in ("header", "footer"):
+                    continue
+                for paragraph in [x for x in node.iter() if local_name(x.tag) == "p"]:
+                    said = "".join(
+                        "".join(piece.itertext())
+                        for piece in paragraph.iter()
+                        if local_name(piece.tag) == "t"
+                    ).strip()
+                    if said:
+                        found.add(said)
+    return sorted(found)
+
+
 def main() -> None:
     out = {}
+    heads = {}
     for chapter, path in SOURCES.items():
         out[chapter] = tables_of(path)
+        heads[chapter] = running_heads(path)
         print(f"제{chapter}편 표 {len(out[chapter])}개", file=sys.stderr)
     target = ROOT / "tmp" / "hwpx-tables.json"
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(json.dumps(out, ensure_ascii=False), encoding="utf-8")
     print(f"{target}에 저장했습니다.", file=sys.stderr)
+    beside = ROOT / "tmp" / "hwpx-headers.json"
+    beside.write_text(json.dumps(heads, ensure_ascii=False), encoding="utf-8")
+    print(f"{beside}에 쪽 머리글을 저장했습니다.", file=sys.stderr)
 
 
 if __name__ == "__main__":
