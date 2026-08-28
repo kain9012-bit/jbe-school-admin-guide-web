@@ -857,6 +857,32 @@
   background: transparent;
 }
 
+/* 세로로 내려가는 절차의 접힌 자리입니다. 원문에서는 상자와 상자 사이의
+   트인 띠에 ⇩가 놓여 있습니다. 상자를 두르지 않고 그 자리에 표시만 세웁니다.
+   (제11편 '2. 가설건축물 취득절차') */
+.source-table-fold {
+  position: relative;
+  min-height: 2.2rem;
+  margin: 0.3rem 0;
+  color: var(--guide-muted);
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+  text-align: center;
+}
+
+/* 화살표는 원문이 놓은 열 자리에 섭니다. 나란한 절차 둘이 함께 접힌 자리는
+   화살표도 둘입니다(제16편 '1인수의 / 2인수의'). 하나로 뭉쳐 가운데 세우면
+   한쪽이 사라집니다. 자리를 못 찾으면 가운데에 섭니다. */
+.source-table-turn {
+  display: block;
+  text-align: center;
+}
+
+.source-table-turn[style] {
+  position: absolute;
+  top: 0;
+}
+
 .source-flow-step ul {
   display: grid;
   gap: 0.3rem;

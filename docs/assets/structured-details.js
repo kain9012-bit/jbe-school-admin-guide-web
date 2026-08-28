@@ -677,10 +677,29 @@
       if (chain.link) link = chain.link;
       const rows = [table.headers || [], ...(table.rows || [])];
       const bands =
-        Array.isArray(chain.bands) && chain.bands.length
-          ? chain.bands
+        Array.isArray(table.bands) && table.bands.length
+          ? table.bands
           : [[0, rows.length - 1]];
       const folded = bands.length > 1;
+      // 접힌 자리의 화살표가 몇째 열에 놓였는지 원문이 적어 둡니다. 그 열이
+      // 든 단계 밑에 세웁니다. 늘 가운데에 세우면 원문이 오른쪽 끝에서 접은
+      // 절차가 한가운데에서 접힌 것처럼 보입니다.
+      const stepAt = (column) => {
+        if (!(column >= 0)) return 0;
+        const inside = chain.steps.findIndex(([one, other]) => column >= one && column <= other);
+        if (inside >= 0) return inside;
+        // 잇는 화살표 열에 놓였습니다. 가장 가까운 단계에 붙입니다.
+        let best = 0;
+        let near = Infinity;
+        chain.steps.forEach(([one, other], at) => {
+          const gap = column < one ? one - column : column - other;
+          if (gap < near) {
+            near = gap;
+            best = at;
+          }
+        });
+        return best;
+      };
       bands.forEach((band, at) => {
         // 접힌 절차는 다른 표와 한 줄로 잇지 않습니다. 이으면 단이 뒤섞입니다.
         if (!lane || folded) {
@@ -703,7 +722,12 @@
           lane.cards.push({ grid, width, empty });
         }
         if (folded && at < bands.length - 1) {
-          lane.fold = (chain.folds || [])[at] || { step: 0, mark: "⇩" };
+          // 화살표가 여럿이면 저마다 제 단계 밑에 섭니다. 나란한 절차 둘이
+          // 함께 접힌 자리를 하나로 뭉치면 한쪽이 사라집니다.
+          const marks = (table.folds || [])[at] || [];
+          lane.fold = marks.length
+            ? marks.map((one) => ({ step: stepAt(one.column), mark: one.mark || "⇩" }))
+            : [{ step: 0, mark: "⇩" }];
         }
       });
       if (folded) lane = null;
@@ -842,15 +866,17 @@
     // 접힌 자리입니다. 원문이 ⇩를 둔 단계 아래에 세웁니다. 가운데에 세우면
     // 오른쪽 끝에서 접은 절차가 한가운데에서 접힌 것처럼 보입니다.
     // 상자 줄과 같은 폭으로 자리를 잡아야 화살표가 제 단계 밑에 섭니다.
-    const foldMarkup = (fold) => `
+    const foldMarkup = (fold) => {
+      const at = new Map((fold || []).map((one) => [one.step || 0, one.mark || "⇩"]));
+      return `
       <div class="source-flow" data-source="chain" data-fold="1" aria-hidden="true">
         ${shares
           .map(
-            (width, at) => `
+            (width, step) => `
               <span class="source-flow-item" style="--flow-width: ${width.toFixed(1)}%">
                 <span class="source-flow-link" data-first="1"></span>
                 <span class="source-flow-turn">${
-                  at === (fold.step || 0) ? escapeHtml(fold.mark || "⇩") : ""
+                  at.has(step) ? escapeHtml(at.get(step)) : ""
                 }</span>
               </span>
             `
@@ -858,10 +884,83 @@
           .join("")}
       </div>
     `;
+    };
 
     return shown
       .map((one) => laneMarkup(one) + (one.fold ? foldMarkup(one.fold) : ""))
       .join("");
+  }
+
+  // 세로로 내려가는 절차도 원문에서는 접혀 있습니다. 상자 하나하나가 따로
+  // 서고, 그 사이를 트인 띠가 가르며 거기에 ⇩가 놓입니다.
+  //
+  //   제11편 공유재산의 취득 '2. 가설건축물 취득절차' (7행 2열)
+  //   r0 ssss[학교]    ssss[◦가설건축물 계획 수립…]
+  //   r1 nnss[⇩ ← 두 열을 통째로 덮는 칸 하나, 양옆이 트임]
+  //   r2 ssss[교육청]  ssss[◦가설건축물 축조 신고필증 교부…]
+  //
+  //   예전 화면 : 상자 넷이 한 표로 붙고, 바깥 테두리가 띠를 가로질러
+  //               상자가 갈라져 보이지 않았습니다. 게다가 첫 줄만 머리글로
+  //               잡혀 그 상자의 글만 굵었습니다.
+  //
+  // 단마다 따로 그리고 그 사이에 원문의 화살표를 세웁니다.
+  function foldedTableMarkup(caption, table) {
+    const bands = Array.isArray(table.bands) ? table.bands : null;
+    if (!bands || bands.length < 2 || table.picture) return "";
+    const rows = [table.headers || [], ...(table.rows || [])];
+    const marks = Array.isArray(table.folds) ? table.folds : [];
+    // 단마다 줄 수가 같으면 머리글 줄이 없습니다. 같은 모양이 되풀이될 뿐인데
+    // 첫 단의 첫 줄만 굵어지면 그 상자만 달라 보입니다(가설건축물 취득절차).
+    // 첫 단만 줄이 더 많으면 그 첫 줄이 진짜 머리글입니다
+    // (제11편 '1. 처리절차 및 방법' — 단계 | 처리절차 및 방법 | 비고).
+    const sameShape = bands.every(
+      ([one, other]) => other - one === bands[0][1] - bands[0][0]
+    );
+    const parts = bands.map((band, at) => {
+      const mine = rows.slice(band[0], band[1] + 1);
+      if (!mine.length) return "";
+      // 단을 넘어 걸쳐 있던 병합은 이 단만큼으로 줄입니다.
+      const kept = mine.map((row) =>
+        row.map((cell) => ({
+          ...cell,
+          rowSpan: Math.min(cell.rowSpan || 1, mine.length),
+        }))
+      );
+      const drawn = spannedTableMarkup(
+        at ? "" : caption,
+        kept[0],
+        kept.slice(1),
+        table.widths,
+        0,
+        false,
+        sameShape || at > 0
+      ).replace('<table class="source-criteria-table"', '<table data-folded="1" class="source-criteria-table"');
+      const fold = marks[at];
+      if (!fold || !fold.length || at === bands.length - 1) return drawn;
+      // 화살표는 원문이 놓은 열 자리에 세웁니다. 나란한 절차 둘이 함께 접힌
+      // 자리(제16편 '1인수의 / 2인수의')나 한 줄기가 둘로 갈리는 자리
+      // (제13편 '2. 유지관리자 선임')를 하나로 뭉치면 한쪽이 사라집니다.
+      const widths = Array.isArray(table.widths) ? table.widths : null;
+      const spread = (one) => {
+        if (!widths || !(one.column >= 0)) return null;
+        const before = widths.slice(0, one.column).reduce((sum, value) => sum + Number(value || 0), 0);
+        const mine = widths
+          .slice(one.column, one.column + (one.span || 1))
+          .reduce((sum, value) => sum + Number(value || 0), 0);
+        if (!mine) return null;
+        return ` style="left: ${before.toFixed(2)}%; width: ${mine.toFixed(2)}%"`;
+      };
+      const strip = fold
+        .map(
+          (one) =>
+            `<span class="source-table-turn"${spread(one) || ""}>${escapeHtml(
+              one.mark || "⇩"
+            )}</span>`
+        )
+        .join("");
+      return `${drawn}<div class="source-table-fold" aria-hidden="true">${strip}</div>`;
+    });
+    return parts.join("");
   }
 
   function borderStyle(code) {
@@ -882,7 +981,7 @@
   // '어느 열도 자기 낱말보다 좁아지지 않게' 규칙을 태우면, 원문에서 폭
   // 162mm(600px 남짓)에 든 서가 그림이 1300px로 부풀어 가로로 넘어갑니다.
   // 원문에서도 '2010 문서'는 좁은 칸에서 두 줄로 접힙니다. 그것이 원문 모양입니다.
-  function spannedTableMarkup(caption, headers, rows, sourceWidths, available, picture) {
+  function spannedTableMarkup(caption, headers, rows, sourceWidths, available, picture, plain) {
     const room = Number(available) > 0 ? Number(available) : AVAILABLE;
     // 머리글과 본문을 <thead>·<tbody>로 나누면, 머리글 칸이 아래로 걸친 병합
     // (구 분: 2줄 차지)이 끊깁니다. 한 덩어리로 그리고 첫 줄만 머리글로 표시합니다.
@@ -972,7 +1071,11 @@
                             : "";
                           const span = spanAttributes(cell);
                           // 절차를 잇는 화살표 칸은 상자를 그리지 않습니다.
-                          const arrow = arrowOnly(cell.text) ? ' data-arrow="1"' : "";
+                          // 원문에서 양옆이 트인 띠의 칸도 마찬가지입니다.
+                          // 상자와 상자 사이의 자리이지 칸이 아닙니다
+                          // (빌더의 gapCells).
+                          const arrow =
+                            arrowOnly(cell.text) || cell.gap ? ' data-arrow="1"' : "";
                           // 그림형 표에는 머리글 칸이 없습니다. 원문이 표로
                           // 그린 그림이라 첫 줄·첫 열이 이름칸이 아닙니다.
                           if (drawing) {
@@ -981,7 +1084,11 @@
                           if (arrow) {
                             return `<td${span}${edge}${arrow}>${content}</td>`;
                           }
-                          if (rowIndex === 0) {
+                          // 접힌 표를 단마다 잘라 그릴 때는 머리글 줄이
+                          // 없습니다. 단마다 같은 모양이 되풀이될 뿐인데
+                          // 첫 단의 첫 줄만 굵어지면 그 상자만 달라 보입니다
+                          // (제11편 '2. 가설건축물 취득절차').
+                          if (rowIndex === 0 && !plain) {
                             return `<th scope="col"${span}${edge}>${content}</th>`;
                           }
                           if (column === 0) {
@@ -1310,8 +1417,11 @@
       // 원문 그대로 그리는 것이 가장 정확합니다. 화살표도 원문이 놓아둔
       // 칸에 그대로 섭니다.
       drewGrid = true;
+      // 원문이 접어 놓은 표는 접힌 자리에서 갈라 상자마다 따로 그립니다.
+      const folded = foldedTableMarkup(caption, table);
       pieces.push(
-        spannedTableMarkup(caption, headerCells, table.rows, table.widths, 0, table.picture)
+        folded ||
+          spannedTableMarkup(caption, headerCells, table.rows, table.widths, 0, table.picture)
       );
     }
     flush();

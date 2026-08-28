@@ -12,13 +12,17 @@
 //   예전 화면 : 왼쪽 상자 하나에 단계 둘이 갇히고 그 사이에 속이 빈 띠가
 //               남았습니다. ⇩는 오른쪽 상자 안 한 줄로 들어앉았습니다.
 //
-// 두 가지를 봅니다.
+// 세 가지를 봅니다.
 //   · 한 줄의 단계 상자가 **모두** 같은 자리에서 빈 줄을 물고 있으면 안 된다
 //     — 그것이 상자 안에 갇힌 접힌 자리입니다.
 //     단계 하나에만 있는 빈 줄은 여기서 보지 않습니다. 원문이 그 칸에만 둔
 //     빈 자리이거나(제16편 사회보험 흐름도, 테두리가 아예 없는 표),
 //     한 칸 안에 상자를 둘로 나눠 둔 자리입니다(제12편 물품 출납).
 //     그것은 접힌 자리가 아니라 다른 이야기입니다.
+//   · 표 안에 '표 폭을 통째로 덮는, 읽을 글이 없는 줄'이 없다
+//     — 세로로 내려가는 절차가 접힌 자리입니다. 화살표가 몇 개든 봅니다.
+//       폭이 모자란 띠는 세로로 병합된 이름칸이 지나가는 자리라 표를 자를 수
+//       없습니다. 그 자리는 선만 지웁니다(빌더의 gapCells).
 //   · 접힌 자리의 화살표가 제 단계 밑에 선다
 //     — 원문은 오른쪽 끝에서 접기도 하고 왼쪽 끝에서 접기도 합니다.
 //       늘 가운데에 세우면 어디서 접힌 것인지 달라집니다.
@@ -84,9 +88,9 @@ const page = await browser.newPage({ viewport: { width: 1280, height: 1000 } });
 for (const { id: chapterId, key } of chapterKeys(window)) {
   if (only && !only.has(chapterId)) continue;
   for (const work of window[key].sections) {
-    // 절차로 그려지는 표가 있는 업무만 엽니다.
+    // 절차로 그려지거나 원문이 접어 놓은 표가 있는 업무만 엽니다.
     const hasFlow = (work.contentBlocks || []).some((block) =>
-      (block.tables || []).some((table) => table.flow)
+      (block.tables || []).some((table) => table.flow || table.bands)
     );
     if (!hasFlow) continue;
 
@@ -107,6 +111,37 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
       await page.waitForTimeout(220);
       const found = await page.evaluate(() => {
         const ARROW = /^[\s⇨⇦⇩⇧⇒⇐→←↑↓➡➔➜⟹≫▼▶►]+$/u;
+        // 세로로 내려가는 절차입니다. 접힌 자리가 상자 안에 남으면 표 폭을
+        // 통째로 덮는 빈 줄(또는 화살표 한 개만 든 줄)로 그려집니다.
+        // 화살표가 몇 개든 봅니다. 나란한 절차 둘이 함께 접힌 자리도,
+        // 한 줄기가 둘로 갈리는 자리도 상자 사이의 자리입니다.
+        const trapped = [];
+        for (const table of document.querySelectorAll(
+          '#step-actions .source-criteria-table:not([data-picture="1"])'
+        )) {
+          // 단계 상자 안의 표는 바로 위에서 따로 봅니다. 여기서 또 보면
+          // 한 단계에만 있는 빈 줄까지 잡습니다(제12편 물품 출납).
+          if (table.closest(".source-flow-step")) continue;
+          // 이미 접어서 그린 표입니다. 여기 남은 화살표 줄은 원문이 상자 안에
+          // 둔 것입니다(제16편 S2B의 '계약상대자 결정' 줄은 원문 테두리가
+          // ssss입니다). 원문이 그린 것을 지울 일은 아닙니다.
+          if (table.getAttribute("data-folded") === "1") continue;
+          const columns = Number(table.style.getPropertyValue("--table-columns")) || 0;
+          const lines = [...table.querySelectorAll("tr")].filter((row) =>
+            row.querySelector("th, td")
+          );
+          lines.forEach((row, at) => {
+            // 첫 줄과 마지막 줄은 상자를 가르는 자리가 될 수 없습니다.
+            // 빌더도 그렇게 봅니다(foldRows).
+            if (at === 0 || at === lines.length - 1) return;
+            const cells = [...row.querySelectorAll("th, td")];
+            const cover = cells.reduce((sum, cell) => sum + (cell.colSpan || 1), 0);
+            if (!columns || cover !== columns) return;
+            const said = cells.map((cell) => cell.textContent.trim()).filter(Boolean);
+            if (said.some((text) => !ARROW.test(text))) return;
+            trapped.push(table.textContent.replace(/\s+/g, " ").trim().slice(0, 40));
+          });
+        }
         const flows = [...document.querySelectorAll("#step-actions .source-flow")];
         const lanes = flows.filter((node) => node.getAttribute("data-fold") !== "1");
         const blank = [];
@@ -157,9 +192,16 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
             said: near ? near.textContent.replace(/\s+/g, " ").trim().slice(0, 40) : "",
           });
         }
-        return { lanes: lanes.length, blank, folds };
+        return { lanes: lanes.length, blank, folds, trapped };
       });
       checked += found.lanes;
+      for (const said of found.trapped) {
+        problems.push(
+          `제${chapterId}편 ${work.title}: 표 안에 읽을 글이 없는 줄이 표 폭을 ` +
+            `통째로 덮고 있습니다 ('${said}…'). 원문에서 상자와 상자를 가르는 ` +
+            "트인 띠였습니다."
+        );
+      }
       for (const said of found.blank) {
         problems.push(
           `제${chapterId}편 ${work.title}: 단계 상자 안에 읽을 글이 없는 줄이 있습니다 ` +
