@@ -653,29 +653,76 @@
       );
   }
 
+  // 한 줄기 절차가 종이 폭에 안 들어가면 매뉴얼은 그것을 접어 아래 단으로
+  // 내려 씁니다. 접힌 자리는 양옆이 트인 띠이고, 그 띠에 놓인 ⇩가 '여기서
+  // 다음 단으로 이어진다'고 말합니다(빌더의 foldRows → flow.bands·folds).
+  //
+  //   제11편 공유재산의 관리 '1. 토지이동 신청'
+  //   원문   [토지이동 대상 토지 현황 파악] ⇨ [토지이동 추진 내부결재…]
+  //                                                        ⇩
+  //          [K-에듀파인 재산대장 정리]     ⇨ [토지대장 및 …확인]
+  //
+  //   예전 화면 : 왼쪽 상자 하나에 단계 둘이 갇히고 그 사이에 속이 빈 띠가
+  //               남았습니다. ⇩는 오른쪽 상자 안 한 줄로 들어앉았습니다.
+  //
+  // 단마다 따로 그리고 그 사이에 원문의 ⇩를 세웁니다. 상자 폭은 단끼리
+  // 같아야 세로로 나란히 서므로, 폭은 단이 아니라 '몇째 단계인가'로 정합니다.
   function flowMarkup(tables) {
-    const cards = [];
+    const lanes = [];
+    let lane = null;
     let link = "⇨";
     for (const table of tables) {
       const chain = table.flow;
       if (!chain || !Array.isArray(chain.steps)) continue;
       if (chain.link) link = chain.link;
       const rows = [table.headers || [], ...(table.rows || [])];
-      for (const [from, to] of chain.steps) {
-        const grid = stepGrid(rows, from, to);
-        if (!grid.length) continue;
-        const width = (table.widths || [])
-          .slice(from, to + 1)
-          .reduce((sum, value) => sum + Number(value || 0), 0);
-        cards.push({ grid, width });
-      }
+      const bands =
+        Array.isArray(chain.bands) && chain.bands.length
+          ? chain.bands
+          : [[0, rows.length - 1]];
+      const folded = bands.length > 1;
+      bands.forEach((band, at) => {
+        // 접힌 절차는 다른 표와 한 줄로 잇지 않습니다. 이으면 단이 뒤섞입니다.
+        if (!lane || folded) {
+          lane = { cards: [], fold: null };
+          lanes.push(lane);
+        }
+        const mine = rows.slice(band[0], band[1] + 1);
+        for (const [from, to] of chain.steps) {
+          const grid = stepGrid(mine, from, to);
+          if (!grid.length) continue;
+          const width = (table.widths || [])
+            .slice(from, to + 1)
+            .reduce((sum, value) => sum + Number(value || 0), 0);
+          // 마지막 단은 단계가 모자라기도 합니다(제11편 매점 흐름도).
+          // 원문에서 그 자리는 테두리까지 트여 아무것도 없습니다. 상자를
+          // 두르면 속이 빈 상자가 생기므로 자리만 비워 둡니다.
+          const empty = !grid.some((row) =>
+            row.some((cell) => String(cell.text || "").trim())
+          );
+          lane.cards.push({ grid, width, empty });
+        }
+        if (folded && at < bands.length - 1) {
+          lane.fold = (chain.folds || [])[at] || { step: 0, mark: "⇩" };
+        }
+      });
+      if (folded) lane = null;
     }
-    if (cards.length < 2) return "";
+    const shown = lanes.filter((one) => one.cards.length);
+    if (!shown.length) return "";
+    const columns = Math.max(...shown.map((one) => one.cards.length));
+    if (columns < 2) return "";
     // 잇는 표시가 차지하는 자리를 빼고 남은 폭을 나눠 가집니다.
-    const room = AVAILABLE - cards.length * 24;
+    const room = AVAILABLE - columns * 24;
 
-    // 상자 폭은 원문 열 너비를 그대로 씁니다.
-    const given = cards.map((card) => card.width || 100 / cards.length);
+    // 상자 폭은 원문 열 너비를 그대로 씁니다. 단이 여럿이면 같은 자리의
+    // 단계끼리 같은 폭을 씁니다(원문에서도 한 표의 같은 열입니다).
+    const given = [];
+    for (let at = 0; at < columns; at += 1) {
+      let width = 0;
+      for (const one of shown) width = Math.max(width, Number(one.cards[at]?.width || 0));
+      given.push(width || 100 / columns);
+    }
     const givenTotal = given.reduce((sum, one) => sum + one, 0) || 1;
     const share = given.map((value) => (value / givenTotal) * 100);
 
@@ -709,7 +756,7 @@
       }
       return need;
     };
-    const least = cards.map((card) => {
+    const cardNeed = (card) => {
       let widest = 1;
       for (const row of card.grid) {
         // 한 줄에 칸이 여럿이면 그 줄에 드는 폭은 칸마다 드는 폭의 합입니다.
@@ -717,12 +764,24 @@
         for (const cell of row) line += cellNeed(cell);
         widest = Math.max(widest, line);
       }
+      return widest;
+    };
+    // 같은 자리의 단계는 단이 달라도 폭이 같아야 세로로 나란히 섭니다.
+    // 그러므로 가장 넓게 드는 단을 기준으로 잡습니다.
+    const least = [];
+    for (let at = 0; at < columns; at += 1) {
+      let widest = 1;
+      for (const one of shown) {
+        const card = one.cards[at];
+        if (!card || card.empty) continue;
+        widest = Math.max(widest, cardNeed(card));
+      }
       // 재는 값과 실제로 그려지는 폭은 몇 px 다릅니다(창 너비, 상자 여백,
       // 잇는 표시 자리). 그 차이만큼 넉넉히 잡습니다. 모자라면 그 단계 안에
       // 가로 스크롤이 생겨 글이 잘립니다.
       const SPARE = 12;
-      return Math.min(((widest + SPARE) / room) * 100, 60);
-    });
+      least.push(Math.min(((widest + SPARE) / room) * 100, 60));
+    }
 
     // 모자란 만큼 끌어올리고, 그만큼을 여유 있는 단계에서 비례로 덜어 옵니다.
     const short = share.map((value, at) => Math.max(0, least[at] - value));
@@ -745,10 +804,21 @@
     // 자리에서 화살표만 줄 끝에 남아 허공을 가리킵니다.
     // 첫 상자 앞에도 자리는 두되 표시는 감춥니다. 그래야 줄마다 상자의
     // 왼쪽 끝이 나란히 섭니다.
-    return `
-      <div class="source-flow" data-source="chain" data-steps="${cards.length}">
-        ${cards
+    const laneMarkup = (one) => `
+      <div class="source-flow" data-source="chain" data-steps="${one.cards.length}">
+        ${one.cards
           .map((card, at) => {
+            const room100 = ` style="--flow-width: ${shares[at].toFixed(1)}%"`;
+            if (card.empty) {
+              // 원문이 테두리까지 트여 아무것도 두지 않은 자리입니다.
+              // 자리만 비워 두어야 위아래 단의 상자가 나란히 섭니다.
+              return `
+              <span class="source-flow-item"${room100} aria-hidden="true">
+                <span class="source-flow-link" data-first="1"></span>
+                <span class="source-flow-step" data-empty="1"></span>
+              </span>
+            `;
+            }
             const only = card.grid.length === 1 && card.grid[0].length === 1;
             const mine = (room * shares[at]) / 100 - 8;
             // 단계가 작은 표면 표로 그립니다. 상자를 또 두르면 테두리가
@@ -757,7 +827,7 @@
               ? cellMarkup(cellLines(unwrap(card.grid[0][0].text)))
               : spannedTableMarkup("", card.grid[0], card.grid.slice(1), null, mine);
             return `
-              <span class="source-flow-item" style="--flow-width: ${shares[at].toFixed(1)}%">
+              <span class="source-flow-item"${room100}>
                 <span class="source-flow-link"${
                   at ? "" : ' data-first="1"'
                 } aria-hidden="true">${escapeHtml(link)}</span>
@@ -768,6 +838,30 @@
           .join("")}
       </div>
     `;
+
+    // 접힌 자리입니다. 원문이 ⇩를 둔 단계 아래에 세웁니다. 가운데에 세우면
+    // 오른쪽 끝에서 접은 절차가 한가운데에서 접힌 것처럼 보입니다.
+    // 상자 줄과 같은 폭으로 자리를 잡아야 화살표가 제 단계 밑에 섭니다.
+    const foldMarkup = (fold) => `
+      <div class="source-flow" data-source="chain" data-fold="1" aria-hidden="true">
+        ${shares
+          .map(
+            (width, at) => `
+              <span class="source-flow-item" style="--flow-width: ${width.toFixed(1)}%">
+                <span class="source-flow-link" data-first="1"></span>
+                <span class="source-flow-turn">${
+                  at === (fold.step || 0) ? escapeHtml(fold.mark || "⇩") : ""
+                }</span>
+              </span>
+            `
+          )
+          .join("")}
+      </div>
+    `;
+
+    return shown
+      .map((one) => laneMarkup(one) + (one.fold ? foldMarkup(one.fold) : ""))
+      .join("");
   }
 
   function borderStyle(code) {
