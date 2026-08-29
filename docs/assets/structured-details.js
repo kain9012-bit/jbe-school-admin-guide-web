@@ -67,7 +67,9 @@
 
   function pictureMarkup(name) {
     const chapter = (window.ACTIVE_GUIDE_CHAPTER && window.ACTIVE_GUIDE_CHAPTER.id) || "01";
-    const src = `assets/manual-images/chapter${chapter}/${escapeHtml(name)}.jpg`;
+    // 그림은 손실 없이(PNG) 담아 둡니다. JPEG로 줄이면 글자가 든 그림의
+    // 글씨가 뭉개져 원본보다 흐려집니다(scripts/extract_manual_images.py).
+    const src = `assets/manual-images/chapter${chapter}/${escapeHtml(name)}.png`;
     return `<img class="source-picture" src="${src}" alt="매뉴얼 그림" loading="lazy" />`;
   }
 
@@ -381,7 +383,11 @@
 
   function plainCellText(value) {
     const source = Array.isArray(value) ? value.join(" ") : String(value ?? "");
-    return normalizeLine(source.replace(/<[^>]*>/g, " "));
+    // 그림 자리 표시는 글자가 아닙니다. 화면에는 사진으로 그려지고 제 칸
+    // 너비에 맞춰 줄어듭니다. 이것을 글자로 세면 '[[그림:image13]]' 열다섯
+    // 글자만큼 칸이 넓어져, 폭 안에 들어가던 표에 가로 스크롤이 생깁니다
+    // (제12편 '3. 전자태그 및 장비' — 필요 폭이 962px로 잡혔습니다).
+    return normalizeLine(source.replace(PICTURE_MARK, " ").replace(/<[^>]*>/g, " "));
   }
 
   // 동그라미 숫자(①②③), 네모·동그라미 기호(■○◦), 로마 숫자(Ⅰ Ⅱ)는 한글
@@ -1183,7 +1189,8 @@
   // 쪼개면 스물두 열짜리 표가 '다 들어간다'고 나와 열마다 31px로 눌립니다
   // (제7편 '신분변동 시 보수지급방법').
   function spacedWords(value) {
-    return unwrap(normalizeLine(value))
+    // 그림 자리 표시는 낱말이 아닙니다(위 plainCellText).
+    return unwrap(normalizeLine(String(value ?? "").replace(PICTURE_MARK, " ")))
       .split(/[\s\u200B]+/)
       .filter(Boolean);
   }

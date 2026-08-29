@@ -53,9 +53,9 @@ for (let id = 1; id <= 19; id += 1) {
   const look = (where, value) => {
     for (const found of String(value ?? "").matchAll(MARK)) {
       count += 1;
-      const src = path.join(assets, "manual-images", `chapter${label}`, `${found[1]}.jpg`);
+      const src = path.join(assets, "manual-images", `chapter${label}`, `${found[1]}.png`);
       if (!existsSync(src)) {
-        problems.push(`제${label}편 ${where}: 그림 파일이 없습니다 (${found[1]}.jpg).`);
+        problems.push(`제${label}편 ${where}: 그림 파일이 없습니다 (${found[1]}.png).`);
       }
     }
     // 원문에 이름 줄이 딸린 사진 묶음을 세어 둡니다. 화면에서 그만큼

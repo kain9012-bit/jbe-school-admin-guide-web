@@ -74,7 +74,17 @@ MANIFEST = ROOT / "tmp" / "manual-images.json"
 # 화면 본문 폭이 780점이므로 그보다 조금 넉넉하게 잡습니다.
 # 화면이 촘촘한 기기에서도 흐려 보이지 않을 만큼입니다.
 MAX_WIDTH = 900
-QUALITY = 82
+
+# 그림은 **손실 없이** 저장합니다(PNG).
+#
+# 예전에는 JPEG(품질 82)로 저장했습니다. 매뉴얼 그림은 사진보다 화면을 찍은
+# 그림이나 표·글자가 든 그림이 많습니다. JPEG는 글자 언저리를 뭉개므로
+# 전자태그 사진의 글씨가 원본보다 눈에 띄게 흐려졌습니다.
+#
+#   "왜 사진의 화질이 원본에 비해서 너무 않좋지?"
+#
+# 한글파일 안에 원본이 그대로 들어 있습니다. 줄이지 않아도 되는 그림은
+# 픽셀 그대로 옮깁니다. 폭이 아주 넓은 것만 줄입니다.
 
 
 SECTION_RE = re.compile(r"^Contents/section(\d+)\.xml$")
@@ -186,16 +196,21 @@ def main() -> None:
                 if key not in inside and not is_content(width, height):
                     dropped += 1
                     continue
-                picture = picture.convert("RGB")
                 if width > MAX_WIDTH:
                     height = round(height * MAX_WIDTH / width)
                     width = MAX_WIDTH
                     picture = picture.resize((width, height), Image.LANCZOS)
+                # 투명한 자리가 있는 그림은 그대로 둡니다. 흰색으로 메우면
+                # 원문에 없는 흰 네모가 생깁니다.
+                if picture.mode in ("RGBA", "LA", "P"):
+                    picture = picture.convert("RGBA")
+                elif picture.mode != "RGB":
+                    picture = picture.convert("RGB")
                 folder = OUT / f"chapter{label}"
                 folder.mkdir(parents=True, exist_ok=True)
-                picture.save(folder / f"{key}.jpg", "JPEG", quality=QUALITY, optimize=True)
+                picture.save(folder / f"{key}.png", "PNG", optimize=True)
                 found[key] = {
-                    "src": f"assets/manual-images/chapter{label}/{key}.jpg",
+                    "src": f"assets/manual-images/chapter{label}/{key}.png",
                     "width": width,
                     "height": height,
                     # 본문은 그림을 두 가지 이름으로 부릅니다. 문단 안에서는
@@ -211,7 +226,7 @@ def main() -> None:
 
     MANIFEST.parent.mkdir(parents=True, exist_ok=True)
     MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False), encoding="utf-8")
-    size = sum(f.stat().st_size for f in OUT.rglob("*.jpg")) if OUT.exists() else 0
+    size = sum(f.stat().st_size for f in OUT.rglob("*.png")) if OUT.exists() else 0
     print(
         f"본문 그림 {kept}장 저장 ({size // 1024}KB) · "
         f"지면 장식 {decoration}장 제외 · 글머리·표지 {dropped}장 제외 · "
