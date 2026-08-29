@@ -1012,29 +1012,6 @@
     );
   }
 
-  // 칸 바탕에 칠한 색입니다. 원문 절차도·표는 이 색으로 무엇이 단계이고
-  // 무엇이 그 단계의 설명인지 보여 줍니다.
-  //
-  //     제13편 '유지관리자 선임'
-  //       건축물 관리주체(소유자 또는 관리자)   진한 청록
-  //       유지관리자 지정 · 유지관리자 선임     연한 청록  ← 단계
-  //       유지관리자 등급산정, 경력신고서 …     흰색       ← 그 단계의 설명
-  //
-  // 색을 빼면 상자만 남아 원문과 전혀 다른 그림이 됩니다.
-  // 한글파일이 적어 둔 색을 그대로 씁니다. 지어내지 않습니다.
-  const COLOR = /^#[0-9a-fA-F]{6}$/;
-  function fillStyle(value) {
-    const said = String(value || "").trim();
-    return COLOR.test(said) ? `background-color:${said};` : "";
-  }
-
-  // 글자색입니다. 바탕만 칠하고 글자색을 빼면 짙은 바탕 칸의 글이 읽히지
-  // 않습니다(제14편 원가통계비목 표 머리글 — 바탕 짙은 남색, 글자 흰색).
-  function inkStyle(value) {
-    const said = String(value || "").trim();
-    return COLOR.test(said) ? `color:${said};` : "";
-  }
-
   // 매뉴얼이 표로 '그림'을 그린 자리입니다(빌더의 drawnAsPicture가 표시합니다).
   // 서가 배치도, 시차출퇴근 개념도, 성과평가위원회 구성도, 빈 대장 서식처럼
   // 빈 칸이 곧 모양인 표입니다.
@@ -1114,12 +1091,7 @@
                           at = column + (cell.colSpan || 1);
                           const edge = column === 0 ? ' data-col="0"' : "";
                           // 그림형 표는 칸마다 원문에 적힌 선을 그대로 긋습니다.
-                          // 바탕색은 표 종류를 가리지 않고 원문 그대로 칠합니다.
-                          const paint =
-                            (drawing ? borderStyle(cell.border) : "") +
-                            fillStyle(cell.fill) +
-                            inkStyle(cell.ink);
-                          const drawn = paint ? ` style="${paint}"` : "";
+                          const drawn = drawing ? ` style="${borderStyle(cell.border)}"` : "";
                           if (cell.filler) {
                             return `<td${
                               cell.colSpan > 1 ? ` colspan="${cell.colSpan}"` : ""
@@ -1149,19 +1121,19 @@
                             return `<td${span}${edge}${drawn}${arrow}>${content}</td>`;
                           }
                           if (arrow) {
-                            return `<td${span}${edge}${drawn}${arrow}>${content}</td>`;
+                            return `<td${span}${edge}${arrow}>${content}</td>`;
                           }
                           // 접힌 표를 단마다 잘라 그릴 때는 머리글 줄이
                           // 없습니다. 단마다 같은 모양이 되풀이될 뿐인데
                           // 첫 단의 첫 줄만 굵어지면 그 상자만 달라 보입니다
                           // (제11편 '2. 가설건축물 취득절차').
                           if (rowIndex === 0 && !plain) {
-                            return `<th scope="col"${span}${edge}${drawn}>${content}</th>`;
+                            return `<th scope="col"${span}${edge}>${content}</th>`;
                           }
                           if (column === 0) {
-                            return `<th scope="row"${span}${edge}${drawn}>${content}</th>`;
+                            return `<th scope="row"${span}${edge}>${content}</th>`;
                           }
-                          return `<td${span}${edge}${drawn}>${content}</td>`;
+                          return `<td${span}${edge}>${content}</td>`;
                         })
                         .join("");
                     })()}

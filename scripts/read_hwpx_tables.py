@@ -96,79 +96,6 @@ def border_fills(archive: zipfile.ZipFile) -> dict[str, str]:
     return found
 
 
-def fill_colors(archive: zipfile.ZipFile) -> dict[str, str]:
-    """칸 바탕에 칠한 색을 모읍니다.
-
-    매뉴얼의 절차도·표는 **칸 배경색**으로 무엇이 단계이고 무엇이 설명인지
-    보여 줍니다. 색을 빼면 상자만 남아 원문과 전혀 다른 그림이 됩니다.
-
-        제13편 '유지관리자 선임'
-          건축물 관리주체(소유자 또는 관리자)   진한 청록
-          유지관리자 지정 · 유지관리자 선임     연한 청록  ← 단계
-          유지관리자 등급산정, 경력신고서 …     흰색       ← 그 단계의 설명
-
-    흰색은 칠하지 않은 것과 같으므로 담지 않습니다.
-    """
-    try:
-        root = ET.fromstring(archive.read("Contents/header.xml"))
-    except KeyError:
-        return {}
-    found: dict[str, str] = {}
-    for element in root.iter():
-        if local_name(element.tag) != "borderFill":
-            continue
-        brush = next((c for c in element if local_name(c.tag) == "fillBrush"), None)
-        if brush is None:
-            continue
-        window = next((c for c in brush if local_name(c.tag) == "winBrush"), None)
-        if window is None:
-            continue
-        face = (window.get("faceColor") or "").strip()
-        if not face or face.lower() in ("none", "#ffffff"):
-            continue
-        found[element.get("id")] = face
-    return found
-
-
-def ink_colors(archive: zipfile.ZipFile) -> dict[str, str]:
-    """글자에 칠한 색을 모읍니다.
-
-    바탕색만 읽고 글자색을 빼면 진한 바탕 칸의 글자가 읽히지 않습니다.
-
-        제14편 '원가통계비목' 표 — 머리글 '목그룹·목·세목'
-        바탕 #3E5979(짙은 남색) · 글자 #FFFFFF(흰색)
-
-    검정은 칠하지 않은 것과 같으므로 담지 않습니다.
-    """
-    try:
-        root = ET.fromstring(archive.read("Contents/header.xml"))
-    except KeyError:
-        return {}
-    found: dict[str, str] = {}
-    for element in root.iter():
-        if local_name(element.tag) != "charPr":
-            continue
-        color = (element.get("textColor") or "").strip()
-        if not color or color.lower() in ("none", "#000000"):
-            continue
-        found[element.get("id")] = color
-    return found
-
-
-def cell_ink(cell: ET.Element, inks: dict[str, str]) -> str:
-    """이 칸의 글자색입니다. 글이 든 첫 조각의 색을 씁니다."""
-    for run in cell.iter():
-        if local_name(run.tag) != "run":
-            continue
-        said = "".join(
-            "".join(piece.itertext()) for piece in run.iter() if local_name(piece.tag) == "t"
-        )
-        if not said.strip():
-            continue
-        return inks.get(run.get("charPrIDRef"), "")
-    return ""
-
-
 def fill_pictures(archive: zipfile.ZipFile) -> dict[str, str]:
     """칸 바탕에 그림을 깐 테두리 모음을 모읍니다.
 
@@ -433,8 +360,6 @@ def read_table(
     table: ET.Element,
     fills: dict[str, str],
     backdrops: dict[str, str] | None = None,
-    colors: dict[str, str] | None = None,
-    inks: dict[str, str] | None = None,
 ) -> dict:
     cells = []
     for cell in cells_of(table):
@@ -459,19 +384,6 @@ def read_table(
                 # 이 칸의 네 쪽 테두리입니다. 매뉴얼이 표로 그린 그림은
                 # 이 선이 곧 모양입니다.
                 "border": fills.get(cell.get("borderFillIDRef"), ""),
-                # 칸 바탕에 칠한 색입니다. 원문 절차도는 이 색으로 단계와
-                # 설명을 가릅니다(위 fill_colors).
-                **(
-                    {"fill": (colors or {}).get(cell.get("borderFillIDRef"))}
-                    if (colors or {}).get(cell.get("borderFillIDRef"))
-                    else {}
-                ),
-                # 글자색입니다. 짙은 바탕 칸은 원문이 흰 글자를 씁니다.
-                **(
-                    {"ink": cell_ink(cell, inks or {})}
-                    if inks and cell_ink(cell, inks)
-                    else {}
-                ),
             }
         )
     if not cells:
@@ -617,8 +529,6 @@ def tables_of(path: Path) -> list[dict]:
         )
         fills = border_fills(archive)
         backdrops = fill_pictures(archive)
-        colors = fill_colors(archive)
-        inks = ink_colors(archive)
         found = []
         for name in names:
             root = ET.fromstring(archive.read(name))
@@ -630,7 +540,7 @@ def tables_of(path: Path) -> list[dict]:
             ]
             index_of = {id(element): len(found) + at for at, element in enumerate(here)}
             for element in here:
-                grid = read_table(element, fills, backdrops, colors, inks)
+                grid = read_table(element, fills, backdrops)
                 outer, cell = enclosing(parents, element)
                 if outer is not None and cell is not None and id(outer) in index_of:
                     address = next(
