@@ -143,8 +143,43 @@ def paragraphs_of(node: ET.Element):
         yield from paragraphs_of(child)
 
 
-def text_pieces(node: ET.Element):
-    """문단에 찍힌 글자를 모읍니다. 여기서도 곁가지는 건너뜁니다."""
+IMAGE_MARK = "[[그림:{}]]"
+
+
+def picture_name(node: ET.Element) -> str:
+    """그림이 부르는 한글파일 안 이름입니다(binaryItemIDRef)."""
+    for element in node.iter():
+        for key, value in element.attrib.items():
+            if local_name(key) == "binaryItemIDRef" and value:
+                return value
+    return ""
+
+
+# 도형 안에 든 그림은 자리 표시를 남기지 않습니다. 매뉴얼은 절차도를 네모와
+# 화살표로 그리고 그 안에 그림을 끼워 넣기도 하는데, 그 자리는 도형 쪽에서
+# 따로 되살립니다(아래 shape_grid). 여기서 자리 표시까지 남기면 글줄 수가
+# 달라져 도형 표가 제 자리를 찾지 못합니다(제1편 '비전자기록물 이관').
+SHAPE_HOLDERS = {"container", "rect", "polygon", "line", "ellipse", "arc", "curve"}
+
+
+def text_pieces(node: ET.Element, in_shape: bool = False):
+    """문단에 찍힌 글자를 모읍니다. 여기서도 곁가지는 건너뜁니다.
+
+    **칸에 든 그림도 글자와 같은 자리에 담아 옵니다.**
+
+    매뉴얼은 표 칸에 사진을 넣습니다. 사진이 곧 그 칸의 내용입니다.
+
+        제12편 물품관리 '3. 전자태그 및 장비' — 태그 종류
+        구분        | 태그 사진 | 특징
+        라벨형 태그 | [사진]    | ◦적용물품: TV, 모니터, …
+        메탈 태그   | [사진]    | ◦적용물품: 금속성분 및 …
+
+    글자만 읽으면 그 칸은 빈 칸이 됩니다. 실제로 표 칸에 든 그림 66장이
+    화면에 한 장도 실리지 않았습니다.
+
+    그림이 놓인 자리에 '[[그림:image21]]'을 남기면 화면이 그 자리에 사진을
+    그립니다(docs/assets/structured-details.js의 withPictures).
+    """
     for child in node:
         name = local_name(child.tag).lower()
         if name in SKIP_SUBTREE:
@@ -153,8 +188,12 @@ def text_pieces(node: ET.Element):
         # .text만 읽으면 '유· 초 · 중'이 '유·'로 잘립니다.
         if name == "t":
             yield "".join(child.itertext())
+        elif name == "pic":
+            found = "" if in_shape else picture_name(child)
+            if found:
+                yield IMAGE_MARK.format(found)
         else:
-            yield from text_pieces(child)
+            yield from text_pieces(child, in_shape or name in SHAPE_HOLDERS)
 
 
 # 글자가 없는 칸이라고 빈 칸이 아닙니다.

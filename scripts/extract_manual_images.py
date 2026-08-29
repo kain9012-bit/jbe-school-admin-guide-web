@@ -28,6 +28,17 @@ hp:header·hp:footer에 따로 적어 둡니다. 그림은 저마다 이름으�
 
 본문이 한 번도 부르지 않는 그림은 본문 그림이 아닙니다. 짐작할 것이 없습니다.
 
+그다음도 **자리**로 봅니다.
+  · 표 칸 안에 든 그림은 크기와 상관없이 본문 그림입니다.
+
+매뉴얼은 표 칸에 사진을 넣습니다. 사진이 곧 그 칸의 내용입니다.
+
+    제12편 물품관리 '3. 전자태그 및 장비' — 태그 종류
+    라벨형 태그 | [사진 164×47] | ◦적용물품: TV, 모니터, …
+
+크기로만 어림잡으면 이 사진(세로 47점)이 '글머리표로 쓴 작은 그림'으로
+걸러집니다. 칸 안에 놓였다는 사실이 크기보다 확실합니다.
+
 그다음 크기로 어림잡습니다. 어림은 어디까지나 어림이라, 위의 것을 대신하지
 못합니다. 실제로 제8편 머리 띠(1240×1754)는 아래 세 가지를 모두 비껴가
 본문 그림으로 꺼내졌고, 교육공무직원 복무 끝에 빨간 네모 띠로 남았습니다.
@@ -68,6 +79,8 @@ QUALITY = 82
 
 SECTION_RE = re.compile(r"^Contents/section(\d+)\.xml$")
 MASTER_RE = re.compile(r"^Contents/masterpage\d*\.xml$")
+# 쪽 머리글·꼬리글 같은 곁가지입니다(read_hwpx_tables.py의 SKIP_SUBTREE와 같습니다).
+SKIP_SUBTREE = {"header", "footer", "footnote", "endnote", "hiddencomment"}
 
 
 def local_name(tag: str) -> str:
@@ -99,6 +112,32 @@ def decoration_images(archive: zipfile.ZipFile) -> set[str]:
     return decoration - body
 
 
+def cell_images(archive: zipfile.ZipFile) -> set[str]:
+    """표 칸 안에 든 그림 이름을 모읍니다.
+
+    칸 안에 놓였다는 것은 그 칸의 내용이라는 뜻입니다. 크기로 어림잡지
+    않습니다(제12편 태그 사진은 세로 47점이라 어림에 걸렸습니다).
+    """
+    found: set[str] = set()
+
+    def walk(node, skip: bool, inside: bool) -> None:
+        name = local_name(node.tag).lower()
+        if skip or name in SKIP_SUBTREE:
+            return
+        here = inside or name == "tc"
+        if here:
+            for key, value in node.attrib.items():
+                if local_name(key) == "binaryItemIDRef" and value:
+                    found.add(value)
+        for child in node:
+            walk(child, False, here)
+
+    for name in sorted(archive.namelist()):
+        if SECTION_RE.match(name):
+            walk(ET.fromstring(archive.read(name)), False, False)
+    return found
+
+
 def is_content(width: int, height: int) -> bool:
     if width < 60 or height < 60:
         return False
@@ -125,6 +164,8 @@ def main() -> None:
         found: dict[str, dict] = {}
         with zipfile.ZipFile(path) as archive:
             skip = decoration_images(archive)
+            # 표 칸 안에 든 그림은 크기를 재지 않고 그대로 씁니다.
+            inside = cell_images(archive)
             for name in archive.namelist():
                 if not name.startswith("BinData/"):
                     continue
@@ -142,7 +183,7 @@ def main() -> None:
                     unreadable += 1
                     continue
                 width, height = picture.size
-                if not is_content(width, height):
+                if key not in inside and not is_content(width, height):
                     dropped += 1
                     continue
                 picture = picture.convert("RGB")
