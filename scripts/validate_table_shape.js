@@ -200,8 +200,27 @@ for (let id = 1; id <= 19; id += 1) {
           // 그림이 아닌 표에 그림표를 붙이면 빈 열이 그대로 남습니다.
           // 빈 칸이 하나도 없으면 그림이 아닙니다(빈 열·행까지 있을 필요는
           // 없습니다. 그림은 빈 칸이 여기저기 흩어져 있기도 합니다).
+          //
+          // 다만 빈 칸만이 모양을 만드는 것은 아닙니다. 원문이 **테두리로**
+          // 모양을 만든 표도 원문 자리 그대로 그려야 합니다.
+          //   칸의 위나 아래가 트임 → 위아래 칸과 한 상자
+          //   칸의 양옆이 트임      → 상자와 상자 사이의 띠
+          // (제2편 '1. 발급 절차'는 빈 칸 없이 트인 테두리만으로 그렸습니다.)
           const cells = [table.headers || [], ...(table.rows || [])].flat();
-          if (!cells.some((cell) => cell && !String(cell.text || "").trim())) {
+          const shapedByBorders =
+            cells.filter((cell) => {
+              const border = String((cell && cell.border) || "");
+              if (border.length !== 4) return false;
+              const joined =
+                border[0] !== "n" && border[1] !== "n" && (border[2] === "n" || border[3] === "n");
+              const band =
+                border[0] === "n" && border[1] === "n" && border[2] !== "n" && border[3] !== "n";
+              return joined || band;
+            }).length >= 2;
+          if (
+            !shapedByBorders &&
+            !cells.some((cell) => cell && !String(cell.text || "").trim())
+          ) {
             problems.push(`${where}: 빈 칸이 없는데 그림형 표로 표시되어 있습니다.`);
           }
           // 그림은 칸마다 원문에 적힌 선을 그어야 합니다. 선이 없으면

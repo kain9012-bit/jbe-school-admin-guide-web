@@ -147,7 +147,7 @@ window.GUIDE_WORKFLOW_LAYOUT = {
     { title: "공직자의 이해충돌 방지법", blocks: ["c05-w05-b1","c05-w05-b2","c05-w05-b3","c05-w05-b4","c05-w05-b5","c05-w05-b6","c05-w05-b7","c05-w05-b8","c05-w05-b9","c05-w05-b10"] }
   ],
   "c06-w00": [
-    { title: "한눈에 보기", blocks: ["c06-w00-b1"] }
+    { title: "학교발전기금 업무처리 흐름도", blocks: ["c06-w00-b1"] }
   ],
   "c06-w01": [
     { title: "1. 학교발전기금 운용계획 수립", blocks: ["c06-w01-b1","c06-w01-b2","c06-w01-b3","c06-w01-b4","c06-w01-b5","c06-w01-b6","c06-w01-b7","c06-w01-b8"] },
@@ -228,7 +228,7 @@ window.GUIDE_WORKFLOW_LAYOUT = {
     { title: "복무", blocks: ["c08-w05-b1","c08-w05-b2","c08-w05-b3","c08-w05-b4","c08-w05-b5","c08-w05-b6","c08-w05-b7","c08-w05-b8","c08-w05-b9","c08-w05-b10"] }
   ],
   "c09-w00": [
-    { title: "한눈에 보기", blocks: ["c09-w00-b1"] }
+    { title: "한 장으로 보는 학교급식 업무 흐름", blocks: ["c09-w00-b1"] }
   ],
   "c09-w01": [
     { title: "1. [사업부서] 운영계획 수립", blocks: ["c09-w01-b1","c09-w01-b2","c09-w01-b3","c09-w01-b4"] },
@@ -337,7 +337,7 @@ window.GUIDE_WORKFLOW_LAYOUT = {
     { title: "2. 물품 실태점검", blocks: ["c12-w09-b11","c12-w09-b12","c12-w09-b13","c12-w09-b14","c12-w09-b15","c12-w09-b16"] }
   ],
   "c13-w00": [
-    { title: "한눈에 보기", blocks: ["c13-w00-b1"] }
+    { title: "학교시설관리 요약", blocks: ["c13-w00-b1"] }
   ],
   "c13-w01": [
     { title: "1. 유지관리", blocks: ["c13-w01-b1","c13-w01-b2","c13-w01-b3","c13-w01-b4","c13-w01-b5"] },
@@ -452,7 +452,7 @@ window.GUIDE_WORKFLOW_LAYOUT = {
     { title: "4. 결산 보고", blocks: ["c14-w08-b15","c14-w08-b16","c14-w08-b17"] }
   ],
   "c15-w00": [
-    { title: "한눈에 보기", blocks: ["c15-w00-b1"] }
+    { title: "세입업무 흐름도", blocks: ["c15-w00-b1"] }
   ],
   "c15-w01": [
     { title: "1. 학교회계 수입 용어 정의", blocks: ["c15-w01-b1"] },
@@ -553,7 +553,7 @@ window.GUIDE_WORKFLOW_LAYOUT = {
     { title: "2. 원천공제 신고 납부", blocks: ["c16-w13-b6","c16-w13-b7","c16-w13-b8","c16-w13-b9"] }
   ],
   "c17-w00": [
-    { title: "한눈에 보기", blocks: ["c17-w00-b1"] }
+    { title: "계약흐름도", blocks: ["c17-w00-b1"] }
   ],
   "c17-w01": [
     { title: "1. 계약의 의의", blocks: ["c17-w01-b1","c17-w01-b2","c17-w01-b3","c17-w01-b4"] },
@@ -588,7 +588,7 @@ window.GUIDE_WORKFLOW_LAYOUT = {
     { title: "수의계약 배제업체 개념 및 절차", blocks: ["c17-w06-b1","c17-w06-b2","c17-w06-b3","c17-w06-b4","c17-w06-b5","c17-w06-b6"] }
   ],
   "c18-w00": [
-    { title: "한눈에 보기", blocks: ["c18-w00-b1"] }
+    { title: "신설학교 설립 및 개교 준비 개요", blocks: ["c18-w00-b1"] }
   ],
   "c18-w01": [
     { title: "일정별 개교업무", blocks: ["c18-w01-b1","c18-w01-b2"] }
@@ -618,7 +618,7 @@ window.GUIDE_WORKFLOW_LAYOUT = {
     { title: "2. 시설관리", blocks: ["c18-w06-b6","c18-w06-b7","c18-w06-b8","c18-w06-b9","c18-w06-b10","c18-w06-b11"] }
   ],
   "c19-w00": [
-    { title: "한눈에 보기", blocks: ["c19-w00-b1"] }
+    { title: "학교 폐지 및 통폐합 개요", blocks: ["c19-w00-b1"] }
   ],
   "c19-w01": [
     { title: "일정별 폐지학교 행정업무", blocks: ["c19-w01-b1","c19-w01-b2"] }

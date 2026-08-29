@@ -40,7 +40,13 @@ function sectionsOf(work) {
   }
 
   // 소제목 표시보다 앞에 있는 업무 제목·흐름도는 첫 묶음에 함께 둡니다.
-  if (!sections.length) return [{ title: work.title, blocks: preamble }];
+  if (!sections.length) {
+    // 편 앞머리 '한눈에 보기'처럼 원문이 제 이름을 달아 둔 지면은 그 이름을
+    // 씁니다('학교시설관리 요약'). 업무 이름을 그대로 쓰면 차례와 카드 머리에
+    // 같은 말이 또 나옵니다.
+    const own = String(work.contentBlocks[0]?.title || "").trim();
+    return [{ title: own || work.title, blocks: preamble }];
+  }
   sections[0].blocks = [...preamble, ...sections[0].blocks];
 
   // 본문이 하나도 없는 묶음은 화면에서 빈칸으로만 보이므로 옆 묶음에 합칩니다.

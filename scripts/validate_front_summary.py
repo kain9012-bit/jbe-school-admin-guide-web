@@ -70,7 +70,11 @@ def screen_text(data: dict) -> str:
                         walk(cell["tables"])
 
     for work in data.get("sections") or []:
+        # 제목도 화면에 나온 글입니다. 앞머리 지면의 제목('학교시설관리 요약')은
+        # 본문 줄이 아니라 묶음 이름으로 올라갑니다.
+        parts.append(str(work.get("title") or ""))
         for block in work.get("contentBlocks") or []:
+            parts.append(str(block.get("title") or ""))
             parts.append(str(block.get("body") or ""))
             walk(block.get("tables"))
         for group in work.get("flowGroups") or []:
@@ -94,6 +98,30 @@ def front_tables(grids: list[dict]) -> list[dict]:
     return found
 
 
+# 앞머리 지면 어깨에 찍힌 배지 문구입니다. 어느 지면인지 알아보라고 붙인
+# 딱지이지 읽을 내용이 아닙니다. 화면은 이 지면을 이미 '한눈에 보기'라는
+# 이름으로 세우므로, 그대로 실으면 같은 말이 두 번 나옵니다.
+#
+#     한눈에 보기            ← 화면이 붙인 이름
+#       한눈에쏙쏙           ← 원문 배지 (겹침)
+#       학교시설관리 요약    ← 이것이 이 지면의 진짜 제목입니다
+FRONT_BADGES = {"한눈에쏙쏙", "한눈에쏙", "한눈에쏙길라잡이", "한장으로길라잡이"}
+
+
+def badge_lines(data: dict) -> list[str]:
+    """앞머리 지면 본문에 배지 문구가 남아 있으면 냅니다."""
+    found = []
+    for work in data.get("sections") or []:
+        if work.get("number") != 0:
+            continue
+        for block in work.get("contentBlocks") or []:
+            for line in str(block.get("body") or "").split("\n"):
+                said = re.sub(r"\s", "", line)
+                if said in FRONT_BADGES:
+                    found.append(line.strip())
+    return found
+
+
 def main() -> None:
     if not GRIDS.exists():
         print("tmp/hwpx-tables.json이 없습니다. python3 scripts/read_hwpx_tables.py를 먼저 실행하세요.")
@@ -108,9 +136,14 @@ def main() -> None:
         if data is None:
             continue
         screen = screen_text(data)
+        for line in badge_lines(data):
+            problems.append(
+                f"제{chapter:02d}편 앞머리에 배지 문구 '{line}'이 본문으로 남아 있습니다."
+            )
         for grid in front_tables(all_grids[key]):
             said = [bare(cell["text"]) for cell in grid["cells"]]
-            said = [one for one in said if len(one) >= 4]
+            # 배지 문구는 일부러 싣지 않습니다(위 badge_lines 설명).
+            said = [one for one in said if len(one) >= 4 and one not in FRONT_BADGES]
             if not said:
                 continue
             tables += 1
