@@ -97,6 +97,135 @@ def local_name(tag: str) -> str:
     return tag.rsplit("}", 1)[-1]
 
 
+def bullet_images(archive: zipfile.ZipFile) -> set[str]:
+    """글머리표로 쓴 그림 이름을 모읍니다.
+
+    한글파일은 '●' 같은 글머리표를 그림으로 대신할 수 있습니다
+    (hh:bullet useImage="1"). 그림이라고 다 본문 그림은 아닙니다. 이것은
+    글머리표라, 화면에서는 이미 목록 기호로 그려집니다.
+
+        제13편  image1(123×123) image2(69×69) image3(70×71)  ← 글머리표
+
+    크기로 어림잡지 않고 한글파일이 적어 둔 자리(hh:bullet)로 가립니다.
+    """
+    found: set[str] = set()
+    if "Contents/header.xml" not in archive.namelist():
+        return found
+
+    def walk(node, in_bullet: bool) -> None:
+        here = in_bullet or local_name(node.tag).lower() == "bullet"
+        if here:
+            for name, value in node.attrib.items():
+                if local_name(name) == "binaryItemIDRef" and value:
+                    found.add(value)
+        for child in node:
+            walk(child, here)
+
+    walk(ET.fromstring(archive.read("Contents/header.xml")), False)
+    return found
+
+
+def page_decoration(archive: zipfile.ZipFile) -> set[str]:
+    """본문에 놓였지만 지면 장식인 그림을 모읍니다.
+
+    편 표지 배경과 쪽 머리에 깔린 띠는 쪽 바탕(masterpage)이 아니라 본문
+    section 안에 그냥 놓여 있는 편이 있습니다. 그래서 '쪽 바탕에서만 부르는
+    그림'을 걷어 내는 것만으로는 걸러지지 않았습니다.
+
+        제6편  image3·image4 : 놓인 크기 59527×84189
+               쪽 크기        : 59528×84186   ← 쪽을 통째로 덮습니다
+               image5        : 49322×4469    ← 쪽 머리에 깔린 납작한 띠
+
+    한글파일은 그림을 어느 크기로 놓았는지(hp:sz), 쪽이 얼마나 큰지
+    (hp:pagePr) 적어 둡니다. 짐작하지 않고 그 수치로 가립니다.
+      · 쪽을 거의 다 덮는 그림(가로·세로 모두 95% 이상) → 지면 장식
+      · 쪽 폭의 70%를 넘으면서 높이가 폭의 1/8도 안 되는 그림 → 머리 띠
+    """
+    found: set[str] = set()
+
+    def sizes_in(node, page: list[int]) -> None:
+        name = local_name(node.tag).lower()
+        if name == "pagepr":
+            page[0] = int(node.get("width") or 0)
+            page[1] = int(node.get("height") or 0)
+        if name == "pic":
+            width = height = 0
+            ref = ""
+            for sub in node.iter():
+                tag = local_name(sub.tag).lower()
+                if tag == "sz" and not width:
+                    width = int(sub.get("width") or 0)
+                    height = int(sub.get("height") or 0)
+                if tag == "img" and not ref:
+                    ref = sub.get("binaryItemIDRef") or ""
+            page_width, page_height = page
+            if ref and width and page_width:
+                covers = width >= page_width * 0.95 and height >= page_height * 0.95
+                band = width >= page_width * 0.70 and height <= width / 8
+                if covers or band:
+                    found.add(ref)
+        for child in node:
+            sizes_in(child, page)
+
+    for name in sorted(archive.namelist()):
+        if SECTION_RE.match(name):
+            sizes_in(ET.fromstring(archive.read(name)), [0, 0])
+    return found
+
+
+def background_pictures(archive: zipfile.ZipFile) -> tuple[set[str], set[str]]:
+    """칸 바탕에 깔린 그림을 '내용'과 '장식'으로 가릅니다.
+
+    매뉴얼은 사진을 칸 안에 넣지 않고 **칸 바탕**으로 까는 자리가 있습니다.
+
+        제12편 물품대장 예시 — 글 없는 칸 둘의 바탕이 물품 사진입니다
+                               (borderFill 150·151 → image1·image2)
+
+    바탕 그림이라고 다 사진은 아닙니다. 글 뒤에 까는 딱지도 있습니다.
+
+        제15편 '붙임' 딱지 — 116×94·124×94·422×94 세 조각을 이어 붙인
+                             둥근 딱지이고, 그 위에 '붙임' 글자가 놓입니다
+
+    가르는 자리는 **그 표에 읽을 글이 있는가**입니다. 바탕 그림을 깐 칸이
+    모두 비어 있으면 그림이 곧 그 표의 내용이고, 한 칸이라도 글을 이고 있으면
+    그림은 글 뒤의 꾸밈입니다. 칸 하나씩 보면 안 됩니다 — '붙임' 딱지는 세
+    조각으로 갈라져 있어 가운데 조각이 든 칸에는 글이 없습니다.
+    """
+    if "Contents/header.xml" not in archive.namelist():
+        return set(), set()
+    fills: dict[str, str] = {}
+    for node in ET.fromstring(archive.read("Contents/header.xml")).iter():
+        if local_name(node.tag).lower() != "borderfill":
+            continue
+        for sub in node.iter():
+            if local_name(sub.tag).lower() == "img" and sub.get("binaryItemIDRef"):
+                fills[node.get("id") or ""] = sub.get("binaryItemIDRef")
+                break
+    content: set[str] = set()
+    behind: set[str] = set()
+    for name in sorted(archive.namelist()):
+        if not SECTION_RE.match(name):
+            continue
+        for table in ET.fromstring(archive.read(name)).iter():
+            if local_name(table.tag).lower() != "tbl":
+                continue
+            here: set[str] = set()
+            worded = False
+            for cell in table.iter():
+                if local_name(cell.tag).lower() != "tc":
+                    continue
+                picture = fills.get(cell.get("borderFillIDRef") or "")
+                if not picture:
+                    continue
+                here.add(picture)
+                if "".join(
+                    sub.text or "" for sub in cell.iter() if local_name(sub.tag).lower() == "t"
+                ).strip():
+                    worded = True
+            (behind if worded else content).update(here)
+    return content, behind - content
+
+
 def decoration_images(archive: zipfile.ZipFile) -> set[str]:
     """쪽 바탕·머리글에서만 부르는 그림 이름을 모읍니다.
 
@@ -173,9 +302,20 @@ def main() -> None:
         label = f"{chapter:02d}"
         found: dict[str, dict] = {}
         with zipfile.ZipFile(path) as archive:
-            skip = decoration_images(archive)
-            # 표 칸 안에 든 그림은 크기를 재지 않고 그대로 씁니다.
-            inside = cell_images(archive)
+            fill_content, fill_behind = background_pictures(archive)
+            # 지면 장식입니다. 한글파일이 적어 둔 자리·크기로 가립니다.
+            #   · 쪽 바탕·머리글에서만 부르는 그림
+            #   · 본문에 놓였지만 쪽을 통째로 덮는 그림(편 표지 배경)과 머리 띠
+            #   · 글머리표로 쓴 그림
+            #   · 글 뒤에 까는 딱지 그림
+            skip = (
+                decoration_images(archive)
+                | page_decoration(archive)
+                | bullet_images(archive)
+                | fill_behind
+            ) - fill_content
+            # 표 칸 안에 든 그림과 글 없는 칸의 바탕 그림은 크기를 재지 않고 그대로 씁니다.
+            inside = cell_images(archive) | fill_content
             for name in archive.namelist():
                 if not name.startswith("BinData/"):
                     continue

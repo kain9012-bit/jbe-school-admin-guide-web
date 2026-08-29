@@ -101,8 +101,6 @@ def wanted_lines(path: Path) -> dict[str, int]:
                     if lines and raw[:1].isspace() and not MARKED.match(raw):
                         continue
                     lines += 1
-                if lines < 2:
-                    continue
                 key = bare("".join(whole))
                 if len(key) < LONG_ENOUGH:
                     continue
@@ -111,8 +109,14 @@ def wanted_lines(path: Path) -> dict[str, int]:
                 # (제5편 '설계변경 등으로 …' 은 한 곳은 3문단, 다른 곳은 4문단).
                 # 화면에 실린 것이 어느 쪽인지 가릴 수 없으므로 적은 쪽으로
                 # 봅니다. 없는 잘못을 알리는 것보다 낫습니다.
+                #
+                # **한 줄짜리 칸도 함께 셉니다.** 예전에는 두 줄 미만이면 아예
+                # 담지 않아, 같은 글이 한 줄로도 적힌 자리를 못 보고 늘 많은
+                # 쪽을 요구했습니다(제14편 앞머리 요약의 흐름 칸은 한 문단인데,
+                # 차례 표의 같은 글이 두 문단이라 없는 잘못이 잡혔습니다).
                 found[key] = min(found.get(key, lines), lines)
-    return found
+    # 어느 자리에서나 한 줄이면 지킬 줄 나눔이 없습니다.
+    return {key: lines for key, lines in found.items() if lines >= 2}
 
 
 def chapter_data(chapter: int) -> dict | None:

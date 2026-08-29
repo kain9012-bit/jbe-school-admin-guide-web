@@ -23,6 +23,9 @@ for (const chapter of context.window.GUIDE_CONFIG.chapters.filter((item) => item
   const data = context.window[chapter.dataGlobal];
 
   for (const work of data.sections) {
+    // 편 앞머리의 '한눈에 보기'(업무 0번)는 그 편을 간추린 지면입니다.
+    // 검색에서는 본문보다 한 걸음 뒤에 세웁니다(docs/assets/search-query.js).
+    const summary = work.number === 0 ? { weight: 0.6 } : null;
     // 업무 항목에 본문 전체를 다시 담으면 색인이 두 배로 불어나고,
     // 긴 글이 무조건 위로 올라와 순위가 뒤틀립니다. 업무를 알아보는 데
     // 필요한 만큼(업무 이름 + 소제목)만 담습니다.
@@ -45,6 +48,7 @@ for (const chapter of context.window.GUIDE_CONFIG.chapters.filter((item) => item
         .length,
       text: [work.title, ...subtitles].join("\n"),
       workId: work.id,
+      ...(summary || {}),
     });
 
     for (const block of work.contentBlocks) {
@@ -64,6 +68,7 @@ for (const chapter of context.window.GUIDE_CONFIG.chapters.filter((item) => item
         text: [work.title, block.title, block.body].join("\n"),
         workId: work.id,
         blockId: block.id,
+        ...(summary || {}),
       });
     }
 

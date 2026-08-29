@@ -96,6 +96,32 @@ def border_fills(archive: zipfile.ZipFile) -> dict[str, str]:
     return found
 
 
+def fill_pictures(archive: zipfile.ZipFile) -> dict[str, str]:
+    """칸 바탕에 그림을 깐 테두리 모음을 모읍니다.
+
+    매뉴얼은 사진을 칸 안에 넣지 않고 **칸 바탕**으로 까는 자리가 있습니다.
+
+        제12편 물품대장 예시 — 글 없는 칸 둘의 바탕이 물품 사진입니다
+                               (borderFill 150·151 → image1·image2)
+
+    이 자리를 읽지 않으면 사진이 통째로 사라집니다. 화면에는 빈 칸 둘만
+    남습니다.
+    """
+    try:
+        root = ET.fromstring(archive.read("Contents/header.xml"))
+    except KeyError:
+        return {}
+    found: dict[str, str] = {}
+    for element in root.iter():
+        if local_name(element.tag) != "borderFill":
+            continue
+        for node in element.iter():
+            if local_name(node.tag) == "img" and node.get("binaryItemIDRef"):
+                found[element.get("id")] = node.get("binaryItemIDRef")
+                break
+    return found
+
+
 # 한컴이 함초롬 글꼴의 개인용 영역(PUA)에 넣어 둔 기호입니다. 유니코드에 없는
 # 자리라 그대로 두면 화면에 네모로 보입니다. 원문 PDF에서 그 자리에 무엇이
 # 찍혀 있는지 확인해 바꿔 답니다. build_chapters_from_hwpx.mjs의 HNC_SYMBOL과
@@ -321,7 +347,18 @@ def cells_of(table: ET.Element):
         yield from cells_of(child)
 
 
-def read_table(table: ET.Element, fills: dict[str, str]) -> dict:
+def backdrop_text(cell: ET.Element, backdrops: dict[str, str]) -> str:
+    """칸의 글을 읽되, 글이 없고 바탕에 사진이 깔린 칸은 그 사진을 냅니다."""
+    said = cell_text(cell)
+    if said.strip():
+        return said
+    picture = backdrops.get(cell.get("borderFillIDRef") or "")
+    return IMAGE_MARK.format(picture) if picture else said
+
+
+def read_table(
+    table: ET.Element, fills: dict[str, str], backdrops: dict[str, str] | None = None
+) -> dict:
     cells = []
     for cell in cells_of(table):
         address = next((node for node in cell if local_name(node.tag) == "cellAddr"), None)
@@ -341,7 +378,7 @@ def read_table(table: ET.Element, fills: dict[str, str]) -> dict:
                 # 줄 높이도 읽습니다. 빈 대장 서식은 적어 넣을 자리가 곧
                 # 내용이라, 높이를 버리면 줄이 종잇장처럼 납작해집니다.
                 "height": int(size.get("height", "0")) if size is not None else 0,
-                "text": cell_text(cell),
+                "text": backdrop_text(cell, backdrops or {}),
                 # 이 칸의 네 쪽 테두리입니다. 매뉴얼이 표로 그린 그림은
                 # 이 선이 곧 모양입니다.
                 "border": fills.get(cell.get("borderFillIDRef"), ""),
@@ -489,6 +526,7 @@ def tables_of(path: Path) -> list[dict]:
             key=lambda name: int(SECTION_RE.match(name).group(1)),
         )
         fills = border_fills(archive)
+        backdrops = fill_pictures(archive)
         found = []
         for name in names:
             root = ET.fromstring(archive.read(name))
@@ -500,7 +538,7 @@ def tables_of(path: Path) -> list[dict]:
             ]
             index_of = {id(element): len(found) + at for at, element in enumerate(here)}
             for element in here:
-                grid = read_table(element, fills)
+                grid = read_table(element, fills, backdrops)
                 outer, cell = enclosing(parents, element)
                 if outer is not None and cell is not None and id(outer) in index_of:
                     address = next(

@@ -43,6 +43,9 @@ window.GUIDE_WORKFLOW_LAYOUT = {
   "facility-security": [
     { title: "보호지역 지정 및 관리", blocks: ["facility-security-b1","facility-security-b2","facility-security-b3","facility-security-b4","facility-security-b5","facility-security-b6","facility-security-b7"] }
   ],
+  "c02-w00": [
+    { title: "한눈에 보기", blocks: ["c02-w00-b1"] }
+  ],
   "c02-w01": [
     { title: "1. 민원인", blocks: ["c02-w01-b1","c02-w01-b2","c02-w01-b3","c02-w01-b4","c02-w01-b5","c02-w01-b6"] },
     { title: "2. 민원인 개인정보 보호", blocks: ["c02-w01-b7","c02-w01-b8","c02-w01-b9","c02-w01-b10"] },
@@ -72,6 +75,9 @@ window.GUIDE_WORKFLOW_LAYOUT = {
   "c02-w05": [
     { title: "유치원 정보공시", blocks: ["c02-w05-b1","c02-w05-b2","c02-w05-b3","c02-w05-b4","c02-w05-b5","c02-w05-b6","c02-w05-b7"] }
   ],
+  "c03-w00": [
+    { title: "한눈에 보기", blocks: ["c03-w00-b1"] }
+  ],
   "local-personnel": [
     { title: "인사제도", blocks: ["local-personnel-b1","local-personnel-b2","local-personnel-b3","local-personnel-b4","local-personnel-b5","local-personnel-b6","local-personnel-b7","local-personnel-b8","local-personnel-b9","local-personnel-b10","local-personnel-b11","local-personnel-b12","local-personnel-b13","local-personnel-b14","local-personnel-b15","local-personnel-b16","local-personnel-b17","local-personnel-b18","local-personnel-b19","local-personnel-b20"] }
   ],
@@ -92,6 +98,9 @@ window.GUIDE_WORKFLOW_LAYOUT = {
     { title: "3. 정년퇴직 및 면직", blocks: ["status-rights-b12","status-rights-b13","status-rights-b14","status-rights-b15","status-rights-b16"] },
     { title: "4. 소청", blocks: ["status-rights-b17","status-rights-b18","status-rights-b19","status-rights-b20","status-rights-b21","status-rights-b22","status-rights-b23"] },
     { title: "5. 고충처리", blocks: ["status-rights-b24","status-rights-b25","status-rights-b26","status-rights-b27","status-rights-b28"] }
+  ],
+  "c04-w00": [
+    { title: "한눈에 보기", blocks: ["c04-w00-b1"] }
   ],
   "c04-w01": [
     { title: "1. 휴가 개요", blocks: ["c04-w01-b1","c04-w01-b2","c04-w01-b3","c04-w01-b4","c04-w01-b5","c04-w01-b6"] },
@@ -117,6 +126,9 @@ window.GUIDE_WORKFLOW_LAYOUT = {
     { title: "2. 당직근무", blocks: ["c04-w06-b10","c04-w06-b11","c04-w06-b12","c04-w06-b13","c04-w06-b14","c04-w06-b15","c04-w06-b16"] },
     { title: "3. 비상근무", blocks: ["c04-w06-b17","c04-w06-b18","c04-w06-b19","c04-w06-b20","c04-w06-b21"] }
   ],
+  "c05-w00": [
+    { title: "한눈에 보기", blocks: ["c05-w00-b1"] }
+  ],
   "c05-w01": [
     { title: "1. 종합감사", blocks: ["c05-w01-b1","c05-w01-b2","c05-w01-b3","c05-w01-b4","c05-w01-b5","c05-w01-b6","c05-w01-b7","c05-w01-b8"] },
     { title: "2. 학교자율형 종합감사", blocks: ["c05-w01-b9","c05-w01-b10","c05-w01-b11","c05-w01-b12","c05-w01-b13","c05-w01-b14","c05-w01-b15"] },
@@ -133,6 +145,9 @@ window.GUIDE_WORKFLOW_LAYOUT = {
   ],
   "c05-w05": [
     { title: "공직자의 이해충돌 방지법", blocks: ["c05-w05-b1","c05-w05-b2","c05-w05-b3","c05-w05-b4","c05-w05-b5","c05-w05-b6","c05-w05-b7","c05-w05-b8","c05-w05-b9","c05-w05-b10"] }
+  ],
+  "c06-w00": [
+    { title: "한눈에 보기", blocks: ["c06-w00-b1"] }
   ],
   "c06-w01": [
     { title: "1. 학교발전기금 운용계획 수립", blocks: ["c06-w01-b1","c06-w01-b2","c06-w01-b3","c06-w01-b4","c06-w01-b5","c06-w01-b6","c06-w01-b7","c06-w01-b8"] },
@@ -155,6 +170,9 @@ window.GUIDE_WORKFLOW_LAYOUT = {
     { title: "1. 4대 사회보험의 가입기준", blocks: ["c06-w03-b1","c06-w03-b2","c06-w03-b3","c06-w03-b4"] },
     { title: "2. 4대 사회보험의 산정", blocks: ["c06-w03-b5","c06-w03-b6","c06-w03-b7","c06-w03-b8","c06-w03-b9"] },
     { title: "3. 4대 사회보험의 납부", blocks: ["c06-w03-b10","c06-w03-b11","c06-w03-b12","c06-w03-b13","c06-w03-b14"] }
+  ],
+  "c07-w00": [
+    { title: "한눈에 보기", blocks: ["c07-w00-b1"] }
   ],
   "c07-w01": [
     { title: "1. 나이스 급여작업", blocks: ["c07-w01-b1","c07-w01-b2","c07-w01-b3","c07-w01-b4","c07-w01-b5","c07-w01-b6","c07-w01-b7","c07-w01-b8","c07-w01-b9","c07-w01-b10"] },
@@ -190,6 +208,9 @@ window.GUIDE_WORKFLOW_LAYOUT = {
     { title: "3. 복지점수 관리", blocks: ["c07-w06-b11","c07-w06-b12","c07-w06-b13"] },
     { title: "4. 복지점수 지급신청 및 처리", blocks: ["c07-w06-b14","c07-w06-b15","c07-w06-b16","c07-w06-b17"] }
   ],
+  "c08-w00": [
+    { title: "한눈에 보기", blocks: ["c08-w00-b1"] }
+  ],
   "c08-w01": [
     { title: "교육공무직원의 개념", blocks: ["c08-w01-b1","c08-w01-b2","c08-w01-b3","c08-w01-b4","c08-w01-b5"] }
   ],
@@ -206,12 +227,18 @@ window.GUIDE_WORKFLOW_LAYOUT = {
   "c08-w05": [
     { title: "복무", blocks: ["c08-w05-b1","c08-w05-b2","c08-w05-b3","c08-w05-b4","c08-w05-b5","c08-w05-b6","c08-w05-b7","c08-w05-b8","c08-w05-b9","c08-w05-b10"] }
   ],
+  "c09-w00": [
+    { title: "한눈에 보기", blocks: ["c09-w00-b1"] }
+  ],
   "c09-w01": [
     { title: "1. [사업부서] 운영계획 수립", blocks: ["c09-w01-b1","c09-w01-b2","c09-w01-b3","c09-w01-b4"] },
     { title: "2. [사업부서] 학교운영위원회 심의", blocks: ["c09-w01-b5","c09-w01-b6","c09-w01-b7","c09-w01-b8"] },
     { title: "3. 징수 및 반환", blocks: ["c09-w01-b9","c09-w01-b10","c09-w01-b11","c09-w01-b12","c09-w01-b13"] },
     { title: "4. 급식비 집행", blocks: ["c09-w01-b14","c09-w01-b15","c09-w01-b16","c09-w01-b17","c09-w01-b18","c09-w01-b19","c09-w01-b20","c09-w01-b21"] },
     { title: "5. 공동조리 운영관리", blocks: ["c09-w01-b22","c09-w01-b23","c09-w01-b24"] }
+  ],
+  "c10-w00": [
+    { title: "한눈에 보기", blocks: ["c10-w00-b1"] }
   ],
   "c10-w01": [
     { title: "1. 학교(유치원)운영위원회 규정 제·개정", blocks: ["c10-w01-b1","c10-w01-b2","c10-w01-b3","c10-w01-b4","c10-w01-b5","c10-w01-b6","c10-w01-b7"] },
@@ -227,6 +254,9 @@ window.GUIDE_WORKFLOW_LAYOUT = {
     { title: "3. 회의 개최", blocks: ["c10-w02-b12","c10-w02-b13","c10-w02-b14","c10-w02-b15","c10-w02-b16"] },
     { title: "4. 심의(자문) 결과 처리", blocks: ["c10-w02-b17","c10-w02-b18","c10-w02-b19","c10-w02-b20","c10-w02-b21","c10-w02-b22"] },
     { title: "5. 심의사항", blocks: ["c10-w02-b23"] }
+  ],
+  "c11-w00": [
+    { title: "한눈에 보기", blocks: ["c11-w00-b1"] }
   ],
   "c11-w01": [
     { title: "1. 공유재산의 이해", blocks: ["c11-w01-b1","c11-w01-b2","c11-w01-b3","c11-w01-b4","c11-w01-b5","c11-w01-b6","c11-w01-b7"] },
@@ -267,6 +297,9 @@ window.GUIDE_WORKFLOW_LAYOUT = {
     { title: "1. 한국교육시설안전원 교육시설공제 가입", blocks: ["c11-w08-b1","c11-w08-b2","c11-w08-b3","c11-w08-b4","c11-w08-b5","c11-w08-b6","c11-w08-b7","c11-w08-b8"] },
     { title: "2. 공제 사고통보 및 교육시설 공제급여 신청", blocks: ["c11-w08-b9","c11-w08-b10","c11-w08-b11"] }
   ],
+  "c12-w00": [
+    { title: "한눈에 보기", blocks: ["c12-w00-b1"] }
+  ],
   "c12-w01": [
     { title: "물품관리 및 물품관리 체계", blocks: ["c12-w01-b1","c12-w01-b2","c12-w01-b3","c12-w01-b4","c12-w01-b5","c12-w01-b6","c12-w01-b7","c12-w01-b8","c12-w01-b9"] }
   ],
@@ -302,6 +335,9 @@ window.GUIDE_WORKFLOW_LAYOUT = {
   "c12-w09": [
     { title: "1. 전자태그 기반 물품관리", blocks: ["c12-w09-b1","c12-w09-b2","c12-w09-b3","c12-w09-b4","c12-w09-b5","c12-w09-b6","c12-w09-b7","c12-w09-b8","c12-w09-b9","c12-w09-b10"] },
     { title: "2. 물품 실태점검", blocks: ["c12-w09-b11","c12-w09-b12","c12-w09-b13","c12-w09-b14","c12-w09-b15","c12-w09-b16"] }
+  ],
+  "c13-w00": [
+    { title: "한눈에 보기", blocks: ["c13-w00-b1"] }
   ],
   "c13-w01": [
     { title: "1. 유지관리", blocks: ["c13-w01-b1","c13-w01-b2","c13-w01-b3","c13-w01-b4","c13-w01-b5"] },
@@ -374,6 +410,9 @@ window.GUIDE_WORKFLOW_LAYOUT = {
     { title: "7. 기타사항", blocks: ["c13-w12-b18","c13-w12-b19","c13-w12-b20","c13-w12-b21","c13-w12-b22","c13-w12-b23","c13-w12-b24"] },
     { title: "8. 위험물 안전관리", blocks: ["c13-w12-b25","c13-w12-b26","c13-w12-b27","c13-w12-b28","c13-w12-b29","c13-w12-b30","c13-w12-b31"] }
   ],
+  "c14-w00": [
+    { title: "한눈에 보기", blocks: ["c14-w00-b1"] }
+  ],
   "c14-w01": [
     { title: "학교회계의 이해", blocks: ["c14-w01-b1","c14-w01-b2","c14-w01-b3","c14-w01-b4","c14-w01-b5","c14-w01-b6","c14-w01-b7"] }
   ],
@@ -412,6 +451,9 @@ window.GUIDE_WORKFLOW_LAYOUT = {
     { title: "3. 결산작업", blocks: ["c14-w08-b9","c14-w08-b10","c14-w08-b11","c14-w08-b12","c14-w08-b13","c14-w08-b14"] },
     { title: "4. 결산 보고", blocks: ["c14-w08-b15","c14-w08-b16","c14-w08-b17"] }
   ],
+  "c15-w00": [
+    { title: "한눈에 보기", blocks: ["c15-w00-b1"] }
+  ],
   "c15-w01": [
     { title: "1. 학교회계 수입 용어 정의", blocks: ["c15-w01-b1"] },
     { title: "2. 세입담당 일일업무 처리순서", blocks: ["c15-w01-b2","c15-w01-b3","c15-w01-b4","c15-w01-b5","c15-w01-b6"] }
@@ -437,6 +479,9 @@ window.GUIDE_WORKFLOW_LAYOUT = {
     { title: "2. 기관별 역할", blocks: ["c15-w04-b6","c15-w04-b7","c15-w04-b8","c15-w04-b9","c15-w04-b10"] },
     { title: "3. 처리절차", blocks: ["c15-w04-b11","c15-w04-b12","c15-w04-b13"] },
     { title: "4. 예산부담", blocks: ["c15-w04-b14","c15-w04-b15","c15-w04-b16","c15-w04-b17"] }
+  ],
+  "c16-w00": [
+    { title: "한눈에 보기", blocks: ["c16-w00-b1"] }
   ],
   "c16-w01": [
     { title: "1. 예산집행 품의", blocks: ["c16-w01-b1","c16-w01-b2","c16-w01-b3","c16-w01-b4","c16-w01-b5"] },
@@ -507,6 +552,9 @@ window.GUIDE_WORKFLOW_LAYOUT = {
     { title: "1. 소득세 원천징수 구분", blocks: ["c16-w13-b1","c16-w13-b2","c16-w13-b3","c16-w13-b4","c16-w13-b5"] },
     { title: "2. 원천공제 신고 납부", blocks: ["c16-w13-b6","c16-w13-b7","c16-w13-b8","c16-w13-b9"] }
   ],
+  "c17-w00": [
+    { title: "한눈에 보기", blocks: ["c17-w00-b1"] }
+  ],
   "c17-w01": [
     { title: "1. 계약의 의의", blocks: ["c17-w01-b1","c17-w01-b2","c17-w01-b3","c17-w01-b4"] },
     { title: "2. 계약용어 정리", blocks: ["c17-w01-b5","c17-w01-b6","c17-w01-b7","c17-w01-b8"] },
@@ -539,6 +587,9 @@ window.GUIDE_WORKFLOW_LAYOUT = {
   "c17-w06": [
     { title: "수의계약 배제업체 개념 및 절차", blocks: ["c17-w06-b1","c17-w06-b2","c17-w06-b3","c17-w06-b4","c17-w06-b5","c17-w06-b6"] }
   ],
+  "c18-w00": [
+    { title: "한눈에 보기", blocks: ["c18-w00-b1"] }
+  ],
   "c18-w01": [
     { title: "일정별 개교업무", blocks: ["c18-w01-b1","c18-w01-b2"] }
   ],
@@ -565,6 +616,9 @@ window.GUIDE_WORKFLOW_LAYOUT = {
   "c18-w06": [
     { title: "1. 물품 및 재산관리", blocks: ["c18-w06-b1","c18-w06-b2","c18-w06-b3","c18-w06-b4","c18-w06-b5"] },
     { title: "2. 시설관리", blocks: ["c18-w06-b6","c18-w06-b7","c18-w06-b8","c18-w06-b9","c18-w06-b10","c18-w06-b11"] }
+  ],
+  "c19-w00": [
+    { title: "한눈에 보기", blocks: ["c19-w00-b1"] }
   ],
   "c19-w01": [
     { title: "일정별 폐지학교 행정업무", blocks: ["c19-w01-b1","c19-w01-b2"] }

@@ -319,6 +319,13 @@
       : "업무, 질문, 서식을 검색하세요";
   }
 
+  // 편 앞머리의 요약 지면은 업무가 아니라 그 편을 한 장으로 보여 주는
+  // 지면입니다. 원문에 업무 번호가 없으므로 '업무 00'이라 부르지 않습니다.
+  const workBadge = (work) =>
+    work.number === 0 ? "한눈에 보기" : `업무 ${String(work.number).padStart(2, "0")}`;
+  const sideBadge = (work) =>
+    work.number === 0 ? "★" : String(work.number).padStart(2, "0");
+
   function renderOverview() {
     workGrid.innerHTML = data.sections
       .map((work) => {
@@ -328,7 +335,7 @@
           <a class="structured-item work-card"
              href="${routeFor(work.id, workflow.steps[0]?.id)}">
             <div class="work-card-top">
-              <span class="work-card-number">업무 ${String(work.number).padStart(2, "0")}</span>
+              <span class="work-card-number">${workBadge(work)}</span>
             </div>
             <h3>${escapeHtml(work.title)}</h3>
             <p>${escapeHtml(workflow.intro)}</p>
@@ -353,7 +360,7 @@
             <a class="lnb-btn${work.id === currentWorkId ? " active" : ""}"
                href="${routeFor(work.id, firstStep?.id)}"
                ${work.id === currentWorkId ? 'aria-current="page"' : ""}>
-              <span class="side-number">${String(work.number).padStart(2, "0")}</span>
+              <span class="side-number">${sideBadge(work)}</span>
               <span>${escapeHtml(work.title)}</span>
             </a>
           </li>
@@ -1365,7 +1372,7 @@
     overviewView.hidden = true;
     workView.hidden = false;
     renderSideNavigation();
-    byId("work-number").textContent = `업무 ${String(work.number).padStart(2, "0")}`;
+    byId("work-number").textContent = workBadge(work);
     byId("work-title").textContent = work.title;
     const introNode = byId("work-intro");
     introNode.textContent = workflows[work.id].intro;
