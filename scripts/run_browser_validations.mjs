@@ -6,6 +6,7 @@
 //   · validate_source_presentation.mjs  흐름도가 안 끊기고 글머리표가 남는지 확인
 //   · validate_tip_placement.mjs   TIP 상자가 원문에 놓인 자리에 그려지는지 확인
 //   · validate_nested_tables.mjs   칸 안에 그려진 표가 화면에서도 표인지 확인
+//   · validate_section_nesting.mjs 구역 머리 아래 항목이 그 구역에 딸려 보이는지 확인
 //
 // 19편을 한 번에 열면 오래 걸려 중간에 끊깁니다. 그래서 몇 편씩 나눠 돌립니다.
 //
@@ -57,6 +58,7 @@ for (const job of [
   "validate_source_presentation.mjs",
   "validate_tip_placement.mjs",
   "validate_nested_tables.mjs",
+  "validate_section_nesting.mjs",
 ]) {
   for (const chapters of GROUPS) {
     const result = spawnSync(

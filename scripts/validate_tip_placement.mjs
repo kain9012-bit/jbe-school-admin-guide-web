@@ -107,7 +107,10 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
         await page.waitForTimeout(250);
       }
       const shown = await page.evaluate(() =>
-        [...document.querySelectorAll("#step-actions > [data-source-block]")].map((node) =>
+        // 구역 머리(【교육청】·[참고1]) 아래 항목은 머리 상자 '안에' 그려집니다.
+        // 곧은 자식만 세면 그 항목들이 통째로 빠져 앞뒤 차례를 볼 수 없으므로,
+        // 딸린 것까지 모두 세되 화면에 그려진 차례 그대로 받습니다.
+        [...document.querySelectorAll("#step-actions [data-source-block]")].map((node) =>
           node.getAttribute("data-source-block")
         )
       );

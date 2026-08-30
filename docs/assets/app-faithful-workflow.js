@@ -651,7 +651,35 @@
     </li>`;
   }
 
-  function sourceBlockMarkup(block) {
+  // 구역을 여는 머리입니다(제14편 【교육청】·【학교】·[참고1]).
+  // 원문은 이 머리 아래에 항목 번호를 1부터 다시 매깁니다. 그러니 머리와
+  // 그 아래 항목을 나란한 형제로 그리면 '1·2·1·2·3·4·5·1·2…'가 줄줄이
+  // 늘어선 것으로만 보여, 어느 1이 교육청 일이고 어느 1이 학교 일인지
+  // 알 수 없습니다.
+  const SECTION_HEAD = /^(?:【[^】]{1,20}】|\[(?:참고|예시|서식)\s*\d+\])$/;
+  const isSectionHead = (block) => SECTION_HEAD.test(String(block.title || "").trim());
+
+  // 구역 머리를 만나면, 다음 구역 머리가 나올 때까지의 항목을 그 머리에
+  // 딸린 것으로 묶습니다. 화면에서도 머리 상자 '안에' 그려집니다.
+  function groupBySection(blocks) {
+    const rows = [];
+    let open = null;
+    for (const block of blocks) {
+      const seat = { block, children: [] };
+      if (isSectionHead(block)) {
+        open = seat;
+        rows.push(seat);
+        continue;
+      }
+      if (open) open.children.push(seat);
+      else rows.push(seat);
+    }
+    return rows;
+  }
+
+  function sourceBlockMarkup(seat) {
+    const block = seat.block || seat;
+    const children = seat.children || [];
     const generatedTitle = /^매뉴얼 \d+쪽$/.test(block.title);
     const structural =
       !block.body && (/^세부내용\s/.test(block.title) || block.title === "업무 흐름도");
@@ -681,12 +709,8 @@
       <li class="source-detail${structural ? " structural-marker" : ""}${
         block.tip ? " source-detail-tip" : ""
       }${
-        // 구역을 여는 머리입니다(【교육청】·【학교】·[참고1]). 그 아래 항목
-        // 번호가 1부터 다시 시작하므로, 소제목과 같은 모양으로 그리면 구역이
-        // 갈린 것이 보이지 않습니다. 띠로 눈에 띄게 긋습니다.
-        /^(?:【[^】]{1,20}】|\[(?:참고|예시|서식)\s*\d+\])$/.test(String(block.title || "").trim())
-          ? " source-detail-section"
-          : ""
+        // 구역 머리는 띠로 눈에 띄게 긋고, 딸린 항목을 그 안에 들여 세웁니다.
+        isSectionHead(block) ? " source-detail-section" : ""
       }"
           data-source-block="${escapeHtml(block.id)}">
         ${heading ? `<strong>${escapeHtml(heading)}</strong>` : ""}
@@ -717,6 +741,15 @@
               })()}</ul>`
             : ""
         }
+        ${
+          // 이 구역에 딸린 항목입니다. 형제로 두지 않고 머리 상자 안에
+          // 넣어야 '이 항목들은 이 구역 이야기'라는 것이 보입니다.
+          children.length
+            ? `<ul class="source-detail-list source-section-body">${children
+                .map(sourceBlockMarkup)
+                .join("")}</ul>`
+            : ""
+        }
       </li>
     `;
   }
@@ -743,7 +776,7 @@
     const container = target.closest(".task-block");
     container.hidden = visible.length === 0;
     target.classList.add("source-detail-list");
-    target.innerHTML = visible.map(sourceBlockMarkup).join("");
+    target.innerHTML = groupBySection(visible).map(sourceBlockMarkup).join("");
     // 칸 안 항목 앞의 기호는 그려 놓은 것을 재 보고 세웁니다.
     // 그리기 전에는 줄이 몇 개로 넘어가는지 알 수 없습니다.
     window.GUIDE_DETAIL_RENDERER?.showCellMarks?.(target);
