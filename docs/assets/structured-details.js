@@ -1140,7 +1140,20 @@
     // 커서 들어갈 수 있는 표까지 가로 스크롤이 붙었습니다.
     const drawing = Boolean(picture) && Array.isArray(base) && base.length === columnCount;
     const needs = drawing ? room : neededWidth(grid, columnCount);
-    const scrolls = needs > room;
+    // 칸 안에 든 표에는 가로 스크롤을 두지 않습니다.
+    //
+    // 스크롤은 '이 표는 넓으니 넘겨 보라'는 뜻인데, 칸 안에서는 넘겨 볼 자리
+    // 자체가 좁아(제14편 앞머리 요약의 안쪽 표는 칸이 311px입니다) 스크롤바가
+    // 표를 반쯤 가립니다. 게다가 바깥 표에는 스크롤이 없으니 그 안에서만
+    // 따로 밀리는 것이 되어 어디를 보고 있는지 알 수 없습니다.
+    //
+    // 한글은 글자마다 접히므로 칸 폭에 맞춰 줄이면 줄이 늘 뿐 글자는 안
+    // 끊깁니다. 원문에서도 좁은 칸의 글은 여러 줄로 접혀 있습니다.
+    //
+    // 폭이 정말 넓어 넘겨 봐야 하는 표(제7편 수당표 22열)는 본문에 홀로
+    // 놓인 표라 여기에 걸리지 않습니다.
+    const inCell = Number(available) > 0;
+    const scrolls = !inCell && needs > room;
     const widths = drawing ? base : fitWidths(base, grid, columnCount, scrolls ? needs : room);
     return `
       <div class="source-table-scroll" data-picture="${drawing ? 1 : 0}">

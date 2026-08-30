@@ -2,7 +2,7 @@
 // 손으로 고치지 마세요. 자산을 바꾼 뒤 스크립트를 다시 실행하세요.
 window.GUIDE_ASSET_VERSIONS = {
   "assets/app-faithful-workflow.js": "d459a31f",
-  "assets/asset-versions.js": "9848fa81",
+  "assets/asset-versions.js": "b540e109",
   "assets/chapter1-data.js": "37f120dc",
   "assets/chapter10-data.js": "ebe71853",
   "assets/chapter11-data.js": "88578b54",
@@ -33,7 +33,7 @@ window.GUIDE_ASSET_VERSIONS = {
   "assets/search-query.js": "924289d8",
   "assets/semantic-workflow.css": "1c36debd",
   "assets/structured-details.css": "d48b551d",
-  "assets/structured-details.js": "6e064c29",
+  "assets/structured-details.js": "1a6ddf3b",
   "assets/styles-v2.css": "b43bc7be",
   "assets/workflow-faithful.css": "cdee28df",
   "assets/workflow-layout.js": "57fb2063",
