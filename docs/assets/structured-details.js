@@ -943,6 +943,77 @@
   //               잡혀 그 상자의 글만 굵었습니다.
   //
   // 단마다 따로 그리고 그 사이에 원문의 화살표를 세웁니다.
+  // 갈래로 갈리는 세로 절차입니다(빌더의 branchLanes).
+  //
+  //   제13편 시설물 관리위탁 '2. 유지관리자 선임'
+  //     [건축물 관리주체(소유자 또는 관리자)]   ← 두 갈래를 덮는 머리 단계
+  //        ⇩                    ⇩
+  //     [유지관리자 지정]      [시설물 관리전문업체 위탁]
+  //        ⇩
+  //     [대한기계설비건설협회 경력신고 / 등급산정…]
+  //        ⇩ …
+  //
+  // 한 줄기로 이으면 오른쪽 갈래가 왼쪽 줄기 안으로 딸려 들어갑니다.
+  // 갈래마다 제 열 자리에 세우고, 그 안에서 상자를 위아래로 쌓습니다.
+  function branchMarkup(caption, table) {
+    const plan = table.branch;
+    if (!plan || !Array.isArray(plan.lanes) || plan.lanes.length < 2) return "";
+    const rows = [table.headers || [], ...(table.rows || [])];
+    const widths = Array.isArray(table.widths) ? table.widths : null;
+
+    // 한 상자입니다. 줄이 하나뿐이고 칸도 하나면 글만 놓습니다.
+    const boxMarkup = (mine) => {
+      if (!mine.length) return "";
+      const only = mine.length === 1 && mine[0].length === 1;
+      const inside = only
+        ? cellMarkup(cellLines(unwrap(mine[0][0].text)))
+        : spannedTableMarkup("", mine[0], mine.slice(1), null, 0, false, true);
+      return `<span class="source-flow-step"${only ? "" : ' data-table="1"'}>${inside}</span>`;
+    };
+
+    const laneWidth = (lane) => {
+      if (!widths) return 100 / plan.lanes.length;
+      const mine = widths
+        .slice(lane.columns[0], lane.columns[1] + 1)
+        .reduce((sum, value) => sum + Number(value || 0), 0);
+      return mine || 100 / plan.lanes.length;
+    };
+    const room = plan.lanes.reduce((sum, lane) => sum + laneWidth(lane), 0) || 100;
+
+    const head = rows.slice(plan.head[0], plan.head[1] + 1);
+    const headCells = head.map((row) => row.filter((cell) => !cell.filler));
+    const top = headCells.some((row) => row.length) ? boxMarkup(headCells) : "";
+
+    const lanes = plan.lanes
+      .map((lane) => {
+        const [left, right] = lane.columns;
+        const steps = lane.steps
+          .map((step, at) => {
+            const mine = stepGrid(rows.slice(step[0], step[1] + 1), left, right);
+            const box = boxMarkup(mine);
+            if (!box) return "";
+            const link = at === 0 ? lane.lead : lane.marks[at - 1];
+            return (
+              (link
+                ? `<span class="source-flow-turn" aria-hidden="true">${escapeHtml(link)}</span>`
+                : "") + box
+            );
+          })
+          .join("");
+        const share = ((laneWidth(lane) / room) * 96).toFixed(1);
+        return `<div class="source-flow-lane" style="--flow-width: ${share}%">${steps}</div>`;
+      })
+      .join("");
+
+    return `
+      <div class="source-flow-branch" data-source="branch">
+        ${caption ? `<p class="source-table-caption">${escapeHtml(caption)}</p>` : ""}
+        ${top ? `<div class="source-flow-top">${top}</div>` : ""}
+        <div class="source-flow-lanes">${lanes}</div>
+      </div>
+    `;
+  }
+
   function foldedTableMarkup(caption, table) {
     const bands = Array.isArray(table.bands) ? table.bands : null;
     if (!bands || bands.length < 2 || table.picture) return "";
@@ -1467,7 +1538,7 @@
       // 칸에 그대로 섭니다.
       drewGrid = true;
       // 원문이 접어 놓은 표는 접힌 자리에서 갈라 상자마다 따로 그립니다.
-      const folded = foldedTableMarkup(caption, table);
+      const folded = branchMarkup(caption, table) || foldedTableMarkup(caption, table);
       pieces.push(
         folded ||
           spannedTableMarkup(caption, headerCells, table.rows, table.widths, 0, table.picture)

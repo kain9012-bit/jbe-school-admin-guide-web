@@ -106,8 +106,11 @@ def main() -> None:
             # 화면이 표로 그리지 않은 것(상자·서식 지면)은 여기서 보지 않습니다.
             if table is None:
                 continue
-            # 절차 카드로 다시 그린 표는 테두리가 상자와 화살표로 살아납니다.
-            if table.get("flow") or table.get("folds"):
+            # 절차로 다시 그린 표는 테두리가 상자와 화살표로 살아납니다.
+            #   flow   — 가로 절차 카드
+            #   folds  — 세로로 단을 나눈 자리
+            #   branch — 갈래로 갈리는 세로 절차
+            if table.get("flow") or table.get("folds") or table.get("branch"):
                 continue
             checked += 1
             if not table.get("picture"):

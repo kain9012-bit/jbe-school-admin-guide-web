@@ -138,6 +138,11 @@ def main() -> None:
             if not mine:
                 continue  # 화면에 실리지 않았거나 그림으로 그린 표입니다.
             work, block, table = mine[0]
+            # 갈래로 갈리는 세로 절차는 단으로 나누지 않습니다. 갈래마다
+            # 제 안에서 상자를 쌓으므로 접힌 자리가 남지 않습니다
+            # (제13편 '2. 유지관리자 선임').
+            if table.get("branch"):
+                continue
             folds = fold_rows(grid, not table.get("flow"))
             if not folds:
                 continue

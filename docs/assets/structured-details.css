@@ -940,3 +940,49 @@
 .source-flow-step[data-table="1"] .source-criteria-table {
   height: 100%;
 }
+
+/* 갈래로 갈리는 세로 절차입니다(제13편 '2. 유지관리자 선임').
+   머리 단계 하나 아래로 갈래가 나란히 서고, 갈래마다 상자를 위아래로
+   쌓으며 그 사이에 원문 화살표를 세웁니다. */
+.source-flow-branch {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 12px 0 18px;
+}
+.source-flow-top {
+  display: flex;
+  justify-content: center;
+}
+.source-flow-top .source-flow-step {
+  width: min(100%, 520px);
+}
+.source-flow-lanes {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.source-flow-lane {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex: 1 1 var(--flow-width, 45%);
+  min-width: min(100%, 260px);
+  max-width: 100%;
+}
+.source-flow-branch .source-flow-turn {
+  display: block;
+  text-align: center;
+  line-height: 1.1;
+  padding: 4px 0;
+  color: var(--guide-muted, #6b7280);
+}
+/* 갈래 상자 안의 칸은 이름칸이 아닙니다. 절차의 한 단계일 뿐이라
+   첫 줄·첫 열만 굵어지면 그 상자만 달라 보입니다. */
+.source-flow-branch .source-criteria-table thead th,
+.source-flow-branch .source-criteria-table tbody th {
+  background: transparent;
+  font-weight: 400;
+}

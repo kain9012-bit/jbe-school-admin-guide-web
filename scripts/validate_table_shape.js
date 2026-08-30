@@ -230,6 +230,10 @@ for (let id = 1; id <= 19; id += 1) {
           }
           continue;
         }
+        // 갈래로 갈리는 세로 절차는 원문 자리를 그대로 둡니다. 갈래와 갈래
+        // 사이의 빈 열이 곧 갈래를 가르는 자리라, 걷어 내면 갈래가 붙습니다
+        // (제13편 '2. 유지관리자 선임').
+        if (table.branch) continue;
         if (blankColumns) {
           problems.push(
             `${where}: ${shape.rows}행 ${shape.columns}열 가운데 빈 열이 ${blankColumns}개 있습니다.`
