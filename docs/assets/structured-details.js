@@ -65,12 +65,24 @@
   const pictureOnly = (value) =>
     hasPicture(value) && !String(value).replace(PICTURE_MARK, "").replace(/[\s/·]+/g, "");
 
+  // 원문이 그림을 본문 폭의 몇 %로 놓았는지입니다. 화면도 그 폭으로 그립니다.
+  // 예전에는 사진 한 장을 34rem(약 340px)으로 못박아 두어, 원문에서 본문 폭을
+  // 거의 채우던 그림(제14편 [참고1] 편성절차 개요 — 본문 폭의 93%)이 절반도
+  // 안 되게 쪼그라들었습니다.
+  function placeOf(name) {
+    const data = window.ACTIVE_GUIDE_DATA || {};
+    const place = (data.pictures || {})[name];
+    return Number(place) > 0 ? Math.min(Number(place), 100) : 0;
+  }
+
   function pictureMarkup(name) {
     const chapter = (window.ACTIVE_GUIDE_CHAPTER && window.ACTIVE_GUIDE_CHAPTER.id) || "01";
     // 그림은 손실 없이(PNG) 담아 둡니다. JPEG로 줄이면 글자가 든 그림의
     // 글씨가 뭉개져 원본보다 흐려집니다(scripts/extract_manual_images.py).
     const src = `assets/manual-images/chapter${chapter}/${escapeHtml(name)}.png`;
-    return `<img class="source-picture" src="${src}" alt="매뉴얼 그림" loading="lazy" />`;
+    const place = placeOf(name);
+    const room = place ? ` style="--picture-place: ${place}%"` : "";
+    return `<img class="source-picture" src="${src}" alt="매뉴얼 그림" loading="lazy"${room} />`;
   }
 
   // 사진이 잇달아 나오면 원문처럼 한 줄에 나란히 놓습니다. kordoc이 칸 사이에

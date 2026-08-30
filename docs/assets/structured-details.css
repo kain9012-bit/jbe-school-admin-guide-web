@@ -620,7 +620,9 @@
 
 .source-picture-row[style*="--picture-count: 1"] > .source-picture,
 .source-picture-row[style*="--picture-count: 1"] > .source-picture-cell {
-  max-width: 34rem;
+  /* 원문이 본문 폭의 몇 %로 놓았는지 적어 두면 그 폭으로 그립니다
+     (--picture-place). 적혀 있지 않은 그림만 예전처럼 34rem으로 둡니다. */
+  max-width: var(--picture-place, 34rem);
 }
 
 /* 사진 아래에 그 사진의 이름을 답니다. 원문 안쪽 표의 아랫줄입니다. */
@@ -985,4 +987,26 @@
 .source-flow-branch .source-criteria-table tbody th {
   background: transparent;
   font-weight: 400;
+}
+
+/* 구역을 여는 머리입니다(제14편 【교육청】·【학교】·[참고1]).
+   그 아래 항목 번호가 1부터 다시 시작하므로, 여느 소제목과 같은 모양이면
+   구역이 갈린 것이 보이지 않습니다. 위에 굵은 선을 긋고 이름을 크게 세워
+   '여기서부터 다른 구역'임을 눈에 띄게 합니다. */
+.source-detail.source-detail-section {
+  margin-top: 28px;
+  padding-top: 18px;
+  border-top: 2px solid var(--guide-accent, #1d4ed8);
+}
+/* 소제목 크기는 semantic-workflow.css의 `.action-block .source-detail > strong`
+   (1.8rem)이 정합니다. 구역 머리는 그보다 커야 '여기서부터 다른 구역'으로
+   읽히므로, 같은 무게의 선택자로 다시 정합니다. */
+.action-block .source-detail.source-detail-section > strong {
+  display: block;
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+  color: var(--guide-blue-dark, #1d4ed8);
+}
+.source-detail.source-detail-section + .source-detail {
+  border-top: 0;
 }

@@ -173,6 +173,53 @@ def page_decoration(archive: zipfile.ZipFile) -> set[str]:
     return found
 
 
+def placed_widths(archive: zipfile.ZipFile) -> dict[str, int]:
+    """그림을 **본문 폭의 몇 %로 놓았는지** 읽습니다.
+
+    비트맵이 몇 픽셀인지는 그림을 얼마나 크게 보여 줄지와 상관이 없습니다.
+    매뉴얼을 만든 사람이 정한 것은 '지면에서 이만큼 차지한다'이고, 그 값이
+    hp:pic 안의 hp:sz에 적혀 있습니다.
+
+        제14편 [참고1] K-에듀파인 편성절차 그림
+        비트맵      900점
+        놓인 크기   44610 (본문 폭 49322의 90%)
+
+    이것을 읽지 않으면 화면이 제 나름의 크기로 그립니다. 실제로 사진 한 장은
+    340px로 못박혀 있어서, 원문에서 본문 폭을 거의 채우던 그림이 절반도 안
+    되게 쪼그라들었습니다.
+    """
+    found: dict[str, int] = {}
+
+    def walk(node, room: list[int]) -> None:
+        name = local_name(node.tag).lower()
+        if name == "pagepr":
+            width = int(node.get("width") or 0)
+            margin = next((c for c in node if local_name(c.tag).lower() == "margin"), None)
+            left = int(margin.get("left") or 0) if margin is not None else 0
+            right = int(margin.get("right") or 0) if margin is not None else 0
+            room[0] = max(0, width - left - right)
+        if name == "pic":
+            width = 0
+            ref = ""
+            for sub in node.iter():
+                tag = local_name(sub.tag).lower()
+                if tag == "sz" and not width:
+                    width = int(sub.get("width") or 0)
+                if tag == "img" and not ref:
+                    ref = sub.get("binaryItemIDRef") or ""
+            if ref and width and room[0]:
+                share = round(width / room[0] * 100)
+                # 본문 폭을 넘겨 놓은 그림은 폭에 맞춥니다.
+                found[ref] = max(found.get(ref, 0), min(share, 100))
+        for child in node:
+            walk(child, room)
+
+    for name in sorted(archive.namelist()):
+        if SECTION_RE.match(name):
+            walk(ET.fromstring(archive.read(name)), [0])
+    return found
+
+
 def background_pictures(archive: zipfile.ZipFile) -> tuple[set[str], set[str]]:
     """칸 바탕에 깔린 그림을 '내용'과 '장식'으로 가릅니다.
 
@@ -303,6 +350,7 @@ def main() -> None:
         found: dict[str, dict] = {}
         with zipfile.ZipFile(path) as archive:
             fill_content, fill_behind = background_pictures(archive)
+            placed = placed_widths(archive)
             # 지면 장식입니다. 한글파일이 적어 둔 자리·크기로 가립니다.
             #   · 쪽 바탕·머리글에서만 부르는 그림
             #   · 본문에 놓였지만 쪽을 통째로 덮는 그림(편 표지 배경)과 머리 띠
@@ -358,6 +406,8 @@ def main() -> None:
                     # kordoc이 붙인 이름('image_005.bmp')으로 옵니다. 두 이름을
                     # 잇는 길이 없으므로 그림 자체의 지문으로 맞춥니다.
                     "sha1": hashlib.sha1(raw).hexdigest(),
+                    # 원문이 본문 폭의 몇 %로 놓았는지입니다(위 placed_widths).
+                    **({"place": placed[key]} if placed.get(key) else {}),
                 }
                 kept += 1
         if found:

@@ -18,6 +18,14 @@
   const assetVersions = window.GUIDE_ASSET_VERSIONS || {};
 
   window.ACTIVE_GUIDE_CHAPTER = activeChapter;
+  // 그림 크기처럼 편 자료에만 적힌 값을 화면 곳곳에서 읽습니다
+  // (docs/assets/structured-details.js의 placeOf).
+  Object.defineProperty(window, "ACTIVE_GUIDE_DATA", {
+    configurable: true,
+    get() {
+      return activeChapter ? window[activeChapter.dataGlobal] || {} : {};
+    },
+  });
   window.GUIDE_HOME_OPEN_CHAPTER = goHomeWithChapter ? requested.id : "";
 
   if (goHomeWithChapter && typeof history.replaceState === "function") {

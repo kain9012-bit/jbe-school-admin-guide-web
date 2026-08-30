@@ -680,6 +680,13 @@
     return `
       <li class="source-detail${structural ? " structural-marker" : ""}${
         block.tip ? " source-detail-tip" : ""
+      }${
+        // 구역을 여는 머리입니다(【교육청】·【학교】·[참고1]). 그 아래 항목
+        // 번호가 1부터 다시 시작하므로, 소제목과 같은 모양으로 그리면 구역이
+        // 갈린 것이 보이지 않습니다. 띠로 눈에 띄게 긋습니다.
+        /^(?:【[^】]{1,20}】|\[(?:참고|예시|서식)\s*\d+\])$/.test(String(block.title || "").trim())
+          ? " source-detail-section"
+          : ""
       }"
           data-source-block="${escapeHtml(block.id)}">
         ${heading ? `<strong>${escapeHtml(heading)}</strong>` : ""}
