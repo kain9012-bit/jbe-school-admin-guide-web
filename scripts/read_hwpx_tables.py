@@ -96,6 +96,42 @@ def border_fills(archive: zipfile.ZipFile) -> dict[str, str]:
     return found
 
 
+def boxed_fills(archive: zipfile.ZipFile) -> set[str]:
+    """바탕색으로 상자를 만들어 둔 테두리 모음을 모읍니다.
+
+    매뉴얼 절차도의 상자는 **바탕색**이 만듭니다. 그래서 원문은 그 칸의
+    테두리를 다 긋지 않습니다 — 색이 이미 상자 모양이기 때문입니다.
+
+        제13편 '유지관리자 선임'
+          '시설물 관리전문업체 위탁'  왼쪽·위에만 선이 있고 오른쪽·아래는 없음
+                                      (청록 바탕이 상자를 닫아 줍니다)
+
+    화면은 원문 색을 쓰지 않습니다(화면에는 이미 제 나름의 색이 있습니다).
+    색을 빼면 그 상자는 두 면만 그어진 채로 남아 열려 보입니다. 색이 만들던
+    상자를 **선으로 대신** 닫습니다.
+
+    색이 무엇인지는 담지 않습니다. 이 칸이 상자였는지만 표시합니다.
+    """
+    try:
+        root = ET.fromstring(archive.read("Contents/header.xml"))
+    except KeyError:
+        return set()
+    found: set[str] = set()
+    for element in root.iter():
+        if local_name(element.tag) != "borderFill":
+            continue
+        brush = next((c for c in element if local_name(c.tag) == "fillBrush"), None)
+        if brush is None:
+            continue
+        window = next((c for c in brush if local_name(c.tag) == "winBrush"), None)
+        if window is None:
+            continue
+        face = (window.get("faceColor") or "").strip().lower()
+        if face and face not in ("none", "#ffffff"):
+            found.add(element.get("id"))
+    return found
+
+
 def fill_pictures(archive: zipfile.ZipFile) -> dict[str, str]:
     """칸 바탕에 그림을 깐 테두리 모음을 모읍니다.
 
@@ -360,6 +396,7 @@ def read_table(
     table: ET.Element,
     fills: dict[str, str],
     backdrops: dict[str, str] | None = None,
+    boxes: set[str] | None = None,
 ) -> dict:
     cells = []
     for cell in cells_of(table):
@@ -384,6 +421,9 @@ def read_table(
                 # 이 칸의 네 쪽 테두리입니다. 매뉴얼이 표로 그린 그림은
                 # 이 선이 곧 모양입니다.
                 "border": fills.get(cell.get("borderFillIDRef"), ""),
+                # 원문이 바탕색으로 상자를 만들어 둔 칸입니다(위 boxed_fills).
+                # 색을 쓰지 않는 화면에서는 그 상자를 선으로 닫습니다.
+                **({"boxed": 1} if cell.get("borderFillIDRef") in (boxes or set()) else {}),
             }
         )
     if not cells:
@@ -529,6 +569,7 @@ def tables_of(path: Path) -> list[dict]:
         )
         fills = border_fills(archive)
         backdrops = fill_pictures(archive)
+        boxes = boxed_fills(archive)
         found = []
         for name in names:
             root = ET.fromstring(archive.read(name))
@@ -540,7 +581,7 @@ def tables_of(path: Path) -> list[dict]:
             ]
             index_of = {id(element): len(found) + at for at, element in enumerate(here)}
             for element in here:
-                grid = read_table(element, fills, backdrops)
+                grid = read_table(element, fills, backdrops, boxes)
                 outer, cell = enclosing(parents, element)
                 if outer is not None and cell is not None and id(outer) in index_of:
                     address = next(

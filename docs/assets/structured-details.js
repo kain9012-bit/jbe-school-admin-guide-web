@@ -1002,13 +1002,22 @@
     return parts.join("");
   }
 
-  function borderStyle(code) {
+  // boxed는 원문이 **바탕색으로** 상자를 만들어 둔 칸입니다. 색이 상자 모양을
+  // 만들어 주므로 원문은 그 칸의 테두리를 다 긋지 않습니다.
+  //
+  //     제13편 '시설물 관리전문업체 위탁'
+  //     원문 : 왼쪽·위에만 선. 오른쪽·아래는 청록 바탕이 닫아 줍니다.
+  //     화면 : 원문 색을 쓰지 않으므로 두 면만 그어진 상자가 열려 보입니다.
+  //
+  // 색이 만들던 상자를 선으로 대신 닫습니다.
+  function borderStyle(code, boxed) {
     const said = String(code || "");
-    if (said.length !== 4) return "";
+    if (said.length !== 4) return boxed ? `border:${LINE.s};` : "";
     const side = (letter) => LINE[letter] || LINE.n;
+    const line = (letter) => (boxed && letter === "n" ? LINE.s : side(letter));
     return (
-      `border-left:${side(said[0])};border-right:${side(said[1])};` +
-      `border-top:${side(said[2])};border-bottom:${side(said[3])};`
+      `border-left:${line(said[0])};border-right:${line(said[1])};` +
+      `border-top:${line(said[2])};border-bottom:${line(said[3])};`
     );
   }
 
@@ -1091,7 +1100,7 @@
                           at = column + (cell.colSpan || 1);
                           const edge = column === 0 ? ' data-col="0"' : "";
                           // 그림형 표는 칸마다 원문에 적힌 선을 그대로 긋습니다.
-                          const drawn = drawing ? ` style="${borderStyle(cell.border)}"` : "";
+                          const drawn = drawing ? ` style="${borderStyle(cell.border, cell.boxed)}"` : "";
                           if (cell.filler) {
                             return `<td${
                               cell.colSpan > 1 ? ` colspan="${cell.colSpan}"` : ""
