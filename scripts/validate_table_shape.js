@@ -206,8 +206,23 @@ for (let id = 1; id <= 19; id += 1) {
           //   칸의 위나 아래가 트임 → 위아래 칸과 한 상자
           //   칸의 양옆이 트임      → 상자와 상자 사이의 띠
           // (제2편 '1. 발급 절차'는 빈 칸 없이 트인 테두리만으로 그렸습니다.)
+          //
+          // 상자와 상자 **사이 통로**도 모양입니다. 마주 보는 두 면만 그어져
+          // 있고 그 안에 화살표만 든 칸입니다. 표마다 하나뿐일 수 있으므로
+          // (제19편 물품 관리 '1. 처리 절차'의 ≫) 따로 봅니다.
           const cells = [table.headers || [], ...(table.rows || [])].flat();
+          const channel = cells.some((cell) => {
+            const border = String((cell && cell.border) || "");
+            const said = String((cell && cell.text) || "").trim();
+            if (border.length !== 4 || !said || !ARROW_ONLY.test(said)) return false;
+            const down =
+              border[0] !== "n" && border[1] !== "n" && border[2] === "n" && border[3] === "n";
+            const across =
+              border[0] === "n" && border[1] === "n" && border[2] !== "n" && border[3] !== "n";
+            return down || across;
+          });
           const shapedByBorders =
+            channel ||
             cells.filter((cell) => {
               const border = String((cell && cell.border) || "");
               if (border.length !== 4) return false;
