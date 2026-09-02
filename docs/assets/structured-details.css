@@ -1062,3 +1062,42 @@
 .is-front-summary .action-block {
   padding: 0;
 }
+
+/* 상자가 네 겹으로 쌓여 있었습니다(표에서 바깥으로).
+     ① .source-table-scroll  흰 배경 + 회색 선 + 5px 둥근   표를 감싼 상자
+     ② .source-note-box      흰 배경 + 회색 선 + 8px 둥근   ← 지웁니다
+     ③ .action-block         하늘색 바탕 + 파란 선          ← 지웁니다
+     ④ #step-panel           위 파란 띠 + 12px 둥근          바깥 카드
+
+   ②는 원문이 이 지면을 통째로 감싼 **한 칸짜리 바깥 표**입니다. 안에 든 것이
+   표 하나뿐이라, 화면에서는 표를 한 번 더 두르는 것 말고 하는 일이 없습니다.
+   ③은 '업무 내용' 덩이들을 한데 묶는 색입니다. 여느 업무 화면에서는 소제목이
+   여럿 들어가 묶는 값을 하지만, 이 지면은 덩이가 하나뿐이라 묶을 것이 없습니다.
+
+   ①(원문 표의 선)과 ④(바깥 카드)만 남겨 두 겹으로 만듭니다.
+   여느 업무 화면의 하늘색 상자는 그대로 둡니다. */
+.is-front-summary .action-block {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+/* 바깥 한 칸을 감싼 상자만 지웁니다. 그 안에 또 든 상자는 원문 모양이므로
+   건드리지 않습니다(> 로 곧은 자식만 가립니다). */
+.is-front-summary .source-full-content > .source-note-box {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+/* 카드 머리에는 이제 '원문 PDF' 단추만 남습니다. 제목이 서던 자리만큼
+   비어 있으면 표가 저 아래로 밀려 내려갑니다. */
+.is-front-summary .step-panel-head {
+  min-height: 0;
+  margin-bottom: 1.2rem;
+}
+
+.is-front-summary #step-actions > .source-detail:first-child {
+  padding-top: 0;
+}

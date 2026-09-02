@@ -90,7 +90,29 @@ const shape = (page) =>
       const said = (selector) => (document.querySelector(selector)?.textContent || "").trim();
       const wide = (selector) =>
         Math.round(document.querySelector(selector)?.getBoundingClientRect().width || 0);
+      // 내용을 감싼 상자가 몇 겹인지 셉니다. 바탕색이나 테두리를 가진
+      // 조상만 셉니다 — 눈에 상자로 보이는 것이 그것들뿐입니다.
+      const layers = (() => {
+        const inside =
+          document.querySelector("#step-actions .source-criteria-table") ||
+          document.querySelector("#step-actions .source-picture-row");
+        const stop = document.querySelector(".work-content");
+        if (!inside || !stop) return 0;
+        let count = 0;
+        let node = inside.parentElement;
+        while (node && node !== stop) {
+          const style = getComputedStyle(node);
+          const painted = style.backgroundColor !== "rgba(0, 0, 0, 0)";
+          const lined = ["Top", "Right", "Bottom", "Left"].some(
+            (side) => parseFloat(style[`border${side}Width`]) > 0
+          );
+          if (painted || lined) count += 1;
+          node = node.parentElement;
+        }
+        return count;
+      })();
       return {
+        layers,
         frames: Object.fromEntries(frames.map((one) => [one, seen(one)])),
         title: said("#work-title"),
         badge: said("#work-number"),
@@ -107,6 +129,11 @@ const shape = (page) =>
 const squash = (said) => String(said || "").replace(/\s+/g, "");
 // 표가 본문 폭에서 이만큼은 써야 원문 지면처럼 보입니다.
 const LEAST_SHARE = 0.85;
+// 내용을 감싸는 상자는 이만큼까지만 둡니다(원문 표의 선 + 바깥 카드).
+const MOST_LAYERS = 2;
+// 여느 업무 화면은 하늘색 '업무 내용' 상자가 한 겹 더 있어야 합니다.
+// 상자 걷어 내기가 그쪽으로 번지지 않았는지 이 값으로 봅니다.
+const WORK_LAYERS = 3;
 
 const window = loadGuideData();
 const problems = [];
@@ -149,6 +176,15 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
     if (now.stepTitle && squash(now.stepTitle) === squash(now.title)) {
       problems.push(`${where}: 카드 제목이 큰 제목과 같은 말입니다.`);
     }
+    // 상자가 겹겹이 쌓이면 어디를 봐야 할지 알 수 없습니다. 네 겹이었습니다
+    // (표 상자 · 바깥 한 칸 상자 · 하늘색 업무 상자 · 바깥 카드).
+    // 원문 표의 선과 바깥 카드, 두 겹까지만 둡니다.
+    if (now.layers > MOST_LAYERS) {
+      problems.push(
+        `${where}: 내용을 감싼 상자가 ${now.layers}겹입니다` +
+          ` (${MOST_LAYERS}겹까지).`
+      );
+    }
     // 원문은 이 지면을 종이 폭 꽉 차게 씁니다.
     const share = now.room ? now.table / now.room : 0;
     if (share < LEAST_SHARE) {
@@ -173,6 +209,13 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
       if (!now.frames[selector]) {
         problems.push(`${where}: 업무 화면에서 ${name}이(가) 사라졌습니다.`);
       }
+    }
+    // 상자 걷어 내기도 앞머리 지면에만 해당합니다.
+    if (now.layers && now.layers < WORK_LAYERS) {
+      problems.push(
+        `${where}: 업무 화면의 상자가 ${now.layers}겹으로 줄었습니다` +
+          ` (${WORK_LAYERS}겹이어야 합니다).`
+      );
     }
   }
 }
