@@ -131,7 +131,12 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
         const ARROW_ONLY = /^[\s≫⇒→⇨⟹⟶➡➔➜▶►»＞>↓⇓▼⇩⇙⇘⇗⇖←⇐⟵◀◁]+$/u;
         // 이름표로 쓰기에 너무 긴 글이 든 칸은 그림이 아니라 내용입니다.
         const LABEL_LIMIT = 40;
-        return [...document.querySelectorAll("#step-actions .source-table-scroll")].map((box) => {
+        return [...document.querySelectorAll("#step-actions .source-table-scroll")]
+          // 지면 이름 띠는 표가 아닙니다. 원문이 지면 맨 위에 얹어 둔
+          // 딱지 한 칸 + 이름 한 칸이고, 화면은 이것을 소제목 띠로 그립니다
+          // (.source-sheet-band). 격자가 아니므로 세로선을 재지 않습니다.
+          .filter((box) => !box.closest(".source-sheet-band"))
+          .map((box) => {
           const table = box.querySelector("table");
           // 이 표가 제 것으로 가진 칸만 봅니다. 칸 안에 표가 또 그려져 있으면
           // (제1편 기록물 관리 TIP '서가배치') 아래로 다 훑을 때 안쪽 표의 칸까지

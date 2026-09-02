@@ -1395,6 +1395,12 @@
     const sourceLink = byId("source-page-link");
     sourceLink.hidden = !data.downloads.manual;
     if (data.downloads.manual) sourceLink.href = data.downloads.manual;
+    // 앞머리 지면에서는 이 단추를 표지 띠 안으로 옮깁니다. 카드 머리에
+    // 단추 하나만 남으면 그만큼 빈 자리가 생겨 표가 아래로 밀립니다.
+    const cover = document.querySelector(".work-heading");
+    const stepHead = document.querySelector(".step-panel-head");
+    const seat = work.number === 0 ? cover : stepHead;
+    if (seat && sourceLink.parentElement !== seat) seat.appendChild(sourceLink);
 
     const prevButton = byId("prev-step");
     const nextButton = byId("next-step");

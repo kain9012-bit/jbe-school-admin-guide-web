@@ -307,6 +307,15 @@
   // 검색이 그 글자를 찾으므로, 빌더는 지우지 않고 자리만 적어 둡니다.
   // available은 이 칸이 쓸 수 있는 폭입니다. 안쪽 표는 바깥 표의 한 칸
   // 안에 들어가므로, 바깥 표와 같은 폭으로 재면 반드시 넘칩니다.
+  // 원문이 지면 맨 위에 얹어 둔 '이름 띠'입니다. 딱지 한 칸과 이름 한 칸,
+  // 단 두 칸으로 된 표입니다.
+  //   [흐름도] 교육공무직원 월별 업무 일정
+  //   [인 사]  휴직제도
+  // 여느 표처럼 그리면 본문 표 위에 뜬금없는 한 줄이 얹힌 것처럼 보입니다.
+  // 여기서는 무엇인지만 적어 두고, 어떻게 그릴지는 화면 쪽(CSS)이 정합니다.
+  const sheetBand = (table) =>
+    (table.headers || []).length === 2 && !(table.rows || []).length;
+
   function cellMarkup(lines, tables, available) {
     const owned = Array.isArray(tables) ? tables : [];
     // 글이 아예 없는 칸은 빈 칸으로 둡니다. 예전에 '—'를 넣었더니 원문에서
@@ -337,15 +346,16 @@
       drawn.add(owner);
       flush();
       const table = owned[owner];
+      const drawnTable = spannedTableMarkup(
+        "",
+        headerCellsOf(table),
+        table.rows || [],
+        table.widths,
+        available,
+        table.picture
+      );
       pieces.push(
-        spannedTableMarkup(
-          "",
-          headerCellsOf(table),
-          table.rows || [],
-          table.widths,
-          available,
-          table.picture
-        )
+        sheetBand(table) ? `<div class="source-sheet-band">${drawnTable}</div>` : drawnTable
       );
     });
     flush();

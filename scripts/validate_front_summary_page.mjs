@@ -111,8 +111,17 @@ const shape = (page) =>
         }
         return count;
       })();
+      // 표지 띠입니다. 이 지면은 각 편의 맨 앞장이라 색을 입혀 세웁니다.
+      const heading = document.querySelector(".work-heading");
+      const cover = heading
+        ? {
+            painted: getComputedStyle(heading).backgroundImage !== "none",
+            pdfInside: Boolean(heading.querySelector("#source-page-link")),
+          }
+        : { painted: false, pdfInside: false };
       return {
         layers,
+        cover,
         frames: Object.fromEntries(frames.map((one) => [one, seen(one)])),
         title: said("#work-title"),
         badge: said("#work-number"),
@@ -176,6 +185,14 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
     if (now.stepTitle && squash(now.stepTitle) === squash(now.title)) {
       problems.push(`${where}: 카드 제목이 큰 제목과 같은 말입니다.`);
     }
+    // 이 지면은 각 편의 맨 앞장입니다. 원문에서도 가장 눈에 띄게 꾸며 둔
+    // 자리이므로 표지 띠가 색을 입고 서 있어야 합니다.
+    if (!now.cover.painted) {
+      problems.push(`${where}: 표지 띠에 아무 꾸밈이 없습니다.`);
+    }
+    if (!now.cover.pdfInside) {
+      problems.push(`${where}: '원문 PDF' 단추가 표지 안에 없습니다.`);
+    }
     // 상자가 겹겹이 쌓이면 어디를 봐야 할지 알 수 없습니다. 네 겹이었습니다
     // (표 상자 · 바깥 한 칸 상자 · 하늘색 업무 상자 · 바깥 카드).
     // 원문 표의 선과 바깥 카드, 두 겹까지만 둡니다.
@@ -209,6 +226,14 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
       if (!now.frames[selector]) {
         problems.push(`${where}: 업무 화면에서 ${name}이(가) 사라졌습니다.`);
       }
+    }
+    // 표지 꾸밈도 앞머리 지면에만 해당합니다. 여느 업무 화면의 제목 자리는
+    // 꾸미지 않은 채로 두고, '원문 PDF' 단추도 제자리(카드 머리)에 둡니다.
+    if (now.cover.painted) {
+      problems.push(`${where}: 업무 화면 제목 자리까지 표지처럼 꾸며졌습니다.`);
+    }
+    if (now.cover.pdfInside) {
+      problems.push(`${where}: 업무 화면의 '원문 PDF' 단추가 제목 자리로 옮겨졌습니다.`);
     }
     // 상자 걷어 내기도 앞머리 지면에만 해당합니다.
     if (now.layers && now.layers < WORK_LAYERS) {

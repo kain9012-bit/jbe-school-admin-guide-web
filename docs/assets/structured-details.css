@@ -1101,3 +1101,173 @@
 .is-front-summary #step-actions > .source-detail:first-child {
   padding-top: 0;
 }
+
+/* ── 앞머리 지면의 표지 ──────────────────────────────────────
+   이 지면은 각 편의 맨 앞장입니다. 원문에서도 가장 눈에 띄게 꾸며 둔
+   자리인데(눈 아이콘 + '한눈에 쏙쏙' 알약 + 편 이름 배너 + 지면 이름 띠),
+   화면에서는 아무 꾸밈 없이 제목 한 줄과 표만 있었습니다.
+
+   원문의 짜임새를 그대로 옮기되, 색은 이 누리집이 쓰던 파랑을 씁니다.
+   원문 표 안쪽은 손대지 않습니다 — 표는 원문 그대로 둡니다. */
+.is-front-summary .work-heading {
+  position: relative;
+  overflow: hidden;
+  padding: 3.4rem 3.2rem 3.6rem;
+  border: 0;
+  border-radius: 1.6rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--guide-blue-dark) 0%, var(--guide-blue) 58%, #2f7ae8 100%);
+  box-shadow: 0 1.2rem 3.2rem rgba(8, 56, 145, 0.2);
+}
+
+/* 오른쪽에 옅은 원 두 개를 겹쳐 둡니다. 원문 표지도 오른쪽 위가 비어 있지
+   않고 무늬로 채워져 있습니다. */
+.is-front-summary .work-heading::before,
+.is-front-summary .work-heading::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.09);
+  pointer-events: none;
+}
+
+.is-front-summary .work-heading::before {
+  right: -7rem;
+  top: -9rem;
+  width: 26rem;
+  height: 26rem;
+}
+
+.is-front-summary .work-heading::after {
+  right: 5rem;
+  bottom: -12rem;
+  width: 16rem;
+  height: 16rem;
+}
+
+.is-front-summary .work-heading-meta {
+  position: relative;
+}
+
+/* '한눈에 보기' 알약입니다. 원문의 눈 아이콘을 함께 답니다
+   ('한눈에'라는 말 그대로 눈이 그려져 있습니다). */
+.is-front-summary #work-number {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.4rem 0.6rem 1.1rem;
+  color: var(--guide-blue);
+  background: #fff;
+  border-radius: 999px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.is-front-summary #work-number::before {
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  background: currentColor;
+  --guide-eye: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 5C6.5 5 2.7 9.1 1.5 11.3a1.4 1.4 0 0 0 0 1.4C2.7 14.9 6.5 19 12 19s9.3-4.1 10.5-6.3a1.4 1.4 0 0 0 0-1.4C21.3 9.1 17.5 5 12 5Zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z'/%3E%3C/svg%3E");
+  -webkit-mask: var(--guide-eye) center / contain no-repeat;
+  mask: var(--guide-eye) center / contain no-repeat;
+}
+
+.is-front-summary .work-heading h1 {
+  position: relative;
+  margin: 1.6rem 0 0;
+  color: #fff;
+  font-size: clamp(3rem, 4vw, 4rem);
+}
+
+/* '원문 PDF' 단추는 표지 오른쪽 위로 옮겨 옵니다(app-faithful-workflow.js). */
+.is-front-summary .work-heading > #source-page-link {
+  position: absolute;
+  right: 3.2rem;
+  top: 3.2rem;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.is-front-summary .work-heading > #source-page-link:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
+/* 표지가 색을 맡았으므로 아래 카드는 조용한 흰 상자로 둡니다. */
+.is-front-summary #step-panel {
+  margin-top: 2.4rem;
+  border: 1px solid var(--guide-line);
+  border-radius: 1.6rem;
+  background: #fff;
+  box-shadow: 0 0.6rem 2rem rgba(30, 33, 36, 0.06);
+}
+
+/* 카드 머리에 아무것도 안 남는 편(제3·8편 등)은 자리를 비웁니다.
+   원문이 지면에 제 이름을 달아 둔 편(제13편 '학교시설관리 요약')만
+   그 이름이 머리에 섭니다. */
+.is-front-summary .step-panel-head:has(> div > h2[hidden]) {
+  display: none;
+}
+
+/* ── 지면 이름 띠 ────────────────────────────────────────────
+   원문이 지면 맨 위에 얹어 둔 띠입니다(딱지 한 칸 + 이름 한 칸).
+     [흐름도] 교육공무직원 월별 업무 일정
+     [인 사]  휴직제도
+   여느 표로 그리면 본문 표 위에 뜬금없는 한 줄이 얹힌 것처럼 보입니다.
+   두 칸을 옆으로 나란히 놓아 소제목 띠로 세웁니다. 표로 두면 원문 열 너비가
+   그대로 먹혀 딱지 칸이 통째로 늘어납니다. */
+.is-front-summary .source-sheet-band {
+  margin: 0 0 0.6rem;
+}
+
+.is-front-summary .source-sheet-band .source-table-scroll {
+  overflow: visible;
+  border: 0;
+  background: transparent;
+}
+
+.is-front-summary .source-sheet-band colgroup {
+  display: none;
+}
+
+.is-front-summary .source-sheet-band table,
+.is-front-summary .source-sheet-band thead,
+.is-front-summary .source-sheet-band tbody {
+  display: block;
+  width: auto;
+  min-width: 0;
+}
+
+.is-front-summary .source-sheet-band tr {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.is-front-summary .source-sheet-band th,
+.is-front-summary .source-sheet-band td {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--guide-ink);
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+
+.is-front-summary .source-sheet-band tr > *:first-child {
+  padding: 0.5rem 1.4rem;
+  border-radius: 999px;
+  background: var(--guide-blue-pale);
+  color: var(--guide-blue-dark);
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+
+.is-front-summary .source-full-content {
+  gap: 1rem;
+}
