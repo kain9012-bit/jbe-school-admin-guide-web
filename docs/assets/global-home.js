@@ -72,7 +72,8 @@
           </span>
           <span class="global-chapter-arrow" aria-hidden="true">⌄</span>
         </button>
-        <div class="global-work-panel" id="${panelId}" hidden>
+        <div class="global-work-panel" id="${panelId}"
+             data-chapter-panel="${escapeHtml(chapter.id)}" hidden>
           <div class="global-work-panel-inner">
             <p class="global-work-lead">${escapeHtml(
               `${chapter.title}의 업무를 선택하면 처리 단계로 바로 이동합니다.`
@@ -101,7 +102,69 @@
     `;
   }
 
-  // 카드를 누르면 그 자리에서 업무 목록이 부드럽게 열리고 닫힙니다.
+  // 격자가 한 줄에 카드를 몇 개 세우는지 봅니다(창 너비에 따라 3·2·1개).
+  function columnsOf(grid) {
+    const tracks = window.getComputedStyle(grid).gridTemplateColumns;
+    return Math.max(1, String(tracks).split(" ").filter(Boolean).length);
+  }
+
+  // 펼친 업무 목록이 앉을 자리입니다. 한 줄을 통째로 차지합니다.
+  function workSeat(grid) {
+    let seat = grid.querySelector(".global-work-seat");
+    if (!seat) {
+      seat = document.createElement("div");
+      seat.className = "global-work-seat";
+      grid.appendChild(seat);
+    }
+    return seat;
+  }
+
+  // 업무 목록을 **누른 카드가 있는 줄 아래**로 옮깁니다.
+  //
+  // 예전에는 누른 카드 자체를 한 줄로 늘렸습니다. 그러면 고른 카드가 제자리를
+  // 떠나 아래로 내려가고, 같은 줄에 있던 옆 카드까지 다음 줄로 밀렸습니다.
+  // 눈으로 좇던 카드가 사라지는 셈입니다.
+  //
+  //   전   [제1편]                    후   [제1편] [제2편] [제3편]
+  //        [제2편 ────────────]            [업무 목록 ───────────]
+  //        [제3편] [제4편] [제5편]         [제4편] [제5편] [제6편]
+  //
+  // 카드는 제자리에 두고, 그 줄의 마지막 카드 뒤에 목록 자리를 끼웁니다.
+  // 격자는 놓인 차례대로 채우므로 목록이 그 줄 바로 아래에 섭니다.
+  // 이 목록이 딸린 분야 카드입니다. 목록이 카드 밖(자리)에 나가 있을 때도
+  // 찾을 수 있도록 분야 번호로 짚습니다.
+  function cardOf(panel) {
+    return document.querySelector(
+      `[data-chapter-item="${CSS.escape(panel.dataset.chapterPanel || "")}"]`
+    );
+  }
+
+  function seatBelowRow(panel) {
+    const item = cardOf(panel);
+    const grid = document.querySelector(".global-chapter-grid");
+    if (!grid || !item) return;
+    const seat = workSeat(grid);
+    const cards = [...grid.children].filter((child) => child !== seat);
+    const at = cards.indexOf(item);
+    if (at < 0) return;
+    const columns = columnsOf(grid);
+    const last = Math.min(
+      Math.floor(at / columns) * columns + columns - 1,
+      cards.length - 1
+    );
+    cards[last].after(seat);
+    if (panel.parentElement !== seat) seat.appendChild(panel);
+  }
+
+  // 목록을 닫으면 제 카드 안으로 돌려보냅니다. 자리는 비워 둡니다.
+  function unseat(panel) {
+    const home = cardOf(panel);
+    if (home && panel.parentElement !== home) home.appendChild(panel);
+    const seat = document.querySelector(".global-work-seat");
+    if (seat && !seat.children.length) seat.remove();
+  }
+
+  // 카드를 누르면 그 줄 아래에서 업무 목록이 부드럽게 열리고 닫힙니다.
   function bindChapterToggles() {
     document.querySelectorAll("[data-toggle-chapter]").forEach((button) => {
       button.addEventListener("click", () => {
@@ -117,18 +180,28 @@
           if (otherPanel) {
             otherPanel.hidden = true;
             otherPanel.classList.remove("is-open");
+            unseat(otherPanel);
           }
         });
 
         button.setAttribute("aria-expanded", String(willOpen));
         if (willOpen) {
+          seatBelowRow(panel);
           panel.hidden = false;
           requestAnimationFrame(() => panel.classList.add("is-open"));
         } else {
           panel.classList.remove("is-open");
           panel.hidden = true;
+          unseat(panel);
         }
       });
+    });
+
+    // 창 너비가 바뀌면 한 줄에 서는 카드 수가 달라집니다(3·2·1개).
+    // 열려 있는 목록을 새 줄 아래로 다시 옮깁니다.
+    window.addEventListener("resize", () => {
+      const open = document.querySelector(".global-work-panel:not([hidden])");
+      if (open) seatBelowRow(open);
     });
   }
 

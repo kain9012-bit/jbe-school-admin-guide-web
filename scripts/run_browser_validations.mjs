@@ -7,6 +7,7 @@
 //   · validate_tip_placement.mjs   TIP 상자가 원문에 놓인 자리에 그려지는지 확인
 //   · validate_nested_tables.mjs   칸 안에 그려진 표가 화면에서도 표인지 확인
 //   · validate_section_nesting.mjs 구역 머리 아래 항목이 그 구역에 딸려 보이는지 확인
+//   · validate_chapter_expand.mjs  분야 카드를 펼쳐도 카드가 제자리에 있는지 확인
 //
 // 19편을 한 번에 열면 오래 걸려 중간에 끊깁니다. 그래서 몇 편씩 나눠 돌립니다.
 //
@@ -34,6 +35,7 @@ for (const job of [
   "validate_card_heights.mjs",
   "validate_download_links.mjs",
   "validate_navigation.mjs",
+  "validate_chapter_expand.mjs",
 ]) {
   const result = spawnSync("node", [path.join(root, "scripts", job)], {
     cwd: root,

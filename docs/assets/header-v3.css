@@ -171,13 +171,16 @@
   align-items: stretch;
 }
 
-/* 업무 목록이 열린 분야는 한 줄 전체를 씁니다. */
 .chapter-item {
   display: flex;
   flex-direction: column;
 }
 
-.chapter-item:has([aria-expanded="true"]) {
+/* 펼친 업무 목록이 앉는 자리입니다. 한 줄을 통째로 차지합니다.
+   분야 카드는 제자리에 그대로 있고 목록만 그 줄 아래에 섭니다.
+   예전에는 누른 분야 자체를 한 줄로 늘렸는데, 그러면 고른 카드가 아래로
+   내려가고 같은 줄에 있던 옆 카드까지 다음 줄로 밀렸습니다. */
+.chapter-works-seat {
   grid-column: 1 / -1;
 }
 
@@ -228,21 +231,20 @@ button.chapter-link:focus-visible {
   transform: rotate(180deg);
 }
 
+/* 펼친 분야는 색으로만 표시합니다. 키를 줄이면 그 카드만 작아져
+   같은 줄 카드와 높이가 어긋납니다. */
 [aria-expanded="true"].chapter-link {
-  min-height: 0;
   border-color: var(--guide-blue);
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
   background: var(--guide-blue-pale);
 }
 
-/* 높이를 모르는 목록도 부드럽게 펼치기 위해 격자 행 크기를 씁니다. */
+/* 높이를 모르는 목록도 부드럽게 펼치기 위해 격자 행 크기를 씁니다.
+   목록은 카드 밑에 붙지 않고 줄 아래에 홀로 서므로 네 귀를 다 둥글립니다. */
 .chapter-works {
   display: grid;
   grid-template-rows: 0fr;
   border: 1px solid var(--guide-blue);
-  border-top: 0;
-  border-radius: 0 0 1rem 1rem;
+  border-radius: 1rem;
   background: #fff;
   transition: grid-template-rows 240ms ease;
 }

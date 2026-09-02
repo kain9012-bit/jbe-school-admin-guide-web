@@ -75,7 +75,8 @@
         const works = worksOf(chapter.id);
         const panelId = `chapter-dialog-works-${chapter.id}`;
         return `
-          <li class="chapter-item${current ? " is-current" : ""}">
+          <li class="chapter-item${current ? " is-current" : ""}"
+              data-chapter-item="${chapter.id}">
             <button class="chapter-link" type="button"
                     aria-expanded="false" aria-controls="${panelId}"
                     data-dialog-chapter="${chapter.id}"${
@@ -86,7 +87,8 @@
               <small>업무 ${works.length}개</small>
               <span class="chapter-link-arrow" aria-hidden="true">⌄</span>
             </button>
-            <div class="chapter-works" id="${panelId}" hidden>
+            <div class="chapter-works" id="${panelId}"
+                 data-chapter-panel="${chapter.id}" hidden>
               <ul>
                 ${works
                   .map(
@@ -122,7 +124,64 @@
 
   }
 
-  // 분야를 누르면 그 자리에서 업무 목록이 펼쳐집니다.
+  // 격자가 한 줄에 분야를 몇 개 세우는지 봅니다(창 너비에 따라 4·2·1개).
+  function columnsOf(grid) {
+    const tracks = window.getComputedStyle(grid).gridTemplateColumns;
+    return Math.max(1, String(tracks).split(" ").filter(Boolean).length);
+  }
+
+  // 펼친 업무 목록이 앉을 자리입니다. 한 줄을 통째로 차지합니다.
+  // 격자가 <ol>이므로 자리도 <li>여야 합니다.
+  function workSeat() {
+    let seat = chapterGrid.querySelector(".chapter-works-seat");
+    if (!seat) {
+      seat = document.createElement("li");
+      seat.className = "chapter-works-seat";
+      chapterGrid.appendChild(seat);
+    }
+    return seat;
+  }
+
+  const cardOf = (panel) =>
+    chapterGrid.querySelector(
+      `[data-chapter-item="${CSS.escape(panel.dataset.chapterPanel || "")}"]`
+    );
+
+  // 업무 목록을 **누른 분야가 있는 줄 아래**로 옮깁니다.
+  //
+  // 예전에는 누른 분야 자체를 한 줄로 늘렸습니다. 그러면 고른 카드가 제자리를
+  // 떠나 아래로 내려가고, 같은 줄에 있던 옆 카드까지 다음 줄로 밀렸습니다.
+  //
+  //   전   [제1편]                    후   [제1편] [제2편] [제3편] [제4편]
+  //        [제2편 ────────────]            [업무 목록 ─────────────────]
+  //        [제3편] [제4편] …               [제5편] [제6편] …
+  //
+  // 카드는 제자리에 두고, 그 줄의 마지막 카드 뒤에 목록 자리를 끼웁니다.
+  function seatBelowRow(panel) {
+    const item = cardOf(panel);
+    if (!item) return;
+    const seat = workSeat();
+    const cards = [...chapterGrid.children].filter((child) => child !== seat);
+    const at = cards.indexOf(item);
+    if (at < 0) return;
+    const columns = columnsOf(chapterGrid);
+    const last = Math.min(
+      Math.floor(at / columns) * columns + columns - 1,
+      cards.length - 1
+    );
+    cards[last].after(seat);
+    if (panel.parentElement !== seat) seat.appendChild(panel);
+  }
+
+  // 목록을 닫으면 제 분야 안으로 돌려보내고 자리는 치웁니다.
+  function unseat(panel) {
+    const home = cardOf(panel);
+    if (home && panel.parentElement !== home) home.appendChild(panel);
+    const seat = chapterGrid.querySelector(".chapter-works-seat");
+    if (seat && !seat.children.length) seat.remove();
+  }
+
+  // 분야를 누르면 그 줄 아래에서 업무 목록이 펼쳐집니다.
   function bindChapterToggles() {
     const buttons = chapterGrid.querySelectorAll("[data-dialog-chapter]");
     buttons.forEach((button) => {
@@ -138,18 +197,28 @@
           if (otherPanel) {
             otherPanel.hidden = true;
             otherPanel.classList.remove("is-open");
+            unseat(otherPanel);
           }
         });
 
         button.setAttribute("aria-expanded", String(willOpen));
         if (willOpen) {
+          seatBelowRow(panel);
           panel.hidden = false;
           requestAnimationFrame(() => panel.classList.add("is-open"));
         } else {
           panel.classList.remove("is-open");
           panel.hidden = true;
+          unseat(panel);
         }
       });
+    });
+
+    // 창 너비가 바뀌면 한 줄에 서는 분야 수가 달라집니다(4·2·1개).
+    // 열려 있는 목록을 새 줄 아래로 다시 옮깁니다.
+    window.addEventListener("resize", () => {
+      const open = chapterGrid.querySelector(".chapter-works:not([hidden])");
+      if (open) seatBelowRow(open);
     });
 
     // 지금 보고 있는 분야 안에서 업무를 고르면 새로 불러오지 않고 바로 이동합니다.

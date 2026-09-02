@@ -21,13 +21,18 @@
 }
 
 /* 분야 하나는 카드와 업무 목록을 함께 담습니다.
-   목록이 열리면 그 분야만 한 줄 전체를 차지합니다. */
+   목록을 펼치면 목록만 아래 자리(.global-work-seat)로 옮겨 갑니다. */
 .global-chapter-item {
   display: flex;
   flex-direction: column;
 }
 
-.global-chapter-item:has([aria-expanded="true"]) {
+/* 펼친 업무 목록이 앉는 자리입니다. 한 줄을 통째로 차지합니다.
+   카드는 제자리에 그대로 있고 목록만 그 줄 아래에 섭니다.
+   예전에는 누른 카드 자체를 한 줄로 늘렸습니다. 그러면 고른 카드가
+   아래로 내려가고 같은 줄에 있던 옆 카드까지 다음 줄로 밀려,
+   눈으로 좇던 자리가 사라졌습니다. */
+.global-work-seat {
   grid-column: 1 / -1;
 }
 
@@ -129,31 +134,21 @@ button.global-chapter-card {
   transform: rotate(180deg);
 }
 
-/* 펼쳐진 카드는 목록의 머리글 역할만 하므로 낮게 만듭니다. */
-[aria-expanded="true"].global-chapter-card {
-  min-height: 0;
-  align-items: center;
-  padding-block: 1.6rem;
-}
-
-[aria-expanded="true"] .global-chapter-copy strong {
-  min-height: 0;
-}
-
+/* 펼친 카드는 색으로만 표시합니다. 크기는 그대로 두어야 같은 줄 카드와
+   키가 맞습니다. 예전에는 낮게 줄였는데, 카드가 제자리에 서 있게 된
+   지금은 그 카드만 작아져 줄이 들쭉날쭉해집니다. */
 [aria-expanded="true"].global-chapter-card {
   border-color: var(--guide-blue);
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
   background: var(--guide-blue-pale);
 }
 
-/* 높이를 모르는 목록도 부드럽게 펼치기 위해 grid 행 크기를 씁니다. */
+/* 높이를 모르는 목록도 부드럽게 펼치기 위해 grid 행 크기를 씁니다.
+   목록은 카드 밑에 붙지 않고 줄 아래에 홀로 서므로 네 귀를 다 둥글립니다. */
 .global-work-panel {
   display: grid;
   grid-template-rows: 0fr;
   border: 1px solid var(--guide-blue);
-  border-top: 0;
-  border-radius: 0 0 1.2rem 1.2rem;
+  border-radius: 1.2rem;
   background: #fff;
   transition: grid-template-rows 240ms ease;
 }
