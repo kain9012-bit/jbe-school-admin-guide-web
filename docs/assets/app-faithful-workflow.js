@@ -1361,7 +1361,26 @@
     const activeIndex = steps.indexOf(step);
     currentStepId = step.id;
     currentStepTitle = step.title;
-    byId("step-title").textContent = step.title;
+    const stepTitleNode = byId("step-title");
+    stepTitleNode.textContent = step.title;
+    // 편 앞머리의 '한눈에 보기' 지면에만 해당합니다. 이 지면은 항목이
+    // 하나뿐이라 카드 제목이 큰 제목과 같은 말을 되풀이합니다
+    // (배지·큰 제목·카드 제목이 모두 '한눈에 보기'였습니다).
+    // 원문이 지면에 제 이름을 달아 둔 편(제13편 '학교시설관리 요약')은
+    // 그 이름이 카드 제목에 남습니다.
+    const repeatsTitle =
+      work.number === 0 && squash(step.title) === squash(work.title);
+    stepTitleNode.hidden = repeatsTitle;
+    // 제목을 감추면 그것을 가리키던 이름표도 끊어집니다.
+    // 화면 낭독기가 이 구역을 무엇이라 부를지 대신 적어 줍니다.
+    const stepPanel = byId("step-panel");
+    if (repeatsTitle) {
+      stepPanel.removeAttribute("aria-labelledby");
+      stepPanel.setAttribute("aria-label", work.title);
+    } else {
+      stepPanel.removeAttribute("aria-label");
+      stepPanel.setAttribute("aria-labelledby", "step-title");
+    }
     const summaryNode = byId("step-summary");
     summaryNode.textContent = step.summary;
     summaryNode.hidden = !step.summary;
@@ -1412,8 +1431,16 @@
     overviewView.hidden = true;
     workView.hidden = false;
     renderSideNavigation();
+    // 편 앞머리의 '한눈에 보기' 지면입니다. 업무가 아니라 그 편을 한 장으로
+    // 간추린 원문 지면이라, 항목이 하나뿐이고 딸린 서식도 FAQ도 없습니다.
+    // 화면이 이 지면만 다르게 그리도록 표시해 둡니다(structured-details.css).
+    workView.classList.toggle("is-front-summary", work.number === 0);
     byId("work-number").textContent = workBadge(work);
-    byId("work-title").textContent = work.title;
+    // 큰 제목은 '한눈에 보기'가 아니라 **어느 편인지**를 말해야 합니다.
+    // 배지·왼쪽 목록·빵부스러기가 이미 '한눈에 보기'라고 세 번 말하는데,
+    // 정작 제3편인지 제13편인지는 어디에도 없었습니다.
+    byId("work-title").textContent =
+      work.number === 0 ? chapterName() : work.title;
     const introNode = byId("work-intro");
     introNode.textContent = workflows[work.id].intro;
     introNode.hidden = !workflows[work.id].intro;
