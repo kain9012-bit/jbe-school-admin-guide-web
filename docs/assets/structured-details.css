@@ -1102,172 +1102,44 @@
   padding-top: 0;
 }
 
-/* ── 앞머리 지면의 표지 ──────────────────────────────────────
-   이 지면은 각 편의 맨 앞장입니다. 원문에서도 가장 눈에 띄게 꾸며 둔
-   자리인데(눈 아이콘 + '한눈에 쏙쏙' 알약 + 편 이름 배너 + 지면 이름 띠),
-   화면에서는 아무 꾸밈 없이 제목 한 줄과 표만 있었습니다.
+/* ── 앞머리 '한눈에 보기' 지면의 표 ──────────────────────────
+   원문은 이 지면의 표를 편 고유색으로 칠해 둡니다.
+     제2편 주황 · 제3편 보라 · 제8편 남보라 · 제13편 청록 …
+   칠하는 자리는 세 곳입니다.
+     · 표 머리줄        색 바탕 + 흰 글씨
+     · 왼쪽 구분 열      옅은 바탕
+     · 지면 이름 딱지    색 딱지 + 흰 글씨
+   화면에는 이 가운데 아무것도 없어 회색 격자만 남아 있었습니다.
 
-   원문의 짜임새를 그대로 옮기되, 색은 이 누리집이 쓰던 파랑을 씁니다.
-   원문 표 안쪽은 손대지 않습니다 — 표는 원문 그대로 둡니다. */
-.is-front-summary .work-heading {
-  position: relative;
-  overflow: hidden;
-  padding: 3.4rem 3.2rem 3.6rem;
-  border: 0;
-  border-radius: 1.6rem;
+   편마다 색을 달리하지는 않습니다. 원문 색은 한글파일 안에서 읽어 낼 수
+   없어 지면 그림에서 뽑아야 하고, 이 누리집은 이미 제 파랑을 쓰고 있습니다.
+   **칠하는 자리는 원문과 같게, 색은 누리집 파랑 하나로** 씁니다.
+
+   칸의 글자는 손대지 않습니다. 그리고 이 규칙은 .is-front-summary 안에서만
+   걸립니다 — 여느 업무 화면의 표는 흰 바탕 그대로입니다. */
+.is-front-summary .source-criteria-table th[scope="col"] {
+  background: var(--guide-blue);
   color: #fff;
-  background: linear-gradient(135deg, var(--guide-blue-dark) 0%, var(--guide-blue) 58%, #2f7ae8 100%);
-  box-shadow: 0 1.2rem 3.2rem rgba(8, 56, 145, 0.2);
+  /* 색 바탕 위에서는 회색 칸선이 때가 낀 것처럼 보입니다.
+     같은 색 계열의 옅은 선으로 바꿉니다. */
+  border-top-color: rgba(255, 255, 255, 0.35);
+  border-left-color: rgba(255, 255, 255, 0.35);
 }
 
-/* 오른쪽에 옅은 원 두 개를 겹쳐 둡니다. 원문 표지도 오른쪽 위가 비어 있지
-   않고 무늬로 채워져 있습니다. */
-.is-front-summary .work-heading::before,
-.is-front-summary .work-heading::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.09);
-  pointer-events: none;
-}
-
-.is-front-summary .work-heading::before {
-  right: -7rem;
-  top: -9rem;
-  width: 26rem;
-  height: 26rem;
-}
-
-.is-front-summary .work-heading::after {
-  right: 5rem;
-  bottom: -12rem;
-  width: 16rem;
-  height: 16rem;
-}
-
-.is-front-summary .work-heading-meta {
-  position: relative;
-}
-
-/* '한눈에 보기' 알약입니다. 원문의 눈 아이콘을 함께 답니다
-   ('한눈에'라는 말 그대로 눈이 그려져 있습니다). */
-.is-front-summary #work-number {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.6rem 1.4rem 0.6rem 1.1rem;
-  color: var(--guide-blue);
-  background: #fff;
-  border-radius: 999px;
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-}
-
-.is-front-summary #work-number::before {
-  content: "";
-  width: 1.6rem;
-  height: 1.6rem;
-  background: currentColor;
-  --guide-eye: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 5C6.5 5 2.7 9.1 1.5 11.3a1.4 1.4 0 0 0 0 1.4C2.7 14.9 6.5 19 12 19s9.3-4.1 10.5-6.3a1.4 1.4 0 0 0 0-1.4C21.3 9.1 17.5 5 12 5Zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z'/%3E%3C/svg%3E");
-  -webkit-mask: var(--guide-eye) center / contain no-repeat;
-  mask: var(--guide-eye) center / contain no-repeat;
-}
-
-.is-front-summary .work-heading h1 {
-  position: relative;
-  margin: 1.6rem 0 0;
-  color: #fff;
-  font-size: clamp(3rem, 4vw, 4rem);
-}
-
-/* '원문 PDF' 단추는 표지 오른쪽 위로 옮겨 옵니다(app-faithful-workflow.js). */
-.is-front-summary .work-heading > #source-page-link {
-  position: absolute;
-  right: 3.2rem;
-  top: 3.2rem;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.14);
-  border-color: rgba(255, 255, 255, 0.55);
-}
-
-.is-front-summary .work-heading > #source-page-link:hover {
-  background: rgba(255, 255, 255, 0.24);
-}
-
-/* 표지가 색을 맡았으므로 아래 카드는 조용한 흰 상자로 둡니다. */
-.is-front-summary #step-panel {
-  margin-top: 2.4rem;
-  border: 1px solid var(--guide-line);
-  border-radius: 1.6rem;
-  background: #fff;
-  box-shadow: 0 0.6rem 2rem rgba(30, 33, 36, 0.06);
-}
-
-/* 카드 머리에 아무것도 안 남는 편(제3·8편 등)은 자리를 비웁니다.
-   원문이 지면에 제 이름을 달아 둔 편(제13편 '학교시설관리 요약')만
-   그 이름이 머리에 섭니다. */
-.is-front-summary .step-panel-head:has(> div > h2[hidden]) {
-  display: none;
-}
-
-/* ── 지면 이름 띠 ────────────────────────────────────────────
-   원문이 지면 맨 위에 얹어 둔 띠입니다(딱지 한 칸 + 이름 한 칸).
-     [흐름도] 교육공무직원 월별 업무 일정
-     [인 사]  휴직제도
-   여느 표로 그리면 본문 표 위에 뜬금없는 한 줄이 얹힌 것처럼 보입니다.
-   두 칸을 옆으로 나란히 놓아 소제목 띠로 세웁니다. 표로 두면 원문 열 너비가
-   그대로 먹혀 딱지 칸이 통째로 늘어납니다. */
-.is-front-summary .source-sheet-band {
-  margin: 0 0 0.6rem;
-}
-
-.is-front-summary .source-sheet-band .source-table-scroll {
-  overflow: visible;
-  border: 0;
-  background: transparent;
-}
-
-.is-front-summary .source-sheet-band colgroup {
-  display: none;
-}
-
-.is-front-summary .source-sheet-band table,
-.is-front-summary .source-sheet-band thead,
-.is-front-summary .source-sheet-band tbody {
-  display: block;
-  width: auto;
-  min-width: 0;
-}
-
-.is-front-summary .source-sheet-band tr {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-}
-
-.is-front-summary .source-sheet-band th,
-.is-front-summary .source-sheet-band td {
-  display: block;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: var(--guide-ink);
-  font-size: 1.9rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  text-align: left;
-}
-
-.is-front-summary .source-sheet-band tr > *:first-child {
-  padding: 0.5rem 1.4rem;
-  border-radius: 999px;
+.is-front-summary .source-criteria-table th[scope="row"] {
   background: var(--guide-blue-pale);
   color: var(--guide-blue-dark);
-  font-size: 1.5rem;
-  white-space: nowrap;
 }
 
-.is-front-summary .source-full-content {
-  gap: 1rem;
+/* 지면 이름 띠는 앞 칸만 딱지입니다. 뒤 칸은 지면 이름이라 글이 잘 보여야
+   하므로 옅은 바탕에 검은 글씨로 둡니다. */
+.is-front-summary .source-sheet-band th:first-child {
+  background: var(--guide-blue);
+  color: #fff;
+}
+
+.is-front-summary .source-sheet-band th:not(:first-child) {
+  background: var(--guide-surface);
+  color: var(--guide-ink);
+  border-left-color: var(--guide-line);
 }
