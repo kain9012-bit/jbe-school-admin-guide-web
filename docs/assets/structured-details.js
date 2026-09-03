@@ -1878,7 +1878,7 @@
         .flat()
         .map(said)
         .find((text) => text && arrowOnly(text)) || "⇒";
-    return { grid, steps, mark };
+    return { grid, steps, mark, widths: table.widths, link };
   }
 
   // 한 단계 상자 안을 그립니다. 첫 줄이 이름이고, 그 아래가 내용입니다.
@@ -1918,14 +1918,43 @@
       .join("");
   }
 
+  // 단계 상자의 폭은 원문이 정해 둔 열 너비를 그대로 씁니다.
+  // 똑같이 나누면 글 한 줄뿐인 상자가 내용이 가득한 상자만큼 넓어져,
+  // 종이에서 좁던 칸이 화면에서만 텅 빈 채로 벌어집니다.
+  //   원문 제2편 '1. 발급 절차'  12% : 72% : 8%
+  // 너무 좁아 낱말이 토막 나지 않도록 가장 좁은 폭만 정해 둡니다.
+  function sheetFlowRoom(chain) {
+    const widths = Array.isArray(chain.widths) ? chain.widths : null;
+    if (!widths) return "";
+    const sum = (from, to) => {
+      let total = 0;
+      for (let at = from; at <= to; at += 1) total += Number(widths[at] || 0);
+      return total;
+    };
+    const tracks = [];
+    chain.steps.forEach((step, index) => {
+      if (index > 0) tracks.push("auto");
+      const share = sum(step[0], step[1]);
+      if (!share) return;
+      tracks.push(`minmax(8rem, ${share.toFixed(2)}fr)`);
+    });
+    // 단계 수와 칸 수가 맞지 않으면(너비를 못 읽은 표) 그냥 고르게 둡니다.
+    if (tracks.filter((one) => one !== "auto").length !== chain.steps.length) return "";
+    return tracks.join(" ");
+  }
+
   function sheetChainMarkup(chain) {
     const boxes = chain.steps
       .map((step) => sheetStepMarkup(chain.grid, step))
       .filter(Boolean)
       .map((inside) => `<div class="sheet-step">${inside}</div>`);
     if (boxes.length < 2) return "";
-    return `<div class="sheet-flow">${boxes
-      .join(`<span class="sheet-flow-mark" aria-hidden="true">${escapeHtml(chain.mark)}</span>`)}</div>`;
+    const room = boxes.length === chain.steps.length ? sheetFlowRoom(chain) : "";
+    return `<div class="sheet-flow"${
+      room ? ` style="--flow-columns: ${room}"` : ""
+    }>${boxes.join(
+      `<span class="sheet-flow-mark" aria-hidden="true">${escapeHtml(chain.mark)}</span>`
+    )}</div>`;
   }
 
   // 주체마다 할 일을 적어 둔 표입니다. 왼쪽 칸이 주체 이름이고

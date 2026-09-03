@@ -1191,17 +1191,19 @@
   font-weight: 700;
 }
 
-/* 이어지는 절차 — 상자와 상자 사이에 원문 화살표를 세웁니다. */
+/* 이어지는 절차 — 상자와 상자 사이에 원문 화살표를 세웁니다.
+   상자 폭은 원문이 정해 둔 열 너비 그대로입니다(--flow-columns).
+   고르게 나누면 글 한 줄뿐인 상자가 내용이 가득한 상자만큼 넓어져,
+   종이에서 좁던 칸이 화면에서만 텅 빈 채로 벌어집니다. */
 .sheet-flow {
-  display: flex;
+  display: grid;
+  grid-template-columns: var(--flow-columns, repeat(auto-fit, minmax(18rem, 1fr)));
   align-items: stretch;
   gap: 1rem;
-  flex-wrap: wrap;
 }
 
 .sheet-step {
   display: flex;
-  flex: 1 1 18rem;
   min-width: 0;
   flex-direction: column;
   gap: 0.8rem;
@@ -1318,8 +1320,10 @@
     gap: 0.8rem;
   }
 
+  /* 좁은 화면에서는 상자를 세로로 쌓습니다. 원문 폭 비율을 그대로 두면
+     한 상자가 손가락 하나 너비로 눌립니다. */
   .sheet-flow {
-    flex-direction: column;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .sheet-flow-mark {
