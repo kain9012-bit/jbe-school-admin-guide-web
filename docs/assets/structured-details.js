@@ -341,7 +341,15 @@
     lines.forEach((line, index) => {
       const owner = owners.has(index) ? owners.get(index) : -1;
       if (owner < 0) {
-        buffer.push(line);
+        // 표가 삼킨 줄의 마지막 한 글자(닫는 괄호)가 다음 줄 맨 앞으로 밀려
+        // 나오는 자리가 있습니다. 빌더가 글자를 견줄 때 괄호를 빼고 보아서,
+        // 표는 제 줄을 찾지만 그 괄호는 표 다음 줄 앞에 남습니다.
+        //   원문 … 근무상황(특별휴가 → 장기재직휴가)  [표 끝]
+        //        자주 쓰는 휴가
+        //   화면 ')자주 쓰는 휴가'
+        // 표 바로 다음 줄일 때만 앞의 닫는 괄호를 텁니다(제4편).
+        const afterTable = owners.has(index - 1);
+        buffer.push(afterTable ? line.replace(/^\s*[)\]）］}」』]+\s*/, "") : line);
         return;
       }
       if (drawn.has(owner)) return;
@@ -2811,15 +2819,13 @@
     const body = String(block?.body || "");
     if (!body) return { summary: "전체 내용 보기", html: "", type: "text" };
 
-    // 매뉴얼 PDF의 칸 경계선을 읽어 둔 표가 있으면 그대로 그립니다.
-    // 예전에는 '이런 낱말이 있으면 이런 표'라는 목록을 손으로 적어 두었는데,
-    // 목록에 없는 표는 줄글로 흘러 나왔고 원문이 바뀌면 조용히 어긋났습니다.
-    // 편 앞머리 '한눈에 보기' 지면은 표가 아니라 한 장짜리 요약입니다.
-    // 격자 대신 원문 짜임새대로 그립니다(위 renderFrontSheet).
-    if (FRONT_SHEET.test(String(block.id || ""))) {
-      const sheet = renderFrontSheet(block);
-      if (sheet) return sheet;
-    }
+    // 편 앞머리 '한눈에 보기'도 여느 지면과 똑같이 원문 표 그대로 그립니다.
+    //
+    // 예전에 이 지면만 카드로 다시 그렸습니다(항목 카드·단·갈래). 편마다
+    // 다른 원문을 제가 만든 파란 카드 틀 하나로 죄다 뭉갰고, 표였던 것이
+    // 딱지 붙은 카드가 되어 원문과 달라졌습니다. 카드는 다 걷어냅니다.
+    // 표는 표대로, 원문 짜임새 그대로 둡니다. 색만 누리집 파랑으로 입힙니다
+    // (아래 renderFrontSheet·sheetRecords 따위는 더는 부르지 않습니다).
 
     const sourceTable = renderSourceTable(block);
     if (sourceTable) return sourceTable;
