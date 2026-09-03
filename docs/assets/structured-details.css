@@ -1360,3 +1360,130 @@
     gap: 0.6rem;
   }
 }
+
+/* ── 항목 카드 (제13·14·18·19편) ────────────────────────────────
+   바깥 표가 테두리가 아니라 곧 지면인 편입니다. 줄 하나가 항목 하나이고,
+   열 이름이 그 항목의 갈래입니다(구분 | 흐름도 | 주요 내용 | 주의 사항).
+   격자로 두면 한 칸에 열 줄씩 든 글이 좁은 칸에 갇혀 옆으로 밀립니다.
+   항목마다 카드 한 장을 세우고, 열 이름은 작은 딱지로 내용 위에 답니다. */
+.sheet-group {
+  display: grid;
+  gap: 1rem;
+}
+
+.sheet-group + .sheet-group {
+  margin-top: 2rem;
+}
+
+/* 여러 항목을 묶는 띠입니다(제18·19편 '추진기관'). */
+.sheet-group-head {
+  margin: 0;
+  padding: 0.7rem 1.6rem;
+  background: var(--guide-blue);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  justify-self: start;
+}
+
+/* 표 머리줄입니다. 카드마다 되풀이하지 않고 맨 위에 한 번만 세웁니다. */
+.sheet-records-head {
+  display: grid;
+  grid-template-columns: 12rem minmax(0, 1fr);
+  gap: 1.6rem;
+  align-items: center;
+  margin-bottom: 0.4rem;
+  padding: 0 1.6rem;
+}
+
+.sheet-records-head .sheet-record-name {
+  background: transparent;
+  color: var(--guide-muted);
+  font-size: 1.4rem;
+}
+
+.sheet-records {
+  display: grid;
+  gap: 1rem;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+}
+
+.sheet-record {
+  display: grid;
+  grid-template-columns: 12rem minmax(0, 1fr);
+  gap: 1.6rem;
+  align-items: start;
+  padding: 1.4rem 1.6rem;
+  background: #fff;
+  border: 1px solid var(--guide-line);
+  border-left: 3px solid var(--guide-blue);
+  border-radius: 1rem;
+}
+
+.sheet-record-name {
+  padding: 0.7rem 0.6rem;
+  background: var(--guide-blue-pale);
+  border-radius: 0.8rem;
+  color: var(--guide-blue-dark);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.45;
+}
+
+.sheet-record-body {
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.sheet-field {
+  min-width: 0;
+  color: var(--guide-ink);
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+/* 갈래와 갈래는 딱지로 갈립니다. 여기에 선까지 그으면 카드 안에 또 칸이
+   생겨, 카드·칸·표가 겹겹이 쌓입니다. */
+.sheet-record-body {
+  gap: 1.4rem;
+}
+
+/* 카드 안에 든 표는 제 상자를 벗습니다. 카드가 이미 상자이므로 두 겹이
+   되고, 칸 선은 표 자신이 그으므로 잃는 것이 없습니다. */
+.sheet-record .source-table-scroll {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+}
+
+/* 열 이름입니다. 머리줄이 사라지면 '◦자격: 전기산업기사 이상'이 어느 열의
+   값인지 알 수 없게 되므로, 딱지로 남겨 둡니다. */
+.sheet-field-label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem 0.9rem;
+  background: var(--guide-surface);
+  border-radius: 999px;
+  color: var(--guide-muted);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.sheet-field-body {
+  min-width: 0;
+}
+
+@media (max-width: 767px) {
+  .sheet-record,
+  .sheet-records-head {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.8rem;
+  }
+}

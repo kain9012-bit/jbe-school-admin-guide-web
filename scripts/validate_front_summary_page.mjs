@@ -135,6 +135,20 @@ const shape = (page) =>
         // 표 대신 카드로 다시 그린 지면인지입니다. 여느 지면은 표 그대로라
         // 이미 다른 검사기가 글자를 견주고 있습니다.
         redrawn: Boolean(document.querySelector("#step-actions .front-sheet")),
+        // 격자 표가 그대로 남아 있는지입니다. 지면이 그림 한 장뿐인 편도
+        // 있어(제12편 물품관리 흐름도) '표도 없고 카드도 없다'가 정상입니다.
+        gridded: Boolean(document.querySelector("#step-actions .source-criteria-table")),
+        // 표가 삼킨 줄의 마지막 한 글자가 다음 줄 맨 앞으로 밀려나는 자리가
+        // 있습니다. 닫는 괄호로 시작하는 줄은 원문에 없습니다.
+        //   제4편 ')자주 쓰는 휴가'  ← 원문은 '자주 쓰는 휴가'(지면 이름)
+        strays: Array.from(document.querySelectorAll("#step-actions .front-sheet *"))
+          .filter((node) => {
+            if (!["P", "LI", "H3", "H4", "H5", "DIV", "STRONG", "TD", "TH"].includes(node.tagName))
+              return false;
+            const first = node.firstChild;
+            return first && first.nodeType === 3 && /^\s*[)\]）］}」』]/.test(first.textContent);
+          })
+          .map((node) => (node.textContent || "").trim().slice(0, 24)),
         frames: Object.fromEntries(frames.map((one) => [one, seen(one)])),
         title: said("#work-title"),
         badge: said("#work-number"),
@@ -228,6 +242,16 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
     }
     if (now.stepTitle && squash(now.stepTitle) === squash(now.title)) {
       problems.push(`${where}: 카드 제목이 큰 제목과 같은 말입니다.`);
+    }
+    // 이 지면은 편마다 예외 없이 카드로 다시 그립니다. 한 편이라도 격자 표
+    // 그대로 남아 있으면 편에 따라 다른 화면이 나옵니다. 실제로 다섯 편
+    // (제13·14·18·19편)이 표 그대로 남았고, 그것을 여기서 잡지 못했습니다.
+    // 그림 한 장뿐인 지면은 그릴 표가 없으니 그대로 둡니다(제12편).
+    if (!now.redrawn && now.gridded) {
+      problems.push(`${where}: 카드로 다시 그리지 않고 격자 표 그대로입니다.`);
+    }
+    for (const stray of now.strays || []) {
+      problems.push(`${where}: 닫는 괄호로 시작하는 줄이 남았습니다 — '${stray}'`);
     }
     // 지면을 표 대신 카드로 다시 그리면 칸이 통째로 빠질 수 있습니다.
     // 실제로 제2편 '기준연도' 표의 가운데 열이 통째로 사라진 적이 있습니다.

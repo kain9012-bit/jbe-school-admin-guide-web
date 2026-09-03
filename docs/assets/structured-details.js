@@ -2038,6 +2038,205 @@
       .join("")}</ol>`;
   }
 
+  // 줄마다 한 항목인 표입니다. 머리줄이 열 이름이고, 그 아래는 줄 하나가
+  // 항목 하나입니다.
+  //
+  //   제13편 분야 | 점검 주기 | 점검 자격 | 안전관리자 선임(대상 | 자격 및 선임기한)
+  //   제14편 구분 | 흐름도 | 주요 내용 | 주의 사항
+  //   제18편 추진기관 | 분야 | 주요내용
+  //   제19편 추진기관 | 분야 | 주요내용
+  //
+  // 이 넷은 바깥 표가 곧 지면이라 '테두리'가 아닙니다(sheetFrame). 그래서
+  // 다른 편이 다 카드로 선 뒤에도 이 넷만 격자 표로 남았습니다. 한 칸에
+  // 열 줄씩 든 글이 좁은 칸에 갇혀, 화면을 옆으로 밀어야 읽혔습니다.
+  //
+  // 격자 대신 항목마다 카드 한 장을 세웁니다. 이름은 왼쪽에, 열 이름은
+  // 작은 딱지로 내용 위에 답니다. 원문 글자는 하나도 빼지 않습니다.
+  //
+  // 열 이름을 딱지로 다는 것이 이 표를 카드로 세울 수 있는 까닭입니다.
+  // 머리줄이 사라지면 '◦자격: 전기산업기사 이상'이 어느 열의 값인지
+  // 알 수 없게 됩니다.
+  function sheetRecords(table) {
+    const grid = sheetGrid(table);
+    if (grid.columns < 3 || grid.rows.length < 3) return null;
+
+    // 머리줄이 한 줄이 아닐 수 있습니다. 첫 줄의 칸이 아래로 걸쳐 있고
+    // 다음 줄이 그 빈 자리만 짧은 이름으로 채우면 그 줄도 머리줄입니다
+    // (제13편 '안전관리자 선임' 아래 '대상 | 자격 및 선임기한').
+    let heads = 1;
+    while (heads < grid.rows.length) {
+      const first = grid.cover[heads][0];
+      if (!first || first !== grid.cover[0][0]) break;
+      const fresh = grid.rows[heads];
+      if (!fresh.length) break;
+      if (fresh.some((cell) => !said(cell) || [...said(cell)].length > 20)) break;
+      heads += 1;
+    }
+    if (grid.rows.length - heads < 2) return null;
+
+    // 머리줄은 짧은 열 이름이어야 합니다. 아니면 머리줄이 아니라 첫 항목입니다.
+    for (let column = 0; column < grid.columns; column += 1) {
+      const name = grid.cover[0][column];
+      if (!name || !said(name) || [...said(name)].length > 14) return null;
+    }
+
+    const label = (column) => {
+      const parts = [];
+      for (let at = 0; at < heads; at += 1) {
+        const cell = grid.cover[at][column];
+        const text = cell ? said(cell) : "";
+        if (text && !parts.includes(text)) parts.push(text);
+      }
+      return parts.join(" · ");
+    };
+
+    // 이름 열이 첫 열인지 둘째 열인지 가릅니다. 첫 열이 여러 줄에 걸쳐
+    // 있고 둘째 열이 줄마다 바뀌는 짧은 이름이면, 첫 열은 묶음 띠이고
+    // 둘째 열이 항목 이름입니다(제18·19편 추진기관 ▸ 분야).
+    // 제13편은 둘째 열이 '◦월간: 1 ~ 6회 …'라 이름이 아닙니다. 그때는
+    // 첫 열(분야)이 곧 이름입니다.
+    const namely = (column) => {
+      for (let at = heads; at < grid.rows.length; at += 1) {
+        const cell = grid.cover[at][column];
+        if (!cell || (cell.rowSpan || 1) !== 1 || (cell.colSpan || 1) !== 1) return false;
+        const text = said(cell);
+        if (!text || [...text].length > 16 || MARKED.test(text)) return false;
+      }
+      return true;
+    };
+    let banded = false;
+    for (let at = heads; at < grid.rows.length; at += 1) {
+      const cell = grid.cover[at][0];
+      if (cell && (cell.rowSpan || 1) > 1) banded = true;
+    }
+    const grouped = banded && grid.columns > 2 && namely(1);
+    const nameColumn = grouped ? 1 : 0;
+    if (!grouped && !namely(0)) {
+      // 이름 칸이 여러 줄에 걸치는 것은 괜찮습니다(제13편 '전기'가 두 줄).
+      // 짧은 이름이기만 하면 됩니다.
+      for (let at = heads; at < grid.rows.length; at += 1) {
+        const cell = grid.cover[at][0];
+        if (!cell) return null;
+        const text = said(cell);
+        if (!text || [...text].length > 20 || MARKED.test(text)) return null;
+      }
+    }
+
+    const groups = [];
+    let group = null;
+    let record = null;
+    const used = new Set();
+    for (let at = heads; at < grid.rows.length; at += 1) {
+      const bandCell = grouped ? grid.cover[at][0] : null;
+      if (grouped && (!group || group.cell !== bandCell)) {
+        group = { cell: bandCell, name: bandCell ? said(bandCell) : "", records: [] };
+        groups.push(group);
+      }
+      if (!group) {
+        group = { cell: null, name: "", records: [] };
+        groups.push(group);
+      }
+      const nameCell = grid.cover[at][nameColumn];
+      if (!nameCell) return null;
+      if (!record || record.cell !== nameCell) {
+        record = { cell: nameCell, name: said(nameCell), fields: new Map() };
+        group.records.push(record);
+      }
+      for (let column = nameColumn + 1; column < grid.columns; column += 1) {
+        const cell = grid.cover[at][column];
+        if (!cell || !said(cell) || used.has(cell)) continue;
+        if ((cell.column ?? 0) !== column) continue;
+        used.add(cell);
+        if (!record.fields.has(column)) record.fields.set(column, []);
+        record.fields.get(column).push(cell);
+      }
+    }
+    const all = groups.flatMap((one) => one.records);
+    if (all.length < 2) return null;
+    if (all.some((one) => !one.name || !one.fields.size)) return null;
+    const columns = [];
+    for (let column = nameColumn + 1; column < grid.columns; column += 1) {
+      if (all.some((one) => one.fields.has(column))) columns.push(column);
+    }
+    if (!columns.length) return null;
+    // 이름 열의 머리글입니다('분야'·'구분'). 카드에는 이름만 서므로
+    // 이 한 마디가 없으면 그 이름이 무엇의 이름인지 알 수 없습니다.
+    const naming = [grouped ? label(0) : "", label(nameColumn)].filter(Boolean).join(" · ");
+    return { groups, columns, label, grouped, naming, single: columns.length === 1 };
+  }
+
+  function sheetRecordsMarkup(records) {
+    const fieldMarkup = (record, column) => {
+      const cells = record.fields.get(column) || [];
+      if (!cells.length) return "";
+      const inside = cells
+        .map((cell) => cellMarkup(cellLines(cell.text), cell.tables))
+        .join("");
+      if (!inside) return "";
+      // 열이 하나뿐이면 딱지를 달지 않습니다. 카드마다 '주요내용'이
+      // 되풀이될 뿐 가려 주는 것이 없습니다(제18·19편).
+      return `<div class="sheet-field">${
+        records.single
+          ? ""
+          : `<span class="sheet-field-label">${escapeHtml(records.label(column))}</span>`
+      }<div class="sheet-field-body">${inside}</div></div>`;
+    };
+    const cardMarkup = (record) => `
+      <li class="sheet-record">
+        <span class="sheet-record-name">${escapeHtml(record.name)}</span>
+        <div class="sheet-record-body">${records.columns
+          .map((column) => fieldMarkup(record, column))
+          .join("")}</div>
+      </li>
+    `;
+    // 표 머리줄을 한 번만 세웁니다. 갈래가 하나뿐이면 카드에 딱지를 달지
+    // 않으므로(위 fieldMarkup) 그 이름을 여기서 밝힙니다.
+    const headMarkup = `
+      <div class="sheet-records-head">
+        <span class="sheet-record-name">${escapeHtml(records.naming)}</span>
+        <div>${
+          records.single
+            ? records.columns
+                .map(
+                  (column) =>
+                    `<span class="sheet-field-label">${escapeHtml(records.label(column))}</span>`
+                )
+                .join("")
+            : ""
+        }</div>
+      </div>
+    `;
+    return headMarkup + records.groups
+      .map(
+        (group) => `
+          <section class="sheet-group">
+            ${
+              records.grouped && group.name
+                ? `<h4 class="sheet-group-head">${escapeHtml(group.name)}</h4>`
+                : ""
+            }
+            <ol class="sheet-records">${group.records.map(cardMarkup).join("")}</ol>
+          </section>
+        `
+      )
+      .join("");
+  }
+
+  // 표가 삼킨 줄의 마지막 한 글자가 다음 줄 맨 앞으로 밀려나는 자리가 있습니다.
+  //
+  // 빌더는 펴진 글줄과 한글파일 칸을 견줄 때 괄호를 빼고 봅니다
+  // (scripts/build_chapters_from_hwpx.mjs의 DECORATION). 법령 이름에 걸린
+  // 링크를 글자로 되돌리다 닫는 괄호 하나가 사라지는 자리가 있어서입니다.
+  // 그 덕에 표는 제 줄을 찾지만, 빼고 본 괄호는 어느 줄에도 안 실립니다.
+  //
+  //   원문   … 근무상황(특별휴가 → 장기재직휴가)   [표 여기까지]
+  //          자주 쓰는 휴가                        ← 지면 이름
+  //   화면   ')자주 쓰는 휴가'
+  //
+  // 닫는 괄호로 시작하는 줄은 원문에 없습니다. 표 바로 다음 줄일 때만 텁니다.
+  // 18편을 통틀어 이 한 곳입니다(제4편).
+  const SHED = /^\s*[)\]）］}」』]+\s*/;
+
   // 지면 한 구역입니다. 머리 띠 하나와 그 아래 내용으로 이루어집니다.
   function sheetPartMarkup(lines, tables) {
     const owners = new Map();
@@ -2048,11 +2247,28 @@
     let head = null;
     const pieces = [];
     const drawn = new Set();
+    // 띠가 없는 지면은 표 밖에 남은 짧은 이름 한 줄이 곧 지면 이름입니다.
+    // 원문은 그 이름을 지면 맨 위 띠에 얹습니다(한눈에 쏙쏙 ▮ 자주 쓰는 휴가).
+    // 맨 아래 각주 자리에 두면 표 뒤에 이름이 따라붙는 꼴이 됩니다.
+    // 이름 같은 줄이 둘 이상이면 그것은 소제목이므로 건드리지 않습니다
+    // (제2편 '1. 발급 절차'·'2. 나이스 미조회 시 …').
+    const names = [];
+    lines.forEach((line, index) => {
+      if (owners.has(index)) return;
+      const only = line.replace(SHED, "").trim();
+      if (only && /^[\p{L}\p{N}]/u.test(only) && [...only].length <= 20) names.push(index);
+    });
+    const banded = tables.some((table) => sheetBand(table));
+    const titleAt = !banded && names.length === 1 ? names[0] : -1;
     lines.forEach((line, index) => {
       const owner = owners.has(index) ? owners.get(index) : -1;
       if (owner < 0) {
-        const only = line.trim();
+        const only = (owners.has(index - 1) ? line.replace(SHED, "") : line).trim();
         if (!only) return;
+        if (index === titleAt) {
+          head = { tag: "", name: only };
+          return;
+        }
         // 표 밖에 남은 줄이 다 소제목은 아닙니다. 각주와 덧붙임도 여기로
         // 옵니다(제11편 '▪ 금액 또는 면적 중 하나만 …', 제4편 '※ 참고 …').
         // 번호로 시작하거나 짧은 이름만 소제목으로 세우고, 기호로 시작하는
@@ -2101,14 +2317,7 @@
     if (!pieces.length) return "";
     return `
       <section class="sheet-part">
-        ${
-          head
-            ? `<h3 class="sheet-part-head">
-                 ${head.tag ? `<span class="sheet-tag">${escapeHtml(head.tag)}</span>` : ""}
-                 <span>${escapeHtml(head.name)}</span>
-               </h3>`
-            : ""
-        }
+        ${head ? sheetHeadMarkup(head.tag, head.name) : ""}
         <div class="sheet-part-body">${pieces.join("")}</div>
       </section>
     `;
@@ -2134,9 +2343,35 @@
     );
   }
 
+  const sheetHeadMarkup = (tag, name) =>
+    name
+      ? `<h3 class="sheet-part-head">
+           ${tag ? `<span class="sheet-tag">${escapeHtml(tag)}</span>` : ""}
+           <span>${escapeHtml(name)}</span>
+         </h3>`
+      : "";
+
   function renderFrontSheet(block) {
     const outer = (block.tables || [])[0];
-    if (!outer || (block.tables || []).length !== 1 || !sheetFrame(outer)) return null;
+    if (!outer || (block.tables || []).length !== 1) return null;
+    // 바깥 표가 테두리가 아니라 곧 지면인 편입니다(제13·14·18·19편).
+    // 줄마다 한 항목인 표라면 격자 대신 항목 카드로 세웁니다.
+    if (!sheetFrame(outer)) {
+      const records = sheetRecords(outer);
+      if (!records) return null;
+      // 지면 이름 띠는 세우지 않습니다. 이 편들은 블록 이름이 곧 지면
+      // 이름이라(제18편 '신설학교 설립 및 개교 준비 개요') 카드 머리에
+      // 이미 서 있습니다. 여기서 또 세우면 같은 말이 두 번 섭니다.
+      return {
+        summary: "한눈에 보기",
+        html: `<div class="front-sheet">
+                 <section class="sheet-part">
+                   <div class="sheet-part-body">${sheetRecordsMarkup(records)}</div>
+                 </section>
+               </div>`,
+        type: "table",
+      };
+    }
     const parts = [];
     for (const row of [outer.headers || [], ...(outer.rows || [])]) {
       for (const cell of row) {
