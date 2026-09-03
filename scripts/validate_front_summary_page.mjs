@@ -135,6 +135,18 @@ const shape = (page) =>
         // 표 대신 카드로 다시 그린 지면인지입니다. 여느 지면은 표 그대로라
         // 이미 다른 검사기가 글자를 견주고 있습니다.
         redrawn: Boolean(document.querySelector("#step-actions .front-sheet")),
+        // **카드가 실제로 섰는지 셉니다.**
+        //
+        // 예전에는 .front-sheet라는 껍데기만 보고 '다시 그렸다'고 셌습니다.
+        // 그런데 껍데기 안에 격자 표가 그대로 들어 있어도 그 껍데기는
+        // 생깁니다(맨 위 이름 띠만 붙기 때문입니다). 그래서 여덟 편이
+        // 표 그대로인데도 이 검사기가 통과시켰고, 저는 '열세 편을 새 모양으로
+        // 바꿨다'고 잘못 알렸습니다. 껍데기가 아니라 카드를 셉니다.
+        cards: document.querySelectorAll(
+          "#step-actions .sheet-flow, #step-actions .sheet-actors,"
+            + " #step-actions .sheet-records, #step-actions .sheet-stacks,"
+            + " #step-actions .sheet-lanes"
+        ).length,
         // 격자 표가 그대로 남아 있는지입니다. 지면이 그림 한 장뿐인 편도
         // 있어(제12편 물품관리 흐름도) '표도 없고 카드도 없다'가 정상입니다.
         gridded: Boolean(document.querySelector("#step-actions .source-criteria-table")),
@@ -247,8 +259,8 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
     // 그대로 남아 있으면 편에 따라 다른 화면이 나옵니다. 실제로 다섯 편
     // (제13·14·18·19편)이 표 그대로 남았고, 그것을 여기서 잡지 못했습니다.
     // 그림 한 장뿐인 지면은 그릴 표가 없으니 그대로 둡니다(제12편).
-    if (!now.redrawn && now.gridded) {
-      problems.push(`${where}: 카드로 다시 그리지 않고 격자 표 그대로입니다.`);
+    if (!now.cards && now.gridded) {
+      problems.push(`${where}: 카드가 한 장도 없습니다 — 격자 표 그대로입니다.`);
     }
     for (const stray of now.strays || []) {
       problems.push(`${where}: 닫는 괄호로 시작하는 줄이 남았습니다 — '${stray}'`);
