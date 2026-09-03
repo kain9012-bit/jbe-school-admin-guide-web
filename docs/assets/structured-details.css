@@ -1330,3 +1330,33 @@
     transform: rotate(90deg);
   }
 }
+
+/* 지면에 딸린 각주·덧붙임 줄입니다. 소제목이 아니므로 굵게 세우지 않습니다. */
+.sheet-note {
+  margin: 0;
+  color: var(--guide-muted);
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+/* 주체별 목록의 머리줄입니다(월별 | 주 요 일 정). */
+.sheet-actors-head {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  gap: 1.6rem;
+  align-items: center;
+  margin-bottom: 0.4rem;
+  padding: 0 1.6rem;
+}
+
+.sheet-actors-head > strong {
+  color: var(--guide-blue-dark);
+  font-size: 1.6rem;
+}
+
+@media (max-width: 767px) {
+  .sheet-actors-head {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.6rem;
+  }
+}

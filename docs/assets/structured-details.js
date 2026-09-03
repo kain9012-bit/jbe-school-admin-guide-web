@@ -1814,9 +1814,8 @@
   // 상자였던 것은 상자로, 이어지던 것은 화살표로, 표였던 것만 표로 그립니다.
   // 글자는 원문 그대로 옮겨 놓기만 하고 하나도 지어내지 않습니다.
   //
-  // 지금은 제2편에서만 켭니다(시범). 편마다 지면 짜임새가 조금씩 달라,
-  // 한 편에서 모양을 정한 뒤 나머지를 옮깁니다.
-  const FRONT_SHEET = /^c02-w00-b/;
+  // 편 앞머리 지면의 블록입니다(cNN-w00-b…). 18편 모두 여기로 옵니다.
+  const FRONT_SHEET = /^c\d+-w00-b/;
 
   // 표를 칸 자리대로 펴 둡니다. 병합된 칸이 어느 자리를 덮는지 알아야
   // '이 열은 통째로 화살표'를 셀 수 있습니다.
@@ -1973,6 +1972,21 @@
         if (cell && said(cell) && !arrowOnly(said(cell))) return null;
       }
     }
+    for (const row of grid.rows) {
+      for (const cell of row) {
+        const text = said(cell);
+        if (!text) continue;
+        // 첫 칸이 이름표 노릇을 하려면 짧아야 합니다. 여러 줄짜리 긴 글이면
+        // 그것은 이름이 아니라 내용입니다(제10편 '학교운영위원회 구성 절차',
+        // 제15편 '징수결정 (수요조사, 계획수립 등)'). 표 그대로 그립니다.
+        if ((cell.column ?? 0) === 0 && (cell.colSpan || 1) === 1) {
+          if (!arrowOnly(text) && [...text].length > 8) return null;
+        }
+        // 줄 하나가 표 폭을 통째로 덮으면 구역을 가르는 띠입니다
+        // (제15편 '징수행위'·'수납행위'). 주체별 목록이 아닙니다.
+        if ((cell.colSpan || 1) >= grid.columns && grid.columns > 1) return null;
+      }
+    }
     const actors = [];
     grid.rows.forEach((row, at) => {
       const name = row.find((cell) => (cell.column ?? 0) === 0 && said(cell));
@@ -1989,7 +2003,22 @@
   }
 
   function sheetActorsMarkup(actors) {
-    return `<ol class="sheet-actors">${actors
+    // 첫 줄이 '월별 | 주요 일정'처럼 이름표 두 개뿐이면 머리줄입니다.
+    // 카드로 세우면 내용 없는 빈 카드가 맨 위에 하나 서 버립니다.
+    const head =
+      actors.length > 2 &&
+      actors[0].lines.length === 1 &&
+      [...said(actors[0].lines[0])].length <= 10
+        ? actors.shift()
+        : null;
+    return `${
+      head
+        ? `<div class="sheet-actors-head">
+             <span class="sheet-actor-name">${escapeHtml(head.name)}</span>
+             <strong>${escapeHtml(said(head.lines[0]))}</strong>
+           </div>`
+        : ""
+    }<ol class="sheet-actors">${actors
       .map(
         (actor) => `
           <li>
@@ -2022,9 +2051,19 @@
     lines.forEach((line, index) => {
       const owner = owners.has(index) ? owners.get(index) : -1;
       if (owner < 0) {
-        if (line.trim()) {
-          pieces.push(`<h4 class="sheet-step-title">${escapeHtml(line.trim())}</h4>`);
-        }
+        const only = line.trim();
+        if (!only) return;
+        // 표 밖에 남은 줄이 다 소제목은 아닙니다. 각주와 덧붙임도 여기로
+        // 옵니다(제11편 '▪ 금액 또는 면적 중 하나만 …', 제4편 '※ 참고 …').
+        // 번호로 시작하거나 짧은 이름만 소제목으로 세우고, 기호로 시작하는
+        // 줄은 본문 그대로 둡니다. 다 굵게 세우면 각주가 제목 행세를 합니다.
+        const heading =
+          /^\d+\s*\./.test(only) || (/^[\p{L}\p{N}]/u.test(only) && [...only].length <= 20);
+        pieces.push(
+          heading
+            ? `<h4 class="sheet-step-title">${escapeHtml(only)}</h4>`
+            : `<p class="sheet-note">${cellMarkup([only])}</p>`
+        );
         return;
       }
       if (drawn.has(owner)) return;
@@ -2075,9 +2114,29 @@
     `;
   }
 
+  // 바깥 표가 지면을 감싼 '테두리'인지 봅니다. 한 열짜리이고, 칸마다
+  // 안쪽 표를 품고 있어야 테두리입니다.
+  //
+  // 제14편처럼 바깥 표 자체가 내용인 편도 있습니다(구분|흐름도|주요 내용|
+  // 주의 사항). 그것을 테두리로 잘못 보면 바깥 표가 통째로 사라지고
+  // 안쪽 표 몇 개만 남습니다. 실제로 그랬고, 아래 검사기가 잡았습니다.
+  function sheetFrame(table) {
+    const rows = [table.headers || [], ...(table.rows || [])];
+    let columns = 0;
+    for (const row of rows) {
+      for (const cell of row) {
+        columns = Math.max(columns, (cell.column ?? 0) + (cell.colSpan || 1));
+      }
+    }
+    if (columns !== 1) return false;
+    return rows.every((row) =>
+      row.every((cell) => (cell.tables || []).length || !said(cell))
+    );
+  }
+
   function renderFrontSheet(block) {
     const outer = (block.tables || [])[0];
-    if (!outer) return null;
+    if (!outer || (block.tables || []).length !== 1 || !sheetFrame(outer)) return null;
     const parts = [];
     for (const row of [outer.headers || [], ...(outer.rows || [])]) {
       for (const cell of row) {

@@ -142,7 +142,12 @@ const shape = (page) =>
         room: wide(".work-content"),
         // 이 지면이 표가 아니라 그림인 편도 있습니다(제12편 물품관리 흐름도).
         // 그때는 그림이 든 줄의 폭을 잽니다.
-        table: wide("#step-actions .source-criteria-table") || wide("#step-actions .source-picture-row"),
+        // 지면을 카드로 다시 그리면 표가 아예 없을 수도 있습니다.
+        // 그때는 다시 그린 지면 전체의 폭을 잽니다.
+        table:
+          wide("#step-actions .front-sheet") ||
+          wide("#step-actions .source-criteria-table") ||
+          wide("#step-actions .source-picture-row"),
       };
     },
     { frames: EMPTY_FRAMES.map(([selector]) => selector) }
