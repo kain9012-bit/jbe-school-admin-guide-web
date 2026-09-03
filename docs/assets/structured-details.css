@@ -1143,3 +1143,186 @@
   color: var(--guide-ink);
   border-left-color: var(--guide-line);
 }
+
+/* ── 편 앞머리 '한눈에 보기' 지면 (제2편 시범) ────────────────
+   원문은 이 지면을 표로 만들어 두었지만 표가 아닙니다. 구역 머리 띠,
+   이어지는 절차 상자, 주체별 할 일, 그리고 진짜 표가 섞여 있습니다.
+   격자로 옮기면 넷이 다 회색 칸으로 뭉개지므로 제 모양대로 그립니다.
+   글자는 원문 그대로이고, 자리만 원문이 그린 대로 되살립니다. */
+.front-sheet {
+  display: grid;
+  gap: 3.2rem;
+}
+
+/* 구역 머리 — 원문의 [딱지] + 지면 이름 띠입니다. */
+.sheet-part-head {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 0 0 1.6rem;
+  padding: 0.8rem 1.6rem 0.8rem 0.8rem;
+  background: var(--guide-surface);
+  border-radius: 999px;
+  color: var(--guide-ink);
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.sheet-tag {
+  padding: 0.5rem 1.4rem;
+  color: #fff;
+  background: var(--guide-blue);
+  border-radius: 999px;
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+
+.sheet-part-body {
+  display: grid;
+  gap: 1.6rem;
+}
+
+/* 구역 안의 작은 제목입니다('1. 발급 절차'). 원문에서도 표 밖 한 줄입니다. */
+.sheet-step-title {
+  margin: 0.8rem 0 0;
+  color: var(--guide-blue-dark);
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+/* 이어지는 절차 — 상자와 상자 사이에 원문 화살표를 세웁니다. */
+.sheet-flow {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.sheet-step {
+  display: flex;
+  flex: 1 1 18rem;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1.6rem 1.8rem;
+  background: #fff;
+  border: 1px solid var(--guide-line);
+  border-top: 3px solid var(--guide-blue);
+  border-radius: 1rem;
+  line-height: 1.65;
+}
+
+/* 안에 이름 한 줄뿐인 상자는 글을 가운데에 둡니다. 옆 상자와 키를 맞추느라
+   늘어난 자리에 글만 위에 붙어 있으면 상자가 빈 것처럼 보입니다. */
+.sheet-step:has(> :only-child) {
+  justify-content: center;
+  text-align: center;
+}
+
+/* 단계 이름은 상자 맨 위에 굵게 섭니다. */
+.sheet-step-name {
+  color: var(--guide-blue-dark);
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+/* '분 류'처럼 그 아래를 묶는 작은 이름표입니다. */
+.sheet-step-sub {
+  padding-top: 0.6rem;
+  border-top: 1px dashed var(--guide-line);
+  color: var(--guide-muted);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.sheet-step-line {
+  color: var(--guide-ink);
+  font-size: 1.5rem;
+}
+
+/* 원문에서 나란히 놓인 칸은 나란히 놓습니다(학생 관련·검정고시 관련·인사 관련). */
+.sheet-step-chips {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.sheet-step-chips > span {
+  flex: 1 1 12rem;
+  padding: 0.9rem 1.2rem;
+  background: var(--guide-blue-pale);
+  border-radius: 0.8rem;
+  color: var(--guide-blue-dark);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* 상자와 상자를 잇는 원문 화살표입니다. */
+.sheet-flow-mark {
+  align-self: center;
+  color: var(--guide-blue);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* 주체별 할 일 — 왼쪽에 주체, 오른쪽에 그 주체가 하는 일. */
+.sheet-actors {
+  display: grid;
+  gap: 0.8rem;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+}
+
+.sheet-actors > li {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  gap: 1.6rem;
+  align-items: start;
+  padding: 1.4rem 1.6rem;
+  background: #fff;
+  border: 1px solid var(--guide-line);
+  border-radius: 1rem;
+}
+
+.sheet-actor-name {
+  padding: 0.6rem 0;
+  color: var(--guide-blue-dark);
+  background: var(--guide-blue-pale);
+  border-radius: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.sheet-actor-body {
+  min-width: 0;
+  color: var(--guide-ink);
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+.sheet-actor-sub {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--guide-muted);
+  font-size: 1.4rem;
+}
+
+@media (max-width: 767px) {
+  .sheet-actors > li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.8rem;
+  }
+
+  .sheet-flow {
+    flex-direction: column;
+  }
+
+  .sheet-flow-mark {
+    transform: rotate(90deg);
+  }
+}

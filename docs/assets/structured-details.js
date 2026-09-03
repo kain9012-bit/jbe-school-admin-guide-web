@@ -1800,6 +1800,271 @@
     return subject ? `${subject} 전체 내용 보기` : "전체 내용 보기";
   }
 
+  // ── 편 앞머리 '한눈에 보기' 지면 ─────────────────────────────
+  //
+  // 이 지면은 원문에서 한 장짜리 요약입니다. 한글파일에는 표 하나로
+  // 들어 있지만 표가 아닙니다. 안에 세 가지가 섞여 있습니다.
+  //
+  //   · 구역 머리   [흐름도] 제증명 민원 발급 절차     ← 딱지 + 지면 이름
+  //   · 절차        [교육기관 방문] ⇒ [발급 절차] ⇒ [민원서류 수령]
+  //   · 주체별 할 일 [공통] [접수기관] [처리기관] [교부기관]
+  //   · 진짜 표     구분 | 발급 기준연도
+  //
+  // 그대로 격자로 옮기면 이 넷이 모두 회색 칸으로 뭉개집니다. 원문에서
+  // 상자였던 것은 상자로, 이어지던 것은 화살표로, 표였던 것만 표로 그립니다.
+  // 글자는 원문 그대로 옮겨 놓기만 하고 하나도 지어내지 않습니다.
+  //
+  // 지금은 제2편에서만 켭니다(시범). 편마다 지면 짜임새가 조금씩 달라,
+  // 한 편에서 모양을 정한 뒤 나머지를 옮깁니다.
+  const FRONT_SHEET = /^c02-w00-b/;
+
+  // 표를 칸 자리대로 펴 둡니다. 병합된 칸이 어느 자리를 덮는지 알아야
+  // '이 열은 통째로 화살표'를 셀 수 있습니다.
+  function sheetGrid(table) {
+    const rows = [table.headers || [], ...(table.rows || [])];
+    let columns = 0;
+    for (const row of rows) {
+      for (const cell of row) {
+        columns = Math.max(columns, (cell.column ?? 0) + (cell.colSpan || 1));
+      }
+    }
+    const cover = rows.map(() => new Array(columns).fill(null));
+    rows.forEach((row, at) => {
+      for (const cell of row) {
+        const from = cell.column ?? 0;
+        for (let down = 0; down < (cell.rowSpan || 1); down += 1) {
+          for (let right = 0; right < (cell.colSpan || 1); right += 1) {
+            if (cover[at + down]) cover[at + down][from + right] = cell;
+          }
+        }
+      }
+    });
+    return { rows, columns, cover };
+  }
+
+  const said = (cell) => String((cell && cell.text) || "").trim();
+
+  // 세로줄이 통째로 화살표인 자리가 단계와 단계의 경계입니다.
+  // 빌더의 stepChain과 같은 눈으로 봅니다.
+  function sheetChain(table) {
+    const grid = sheetGrid(table);
+    if (grid.columns < 3) return null;
+    const link = [];
+    for (let column = 0; column < grid.columns; column += 1) {
+      let some = false;
+      let all = true;
+      for (let at = 0; at < grid.rows.length; at += 1) {
+        const cell = grid.cover[at][column];
+        if (!cell || !said(cell)) continue;
+        some = true;
+        if (!arrowOnly(said(cell)) || (cell.colSpan || 1) > 1) all = false;
+      }
+      link.push(some && all);
+    }
+    if (!link.some(Boolean)) return null;
+    const steps = [];
+    let from = -1;
+    for (let column = 0; column <= grid.columns; column += 1) {
+      if (column < grid.columns && !link[column]) {
+        if (from < 0) from = column;
+        continue;
+      }
+      if (from >= 0) steps.push([from, column - 1]);
+      from = -1;
+    }
+    if (steps.length < 2) return null;
+    const mark =
+      grid.rows
+        .flat()
+        .map(said)
+        .find((text) => text && arrowOnly(text)) || "⇒";
+    return { grid, steps, mark };
+  }
+
+  // 한 단계 상자 안을 그립니다. 첫 줄이 이름이고, 그 아래가 내용입니다.
+  // 한 줄에 칸이 여럿이면 원문에서 나란히 놓은 것이므로 나란히 놓습니다.
+  function sheetStepMarkup(grid, [left, right]) {
+    const seen = new Set();
+    const lines = [];
+    grid.rows.forEach((row, at) => {
+      const mine = row.filter((cell) => {
+        const from = cell.column ?? 0;
+        return from >= left && from + (cell.colSpan || 1) - 1 <= right && said(cell);
+      });
+      if (!mine.length) return;
+      const fresh = mine.filter((cell) => !seen.has(cell));
+      if (!fresh.length) return;
+      fresh.forEach((cell) => seen.add(cell));
+      lines.push({ at, cells: fresh });
+    });
+    if (!lines.length) return "";
+    return lines
+      .map(({ cells }, index) => {
+        if (index === 0 && cells.length === 1) {
+          return `<strong class="sheet-step-name">${escapeHtml(said(cells[0]))}</strong>`;
+        }
+        if (cells.length > 1) {
+          return `<div class="sheet-step-chips">${cells
+            .map((cell) => `<span>${cellMarkup(cellLines(cell.text))}</span>`)
+            .join("")}</div>`;
+        }
+        const only = said(cells[0]);
+        // '분 류'처럼 짧은 줄은 원문에서 그 아래를 묶는 작은 이름표입니다.
+        if ([...only].length <= 10) {
+          return `<strong class="sheet-step-sub">${escapeHtml(only)}</strong>`;
+        }
+        return `<div class="sheet-step-line">${cellMarkup(cellLines(cells[0].text))}</div>`;
+      })
+      .join("");
+  }
+
+  function sheetChainMarkup(chain) {
+    const boxes = chain.steps
+      .map((step) => sheetStepMarkup(chain.grid, step))
+      .filter(Boolean)
+      .map((inside) => `<div class="sheet-step">${inside}</div>`);
+    if (boxes.length < 2) return "";
+    return `<div class="sheet-flow">${boxes
+      .join(`<span class="sheet-flow-mark" aria-hidden="true">${escapeHtml(chain.mark)}</span>`)}</div>`;
+  }
+
+  // 주체마다 할 일을 적어 둔 표입니다. 왼쪽 칸이 주체 이름이고
+  // 오른쪽 칸이 그 주체가 하는 일입니다(공통·접수기관·처리기관·교부기관).
+  function sheetActors(table) {
+    const grid = sheetGrid(table);
+    if (grid.columns < 2) return null;
+    const last = grid.columns - 1;
+    // 가운데 열에 글이 있으면 주체별 목록이 아니라 진짜 표입니다.
+    //   주체별  [공통] [   ] [발 급 절 차 …]        ← 가운데가 빈 자리
+    //   진짜 표 [학생] [성적증명서] [2003년 이후…]   ← 가운데도 내용
+    // 이것을 가리지 않으면 가운데 열이 통째로 사라집니다.
+    for (let at = 0; at < grid.rows.length; at += 1) {
+      for (let column = 1; column < last; column += 1) {
+        const cell = grid.cover[at][column];
+        if (cell && said(cell) && !arrowOnly(said(cell))) return null;
+      }
+    }
+    const actors = [];
+    grid.rows.forEach((row, at) => {
+      const name = row.find((cell) => (cell.column ?? 0) === 0 && said(cell));
+      if (name && [...said(name)].length <= 8) actors.push({ name: said(name), lines: [] });
+      const body = grid.cover[at][last];
+      if (!body || !said(body) || !actors.length) return;
+      const seat = actors[actors.length - 1];
+      if (seat.lines.includes(body)) return;
+      if (actors.some((one) => one.lines.includes(body))) return;
+      seat.lines.push(body);
+    });
+    if (actors.length < 2 || actors.some((one) => !one.lines.length)) return null;
+    return actors;
+  }
+
+  function sheetActorsMarkup(actors) {
+    return `<ol class="sheet-actors">${actors
+      .map(
+        (actor) => `
+          <li>
+            <span class="sheet-actor-name">${escapeHtml(actor.name)}</span>
+            <div class="sheet-actor-body">${actor.lines
+              .map((cell) => {
+                const only = said(cell);
+                if ([...only].length <= 10) {
+                  return `<strong class="sheet-actor-sub">${escapeHtml(only)}</strong>`;
+                }
+                return cellMarkup(cellLines(cell.text));
+              })
+              .join("")}</div>
+          </li>
+        `
+      )
+      .join("")}</ol>`;
+  }
+
+  // 지면 한 구역입니다. 머리 띠 하나와 그 아래 내용으로 이루어집니다.
+  function sheetPartMarkup(lines, tables) {
+    const owners = new Map();
+    tables.forEach((table, index) => {
+      const start = table.lineStart ?? 0;
+      for (let step = 0; step < (table.lineCount ?? 0); step += 1) owners.set(start + step, index);
+    });
+    let head = null;
+    const pieces = [];
+    const drawn = new Set();
+    lines.forEach((line, index) => {
+      const owner = owners.has(index) ? owners.get(index) : -1;
+      if (owner < 0) {
+        if (line.trim()) {
+          pieces.push(`<h4 class="sheet-step-title">${escapeHtml(line.trim())}</h4>`);
+        }
+        return;
+      }
+      if (drawn.has(owner)) return;
+      drawn.add(owner);
+      const table = tables[owner];
+      if (!head && sheetBand(table)) {
+        const cells = (table.headers || []).map(said);
+        head = { tag: cells[0] || "", name: cells[1] || "" };
+        return;
+      }
+      const chain = sheetChain(table);
+      if (chain) {
+        const drawnChain = sheetChainMarkup(chain);
+        if (drawnChain) {
+          pieces.push(drawnChain);
+          return;
+        }
+      }
+      const actors = sheetActors(table);
+      if (actors) {
+        pieces.push(sheetActorsMarkup(actors));
+        return;
+      }
+      pieces.push(
+        spannedTableMarkup(
+          "",
+          headerCellsOf(table),
+          table.rows || [],
+          table.widths,
+          0,
+          table.picture
+        )
+      );
+    });
+    if (!pieces.length) return "";
+    return `
+      <section class="sheet-part">
+        ${
+          head
+            ? `<h3 class="sheet-part-head">
+                 ${head.tag ? `<span class="sheet-tag">${escapeHtml(head.tag)}</span>` : ""}
+                 <span>${escapeHtml(head.name)}</span>
+               </h3>`
+            : ""
+        }
+        <div class="sheet-part-body">${pieces.join("")}</div>
+      </section>
+    `;
+  }
+
+  function renderFrontSheet(block) {
+    const outer = (block.tables || [])[0];
+    if (!outer) return null;
+    const parts = [];
+    for (const row of [outer.headers || [], ...(outer.rows || [])]) {
+      for (const cell of row) {
+        if (!(cell.tables || []).length) continue;
+        const drawnPart = sheetPartMarkup(cellLines(cell.text), cell.tables);
+        if (drawnPart) parts.push(drawnPart);
+      }
+    }
+    if (!parts.length) return null;
+    return {
+      summary: "한눈에 보기",
+      html: `<div class="front-sheet">${parts.join("")}</div>`,
+      type: "table",
+    };
+  }
+
   function render(block) {
     const body = String(block?.body || "");
     if (!body) return { summary: "전체 내용 보기", html: "", type: "text" };
@@ -1807,6 +2072,13 @@
     // 매뉴얼 PDF의 칸 경계선을 읽어 둔 표가 있으면 그대로 그립니다.
     // 예전에는 '이런 낱말이 있으면 이런 표'라는 목록을 손으로 적어 두었는데,
     // 목록에 없는 표는 줄글로 흘러 나왔고 원문이 바뀌면 조용히 어긋났습니다.
+    // 편 앞머리 '한눈에 보기' 지면은 표가 아니라 한 장짜리 요약입니다.
+    // 격자 대신 원문 짜임새대로 그립니다(위 renderFrontSheet).
+    if (FRONT_SHEET.test(String(block.id || ""))) {
+      const sheet = renderFrontSheet(block);
+      if (sheet) return sheet;
+    }
+
     const sourceTable = renderSourceTable(block);
     if (sourceTable) return sourceTable;
 

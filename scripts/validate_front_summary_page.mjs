@@ -125,6 +125,16 @@ const shape = (page) =>
       return {
         layers,
         headPainted: painted("#step-actions .source-criteria-table th[scope='col']"),
+        // 화면에 그려진 글자를 통째로 받아 옵니다. 지면을 표 대신 카드로
+        // 다시 그릴 때 칸이 통째로 빠지는 일이 있어(제2편 '기준연도' 표의
+        // 가운데 열이 그랬습니다) 원문 글자가 다 남았는지 견줍니다.
+        shown: (document.querySelector("#step-actions")?.textContent || "").replace(
+          /[\s\u200b\u00a0\u00ad\u2060]+/g,
+          ""
+        ),
+        // 표 대신 카드로 다시 그린 지면인지입니다. 여느 지면은 표 그대로라
+        // 이미 다른 검사기가 글자를 견주고 있습니다.
+        redrawn: Boolean(document.querySelector("#step-actions .front-sheet")),
         frames: Object.fromEntries(frames.map((one) => [one, seen(one)])),
         title: said("#work-title"),
         badge: said("#work-number"),
@@ -139,6 +149,32 @@ const shape = (page) =>
   );
 
 const squash = (said) => String(said || "").replace(/\s+/g, "");
+
+// 글자를 견주기 전에 눈에 안 보이는 것을 다 텁니다. 화면은 긴 낱말이
+// 접힐 자리에 폭 없는 공백(U+200B)을 끼워 넣으므로, 그대로 견주면
+// 멀쩡히 그려진 글도 '사라졌다'가 됩니다.
+const bare = (said) => String(said || "").replace(/[\s\u200b\u00a0\u00ad\u2060]+/g, "");
+
+// 표 한 그루의 모든 칸 글자입니다(칸 안에 든 표까지).
+function cellTexts(table) {
+  const out = [];
+  for (const row of [table.headers || [], ...(table.rows || [])]) {
+    for (const cell of row) {
+      const text = String(cell.text || "").trim();
+      const inners = cell.tables || [];
+      // 칸 안에 표가 든 칸의 글은 그 안쪽 표를 한 줄로 편 사본입니다.
+      // 같은 글을 두 번 세게 되고, 화면은 안쪽 표를 표로 그리므로
+      // 편 사본은 어디에도 없습니다. 안쪽 표만 따라 들어갑니다.
+      // 줄 단위로 셉니다. 화면은 칸 안의 줄마다 글머리표를 세우므로
+      // (·중: 2013년…·고: 2014년…) 칸을 통째로 견주면 그 기호에 걸립니다.
+      if (text && !inners.length && !text.includes("[[그림:")) {
+        out.push(...text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean));
+      }
+      for (const inner of inners) out.push(...cellTexts(inner));
+    }
+  }
+  return out;
+}
 // 표가 본문 폭에서 이만큼은 써야 원문 지면처럼 보입니다.
 const LEAST_SHARE = 0.85;
 // 내용을 감싸는 상자는 이만큼까지만 둡니다(원문 표의 선 + 바깥 카드).
@@ -187,6 +223,26 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
     }
     if (now.stepTitle && squash(now.stepTitle) === squash(now.title)) {
       problems.push(`${where}: 카드 제목이 큰 제목과 같은 말입니다.`);
+    }
+    // 지면을 표 대신 카드로 다시 그리면 칸이 통째로 빠질 수 있습니다.
+    // 실제로 제2편 '기준연도' 표의 가운데 열이 통째로 사라진 적이 있습니다.
+    // 다시 그린 지면에서만 봅니다 — 표 그대로 그린 지면은 다른 검사기가
+    // 이미 원문 글자와 견주고 있습니다.
+    const missing = [];
+    for (const block of now.redrawn ? front.contentBlocks || [] : []) {
+      for (const table of block.tables || []) {
+        for (const text of cellTexts(table)) {
+          const want = bare(text);
+          if (want.length < 2) continue;
+          if (!now.shown.includes(want)) missing.push(text);
+        }
+      }
+    }
+    if (missing.length) {
+      problems.push(
+        `${where}: 원문 칸 ${missing.length}개가 화면에서 사라졌습니다` +
+          ` — ${missing.slice(0, 3).map((one) => `'${one.slice(0, 18)}'`).join(", ")}`
+      );
     }
     // 원문은 이 지면의 표 머리줄을 색으로 칠합니다(제2편 주황·제3편 보라·
     // 제13편 청록). 화면은 편마다 색을 달리하지 않고 누리집 파랑 하나로
