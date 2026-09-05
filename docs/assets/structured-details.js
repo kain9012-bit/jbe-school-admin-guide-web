@@ -3226,6 +3226,73 @@
     };
   }
 
+  // ── 제6편 '한눈에 보기' 전용 그림 ────────────────────────────────
+  //
+  // 제6편 지면은 '학교발전기금 업무처리 흐름도'입니다. 세 묶음으로 나뉩니다.
+  //   계획 수립 : 계획수립 → 공개 및 홍보 → 계획변경
+  //   접수 과정 : 기탁방법 → 사업내역 등록 → 학교발전기금 접수 → 수입일계 처리
+  //   사업 진행 : 품의 요구 → 결재 → 지출 집행
+  // 각 묶음은 왼쪽에 묶음 딱지, 오른쪽에 단계(이름 → 설명)를 아래 화살표로
+  // 잇습니다. 원문 표는 묶음마다 하나씩(안쪽 표 세 개)입니다.
+  // 글자는 원문 칸에서 그대로 가져오고 색은 누리집 파랑 하나입니다.
+  // 이 함수와 .ch6-* 서식은 제6편에만 씁니다.
+  function renderChapter6Front(block) {
+    const outer = (block.tables || [])[0];
+    if (!outer) return null;
+    const cell = (outer.headers || [])[0];
+    const stages = (cell && cell.tables) || [];
+    if (stages.length < 2) return null;
+    const say = (c) => String((c && c.text) || "").trim();
+    const isArrow = (t) => arrowOnly(t) || /^[⇩⇓↓▼▽]/.test(t);
+
+    const stagesHtml = stages
+      .map((stageTable) => {
+        const grid = sheetGrid(stageTable);
+        const label = say(grid.cover[0][0]);
+        const steps = [];
+        const seen = new Set();
+        for (let r = 0; r < grid.rows.length; r += 1) {
+          const nameCell = grid.cover[r][2];
+          if (!nameCell || seen.has(nameCell)) continue;
+          const name = say(nameCell);
+          if (!name || isArrow(name)) continue;
+          seen.add(nameCell);
+          const descCell = grid.cover[r][grid.columns - 1];
+          steps.push({ name: nameCell, desc: descCell });
+        }
+        if (!steps.length) return "";
+        const stepsHtml = steps
+          .map(
+            (step) => `
+            <div class="ch6-step">
+              <div class="ch6-step-name">${cellMarkup(cellLines(step.name.text))}</div>
+              <div class="ch6-step-desc">${cellMarkup(cellLines(step.desc.text))}</div>
+            </div>`
+          )
+          .join('<div class="ch6-arrow" aria-hidden="true">↓</div>');
+        return `
+          <section class="ch6-stage">
+            <div class="ch6-stage-label"><span>${escapeHtml(label)}</span></div>
+            <div class="ch6-steps">${stepsHtml}</div>
+          </section>`;
+      })
+      .join("");
+
+    const title = String(block.title || "").trim() || "학교발전기금 업무처리 흐름도";
+    return {
+      summary: "한눈에 보기",
+      type: "table",
+      html: `
+        <div class="ch6-front">
+          <h3 class="ch6-band">
+            <span class="ch6-band-tag">한눈에 쏙쏙</span>
+            <span class="ch6-band-name">${escapeHtml(title)}</span>
+          </h3>
+          <div class="ch6-stages">${stagesHtml}</div>
+        </div>`,
+    };
+  }
+
   function render(block) {
     const body = String(block?.body || "");
     if (!body) return { summary: "전체 내용 보기", html: "", type: "text" };
@@ -3254,6 +3321,10 @@
     if (String(block.id || "") === "c05-w00-b1") {
       const ch5 = renderChapter5Front(block);
       if (ch5) return ch5;
+    }
+    if (String(block.id || "") === "c06-w00-b1") {
+      const ch6 = renderChapter6Front(block);
+      if (ch6) return ch6;
     }
 
     const sourceTable = renderSourceTable(block);

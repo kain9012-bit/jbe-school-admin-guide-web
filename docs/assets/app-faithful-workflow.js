@@ -691,9 +691,16 @@
     // '세부내용 5. 비전자기록물 이관 및 폐기 절차'는 이 항목의 이름 자체입니다.
     // 목차에서 고른 이름이 바로 위에 크게 적혀 있으므로 두 번 적지 않습니다.
     const asStep = raw.replace(/^세부내용\s+/, "");
+    // 편 앞머리 '한눈에 보기'를 그 편 전용으로 그리는 블록은 제목 띠를 그 안에서
+    // 직접 그립니다(structured-details.js의 renderChapterNFront). 여기서 또
+    // block.title을 얹으면 제목이 두 번 섭니다. 이 블록들에서만 끕니다
+    // — 그 id에만 걸리므로 다른 편·다른 블록에는 영향이 없습니다.
+    const CUSTOM_FRONT_BLOCK = /^c0[23456]-w00-b1$/;
     const heading = block.tip
       ? "TIP·주의사항"
-      : generatedTitle || squash(asStep) === squash(currentStepTitle)
+      : generatedTitle ||
+          squash(asStep) === squash(currentStepTitle) ||
+          CUSTOM_FRONT_BLOCK.test(String(block.id || ""))
         ? ""
         : raw;
     // 안내서는 읽으라고 만든 문서입니다. 앞 몇 줄만 보여 주고 나머지를 접어 두면
@@ -1368,8 +1375,15 @@
     // (배지·큰 제목·카드 제목이 모두 '한눈에 보기'였습니다).
     // 원문이 지면에 제 이름을 달아 둔 편(제13편 '학교시설관리 요약')은
     // 그 이름이 카드 제목에 남습니다.
+    // 편 앞머리를 그 편 전용으로 그리는 지면은 제목 띠를 그 안에서 직접
+    // 답니다(structured-details.js의 renderChapterNFront). 큰 제목을 또 얹으면
+    // 두 번 서므로, 그 앞머리 블록에서만 큰 제목을 감춥니다 — 그 id에만
+    // 걸리므로 다른 편·다른 지면에는 영향이 없습니다.
+    const customFrontStep =
+      work.number === 0 &&
+      (step.mainBlocks || []).some((one) => /^c0[23456]-w00-b1$/.test(String(one.id || "")));
     const repeatsTitle =
-      work.number === 0 && squash(step.title) === squash(work.title);
+      (work.number === 0 && squash(step.title) === squash(work.title)) || customFrontStep;
     stepTitleNode.hidden = repeatsTitle;
     // 제목을 감추면 그것을 가리키던 이름표도 끊어집니다.
     // 화면 낭독기가 이 구역을 무엇이라 부를지 대신 적어 줍니다.

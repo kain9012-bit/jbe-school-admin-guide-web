@@ -2049,3 +2049,118 @@
     font-size: 1.6rem;
   }
 }
+
+/* ── 제6편 '한눈에 보기' 전용 그림 ─────────────────────────────────
+   '학교발전기금 업무처리 흐름도'. 세 묶음(계획수립·접수과정·사업진행),
+   각 묶음은 왼쪽 딱지 + 오른쪽 세로 단계(이름→설명, 아래 화살표).
+   .ch6-* 는 제6편 밖으로 나가지 않습니다. */
+.ch6-front {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.ch6-band {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--guide-ink);
+  letter-spacing: -0.01em;
+}
+
+.ch6-band-tag {
+  flex: none;
+  padding: 0.55rem 1.6rem;
+  background: var(--guide-blue);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.ch6-stages {
+  display: grid;
+  gap: 2rem;
+}
+
+/* 묶음 — 왼쪽 딱지 + 오른쪽 단계 흐름 */
+.ch6-stage {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.ch6-stage-label {
+  display: grid;
+  place-items: center;
+  padding: 1rem 0.6rem;
+  background: var(--guide-blue);
+  border-radius: 1rem;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.ch6-steps {
+  display: grid;
+  gap: 0.4rem;
+}
+
+/* 단계 — 이름 상자 + 설명 */
+.ch6-step {
+  display: grid;
+  grid-template-columns: 15rem minmax(0, 1fr);
+  gap: 1.2rem;
+  align-items: center;
+  padding: 1.2rem 1.4rem;
+  background: #fff;
+  border: 1px solid var(--guide-line);
+  border-left: 3px solid var(--guide-blue);
+  border-radius: 0.9rem;
+}
+
+.ch6-step-name {
+  padding: 0.9rem 1rem;
+  background: var(--guide-blue-pale);
+  border-radius: 0.7rem;
+  color: var(--guide-blue-dark);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.45;
+}
+
+.ch6-step-desc {
+  min-width: 0;
+  color: var(--guide-ink);
+  font-size: 1.45rem;
+  line-height: 1.65;
+}
+
+.ch6-arrow {
+  color: var(--guide-blue);
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1;
+  padding-left: 6.5rem;
+}
+
+@media (max-width: 767px) {
+  .ch6-stage {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ch6-step {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.6rem;
+  }
+
+  .ch6-arrow {
+    padding-left: 0;
+  }
+}
