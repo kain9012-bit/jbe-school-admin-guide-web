@@ -2815,6 +2815,159 @@
     };
   }
 
+  // ── 제2편 '한눈에 보기' 전용 그림 ────────────────────────────────
+  //
+  // 이 지면은 편마다 짜임새가 다릅니다. 하나의 틀로 다 그리려다 죄다
+  // 뭉개졌습니다. 그래서 편마다 원문 지면을 따로 봅니다. 제2편은 세 조각입니다.
+  //
+  //   ① [흐름도] 제증명 민원 발급 절차
+  //      1. 발급 절차 — [교육기관 방문 후 신분증 제시] ⇒ [발급 절차(+분류)] ⇒ [민원서류 수령]
+  //      2. 나이스 미조회 시 … — 공통·접수기관·처리기관·교부기관 주체별 절차
+  //   ② [기준연도] 나이스 민원발급 제증명 종류 및 발급 가능 기준연도 — 표
+  //
+  // 글자는 하나도 새로 쓰지 않고 원문 칸에서 그대로 가져옵니다. 색은 원문의
+  // 주황을 따라하지 않고 누리집 파랑 하나로 칠합니다.
+  function renderChapter2Front(block) {
+    const outer = (block.tables || [])[0];
+    if (!outer) return null;
+    const cellA = (outer.headers || [])[0];
+    const cellB = ((outer.rows || [])[0] || [])[0];
+    if (!cellA || !cellB || (cellA.tables || []).length < 3 || (cellB.tables || []).length < 2) {
+      return null;
+    }
+    const say = (cell) => String((cell && cell.text) || "").trim();
+
+    const band = (table) => {
+      const head = (table.headers || []).map(say);
+      return `<h3 class="ch2-band">
+        <span class="ch2-band-tag">${escapeHtml(head[0] || "")}</span>
+        <span class="ch2-band-name">${escapeHtml(head[1] || "")}</span>
+      </h3>`;
+    };
+
+    const linesOf = cellLines(cellA.text);
+
+    // ① 흐름도 — 세 안쪽 표(띠·흐름·주체별)
+    const flowBand = cellA.tables[0];
+    const flowTable = cellA.tables[1];
+    const actorTable = cellA.tables[2];
+    const sub1 = (linesOf[1] || "").trim(); // "1. 발급 절차"
+    const sub2 = (linesOf[6] || "").trim(); // "2. 나이스 미조회 시 …"
+
+    // 가로 3단 흐름을 원문 칸 자리대로 폅니다.
+    const fg = sheetGrid(flowTable);
+    const at = (r, c) => (fg.cover[r] ? fg.cover[r][c] : null);
+    const last = fg.columns - 1;
+    const boxStart = say(at(0, 0));
+    const boxEnd = say(at(0, last));
+    const arrow = say(at(0, 1)) || "⇒";
+    const mainHead = say(at(0, 2)); // 발급 절차
+    const stepCell = at(1, 2);
+    const catTag = say(at(2, 2)); // 분 류
+    const catCells = [];
+    const seen = new Set();
+    for (let c = 2; c <= last; c += 1) {
+      const cell = at(3, c);
+      if (!cell || !say(cell)) continue;
+      // 끝 상자(민원서류 수령)와 화살표는 위에서 아래로 걸쳐 있어 이 줄에도
+      // 나타납니다. 이 줄에서 새로 시작하는 칸(분류 세 갈래)만 셉니다.
+      if (at(2, c) === cell) continue;
+      if (seen.has(cell)) continue;
+      seen.add(cell);
+      catCells.push(cell);
+    }
+    const stepMarkup = cellLines(stepCell ? stepCell.text : "")
+      .map((line) => `<li>${cellMarkup([line])}</li>`)
+      .join("");
+    const catMarkup = catCells
+      .map((cell) => {
+        const lines = cellLines(cell.text);
+        const name = lines[0] || "";
+        const note = lines.slice(1).join(" ");
+        return `<div class="ch2-cat-col">
+          <strong>${escapeHtml(name)}</strong>
+          ${note ? `<span>${escapeHtml(note)}</span>` : ""}
+        </div>`;
+      })
+      .join("");
+    const flowMarkup = `
+      <div class="ch2-flow">
+        <div class="ch2-flow-box">${escapeHtml(boxStart)}</div>
+        <span class="ch2-flow-arrow" aria-hidden="true">${escapeHtml(arrow)}</span>
+        <div class="ch2-flow-main">
+          <div class="ch2-flow-main-head">${escapeHtml(mainHead)}</div>
+          <ul class="ch2-flow-steps">${stepMarkup}</ul>
+          <div class="ch2-cat">
+            <span class="ch2-cat-tag">${escapeHtml(catTag)}</span>
+            <div class="ch2-cat-cols">${catMarkup}</div>
+          </div>
+        </div>
+        <span class="ch2-flow-arrow" aria-hidden="true">${escapeHtml(arrow)}</span>
+        <div class="ch2-flow-box">${escapeHtml(boxEnd)}</div>
+      </div>`;
+
+    // 주체별 절차(공통·접수기관·처리기관·교부기관). 첫 칸이 주체, 마지막 칸이 내용.
+    const ag = sheetGrid(actorTable);
+    const alast = ag.columns - 1;
+    const actors = [];
+    let current = null;
+    const usedBody = new Set();
+    for (let r = 0; r < ag.rows.length; r += 1) {
+      const nameCell = ag.cover[r] && ag.cover[r][0];
+      if (nameCell && say(nameCell) && (!current || current.cell !== nameCell)) {
+        current = { cell: nameCell, name: say(nameCell), lines: [] };
+        actors.push(current);
+      }
+      const bodyCell = ag.cover[r] && ag.cover[r][alast];
+      if (bodyCell && say(bodyCell) && current && !usedBody.has(bodyCell)) {
+        usedBody.add(bodyCell);
+        current.lines.push(bodyCell);
+      }
+    }
+    const actorMarkup = actors
+      .map(
+        (actor) => `
+        <li class="ch2-actor">
+          <span class="ch2-actor-name">${escapeHtml(actor.name)}</span>
+          <div class="ch2-actor-body">${actor.lines
+            .map((cell) => `<div class="ch2-actor-line">${cellMarkup(cellLines(cell.text))}</div>`)
+            .join("")}</div>
+        </li>`
+      )
+      .join("");
+
+    // ② 기준연도 — 원문 표 그대로(파란 머리줄)
+    const yearBand = cellB.tables[0];
+    const yearTable = cellB.tables[1];
+    const yearMarkup = spannedTableMarkup(
+      "",
+      headerCellsOf(yearTable),
+      yearTable.rows || [],
+      yearTable.widths,
+      0,
+      yearTable.picture
+    );
+
+    return {
+      summary: "한눈에 보기",
+      type: "table",
+      html: `
+        <div class="ch2-front">
+          <section class="ch2-sec">
+            ${band(flowBand)}
+            ${sub1 ? `<h4 class="ch2-sub">${escapeHtml(sub1)}</h4>` : ""}
+            ${flowMarkup}
+            ${sub2 ? `<h4 class="ch2-sub">${escapeHtml(sub2)}</h4>` : ""}
+            <ol class="ch2-actors">${actorMarkup}</ol>
+          </section>
+          <section class="ch2-sec">
+            ${band(yearBand)}
+            <div class="ch2-year">${yearMarkup}</div>
+          </section>
+        </div>`,
+    };
+  }
+
   function render(block) {
     const body = String(block?.body || "");
     if (!body) return { summary: "전체 내용 보기", html: "", type: "text" };
@@ -2826,6 +2979,12 @@
     // 딱지 붙은 카드가 되어 원문과 달라졌습니다. 카드는 다 걷어냅니다.
     // 표는 표대로, 원문 짜임새 그대로 둡니다. 색만 누리집 파랑으로 입힙니다
     // (아래 renderFrontSheet·sheetRecords 따위는 더는 부르지 않습니다).
+
+    // 편마다 원문 지면을 따로 그립니다. 하나의 틀로 다 그리려다 뭉갰습니다.
+    if (String(block.id || "") === "c02-w00-b1") {
+      const ch2 = renderChapter2Front(block);
+      if (ch2) return ch2;
+    }
 
     const sourceTable = renderSourceTable(block);
     if (sourceTable) return sourceTable;

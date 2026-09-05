@@ -1575,3 +1575,230 @@
     gap: 0.8rem;
   }
 }
+
+/* ── 제2편 '한눈에 보기' 전용 그림 ─────────────────────────────────
+   원문 지면을 그 편에만 맞춰 그립니다(structured-details.js의
+   renderChapter2Front). 흐름도 · 주체별 절차 · 기준연도 표 세 조각.
+   원문 주황을 따라하지 않고 누리집 파랑 하나로 칠합니다. */
+.ch2-front {
+  display: grid;
+  gap: 3.2rem;
+}
+
+.ch2-sec {
+  display: grid;
+  gap: 1.6rem;
+}
+
+/* 구역 머리 띠 — [흐름도] 제증명 민원 발급 절차 */
+.ch2-band {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--guide-ink);
+  letter-spacing: -0.01em;
+}
+
+.ch2-band-tag {
+  flex: none;
+  padding: 0.55rem 1.6rem;
+  background: var(--guide-blue);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 1.55rem;
+}
+
+/* 소제목 — 1. 발급 절차 / 2. 나이스 미조회 시 … */
+.ch2-sub {
+  margin: 0.8rem 0 0;
+  color: var(--guide-blue-dark);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* 가로 3단 흐름 */
+.ch2-flow {
+  display: grid;
+  grid-template-columns: minmax(9rem, 0.9fr) auto minmax(0, 4fr) auto minmax(8rem, 0.8fr);
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.ch2-flow-box {
+  padding: 1.4rem 1.2rem;
+  background: var(--guide-blue-pale);
+  border: 1px solid var(--guide-blue);
+  border-radius: 1rem;
+  color: var(--guide-blue-dark);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.ch2-flow-arrow {
+  color: var(--guide-blue);
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.ch2-flow-main {
+  display: grid;
+  gap: 1rem;
+  padding: 1.6rem 1.8rem;
+  background: #fff;
+  border: 1px solid var(--guide-line);
+  border-top: 3px solid var(--guide-blue);
+  border-radius: 1rem;
+}
+
+.ch2-flow-main-head {
+  color: var(--guide-blue-dark);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.ch2-flow-steps {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+  color: var(--guide-ink);
+  font-size: 1.45rem;
+  line-height: 1.6;
+}
+
+/* 분류 — 세 갈래를 나란히 */
+.ch2-cat {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--guide-line);
+}
+
+.ch2-cat-tag {
+  padding: 0.5rem 1.2rem;
+  background: var(--guide-surface);
+  border-radius: 999px;
+  color: var(--guide-muted);
+  font-size: 1.35rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.ch2-cat-cols {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.ch2-cat-col {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.9rem 1rem;
+  background: var(--guide-blue-pale);
+  border-radius: 0.8rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.ch2-cat-col strong {
+  color: var(--guide-blue-dark);
+  font-size: 1.4rem;
+}
+
+.ch2-cat-col span {
+  color: var(--guide-muted);
+  font-size: 1.3rem;
+}
+
+/* 주체별 절차 — 왼쪽 주체, 오른쪽 내용 */
+.ch2-actors {
+  display: grid;
+  gap: 0.8rem;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none;
+}
+
+.ch2-actor {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  gap: 1.6rem;
+  align-items: start;
+  padding: 1.4rem 1.6rem;
+  background: #fff;
+  border: 1px solid var(--guide-line);
+  border-left: 3px solid var(--guide-blue);
+  border-radius: 1rem;
+}
+
+.ch2-actor-name {
+  padding: 0.7rem 0;
+  background: var(--guide-blue-pale);
+  border-radius: 0.8rem;
+  color: var(--guide-blue-dark);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.ch2-actor-body {
+  min-width: 0;
+  color: var(--guide-ink);
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+/* 기준연도 표 — 원문 표 그대로, 파란 머리줄 */
+.ch2-year .source-criteria-table thead th,
+.ch2-year .source-criteria-table th[scope="col"] {
+  background: var(--guide-blue);
+  color: #fff;
+  border-color: var(--guide-blue);
+}
+
+.ch2-year .source-criteria-table tbody th,
+.ch2-year .source-criteria-table th[scope="row"] {
+  background: var(--guide-blue-pale);
+  color: var(--guide-blue-dark);
+}
+
+@media (max-width: 767px) {
+  .ch2-flow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ch2-flow-arrow {
+    transform: rotate(90deg);
+  }
+
+  .ch2-cat {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ch2-cat-cols {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ch2-actor {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.8rem;
+  }
+}
+
+.ch2-actor-body {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.ch2-actor-line {
+  min-width: 0;
+}
