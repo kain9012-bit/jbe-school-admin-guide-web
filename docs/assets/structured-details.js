@@ -3293,6 +3293,47 @@
     };
   }
 
+  // ── 제7편 '한눈에 보기' 전용 그림 ────────────────────────────────
+  //
+  // 제7편 지면은 표입니다.
+  //   [흐름도] 급여 나이스 작업
+  //   일자 | 매월 급여 업무 흐름(작업 단계 | 나이스 업무 처리)
+  //   1~3일에 일곱 단계, 그다음 10·14·17·20일.
+  // 원문 표 그대로 그리고 머리줄만 누리집 파랑으로, 일자·작업 단계 칸은 옅은
+  // 파랑으로 둡니다. 글자는 원문 칸에서 가져옵니다.
+  // 이 함수와 .ch7-* 서식은 제7편에만 씁니다.
+  function renderChapter7Front(block) {
+    const outer = (block.tables || [])[0];
+    if (!outer) return null;
+    const cell = (outer.headers || [])[0];
+    if (!cell || (cell.tables || []).length < 2) return null;
+    const bandTable = cell.tables[0];
+    const table = cell.tables[1];
+    const head = (bandTable.headers || []).map((c) => String((c && c.text) || "").trim());
+    // 원문 표가 그림형(picture)으로 표시돼 있어 그대로 두면 머리줄이 th가 아닌
+    // td로 그려집니다. 앞머리 지면에서는 여느 표로 그려 파란 머리줄을 답니다.
+    const tableMarkup = spannedTableMarkup(
+      "",
+      headerCellsOf(table),
+      table.rows || [],
+      table.widths,
+      0,
+      false
+    );
+    return {
+      summary: "한눈에 보기",
+      type: "table",
+      html: `
+        <div class="ch7-front">
+          <h3 class="ch7-band">
+            <span class="ch7-band-tag">${escapeHtml(head[0] || "")}</span>
+            <span class="ch7-band-name">${escapeHtml(head[1] || "")}</span>
+          </h3>
+          <div class="ch7-table">${tableMarkup}</div>
+        </div>`,
+    };
+  }
+
   function render(block) {
     const body = String(block?.body || "");
     if (!body) return { summary: "전체 내용 보기", html: "", type: "text" };
@@ -3325,6 +3366,10 @@
     if (String(block.id || "") === "c06-w00-b1") {
       const ch6 = renderChapter6Front(block);
       if (ch6) return ch6;
+    }
+    if (String(block.id || "") === "c07-w00-b1") {
+      const ch7 = renderChapter7Front(block);
+      if (ch7) return ch7;
     }
 
     const sourceTable = renderSourceTable(block);
