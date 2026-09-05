@@ -3380,6 +3380,10 @@
           </h3>
           <div class="source-table-scroll ch8-table">
             <table class="source-criteria-table">
+              <colgroup>
+                <col class="ch8-col-month" />
+                <col />
+              </colgroup>
               <thead>
                 <tr>
                   <th scope="col">${escapeHtml(say(grid.cover[0][0]))}</th>

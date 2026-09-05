@@ -2317,9 +2317,18 @@
   text-align: center;
 }
 
+/* 열 너비를 원문대로 고정합니다. 월별은 좁게(원문 약 10%), 주요 일정은 넓게.
+   고정하지 않으면 화면이 두 열을 비슷하게 벌려, 월별 칸만 텅 빈 채 넓어집니다. */
+.ch8-table .source-criteria-table {
+  table-layout: fixed;
+}
+
+.ch8-col-month {
+  width: 11%;
+}
+
 /* 월별 칸 — 옅은 파랑, 가운데 */
 .ch8-month {
-  width: 9rem;
   background: var(--guide-blue-pale);
   color: var(--guide-blue-dark);
   font-weight: 700;
