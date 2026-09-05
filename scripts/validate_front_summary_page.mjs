@@ -171,10 +171,17 @@ const shape = (page) =>
         // 그때는 그림이 든 줄의 폭을 잽니다.
         // 지면을 카드로 다시 그리면 표가 아예 없을 수도 있습니다.
         // 그때는 다시 그린 지면 전체의 폭을 잽니다.
-        table:
-          wide('#step-actions [class$="-front"]') ||
-          wide("#step-actions .source-criteria-table") ||
+        // 지면에서 가장 넓은 것을 잽니다. 제목 띠(흐름도 …)도 source-criteria-table
+        // 이지만 원문 PDF 단추와 한 줄에 놓느라 폭을 줄여 두었습니다. 첫 표를
+        // 재면 그 좁은 띠가 잡히므로, 여러 표 가운데 가장 넓은 것을 봅니다.
+        table: Math.max(
+          wide('#step-actions [class$="-front"]'),
+          ...Array.from(
+            document.querySelectorAll("#step-actions .source-criteria-table")
+          ).map((el) => Math.round(el.getBoundingClientRect().width)),
           wide("#step-actions .source-picture-row"),
+          0
+        ),
       };
     },
     { frames: EMPTY_FRAMES.map(([selector]) => selector) }

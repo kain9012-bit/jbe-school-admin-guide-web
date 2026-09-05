@@ -1091,8 +1091,16 @@
   border-radius: 0;
 }
 
-/* 카드 머리에는 이제 '원문 PDF' 단추만 남습니다. 제목이 서던 자리만큼
-   비어 있으면 표가 저 아래로 밀려 내려갑니다. */
+/* 카드 머리에는 이제 '원문 PDF' 단추만 남습니다(제목·요약은 숨겨 둡니다).
+   제목이 서던 자리만큼 비어 있으면 지면이 저 아래로 밀려 내려갑니다.
+
+   그래서 지면을 편별 전용으로 그린 편(맨 위에 제목 띠가 있는 편, [class$="-front"])
+   에서는 카드 머리를 흐름에서 빼내어 카드 오른쪽 위 구석에 띄우고, 지면 맨 위
+   제목 띠가 그 단추와 같은 줄에 서게 합니다. 위 빈 공간이 사라집니다.
+
+   원문 표 그대로인 편은 제목이 표 첫 줄(전폭)이라 단추를 그 위에 띄우면
+   글자와 겹칩니다. 그런 편은 그대로 둡니다 — 그 편들도 전용으로 그려
+   제목 띠가 생기면 이 규칙에 자동으로 들어옵니다. */
 .is-front-summary .step-panel-head {
   min-height: 0;
   margin-bottom: 1.2rem;
@@ -1100,6 +1108,65 @@
 
 .is-front-summary #step-actions > .source-detail:first-child {
   padding-top: 0;
+}
+
+.is-front-summary #step-panel:has(#step-actions [class$="-front"]) {
+  position: relative;
+}
+
+.is-front-summary #step-panel:has(#step-actions [class$="-front"]) .step-panel-head {
+  position: absolute;
+  top: 2.4rem;
+  right: 2.4rem;
+  margin: 0;
+  z-index: 2;
+}
+
+/* 숨긴 제목·요약이 자리를 차지하지 않게 합니다. */
+.is-front-summary #step-panel:has(#step-actions [class$="-front"]) .step-panel-head > div {
+  display: none;
+}
+
+/* 카드 머리를 흐름에서 뺐으니 그 아래 위 여백도 없애, 제목 띠가 위로
+   올라와 단추와 같은 줄에 서게 합니다. */
+.is-front-summary #step-panel:has(#step-actions [class$="-front"]) .action-block {
+  margin-top: 0;
+}
+
+.is-front-summary
+  #step-panel:has(#step-actions [class$="-front"])
+  #step-actions
+  > .source-detail:first-child
+  .source-full-content {
+  margin-top: 0;
+}
+
+/* 제목 띠가 단추 아래로 파고들지 않게 오른쪽을 비워 둡니다.
+   맞은편 단추는 폭이 좁아(약 9rem) 제목 띠는 그 왼쪽에 넉넉히 섭니다. */
+.is-front-summary #step-actions .ch2-band,
+.is-front-summary #step-actions .ch3-band,
+.is-front-summary #step-actions .ch4-band,
+.is-front-summary #step-actions .ch5-band,
+.is-front-summary #step-actions .ch6-band,
+.is-front-summary #step-actions .ch7-band {
+  padding-right: 10rem;
+}
+
+@media (max-width: 767px) {
+  /* 좁은 화면에서는 단추를 다시 흐름 안에 둡니다. 제목과 겹칠 자리가 없습니다. */
+  .is-front-summary #step-panel:has(#step-actions [class$="-front"]) .step-panel-head {
+    position: static;
+    margin: 0 0 1rem;
+  }
+
+  .is-front-summary #step-actions .ch2-band,
+  .is-front-summary #step-actions .ch3-band,
+  .is-front-summary #step-actions .ch4-band,
+  .is-front-summary #step-actions .ch5-band,
+  .is-front-summary #step-actions .ch6-band,
+  .is-front-summary #step-actions .ch7-band {
+    padding-right: 0;
+  }
 }
 
 /* ── 앞머리 '한눈에 보기' 지면의 표 ──────────────────────────
