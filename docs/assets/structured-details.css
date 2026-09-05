@@ -1802,3 +1802,47 @@
 .ch2-actor-line {
   min-width: 0;
 }
+
+/* ── 제3편 '한눈에 보기' 전용 그림 ─────────────────────────────────
+   한 장짜리 표(인사 ▮ 휴직제도). 원문 표 그대로, 머리줄만 파랑.
+   .ch3-* 는 제3편 밖으로 나가지 않습니다. */
+.ch3-front {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.ch3-band {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--guide-ink);
+  letter-spacing: -0.01em;
+}
+
+.ch3-band-tag {
+  flex: none;
+  padding: 0.55rem 1.6rem;
+  background: var(--guide-blue);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 1.55rem;
+}
+
+/* 머리줄은 파랑, 왼쪽 구분(직권휴직·청원휴직) 칸은 옅은 파랑으로 묶음을
+   드러냅니다. 나머지 칸은 원문처럼 흰 바탕입니다. */
+.ch3-table .source-criteria-table thead th,
+.ch3-table .source-criteria-table th[scope="col"] {
+  background: var(--guide-blue);
+  color: #fff;
+  border-color: var(--guide-blue);
+}
+
+.ch3-table .source-criteria-table tbody th,
+.ch3-table .source-criteria-table th[scope="row"] {
+  background: var(--guide-blue-pale);
+  color: var(--guide-blue-dark);
+  font-weight: 700;
+}

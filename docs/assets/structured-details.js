@@ -2968,6 +2968,43 @@
     };
   }
 
+  // ── 제3편 '한눈에 보기' 전용 그림 ────────────────────────────────
+  //
+  // 제3편 지면은 한 장짜리 표입니다.
+  //   [인사] 휴직제도 — 구분(직권휴직·청원휴직) | 사유 | 기간 | 보수
+  // 원문 표 그대로 그리되 머리줄만 누리집 파랑으로 칠합니다. 글자는 하나도
+  // 새로 쓰지 않고 원문 칸에서 가져옵니다. 이 함수는 제3편에만 씁니다
+  // (.ch3-* 서식도 제3편 밖으로 나가지 않습니다).
+  function renderChapter3Front(block) {
+    const outer = (block.tables || [])[0];
+    if (!outer) return null;
+    const cell = (outer.headers || [])[0];
+    if (!cell || (cell.tables || []).length < 2) return null;
+    const bandTable = cell.tables[0];
+    const table = cell.tables[1];
+    const head = (bandTable.headers || []).map((c) => String((c && c.text) || "").trim());
+    const tableMarkup = spannedTableMarkup(
+      "",
+      headerCellsOf(table),
+      table.rows || [],
+      table.widths,
+      0,
+      table.picture
+    );
+    return {
+      summary: "한눈에 보기",
+      type: "table",
+      html: `
+        <div class="ch3-front">
+          <h3 class="ch3-band">
+            <span class="ch3-band-tag">${escapeHtml(head[0] || "")}</span>
+            <span class="ch3-band-name">${escapeHtml(head[1] || "")}</span>
+          </h3>
+          <div class="ch3-table">${tableMarkup}</div>
+        </div>`,
+    };
+  }
+
   function render(block) {
     const body = String(block?.body || "");
     if (!body) return { summary: "전체 내용 보기", html: "", type: "text" };
@@ -2984,6 +3021,10 @@
     if (String(block.id || "") === "c02-w00-b1") {
       const ch2 = renderChapter2Front(block);
       if (ch2) return ch2;
+    }
+    if (String(block.id || "") === "c03-w00-b1") {
+      const ch3 = renderChapter3Front(block);
+      if (ch3) return ch3;
     }
 
     const sourceTable = renderSourceTable(block);
