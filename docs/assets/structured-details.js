@@ -3397,6 +3397,81 @@
     };
   }
 
+  // ── 제9편 '한눈에 보기' 전용 그림 ────────────────────────────────
+  //
+  // 제9편 지면은 '한 장으로 보는 학교급식 업무 흐름'입니다. 세로 흐름을 종이
+  // 한 장에 담으려고 두 단으로 접어 두었습니다.
+  //   왼쪽 : Ⅰ. 운영계획 수립 → Ⅱ. 학교운영위원회 심의 → Ⅲ. 매월 품의
+  //   오른쪽: Ⅳ. 급식비 징수/반환 → Ⅴ. 급식비 집행 → Ⅵ. 납품 및 검수 → Ⅶ. 대금 지급
+  // 단마다 로마숫자 이름 상자와 그 아래 내용이 있고, 단과 단 사이에 아래
+  // 화살표가 섭니다. 원문 표에 섞인 빈 열·빈 줄은 걷어내고 두 단으로 세웁니다.
+  // 글자는 원문 칸에서 가져오고 색은 누리집 파랑 하나입니다.
+  // 이 함수와 .ch9-* 서식은 제9편에만 씁니다.
+  function renderChapter9Front(block) {
+    const outer = (block.tables || [])[0];
+    if (!outer) return null;
+    const cell = (outer.headers || [])[0];
+    if (!cell || !(cell.tables || []).length) return null;
+    const view = sheetView(cell.tables[0]);
+    if (!view || view.columns < 2) return null;
+    const say = (c) => String((c && c.text) || "").trim();
+    const isName = (text) => /^[ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ]/.test(text);
+
+    const columns = [];
+    for (let c = 0; c < view.columns; c += 1) {
+      const steps = [];
+      let current = null;
+      for (let r = 0; r < view.rows; r += 1) {
+        if (!view.fresh(r, c)) continue;
+        const one = view.at(r, c);
+        if (!say(one)) continue;
+        if (isName(say(one))) {
+          current = { name: one, body: [] };
+          steps.push(current);
+        } else if (current) {
+          current.body.push(one);
+        }
+      }
+      if (steps.length) columns.push(steps);
+    }
+    if (!columns.length) return null;
+
+    const stepMarkup = (step) => `
+      <section class="ch9-step">
+        <div class="ch9-step-name">${escapeHtml(say(step.name))}</div>
+        ${
+          step.body.length
+            ? `<div class="ch9-step-body">${step.body
+                .map((cell) => cellMarkup(cellLines(cell.text)))
+                .join("")}</div>`
+            : ""
+        }
+      </section>`;
+
+    const columnsHtml = columns
+      .map(
+        (steps) =>
+          `<div class="ch9-col">${steps
+            .map(stepMarkup)
+            .join('<div class="ch9-arrow" aria-hidden="true">↓</div>')}</div>`
+      )
+      .join("");
+
+    const title = String(block.title || "").trim() || "한 장으로 보는 학교급식 업무 흐름";
+    return {
+      summary: "한눈에 보기",
+      type: "table",
+      html: `
+        <div class="ch9-front">
+          <h3 class="ch9-band">
+            <span class="ch9-band-tag">한눈에 쏙쏙</span>
+            <span class="ch9-band-name">${escapeHtml(title)}</span>
+          </h3>
+          <div class="ch9-cols">${columnsHtml}</div>
+        </div>`,
+    };
+  }
+
   function render(block) {
     const body = String(block?.body || "");
     if (!body) return { summary: "전체 내용 보기", html: "", type: "text" };
@@ -3437,6 +3512,10 @@
     if (String(block.id || "") === "c08-w00-b1") {
       const ch8 = renderChapter8Front(block);
       if (ch8) return ch8;
+    }
+    if (String(block.id || "") === "c09-w00-b1") {
+      const ch9 = renderChapter9Front(block);
+      if (ch9) return ch9;
     }
 
     const sourceTable = renderSourceTable(block);

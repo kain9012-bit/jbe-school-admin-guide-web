@@ -1149,7 +1149,8 @@
 .is-front-summary #step-actions .ch5-band,
 .is-front-summary #step-actions .ch6-band,
 .is-front-summary #step-actions .ch7-band,
-.is-front-summary #step-actions .ch8-band {
+.is-front-summary #step-actions .ch8-band,
+.is-front-summary #step-actions .ch9-band {
   padding-right: 10rem;
 }
 
@@ -1166,7 +1167,8 @@
   .is-front-summary #step-actions .ch5-band,
   .is-front-summary #step-actions .ch6-band,
   .is-front-summary #step-actions .ch7-band,
-  .is-front-summary #step-actions .ch8-band {
+  .is-front-summary #step-actions .ch8-band,
+  .is-front-summary #step-actions .ch9-band {
     padding-right: 0;
   }
 }
@@ -2354,4 +2356,85 @@
   display: block;
   color: var(--guide-blue);
   font-weight: 700;
+}
+
+/* ── 제9편 '한눈에 보기' 전용 그림 ─────────────────────────────────
+   '한 장으로 보는 학교급식 업무 흐름'. 세로 흐름을 두 단으로 접었습니다.
+   왼쪽 Ⅰ·Ⅱ·Ⅲ, 오른쪽 Ⅳ·Ⅴ·Ⅵ·Ⅶ, 단마다 로마숫자 이름 상자 + 내용, 단 사이 ↓.
+   .ch9-* 는 제9편 밖으로 나가지 않습니다. */
+.ch9-front {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.ch9-band {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--guide-ink);
+  letter-spacing: -0.01em;
+}
+
+.ch9-band-tag {
+  flex: none;
+  padding: 0.55rem 1.6rem;
+  background: var(--guide-blue);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 1.55rem;
+}
+
+.ch9-cols {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.6rem;
+  align-items: start;
+}
+
+.ch9-col {
+  display: grid;
+  gap: 0.4rem;
+  align-content: start;
+}
+
+/* 단 — 로마숫자 이름 상자 + 내용 */
+.ch9-step {
+  display: grid;
+  gap: 0.8rem;
+  padding: 1.4rem 1.6rem;
+  background: #fff;
+  border: 1px solid var(--guide-line);
+  border-top: 3px solid var(--guide-blue);
+  border-radius: 1rem;
+}
+
+.ch9-step-name {
+  color: var(--guide-blue-dark);
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.ch9-step-body {
+  color: var(--guide-ink);
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.ch9-arrow {
+  color: var(--guide-blue);
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1;
+}
+
+@media (max-width: 767px) {
+  /* 좁은 화면에서는 두 단을 한 단으로 쌓습니다. */
+  .ch9-cols {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
