@@ -3005,6 +3005,118 @@
     };
   }
 
+  // ── 제4편 '한눈에 보기' 전용 그림 ────────────────────────────────
+  //
+  // 제4편 지면은 '자주 쓰는 휴가' 표입니다. 종류 | 내용 | 기간 | 증빙서류 | 비고.
+  // 휴가마다 그 아래에 전폭 '경로' 줄(신청 경로)이 한 줄씩 붙습니다. 원문은
+  // 이 경로 줄을 옅은 바탕에 '경로' 딱지를 달아 구분합니다. 그대로 살립니다.
+  // 글자는 원문 칸에서 그대로 가져오고 색은 누리집 파랑 하나입니다.
+  // 이 함수와 .ch4-* 서식은 제4편에만 씁니다.
+  function renderChapter4Front(block) {
+    const outer = (block.tables || [])[0];
+    if (!outer) return null;
+    const cell = (outer.headers || [])[0];
+    if (!cell || !(cell.tables || []).length) return null;
+    const table = cell.tables[0];
+    const grid = sheetGrid(table);
+    if (grid.rows.length < 3) return null;
+    const say = (c) => String((c && c.text) || "").trim();
+    const freshAt = (r, c) => {
+      const one = grid.cover[r] && grid.cover[r][c];
+      if (!one) return false;
+      if (r > 0 && grid.cover[r - 1][c] === one) return false;
+      if (c > 0 && grid.cover[r][c - 1] === one) return false;
+      return true;
+    };
+
+    // 지면 이름과 각주는 표 밖 줄에서 가져옵니다. 표가 삼킨 닫는 괄호가
+    // 이름 앞에 밀려 나온 자리를 텁니다(')자주 쓰는 휴가' → '자주 쓰는 휴가').
+    const loose = cellLines(cell.text).map((l) => l.trim());
+    const title =
+      (loose.find((l) => /자주\s*쓰는\s*휴가/.test(l)) || "자주 쓰는 휴가")
+        .replace(/^\s*[)\]）］}」』]+\s*/, "")
+        .trim();
+    const foot = loose.find((l) => /^※/.test(l)) || "";
+
+    const headHtml = (grid.rows[0] || [])
+      .map((c) => `<th scope="col">${escapeHtml(say(c))}</th>`)
+      .join("");
+
+    const bodyRows = [];
+    let r = 1;
+    while (r < grid.rows.length) {
+      const typeCell = grid.cover[r][0];
+      if (!typeCell) {
+        r += 1;
+        continue;
+      }
+      const span = typeCell.rowSpan || 1;
+      // 이 종류의 본문 줄 — 이 줄에서 새로 시작하는 내용~비고 칸
+      const detail = [];
+      for (let c = 1; c < grid.columns; c += 1) {
+        if (freshAt(r, c)) detail.push(grid.cover[r][c]);
+      }
+      const detailHtml = detail
+        .map(
+          (c) =>
+            `<td colspan="${c.colSpan || 1}">${cellMarkup(cellLines(c.text))}</td>`
+        )
+        .join("");
+      bodyRows.push(
+        `<tr>
+          <th scope="row" class="ch4-type" data-col="0" rowspan="${span}">${escapeHtml(
+          say(typeCell)
+        )}</th>
+          ${detailHtml}
+        </tr>`
+      );
+      // 딸린 줄(경로·덧붙임) — 종류 칸이 아래로 걸친 만큼
+      for (let sub = r + 1; sub < r + span; sub += 1) {
+        const line = grid.cover[sub][1];
+        if (!line || !say(line)) continue;
+        const text = say(line);
+        const isPath = /^경\s*로/.test(text);
+        if (isPath) {
+          const rest = text.replace(/^경\s*로\s*/, "");
+          bodyRows.push(
+            `<tr class="ch4-path">
+              <td colspan="${grid.columns - 1}">
+                <span class="ch4-path-tag">경로</span>
+                <span class="ch4-path-text">${escapeHtml(rest)}</span>
+              </td>
+            </tr>`
+          );
+        } else {
+          bodyRows.push(
+            `<tr class="ch4-note">
+              <td colspan="${grid.columns - 1}">${cellMarkup(cellLines(line.text))}</td>
+            </tr>`
+          );
+        }
+      }
+      r += span;
+    }
+
+    return {
+      summary: "한눈에 보기",
+      type: "table",
+      html: `
+        <div class="ch4-front">
+          <h3 class="ch4-band">
+            <span class="ch4-band-tag">한눈에 쏙쏙</span>
+            <span class="ch4-band-name">${escapeHtml(title)}</span>
+          </h3>
+          <div class="source-table-scroll ch4-table">
+            <table class="source-criteria-table">
+              <thead><tr>${headHtml}</tr></thead>
+              <tbody>${bodyRows.join("")}</tbody>
+            </table>
+          </div>
+          ${foot ? `<p class="ch4-foot">${escapeHtml(foot)}</p>` : ""}
+        </div>`,
+    };
+  }
+
   function render(block) {
     const body = String(block?.body || "");
     if (!body) return { summary: "전체 내용 보기", html: "", type: "text" };
@@ -3025,6 +3137,10 @@
     if (String(block.id || "") === "c03-w00-b1") {
       const ch3 = renderChapter3Front(block);
       if (ch3) return ch3;
+    }
+    if (String(block.id || "") === "c04-w00-b1") {
+      const ch4 = renderChapter4Front(block);
+      if (ch4) return ch4;
     }
 
     const sourceTable = renderSourceTable(block);

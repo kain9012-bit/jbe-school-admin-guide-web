@@ -1846,3 +1846,84 @@
   color: var(--guide-blue-dark);
   font-weight: 700;
 }
+
+/* ── 제4편 '한눈에 보기' 전용 그림 ─────────────────────────────────
+   '자주 쓰는 휴가' 표. 휴가마다 아래에 전폭 '경로' 줄이 붙습니다.
+   원문처럼 경로 줄을 옅은 파랑에 '경로' 딱지로 구분합니다.
+   .ch4-* 는 제4편 밖으로 나가지 않습니다. */
+.ch4-front {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.ch4-band {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--guide-ink);
+  letter-spacing: -0.01em;
+}
+
+.ch4-band-tag {
+  flex: none;
+  padding: 0.55rem 1.6rem;
+  background: var(--guide-blue);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.ch4-table .source-criteria-table thead th,
+.ch4-table .source-criteria-table th[scope="col"] {
+  background: var(--guide-blue);
+  color: #fff;
+  border-color: var(--guide-blue);
+  text-align: center;
+}
+
+/* 종류 칸 — 옅은 파랑, 가운데 */
+.ch4-type {
+  background: var(--guide-blue-pale);
+  color: var(--guide-blue-dark);
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* 경로 줄 — 옅은 파랑 바탕에 '경로' 딱지 */
+.ch4-path > td {
+  background: color-mix(in srgb, var(--guide-blue-pale) 55%, #fff);
+}
+
+.ch4-path-tag {
+  display: inline-block;
+  margin-right: 0.8rem;
+  padding: 0.25rem 1rem;
+  background: var(--guide-blue);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+.ch4-path-text {
+  color: var(--guide-blue-dark);
+  font-weight: 600;
+}
+
+/* 덧붙임 줄(유급/무급 설명 등) — 옅은 글씨 */
+.ch4-note > td {
+  color: var(--guide-muted);
+  font-size: 1.4rem;
+}
+
+.ch4-foot {
+  margin: 0;
+  color: var(--guide-muted);
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
