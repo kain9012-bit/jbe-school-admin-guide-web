@@ -3334,6 +3334,65 @@
     };
   }
 
+  // ── 제8편 '한눈에 보기' 전용 그림 ────────────────────────────────
+  //
+  // 제8편 지면은 월별 표입니다.
+  //   [흐름도] 교육공무직원 월별 업무 일정
+  //   월별 | 주요 일정 — 1월~12월과 '매월17일'.
+  // 원문 표에는 쓰지 않는 가는 가운데 열과 빈 줄이 섞여 있습니다. 그 자리를
+  // 걷고 월별·주요 일정 두 열로 깔끔히 그립니다. 머리줄은 파랑, 월별 칸은
+  // 옅은 파랑입니다. 글자는 원문 칸에서 가져옵니다.
+  // 이 함수와 .ch8-* 서식은 제8편에만 씁니다.
+  function renderChapter8Front(block) {
+    const outer = (block.tables || [])[0];
+    if (!outer) return null;
+    const cell = (outer.headers || [])[0];
+    if (!cell || (cell.tables || []).length < 2) return null;
+    const bandTable = cell.tables[0];
+    const table = cell.tables[1];
+    const grid = sheetGrid(table);
+    if (grid.rows.length < 3) return null;
+    const say = (c) => String((c && c.text) || "").trim();
+    const head = (bandTable.headers || []).map(say);
+    const last = grid.columns - 1;
+
+    const bodyRows = [];
+    for (let r = 1; r < grid.rows.length; r += 1) {
+      const monthCell = grid.cover[r][0];
+      const taskCell = grid.cover[r][last];
+      if ((!monthCell || !say(monthCell)) && (!taskCell || !say(taskCell))) continue; // 빈 줄
+      bodyRows.push(
+        `<tr>
+          <th scope="row" class="ch8-month">${escapeHtml(say(monthCell))}</th>
+          <td class="ch8-task">${cellMarkup(cellLines(taskCell ? taskCell.text : ""))}</td>
+        </tr>`
+      );
+    }
+
+    return {
+      summary: "한눈에 보기",
+      type: "table",
+      html: `
+        <div class="ch8-front">
+          <h3 class="ch8-band">
+            <span class="ch8-band-tag">${escapeHtml(head[0] || "")}</span>
+            <span class="ch8-band-name">${escapeHtml(head[1] || "")}</span>
+          </h3>
+          <div class="source-table-scroll ch8-table">
+            <table class="source-criteria-table">
+              <thead>
+                <tr>
+                  <th scope="col">${escapeHtml(say(grid.cover[0][0]))}</th>
+                  <th scope="col">${escapeHtml(say(grid.cover[0][last]))}</th>
+                </tr>
+              </thead>
+              <tbody>${bodyRows.join("")}</tbody>
+            </table>
+          </div>
+        </div>`,
+    };
+  }
+
   function render(block) {
     const body = String(block?.body || "");
     if (!body) return { summary: "전체 내용 보기", html: "", type: "text" };
@@ -3370,6 +3429,10 @@
     if (String(block.id || "") === "c07-w00-b1") {
       const ch7 = renderChapter7Front(block);
       if (ch7) return ch7;
+    }
+    if (String(block.id || "") === "c08-w00-b1") {
+      const ch8 = renderChapter8Front(block);
+      if (ch8) return ch8;
     }
 
     const sourceTable = renderSourceTable(block);

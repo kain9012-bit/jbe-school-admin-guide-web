@@ -1148,7 +1148,8 @@
 .is-front-summary #step-actions .ch4-band,
 .is-front-summary #step-actions .ch5-band,
 .is-front-summary #step-actions .ch6-band,
-.is-front-summary #step-actions .ch7-band {
+.is-front-summary #step-actions .ch7-band,
+.is-front-summary #step-actions .ch8-band {
   padding-right: 10rem;
 }
 
@@ -1164,7 +1165,8 @@
   .is-front-summary #step-actions .ch4-band,
   .is-front-summary #step-actions .ch5-band,
   .is-front-summary #step-actions .ch6-band,
-  .is-front-summary #step-actions .ch7-band {
+  .is-front-summary #step-actions .ch7-band,
+  .is-front-summary #step-actions .ch8-band {
     padding-right: 0;
   }
 }
@@ -2276,4 +2278,71 @@
   color: var(--guide-blue-dark);
   font-weight: 700;
   text-align: center;
+}
+
+/* ── 제8편 '한눈에 보기' 전용 그림 ─────────────────────────────────
+   월별 표(흐름도 ▮ 교육공무직원 월별 업무 일정). 월별 | 주요 일정.
+   원문 표 그대로, 머리줄만 파랑, 월별 칸은 옅은 파랑.
+   .ch8-* 는 제8편 밖으로 나가지 않습니다. */
+.ch8-front {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.ch8-band {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--guide-ink);
+  letter-spacing: -0.01em;
+}
+
+.ch8-band-tag {
+  flex: none;
+  padding: 0.55rem 1.6rem;
+  background: var(--guide-blue);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 1.55rem;
+}
+
+.ch8-table .source-criteria-table thead th,
+.ch8-table .source-criteria-table th[scope="col"] {
+  background: var(--guide-blue);
+  color: #fff;
+  border-color: var(--guide-blue);
+  text-align: center;
+}
+
+/* 월별 칸 — 옅은 파랑, 가운데 */
+.ch8-month {
+  width: 9rem;
+  background: var(--guide-blue-pale);
+  color: var(--guide-blue-dark);
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.ch8-task {
+  color: var(--guide-ink);
+  line-height: 1.65;
+}
+
+/* 주요 일정은 월마다 여러 건이라 원문처럼 ◦ 글머리를 세워 갈라 줍니다
+   (여느 표는 좁은 칸에서 이름표가 목록으로 보일까 봐 기호를 숨깁니다). */
+.ch8-task .source-cell-list > li {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3rem) minmax(0, 1fr);
+  gap: 0.5rem;
+  align-items: start;
+}
+
+.ch8-task .source-cell-mark {
+  display: block;
+  color: var(--guide-blue);
+  font-weight: 700;
 }
