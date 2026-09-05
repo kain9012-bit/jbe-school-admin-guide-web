@@ -149,6 +149,9 @@ const shape = (page) =>
         // 있어(제12편 물품관리 흐름도) 표 대신 그림이면 됩니다.
         gridded: Boolean(document.querySelector("#step-actions .source-criteria-table")),
         pictured: Boolean(document.querySelector("#step-actions .source-picture-row")),
+        // 편마다 손으로 그린 전용 지면입니다(제2편 .ch2-front, 제5편 .ch5-front …).
+        // 표도 그림도 없이 흐름만 있는 편(제5편)이라 이것도 내용으로 봅니다.
+        custom: Boolean(document.querySelector('#step-actions [class$="-front"]')),
         // 표가 삼킨 줄의 마지막 한 글자가 다음 줄 맨 앞으로 밀려나는 자리가
         // 있습니다. 닫는 괄호로 시작하는 줄은 원문에 없습니다.
         //   제4편 ')자주 쓰는 휴가'  ← 원문은 '자주 쓰는 휴가'
@@ -169,7 +172,7 @@ const shape = (page) =>
         // 지면을 카드로 다시 그리면 표가 아예 없을 수도 있습니다.
         // 그때는 다시 그린 지면 전체의 폭을 잽니다.
         table:
-          wide("#step-actions .front-sheet") ||
+          wide('#step-actions [class$="-front"]') ||
           wide("#step-actions .source-criteria-table") ||
           wide("#step-actions .source-picture-row"),
       };
@@ -260,8 +263,8 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
     if (now.cards) {
       problems.push(`${where}: 카드 디자인이 ${now.cards}개 남았습니다 — 원문 표 그대로여야 합니다.`);
     }
-    // 표도 그림도 없으면 지면이 통째로 사라진 것입니다.
-    if (!now.gridded && !now.pictured) {
+    // 표도 그림도 편별 전용 지면도 없으면 지면이 통째로 사라진 것입니다.
+    if (!now.gridded && !now.pictured && !now.custom) {
       problems.push(`${where}: 원문 표도 그림도 그려지지 않았습니다.`);
     }
     for (const stray of now.strays || []) {

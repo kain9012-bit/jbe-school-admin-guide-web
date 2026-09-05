@@ -3117,6 +3117,115 @@
     };
   }
 
+  // ── 제5편 '한눈에 보기' 전용 그림 ────────────────────────────────
+  //
+  // 제5편 지면은 '감사 일반 절차' 세로 흐름도입니다.
+  //   구분 → 주체 → 시기 → 주요내용, 단과 단 사이에 아래 화살표.
+  //   마지막 단(감사결과 처분 및 조치보고)은 시기가 다섯 갈래로 나뉩니다
+  //   (변상명령·징계요구·경고주의·시정·개선권고통보).
+  // 원문 표에는 화살표 자리(가는 열)와 빈 줄이 섞여 있습니다. 그 자리를
+  // 걷어내고 단마다 한 칸씩 세운 뒤 아래 화살표로 잇습니다. 글자는 원문
+  // 칸에서 그대로 가져오고 색은 누리집 파랑 하나입니다.
+  // 이 함수와 .ch5-* 서식은 제5편에만 씁니다.
+  function renderChapter5Front(block) {
+    const outer = (block.tables || [])[0];
+    if (!outer) return null;
+    const cell = (outer.headers || [])[0];
+    if (!cell || (cell.tables || []).length < 2) return null;
+    const bandTable = cell.tables[0];
+    const flowTable = cell.tables[1];
+    const grid = sheetGrid(flowTable);
+    const say = (c) => String((c && c.text) || "").trim();
+    const freshAt = (r, c) => {
+      const one = grid.cover[r] && grid.cover[r][c];
+      if (!one) return false;
+      if (r > 0 && grid.cover[r - 1][c] === one) return false;
+      if (c > 0 && grid.cover[r][c - 1] === one) return false;
+      return true;
+    };
+    // 내용이 든 열은 0·2·4·6, 나머지(1·3·5)는 화살표가 지나는 가는 열입니다.
+    const COLS = [0, 2, 4, 6];
+    const bandHead = (bandTable.headers || []).map(say);
+
+    // 머리줄 — 구분/주체/시기/주요내용
+    const headCells = COLS.map((c) => say(grid.cover[0][c]));
+
+    // 화살표 줄(구분 칸이 '▪')로 단을 가릅니다.
+    const isArrow = (r) => {
+      const first = grid.cover[r][0];
+      return Boolean(first && /^[▪]$/.test(say(first)));
+    };
+
+    const steps = [];
+    let cur = null;
+    for (let r = 1; r < grid.rows.length; r += 1) {
+      if (isArrow(r)) {
+        cur = null;
+        continue;
+      }
+      // 이 줄의 각 내용 열에서 새로 시작하는 칸을 모읍니다.
+      const picked = {};
+      let any = false;
+      for (const c of COLS) {
+        if (freshAt(r, c) && say(grid.cover[r][c])) {
+          picked[c] = grid.cover[r][c];
+          any = true;
+        }
+      }
+      if (!any) continue; // 빈 줄(간격)
+      if (!cur) {
+        cur = { 0: [], 2: [], 4: [], 6: [] };
+        steps.push(cur);
+      }
+      for (const c of COLS) if (picked[c]) cur[c].push(picked[c]);
+    }
+    if (steps.length < 2) return null;
+
+    // 구분·주체·시기는 짧은 이름표라 글머리점 없이 줄만 세웁니다. 주요내용만
+    // 원문 글머리(◦)를 살립니다(cellMarkup).
+    const labelCol = (cells) =>
+      cells
+        .map(
+          (one) =>
+            `<div>${cellLines(one.text)
+              .map((line) => escapeHtml(line.trim()))
+              .join("<br>")}</div>`
+        )
+        .join("");
+    const richCol = (cells) =>
+      cells.map((one) => `<div>${cellMarkup(cellLines(one.text))}</div>`).join("");
+
+    const stepsHtml = steps
+      .map(
+        (step) => `
+        <div class="ch5-step">
+          <div class="ch5-gubun">${labelCol(step[0])}</div>
+          <div class="ch5-juche">${labelCol(step[2])}</div>
+          <div class="ch5-sigi">${labelCol(step[4])}</div>
+          <div class="ch5-content">${richCol(step[6])}</div>
+        </div>`
+      )
+      .join('<div class="ch5-arrow" aria-hidden="true">↓</div>');
+
+    return {
+      summary: "한눈에 보기",
+      type: "table",
+      html: `
+        <div class="ch5-front">
+          <h3 class="ch5-band">
+            <span class="ch5-band-tag">${escapeHtml(bandHead[0] || "감사")}</span>
+            <span class="ch5-band-name">${escapeHtml(bandHead[1] || "일반 절차")}</span>
+          </h3>
+          <div class="ch5-flow">
+            <div class="ch5-head">
+              ${headCells.map((h) => `<span>${escapeHtml(h)}</span>`).join("")}
+            </div>
+            ${stepsHtml}
+          </div>
+        </div>`,
+    };
+  }
+
   function render(block) {
     const body = String(block?.body || "");
     if (!body) return { summary: "전체 내용 보기", html: "", type: "text" };
@@ -3141,6 +3250,10 @@
     if (String(block.id || "") === "c04-w00-b1") {
       const ch4 = renderChapter4Front(block);
       if (ch4) return ch4;
+    }
+    if (String(block.id || "") === "c05-w00-b1") {
+      const ch5 = renderChapter5Front(block);
+      if (ch5) return ch5;
     }
 
     const sourceTable = renderSourceTable(block);

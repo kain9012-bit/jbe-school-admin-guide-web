@@ -1927,3 +1927,125 @@
   font-size: 1.4rem;
   line-height: 1.7;
 }
+
+/* ── 제5편 '한눈에 보기' 전용 그림 ─────────────────────────────────
+   '감사 일반 절차' 세로 흐름도. 구분→주체→시기→주요내용, 단 사이 아래 화살표.
+   .ch5-* 는 제5편 밖으로 나가지 않습니다. */
+.ch5-front {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.ch5-band {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--guide-ink);
+  letter-spacing: -0.01em;
+}
+
+.ch5-band-tag {
+  flex: none;
+  padding: 0.55rem 1.6rem;
+  background: var(--guide-blue);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 1.55rem;
+}
+
+.ch5-flow {
+  display: grid;
+  gap: 0.4rem;
+}
+
+/* 열 비율은 원문 그대로: 구분·주체·시기·주요내용 */
+.ch5-head,
+.ch5-step {
+  display: grid;
+  grid-template-columns: 1.6fr 0.9fr 1.5fr 4.4fr;
+  align-items: stretch;
+  gap: 0.8rem;
+}
+
+.ch5-head {
+  padding: 0 0.4rem;
+}
+
+.ch5-head > span {
+  padding: 1rem 1.2rem;
+  background: var(--guide-blue);
+  border-radius: 0.6rem;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.ch5-step {
+  padding: 0.4rem;
+  border: 1px solid var(--guide-line);
+  border-radius: 1rem;
+  background: #fff;
+}
+
+.ch5-step > div {
+  display: grid;
+  gap: 0.4rem;
+  align-content: center;
+  padding: 1.2rem 1.2rem;
+  font-size: 1.45rem;
+  line-height: 1.6;
+}
+
+/* 구분 — 옅은 파랑 상자, 가운데 굵게 */
+.ch5-gubun {
+  background: var(--guide-blue-pale);
+  border-radius: 0.7rem;
+  color: var(--guide-blue-dark);
+  font-weight: 700;
+  text-align: center;
+}
+
+.ch5-juche {
+  justify-items: center;
+  text-align: center;
+  color: var(--guide-ink);
+  font-weight: 600;
+}
+
+.ch5-sigi {
+  text-align: center;
+  justify-items: center;
+  color: var(--guide-ink);
+}
+
+.ch5-content {
+  color: var(--guide-ink);
+}
+
+/* 단 사이 아래 화살표 */
+.ch5-arrow {
+  color: var(--guide-blue);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1;
+}
+
+@media (max-width: 767px) {
+  .ch5-head {
+    display: none;
+  }
+
+  .ch5-step {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.4rem;
+  }
+
+  .ch5-gubun {
+    font-size: 1.6rem;
+  }
+}
