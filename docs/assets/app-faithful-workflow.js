@@ -30,7 +30,6 @@
 
   const overviewView = byId("overview-view");
   const workView = byId("work-view");
-  const breadcrumb = byId("breadcrumb");
   const workGrid = byId("work-grid");
   const sideWorkList = byId("side-work-list");
   const searchDialog = byId("search-dialog");
@@ -1451,17 +1450,13 @@
     workView.classList.toggle("is-front-summary", work.number === 0);
     byId("work-number").textContent = workBadge(work);
     // 큰 제목은 '한눈에 보기'가 아니라 **어느 편인지**를 말해야 합니다.
-    // 배지·왼쪽 목록·빵부스러기가 이미 '한눈에 보기'라고 세 번 말하는데,
+    // 배지·왼쪽 목록이 이미 '한눈에 보기'라고 말하는데,
     // 정작 제3편인지 제13편인지는 어디에도 없었습니다.
     byId("work-title").textContent =
       work.number === 0 ? chapterName() : work.title;
     const introNode = byId("work-intro");
     introNode.textContent = workflows[work.id].intro;
     introNode.hidden = !workflows[work.id].intro;
-    breadcrumb.innerHTML = `
-      <li class="home"><a href="${escapeHtml(chapterHomeHref())}">홈</a></li>
-      <li><span>${escapeHtml(work.title)}</span></li>
-    `;
     renderStep(work, step, options.faqNumber);
     document.title = `${work.title} · ${step.title} | 학교행정업무 길라잡이`;
     if (options.formId) requestAnimationFrame(() => openForm(options.formId));
@@ -1486,10 +1481,6 @@
       // 그리지 않으면 업무 화면에서 '자료 내려받기'로 돌아왔을 때
       // '어떤 업무를 처리하시나요?' 아래가 텅 비어 있습니다.
       if (!workGrid.childElementCount) renderOverview();
-      breadcrumb.innerHTML = `
-        <li class="home"><a href="${escapeHtml(globalHomeHref())}">홈</a></li>
-        <li><span>${escapeHtml(chapterName())}</span></li>
-      `;
       document.title = `학교행정업무 길라잡이 웹판 | ${chapterName()}`;
       if (raw === "downloads") {
         requestAnimationFrame(() => byId("downloads").scrollIntoView({ behavior: "smooth" }));

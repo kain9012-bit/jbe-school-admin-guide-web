@@ -308,11 +308,6 @@
       </div>
     `;
 
-    // 통합 홈은 이동 경로의 출발점이라 표시할 앞 단계가 없습니다.
-    // '홈' 한 글자만 남는 빈 줄을 없앱니다.
-    const breadcrumbWrap = document.querySelector(".krds-breadcrumb-wrap");
-    if (breadcrumbWrap) breadcrumbWrap.hidden = true;
-    byId("breadcrumb").innerHTML = "";
     document.querySelectorAll("[data-current-chapter]").forEach((target) => {
       target.textContent = "전체 업무";
     });

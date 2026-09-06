@@ -180,8 +180,10 @@ for (const down of [900, 900, 900]) {
   );
 }
 
-// 5-3. 머리글에 같은 곳으로 가는 항목이 둘 있으면 안 됩니다.
-//      '다른 업무 보기'가 바로 밑 빵부스러기 '홈'과 주소까지 똑같았습니다.
+// 5-3. 업무 화면 머리글은 비어 있으면 안 됩니다.
+//      (예전에는 여기서 빵부스러기 '홈'과 머리글 항목이 같은 곳으로 가지
+//       않는지도 보았으나, 빵부스러기 줄 자체를 걷어 냈습니다 — 위치는
+//       배지·왼쪽 목록·큰 제목이 이미 말해 주고, 홈은 좌상단 로고가 갑니다.)
 await page.goto(`${base}/index.html?chapter=02#work=c02-w01`, { waitUntil: "load" });
 await page.waitForTimeout(900);
 {
@@ -190,21 +192,16 @@ await page.waitForTimeout(900);
       const box = node.getBoundingClientRect();
       return box.width > 0 && box.height > 0 && getComputedStyle(node).display !== "none";
     };
-    const home = document.querySelector(".breadcrumb a");
-    const twins = [...document.querySelectorAll(".global-nav a[href], .mobile-global-nav a[href]")]
-      .filter((link) => home && link.href === home.href)
-      .map((link) => link.textContent.replace(/\s+/g, " ").trim());
     return {
-      집주소: home ? home.getAttribute("href") : null,
-      겹침: twins,
+      빵부스러기: !!document.querySelector(".krds-breadcrumb-wrap, .breadcrumb"),
+      로고집: (document.querySelector(".guide-brand") || {}).getAttribute
+        ? document.querySelector(".guide-brand").getAttribute("href")
+        : null,
       차림표: [...document.querySelectorAll(".global-nav > *")].filter(shown).length,
     };
   });
-  expect(now.집주소 !== null, "업무 화면에 '홈'으로 돌아가는 빵부스러기가 없습니다.");
-  expect(
-    now.겹침.length === 0,
-    `머리글의 '${now.겹침.join("·")}'이 빵부스러기 '홈'과 같은 곳으로 갑니다.`
-  );
+  expect(now.빵부스러기 === false, "걷어 낸 빵부스러기 줄이 화면에 남아 있습니다.");
+  expect(now.로고집 !== null, "좌상단 로고에 '홈'으로 돌아가는 링크가 없습니다.");
   expect(now.차림표 > 0, "업무 화면 머리글이 통째로 비었습니다.");
 }
 

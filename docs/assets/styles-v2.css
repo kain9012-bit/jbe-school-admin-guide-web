@@ -90,7 +90,6 @@ input {
 
 #krds-masthead .inner,
 #krds-header .inner,
-.krds-breadcrumb-wrap .inner,
 .guide-hero .inner,
 .content-container,
 .guide-footer .inner {
@@ -212,48 +211,6 @@ input {
   height: 0.3rem;
   content: "";
   background: var(--guide-blue);
-}
-
-.krds-breadcrumb-wrap {
-  border-bottom: 1px solid var(--guide-line);
-  background: #fff;
-}
-
-.krds-breadcrumb-wrap .inner {
-  min-height: 5.2rem;
-  display: flex;
-  align-items: center;
-}
-
-.breadcrumb {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  color: var(--guide-muted);
-  font-size: 1.4rem;
-  list-style: none;
-}
-
-.breadcrumb li + li::before {
-  margin-right: 0.8rem;
-  content: ">";
-  color: var(--guide-line);
-}
-
-/* KRDS 기본 구분 아이콘은 외부 서버의 SVG에 의존하므로 사용하지 않습니다.
-   구분 기호는 위의 텍스트 기호 하나만 표시합니다. */
-.krds-breadcrumb-wrap .breadcrumb li::after,
-.breadcrumb li:not(:last-child)::after,
-.breadcrumb li::after {
-  display: none !important;
-  content: none !important;
-}
-
-.breadcrumb a {
-  color: inherit;
 }
 
 .guide-hero {
@@ -1234,7 +1191,6 @@ mark {
 @media (max-width: 767px) {
   #krds-masthead .inner,
   #krds-header .inner,
-  .krds-breadcrumb-wrap .inner,
   .guide-hero .inner,
   .content-container,
   .guide-footer .inner {

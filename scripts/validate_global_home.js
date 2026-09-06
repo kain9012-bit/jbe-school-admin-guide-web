@@ -120,10 +120,6 @@ requireCondition(
   "분야 카드에 불필요한 상태 라벨이 남아 있습니다."
 );
 requireCondition(
-  globalHome.includes('breadcrumbWrap.hidden = true'),
-  "통합 홈에서 '홈' 한 칸만 남는 이동 경로가 숨겨지지 않습니다."
-);
-requireCondition(
   globalHome.includes('desktopChapterLink.textContent = "업무 분야"'),
   "통합 홈의 상단 메뉴가 업무 분야로 바뀌지 않습니다."
 );
@@ -150,14 +146,22 @@ for (const filename of ["index.html"]) {
   );
 }
 
-const chapterApp = fs.readFileSync(
-  path.join(root, "docs/assets/app-faithful-workflow.js"),
+// 편 화면에서 통합 홈으로 돌아가는 길은 좌상단 로고입니다(빵부스러기는
+// 걷어 냈습니다). index.html의 로고에 data-global-home이 있고, header-v3.js가
+// 그 링크를 globalHomeHref()(19개 편 통합 홈)로 잇는지 봅니다.
+const indexHtml = fs.readFileSync(path.join(root, "docs/index.html"), "utf8");
+requireCondition(
+  indexHtml.includes("guide-brand") && indexHtml.includes("data-global-home"),
+  "좌상단 로고에 통합 홈으로 가는 표시(data-global-home)가 없습니다."
+);
+const headerApp = fs.readFileSync(
+  path.join(root, "docs/assets/header-v3.js"),
   "utf8"
 );
 requireCondition(
-  chapterApp.includes("function globalHomeHref()") &&
-    chapterApp.includes('escapeHtml(globalHomeHref())'),
-  "편별 화면의 홈 이동이 19개 편 통합 홈으로 연결되지 않습니다."
+  headerApp.includes("[data-global-home]") &&
+    headerApp.includes("globalHomeHref()"),
+  "편별 화면의 홈 이동(로고)이 19개 편 통합 홈으로 연결되지 않습니다."
 );
 
 // 업무 '목록'에는 검색 카드용 긴 설명(소제목 나열)을 쓰면 안 됩니다.
