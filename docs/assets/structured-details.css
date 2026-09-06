@@ -1154,7 +1154,8 @@
 .is-front-summary #step-actions .ch10-band,
 .is-front-summary #step-actions .ch11-band,
 .is-front-summary #step-actions .ch12-band,
-.is-front-summary #step-actions .ch13-band {
+.is-front-summary #step-actions .ch13-band,
+.is-front-summary #step-actions .ch15-band {
   padding-right: 10rem;
 }
 
@@ -1176,7 +1177,8 @@
   .is-front-summary #step-actions .ch10-band,
   .is-front-summary #step-actions .ch11-band,
   .is-front-summary #step-actions .ch12-band,
-  .is-front-summary #step-actions .ch13-band {
+  .is-front-summary #step-actions .ch13-band,
+  .is-front-summary #step-actions .ch15-band {
     padding-right: 0;
   }
 }
@@ -2824,4 +2826,58 @@
 .ch13-cont {
   padding-left: 1.4rem;
   color: var(--guide-muted);
+}
+
+/* ── 제15편 학교회계 수입 ───────────────────────────────────
+   앞머리 '세입업무 흐름도'. 밴드(흐름도|세입 업무) + 두 구역 표. */
+.ch15-band {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--guide-ink);
+  letter-spacing: -0.01em;
+}
+
+.ch15-band-tag {
+  flex: none;
+  padding: 0.55rem 1.6rem;
+  background: var(--guide-blue);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 1.55rem;
+}
+
+/* 구역 표는 위아래로 잇습니다. */
+.ch15-table + .ch15-table {
+  margin-top: 1.6rem;
+}
+
+/* 구역 머리(징수행위·수납행위) 파랑 */
+.ch15-table .source-criteria-table th[scope="col"] {
+  background: var(--guide-blue);
+  color: #fff;
+  border-color: var(--guide-blue);
+  text-align: left;
+}
+
+/* 왼쪽 단계 칸(징수결정·수납·일계처리 등) 옅은 파랑 */
+.ch15-table .source-criteria-table th[scope="row"] {
+  background: var(--guide-blue-pale);
+  color: var(--guide-blue-dark);
+  font-weight: 700;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* 단계 칸은 이름만 보이면 됩니다. 두 줄로 접힌 이름에 붙는 '·'는 지웁니다
+   (내용 칸의 ▸·→는 그대로 둡니다). */
+.ch15-front th[scope="row"] .source-cell-mark {
+  display: none !important;
+}
+
+.ch15-front th[scope="row"] .source-cell-list > li {
+  display: block;
 }

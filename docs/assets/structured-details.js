@@ -3834,6 +3834,47 @@
     };
   }
 
+  // 제15편 학교회계 수입 — 앞머리 '세입업무 흐름도'.
+  // 바깥 칸 하나 안에 밴드(흐름도|세입 업무)와 두 구역 표(징수행위·수납행위)가
+  // 들어 있습니다. 밴드는 다른 편처럼 파란 딱지로 올리고, 두 구역 표는 원문
+  // 병합(수납 3줄 병합·수납의 방법 2줄 병합 등)을 그대로 두고 색만 파랑으로.
+  //   · 구역 머리(징수행위·수납행위)는 파랑.
+  //   · 왼쪽 단계 칸(징수결정·수납·일계처리 등)은 옅은 파랑.
+  //   · 내용 칸의 ▸·→ 경로는 원문 그대로 둡니다.
+  function renderChapter15Front(block) {
+    const outer = (block.tables || [])[0];
+    if (!outer) return null;
+    const cell = (outer.headers || [])[0];
+    if (!cell || (cell.tables || []).length < 3) return null;
+    const inners = cell.tables;
+    const say = (c) => String((c && c.text) || "").trim();
+    const bandHead = (inners[0].headers || []).map(say);
+
+    const sectionMarkup = (t) =>
+      `<div class="ch15-table">${spannedTableMarkup(
+        "",
+        headerCellsOf(t),
+        t.rows || [],
+        t.widths,
+        0,
+        false
+      )}</div>`;
+
+    return {
+      summary: "한눈에 보기",
+      type: "table",
+      html: `
+        <div class="ch15-front">
+          <h3 class="ch15-band">
+            <span class="ch15-band-tag">${escapeHtml(bandHead[0] || "")}</span>
+            <span class="ch15-band-name">${escapeHtml(bandHead[1] || "")}</span>
+          </h3>
+          ${sectionMarkup(inners[1])}
+          ${sectionMarkup(inners[2])}
+        </div>`,
+    };
+  }
+
   function render(block) {
     const body = String(block?.body || "");
     if (!body) return { summary: "전체 내용 보기", html: "", type: "text" };
@@ -3894,6 +3935,10 @@
     if (String(block.id || "") === "c13-w00-b1") {
       const ch13 = renderChapter13Front(block);
       if (ch13) return ch13;
+    }
+    if (String(block.id || "") === "c15-w00-b1") {
+      const ch15 = renderChapter15Front(block);
+      if (ch15) return ch15;
     }
 
     const sourceTable = renderSourceTable(block);
