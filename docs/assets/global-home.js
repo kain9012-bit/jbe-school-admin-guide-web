@@ -164,6 +164,28 @@
     if (seat && !seat.children.length) seat.remove();
   }
 
+  // 펼친 업무 목록을 화면 안으로 끌어옵니다. 펼침 전환(240ms)이 끝난 뒤
+  // 한 번만 재도록, 전환 끝 신호를 기다리되 안 오면 시간으로 넘어갑니다.
+  // block:"nearest"라 이미 다 보이는 윗줄 카드는 움직이지 않고(화면 안 튐),
+  // 아랫줄 카드만 그 아래 목록이 보이게 스크롤합니다. 그새 닫혔으면 넘어갑니다.
+  function scrollPanelIntoView(panel) {
+    let done = false;
+    const reveal = () => {
+      if (done) return;
+      done = true;
+      panel.removeEventListener("transitionend", onEnd);
+      if (panel.hidden || !panel.classList.contains("is-open")) return;
+      panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    };
+    const onEnd = (event) => {
+      if (event.target === panel && event.propertyName === "grid-template-rows") {
+        reveal();
+      }
+    };
+    panel.addEventListener("transitionend", onEnd);
+    setTimeout(reveal, 300);
+  }
+
   // 카드를 누르면 그 줄 아래에서 업무 목록이 부드럽게 열리고 닫힙니다.
   function bindChapterToggles() {
     document.querySelectorAll("[data-toggle-chapter]").forEach((button) => {
@@ -189,6 +211,7 @@
           seatBelowRow(panel);
           panel.hidden = false;
           requestAnimationFrame(() => panel.classList.add("is-open"));
+          scrollPanelIntoView(panel);
         } else {
           panel.classList.remove("is-open");
           panel.hidden = true;
