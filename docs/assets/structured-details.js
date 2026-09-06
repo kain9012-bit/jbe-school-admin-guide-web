@@ -4078,6 +4078,26 @@
     };
   }
 
+  // 제18편 신설학교 설립 및 개교 — 앞머리 '신설학교 설립 및 개교 준비 개요'.
+  // 표(추진기관·분야·주요내용)는 이미 원문대로 잘 그려집니다. 소제목만 다른
+  // 편처럼 밴드로 올려 '원문 PDF' 단추와 한 줄에 세우고 큰 제목 위 빈 자리를
+  // 없앱니다. 표는 손대지 않습니다.
+  function renderChapter18Front(block) {
+    const base = renderSourceTable(block);
+    if (!base || base.type === "text" || !base.html) return null;
+    return {
+      summary: "한눈에 보기",
+      type: base.type,
+      html: `
+        <div class="ch18-front">
+          <h3 class="ch18-band">${escapeHtml(
+            block.title || "신설학교 설립 및 개교 준비 개요"
+          )}</h3>
+          ${base.html}
+        </div>`,
+    };
+  }
+
   function render(block) {
     const body = String(block?.body || "");
     if (!body) return { summary: "전체 내용 보기", html: "", type: "text" };
@@ -4150,6 +4170,10 @@
     if (String(block.id || "") === "c17-w00-b1") {
       const ch17 = renderChapter17Front(block);
       if (ch17) return ch17;
+    }
+    if (String(block.id || "") === "c18-w00-b1") {
+      const ch18 = renderChapter18Front(block);
+      if (ch18) return ch18;
     }
 
     const sourceTable = renderSourceTable(block);

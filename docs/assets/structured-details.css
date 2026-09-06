@@ -1157,7 +1157,8 @@
 .is-front-summary #step-actions .ch13-band,
 .is-front-summary #step-actions .ch15-band,
 .is-front-summary #step-actions .ch16-band,
-.is-front-summary #step-actions .ch17-band {
+.is-front-summary #step-actions .ch17-band,
+.is-front-summary #step-actions .ch18-band {
   padding-right: 10rem;
 }
 
@@ -1182,7 +1183,8 @@
   .is-front-summary #step-actions .ch13-band,
   .is-front-summary #step-actions .ch15-band,
   .is-front-summary #step-actions .ch16-band,
-  .is-front-summary #step-actions .ch17-band {
+  .is-front-summary #step-actions .ch17-band,
+  .is-front-summary #step-actions .ch18-band {
     padding-right: 0;
   }
 }
@@ -3116,4 +3118,23 @@
     grid-template-columns: repeat(5, minmax(15rem, 1fr));
     overflow-x: auto;
   }
+}
+
+/* ── 제18편 신설학교 설립 및 개교 ──────────────────────────
+   표는 원문대로 두고 소제목만 다른 편과 같은 밴드 서식으로. */
+.ch18-band {
+  margin: 0 0 1.8rem;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--guide-ink);
+  letter-spacing: -0.01em;
+}
+
+/* 왼쪽 추진기관 칸 이름이 두 줄로 접힐 때 붙는 '·'는 지웁니다. */
+.ch18-front th[scope="row"] .source-cell-mark {
+  display: none !important;
+}
+
+.ch18-front th[scope="row"] .source-cell-list > li {
+  display: block;
 }
