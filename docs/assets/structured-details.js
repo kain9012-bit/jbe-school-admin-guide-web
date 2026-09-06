@@ -2827,6 +2827,17 @@
   //
   // 글자는 하나도 새로 쓰지 않고 원문 칸에서 그대로 가져옵니다. 색은 원문의
   // 주황을 따라하지 않고 누리집 파랑 하나로 칠합니다.
+  // 편 앞머리 '한눈에 보기'의 소제목 띠 — 원문 PDF는 편마다 이 자리에
+  // '한눈에 쏙쏙 ▮ [편 주제]'를 답니다(색만 편마다 다를 뿐 글은 한결같습니다).
+  // 그래서 모든 편이 같은 띠를 씁니다. 편 안쪽의 소구역 띠(흐름도·인사 …)는
+  // 그 아래에 그대로 둡니다.
+  function frontHintBand(subject) {
+    return `<h3 class="front-hint-band">
+      <span class="front-hint-tag">한눈에 쏙쏙</span>
+      <span class="front-hint-name">${escapeHtml(subject)}</span>
+    </h3>`;
+  }
+
   function renderChapter2Front(block) {
     const outer = (block.tables || [])[0];
     if (!outer) return null;
@@ -2953,6 +2964,7 @@
       type: "table",
       html: `
         <div class="ch2-front">
+          ${frontHintBand("민원 및 정보공개")}
           <section class="ch2-sec">
             ${band(flowBand)}
             ${sub1 ? `<h4 class="ch2-sub">${escapeHtml(sub1)}</h4>` : ""}
@@ -2996,6 +3008,7 @@
       type: "table",
       html: `
         <div class="ch3-front">
+          ${frontHintBand("인사관리")}
           <h3 class="ch3-band">
             <span class="ch3-band-tag">${escapeHtml(head[0] || "")}</span>
             <span class="ch3-band-name">${escapeHtml(head[1] || "")}</span>
@@ -3102,10 +3115,7 @@
       type: "table",
       html: `
         <div class="ch4-front">
-          <h3 class="ch4-band">
-            <span class="ch4-band-tag">한눈에 쏙쏙</span>
-            <span class="ch4-band-name">${escapeHtml(title)}</span>
-          </h3>
+          ${frontHintBand("자주 쓰는 휴가")}
           <div class="source-table-scroll ch4-table">
             <table class="source-criteria-table">
               <thead><tr>${headHtml}</tr></thead>
@@ -3212,6 +3222,7 @@
       type: "table",
       html: `
         <div class="ch5-front">
+          ${frontHintBand("감사")}
           <h3 class="ch5-band">
             <span class="ch5-band-tag">${escapeHtml(bandHead[0] || "감사")}</span>
             <span class="ch5-band-name">${escapeHtml(bandHead[1] || "일반 절차")}</span>
@@ -3284,10 +3295,7 @@
       type: "table",
       html: `
         <div class="ch6-front">
-          <h3 class="ch6-band">
-            <span class="ch6-band-tag">한눈에 쏙쏙</span>
-            <span class="ch6-band-name">${escapeHtml(title)}</span>
-          </h3>
+          ${frontHintBand("학교발전기금 업무처리 흐름도")}
           <div class="ch6-stages">${stagesHtml}</div>
         </div>`,
     };
@@ -3325,6 +3333,7 @@
       type: "table",
       html: `
         <div class="ch7-front">
+          ${frontHintBand("공무원 보수")}
           <h3 class="ch7-band">
             <span class="ch7-band-tag">${escapeHtml(head[0] || "")}</span>
             <span class="ch7-band-name">${escapeHtml(head[1] || "")}</span>
@@ -3374,6 +3383,7 @@
       type: "table",
       html: `
         <div class="ch8-front">
+          ${frontHintBand("교육공무직원")}
           <h3 class="ch8-band">
             <span class="ch8-band-tag">${escapeHtml(head[0] || "")}</span>
             <span class="ch8-band-name">${escapeHtml(head[1] || "")}</span>
@@ -3491,10 +3501,7 @@
       type: "table",
       html: `
         <div class="ch9-front">
-          <h3 class="ch9-band">
-            <span class="ch9-band-tag">한눈에 쏙쏙</span>
-            <span class="ch9-band-name">${escapeHtml(CH9_TITLE)}</span>
-          </h3>
+          ${frontHintBand("학교급식")}
           <div class="ch9-flow">${stepsHtml}</div>
         </div>`,
     };
@@ -3579,10 +3586,7 @@
       type: "table",
       html: `
         <div class="ch10-front">
-          <h3 class="ch10-band">
-            <span class="ch10-band-tag">한눈에 쏙쏙</span>
-            <span class="ch10-band-name">${escapeHtml(title)}</span>
-          </h3>
+          ${frontHintBand("학교운영위원회")}
           <div class="ch10-flow">${stepsHtml}</div>
         </div>`,
     };
@@ -3683,6 +3687,7 @@
       type: "table",
       html: `
         <div class="ch11-front">
+          ${frontHintBand("재산관리")}
           <section class="ch11-sec">
             ${bandMarkup(cell0.tables[0])}
             ${monthTable}
@@ -3728,10 +3733,7 @@
       type: "table",
       html: `
         <div class="ch12-front">
-          <h3 class="ch12-band">
-            <span class="ch12-band-tag">${escapeHtml(tag)}</span>
-            <span class="ch12-band-name">${escapeHtml(name)}</span>
-          </h3>
+          ${frontHintBand("물품관리 흐름도")}
           <div class="ch12-figures">${figures}</div>
         </div>`,
     };
@@ -3817,7 +3819,7 @@
       type: "table",
       html: `
         <div class="ch13-front">
-          <h3 class="ch13-band">${escapeHtml(block.title || "학교시설관리 요약")}</h3>
+          ${frontHintBand("학교시설관리 요약")}
           <div class="source-table-scroll ch13-table">
             <table class="source-criteria-table" aria-label="${escapeHtml(
               block.title || "학교시설관리 요약"
@@ -3865,10 +3867,7 @@
       type: "table",
       html: `
         <div class="ch15-front">
-          <h3 class="ch15-band">
-            <span class="ch15-band-tag">${escapeHtml(bandHead[0] || "")}</span>
-            <span class="ch15-band-name">${escapeHtml(bandHead[1] || "")}</span>
-          </h3>
+          ${frontHintBand("세입업무 흐름도")}
           ${sectionMarkup(inners[1])}
           ${sectionMarkup(inners[2])}
         </div>`,
@@ -3950,10 +3949,7 @@
       type: "table",
       html: `
         <div class="ch16-front">
-          <h3 class="ch16-band">
-            <span class="ch16-band-tag">${escapeHtml(bandHead[0] || "POINT")}</span>
-            <span class="ch16-band-name">${escapeHtml(bandHead[1] || "지출의 절차")}</span>
-          </h3>
+          ${frontHintBand("학교회계 지출의 절차")}
           ${intro ? `<div class="ch16-intro">${intro}</div>` : ""}
           <div class="ch16-flow">${flow}</div>
         </div>`,
@@ -4063,7 +4059,7 @@
       type: "flow",
       html: `
         <div class="ch17-front">
-          <h3 class="ch17-band">${escapeHtml(block.title || "계약흐름도")}</h3>
+          ${frontHintBand("계약흐름도")}
           <div class="ch17-top">${topMarkup}</div>
           ${
             decision
@@ -4085,15 +4081,16 @@
   function renderChapter18Front(block) {
     const base = renderSourceTable(block);
     if (!base || base.type === "text" || !base.html) return null;
+    // 표 첫 칸 머리는 원문 PDF가 '구분'입니다(한글파일은 '추진기관').
+    // 화면은 PDF를 따릅니다.
+    const table = base.html.replace(/>추진기관<\/th>/, ">구분</th>");
     return {
       summary: "한눈에 보기",
       type: base.type,
       html: `
         <div class="ch18-front">
-          <h3 class="ch18-band">${escapeHtml(
-            block.title || "신설학교 설립 및 개교 준비 개요"
-          )}</h3>
-          ${base.html}
+          ${frontHintBand("신설학교 설립 및 개교")}
+          ${table}
         </div>`,
     };
   }

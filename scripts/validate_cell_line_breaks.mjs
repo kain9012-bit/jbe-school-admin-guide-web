@@ -152,6 +152,11 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
       const found = await page.evaluate(() =>
         [...document.querySelectorAll("#step-actions td, #step-actions th")].map((cell) => {
           const items = [...cell.querySelectorAll(":scope > ul > li")];
+          // 어떤 편(제13편)은 칸의 줄을 목록이 아니라 블록 <div>로 그립니다.
+          // 그 div도 저마다 한 줄이므로 함께 셉니다(표를 담은 div는 뺍니다).
+          const divLines = [...cell.querySelectorAll(":scope > div")].filter(
+            (node) => !node.querySelector("table") && node.getBoundingClientRect().height > 0
+          );
           // 기호를 세울지는 목록 하나하나마다 정합니다. 한 칸에 목록이 둘
           // 들어가기도 하므로(표 앞뒤에 붙은 글) 여기서도 목록 단위로 봅니다.
           const lists = [...cell.querySelectorAll(":scope > ul")].map((list) => {
@@ -181,8 +186,13 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
           );
           return {
             text: cell.textContent,
-            // 칸 안의 줄은 목록 항목 하나하나로 그려집니다.
-            lines: items.length || 1,
+            // 이름 칸(th)인지 봅니다. 이름 칸은 한 이름이 길어 여러 줄로
+            // 접힐 뿐, 여러 항목을 담은 자리가 아니라 글머리가 필요 없습니다
+            // (제15편 '교특회계 세입징수 보고서 제출'). 줄 수는 그대로 세되
+            // '항목 구분 기호' 검사에서만 뺍니다.
+            isLabel: cell.tagName === "TH",
+            // 칸 안의 줄은 목록 항목(또는 블록 div) 하나하나로 그려집니다.
+            lines: items.length + divLines.length || 1,
             wrapped: Boolean(sinner),
             bald: sinner ? sinner.bald : 0,
             among: sinner ? sinner.count : 0,
@@ -194,7 +204,7 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
         drawn.set(key, Math.max(drawn.get(key) || 0, cell.lines));
         // 여러 줄로 넘어가는 항목이 있는데 기호가 없는 항목이 있으면
         // 어디서 한 항목이 끝나는지 알 수 없습니다.
-        if (cell.wrapped && cell.bald) {
+        if (cell.wrapped && cell.bald && !cell.isLabel) {
           const said = `제${chapterId}편 ${work.title}`;
           if (!bald.has(said + key)) {
             bald.add(said + key);

@@ -292,6 +292,12 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
     // PDF를 기준으로 그립니다. 한글파일에는 'Ⅲ. 매월 품의'와 열 줄짜리
     // 심의내용이 더 들어 있지만 PDF에는 없어, 화면에도 없습니다. 그래서
     // 한글파일 칸과 견주면 당연히 '사라졌다'가 됩니다 — 이 편만 건너뜁니다.
+    // 앞머리 소제목·머리글은 원문 PDF를 따릅니다. 한글파일이 PDF와 갈리는
+    // 자리(한글파일에만 있는 글자)는 화면에 없으니 견주기에서 뺍니다.
+    //   제16편: 한글파일 띠 'POINT' → 화면은 PDF대로 '한눈에 쏙쏙'.
+    //   제18편: 한글파일 머리 '추진기관' → 화면은 PDF대로 '구분'.
+    const PDF_ONLY_DROPPED = { "16": ["POINT"], "18": ["추진기관"] };
+    const dropped = new Set((PDF_ONLY_DROPPED[chapterId] || []).map(bare));
     const missing = [];
     const pdfBased = chapterId === "09";
     for (const block of pdfBased ? [] : front.contentBlocks || []) {
@@ -299,6 +305,7 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
         for (const text of cellTexts(table)) {
           const want = bare(text);
           if (want.length < 2) continue;
+          if (dropped.has(want)) continue;
           if (!now.shown.includes(want)) missing.push(text);
         }
       }
