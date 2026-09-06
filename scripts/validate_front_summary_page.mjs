@@ -295,8 +295,12 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
     // 앞머리 소제목·머리글은 원문 PDF를 따릅니다. 한글파일이 PDF와 갈리는
     // 자리(한글파일에만 있는 글자)는 화면에 없으니 견주기에서 뺍니다.
     //   제16편: 한글파일 띠 'POINT' → 화면은 PDF대로 '한눈에 쏙쏙'.
-    //   제18편: 한글파일 머리 '추진기관' → 화면은 PDF대로 '구분'.
-    const PDF_ONLY_DROPPED = { "16": ["POINT"], "18": ["추진기관"] };
+    //   제18·19편: 한글파일 머리 '추진기관' → 화면은 PDF대로 '구분'.
+    const PDF_ONLY_DROPPED = {
+      "16": ["POINT"],
+      "18": ["추진기관"],
+      "19": ["추진기관"],
+    };
     const dropped = new Set((PDF_ONLY_DROPPED[chapterId] || []).map(bare));
     const missing = [];
     const pdfBased = chapterId === "09";

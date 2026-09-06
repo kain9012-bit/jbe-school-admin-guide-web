@@ -4074,6 +4074,23 @@
     };
   }
 
+  // 제14편 학교회계 예·결산 — 앞머리 표(구분·흐름도·주요 내용·주의 사항).
+  // 표는 이미 원문대로 잘 그려집니다. 소제목만 밴드로 올립니다(표 머리는
+  // 원문 PDF도 '구분'이라 그대로 둡니다).
+  function renderChapter14Front(block) {
+    const base = renderSourceTable(block);
+    if (!base || base.type === "text" || !base.html) return null;
+    return {
+      summary: "한눈에 보기",
+      type: base.type,
+      html: `
+        <div class="ch14-front">
+          ${frontHintBand("학교회계 예·결산")}
+          ${base.html}
+        </div>`,
+    };
+  }
+
   // 제18편 신설학교 설립 및 개교 — 앞머리 '신설학교 설립 및 개교 준비 개요'.
   // 표(추진기관·분야·주요내용)는 이미 원문대로 잘 그려집니다. 소제목만 다른
   // 편처럼 밴드로 올려 '원문 PDF' 단추와 한 줄에 세우고 큰 제목 위 빈 자리를
@@ -4090,6 +4107,24 @@
       html: `
         <div class="ch18-front">
           ${frontHintBand("신설학교 설립 및 개교")}
+          ${table}
+        </div>`,
+    };
+  }
+
+  // 제19편 학교 폐지 및 통폐합 — 앞머리 '학교 폐지 및 통폐합 개요'.
+  // 제18편과 같은 짜임(추진기관·분야·주요내용 표)입니다. 표는 그대로 두고
+  // 소제목만 밴드로 올리며, 표 첫 칸 머리는 원문 PDF대로 '구분'으로 바꿉니다.
+  function renderChapter19Front(block) {
+    const base = renderSourceTable(block);
+    if (!base || base.type === "text" || !base.html) return null;
+    const table = base.html.replace(/>추진기관<\/th>/, ">구분</th>");
+    return {
+      summary: "한눈에 보기",
+      type: base.type,
+      html: `
+        <div class="ch19-front">
+          ${frontHintBand("학교 폐지 및 통폐합 개요")}
           ${table}
         </div>`,
     };
@@ -4156,6 +4191,10 @@
       const ch13 = renderChapter13Front(block);
       if (ch13) return ch13;
     }
+    if (String(block.id || "") === "c14-w00-b1") {
+      const ch14 = renderChapter14Front(block);
+      if (ch14) return ch14;
+    }
     if (String(block.id || "") === "c15-w00-b1") {
       const ch15 = renderChapter15Front(block);
       if (ch15) return ch15;
@@ -4171,6 +4210,10 @@
     if (String(block.id || "") === "c18-w00-b1") {
       const ch18 = renderChapter18Front(block);
       if (ch18) return ch18;
+    }
+    if (String(block.id || "") === "c19-w00-b1") {
+      const ch19 = renderChapter19Front(block);
+      if (ch19) return ch19;
     }
 
     const sourceTable = renderSourceTable(block);

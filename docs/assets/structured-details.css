@@ -3125,11 +3125,16 @@
   letter-spacing: -0.01em;
 }
 
-/* 왼쪽 추진기관 칸 이름이 두 줄로 접힐 때 붙는 '·'는 지웁니다. */
-.ch18-front th[scope="row"] .source-cell-mark {
+/* 왼쪽 이름 칸(구분·추진기관 등)이 두 줄로 접힐 때 붙는 '·'는 지웁니다.
+   제14·18·19편이 같은 짜임의 표를 씁니다. */
+.ch14-front th[scope="row"] .source-cell-mark,
+.ch18-front th[scope="row"] .source-cell-mark,
+.ch19-front th[scope="row"] .source-cell-mark {
   display: none !important;
 }
 
-.ch18-front th[scope="row"] .source-cell-list > li {
+.ch14-front th[scope="row"] .source-cell-list > li,
+.ch18-front th[scope="row"] .source-cell-list > li,
+.ch19-front th[scope="row"] .source-cell-list > li {
   display: block;
 }
