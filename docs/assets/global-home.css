@@ -7,7 +7,8 @@
 }
 
 .global-chapter-section {
-  scroll-margin-top: 2rem;
+  /* 상단 고정 머리글(약 81px)에 제목이 가리지 않게 그만큼 위를 비웁니다. */
+  scroll-margin-top: 9rem;
 }
 
 .global-chapter-grid {

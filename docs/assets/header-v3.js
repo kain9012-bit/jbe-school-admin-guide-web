@@ -376,5 +376,33 @@
   document.addEventListener("guide:app-ready", patchGeneratedContext);
   window.addEventListener("hashchange", () => setTimeout(patchGeneratedContext, 0));
 
+  // '맨 위로' 단추 — 한 화면 넘게 내리면 오른쪽 아래에 나타나고, 누르면
+  // 처음으로 부드럽게 올려 줍니다. 홈·업무 화면 어디서나 씁니다.
+  function setupToTop() {
+    const button = document.getElementById("to-top");
+    if (!button) return;
+    button.hidden = false; // 전환이 먹도록 자리는 두고 opacity로만 숨깁니다.
+    const SHOW_AT = 400;
+    let ticking = false;
+    const update = () => {
+      ticking = false;
+      button.classList.toggle("is-visible", window.scrollY > SHOW_AT);
+    };
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(update);
+      },
+      { passive: true }
+    );
+    button.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    update();
+  }
+  setupToTop();
+
   renderChapterGrid();
 })();

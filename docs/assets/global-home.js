@@ -139,6 +139,33 @@
     );
   }
 
+  // 상단 '업무 분야'를 누르면 분야 목록으로 내려갑니다. 그런데 그냥 #chapters로
+  // 뛰면 상단 고정 머리글(약 81px)이 '찾는 업무 분야를 선택하세요' 제목을 덮어
+  // 제1편 카드부터 보였습니다. 머리글 높이만큼 위를 비워, 제목부터 보이게
+  // 부드럽게 내려갑니다.
+  function scrollToChapters() {
+    const section = byId("chapters");
+    if (!section) return;
+    const header = document.querySelector("#krds-header");
+    const gap =
+      (header && getComputedStyle(header).position === "sticky"
+        ? header.getBoundingClientRect().height
+        : 0) + 16;
+    const y = section.getBoundingClientRect().top + window.scrollY - gap;
+    window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+  }
+
+  function bindChapterJump(link) {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      // 주소는 남겨 두되(뒤로가기·새로고침용) 스크롤은 우리가 맞춥니다.
+      if (location.hash !== "#chapters") {
+        history.replaceState(null, "", "#chapters");
+      }
+      scrollToChapters();
+    });
+  }
+
   function seatBelowRow(panel) {
     const item = cardOf(panel);
     const grid = document.querySelector(".global-chapter-grid");
@@ -348,6 +375,7 @@
     if (desktopChapterLink) {
       desktopChapterLink.href = "#chapters";
       desktopChapterLink.textContent = "업무 분야";
+      bindChapterJump(desktopChapterLink);
     }
     const mobileChapterLink = document.querySelector(
       '.mobile-global-nav a.global-nav-item[href="#overview"]'
@@ -356,6 +384,7 @@
       mobileChapterLink.href = "#chapters";
       const label = mobileChapterLink.querySelector("span");
       if (label) label.textContent = "업무 분야";
+      bindChapterJump(mobileChapterLink);
     }
     document.querySelector(".guide-footer strong").textContent =
       "학교행정업무 길라잡이 웹판";
@@ -575,7 +604,10 @@
     if (button) openSearch(button.dataset.globalQuery);
   });
 
-  if (location.hash === "#chapters" || location.hash === "#downloads") {
-    requestAnimationFrame(() => document.querySelector(location.hash)?.scrollIntoView());
+  if (location.hash === "#chapters") {
+    // 제목이 고정 머리글에 가리지 않게 머리글 높이만큼 위를 비웁니다.
+    requestAnimationFrame(scrollToChapters);
+  } else if (location.hash === "#downloads") {
+    requestAnimationFrame(() => document.querySelector("#downloads")?.scrollIntoView());
   }
 })();
