@@ -3737,6 +3737,103 @@
     };
   }
 
+  // 제13편 학교시설관리 — 앞머리 '학교시설관리 요약'.
+  // 분야별로 점검 주기·점검 자격·안전관리자 선임(대상·자격 및 선임기한)을
+  // 견주는 큰 표 하나입니다. 원문 표의 병합·열 너비를 그대로 두고, 색만
+  // 누리집 파랑으로 입힙니다(머리줄 파랑·왼쪽 분야 칸 옅은 파랑).
+  // 칸 안의 ◦·‣는 원문처럼 세우고, 괄호로 이어지는 줄은 글머리 없이
+  // 그 아래에 붙입니다.
+  function ch13Cell(text) {
+    const lines = cellLines(text);
+    if (!lines.length) return "";
+    return lines
+      .map((raw) => {
+        const t = String(raw).trim();
+        if (!t) return "";
+        if (/^◦/.test(t))
+          return `<div class="ch13-b0"><span class="ch13-mk" aria-hidden="true">◦</span><span>${escapeHtml(
+            t.replace(/^◦\s*/, "")
+          )}</span></div>`;
+        if (/^‣/.test(t))
+          return `<div class="ch13-b1"><span class="ch13-mk" aria-hidden="true">‣</span><span>${escapeHtml(
+            t.replace(/^‣\s*/, "")
+          )}</span></div>`;
+        // 괄호로 이어지는 줄 — 글머리 없이 윗줄 글에 붙여 씁니다.
+        return `<div class="ch13-cont">${escapeHtml(t)}</div>`;
+      })
+      .join("");
+  }
+
+  function renderChapter13Front(block) {
+    const outer = (block.tables || [])[0];
+    if (!outer) return null;
+    const headers = outer.headers || [];
+    const rows = outer.rows || [];
+    if (headers.length < 4 || !rows.length) return null;
+    const say = (c) => String((c && c.text) || "").trim();
+    const span = (c) =>
+      `${(c.colSpan || 1) > 1 ? ` colspan="${c.colSpan}"` : ""}${
+        (c.rowSpan || 1) > 1 ? ` rowspan="${c.rowSpan}"` : ""
+      }`;
+
+    // 머리줄은 두 줄입니다. 첫 줄(분야·점검주기·점검자격·안전관리자 선임)에서
+    // 앞 세 칸은 아래로 걸치고, '안전관리자 선임'은 두 칸을 덮습니다.
+    // 둘째 줄은 그 아래 대상·자격 및 선임기한.
+    const headTop = headers
+      .map((c) => `<th scope="col"${span(c)}>${escapeHtml(say(c))}</th>`)
+      .join("");
+    const headSub = rows[0]
+      .map((c) => `<th scope="col"${span(c)}>${escapeHtml(say(c))}</th>`)
+      .join("");
+
+    // 본문(둘째 머리줄을 뺀 나머지). 왼쪽 분야 칸은 이름칸(옅은 파랑),
+    // 나머지 칸은 ◦·‣를 세운 내용칸.
+    const bodyRows = rows
+      .slice(1)
+      .map((row) => {
+        const cells = row
+          .map((c) => {
+            if ((c.column ?? 1) === 0) {
+              return `<th scope="row" class="ch13-field"${span(c)}>${escapeHtml(
+                say(c)
+              )}</th>`;
+            }
+            return `<td${span(c)}>${ch13Cell(c.text)}</td>`;
+          })
+          .join("");
+        return `<tr>${cells}</tr>`;
+      })
+      .join("");
+
+    const widths = Array.isArray(outer.widths) ? outer.widths : [];
+    const colgroup = widths.length
+      ? `<colgroup>${widths
+          .map((w) => `<col style="width: ${Number(w).toFixed(2)}%" />`)
+          .join("")}</colgroup>`
+      : "";
+
+    return {
+      summary: "한눈에 보기",
+      type: "table",
+      html: `
+        <div class="ch13-front">
+          <h3 class="ch13-band">${escapeHtml(block.title || "학교시설관리 요약")}</h3>
+          <div class="source-table-scroll ch13-table">
+            <table class="source-criteria-table" aria-label="${escapeHtml(
+              block.title || "학교시설관리 요약"
+            )}">
+              ${colgroup}
+              <thead>
+                <tr>${headTop}</tr>
+                <tr>${headSub}</tr>
+              </thead>
+              <tbody>${bodyRows}</tbody>
+            </table>
+          </div>
+        </div>`,
+    };
+  }
+
   function render(block) {
     const body = String(block?.body || "");
     if (!body) return { summary: "전체 내용 보기", html: "", type: "text" };
@@ -3793,6 +3890,10 @@
     if (String(block.id || "") === "c12-w00-b1") {
       const ch12 = renderChapter12Front(block);
       if (ch12) return ch12;
+    }
+    if (String(block.id || "") === "c13-w00-b1") {
+      const ch13 = renderChapter13Front(block);
+      if (ch13) return ch13;
     }
 
     const sourceTable = renderSourceTable(block);

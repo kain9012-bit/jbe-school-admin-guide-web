@@ -1153,7 +1153,8 @@
 .is-front-summary #step-actions .ch9-band,
 .is-front-summary #step-actions .ch10-band,
 .is-front-summary #step-actions .ch11-band,
-.is-front-summary #step-actions .ch12-band {
+.is-front-summary #step-actions .ch12-band,
+.is-front-summary #step-actions .ch13-band {
   padding-right: 10rem;
 }
 
@@ -1174,7 +1175,8 @@
   .is-front-summary #step-actions .ch9-band,
   .is-front-summary #step-actions .ch10-band,
   .is-front-summary #step-actions .ch11-band,
-  .is-front-summary #step-actions .ch12-band {
+  .is-front-summary #step-actions .ch12-band,
+  .is-front-summary #step-actions .ch13-band {
     padding-right: 0;
   }
 }
@@ -2757,4 +2759,69 @@
 .ch12-figure .source-picture {
   max-width: 100%;
   height: auto;
+}
+
+/* ── 제13편 학교시설관리 ────────────────────────────────────
+   분야별 점검 주기·자격·안전관리자 선임을 견주는 큰 표 하나.
+   원문 표 그대로, 색만 누리집 파랑으로. */
+.ch13-band {
+  margin: 0 0 1.8rem;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--guide-ink);
+  letter-spacing: -0.01em;
+}
+
+/* 머리줄(두 줄 모두) 파랑 */
+.ch13-table thead th {
+  background: var(--guide-blue);
+  color: #fff;
+  border-color: var(--guide-blue);
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* 왼쪽 분야 칸(전기·기계·소방…) 옅은 파랑 */
+.ch13-field {
+  background: var(--guide-blue-pale);
+  color: var(--guide-blue-dark);
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.ch13-table .source-criteria-table td {
+  vertical-align: top;
+}
+
+/* 칸 안 ◦·‣ 글머리 — 원문처럼 세웁니다. */
+.ch13-b0,
+.ch13-b1,
+.ch13-cont {
+  display: flex;
+  gap: 0.4rem;
+  line-height: 1.55;
+}
+
+.ch13-b0 + .ch13-b0,
+.ch13-b1 + .ch13-b0,
+.ch13-cont + .ch13-b0 {
+  margin-top: 0.2rem;
+}
+
+.ch13-b1 {
+  padding-left: 1.4rem;
+}
+
+.ch13-mk {
+  flex: none;
+  color: var(--guide-blue);
+  font-weight: 700;
+}
+
+/* 괄호로 이어지는 줄 — 글머리 자리만큼 들여써 윗줄 글에 맞춥니다. */
+.ch13-cont {
+  padding-left: 1.4rem;
+  color: var(--guide-muted);
 }
