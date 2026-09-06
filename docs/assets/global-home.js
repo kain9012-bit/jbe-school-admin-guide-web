@@ -263,7 +263,6 @@
 
   function renderGlobalHome() {
     clearBootNote();
-    const available = config.chapters.filter((chapter) => chapter.available);
     document.body.classList.add("global-home-mode");
     workView.hidden = true;
     overviewView.hidden = false;
@@ -330,10 +329,6 @@
               <p class="section-kicker">업무 분야</p>
               <h2 id="chapter-overview-title">찾는 업무 분야를 선택하세요</h2>
             </div>
-            <p>
-              현재 ${available.length}개 분야를 웹에서 볼 수 있으며,
-              나머지도 같은 구조로 순차 공개됩니다.
-            </p>
           </div>
           <div class="global-chapter-grid">
             ${config.chapters.map(chapterCard).join("")}
