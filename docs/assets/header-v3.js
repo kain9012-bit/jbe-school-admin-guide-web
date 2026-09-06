@@ -181,6 +181,28 @@
     if (seat && !seat.children.length) seat.remove();
   }
 
+  // 펼친 업무 목록을 화면 안으로 끌어옵니다. 펼침 전환(240ms)이 끝난 뒤
+  // 한 번만 재도록, 전환 끝 신호를 기다리되 안 오면 시간으로 넘어갑니다.
+  // 그새 목록이 닫혔으면(다른 분야를 누름 등) 아무 일도 하지 않습니다.
+  function scrollPanelIntoView(panel) {
+    let done = false;
+    const reveal = () => {
+      if (done) return;
+      done = true;
+      panel.removeEventListener("transitionend", onEnd);
+      if (panel.hidden || !panel.classList.contains("is-open")) return;
+      panel.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    };
+    const onEnd = (event) => {
+      if (event.target === panel && event.propertyName === "grid-template-rows") {
+        reveal();
+      }
+    };
+    panel.addEventListener("transitionend", onEnd);
+    // 전환이 안 걸리는 환경(모션 최소화 등)이나 신호 누락 대비 안전망.
+    setTimeout(reveal, 300);
+  }
+
   // 분야를 누르면 그 줄 아래에서 업무 목록이 펼쳐집니다.
   function bindChapterToggles() {
     const buttons = chapterGrid.querySelectorAll("[data-dialog-chapter]");
@@ -206,6 +228,13 @@
           seatBelowRow(panel);
           panel.hidden = false;
           requestAnimationFrame(() => panel.classList.add("is-open"));
+          // 펼친 업무 목록이 화면 밖(특히 맨 아랫줄)이면 보이게 끌어옵니다.
+          // block:"nearest"라 이미 다 보이는 줄은 움직이지 않아 화면이 튀지
+          // 않고, 누른 카드는 그대로 둔 채 그 아래 목록만 드러냅니다.
+          // 펼침은 grid-template-rows 0fr→1fr 240ms 전환이라, 목록이 다
+          // 자란 뒤에 재야 끝까지 보입니다. 전환이 끝나면(또는 그만한 시간이
+          // 지나면) 한 번만 스크롤합니다. 그새 닫혔으면 아무 일도 안 합니다.
+          scrollPanelIntoView(panel);
         } else {
           panel.classList.remove("is-open");
           panel.hidden = true;
