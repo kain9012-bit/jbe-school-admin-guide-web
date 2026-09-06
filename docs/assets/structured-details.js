@@ -3588,6 +3588,114 @@
     };
   }
 
+  // ── 제11편 '한눈에 보기' 전용 그림 ───────────────────────────────
+  //
+  // 제11편 지면은 두 부분입니다.
+  //   ① [흐름도] 공유재산 업무 절차 — 월 | 업무 | 비고 (월별 일정표)
+  //   ② [개념] 공유재산심의회와 공유재산관리계획 이해 — 견주는 표 + 각주
+  // 한글파일과 원문 PDF의 짜임새가 같아 한글파일에서 그대로 뽑아 씁니다.
+  // 머리줄은 파랑, 왼쪽 이름 칸은 옅은 파랑입니다.
+  // 이 함수와 .ch11-* 서식은 제11편에만 씁니다.
+  function renderChapter11Front(block) {
+    const outer = (block.tables || [])[0];
+    if (!outer) return null;
+    const cells = [...(outer.headers || []), ...(outer.rows || []).flat()];
+    const cell0 = cells[0];
+    const cell1 = cells[1];
+    if (
+      !cell0 ||
+      !cell1 ||
+      (cell0.tables || []).length < 2 ||
+      (cell1.tables || []).length < 2
+    ) {
+      return null;
+    }
+    const say = (c) => String((c && c.text) || "").trim();
+    const bandMarkup = (bandTable) => {
+      const h = (bandTable.headers || []).map(say);
+      return `<h3 class="ch11-band">
+        <span class="ch11-band-tag">${escapeHtml(h[0] || "")}</span>
+        <span class="ch11-band-name">${escapeHtml(h[1] || "")}</span>
+      </h3>`;
+    };
+
+    // ① 월별 흐름 표 — 원문의 빈 가는 열을 걷고 월·업무·비고 세 열로.
+    const monthGrid = sheetGrid(cell0.tables[1]);
+    const mLast = monthGrid.columns - 1;
+    const headMonth = say(monthGrid.cover[0][0]);
+    const headWork = say(monthGrid.cover[0][mLast - 1]);
+    const headNote = say(monthGrid.cover[0][mLast]);
+    const monthRows = [];
+    for (let r = 1; r < monthGrid.rows.length; r += 1) {
+      const m = monthGrid.cover[r][0];
+      if (!m || !say(m)) continue;
+      const workCell = monthGrid.cover[r][mLast - 1];
+      const noteCell = monthGrid.cover[r][mLast];
+      monthRows.push(
+        `<tr>
+          <th scope="row" class="ch11-when">${escapeHtml(say(m))}</th>
+          <td>${workCell ? cellMarkup(cellLines(workCell.text)) : ""}</td>
+          <td class="ch11-note-cell">${
+            noteCell
+              ? cellLines(noteCell.text).map((l) => escapeHtml(l.trim())).join("<br>")
+              : ""
+          }</td>
+        </tr>`
+      );
+    }
+    const monthTable = `
+      <div class="source-table-scroll ch11-table ch11-month">
+        <table class="source-criteria-table">
+          <colgroup><col class="ch11-col-when" /><col /><col class="ch11-col-note" /></colgroup>
+          <thead><tr>
+            <th scope="col">${escapeHtml(headMonth)}</th>
+            <th scope="col">${escapeHtml(headWork)}</th>
+            <th scope="col">${escapeHtml(headNote)}</th>
+          </tr></thead>
+          <tbody>${monthRows.join("")}</tbody>
+        </table>
+      </div>`;
+
+    // ② 견주는 표(심의회 vs 관리계획) — 원문 표 그대로, 파란 머리줄.
+    const cmpTable = cell1.tables[1];
+    const cmpMarkup = spannedTableMarkup(
+      "",
+      headerCellsOf(cmpTable),
+      cmpTable.rows || [],
+      cmpTable.widths,
+      0,
+      false
+    );
+    // 표 밖 각주(▪ …)는 표 아래에 답니다.
+    const owned = new Set();
+    (cell1.tables || []).forEach((t) => {
+      const start = t.lineStart ?? 0;
+      for (let k = 0; k < (t.lineCount ?? 0); k += 1) owned.add(start + k);
+    });
+    const foots = cellLines(cell1.text)
+      .map((l, i) => [i, l.trim()])
+      .filter(([i, l]) => !owned.has(i) && /^[▪·]/.test(l))
+      .map(([, l]) => `<p class="ch11-foot">${escapeHtml(l)}</p>`)
+      .join("");
+
+    return {
+      summary: "한눈에 보기",
+      type: "table",
+      html: `
+        <div class="ch11-front">
+          <section class="ch11-sec">
+            ${bandMarkup(cell0.tables[0])}
+            ${monthTable}
+          </section>
+          <section class="ch11-sec">
+            ${bandMarkup(cell1.tables[0])}
+            <div class="source-table-scroll ch11-table ch11-compare">${cmpMarkup}</div>
+            ${foots}
+          </section>
+        </div>`,
+    };
+  }
+
   function render(block) {
     const body = String(block?.body || "");
     if (!body) return { summary: "전체 내용 보기", html: "", type: "text" };
@@ -3636,6 +3744,10 @@
     if (String(block.id || "") === "c10-w00-b1") {
       const ch10 = renderChapter10Front(block);
       if (ch10) return ch10;
+    }
+    if (String(block.id || "") === "c11-w00-b1") {
+      const ch11 = renderChapter11Front(block);
+      if (ch11) return ch11;
     }
 
     const sourceTable = renderSourceTable(block);

@@ -1151,7 +1151,8 @@
 .is-front-summary #step-actions .ch7-band,
 .is-front-summary #step-actions .ch8-band,
 .is-front-summary #step-actions .ch9-band,
-.is-front-summary #step-actions .ch10-band {
+.is-front-summary #step-actions .ch10-band,
+.is-front-summary #step-actions .ch11-band {
   padding-right: 10rem;
 }
 
@@ -1170,7 +1171,8 @@
   .is-front-summary #step-actions .ch7-band,
   .is-front-summary #step-actions .ch8-band,
   .is-front-summary #step-actions .ch9-band,
-  .is-front-summary #step-actions .ch10-band {
+  .is-front-summary #step-actions .ch10-band,
+  .is-front-summary #step-actions .ch11-band {
     padding-right: 0;
   }
 }
@@ -2613,4 +2615,105 @@
     grid-template-columns: minmax(0, 1fr);
     gap: 0.4rem;
   }
+}
+
+/* ── 제11편 '한눈에 보기' 전용 그림 ────────────────────────────────
+   두 부분: ① 월별 흐름 표(월·업무·비고) ② 심의회/관리계획 견주는 표 + 각주.
+   .ch11-* 는 제11편 밖으로 나가지 않습니다. */
+.ch11-front {
+  display: grid;
+  gap: 3.2rem;
+}
+
+.ch11-sec {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.ch11-band {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--guide-ink);
+  letter-spacing: -0.01em;
+}
+
+.ch11-band-tag {
+  flex: none;
+  padding: 0.55rem 1.6rem;
+  background: var(--guide-blue);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 1.55rem;
+}
+
+/* 머리줄 파랑 (두 표 공통) */
+.ch11-table .source-criteria-table thead th,
+.ch11-table .source-criteria-table th[scope="col"] {
+  background: var(--guide-blue);
+  color: #fff;
+  border-color: var(--guide-blue);
+  text-align: center;
+}
+
+/* 왼쪽 이름 칸(월·구분·심의기관 등) — 옅은 파랑 */
+.ch11-when,
+.ch11-table .source-criteria-table th[scope="row"] {
+  background: var(--guide-blue-pale);
+  color: var(--guide-blue-dark);
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ① 월별 흐름 표 — 월 좁게, 비고 좁게 */
+.ch11-month .source-criteria-table {
+  table-layout: fixed;
+}
+
+.ch11-col-when {
+  width: 12%;
+}
+
+.ch11-col-note {
+  width: 15%;
+}
+
+.ch11-note-cell {
+  color: var(--guide-muted);
+  text-align: center;
+}
+
+/* 업무·비고 칸의 여러 항목은 원문처럼 글머리를 세웁니다. */
+.ch11-table .source-cell-list > li {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3rem) minmax(0, 1fr);
+  gap: 0.5rem;
+  align-items: start;
+}
+
+.ch11-table .source-cell-mark {
+  display: block;
+  color: var(--guide-blue);
+  font-weight: 700;
+}
+
+.ch11-note-cell .source-cell-mark {
+  display: none;
+}
+
+/* ② 견주는 표 — 가운데 정렬 머리, 왼쪽 구분 칸 강조 */
+.ch11-compare .source-criteria-table {
+  text-align: center;
+}
+
+/* 각주(▪ …) */
+.ch11-foot {
+  margin: 0;
+  color: var(--guide-muted);
+  font-size: 1.4rem;
+  line-height: 1.7;
 }
