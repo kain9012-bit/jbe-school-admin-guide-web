@@ -3399,65 +3399,93 @@
 
   // ── 제9편 '한눈에 보기' 전용 그림 ────────────────────────────────
   //
-  // 제9편 지면은 '한 장으로 보는 학교급식 업무 흐름'입니다. 세로 흐름을 종이
-  // 한 장에 담으려고 두 단으로 접어 두었습니다.
-  //   왼쪽 : Ⅰ. 운영계획 수립 → Ⅱ. 학교운영위원회 심의 → Ⅲ. 매월 품의
-  //   오른쪽: Ⅳ. 급식비 징수/반환 → Ⅴ. 급식비 집행 → Ⅵ. 납품 및 검수 → Ⅶ. 대금 지급
-  // 단마다 로마숫자 이름 상자와 그 아래 내용이 있고, 단과 단 사이에 아래
-  // 화살표가 섭니다. 원문 표에 섞인 빈 열·빈 줄은 걷어내고 두 단으로 세웁니다.
-  // 글자는 원문 칸에서 가져오고 색은 누리집 파랑 하나입니다.
-  // 이 함수와 .ch9-* 서식은 제9편에만 씁니다.
-  function renderChapter9Front(block) {
-    const outer = (block.tables || [])[0];
-    if (!outer) return null;
-    const cell = (outer.headers || [])[0];
-    if (!cell || !(cell.tables || []).length) return null;
-    const view = sheetView(cell.tables[0]);
-    if (!view || view.columns < 2) return null;
-    const say = (c) => String((c && c.text) || "").trim();
-    const isName = (text) => /^[ⅠⅡⅢⅣⅤⅥⅦⅧⅨⅩ]/.test(text);
+  // 제9편은 사용자 결정에 따라 '원문 PDF'를 기준으로 그립니다(다른 편과 달리
+  // 한글파일이 아니라 PDF를 따릅니다). 한글파일(source/manual-hwpx)에는 이
+  // 지면이 두 단으로 접혀 있고 'Ⅲ. 매월 품의'가 더 있으며 심의내용이 열 줄로
+  // 길지만, 배포된 PDF는 세로 한 단·여섯 단계에 심의내용을 '…등'으로 줄여
+  // 두었습니다. PDF 쪽을 화면에 그대로 옮깁니다.
+  //
+  //   그래서 이 편의 글자는 아래에 손으로 박아 둔 PDF 문구입니다(한글파일에서
+  //   자동으로 뽑지 않습니다). 검색은 여전히 한글파일 전체 글자로 됩니다.
+  //   한글파일이 바뀌어도 이 화면은 따라 바뀌지 않으니, 원문 PDF가 갱신되면
+  //   아래 STEPS도 함께 손봐야 합니다.
+  const CH9_TITLE = "한 장으로 보는 학교급식 업무 흐름";
+  const CH9_STEPS = [
+    {
+      name: "Ⅰ. 운영계획 수립 [사업부서]",
+      body: [
+        "1. 연간 학교급식 운영계획 수립 (매년 학년초)",
+        "▸ 급식운영 예산 수립(연간 급식비 수납 및 집행 예정액 산출)",
+        "▸ 급식소위원회 구성",
+      ],
+    },
+    {
+      name: "Ⅱ. 학교운영위원회 심의 [사업부서]",
+      body: [
+        "1. 심의시기 (매 학년도 시작 전까지)",
+        "2. 심의내용",
+        "▸ 학교급식 운영계획 및 예산·결산에 관한 사항 등",
+      ],
+    },
+    {
+      name: "Ⅲ. 급식비 징수 / 반환",
+      body: [
+        "1. 징수대상",
+        "▸ 목적사업비로 지원되지 않는 급식비",
+        "- 교직원, 기숙사 학생 등",
+        "※ 식품구매 전에 징수 대상 인원에 대하여 사전 징수결정",
+        "2. 반환",
+        "▸ 수익자부담금 경비 급식비로 실제 급식 일수만큼 징수 또는 반환",
+      ],
+    },
+    {
+      name: "Ⅳ. 급식비 집행",
+      body: [
+        "1. 식품비 집행",
+        "▸ 급식계약 방법: 학교급식 전자조달시스템 시행(NeaT 시스템)",
+        "▸ 급식계약 종류",
+        "- 전자입찰(2인이상견적)",
+        "- 전자견적거래(1인견적)",
+        "- 기타(공동구매)",
+        "2. 운영비 집행",
+        "▸ 공공요금, 소모품 구매 및 수리비 등",
+        "▸ 자산취득비 및 시설비는 별도 예산 편성",
+        "3. 집행액 점검",
+        "▸ 매월 수납액, 지출액 급식비 집행액 수시 점검",
+        "▸ 수익자부담경비 공개",
+      ],
+    },
+    { name: "Ⅴ. 납품 및 검수 [사업부서]", body: [] },
+    {
+      name: "Ⅵ. 대금 지급",
+      body: ["▸ 식품비 변경 있을 시 정산 및 변경계약서 작성 후 대금 지급"],
+    },
+  ];
 
-    const columns = [];
-    for (let c = 0; c < view.columns; c += 1) {
-      const steps = [];
-      let current = null;
-      for (let r = 0; r < view.rows; r += 1) {
-        if (!view.fresh(r, c)) continue;
-        const one = view.at(r, c);
-        if (!say(one)) continue;
-        if (isName(say(one))) {
-          current = { name: one, body: [] };
-          steps.push(current);
-        } else if (current) {
-          current.body.push(one);
-        }
-      }
-      if (steps.length) columns.push(steps);
-    }
-    if (!columns.length) return null;
+  function ch9Line(line) {
+    const t = String(line).trim();
+    if (/^\d+\./.test(t)) return `<div class="ch9-num">${escapeHtml(t)}</div>`;
+    if (/^▸/.test(t))
+      return `<div class="ch9-bul"><span aria-hidden="true">▸</span><span>${escapeHtml(
+        t.replace(/^▸\s*/, "")
+      )}</span></div>`;
+    if (/^-/.test(t))
+      return `<div class="ch9-dash"><span aria-hidden="true">-</span><span>${escapeHtml(
+        t.replace(/^-\s*/, "")
+      )}</span></div>`;
+    if (/^※/.test(t)) return `<div class="ch9-note">${escapeHtml(t)}</div>`;
+    return `<div class="ch9-plain">${escapeHtml(t)}</div>`;
+  }
 
-    const stepMarkup = (step) => `
-      <section class="ch9-step">
-        <div class="ch9-step-name">${escapeHtml(say(step.name))}</div>
-        ${
-          step.body.length
-            ? `<div class="ch9-step-body">${step.body
-                .map((cell) => cellMarkup(cellLines(cell.text)))
-                .join("")}</div>`
-            : ""
-        }
-      </section>`;
+  function renderChapter9Front() {
+    const stepsHtml = CH9_STEPS.map(
+      (step) => `
+        <div class="ch9-step">
+          <div class="ch9-step-name">${escapeHtml(step.name)}</div>
+          <div class="ch9-step-body">${step.body.map(ch9Line).join("")}</div>
+        </div>`
+    ).join('<div class="ch9-arrow" aria-hidden="true">↓</div>');
 
-    const columnsHtml = columns
-      .map(
-        (steps) =>
-          `<div class="ch9-col">${steps
-            .map(stepMarkup)
-            .join('<div class="ch9-arrow" aria-hidden="true">↓</div>')}</div>`
-      )
-      .join("");
-
-    const title = String(block.title || "").trim() || "한 장으로 보는 학교급식 업무 흐름";
     return {
       summary: "한눈에 보기",
       type: "table",
@@ -3465,9 +3493,9 @@
         <div class="ch9-front">
           <h3 class="ch9-band">
             <span class="ch9-band-tag">한눈에 쏙쏙</span>
-            <span class="ch9-band-name">${escapeHtml(title)}</span>
+            <span class="ch9-band-name">${escapeHtml(CH9_TITLE)}</span>
           </h3>
-          <div class="ch9-cols">${columnsHtml}</div>
+          <div class="ch9-flow">${stepsHtml}</div>
         </div>`,
     };
   }
@@ -3514,7 +3542,7 @@
       if (ch8) return ch8;
     }
     if (String(block.id || "") === "c09-w00-b1") {
-      const ch9 = renderChapter9Front(block);
+      const ch9 = renderChapter9Front();
       if (ch9) return ch9;
     }
 

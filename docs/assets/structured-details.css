@@ -2358,9 +2358,9 @@
   font-weight: 700;
 }
 
-/* ── 제9편 '한눈에 보기' 전용 그림 ─────────────────────────────────
-   '한 장으로 보는 학교급식 업무 흐름'. 세로 흐름을 두 단으로 접었습니다.
-   왼쪽 Ⅰ·Ⅱ·Ⅲ, 오른쪽 Ⅳ·Ⅴ·Ⅵ·Ⅶ, 단마다 로마숫자 이름 상자 + 내용, 단 사이 ↓.
+/* ── 제9편 '한눈에 보기' 전용 그림 (원문 PDF 기준) ─────────────────
+   세로 한 단 흐름도. 단마다 [로마숫자 이름 상자] + [내용], 단 사이 아래 화살표.
+   내용은 원문 PDF 문구입니다(structured-details.js의 CH9_STEPS).
    .ch9-* 는 제9편 밖으로 나가지 않습니다. */
 .ch9-front {
   display: grid;
@@ -2387,54 +2387,103 @@
   font-size: 1.55rem;
 }
 
-.ch9-cols {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.6rem;
-  align-items: start;
-}
-
-.ch9-col {
+.ch9-flow {
   display: grid;
   gap: 0.4rem;
-  align-content: start;
 }
 
-/* 단 — 로마숫자 이름 상자 + 내용 */
+/* 단 — 왼쪽 이름 상자, 오른쪽 내용 */
 .ch9-step {
   display: grid;
+  grid-template-columns: minmax(16rem, 1.4fr) minmax(0, 4fr);
   gap: 0.8rem;
-  padding: 1.4rem 1.6rem;
-  background: #fff;
-  border: 1px solid var(--guide-line);
-  border-top: 3px solid var(--guide-blue);
-  border-radius: 1rem;
+  align-items: stretch;
 }
 
 .ch9-step-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.4rem 1.4rem;
+  background: var(--guide-blue-pale);
+  border: 1px solid var(--guide-blue);
+  border-radius: 1rem;
   color: var(--guide-blue-dark);
   font-size: 1.55rem;
   font-weight: 700;
-  line-height: 1.4;
+  text-align: center;
+  line-height: 1.45;
 }
 
 .ch9-step-body {
+  display: grid;
+  gap: 0.5rem;
+  align-content: center;
+  padding: 1.4rem 1.6rem;
+  background: #fff;
+  border: 1px solid var(--guide-line);
+  border-radius: 1rem;
   color: var(--guide-ink);
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   line-height: 1.6;
 }
 
-.ch9-arrow {
-  color: var(--guide-blue);
-  font-size: 1.6rem;
+/* 빈 내용 상자도 원문처럼 자리를 지킵니다(Ⅴ. 납품 및 검수). */
+.ch9-step-body:empty::before {
+  content: "";
+}
+
+/* 번호 소제목(1. 심의시기 …) */
+.ch9-num {
+  color: var(--guide-ink);
   font-weight: 700;
-  text-align: center;
+}
+
+/* ▸ 항목 */
+.ch9-bul {
+  display: grid;
+  grid-template-columns: 1.3rem minmax(0, 1fr);
+  gap: 0.5rem;
+}
+
+.ch9-bul > span:first-child {
+  color: var(--guide-blue);
+  font-weight: 700;
+}
+
+/* - 딸림 항목(▸ 아래로 한 칸 더 들여씀) */
+.ch9-dash {
+  display: grid;
+  grid-template-columns: 1.3rem minmax(0, 1fr);
+  gap: 0.5rem;
+  margin-left: 1.8rem;
+  color: var(--guide-muted);
+}
+
+/* ※ 참고 */
+.ch9-note {
+  margin-left: 1.8rem;
+  color: var(--guide-muted);
+}
+
+/* 단 사이 아래 화살표 — 이름 열 가운데에 세웁니다. 이름 열과 같은 격자
+   폭을 써서 '↓'가 이름 상자 아래에 놓이게 합니다. */
+.ch9-arrow {
+  display: grid;
+  grid-template-columns: minmax(16rem, 1.4fr) minmax(0, 4fr);
+  color: var(--guide-blue);
+  font-size: 1.7rem;
+  font-weight: 700;
   line-height: 1;
+  text-align: center;
 }
 
 @media (max-width: 767px) {
-  /* 좁은 화면에서는 두 단을 한 단으로 쌓습니다. */
-  .ch9-cols {
+  .ch9-step {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.4rem;
+  }
+  .ch9-arrow {
     grid-template-columns: minmax(0, 1fr);
   }
 }

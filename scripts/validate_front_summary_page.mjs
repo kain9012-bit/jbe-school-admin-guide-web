@@ -278,8 +278,14 @@ for (const { id: chapterId, key } of chapterKeys(window)) {
       problems.push(`${where}: 닫는 괄호로 시작하는 줄이 남았습니다 — '${stray}'`);
     }
     // 원문 표의 칸 글자가 화면에서 빠지지 않았는지 견줍니다.
+    //
+    // 제9편은 예외입니다. 이 편만 사용자 결정에 따라 한글파일이 아니라 원문
+    // PDF를 기준으로 그립니다. 한글파일에는 'Ⅲ. 매월 품의'와 열 줄짜리
+    // 심의내용이 더 들어 있지만 PDF에는 없어, 화면에도 없습니다. 그래서
+    // 한글파일 칸과 견주면 당연히 '사라졌다'가 됩니다 — 이 편만 건너뜁니다.
     const missing = [];
-    for (const block of front.contentBlocks || []) {
+    const pdfBased = chapterId === "09";
+    for (const block of pdfBased ? [] : front.contentBlocks || []) {
       for (const table of block.tables || []) {
         for (const text of cellTexts(table)) {
           const want = bare(text);
