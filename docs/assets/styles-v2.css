@@ -215,9 +215,9 @@ input {
 
 .guide-hero {
   overflow: hidden;
-  background:
-    radial-gradient(circle at 82% 18%, rgba(37, 110, 244, 0.16) 0, rgba(37, 110, 244, 0) 28rem),
-    linear-gradient(135deg, #f7faff 0%, #e8f1ff 100%);
+  /* k-edu-policy와 같은 평면 배경(KRDS primary-5 #ecf2fe). 예전엔 파란
+     그라데이션이었으나, 참고 사이트에 맞춰 옅은 파랑 한 색으로 둡니다. */
+  background: var(--guide-blue-pale);
   border-bottom: 1px solid #d8e5fd;
 }
 
