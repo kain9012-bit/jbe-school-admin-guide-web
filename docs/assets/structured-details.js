@@ -3875,6 +3875,91 @@
     };
   }
 
+  // 제16편 학교회계 지출 — 앞머리 'POINT 지출의 절차'.
+  // 바깥 칸 하나 안에 밴드(POINT|지출의 절차)·개요 상자(◉ 넷)·세로 흐름이
+  // 들어 있습니다. 흐름은 예산편성 → … → 대가지급을 ⇩로 이어 갑니다.
+  // 단계 이름은 옅은 파랑 상자, 내용의 ◦·-·※는 원문 그대로.
+  function ch16Line(raw) {
+    const t = String(raw).trim();
+    if (!t) return "";
+    if (/^◦/.test(t))
+      return `<div class="ch16-b0"><span class="ch16-mk" aria-hidden="true">◦</span><span>${escapeHtml(
+        t.replace(/^◦\s*/, "")
+      )}</span></div>`;
+    if (/^[-–]/.test(t))
+      return `<div class="ch16-dash"><span class="ch16-mk" aria-hidden="true">-</span><span>${escapeHtml(
+        t.replace(/^[-–]\s*/, "")
+      )}</span></div>`;
+    if (/^※/.test(t)) return `<div class="ch16-note">${escapeHtml(t)}</div>`;
+    return `<div class="ch16-plain">${escapeHtml(t)}</div>`;
+  }
+
+  function renderChapter16Front(block) {
+    const outer = (block.tables || [])[0];
+    if (!outer) return null;
+    const cell = (outer.headers || [])[0];
+    if (!cell || (cell.tables || []).length < 3) return null;
+    const inners = cell.tables;
+    const say = (c) => String((c && c.text) || "").trim();
+    const bandHead = (inners[0].headers || []).map(say);
+
+    // 개요 상자 — ◉ 넉 줄.
+    const introCell = (inners[1].headers || [])[0];
+    const introLines = introCell ? cellLines(introCell.text) : [];
+    const intro = introLines
+      .map((l) => String(l).trim())
+      .filter(Boolean)
+      .map(
+        (l) =>
+          `<div class="ch16-point"><span class="ch16-point-mk" aria-hidden="true">◉</span><span>${escapeHtml(
+            l.replace(/^◉\s*/, "")
+          )}</span></div>`
+      )
+      .join("");
+
+    // 세로 흐름 — 단계 이름(왼쪽)·내용(오른쪽)을 ⇩로 잇습니다.
+    const rows = [inners[2].headers || [], ...(inners[2].rows || [])];
+    const steps = [];
+    for (const row of rows) {
+      const name = row.find((c) => (c.column ?? 0) === 0);
+      const bodyCell = row.find((c) => (c.column ?? 0) === 2);
+      const label = name ? say(name) : "";
+      if (!label || label === "⇩" || arrowOnly(label)) continue;
+      steps.push({ label, body: bodyCell ? bodyCell.text : "" });
+    }
+    if (!steps.length) return null;
+
+    const flow = steps
+      .map((step, at) => {
+        const arrow =
+          at < steps.length - 1
+            ? `<div class="ch16-arrow" aria-hidden="true">⇩</div>`
+            : "";
+        return `
+          <div class="ch16-step">
+            <div class="ch16-step-name">${escapeHtml(step.label)}</div>
+            <div class="ch16-step-body">${cellLines(step.body)
+              .map(ch16Line)
+              .join("")}</div>
+          </div>${arrow}`;
+      })
+      .join("");
+
+    return {
+      summary: "한눈에 보기",
+      type: "table",
+      html: `
+        <div class="ch16-front">
+          <h3 class="ch16-band">
+            <span class="ch16-band-tag">${escapeHtml(bandHead[0] || "POINT")}</span>
+            <span class="ch16-band-name">${escapeHtml(bandHead[1] || "지출의 절차")}</span>
+          </h3>
+          ${intro ? `<div class="ch16-intro">${intro}</div>` : ""}
+          <div class="ch16-flow">${flow}</div>
+        </div>`,
+    };
+  }
+
   function render(block) {
     const body = String(block?.body || "");
     if (!body) return { summary: "전체 내용 보기", html: "", type: "text" };
@@ -3939,6 +4024,10 @@
     if (String(block.id || "") === "c15-w00-b1") {
       const ch15 = renderChapter15Front(block);
       if (ch15) return ch15;
+    }
+    if (String(block.id || "") === "c16-w00-b1") {
+      const ch16 = renderChapter16Front(block);
+      if (ch16) return ch16;
     }
 
     const sourceTable = renderSourceTable(block);

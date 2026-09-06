@@ -1155,7 +1155,8 @@
 .is-front-summary #step-actions .ch11-band,
 .is-front-summary #step-actions .ch12-band,
 .is-front-summary #step-actions .ch13-band,
-.is-front-summary #step-actions .ch15-band {
+.is-front-summary #step-actions .ch15-band,
+.is-front-summary #step-actions .ch16-band {
   padding-right: 10rem;
 }
 
@@ -1178,7 +1179,8 @@
   .is-front-summary #step-actions .ch11-band,
   .is-front-summary #step-actions .ch12-band,
   .is-front-summary #step-actions .ch13-band,
-  .is-front-summary #step-actions .ch15-band {
+  .is-front-summary #step-actions .ch15-band,
+  .is-front-summary #step-actions .ch16-band {
     padding-right: 0;
   }
 }
@@ -2880,4 +2882,124 @@
 
 .ch15-front th[scope="row"] .source-cell-list > li {
   display: block;
+}
+
+/* ── 제16편 학교회계 지출 ───────────────────────────────────
+   앞머리 'POINT 지출의 절차'. 밴드 + 개요 상자 + 세로 흐름. */
+.ch16-band {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 0 0 1.8rem;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--guide-ink);
+  letter-spacing: -0.01em;
+}
+
+.ch16-band-tag {
+  flex: none;
+  padding: 0.55rem 1.6rem;
+  background: var(--guide-blue);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 1.55rem;
+}
+
+/* 개요 상자 — ◉ 넉 줄 */
+.ch16-intro {
+  margin: 0 0 2rem;
+  padding: 1.6rem 1.8rem;
+  background: var(--guide-blue-pale);
+  border: 1px solid var(--guide-line);
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.ch16-point {
+  display: flex;
+  gap: 0.6rem;
+  line-height: 1.55;
+  color: var(--guide-ink);
+}
+
+.ch16-point-mk {
+  flex: none;
+  color: var(--guide-blue);
+}
+
+/* 세로 흐름 */
+.ch16-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.ch16-step {
+  display: grid;
+  grid-template-columns: 15rem minmax(0, 1fr);
+  border: 1px solid var(--guide-line);
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.ch16-step-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 1rem;
+  background: var(--guide-blue-pale);
+  color: var(--guide-blue-dark);
+  font-weight: 700;
+  text-align: center;
+  border-right: 1px solid var(--guide-line);
+}
+
+.ch16-step-body {
+  padding: 1.2rem 1.6rem;
+  line-height: 1.6;
+}
+
+.ch16-b0,
+.ch16-dash,
+.ch16-note,
+.ch16-plain {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.ch16-dash {
+  padding-left: 1.4rem;
+}
+
+.ch16-note {
+  padding-left: 1.4rem;
+  color: var(--guide-muted);
+}
+
+.ch16-mk {
+  flex: none;
+  color: var(--guide-blue);
+  font-weight: 700;
+}
+
+/* 단계 사이 ⇩ 화살표 */
+.ch16-arrow {
+  text-align: center;
+  color: var(--guide-blue);
+  font-size: 1.8rem;
+  line-height: 1;
+  padding: 0.5rem 0;
+}
+
+@media (max-width: 640px) {
+  .ch16-step {
+    grid-template-columns: 1fr;
+  }
+  .ch16-step-name {
+    border-right: 0;
+    border-bottom: 1px solid var(--guide-line);
+  }
 }
