@@ -1152,7 +1152,8 @@
 .is-front-summary #step-actions .ch8-band,
 .is-front-summary #step-actions .ch9-band,
 .is-front-summary #step-actions .ch10-band,
-.is-front-summary #step-actions .ch11-band {
+.is-front-summary #step-actions .ch11-band,
+.is-front-summary #step-actions .ch12-band {
   padding-right: 10rem;
 }
 
@@ -1172,7 +1173,8 @@
   .is-front-summary #step-actions .ch8-band,
   .is-front-summary #step-actions .ch9-band,
   .is-front-summary #step-actions .ch10-band,
-  .is-front-summary #step-actions .ch11-band {
+  .is-front-summary #step-actions .ch11-band,
+  .is-front-summary #step-actions .ch12-band {
     padding-right: 0;
   }
 }
@@ -2716,4 +2718,43 @@
   color: var(--guide-muted);
   font-size: 1.4rem;
   line-height: 1.7;
+}
+
+/* ── 제12편 물품관리 ────────────────────────────────────────
+   원문 그림(물품관리의 흐름·불용품 처분 흐름도)은 그대로 두고,
+   그 위 소제목만 다른 편들의 '한눈에 보기' 띠와 같은 서식으로 입힙니다. */
+.ch12-band {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 0 0 1.8rem;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--guide-ink);
+  letter-spacing: -0.01em;
+}
+
+.ch12-band-tag {
+  flex: none;
+  padding: 0.55rem 1.6rem;
+  background: var(--guide-blue);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 1.55rem;
+}
+
+/* 그림은 원문 그대로. 두 장을 세로로 쌓고 가운데에 놓습니다. */
+.ch12-figures {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.ch12-figure {
+  justify-content: center;
+}
+
+.ch12-figure .source-picture {
+  max-width: 100%;
+  height: auto;
 }

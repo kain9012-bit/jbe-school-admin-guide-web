@@ -3696,6 +3696,47 @@
     };
   }
 
+  // 제12편 물품관리 — 앞머리 'POINT 물품관리 흐름도'.
+  // 원문 그림(물품관리의 흐름·불용품 처분 흐름도)은 그대로 두고, 그 위
+  // 소제목만 다른 편들의 '한눈에 보기' 띠와 같은 서식(파란 딱지 + 이름)으로
+  // 다시 그립니다. 그림은 손대지 않고 원문 PNG를 그대로 겹쳐 놓습니다.
+  function renderChapter12Front(block) {
+    const body = String(block.body || "");
+    // 그림 마름 앞의 소제목만 떼어 냅니다. 'POINT 물품관리 흐름도'.
+    const heading = body.replace(PICTURE_MARK, "").trim();
+    if (!heading) return null;
+    // 첫 낱말(POINT)은 딱지로, 나머지(물품관리 흐름도)는 이름으로.
+    const m = heading.match(/^(\S+)\s+([\s\S]+)$/);
+    const tag = m ? m[1] : "";
+    const name = m ? m[2].trim() : heading;
+    // 원문 그림은 그대로. 마름 차례대로(image7·image8) 한 장씩 세로로 쌓습니다.
+    const names = (body.match(PICTURE_MARK) || []).map((mark) =>
+      mark.replace(/^\[\[그림:|\]\]$/g, "")
+    );
+    if (!names.length) return null;
+    const figures = names
+      .map(
+        (nm) =>
+          `<span class="source-picture-row ch12-figure" style="--picture-count: 1">${pictureMarkup(
+            nm
+          )}</span>`
+      )
+      .join("");
+
+    return {
+      summary: "한눈에 보기",
+      type: "table",
+      html: `
+        <div class="ch12-front">
+          <h3 class="ch12-band">
+            <span class="ch12-band-tag">${escapeHtml(tag)}</span>
+            <span class="ch12-band-name">${escapeHtml(name)}</span>
+          </h3>
+          <div class="ch12-figures">${figures}</div>
+        </div>`,
+    };
+  }
+
   function render(block) {
     const body = String(block?.body || "");
     if (!body) return { summary: "전체 내용 보기", html: "", type: "text" };
@@ -3748,6 +3789,10 @@
     if (String(block.id || "") === "c11-w00-b1") {
       const ch11 = renderChapter11Front(block);
       if (ch11) return ch11;
+    }
+    if (String(block.id || "") === "c12-w00-b1") {
+      const ch12 = renderChapter12Front(block);
+      if (ch12) return ch12;
     }
 
     const sourceTable = renderSourceTable(block);
