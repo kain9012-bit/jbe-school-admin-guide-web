@@ -4026,13 +4026,16 @@
       }
     }
 
+    // 공통부는 가운데 '품 의'로 양쪽이 모입니다. 왼쪽(예정가격조사)은
+    // 오른쪽(▸)으로, 오른쪽(시방서…)은 왼쪽(◀)으로 품의를 가리킵니다.
     const topMarkup = topLabels
-      .map(
-        (label, at) =>
-          `${at ? `<span class="ch17-hsep" aria-hidden="true">▸</span>` : ""}<span class="ch17-top-box">${escapeHtml(
-            label
-          )}</span>`
-      )
+      .map((label, at) => {
+        if (!at) return `<span class="ch17-top-box">${escapeHtml(label)}</span>`;
+        const arrow = at === topLabels.length - 1 ? "◀" : "▸";
+        return `<span class="ch17-hsep" aria-hidden="true">${arrow}</span><span class="ch17-top-box">${escapeHtml(
+          label
+        )}</span>`;
+      })
       .join("");
 
     const columnsMarkup = columns
