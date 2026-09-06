@@ -3960,6 +3960,121 @@
     };
   }
 
+  // 제17편 학교회계 계약 — 앞머리 '계약흐름도'.
+  // 원문은 다섯 계약방법(1인견적·2인견적·입찰·조달구매·다수공급자계약)을
+  // 나란히 견주는 흐름도입니다. 위 공통부(예정가격조사→품의→시방서 …
+  // 계약방법결정) 아래로 다섯 갈래가 저마다 세로로 이어집니다. 원문 표에
+  // 상자선이 없어 예전엔 글자만 떠 있었는데, 원문 짜임새 그대로 다섯 칸
+  // 흐름도로 다시 세우고 색만 누리집 파랑으로 입힙니다.
+  function renderChapter17Front(block) {
+    const outer = (block.tables || [])[0];
+    if (!outer) return null;
+    const cell = (outer.headers || [])[0];
+    if (!cell || !(cell.tables || []).length) return null;
+    const t = cell.tables[0];
+    const say = (c) =>
+      String((c && c.text) || "")
+        .trim()
+        .replace(/^[\\]\s*/, ""); // 원문에 새어든 '\ 계약체결'의 앞 글자를 텁니다.
+    const isArrow = (s) => !s || s === "▪" || arrowOnly(s);
+    const allRows = [t.headers || [], ...(t.rows || [])];
+
+    // 공통부 — 머리줄의 예정가격조사·품의·시방서.
+    const topLabels = (t.headers || [])
+      .map(say)
+      .filter((s) => s && !isArrow(s));
+
+    // 계약방법결정 마디.
+    let decision = "";
+    for (const row of allRows) {
+      for (const c of row) {
+        if (say(c) === "계약방법결정") decision = "계약방법결정";
+      }
+    }
+
+    // 다섯 갈래는 원문에서 각각 정해진 열에 섭니다.
+    const branchCols = [0, 4, 8, 11, 15];
+    // 갈래가 갈라지는 줄(다섯 방법 이름이 처음 나오는 줄)부터 셉니다.
+    // 그 앞은 공통부(품의·계약방법결정 등)라 열이 겹칩니다.
+    let startIdx = allRows.findIndex((row, i) => {
+      if (i === 0) return false;
+      const c0 = row.find((x) => (x.column ?? -1) === 0);
+      const s = c0 ? say(c0) : "";
+      return s && !isArrow(s);
+    });
+    if (startIdx < 0) startIdx = 1;
+
+    const columns = branchCols.map((C) => {
+      const items = [];
+      for (let i = startIdx; i < allRows.length; i += 1) {
+        const c = allRows[i].find((x) => (x.column ?? -1) === C);
+        if (!c) continue;
+        const s = say(c);
+        if (isArrow(s) || /^※/.test(s)) continue;
+        items.push(s);
+      }
+      return items; // [0]=방법 이름, 나머지=단계
+    });
+    if (columns.some((col) => col.length < 2)) return null;
+
+    // 표 밖 각주(※수의시담 …).
+    let foot = "";
+    for (const row of allRows) {
+      for (const c of row) {
+        const s = say(c);
+        if (/^※/.test(s)) foot = s;
+      }
+    }
+
+    const topMarkup = topLabels
+      .map(
+        (label, at) =>
+          `${at ? `<span class="ch17-hsep" aria-hidden="true">▸</span>` : ""}<span class="ch17-top-box">${escapeHtml(
+            label
+          )}</span>`
+      )
+      .join("");
+
+    const columnsMarkup = columns
+      .map((col) => {
+        const [head, ...steps] = col;
+        const stepsMarkup = steps
+          .map(
+            (s, at) =>
+              `${at ? `<div class="ch17-vsep" aria-hidden="true">⇩</div>` : ""}<div class="ch17-step">${escapeHtml(
+                s
+              )}</div>`
+          )
+          .join("");
+        return `
+          <div class="ch17-col">
+            <div class="ch17-col-head">${escapeHtml(head)}</div>
+            <div class="ch17-vsep" aria-hidden="true">⇩</div>
+            ${stepsMarkup}
+          </div>`;
+      })
+      .join("");
+
+    return {
+      summary: "한눈에 보기",
+      type: "flow",
+      html: `
+        <div class="ch17-front">
+          <h3 class="ch17-band">${escapeHtml(block.title || "계약흐름도")}</h3>
+          <div class="ch17-top">${topMarkup}</div>
+          ${
+            decision
+              ? `<div class="ch17-vsep ch17-vsep-wide" aria-hidden="true">⇩</div>
+                 <div class="ch17-decision">${escapeHtml(decision)}</div>`
+              : ""
+          }
+          <div class="ch17-vsep ch17-vsep-wide" aria-hidden="true">⇩</div>
+          <div class="ch17-columns">${columnsMarkup}</div>
+          ${foot ? `<p class="ch17-foot">${escapeHtml(foot)}</p>` : ""}
+        </div>`,
+    };
+  }
+
   function render(block) {
     const body = String(block?.body || "");
     if (!body) return { summary: "전체 내용 보기", html: "", type: "text" };
@@ -4028,6 +4143,10 @@
     if (String(block.id || "") === "c16-w00-b1") {
       const ch16 = renderChapter16Front(block);
       if (ch16) return ch16;
+    }
+    if (String(block.id || "") === "c17-w00-b1") {
+      const ch17 = renderChapter17Front(block);
+      if (ch17) return ch17;
     }
 
     const sourceTable = renderSourceTable(block);

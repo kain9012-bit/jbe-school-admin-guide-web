@@ -198,6 +198,9 @@ const squash = (said) => String(said || "").replace(/\s+/g, "");
 const bare = (said) =>
   String(said || "")
     .replace(/[\u2574\u2576\u2500\u2501]/g, "-")
+    // kordoc\uc774 \uc0c8\uc5b4\ub123\uc740 \uc55e \uae00\uc790 '\'(\uc81c17\ud3b8 '\ \uacc4\uc57d\uccb4\uacb0')\ub294 \ud654\uba74\uc5d0\uc11c \ud141\ub2c8\ub2e4.
+    // \uc0c1\uc790 \ub300\uc2dc\ucc98\ub7fc \ub73b \uc5c6\ub294 \uad70\ub354\ub354\uae30\ub77c, \uacac\uc904 \ub54c\ub3c4 \ubb34\uc2dc\ud569\ub2c8\ub2e4.
+    .replace(/\\/g, "")
     .replace(/[\s\u200b\u00a0\u00ad\u2060]+/g, "");
 
 // 표 한 그루의 모든 칸 글자입니다(칸 안에 든 표까지).
