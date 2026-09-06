@@ -4031,7 +4031,7 @@
     const topMarkup = topLabels
       .map((label, at) => {
         if (!at) return `<span class="ch17-top-box">${escapeHtml(label)}</span>`;
-        const arrow = at === topLabels.length - 1 ? "◀" : "▸";
+        const arrow = at === topLabels.length - 1 ? "◂" : "▸";
         return `<span class="ch17-hsep" aria-hidden="true">${arrow}</span><span class="ch17-top-box">${escapeHtml(
           label
         )}</span>`;
