@@ -3500,6 +3500,94 @@
     };
   }
 
+  // ── 제10편 '한눈에 보기' 전용 그림 ───────────────────────────────
+  //
+  // 제10편 지면은 '학교운영위원회 구성 절차' 세로 한 단 흐름도입니다. 단마다
+  // [이름·시기 상자] + [내용], 단 사이 아래 화살표.
+  //   규정(정관) 점검 → 구성계획 수립·선거홍보 → 선출관리위원회 구성 →
+  //   선거공고·입후보 등록 → 학부모·교원위원 선출 → 지역위원 선출 →
+  //   위원장·부위원장 선출 → 선거결과 홍보
+  // 한글파일과 원문 PDF의 내용이 같아 한글파일에서 그대로 뽑아 씁니다.
+  // 원문 표에 섞인 화살표 줄(⇩)은 걷고 이름·내용만 짝지어 세웁니다.
+  // 이 함수와 .ch10-* 서식은 제10편에만 씁니다.
+  // 제10편 내용 줄 — 원문 글머리를 살려 줄 단위로 그립니다. cellMarkup의
+  // '앞줄에 이어지는 줄' 합치기를 쓰지 않아, '- (학부모위원)…'과
+  // '- (교원위원)…'이 한 덩어리로 붙지 않고 따로 섭니다. 원문이 하이픈 대신
+  // 상자그리기 대시(╴)를 쓴 자리는 하이픈으로 고쳐 '__'처럼 보이지 않게 합니다.
+  function ch10Line(line) {
+    const t = String(line).trim().replace(/^[╴╶─━]/, "-");
+    if (/^\d+\./.test(t)) return `<div class="ch10-num">${escapeHtml(t)}</div>`;
+    if (/^[◦▸]/.test(t))
+      return `<div class="ch10-bul"><span aria-hidden="true">◦</span><span>${escapeHtml(
+        t.replace(/^[◦▸]\s*/, "")
+      )}</span></div>`;
+    if (/^-/.test(t))
+      return `<div class="ch10-dash"><span aria-hidden="true">-</span><span>${escapeHtml(
+        t.replace(/^-\s*/, "")
+      )}</span></div>`;
+    if (/^※/.test(t)) return `<div class="ch10-note">${escapeHtml(t)}</div>`;
+    return `<div class="ch10-plain">${escapeHtml(t)}</div>`;
+  }
+
+  function renderChapter10Front(block) {
+    const outer = (block.tables || [])[0];
+    if (!outer) return null;
+    const cell = (outer.headers || [])[0];
+    if (!cell || !(cell.tables || []).length) return null;
+    const table = cell.tables[0];
+    const grid = sheetGrid(table);
+    const say = (c) => String((c && c.text) || "").trim();
+    const last = grid.columns - 1;
+
+    const steps = [];
+    for (let r = 0; r < grid.rows.length; r += 1) {
+      const nameCell = grid.cover[r][0];
+      if (!nameCell || !say(nameCell) || arrowOnly(say(nameCell))) continue;
+      // 위 줄에서 이어져 내려온 칸은 다시 세지 않습니다.
+      if (r > 0 && grid.cover[r - 1][0] === nameCell) continue;
+      steps.push({ name: nameCell, body: grid.cover[r][last] });
+    }
+    if (steps.length < 2) return null;
+
+    // 이름 상자 — 제목 줄과 시기 줄(괄호)을 나눠 세웁니다.
+    const nameMarkup = (nameCell) =>
+      cellLines(nameCell.text)
+        .map((line) => {
+          const t = line.trim();
+          return /^[(（]/.test(t)
+            ? `<span class="ch10-when">${escapeHtml(t)}</span>`
+            : `<span class="ch10-title">${escapeHtml(t)}</span>`;
+        })
+        .join("");
+
+    const stepsHtml = steps
+      .map(
+        (step) => `
+        <div class="ch10-step">
+          <div class="ch10-step-name">${nameMarkup(step.name)}</div>
+          <div class="ch10-step-body">${
+            step.body ? cellLines(step.body.text).map(ch10Line).join("") : ""
+          }</div>
+        </div>`
+      )
+      .join('<div class="ch10-arrow" aria-hidden="true">↓</div>');
+
+    const title =
+      (cellLines(cell.text)[0] || "").trim() || "학교운영위원회 구성 절차";
+    return {
+      summary: "한눈에 보기",
+      type: "table",
+      html: `
+        <div class="ch10-front">
+          <h3 class="ch10-band">
+            <span class="ch10-band-tag">한눈에 쏙쏙</span>
+            <span class="ch10-band-name">${escapeHtml(title)}</span>
+          </h3>
+          <div class="ch10-flow">${stepsHtml}</div>
+        </div>`,
+    };
+  }
+
   function render(block) {
     const body = String(block?.body || "");
     if (!body) return { summary: "전체 내용 보기", html: "", type: "text" };
@@ -3544,6 +3632,10 @@
     if (String(block.id || "") === "c09-w00-b1") {
       const ch9 = renderChapter9Front();
       if (ch9) return ch9;
+    }
+    if (String(block.id || "") === "c10-w00-b1") {
+      const ch10 = renderChapter10Front(block);
+      if (ch10) return ch10;
     }
 
     const sourceTable = renderSourceTable(block);

@@ -1150,7 +1150,8 @@
 .is-front-summary #step-actions .ch6-band,
 .is-front-summary #step-actions .ch7-band,
 .is-front-summary #step-actions .ch8-band,
-.is-front-summary #step-actions .ch9-band {
+.is-front-summary #step-actions .ch9-band,
+.is-front-summary #step-actions .ch10-band {
   padding-right: 10rem;
 }
 
@@ -1168,7 +1169,8 @@
   .is-front-summary #step-actions .ch6-band,
   .is-front-summary #step-actions .ch7-band,
   .is-front-summary #step-actions .ch8-band,
-  .is-front-summary #step-actions .ch9-band {
+  .is-front-summary #step-actions .ch9-band,
+  .is-front-summary #step-actions .ch10-band {
     padding-right: 0;
   }
 }
@@ -2485,5 +2487,130 @@
   }
   .ch9-arrow {
     grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* ── 제10편 '한눈에 보기' 전용 그림 ────────────────────────────────
+   '학교운영위원회 구성 절차' 세로 한 단 흐름도. 단마다 [이름·시기 상자] +
+   [내용], 단 사이 아래 화살표. .ch10-* 는 제10편 밖으로 나가지 않습니다. */
+.ch10-front {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.ch10-band {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--guide-ink);
+  letter-spacing: -0.01em;
+}
+
+.ch10-band-tag {
+  flex: none;
+  padding: 0.55rem 1.6rem;
+  background: var(--guide-blue);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 1.55rem;
+}
+
+.ch10-flow {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.ch10-step {
+  display: grid;
+  grid-template-columns: minmax(16rem, 1.5fr) minmax(0, 4fr);
+  gap: 0.8rem;
+  align-items: stretch;
+}
+
+.ch10-step-name {
+  display: grid;
+  align-content: center;
+  gap: 0.3rem;
+  padding: 1.4rem 1.4rem;
+  background: var(--guide-blue-pale);
+  border: 1px solid var(--guide-blue);
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.ch10-title {
+  color: var(--guide-blue-dark);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* 시기(괄호) 줄은 조금 작게 */
+.ch10-when {
+  color: var(--guide-blue-dark);
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.ch10-step-body {
+  display: grid;
+  gap: 0.5rem;
+  align-content: center;
+  padding: 1.4rem 1.6rem;
+  background: #fff;
+  border: 1px solid var(--guide-line);
+  border-radius: 1rem;
+  color: var(--guide-ink);
+  font-size: 1.45rem;
+  line-height: 1.65;
+}
+
+/* 내용 줄 — 원문 글머리를 살립니다. */
+.ch10-num {
+  font-weight: 700;
+}
+
+.ch10-bul,
+.ch10-dash {
+  display: grid;
+  grid-template-columns: 1.3rem minmax(0, 1fr);
+  gap: 0.5rem;
+  align-items: start;
+}
+
+.ch10-bul > span:first-child {
+  color: var(--guide-blue);
+  font-weight: 700;
+}
+
+/* - 딸림 항목은 ◦ 아래로 한 칸 더 들여씁니다. */
+.ch10-dash {
+  margin-left: 1.6rem;
+  color: var(--guide-muted);
+}
+
+.ch10-note {
+  margin-left: 1.6rem;
+  color: var(--guide-muted);
+}
+
+.ch10-arrow {
+  display: grid;
+  grid-template-columns: minmax(16rem, 1.5fr) minmax(0, 4fr);
+  color: var(--guide-blue);
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .ch10-step,
+  .ch10-arrow {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.4rem;
   }
 }

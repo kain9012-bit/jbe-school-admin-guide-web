@@ -695,7 +695,7 @@
     // 직접 그립니다(structured-details.js의 renderChapterNFront). 여기서 또
     // block.title을 얹으면 제목이 두 번 섭니다. 이 블록들에서만 끕니다
     // — 그 id에만 걸리므로 다른 편·다른 블록에는 영향이 없습니다.
-    const CUSTOM_FRONT_BLOCK = /^c0[23456789]-w00-b1$/;
+    const CUSTOM_FRONT_BLOCK = /^c(0[2-9]|10)-w00-b1$/;
     const heading = block.tip
       ? "TIP·주의사항"
       : generatedTitle ||
@@ -1381,7 +1381,7 @@
     // 걸리므로 다른 편·다른 지면에는 영향이 없습니다.
     const customFrontStep =
       work.number === 0 &&
-      (step.mainBlocks || []).some((one) => /^c0[23456789]-w00-b1$/.test(String(one.id || "")));
+      (step.mainBlocks || []).some((one) => /^c(0[2-9]|10)-w00-b1$/.test(String(one.id || "")));
     const repeatsTitle =
       (work.number === 0 && squash(step.title) === squash(work.title)) || customFrontStep;
     stepTitleNode.hidden = repeatsTitle;

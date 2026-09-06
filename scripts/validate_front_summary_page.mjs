@@ -192,7 +192,13 @@ const squash = (said) => String(said || "").replace(/\s+/g, "");
 // 글자를 견주기 전에 눈에 안 보이는 것을 다 텁니다. 화면은 긴 낱말이
 // 접힐 자리에 폭 없는 공백(U+200B)을 끼워 넣으므로, 그대로 견주면
 // 멀쩡히 그려진 글도 '사라졌다'가 됩니다.
-const bare = (said) => String(said || "").replace(/[\s\u200b\u00a0\u00ad\u2060]+/g, "");
+// \uc0c1\uc790\uadf8\ub9ac\uae30 \ub300\uc2dc(\u2574\u2576\u2500\u2501)\ub294 \ud558\uc774\ud508\uacfc \uac19\uac8c \ubd05\ub2c8\ub2e4. \uc6d0\ubb38 \ud55c\uae00\ud30c\uc77c\uc774 \ud558\uc774\ud508
+// \ub300\uc2e0 \uc774 \uae00\uc790\ub97c \uc4f4 \uc790\ub9ac\uac00 \uc788\ub294\ub370(\uc81c10\ud3b8 '\u2574(\uad50\uc6d0\uc704\uc6d0)\u2026'), \ud654\uba74\uc5d0\uc11c\ub294
+// \ud558\uc774\ud508\uc73c\ub85c \uace0\uccd0 \uadf8\ub9ac\ubbc0\ub85c \uacac\uc904 \ub54c\ub3c4 \uac19\uc740 \uae00\uc790\ub85c \ub9de\ucda5\ub2c8\ub2e4.
+const bare = (said) =>
+  String(said || "")
+    .replace(/[\u2574\u2576\u2500\u2501]/g, "-")
+    .replace(/[\s\u200b\u00a0\u00ad\u2060]+/g, "");
 
 // 표 한 그루의 모든 칸 글자입니다(칸 안에 든 표까지).
 function cellTexts(table) {
