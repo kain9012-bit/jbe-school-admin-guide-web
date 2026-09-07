@@ -416,10 +416,11 @@
     const ymd = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(
       now.getDate()
     ).padStart(2, "0")}`;
-    // 이 사이트는 주소가 '/' 하나로 고정된 화면입니다(탭·단계는 해시만 바꿔
-    // 경로가 안 바뀝니다). 그래서 '/'의 조회수가 곧 사이트 전체 방문수입니다.
+    // 편을 열면 주소에 '?chapter=…'가 붙어 경로가 편마다 달라집니다. 그래서
+    // '/' 한 경로만 세면 대부분의 방문이 빠집니다. 사이트 전체 합(TOTAL)을
+    // 읽어 모든 편의 방문을 더한 '누적'을 보여 줍니다.
     const read = (query) =>
-      fetch(`${GOAT}/counter/%2F.json${query}`)
+      fetch(`${GOAT}/counter/TOTAL.json${query}`)
         .then((res) => (res.ok ? res.json() : null))
         .then((json) => (json && typeof json.count === "string" ? json.count : null))
         .catch(() => null);
