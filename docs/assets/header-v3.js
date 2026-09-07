@@ -412,10 +412,15 @@
     const box = document.getElementById("visitor-count");
     if (!box) return;
     const GOAT = "https://jbe-guide.goatcounter.com";
-    const now = new Date();
-    const ymd = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(
-      now.getDate()
-    ).padStart(2, "0")}`;
+    const ymd = (d) =>
+      `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(
+        d.getDate()
+      ).padStart(2, "0")}`;
+    // GoatCounter는 실시간이 아니라 최대 4시간 캐시라, '오늘'은 반영이 늦어
+    // 0으로 보이기 쉽습니다. 그래서 이번 주(월~일) 방문으로 보여 줍니다.
+    // 이번 주 월요일 0시를 시작점으로 잡습니다(getDay: 0=일 … 6=토).
+    const monday = new Date();
+    monday.setDate(monday.getDate() - ((monday.getDay() + 6) % 7));
     // 편을 열면 주소에 '?chapter=…'가 붙어 경로가 편마다 달라집니다. 그래서
     // '/' 한 경로만 세면 대부분의 방문이 빠집니다. 사이트 전체 합(TOTAL)을
     // 읽어 모든 편의 방문을 더한 '누적'을 보여 줍니다.
@@ -424,10 +429,10 @@
         .then((res) => (res.ok ? res.json() : null))
         .then((json) => (json && typeof json.count === "string" ? json.count : null))
         .catch(() => null);
-    Promise.all([read(""), read(`?start=${ymd}`)]).then(([total, today]) => {
+    Promise.all([read(""), read(`?start=${ymd(monday)}`)]).then(([total, week]) => {
       if (!total) return; // 값이 없으면 그대로 숨겨 둡니다.
       // 단위(명/회)는 붙이지 않습니다 — 누적은 날짜값의 합이라 한쪽이 틀린 말이 됩니다.
-      box.innerHTML = `오늘 방문 <strong>${today ?? "-"}</strong> · 누적 <strong>${total}</strong>`;
+      box.innerHTML = `이번주 방문 <strong>${week ?? "-"}</strong> · 누적 <strong>${total}</strong>`;
       box.hidden = false;
     });
   }
