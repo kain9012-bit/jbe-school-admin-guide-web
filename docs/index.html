@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#0b50d0" />
     <title>학교행정업무 길라잡이 웹판</title>
     <link rel="stylesheet" href="vendor/krds/krds.min.css?v=80ac1fcd" />
-    <link rel="stylesheet" href="assets/styles-v2.css?v=a27c25b7" />
+    <link rel="stylesheet" href="assets/styles-v2.css?v=2f82d9c1" />
     <link rel="stylesheet" href="assets/header-v3.css?v=b393c943" />
     <link rel="stylesheet" href="assets/workflow-faithful.css?v=cdee28df" />
     <link rel="stylesheet" href="assets/semantic-workflow.css?v=1c36debd" />
@@ -22,6 +22,7 @@
         <div class="toggle-head">
           <div class="inner">
             <span class="nuri-txt">이 누리집은 학교행정업무 길라잡이의 웹 시범판입니다.</span>
+            <span class="visitor-count" id="visitor-count" hidden aria-live="polite"></span>
           </div>
         </div>
       </div>
@@ -287,13 +288,22 @@
     </dialog>
 
     <script src="vendor/krds/krds.min.js?v=579109fc"></script>
-    <script src="assets/asset-versions.js?v=faa04def"></script>
+    <script src="assets/asset-versions.js?v=b1e22a25"></script>
     <script src="assets/guide-config.js?v=3965322c"></script>
     <script src="assets/guide-search-index.js?v=d82d7fff"></script>
     <script src="assets/search-query.js?v=924289d8"></script>
     <script src="assets/form-assets.js?v=be7335b8"></script>
     <script src="assets/structured-details.js?v=9ca7abfe"></script>
-    <script src="assets/header-v3.js?v=774d76e5"></script>
+    <script src="assets/header-v3.js?v=228119e7"></script>
     <script src="assets/guide-bootstrap-workflow.js?v=4b93fb7c"></script>
+
+    <!-- 방문 통계(GoatCounter). 쿠키·개인식별자를 쓰지 않습니다.
+         jbe-guide.goatcounter.com 사이트를 만들고 설정에서
+         'Allow adding visitor counts on your website'를 켜야 값이 옵니다. -->
+    <script
+      data-goatcounter="https://jbe-guide.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"
+    ></script>
   </body>
 </html>

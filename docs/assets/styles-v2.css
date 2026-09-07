@@ -106,11 +106,36 @@ input {
   min-height: 3.6rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
 }
 
 #krds-masthead .nuri-txt {
   color: var(--guide-muted);
   font-size: 1.4rem;
+}
+
+/* 우측 상단 조회수(GoatCounter). 값이 오기 전엔 hidden으로 숨어 있습니다. */
+.visitor-count {
+  flex: none;
+  color: var(--guide-muted);
+  font-size: 1.35rem;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.visitor-count strong {
+  color: var(--guide-ink);
+  font-weight: 700;
+}
+
+@media (max-width: 520px) {
+  /* 좁은 화면에서는 안내 문구를 접고 조회수만 남깁니다. */
+  #krds-masthead .nuri-txt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }
 
 #krds-header {

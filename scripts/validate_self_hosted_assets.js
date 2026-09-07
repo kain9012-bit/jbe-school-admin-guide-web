@@ -31,13 +31,20 @@ for (const file of assetFiles) {
 }
 
 // 2. HTML이 외부 스타일·스크립트·글꼴을 불러오지 않아야 합니다.
+//
+// 딱 하나 예외: 방문 통계(GoatCounter, gc.zgo.at). 조회수 집계·표시에만 쓰고,
+// 외부 접속이 막힌 내부망에서는 값을 못 받아 조회수만 조용히 숨을 뿐 화면은
+// 온전히 뜹니다(header-v3.js setupVisitorCount의 실패 처리). 그래서 이 원칙의
+// 목적('접속이 막혀도 화면이 온전')을 해치지 않으므로 이 한 곳만 허용합니다.
 const htmlFiles = walk(docs, (name) => name.endsWith(".html"));
 const remoteTagPattern = /<(?:link|script)[^>]*(?:href|src)\s*=\s*["'](https?:)?\/\/[^"']+["'][^>]*>/gi;
+const ALLOWED_REMOTE = [/gc\.zgo\.at/, /goatcounter\.com/];
 
 for (const file of htmlFiles) {
   const source = fs.readFileSync(file, "utf8");
   const matches = source.match(remoteTagPattern) || [];
   for (const match of matches) {
+    if (ALLOWED_REMOTE.some((allowed) => allowed.test(match))) continue;
     problems.push(`${path.relative(root, file)}: 외부 자원 태그 ${match.slice(0, 80)}`);
   }
 }

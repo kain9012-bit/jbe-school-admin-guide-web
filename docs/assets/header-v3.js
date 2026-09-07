@@ -404,5 +404,33 @@
   }
   setupToTop();
 
+  // 우측 상단 조회수 — GoatCounter 공개 카운터를 읽어 옵니다(k-edu-policy와
+  // 같은 방식). 쿠키·개인식별자를 쓰지 않습니다. 응답은 최대 4시간 캐시되어
+  // 오늘 값은 조금 늦게 반영됩니다. 값을 못 읽으면 조용히 숨겨 둡니다 —
+  // 통계가 없다고 화면이 망가질 이유는 없습니다.
+  function setupVisitorCount() {
+    const box = document.getElementById("visitor-count");
+    if (!box) return;
+    const GOAT = "https://jbe-guide.goatcounter.com";
+    const now = new Date();
+    const ymd = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(
+      now.getDate()
+    ).padStart(2, "0")}`;
+    // 이 사이트는 주소가 '/' 하나로 고정된 화면입니다(탭·단계는 해시만 바꿔
+    // 경로가 안 바뀝니다). 그래서 '/'의 조회수가 곧 사이트 전체 방문수입니다.
+    const read = (query) =>
+      fetch(`${GOAT}/counter/%2F.json${query}`)
+        .then((res) => (res.ok ? res.json() : null))
+        .then((json) => (json && typeof json.count === "string" ? json.count : null))
+        .catch(() => null);
+    Promise.all([read(""), read(`?start=${ymd}`)]).then(([total, today]) => {
+      if (!total) return; // 값이 없으면 그대로 숨겨 둡니다.
+      // 단위(명/회)는 붙이지 않습니다 — 누적은 날짜값의 합이라 한쪽이 틀린 말이 됩니다.
+      box.innerHTML = `오늘 방문 <strong>${today ?? "-"}</strong> · 누적 <strong>${total}</strong>`;
+      box.hidden = false;
+    });
+  }
+  setupVisitorCount();
+
   renderChapterGrid();
 })();
