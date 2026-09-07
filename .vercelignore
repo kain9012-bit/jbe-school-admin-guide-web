@@ -1,0 +1,13 @@
+# Vercel에는 가벼운 웹사이트(docs, 다운로드 제외)만 올립니다.
+# 무거운 원문 파일(docs/downloads, 288MB)은 GitHub Pages가 서빙하고
+# vercel.json의 redirects가 그쪽으로 넘깁니다(무료 한도 100MB 회피).
+docs/downloads
+
+# 서빙에 필요 없는 것들 — 업로드에서 뺍니다.
+node_modules
+source
+scripts
+tmp
+*.log
+행정업무 길라잡이 hwpx
+행정업무 길라잡이 pdf
