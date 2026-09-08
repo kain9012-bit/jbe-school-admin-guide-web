@@ -2,6 +2,10 @@
   "use strict";
 
   const data = window.CHAPTER1_DATA;
+  // PDF 원본이 있는 곳(리다이렉트를 건너뛰고 직접 가리킬 주소). vercel.json의
+  // /downloads/* 리다이렉트 대상에서 'downloads/' 앞부분과 같아야 합니다.
+  const PDF_DIRECT_BASE =
+    "https://kain9012-bit.github.io/jbe-school-admin-guide-web/";
   const activeChapter =
     window.ACTIVE_GUIDE_CHAPTER || { id: "01", label: "제1편", title: "행정업무 및 보안" };
   const allChapterSearchIndex = Array.isArray(window.GUIDE_SEARCH_INDEX)
@@ -1413,8 +1417,20 @@
     sourceLink.hidden = !data.downloads.manual;
     if (data.downloads.manual) {
       const firstPage = Array.isArray(work.pdfPages) ? work.pdfPages[0] : null;
-      sourceLink.href =
-        firstPage > 0 ? `${data.downloads.manual}#page=${firstPage}` : data.downloads.manual;
+      if (firstPage > 0) {
+        // Vercel의 /downloads/* 는 GitHub Pages로 307 리다이렉트됩니다. 그런데
+        // 리다이렉트를 거치면 브라우저 PDF 뷰어가 주소 끝 #page= 조각을 버려
+        // 표지부터 열립니다. 그래서 쪽 이동이 필요할 때는 리다이렉트를 건너뛰고
+        // 원본(GitHub Pages)을 직접 가리켜 #page= 가 그대로 적용되게 합니다.
+        // (base는 vercel.json의 /downloads 리다이렉트 대상과 같게 유지하세요.)
+        const manual = data.downloads.manual;
+        const direct = /^https?:/.test(manual)
+          ? manual
+          : `${PDF_DIRECT_BASE}${manual.replace(/^\/+/, "")}`;
+        sourceLink.href = `${direct}#page=${firstPage}`;
+      } else {
+        sourceLink.href = data.downloads.manual;
+      }
     }
 
     const prevButton = byId("prev-step");
