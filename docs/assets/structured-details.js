@@ -1661,7 +1661,18 @@
       pieces.push(
         folded ||
           markCellLists(
-            spannedTableMarkup(caption, headerCells, table.rows, table.widths, 0, table.picture),
+            spannedTableMarkup(
+              caption,
+              headerCells,
+              table.rows,
+              table.widths,
+              0,
+              table.picture,
+              undefined,
+              // 열이 하나뿐인 안내 표(제13편 '소방시설 의무설치')는 첫 줄만
+              // 머리이고 아래 줄은 본문입니다(table.headOnly).
+              Boolean(table.headOnly)
+            ),
             table
           )
       );
