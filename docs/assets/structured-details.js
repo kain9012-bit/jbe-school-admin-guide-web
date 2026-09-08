@@ -747,7 +747,11 @@
       bands.forEach((band, at) => {
         // 접힌 절차는 다른 표와 한 줄로 잇지 않습니다. 이으면 단이 뒤섞입니다.
         if (!lane || folded) {
-          lane = { cards: [], fold: null };
+          // 단마다 제목 줄이 있는 흐름도(flow.titles — 제15편 교육급여 바우처
+          // 신청 절차의 '교육활동지원비 바우처 신청 절차' / '한국장학재단의
+          // … 영역 구분')는 그 제목을 단 위에 답니다.
+          const titles = Array.isArray(chain.titles) ? chain.titles : [];
+          lane = { cards: [], fold: null, title: String(titles[at] || "").trim() };
           lanes.push(lane);
         }
         const mine = rows.slice(band[0], band[1] + 1);
@@ -992,7 +996,12 @@
     };
 
     return shown
-      .map((one) => laneMarkup(one) + (one.fold ? foldMarkup(one.fold) : ""))
+      .map(
+        (one) =>
+          (one.title ? `<div class="source-flow-caption">${escapeHtml(one.title)}</div>` : "") +
+          laneMarkup(one) +
+          (one.fold ? foldMarkup(one.fold) : "")
+      )
       .join("");
   }
 
@@ -1094,9 +1103,15 @@
       const at = html.indexOf(opener, from);
       if (at < 0) break;
       const inHead = html.lastIndexOf("<th", at) > html.lastIndexOf("<td", at);
+      // 원문 기호가 하나도 없는 목록(줄만 바꾼 '교육감 / 학교장')은 항목이
+      // 아니므로 화면이 찍는 점(·)을 세우지 않습니다.
+      const end = html.indexOf("</ul>", at);
+      const body = end < 0 ? html.slice(at) : html.slice(at, end);
+      const marks = body.match(/<span class="source-cell-mark" aria-hidden="true">([^<]*)<\/span>/g) || [];
+      const unmarked = marks.length > 0 && marks.every((one) => />·<\/span>$/.test(one));
       out +=
         html.slice(from, at) +
-        (inHead
+        (inHead || unmarked
           ? '<ul class="source-cell-list" data-marks="never">'
           : '<ul class="source-cell-list" data-marks="always" data-wrapped="1">');
       from = at + opener.length;
@@ -1668,7 +1683,9 @@
               table.widths,
               0,
               table.picture,
-              undefined,
+              // 머리글 줄이 없는 표(제14편 '학교회계 운영 일반원칙' — 첫 줄부터
+              // 원칙 이름 | 설명)는 첫 줄을 굵히지 않습니다(table.plain).
+              Boolean(table.plain),
               // 열이 하나뿐인 안내 표(제13편 '소방시설 의무설치')는 첫 줄만
               // 머리이고 아래 줄은 본문입니다(table.headOnly).
               Boolean(table.headOnly)
@@ -4560,6 +4577,72 @@
     };
   }
 
+  // 제19편 학교 폐지 '물품 처리 절차'(c19-w06-b4)만 전용으로 그립니다.
+  // 원문은 기간 띠 둘(학교 폐지 확정 후~익년 2월 / 익년 3월~6월) 아래
+  // 상자 다섯이 ≫로 이어지고, 셋째 자리는 '사용불가능'·'사용 가능' 상자
+  // 둘이 위아래로 쌓인 그림입니다. 상자마다 [이름 / 할 일 / 맡은 곳] 세 줄.
+  function renderClosedSchoolGoods(block) {
+    const table = (block.tables || [])[0];
+    if (!table || !Array.isArray(table.rows)) return null;
+    const said = (cell) => String((cell && cell.text) || "").trim();
+    const grid = [table.headers || [], ...table.rows];
+    const at = (row, column) => grid[row]?.find((cell) => (cell.column ?? 0) === column);
+    // 첫 자리: 안쪽 표(재물조사 ≫ 불용 결정).
+    const innerCell = grid.slice(1).flatMap((row) => row).find((cell) => (cell.tables || []).length);
+    const inner = innerCell && innerCell.tables[0];
+    if (!inner) return null;
+    const innerGrid = [inner.headers || [], ...(inner.rows || [])];
+    const column = (rows, col) => rows.map((row) => said(row.find((cell) => (cell.column ?? 0) === col))).filter(Boolean);
+    const box = (lines) =>
+      lines.length
+        ? `<span class="source-flow-step c19-goods-box"><span class="c19-goods-name">${escapeHtml(lines[0])}</span>` +
+          (lines.length > 2 ? `<span class="c19-goods-what">${escapeHtml(lines.slice(1, -1).join("\n"))}</span>` : "") +
+          (lines.length > 1 ? `<span class="c19-goods-who">${escapeHtml(lines[lines.length - 1])}</span>` : "") +
+          `</span>`
+        : "";
+    const link = (mark) => `<span class="source-flow-link c19-goods-link" aria-hidden="true">${escapeHtml(mark)}</span>`;
+    const steps = [
+      { box: box(column(innerGrid, 0)) },
+      { box: box(column(innerGrid, 2)), mark: "≫" },
+      {
+        box:
+          `<span class="source-flow-stack">` +
+          box([said(at(2, 3)), said(at(3, 3)), said(at(4, 3))]) +
+          box([said(at(6, 3)), said(at(7, 3)), said(at(8, 3))]) +
+          `</span>`,
+        mark: "≫",
+      },
+      { box: box([said(at(6, 5)), said(at(7, 5)), said(at(8, 5))]), mark: said(at(7, 4)) || "≫" },
+      { box: box([said(at(6, 7)), said(at(7, 7)), said(at(8, 7))]), mark: said(at(7, 6)) || "≫" },
+    ];
+    const periods = (grid[0] || []).filter(said).map((cell) => escapeHtml(said(cell)));
+    const flow =
+      `<div class="c19-goods">` +
+      `<div class="c19-goods-periods"><span>${periods[0] || ""}</span><span>${periods[1] || ""}</span></div>` +
+      `<div class="source-flow c19-goods-flow" data-source="chain" data-steps="5">` +
+      steps
+        .map(
+          (step, index) =>
+            `<span class="source-flow-item">${
+              index ? link(step.mark) : `<span class="source-flow-link" data-first="1" aria-hidden="true">≫</span>`
+            }${step.box}</span>`
+        )
+        .join("") +
+      `</div></div>`;
+    const raw = String(block.body || "").split(/\r?\n/);
+    const start = Number(table.lineStart) || 0;
+    const count = Number(table.lineCount) || 0;
+    const intro = (lines) => {
+      const kept = lines.filter((line) => line.trim());
+      return kept.length ? `<div class="source-structured-intro">${bodyItemsMarkup(kept)}</div>` : "";
+    };
+    return {
+      summary: String(block.title || "물품 처리 절차"),
+      html: `${intro(raw.slice(0, start))}${flow}${intro(raw.slice(start + count))}`,
+      type: "flow",
+    };
+  }
+
   function render(block) {
     const body = String(block?.body || "");
     if (!body) return { summary: "전체 내용 보기", html: "", type: "text" };
@@ -4575,6 +4658,10 @@
     if (String(block.id || "") === "c11-w07-b13") {
       const fee = renderUsageFeeExamples(block);
       if (fee) return fee;
+    }
+    if (String(block.id || "") === "c19-w06-b4") {
+      const goods = renderClosedSchoolGoods(block);
+      if (goods) return goods;
     }
 
     // 편 앞머리 '한눈에 보기'도 여느 지면과 똑같이 원문 표 그대로 그립니다.

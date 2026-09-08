@@ -3352,3 +3352,68 @@
     border-bottom: 1px solid var(--guide-line);
   }
 }
+
+/* 단마다 제목이 있는 흐름도의 제목 줄(flow.titles — 제15편 바우처 신청 절차). */
+.source-flow-caption {
+  margin: 0.8rem 0 -0.2rem;
+  padding: 0.5rem 1rem;
+  background: var(--guide-blue-pale);
+  border-radius: 0.6rem;
+  color: var(--guide-blue-dark);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+/* 제19편 학교 폐지 '물품 처리 절차'(renderClosedSchoolGoods). */
+.c19-goods-periods {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 0.4rem;
+  margin: 0.4rem 0 0.2rem;
+}
+
+.c19-goods-periods > span {
+  padding: 0.5rem 1rem;
+  background: var(--guide-blue-pale);
+  border-radius: 0.6rem;
+  color: var(--guide-blue-dark);
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.c19-goods-flow .source-flow-item {
+  flex: 1 1 18%;
+}
+
+.c19-goods-box {
+  padding: 0;
+  text-align: center;
+  font-size: 1.35rem;
+}
+
+.c19-goods-name {
+  padding: 0.7rem 0.6rem;
+  font-weight: 700;
+  background: #f7f8fa;
+  border-bottom: 1px solid var(--guide-line);
+}
+
+.c19-goods-what {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 0.6rem;
+  white-space: pre-line;
+}
+
+.c19-goods-who {
+  padding: 0.6rem;
+  color: var(--guide-muted);
+  border-top: 1px solid var(--guide-line);
+}
+
+.c19-goods-link {
+  font-size: 1.5rem;
+}
