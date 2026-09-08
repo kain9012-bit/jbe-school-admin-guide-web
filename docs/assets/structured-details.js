@@ -263,8 +263,12 @@
     const lists = [...where.querySelectorAll(".source-cell-list")];
     // 먼저 기호를 모두 내립니다. 기호를 세운 채로 재면 기호가 밀어낸 만큼
     // 글이 더 접혀, '접혔으니 기호가 필요하다'가 저 혼자 참이 됩니다.
-    lists.forEach((list) => list.removeAttribute("data-wrapped"));
+    lists.forEach((list) => {
+      if (list.dataset.marks !== "always") list.removeAttribute("data-wrapped");
+    });
     const wrapped = lists.map((list) => {
+      // 원문 기호를 늘 세우라고 한 표(table.marks: "always")는 재지 않습니다.
+      if (list.dataset.marks === "always") return true;
       const items = [...list.children];
       const oneLine = parseFloat(getComputedStyle(list).lineHeight) || 20;
       // 아주 좁은 칸에는 기호를 세우지 않습니다. 기호와 사이 여백이 글자
@@ -1103,8 +1107,19 @@
         false,
         sameShape || at > 0
       ).replace('<table class="source-criteria-table"', '<table data-folded="1" class="source-criteria-table"');
+      // 세로 절차 카드에서 원문 기호(◦ - ※)를 늘 세우라고 한 표입니다
+      // (제8편 '3. 채용 절차'). 여느 칸은 항목이 줄을 넘어갈 때만 기호를
+      // 세우는데(showCellMarks), 한 절차의 상자마다 기호가 있다 없다 하면
+      // 원문과 달라 보입니다.
+      const marked =
+        table.marks === "always"
+          ? drawn.replace(
+              /<ul class="source-cell-list">/g,
+              '<ul class="source-cell-list" data-marks="always" data-wrapped="1">'
+            )
+          : drawn;
       const fold = marks[at];
-      if (!fold || !fold.length || at === bands.length - 1) return drawn;
+      if (!fold || !fold.length || at === bands.length - 1) return marked;
       // 화살표는 원문이 놓은 열 자리에 세웁니다. 나란한 절차 둘이 함께 접힌
       // 자리(제16편 '1인수의 / 2인수의')나 한 줄기가 둘로 갈리는 자리
       // (제13편 '2. 유지관리자 선임')를 하나로 뭉치면 한쪽이 사라집니다.
@@ -1126,7 +1141,7 @@
             )}</span>`
         )
         .join("");
-      return `${drawn}<div class="source-table-fold" aria-hidden="true">${strip}</div>`;
+      return `${marked}<div class="source-table-fold" aria-hidden="true">${strip}</div>`;
     });
     return parts.join("");
   }
