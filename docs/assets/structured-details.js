@@ -1237,7 +1237,7 @@
       <div class="source-table-scroll" data-picture="${drawing ? 1 : 0}">
         <table class="source-criteria-table" style="--table-columns: ${columnCount}; --table-min: ${Math.round(
           needs
-        )}px" data-picture="${drawing ? 1 : 0}" data-wide="${
+        )}px" data-picture="${drawing ? 1 : 0}"${headOnly ? ' data-head-only="1"' : ""} data-wide="${
           columnCount >= 7 ? 1 : 0
         }" data-scroll="${scrolls ? 1 : 0}" data-column-layout="${widths
           .map((width) => Number(width).toFixed(1))

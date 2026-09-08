@@ -852,6 +852,14 @@
   word-break: keep-all;
 }
 
+/* 첫 줄만 머리인 상자(flow.headOnly — 제8편 '7. 장애인 노동자 채용')는
+   머리 줄이 제 글 높이만 차지합니다. 나란한 상자는 키를 맞추는데, 그때
+   남는 높이가 줄마다 나뉘어 머리 줄(기관,학교·공단) 높이가 상자마다
+   달라지던 것을 막습니다. 남는 높이는 아래 내용 줄이 가집니다. */
+.source-flow-step[data-table="1"] .source-criteria-table[data-head-only="1"] tr:first-child {
+  height: 1px;
+}
+
 /* 첫 상자 앞에는 자리만 두고 표시는 감춥니다. 줄마다 상자의 왼쪽 끝이
    나란히 서게 하려는 것입니다. */
 .source-flow-link[data-first="1"] {
