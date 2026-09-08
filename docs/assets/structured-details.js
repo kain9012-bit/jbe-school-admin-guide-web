@@ -785,7 +785,9 @@
           );
           lane.cards.push({ grid, width, empty, label, headOnly: Boolean(chain.headOnly) });
         });
-        if (folded && at < bands.length - 1) {
+        // 단이 서로 다른 경우(갈래)라 잇지 않는 표는 접힌 자리를 두지
+        // 않습니다(flow.separate — 제8편 '7. 장애인 노동자 채용'의 두 경우).
+        if (folded && at < bands.length - 1 && !chain.separate) {
           // 화살표가 여럿이면 저마다 제 단계 밑에 섭니다. 나란한 절차 둘이
           // 함께 접힌 자리를 하나로 뭉치면 한쪽이 사라집니다.
           const marks = (table.folds || [])[at] || [];
@@ -4304,6 +4306,90 @@
     };
   }
 
+  // 제8편 교육공무직원 채용 '6. 촉탁직 노동자 (재)고용'(c08-w03-b10)만 전용으로
+  // 그립니다. 윗단(적격)과 아랫단(부적격) 두 줄기의 앞 두 단계(고용 적격성
+  // 평가·인사위원회 심의)가 원문에서 두 단을 세로로 걸쳐 있습니다. 절차 카드
+  // 렌더러(flowMarkup)는 단마다 따로 줄을 그려 상자가 단을 넘어 걸치지 못하므로,
+  // 여기서는 한 격자에 두 단을 놓고 앞 두 상자를 아래까지 늘립니다. 상자·화살표
+  // 모양(.source-flow-step / .source-flow-link)은 여느 절차 카드와 같습니다.
+  function renderChoktakFlow(block) {
+    const table = (block.tables || [])[0];
+    if (!table || !Array.isArray(table.rows)) return null;
+    const widths = Array.isArray(table.widths) ? table.widths : [];
+    const grid = [table.headers || [], ...table.rows];
+    const top = grid[0] || [];
+    const bottom = grid[2] || [];
+    const steps = [0, 2, 4, 6, 8];
+    const said = (row, column) =>
+      String(((row || []).find((cell) => (cell.column ?? 0) === column) || {}).text || "").trim();
+    // 화살표 열의 글(적격)은 화살표 위에 답니다. 화살표 글자만 걷어 냅니다.
+    const labelOf = (row, column) =>
+      said(row, column).replace(/[⇨⇦⇩⇧⇒⇐→←↓↑▶►▼➡≫]/gu, "").trim();
+    const tracks = steps
+      .map((column) => `auto ${Number(widths[column] || 1).toFixed(2)}fr`)
+      .join(" ");
+    const linkCol = (at) => at * 2 + 1;
+    const cardCol = (at) => at * 2 + 2;
+    const link = (at, row, label, first) =>
+      `<span class="source-flow-link"${first ? ' data-first="1"' : ""}${
+        label ? ' data-label="1"' : ""
+      } style="grid-row:${row};grid-column:${linkCol(at)}" aria-hidden="true">${
+        label ? `<span class="source-flow-link-label">${escapeHtml(label)}</span>` : ""
+      }⇨</span>`;
+    const card = (at, rows, text) =>
+      `<span class="source-flow-step" style="grid-row:${rows};grid-column:${cardCol(at)}">${cellMarkup(
+        cellLines(unwrap(text))
+      )}</span>`;
+
+    const pieces = [];
+    steps.forEach((column, at) => {
+      const text = said(top, column);
+      if (!text) return;
+      // 앞 두 단계는 두 단을 세로로 걸칩니다(원문 rowSpan 3).
+      const tall = (top.find((cell) => (cell.column ?? 0) === column) || {}).rowSpan > 1;
+      pieces.push(link(at, 1, labelOf(top, column - 1), at === 0));
+      pieces.push(card(at, tall ? "1 / 4" : "1", text));
+    });
+    // 접힌 자리: 윗단 조회 상자 아래 ⇩ (부적격).
+    const turn = grid[1] || [];
+    turn.forEach((cell) => {
+      const text = String(cell.text || "").trim();
+      const at = steps.indexOf(cell.column ?? -1);
+      if (!text || at < 0 || !/[⇩↓]/u.test(text)) return;
+      pieces.push(
+        `<span class="source-flow-turn" style="grid-row:2;grid-column:${cardCol(at)}" aria-hidden="true">${escapeHtml(
+          text
+        )}</span>`
+      );
+    });
+    steps.forEach((column, at) => {
+      const text = said(bottom, column);
+      if (!text || arrowOnly(text)) return;
+      pieces.push(link(at, 3, labelOf(bottom, column - 1), false));
+      pieces.push(card(at, "3", text));
+    });
+
+    const flow =
+      `<div class="source-flow source-choktak-flow" data-source="chain" data-steps="${steps.length}" ` +
+      `style="display:grid;grid-template-columns:${tracks};grid-template-rows:auto auto auto;` +
+      `align-items:stretch;gap:0.6rem 0.4rem">${pieces.join("")}</div>`;
+
+    const raw = String(block.body || "").split(/\r?\n/);
+    const start = Number(table.lineStart) || 0;
+    const count = Number(table.lineCount) || 0;
+    const intro = (lines) => {
+      const kept = lines.filter((line) => line.trim());
+      return kept.length
+        ? `<div class="source-structured-intro">${bodyItemsMarkup(kept)}</div>`
+        : "";
+    };
+    return {
+      summary: String(block.title || "촉탁직 노동자 (재)고용"),
+      html: `${intro(raw.slice(0, start))}${flow}${intro(raw.slice(start + count))}`,
+      type: "flow",
+    };
+  }
+
   function render(block) {
     const body = String(block?.body || "");
     if (!body) return { summary: "전체 내용 보기", html: "", type: "text" };
@@ -4311,6 +4397,10 @@
     if (String(block.id || "") === "c08-w02-b4") {
       const jeongwon = renderJeongwonFlow(block);
       if (jeongwon) return jeongwon;
+    }
+    if (String(block.id || "") === "c08-w03-b10") {
+      const choktak = renderChoktakFlow(block);
+      if (choktak) return choktak;
     }
 
     // 편 앞머리 '한눈에 보기'도 여느 지면과 똑같이 원문 표 그대로 그립니다.
