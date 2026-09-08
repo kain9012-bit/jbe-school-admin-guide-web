@@ -158,11 +158,27 @@
   function bindChapterJump(link) {
     link.addEventListener("click", (event) => {
       event.preventDefault();
-      // 주소는 남겨 두되(뒤로가기·새로고침용) 스크롤은 우리가 맞춥니다.
-      if (location.hash !== "#chapters") {
-        history.replaceState(null, "", "#chapters");
-      }
+      // 같은 페이지 안에서 분야 목록으로 내려가는 것뿐이라, 주소(#chapters)는
+      // 남기지 않습니다. 주소를 바꾸면 (1) 스크롤일 뿐인데 페이지 이동처럼
+      // 보이고 (2) 그 상태에서 새로고침하면 맨 위(홈)로 돌아오지 않습니다.
       scrollToChapters();
+    });
+  }
+
+  // '자료 내려받기'도 같은 페이지 안 스크롤입니다. 기본 앵커(#downloads)는
+  // 주소를 바꾸므로 막고, 머리글 높이만큼 위를 비워 부드럽게 내려갑니다.
+  function bindDownloadsJump(link) {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const section = byId("downloads");
+      if (!section) return;
+      const header = document.querySelector("#krds-header");
+      const gap =
+        (header && getComputedStyle(header).position === "sticky"
+          ? header.getBoundingClientRect().height
+          : 0) + 16;
+      const y = section.getBoundingClientRect().top + window.scrollY - gap;
+      window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
     });
   }
 
@@ -381,6 +397,9 @@
       if (label) label.textContent = "업무 분야";
       bindChapterJump(mobileChapterLink);
     }
+    document
+      .querySelectorAll('.global-nav-item[href="#downloads"]')
+      .forEach((link) => bindDownloadsJump(link));
     document.querySelector(".guide-footer strong").textContent =
       "학교행정업무 길라잡이 웹판";
     const footerContext = document.querySelector(".guide-footer [data-current-chapter]");

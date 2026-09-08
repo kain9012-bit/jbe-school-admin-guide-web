@@ -35,7 +35,11 @@
   }
 
   function globalHomeHref() {
-    return `${location.href.split(/[?#]/)[0]}#overview`;
+    // 통합 홈은 주소에 해시를 남기지 않습니다. 예전에는 #overview를 붙여,
+    // 편에서 로고로 홈에 오면 주소에 #overview가 남았습니다. 홈에서 로고를
+    // 누를 때 도는 resetToHome은 이미 pathname만 남기므로, 그 표준 주소와
+    // 맞춰 여기서도 해시를 떼어 냅니다.
+    return location.href.split(/[?#]/)[0];
   }
 
   const searchIndex = Array.isArray(window.GUIDE_SEARCH_INDEX)
