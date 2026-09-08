@@ -3191,3 +3191,164 @@
     flex-wrap: wrap;
   }
 }
+
+/* 제11편 '3. 사용료 산출(예시)'(renderUsageFeeExamples)만의 상자입니다.
+   제목띠 아래 왼쪽에 층 그림과 조건, 오른쪽에 산출식, 맨 아래 참고. */
+.c11-fee {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.c11-fee-box {
+  border: 1px solid var(--guide-line);
+  border-radius: 0.8rem;
+  background: #fff;
+  overflow: hidden;
+}
+
+.c11-fee-title {
+  margin: 0;
+  padding: 0.9rem 1.4rem;
+  background: var(--guide-blue-pale);
+  color: var(--guide-blue-dark);
+  font-size: 1.45rem;
+  font-weight: 700;
+  border-bottom: 1px solid var(--guide-line);
+}
+
+.c11-fee-body {
+  display: grid;
+  grid-template-columns: minmax(0, 47fr) minmax(0, 53fr);
+}
+
+.c11-fee-figure {
+  padding: 1.2rem 1.4rem;
+  border-right: 1px solid var(--guide-line);
+}
+
+.c11-fee-figure-title {
+  margin-bottom: 0.8rem;
+  text-align: center;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--guide-ink);
+}
+
+.c11-fee-floors {
+  display: grid;
+  gap: 0.3rem;
+  margin: 0 auto 1rem;
+  max-width: 26rem;
+}
+
+.c11-fee-floor {
+  display: flex;
+  align-items: stretch;
+  gap: 0.6rem;
+}
+
+.c11-fee-floor-name {
+  flex: 0 0 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 1.3rem;
+  color: var(--guide-muted);
+}
+
+.c11-fee-floor-bar {
+  flex: 1 1 auto;
+  display: flex;
+  min-height: 2.6rem;
+}
+
+.c11-fee-floor-part {
+  border: 1px solid var(--guide-line);
+  background: #fff;
+  margin-left: -1px;
+}
+
+.c11-fee-floor-part:first-child {
+  margin-left: 0;
+}
+
+.c11-fee-floor-part[data-used="1"] {
+  background: var(--guide-blue-pale);
+  border-color: var(--guide-blue);
+  position: relative;
+  z-index: 1;
+}
+
+.c11-fee-terms {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 1rem;
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.c11-fee-terms dt {
+  color: var(--guide-muted);
+  white-space: nowrap;
+}
+
+.c11-fee-terms dd {
+  margin: 0;
+  color: var(--guide-ink);
+  font-weight: 700;
+}
+
+.c11-fee-calc {
+  padding: 1.2rem 1.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.c11-fee-note {
+  padding: 1rem 1.4rem;
+  border-top: 1px solid var(--guide-line);
+  background: #fbfcfd;
+  color: var(--guide-muted);
+}
+
+.c11-fee-list {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.c11-fee-note .c11-fee-list {
+  font-size: 1.3rem;
+}
+
+.c11-fee-list li {
+  display: grid;
+  grid-template-columns: 1.4rem minmax(0, 1fr);
+  gap: 0.3rem;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.c11-fee-list li[data-sub="1"] {
+  padding-left: 1.6rem;
+}
+
+.c11-fee-mark {
+  color: var(--guide-muted);
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .c11-fee-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .c11-fee-figure {
+    border-right: 0;
+    border-bottom: 1px solid var(--guide-line);
+  }
+}

@@ -4418,6 +4418,137 @@
     };
   }
 
+  // 제11편 '매점 및 자동판매기의 설치허가·위탁 > 3. 사용료 산출(예시)'
+  // (c11-w07-b13)만 전용으로 그립니다. 원문은 예시마다 한 상자입니다:
+  //   [제목 (예시1) …] / 왼쪽: 층 그림(<1층 일부 허가> 3층·2층·1층, 허가한
+  //   자리는 칠함) + 조건(면적·시가표준액…) / 오른쪽: 산출식 네 줄 /
+  //   아래: ◦ 참고 사항.
+  // 그림형 격자로 그리면 제목·그림·조건·산출식이 가운데 정렬로 흩어져
+  // 읽히지 않으므로, 상자 하나에 제목띠·그림·조건·산출식·참고를 자리 잡아
+  // 그립니다. 다른 표·편에는 영향이 없습니다.
+  function renderUsageFeeExamples(block) {
+    const tables = (block.tables || []).filter((table) => Array.isArray(table.rows));
+    if (!tables.length) return null;
+    const said = (cell) => String((cell && cell.text) || "").trim();
+    // '◦ 항목 / 이어지는 줄 / - 하위 항목' 꼴의 글을 목록으로 만듭니다.
+    // 기호는 원문 것을 그대로 세우고, 기호 없는 줄은 앞 항목에 잇습니다.
+    const listMarkup = (text) => {
+      const items = [];
+      for (const raw of String(text || "").split(/\r?\n/)) {
+        const line = raw.trim();
+        if (!line) continue;
+        const found = /^([◦○•▪·]|[-–])\s*(.*)$/u.exec(line);
+        if (found) items.push({ mark: found[1], text: found[2], sub: /^[-–]$/.test(found[1]) });
+        else if (items.length) items[items.length - 1].text += ` ${line}`;
+        else items.push({ mark: "", text: line, sub: false });
+      }
+      if (!items.length) return "";
+      return (
+        `<ul class="c11-fee-list">` +
+        items
+          .map(
+            (item) =>
+              `<li${item.sub ? ' data-sub="1"' : ""}><span class="c11-fee-mark" aria-hidden="true">${escapeHtml(
+                item.mark
+              )}</span><span>${escapeHtml(item.text)}</span></li>`
+          )
+          .join("") +
+        `</ul>`
+      );
+    };
+    // '이름: 값' 줄들을 두 열로 놓습니다(조건).
+    const termsMarkup = (text) =>
+      `<dl class="c11-fee-terms">` +
+      String(text || "")
+        .split(/\r?\n/)
+        .map((line) => line.trim())
+        .filter(Boolean)
+        .map((line) => {
+          const at = line.indexOf(":");
+          if (at < 0) return `<dt></dt><dd>${escapeHtml(line)}</dd>`;
+          return `<dt>${escapeHtml(line.slice(0, at).trim())}</dt><dd>${escapeHtml(
+            line.slice(at + 1).trim()
+          )}</dd>`;
+        })
+        .join("") +
+      `</dl>`;
+    // 층 그림: 줄마다 [층 이름][칸들…][빈 여백]. 허가한 자리(boxed)는 칠합니다.
+    const figureMarkup = (inner) => {
+      if (!inner) return "";
+      const widths = Array.isArray(inner.widths) ? inner.widths : [];
+      const rows = inner.rows || [];
+      const title = said((inner.headers || [])[0]);
+      const floors = [];
+      let terms = "";
+      for (const row of rows) {
+        const label = said(row.find((cell) => (cell.column ?? 0) === 0));
+        const parts = row.filter((cell) => (cell.column ?? 0) > 0);
+        if ((row[0]?.colSpan || 1) >= widths.length) {
+          // 한 줄이 통째로 한 칸이면 조건 글입니다.
+          terms = said(row[0]);
+          continue;
+        }
+        const last = parts[parts.length - 1];
+        // 맨 끝 빈 여백 칸은 그림 밖입니다.
+        const bars = parts.filter((cell) => !(cell === last && !said(cell) && !cell.boxed));
+        const span = bars.reduce(
+          (sum, cell) =>
+            sum +
+            widths
+              .slice(cell.column ?? 0, (cell.column ?? 0) + (cell.colSpan || 1))
+              .reduce((inner, value) => inner + Number(value || 0), 0),
+          0
+        ) || 1;
+        floors.push(
+          `<div class="c11-fee-floor"><span class="c11-fee-floor-name">${escapeHtml(label)}</span>` +
+            `<span class="c11-fee-floor-bar">` +
+            bars
+              .map((cell) => {
+                const width = widths
+                  .slice(cell.column ?? 0, (cell.column ?? 0) + (cell.colSpan || 1))
+                  .reduce((inner, value) => inner + Number(value || 0), 0);
+                return `<span class="c11-fee-floor-part"${
+                  cell.boxed ? ' data-used="1"' : ""
+                } style="flex:${((width / span) * 100).toFixed(2)} 0 0">${escapeHtml(said(cell))}</span>`;
+              })
+              .join("") +
+            `</span></div>`
+        );
+      }
+      return (
+        `<div class="c11-fee-figure">` +
+        (title ? `<div class="c11-fee-figure-title">${escapeHtml(title)}</div>` : "") +
+        `<div class="c11-fee-floors">${floors.join("")}</div>` +
+        (terms ? termsMarkup(terms) : "") +
+        `</div>`
+      );
+    };
+    const boxes = tables.map((table) => {
+      const grid = [table.headers || [], ...table.rows];
+      const title = said(grid[0].find((cell) => said(cell)));
+      const main = grid.find((row) => row.some((cell) => (cell.tables || []).length)) || [];
+      const figureCell = main.find((cell) => (cell.tables || []).length);
+      const calcCell = main.find((cell) => cell !== figureCell && said(cell));
+      const noteRow = grid[grid.length - 1] || [];
+      const note = noteRow === main ? "" : said(noteRow.find((cell) => said(cell)));
+      return (
+        `<section class="c11-fee-box">` +
+        `<h4 class="c11-fee-title">${escapeHtml(title)}</h4>` +
+        `<div class="c11-fee-body">` +
+        figureMarkup(figureCell && figureCell.tables[0]) +
+        `<div class="c11-fee-calc">${listMarkup(said(calcCell))}</div>` +
+        `</div>` +
+        (note ? `<div class="c11-fee-note">${listMarkup(note)}</div>` : "") +
+        `</section>`
+      );
+    });
+    return {
+      summary: String(block.title || "사용료 산출(예시)"),
+      html: `<div class="c11-fee">${boxes.join("")}</div>`,
+      type: "table",
+    };
+  }
+
   function render(block) {
     const body = String(block?.body || "");
     if (!body) return { summary: "전체 내용 보기", html: "", type: "text" };
@@ -4429,6 +4560,10 @@
     if (String(block.id || "") === "c08-w03-b10") {
       const choktak = renderChoktakFlow(block);
       if (choktak) return choktak;
+    }
+    if (String(block.id || "") === "c11-w07-b13") {
+      const fee = renderUsageFeeExamples(block);
+      if (fee) return fee;
     }
 
     // 편 앞머리 '한눈에 보기'도 여느 지면과 똑같이 원문 표 그대로 그립니다.
