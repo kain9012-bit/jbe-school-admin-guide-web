@@ -1702,6 +1702,13 @@
     link.hidden = true;
   });
 
+  // '자료 내려받기'도 편 화면에서는 숨깁니다. 이 편의 원본은 우측 상단
+  // '원문 PDF' 단추로 바로 보고, 이 링크를 누르면 개요(인트로) 화면으로
+  // 되돌아가 버려 오히려 흐름을 끊습니다. 홈에서는 그대로 보입니다.
+  document.querySelectorAll('.global-nav-item[href="#downloads"]').forEach((link) => {
+    link.hidden = true;
+  });
+
   ensureFormDialog();
   renderSearchExamples();
   renderRoute();
