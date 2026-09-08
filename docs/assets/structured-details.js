@@ -1141,7 +1141,10 @@
             )}</span>`
         )
         .join("");
-      return `${marked}<div class="source-table-fold" aria-hidden="true">${strip}</div>`;
+      // 화살표 줄을 바싹 붙이라고 한 표(table.foldGap: "tight")는 위아래
+      // 상자 사이 여백을 줄입니다(제8편 '3. 채용 절차').
+      const tight = table.foldGap === "tight" ? ' data-tight="1"' : "";
+      return `${marked}<div class="source-table-fold"${tight} aria-hidden="true">${strip}</div>`;
     });
     return parts.join("");
   }
