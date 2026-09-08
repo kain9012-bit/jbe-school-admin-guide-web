@@ -268,7 +268,9 @@
     });
     const wrapped = lists.map((list) => {
       // 원문 기호를 늘 세우라고 한 표(table.marks: "always")는 재지 않습니다.
+      // 그 표의 이름칸(never)도 재지 않고 기호를 세우지 않습니다.
       if (list.dataset.marks === "always") return true;
+      if (list.dataset.marks === "never") return false;
       const items = [...list.children];
       const oneLine = parseFloat(getComputedStyle(list).lineHeight) || 20;
       // 아주 좁은 칸에는 기호를 세우지 않습니다. 기호와 사이 여백이 글자
@@ -1078,6 +1080,35 @@
     `;
   }
 
+  // 원문 기호(◦ - ※)를 늘 세우라고 한 표(table.marks: "always")의 칸 목록에
+  // 표시를 답니다. 여느 칸은 항목이 줄을 넘어갈 때만 기호를 세우는데
+  // (showCellMarks), 한 표 안에서 칸마다 기호가 있다 없다 하면 원문과 달라
+  // 보입니다. 이름칸(th)의 줄바꿈은 항목이 아니므로 거기서는 기호를 세우지
+  // 않습니다(제10편 '5. 심의사항'의 '전북특별자치도 / 도립학교 운영위원회 …').
+  function markCellLists(html, table) {
+    if (!table || table.marks !== "always") return html;
+    const opener = '<ul class="source-cell-list">';
+    let out = "";
+    let from = 0;
+    for (;;) {
+      const at = html.indexOf(opener, from);
+      if (at < 0) break;
+      const inHead = html.lastIndexOf("<th", at) > html.lastIndexOf("<td", at);
+      out +=
+        html.slice(from, at) +
+        (inHead
+          ? '<ul class="source-cell-list" data-marks="never">'
+          : '<ul class="source-cell-list" data-marks="always" data-wrapped="1">');
+      from = at + opener.length;
+    }
+    // '[초등학교]'·'[유치원]'처럼 괄호로 묶은 작은 제목 줄은 항목이 아니므로
+    // 화면이 세우는 점(·)을 찍지 않습니다.
+    return (out + html.slice(from)).replace(
+      /<li><span class="source-cell-mark" aria-hidden="true">·<\/span><span class="source-cell-text">(\[[^\]<]+\])<\/span><\/li>/g,
+      '<li class="source-cell-plain"><span class="source-cell-text">$1</span></li>'
+    );
+  }
+
   function foldedTableMarkup(caption, table) {
     const bands = Array.isArray(table.bands) ? table.bands : null;
     if (!bands || bands.length < 2 || table.picture) return "";
@@ -1113,13 +1144,7 @@
       // (제8편 '3. 채용 절차'). 여느 칸은 항목이 줄을 넘어갈 때만 기호를
       // 세우는데(showCellMarks), 한 절차의 상자마다 기호가 있다 없다 하면
       // 원문과 달라 보입니다.
-      const marked =
-        table.marks === "always"
-          ? drawn.replace(
-              /<ul class="source-cell-list">/g,
-              '<ul class="source-cell-list" data-marks="always" data-wrapped="1">'
-            )
-          : drawn;
+      const marked = markCellLists(drawn, table);
       const fold = marks[at];
       if (!fold || !fold.length || at === bands.length - 1) return marked;
       // 화살표는 원문이 놓은 열 자리에 세웁니다. 나란한 절차 둘이 함께 접힌
@@ -1635,7 +1660,10 @@
       const folded = branchMarkup(caption, table) || foldedTableMarkup(caption, table);
       pieces.push(
         folded ||
-          spannedTableMarkup(caption, headerCells, table.rows, table.widths, 0, table.picture)
+          markCellLists(
+            spannedTableMarkup(caption, headerCells, table.rows, table.widths, 0, table.picture),
+            table
+          )
       );
     }
     flush();
