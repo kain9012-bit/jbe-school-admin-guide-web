@@ -1410,13 +1410,15 @@
     // 단계 화면의 원문 단추는 공식 매뉴얼 PDF를 가리킵니다. 표지부터가 아니라
     // 지금 보는 업무(절)가 시작하는 쪽부터 열리게 '#page=N'을 붙입니다.
     // (PDF 뷰어는 주소 끝 #page=N을 그 쪽부터 여는 규약으로 씁니다.)
-    // 쪽 번호는 원문 데이터에 절 단위(work.pdfPages)로만 있어, 그 절의 첫 쪽을
-    // 씁니다. 하위 소제목별 쪽 번호는 원문 데이터에 없어 여기까지가 한계입니다.
-    // 앞머리 '한눈에 보기'처럼 쪽 정보가 없으면 그냥 매뉴얼을 엽니다.
+    // 쪽 번호는 우선 쪽 지도(GUIDE_PDF_PAGES, 원문 PDF에서 업무별 시작 쪽을
+    // 뽑아 둔 것)에서 이 업무의 쪽을 찾고, 없으면 옛 데이터의 work.pdfPages를
+    // 씁니다. 둘 다 없으면(스캔본 편 등) 그냥 매뉴얼을 표지부터 엽니다.
     const sourceLink = byId("source-page-link");
     sourceLink.hidden = !data.downloads.manual;
     if (data.downloads.manual) {
-      const firstPage = Array.isArray(work.pdfPages) ? work.pdfPages[0] : null;
+      const pageMap = (window.GUIDE_PDF_PAGES || {})[activeChapter.id] || {};
+      const firstPage =
+        pageMap[work.id] || (Array.isArray(work.pdfPages) ? work.pdfPages[0] : null);
       if (firstPage > 0) {
         // Vercel의 /downloads/* 는 GitHub Pages로 307 리다이렉트됩니다. 그런데
         // 리다이렉트를 거치면 브라우저 PDF 뷰어가 주소 끝 #page= 조각을 버려
