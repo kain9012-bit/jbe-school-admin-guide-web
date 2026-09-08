@@ -4133,103 +4133,111 @@
   // 제8편 교육공무직원 인사 '1. 정원 관리 > 승인절차'(c08-w02-b4)만 전용으로
   // 그립니다. 이 흐름도는 단계 상자 사이 화살표 열에 정기/비정기 시기가 적혀
   // 있어, 흐름도 렌더러(flowMarkup)를 쓰면 화살표 열이 통째로 버려져 그 시기가
-  // 사라집니다. 그래서 원문대로 ① 위에 단계 라벨(<사전 승인 요구> 등),
-  // ② 단계 상자 5개, ③ 사이에 시기(위 정기·아래 비정기)를 단 ⇨ 화살표로
-  // 그립니다. 다른 표·다른 편에는 영향이 없습니다.
+  // 사라집니다. 그래서 여느 절차 카드와 같은 상자(.source-flow)로 그리되,
+  // ① 상자 위에 단계 라벨(<사전 승인 요구> 등), ② 단계 상자 5개, ③ 잇는 ⇨에
+  // 시기(위 정기·아래 비정기)를 답니다. 글자 크기는 다른 절차 카드와 같고,
+  // 원문처럼 다섯 상자가 한 줄에 섭니다(줄 바꿈·가로 스크롤 없음, CSS의
+  // .source-jeongwon-flow). 다른 표·다른 편에는 영향이 없습니다.
   function renderJeongwonFlow(block) {
     const table = (block.tables || [])[0];
     if (!table || !Array.isArray(table.rows)) return null;
     const widths = Array.isArray(table.widths) ? table.widths : [];
-    const grid = [table.headers || [], ...table.rows];
-    // 열 배치: 상자(열 범위)와 화살표 열을 원문 열 순서대로 늘어놓습니다.
-    const layout = [
-      { kind: "box", cols: [0, 0] },
-      { kind: "arrow", cols: [1, 1] },
-      { kind: "box", cols: [2, 2] },
-      { kind: "arrow", cols: [3, 3] },
-      { kind: "box", cols: [4, 5] },
-      { kind: "arrow", cols: [6, 6] },
-      { kind: "box", cols: [7, 7] },
-      { kind: "arrow", cols: [8, 8] },
-      { kind: "box", cols: [9, 9] },
+    const bodyRows = table.rows;
+    // 원문 열 순서대로, 상자(열 범위)와 그 앞의 화살표 열입니다.
+    const steps = [
+      { cols: [0, 0], arrow: null },
+      { cols: [2, 2], arrow: 1 },
+      { cols: [4, 5], arrow: 3 },
+      { cols: [7, 7], arrow: 6 },
+      { cols: [9, 9], arrow: 8 },
     ];
+    const said = (cell) => String((cell && cell.text) || "").trim();
     const cellsIn = (row, from, to) =>
-      row.filter((cell) => {
+      (row || []).filter((cell) => {
         const at = cell.column ?? 0;
         return at >= from && at <= to;
       });
-    const said = (cell) => String((cell && cell.text) || "").trim();
-    const trackWidth = ([from, to]) =>
-      widths.slice(from, to + 1).reduce((sum, value) => sum + Number(value || 0), 0) || 1;
-    const tracks = layout.map((one) => `${trackWidth(one.cols).toFixed(2)}fr`).join(" ");
+    const stepOf = (column) =>
+      steps.findIndex((one) => column >= one.cols[0] && column <= one.cols[1]);
 
-    // 1) 단계 라벨(머리글 줄): 라벨이 걸친 열이 든 트랙 범위에 얹습니다.
-    const trackOf = (column) =>
-      layout.findIndex((one) => column >= one.cols[0] && column <= one.cols[1]);
-    const labels = (table.headers || [])
-      .filter((cell) => said(cell))
-      .map((cell) => {
-        const from = cell.column ?? 0;
-        const to = from + (cell.colSpan || 1) - 1;
-        const a = trackOf(from);
-        const b = trackOf(to);
-        if (a < 0 || b < 0) return "";
-        return (
-          `<div style="grid-row:1;grid-column:${a + 1}/${b + 2};text-align:center;` +
-          `color:var(--guide-muted);font-size:0.86rem;padding-bottom:0.15rem;white-space:nowrap">` +
-          `${escapeHtml(said(cell))}</div>`
-        );
-      })
-      .join("");
+    // 단계 라벨(머리글 줄)은 그 라벨이 시작하는 상자 위에 얹습니다.
+    const labelAt = new Map();
+    for (const cell of table.headers || []) {
+      const text = said(cell);
+      if (!text) continue;
+      const from = cell.column ?? 0;
+      const to = from + (cell.colSpan || 1) - 1;
+      let at = -1;
+      for (let column = from; column <= to && at < 0; column += 1) at = stepOf(column);
+      if (at >= 0 && !labelAt.has(at)) labelAt.set(at, text);
+    }
 
-    // 2) 상자·화살표(본문 줄들): 상자는 열 범위 안의 글을 위에서 아래로 쌓고,
-    //    화살표는 위 줄(정기)·⇨·아래 줄(비정기)로 세웁니다.
-    const bodyRows = grid.slice(1);
-    const boxStyle =
-      "border:1px solid var(--guide-line);border-radius:8px;background:#fff;" +
-      "display:flex;flex-direction:column;justify-content:center;min-width:0;" +
-      "text-align:center;font-size:0.9rem;line-height:1.45;overflow:hidden;";
-    const boxPart = "padding:0.55rem 0.4rem;white-space:pre-line;word-break:keep-all;";
-    const arrowStyle =
-      "display:flex;flex-direction:column;align-items:center;justify-content:center;" +
-      "min-width:0;text-align:center;font-size:0.78rem;color:var(--guide-muted);line-height:1.35;";
-    const mark = `<span style="color:var(--guide-blue);font-size:1.3rem;line-height:1;margin:0.15rem 0" aria-hidden="true">⇨</span>`;
+    // 상자 폭은 원문 열 너비 비율입니다(flowMarkup과 같은 셈).
+    const given = steps.map(
+      ({ cols: [from, to] }) =>
+        widths.slice(from, to + 1).reduce((sum, value) => sum + Number(value || 0), 0) ||
+        100 / steps.length
+    );
+    const total = given.reduce((sum, one) => sum + one, 0) || 1;
+    const ROOM_FOR_GAPS = 96;
+    const shares = given.map((value) => (value / total) * ROOM_FOR_GAPS);
 
-    const pieces = layout.map((one, at) => {
-      const column = `grid-row:2;grid-column:${at + 1};`;
-      if (one.kind === "box") {
-        // 세로로 걸친 칸(rowSpan)은 첫 줄에만 적혀 있으므로 줄마다 모으면 됩니다.
-        const parts = bodyRows
-          .flatMap((row) => cellsIn(row, one.cols[0], one.cols[1]))
-          .map(said)
-          .filter((text) => text && !arrowOnly(text));
-        const inner = parts
-          .map(
-            (text, index) =>
-              `<div style="${boxPart}${index ? "border-top:1px solid var(--guide-line);" : ""}">` +
-              `${escapeHtml(text)}</div>`
-          )
-          .join("");
-        return `<div style="${column}${boxStyle}">${inner}</div>`;
+    const labelStyle =
+      "display:block;text-align:center;color:var(--guide-muted);font-size:1.25rem;" +
+      "line-height:1.4;min-height:1.75rem;white-space:nowrap;";
+    const whenStyle =
+      "display:block;text-align:center;color:var(--guide-muted);font-size:1.2rem;" +
+      "line-height:1.4;white-space:pre-line;word-break:keep-all;";
+    const linkStyle =
+      "flex-direction:column;justify-content:center;gap:0.2rem;padding-top:1.75rem;" +
+      "flex:0 0.4 auto;min-width:0;";
+
+    const items = steps.map((one, at) => {
+      // 세로로 걸친 칸(rowSpan)은 첫 줄에만 적혀 있으므로 줄마다 모으면 됩니다.
+      const parts = bodyRows
+        .flatMap((row) => cellsIn(row, one.cols[0], one.cols[1]))
+        .map(said)
+        .filter((text) => text && !arrowOnly(text));
+      const inner = parts
+        .map(
+          (text, index) =>
+            `<span style="display:block;text-align:center;white-space:pre-line;${
+              index ? "margin-top:0.6rem;" : ""
+            }">${escapeHtml(text)}</span>`
+        )
+        .join("");
+      let link;
+      if (one.arrow === null) {
+        link = `<span class="source-flow-link" data-first="1" aria-hidden="true">⇨</span>`;
+      } else {
+        const top = said(cellsIn(bodyRows[0], one.arrow, one.arrow)[0]);
+        const bottom = said(cellsIn(bodyRows[2], one.arrow, one.arrow)[0]);
+        link =
+          `<span class="source-flow-link" style="${linkStyle}">` +
+          (top && !arrowOnly(top) ? `<span style="${whenStyle}">${escapeHtml(top)}</span>` : "") +
+          `<span aria-hidden="true">⇨</span>` +
+          (bottom && !arrowOnly(bottom)
+            ? `<span style="${whenStyle}">${escapeHtml(bottom)}</span>`
+            : "") +
+          `</span>`;
       }
-      const top = said(cellsIn(bodyRows[0] || [], one.cols[0], one.cols[1])[0]);
-      const bottom = said(cellsIn(bodyRows[2] || [], one.cols[0], one.cols[1])[0]);
+      const label = labelAt.get(at) || "";
       return (
-        `<div style="${column}${arrowStyle}">` +
-        (top && !arrowOnly(top) ? `<span style="white-space:pre-line">${escapeHtml(top)}</span>` : "") +
-        mark +
-        (bottom && !arrowOnly(bottom) ? `<span style="white-space:pre-line">${escapeHtml(bottom)}</span>` : "") +
-        `</div>`
+        `<span class="source-flow-item" style="--flow-width: ${shares[at].toFixed(1)}%">` +
+        link +
+        `<span class="source-flow-stack" style="gap:0">` +
+        `<span style="${labelStyle}">${escapeHtml(label)}</span>` +
+        `<span class="source-flow-step">${inner}</span>` +
+        `</span></span>`
       );
     });
 
     const flow =
-      `<div class="source-jeongwon-flow" style="display:grid;grid-template-columns:${tracks};` +
-      `grid-template-rows:auto auto;column-gap:0.15rem;align-items:stretch;margin:0.5rem 0">` +
-      `${labels}${pieces.join("")}</div>`;
+      `<div class="source-flow source-jeongwon-flow" data-source="chain" data-steps="${steps.length}">` +
+      `${items.join("")}</div>`;
 
-    // 3) 표 앞뒤 본문(▸ 설명, - 항목, ※ 주의)은 여느 지면과 같은 계층 목록으로
-    //    그려 표와 함께 놓습니다. 표가 차지한 줄(lineStart~)만 흐름도로 바꿉니다.
+    // 표 앞뒤 본문(▸ 설명, - 항목, ※ 주의)은 여느 지면과 같은 계층 목록으로
+    // 그려 표와 함께 놓습니다. 표가 차지한 줄(lineStart~)만 흐름도로 바꿉니다.
     const raw = String(block.body || "").split(/\r?\n/);
     const start = Number(table.lineStart) || 0;
     const count = Number(table.lineCount) || 0;

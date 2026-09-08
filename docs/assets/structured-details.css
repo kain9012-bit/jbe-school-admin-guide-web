@@ -3138,3 +3138,25 @@
 .ch19-front th[scope="row"] .source-cell-list > li {
   display: block;
 }
+
+/* 제8편 '1. 정원 관리 > 승인절차'(renderJeongwonFlow)만의 절차 카드입니다.
+   원문처럼 다섯 상자가 한 줄에 서야 하므로 줄을 바꾸지 않고, 상자가 폭에
+   맞춰 줄어듭니다(가로 스크롤 없음). 좁은 화면에서만 여느 절차 카드처럼
+   한 상자씩 내려갑니다. */
+.source-jeongwon-flow {
+  flex-wrap: nowrap;
+}
+
+.source-jeongwon-flow .source-flow-item {
+  min-width: 0;
+}
+
+.source-jeongwon-flow .source-flow-step {
+  padding: 1rem 0.7rem;
+}
+
+@media (max-width: 767px) {
+  .source-jeongwon-flow {
+    flex-wrap: wrap;
+  }
+}
