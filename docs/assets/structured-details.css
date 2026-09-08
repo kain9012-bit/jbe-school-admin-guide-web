@@ -836,6 +836,22 @@
   line-height: 1;
 }
 
+/* 잇는 화살표에 글이 달린 자리입니다(제8편 '4. 평정 결과에 대한 이의신청 및
+   결정'의 이의 신청 ⇨ · 결과 통보 ⇨). 글을 화살표 위에 세웁니다. */
+.source-flow-link[data-label="1"] {
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.source-flow-link-label {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  text-align: center;
+  white-space: pre-line;
+  word-break: keep-all;
+}
+
 /* 첫 상자 앞에는 자리만 두고 표시는 감춥니다. 줄마다 상자의 왼쪽 끝이
    나란히 서게 하려는 것입니다. */
 .source-flow-link[data-first="1"] {

@@ -745,9 +745,31 @@
           lanes.push(lane);
         }
         const mine = rows.slice(band[0], band[1] + 1);
-        for (const [from, to] of chain.steps) {
+        chain.steps.forEach(([from, to], step) => {
           const grid = stepGrid(mine, from, to);
-          if (!grid.length) continue;
+          if (!grid.length) return;
+          // 잇는 화살표 열에 글이 적힌 자리입니다(제8편 '4. 평정 결과에 대한
+          // 이의신청 및 결정': 이의 신청 ⇨ · 결과 통보 ⇨). 화살표 글자만 걷어
+          // 내고 남는 글을 화살표 위에 답니다. 화살표뿐인 열(➡·≫)은 그대로
+          // 비어 있습니다.
+          const before = step ? chain.steps[step - 1][1] + 1 : -1;
+          const label =
+            step && before < from
+              ? mine
+                  .flatMap((row) =>
+                    row.filter((cell) => {
+                      const at = cell.column ?? 0;
+                      return at >= before && at < from;
+                    })
+                  )
+                  .map((cell) =>
+                    String(cell.text || "")
+                      .replace(/[⇨⇦⇩⇧⇒⇐→←↓↑▶►▼➡≫]/gu, "")
+                      .trim()
+                  )
+                  .filter(Boolean)
+                  .join("\n")
+              : "";
           const width = (table.widths || [])
             .slice(from, to + 1)
             .reduce((sum, value) => sum + Number(value || 0), 0);
@@ -757,8 +779,8 @@
           const empty = !grid.some((row) =>
             row.some((cell) => String(cell.text || "").trim())
           );
-          lane.cards.push({ grid, width, empty });
-        }
+          lane.cards.push({ grid, width, empty, label, headOnly: Boolean(chain.headOnly) });
+        });
         if (folded && at < bands.length - 1) {
           // 화살표가 여럿이면 저마다 제 단계 밑에 섭니다. 나란한 절차 둘이
           // 함께 접힌 자리를 하나로 뭉치면 한쪽이 사라집니다.
@@ -911,7 +933,7 @@
                 const only = box.length === 1 && box[0].length === 1;
                 const inside = only
                   ? cellMarkup(cellLines(unwrap(box[0][0].text)))
-                  : spannedTableMarkup("", box[0], box.slice(1), null, mine);
+                  : spannedTableMarkup("", box[0], box.slice(1), null, mine, null, null, card.headOnly);
                 return `<span class="source-flow-step"${
                   only ? "" : ' data-table="1"'
                 }>${inside}</span>`;
@@ -921,7 +943,11 @@
               <span class="source-flow-item"${room100}>
                 <span class="source-flow-link"${
                   at ? "" : ' data-first="1"'
-                } aria-hidden="true">${escapeHtml(link)}</span>
+                }${card.label ? ' data-label="1"' : ""} aria-hidden="true">${
+                  card.label
+                    ? `<span class="source-flow-link-label">${escapeHtml(card.label)}</span>`
+                    : ""
+                }${escapeHtml(link)}</span>
                 ${
                   boxes.length > 1
                     ? `<span class="source-flow-stack">${drawn}</span>`
@@ -1132,7 +1158,7 @@
   // '어느 열도 자기 낱말보다 좁아지지 않게' 규칙을 태우면, 원문에서 폭
   // 162mm(600px 남짓)에 든 서가 그림이 1300px로 부풀어 가로로 넘어갑니다.
   // 원문에서도 '2010 문서'는 좁은 칸에서 두 줄로 접힙니다. 그것이 원문 모양입니다.
-  function spannedTableMarkup(caption, headers, rows, sourceWidths, available, picture, plain) {
+  function spannedTableMarkup(caption, headers, rows, sourceWidths, available, picture, plain, headOnly) {
     const room = Number(available) > 0 ? Number(available) : AVAILABLE;
     // 머리글과 본문을 <thead>·<tbody>로 나누면, 머리글 칸이 아래로 걸친 병합
     // (구 분: 2줄 차지)이 끊깁니다. 한 덩어리로 그리고 첫 줄만 머리글로 표시합니다.
@@ -1255,7 +1281,10 @@
                           if (rowIndex === 0 && !plain) {
                             return `<th scope="col"${span}${edge}>${content}</th>`;
                           }
-                          if (column === 0) {
+                          // 절차 카드 상자에서 첫 줄만 이름칸으로 쓰라고 한 표
+                          // (flow.headOnly)는 아래 줄을 굵히지 않습니다
+                          // (제8편 '4. 평정 결과에 대한 이의신청 및 결정').
+                          if (column === 0 && !headOnly) {
                             return `<th scope="row"${span}${edge}>${content}</th>`;
                           }
                           return `<td${span}${edge}>${content}</td>`;
