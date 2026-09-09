@@ -372,6 +372,63 @@
     display: none;
   }
 
+  /* ── 업무 흐름도는 접어 두고 제목을 누르면 펼칩니다 ─────────── */
+  .work-flow-section {
+    margin-bottom: 1.6rem;
+    padding: 1rem 1.2rem;
+  }
+
+  .work-flow-section h2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  .work-flow-section h2::after {
+    content: "펼치기 ▾";
+    flex: none;
+    margin-left: 1rem;
+    color: var(--guide-blue);
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  .work-flow-section h2:focus:not(:focus-visible),
+  .source-detail[data-tip="1"] > strong:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .work-flow-section[data-open="1"] h2 {
+    margin-bottom: 1.2rem;
+  }
+
+  .work-flow-section[data-open="1"] h2::after {
+    content: "접기 ▴";
+  }
+
+  .work-flow-section:not([data-open="1"]) .work-flow-diagram,
+  .work-flow-section:not([data-open="1"]) .work-flow-note {
+    display: none;
+  }
+
+  /* ── 첫 화면: 추천 검색어는 한 줄만 ─────────────────────────── */
+  .global-quick-keywords {
+    flex-wrap: wrap;
+    max-height: 3.4rem; /* 칩 한 줄 높이 — 안 들어가는 칩은 둘째 줄로 밀려 가려집니다 */
+    overflow: hidden;
+    gap: 0.6rem;
+    margin-top: 1.2rem;
+  }
+
+  .global-quick-keywords button {
+    padding: 0.6rem 1rem;
+    font-size: 1.3rem;
+    white-space: nowrap;
+  }
+
   /* ── 첫 화면: 편 카드 촘촘히 ─────────────────────────────────── */
   .global-overview-content {
     padding-block: 3.2rem 4.8rem;

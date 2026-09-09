@@ -488,6 +488,26 @@
       return;
     }
     section.hidden = false;
+    // 좁은 화면(휴대전화)에서는 흐름도를 접어 두고 제목을 누르면 펼칩니다
+    // (mobile.css). 넓은 화면에서는 늘 펼쳐져 있습니다. 업무를 바꾸면 다시
+    // 접습니다.
+    section.removeAttribute("data-open");
+    const title = byId("work-flow-title");
+    if (title && !title.dataset.toggleBound) {
+      title.dataset.toggleBound = "1";
+      title.setAttribute("tabindex", "0");
+      const toggle = () => {
+        if (section.hasAttribute("data-open")) section.removeAttribute("data-open");
+        else section.setAttribute("data-open", "1");
+      };
+      title.addEventListener("click", toggle);
+      title.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          toggle();
+        }
+      });
+    }
 
     // 흐름이 여러 줄이면 줄마다 따로 그립니다.
     // '[접수 시] …', '[기안 시] …'처럼 서로 다른 흐름이기 때문입니다.
