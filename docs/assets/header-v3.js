@@ -434,12 +434,28 @@
         .then((res) => (res.ok ? res.json() : null))
         .then((json) => (json && typeof json.count === "string" ? json.count : null))
         .catch(() => null);
-    Promise.all([read(""), read(`?start=${ymd(monday)}`)]).then(([total, week]) => {
-      if (!total) return; // 값이 없으면 그대로 숨겨 둡니다.
+    const show = (week, total) => {
       // 단위(명/회)는 붙이지 않습니다 — 누적은 날짜값의 합이라 한쪽이 틀린 말이 됩니다.
       box.innerHTML = `이번주 방문 <strong>${week ?? "-"}</strong> · 누적 <strong>${total}</strong>`;
       box.hidden = false;
-    });
+    };
+    const format = (value) =>
+      typeof value === "number" ? value.toLocaleString("ko-KR") : value;
+    // 먼저 서버 함수(/api/visits — GoatCounter API, 캐시 없음)를 묻고,
+    // 토큰이 없거나 실패하면 공개 카운터(최대 몇 시간 캐시)로 돌아갑니다.
+    fetch("/api/visits")
+      .then((res) => (res.ok ? res.json() : null))
+      .then((live) => {
+        if (live && typeof live.total === "number") {
+          show(format(live.week), format(live.total));
+          return;
+        }
+        return Promise.all([read(""), read(`?start=${ymd(monday)}`)]).then(([total, week]) => {
+          if (!total) return; // 값이 없으면 그대로 숨겨 둡니다.
+          show(week, total);
+        });
+      })
+      .catch(() => {});
   }
   setupVisitorCount();
 

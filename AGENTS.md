@@ -280,3 +280,26 @@ stamp_asset_versions.js       자산 번호
   고치기 전에 무엇이 잘못됐는지를 예와 함께 남깁니다.
 - 작업 사본에서만 나는 실패 3건은 원래 그렇습니다(내려받기 원본 파일,
   벤더 아이콘이 저장소에 없음, 서식 미리보기 글자 겹침 2건).
+
+## RAG 챗봇 (오른쪽 아래 '길라잡이에게 묻기')
+
+- 화면: `docs/assets/chat-widget.js` / `chat-widget.css` (index.html 맨 끝에서 불러옴).
+- 서버: `api/chat.mjs` — Vercel Node 함수. 질문 → OpenRouter 임베딩(baai/bge-m3) →
+  `api/_data/rag-index.json`에서 벡터+낱말(BM25) 하이브리드 검색 → 상위 8조각을 근거로
+  Gemini Flash(OpenRouter) 답변을 흘려보냄. 첫 줄은 근거 JSON, 그 뒤가 답.
+- 색인 만들기(원문이 바뀌면 다시): `$env:OPENROUTER_API_KEY="..."; node scripts/build_rag_index.mjs`
+  (`--dry`는 조각만 만들어 tmp/rag-chunks.json에 씀). 결과 `api/_data/rag-index.json`은 커밋함.
+  받은 임베딩은 tmp/rag-embed-cache.json에 남아 바뀐 조각만 다시 받음.
+- 비밀은 코드에 없음. Vercel 프로젝트 → Settings → Environment Variables:
+  `OPENROUTER_API_KEY`(필수), `RAG_CHAT_MODEL`(기본 google/gemini-2.5-flash),
+  `RAG_DAILY_LIMIT`(기본 500), `RAG_PER_MINUTE`(기본 5). 키가 바뀌면 여기만 고침.
+  진짜 예산 안전장치는 OpenRouter 키의 지출 한도(Credit limit)임.
+- 상태 확인: `GET /api/chat` → 조각 수·모델·키 설정 여부.
+
+## 방문 통계 (GoatCounter)
+
+- 페이지뷰는 경로를 전부 `/`로 보냄(index.html의 `window.goatcounter.path`). 같은 세션의
+  한 사람 = 1. 편별 인기는 `chapter-NN` 이벤트(header-v3.js countChapterEvent).
+- 상단 카운터: `api/visits.mjs`가 GoatCounter API(`/api/v0/stats/total`, `/` 경로)로
+  이번 주·누적을 읽어 60초 캐시. 환경변수 `GOATCOUNTER_API_TOKEN`(통계 읽기 권한).
+  토큰이 없으면 공개 카운터(`/counter//.json`, 최대 몇 시간 캐시)로 돌아감.
