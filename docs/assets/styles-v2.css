@@ -597,6 +597,14 @@ input {
 
 /* 단계가 많으면 가로로 밀지 않고 여러 줄로 나눠 한눈에 보이게 합니다.
    한 줄에 들어갈 칸 수는 화면 너비에 맞춰 자바스크립트가 정합니다. */
+/* 항목이 하나뿐인 업무는 목차를 감춥니다. 고를 것이 없는데 '전체 1개 항목
+   중 1번째'와 동그라미 하나가 자리만 차지하고, 바로 아래 카드 제목이 같은
+   말을 되풀이합니다(app-faithful-workflow.js의 renderStepList가 항목 수를
+   data-step-count로 답니다). */
+.workflow-section[data-step-count="1"] {
+  display: none;
+}
+
 .guide-stepper {
   display: grid;
   grid-template-columns: repeat(var(--step-cols, var(--step-count, 5)), minmax(0, 1fr));
