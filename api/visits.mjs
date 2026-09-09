@@ -1,4 +1,4 @@
-// 방문 수(이번 주·누적)를 GoatCounter API에서 바로 읽어 주는 서버 함수.
+// 방문 수(오늘·누적)를 GoatCounter API에서 바로 읽어 주는 서버 함수.
 //
 // 공개 카운터(/counter//.json)는 GoatCounter가 최대 몇 시간 캐시하므로 숫자가
 // 늦게 바뀝니다. API는 캐시가 없어 집계 지연(몇 분)만 있습니다. API 토큰은
@@ -19,12 +19,11 @@ const CACHE_MS = 60_000;
 let cached = null;
 let cachedAt = 0;
 
-// 이번 주 월요일 0시(한국 시간)를 UTC로.
-function mondayUtc(now = new Date()) {
+// 오늘 0시(한국 시간)를 UTC로.
+function todayUtc(now = new Date()) {
   const kst = new Date(now.getTime() + 9 * 3600_000);
-  const day = (kst.getUTCDay() + 6) % 7; // 월=0 … 일=6
-  const monday = new Date(Date.UTC(kst.getUTCFullYear(), kst.getUTCMonth(), kst.getUTCDate() - day));
-  return new Date(monday.getTime() - 9 * 3600_000).toISOString().replace(/\.\d{3}Z$/, "Z");
+  const midnight = Date.UTC(kst.getUTCFullYear(), kst.getUTCMonth(), kst.getUTCDate());
+  return new Date(midnight - 9 * 3600_000).toISOString().replace(/\.\d{3}Z$/, "Z");
 }
 
 async function total(start) {
@@ -54,8 +53,8 @@ export async function GET() {
   if (!TOKEN) return json({ error: "GOATCOUNTER_API_TOKEN이 없습니다." }, 503);
   if (cached && Date.now() - cachedAt < CACHE_MS) return json(cached, 200, 60);
   try {
-    const [all, week] = await Promise.all([total(SINCE), total(mondayUtc())]);
-    cached = { total: all, week, updatedAt: new Date().toISOString() };
+    const [all, today] = await Promise.all([total(SINCE), total(todayUtc())]);
+    cached = { total: all, today, updatedAt: new Date().toISOString() };
     cachedAt = Date.now();
     return json(cached, 200, 60);
   } catch (error) {

@@ -301,5 +301,5 @@ stamp_asset_versions.js       자산 번호
 - 페이지뷰는 경로를 전부 `/`로 보냄(index.html의 `window.goatcounter.path`). 같은 세션의
   한 사람 = 1. 편별 인기는 `chapter-NN` 이벤트(header-v3.js countChapterEvent).
 - 상단 카운터: `api/visits.mjs`가 GoatCounter API(`/api/v0/stats/total`, `/` 경로)로
-  이번 주·누적을 읽어 60초 캐시. 환경변수 `GOATCOUNTER_API_TOKEN`(통계 읽기 권한).
+  오늘(KST 0시부터)·누적을 읽어 60초 캐시. 환경변수 `GOATCOUNTER_API_TOKEN`(통계 읽기 권한).
   토큰이 없으면 공개 카운터(`/counter//.json`, 최대 몇 시간 캐시)로 돌아감.

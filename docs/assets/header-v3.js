@@ -434,9 +434,9 @@
         .then((res) => (res.ok ? res.json() : null))
         .then((json) => (json && typeof json.count === "string" ? json.count : null))
         .catch(() => null);
-    const show = (week, total) => {
+    const show = (label, recent, total) => {
       // 단위(명/회)는 붙이지 않습니다 — 누적은 날짜값의 합이라 한쪽이 틀린 말이 됩니다.
-      box.innerHTML = `이번주 방문 <strong>${week ?? "-"}</strong> · 누적 <strong>${total}</strong>`;
+      box.innerHTML = `${label} <strong>${recent ?? "-"}</strong> · 누적 <strong>${total}</strong>`;
       box.hidden = false;
     };
     const format = (value) =>
@@ -446,13 +446,15 @@
     fetch("/api/visits")
       .then((res) => (res.ok ? res.json() : null))
       .then((live) => {
+        // API는 캐시가 없어 '오늘'을 바로 보여 줄 수 있습니다.
         if (live && typeof live.total === "number") {
-          show(format(live.week), format(live.total));
+          show("오늘 방문", format(live.today), format(live.total));
           return;
         }
+        // 공개 카운터는 최대 몇 시간 캐시라 '오늘'이 0으로 보이기 쉬워 주 단위로.
         return Promise.all([read(""), read(`?start=${ymd(monday)}`)]).then(([total, week]) => {
           if (!total) return; // 값이 없으면 그대로 숨겨 둡니다.
-          show(week, total);
+          show("이번주 방문", week, total);
         });
       })
       .catch(() => {});
