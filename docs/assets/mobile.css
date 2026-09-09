@@ -8,6 +8,12 @@
       넘기되 첫 열(구분)을 붙여 둡니다.
    4. 단계 칩 줄·TIP 접기·머리띠 문구 감춤·첫 화면 카드 촘촘히. */
 
+/* 목차 한 줄 단추(app-faithful-workflow.js의 renderStepList)는 좁은 화면에만
+   보입니다. 넓은 화면은 단계 표시줄을 그대로 씁니다. */
+.step-toc-toggle {
+  display: none;
+}
+
 @media (max-width: 767px) {
   /* ── 1. 옆으로 밀림 막기 ─────────────────────────────────────── */
   html,
@@ -254,31 +260,103 @@
     border-top: 0;
   }
 
-  /* ── 4. 다니기: 단계 칩 줄 ───────────────────────────────────── */
-  .workflow-heading {
-    gap: 0.2rem;
-  }
-
-  .workflow-heading h2 {
-    font-size: 1.6rem;
-  }
-
-  .guide-stepper {
-    display: flex;
-    gap: 0.6rem;
-    margin: 0 -1.2rem;
-    padding: 0.4rem 1.2rem 0.8rem;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-
-  .guide-stepper::-webkit-scrollbar {
+  /* ── 4. 목차: 항목이 하나면 감추고, 둘 이상이면 한 줄 + 펼치면 세로 목록 ── */
+  .workflow-section[data-step-count="1"] {
     display: none;
   }
 
-  .guide-stepper li {
+  .workflow-section {
+    margin-bottom: 1.2rem;
+  }
+
+  .workflow-heading {
+    display: none; /* '목차 / 전체 N개 항목 중 M번째'는 한 줄 단추가 대신합니다 */
+  }
+
+  .step-toc-toggle {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.9rem 1.2rem;
+    color: var(--guide-ink);
+    background: #fff;
+    border: 1px solid var(--guide-line);
+    border-radius: 1rem;
+    font: inherit;
+    font-size: 1.45rem;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .step-toc-toggle::before {
+    content: "목차";
     flex: none;
+    padding: 0.2rem 0.7rem;
+    color: var(--guide-blue-dark);
+    background: var(--guide-blue-pale);
+    border-radius: 999px;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .step-toc-toggle-now {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .step-toc-toggle-count {
+    flex: none;
+    color: var(--guide-muted);
+    font-size: 1.25rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .step-toc-toggle::after {
+    content: "▾";
+    flex: none;
+    color: var(--guide-blue);
+  }
+
+  .workflow-section[data-open="1"] .step-toc-toggle {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .workflow-section[data-open="1"] .step-toc-toggle::after {
+    content: "▴";
+  }
+
+  .step-toc-toggle:focus:not(:focus-visible) {
+    outline: none;
+    box-shadow: none;
+  }
+
+  /* 펼친 목록: 세로 한 줄씩 */
+  .guide-stepper {
+    display: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid var(--guide-line);
+    border-top: 0;
+    border-radius: 0 0 1rem 1rem;
+    background: #fff;
+  }
+
+  .workflow-section[data-open="1"] .guide-stepper {
+    display: block;
+  }
+
+  .guide-stepper li {
+    min-width: 0;
+  }
+
+  .guide-stepper li + li {
+    border-top: 1px solid var(--guide-line);
   }
 
   .guide-stepper li::before {
@@ -286,25 +364,29 @@
   }
 
   .step-button {
-    width: auto;
+    width: 100%;
     flex-direction: row;
-    gap: 0.6rem;
-    padding: 0.4rem 1rem 0.4rem 0.4rem;
-    border: 1px solid var(--guide-line);
-    border-radius: 999px;
-    background: #fff;
-    font-size: 1.3rem;
-    white-space: nowrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 0.9rem 1.2rem;
+    font-size: 1.4rem;
+    text-align: left;
+    white-space: normal;
+  }
+
+  .step-button > span:last-child {
+    overflow-wrap: normal;
+    word-break: keep-all;
   }
 
   .step-button .step-circle {
+    flex: none;
     width: 2.4rem;
     height: 2.4rem;
     font-size: 1.2rem;
   }
 
   .step-button.active {
-    border-color: var(--guide-blue);
     background: var(--guide-blue-pale);
   }
 
@@ -392,6 +474,36 @@
     padding: 0.6rem 1rem;
     font-size: 1.3rem;
     white-space: nowrap;
+  }
+
+  /* ── 첫 화면: 편을 누르면 나오는 업무 목록 ───────────────────── */
+  /* 펼치는 움직임(grid-template-rows 0fr→1fr)에 아이폰 사파리가 목록을
+     잘라 보이는 일이 있어, 좁은 화면에서는 움직임 없이 그냥 펼칩니다. */
+  .global-work-panel {
+    transition: none;
+  }
+
+  .global-work-panel.is-open {
+    grid-template-rows: auto;
+  }
+
+  .global-work-panel.is-open .global-work-panel-inner {
+    overflow: visible;
+  }
+
+  .global-work-lead {
+    padding: 1.2rem 1.2rem 0;
+    font-size: 1.3rem;
+  }
+
+  .global-work-list {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+    padding: 1rem 1.2rem 1.2rem;
+  }
+
+  .global-work-link {
+    padding: 1rem 1.2rem;
   }
 
   /* ── 첫 화면: 편 카드 촘촘히 ─────────────────────────────────── */

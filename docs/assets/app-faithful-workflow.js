@@ -401,6 +401,34 @@
       });
     });
 
+    // 좁은 화면(휴대전화)의 목차: 항목이 하나뿐이면 목차 자체를 감추고,
+    // 둘 이상이면 '현재 항목 (n/전체)' 한 줄만 보이다가 누르면 세로 목록이
+    // 펼쳐집니다(mobile.css). 넓은 화면은 지금 그대로입니다.
+    const section = stepList.closest(".workflow-section");
+    if (section) {
+      section.dataset.stepCount = String(steps.length);
+      section.removeAttribute("data-open");
+      let toggle = byId("step-toc-toggle");
+      if (!toggle) {
+        toggle = document.createElement("button");
+        toggle.id = "step-toc-toggle";
+        toggle.type = "button";
+        toggle.className = "step-toc-toggle";
+        toggle.setAttribute("aria-controls", "step-list");
+        section.querySelector(".workflow-heading")?.insertAdjacentElement("afterend", toggle);
+        toggle.addEventListener("click", () => {
+          const open = section.hasAttribute("data-open");
+          if (open) section.removeAttribute("data-open");
+          else section.setAttribute("data-open", "1");
+          toggle.setAttribute("aria-expanded", String(!open));
+        });
+      }
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.innerHTML =
+        `<span class="step-toc-toggle-now">${escapeHtml(steps[activeIndex]?.title || "")}</span>` +
+        `<span class="step-toc-toggle-count">${activeIndex + 1}/${steps.length}</span>`;
+    }
+
     if (hadFocusInStepList) {
       const activeButton = stepList.querySelector(".step-button.active");
       // preventScroll을 주어 포커스를 옮기는 것만으로 화면이 움직이지 않게 합니다.
