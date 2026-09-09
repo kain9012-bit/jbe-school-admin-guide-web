@@ -1277,7 +1277,7 @@
       <div class="source-table-scroll" data-picture="${drawing ? 1 : 0}">
         <table class="source-criteria-table" style="--table-columns: ${columnCount}; --table-min: ${Math.round(
           needs
-        )}px" data-picture="${drawing ? 1 : 0}"${headOnly ? ' data-head-only="1"' : ""} data-wide="${
+        )}px" data-columns="${columnCount}" data-picture="${drawing ? 1 : 0}"${headOnly ? ' data-head-only="1"' : ""} data-wide="${
           columnCount >= 7 ? 1 : 0
         }" data-scroll="${scrolls ? 1 : 0}" data-column-layout="${widths
           .map((width) => Number(width).toFixed(1))
@@ -1536,7 +1536,7 @@
       <div class="source-table-scroll">
         <table class="source-criteria-table" style="--table-columns: ${columnCount}; --table-min: ${Math.round(
           needs
-        )}px" data-wide="${
+        )}px" data-columns="${columnCount}" data-wide="${
           columnCount >= 7 ? 1 : 0
         }" data-scroll="${scrolls ? 1 : 0}" data-column-layout="${widths
           .map((width) => width.toFixed(1))
@@ -4391,7 +4391,7 @@
         label ? ' data-label="1"' : ""
       } style="grid-row:${row};grid-column:${linkCol(at)}" aria-hidden="true">${
         label ? `<span class="source-flow-link-label">${escapeHtml(label)}</span>` : ""
-      }⇨</span>`;
+      }<span class="source-flow-mark">⇨</span></span>`;
     const card = (at, rows, text) =>
       `<span class="source-flow-step" style="grid-row:${rows};grid-column:${cardCol(at)}">${cellMarkup(
         cellLines(unwrap(text))

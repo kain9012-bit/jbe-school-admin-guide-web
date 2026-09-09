@@ -787,9 +787,88 @@
     container.hidden = visible.length === 0;
     target.classList.add("source-detail-list");
     target.innerHTML = groupBySection(visible).map(sourceBlockMarkup).join("");
+    // TIP·주의사항 카드는 좁은 화면(휴대전화)에서 제목만 보이고, 누르면
+    // 펼쳐집니다(mobile.css). 넓은 화면에서는 늘 펼쳐져 있습니다.
+    target.querySelectorAll(":scope > li.source-detail > strong").forEach((label) => {
+      if (!/^\s*TIP/i.test(label.textContent)) return;
+      const item = label.parentElement;
+      item.setAttribute("data-tip", "1");
+      label.setAttribute("role", "button");
+      label.setAttribute("tabindex", "0");
+      const toggle = () => {
+        if (item.hasAttribute("data-open")) item.removeAttribute("data-open");
+        else item.setAttribute("data-open", "1");
+      };
+      label.addEventListener("click", toggle);
+      label.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          toggle();
+        }
+      });
+    });
     // 칸 안 항목 앞의 기호는 그려 놓은 것을 재 보고 세웁니다.
     // 그리기 전에는 줄이 몇 개로 넘어가는지 알 수 없습니다.
     window.GUIDE_DETAIL_RENDERER?.showCellMarks?.(target);
+  }
+
+  // 좁은 화면(휴대전화)용 소제목 목차입니다. 한 항목이 화면 열 장 넘게
+  // 길어지므로, 카드 위에 소제목 칩을 한 줄로 두어 바로 건너뛰게 합니다.
+  // 넓은 화면에서는 CSS(mobile.css)가 감춥니다.
+  function renderStepToc() {
+    const head = document.querySelector(".step-panel-head");
+    if (!head) return;
+    let nav = byId("step-toc");
+    if (!nav) {
+      nav = document.createElement("nav");
+      nav.id = "step-toc";
+      nav.className = "step-toc";
+      nav.setAttribute("aria-label", "이 항목의 소제목");
+      head.insertAdjacentElement("afterend", nav);
+    }
+    const items = [...document.querySelectorAll("#step-actions > li.source-detail")]
+      .map((item, index) => {
+        const label = item.querySelector(":scope > strong");
+        const text = label ? label.textContent.trim() : "";
+        if (!text) return "";
+        if (!item.id) item.id = `block-${index + 1}`;
+        return `<a class="step-toc-chip" href="#${item.id}">${text.replace(/[&<>]/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[ch]))}</a>`;
+      })
+      .filter(Boolean);
+    nav.hidden = items.length < 2;
+    nav.innerHTML = items.join("");
+    nav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const target = document.getElementById(link.getAttribute("href").slice(1));
+        if (!target) return;
+        const sticky = document.querySelector("#krds-header")?.getBoundingClientRect().height || 0;
+        const top = target.getBoundingClientRect().top + window.scrollY - sticky - 12;
+        window.scrollTo({ top, behavior: "smooth" });
+      });
+    });
+  }
+
+  // 폭이 모자라 옆으로 넘겨 봐야 하는 표에 표시를 달아, 좁은 화면에서
+  // '옆으로 밀어 보세요' 안내를 띄웁니다(mobile.css).
+  function markScrollableTables() {
+    const check = () => {
+      document.querySelectorAll(".source-table-scroll").forEach((box) => {
+        const over = box.scrollWidth > box.clientWidth + 2;
+        if (over) box.setAttribute("data-overflow", "1");
+        else box.removeAttribute("data-overflow");
+      });
+    };
+    check();
+    window.requestAnimationFrame(check);
+    if (!markScrollableTables.bound) {
+      markScrollableTables.bound = true;
+      let timer = 0;
+      window.addEventListener("resize", () => {
+        window.clearTimeout(timer);
+        timer = window.setTimeout(check, 150);
+      });
+    }
   }
 
   let formPreviewZoom = 100;
@@ -1403,6 +1482,8 @@
     summaryNode.hidden = !step.summary;
     byId("step-progress").textContent = `전체 ${steps.length}개 항목 중 ${activeIndex + 1}번째`;
     renderSourceBlocks("step-actions", step.mainBlocks);
+    renderStepToc();
+    markScrollableTables();
     renderSourceBlocks("step-checks", []);
     renderResources(work, step);
     renderFaqs(work, step, requestedFaqNumber);
