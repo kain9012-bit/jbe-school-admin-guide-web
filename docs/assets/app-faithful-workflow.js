@@ -832,43 +832,6 @@
     window.GUIDE_DETAIL_RENDERER?.showCellMarks?.(target);
   }
 
-  // 좁은 화면(휴대전화)용 소제목 목차입니다. 한 항목이 화면 열 장 넘게
-  // 길어지므로, 카드 위에 소제목 칩을 한 줄로 두어 바로 건너뛰게 합니다.
-  // 넓은 화면에서는 CSS(mobile.css)가 감춥니다.
-  function renderStepToc() {
-    const head = document.querySelector(".step-panel-head");
-    if (!head) return;
-    let nav = byId("step-toc");
-    if (!nav) {
-      nav = document.createElement("nav");
-      nav.id = "step-toc";
-      nav.className = "step-toc";
-      nav.setAttribute("aria-label", "이 항목의 소제목");
-      head.insertAdjacentElement("afterend", nav);
-    }
-    const items = [...document.querySelectorAll("#step-actions > li.source-detail")]
-      .map((item, index) => {
-        const label = item.querySelector(":scope > strong");
-        const text = label ? label.textContent.trim() : "";
-        if (!text) return "";
-        if (!item.id) item.id = `block-${index + 1}`;
-        return `<a class="step-toc-chip" href="#${item.id}">${text.replace(/[&<>]/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[ch]))}</a>`;
-      })
-      .filter(Boolean);
-    nav.hidden = items.length < 2;
-    nav.innerHTML = items.join("");
-    nav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", (event) => {
-        event.preventDefault();
-        const target = document.getElementById(link.getAttribute("href").slice(1));
-        if (!target) return;
-        const sticky = document.querySelector("#krds-header")?.getBoundingClientRect().height || 0;
-        const top = target.getBoundingClientRect().top + window.scrollY - sticky - 12;
-        window.scrollTo({ top, behavior: "smooth" });
-      });
-    });
-  }
-
   // 폭이 모자라 옆으로 넘겨 봐야 하는 표에 표시를 달아, 좁은 화면에서
   // '옆으로 밀어 보세요' 안내를 띄웁니다(mobile.css).
   function markScrollableTables() {
@@ -1502,7 +1465,6 @@
     summaryNode.hidden = !step.summary;
     byId("step-progress").textContent = `전체 ${steps.length}개 항목 중 ${activeIndex + 1}번째`;
     renderSourceBlocks("step-actions", step.mainBlocks);
-    renderStepToc();
     markScrollableTables();
     renderSourceBlocks("step-checks", []);
     renderResources(work, step);

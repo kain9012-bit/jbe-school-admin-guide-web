@@ -6,13 +6,7 @@
    2. 글자·여백을 줄여 한 줄에 글이 더 들어가게(카드 이중 여백을 한 겹으로).
    3. '이름 | 설명' 두 열 표는 세로 카드로 쌓고, 세 열 이상 표는 옆으로
       넘기되 첫 열(구분)을 붙여 둡니다.
-   4. 소제목 칩 목차·단계 칩 줄·TIP 접기·머리띠 문구 감춤·첫 화면 카드 촘촘히. */
-
-/* 소제목 칩 목차(app-faithful-workflow.js의 renderStepToc)는 좁은 화면에만
-   보입니다. 넓은 화면에는 왼쪽 목록과 화면 폭이 있어 필요 없습니다. */
-.step-toc {
-  display: none;
-}
+   4. 단계 칩 줄·TIP 접기·머리띠 문구 감춤·첫 화면 카드 촘촘히. */
 
 @media (max-width: 767px) {
   /* ── 1. 옆으로 밀림 막기 ─────────────────────────────────────── */
@@ -260,36 +254,7 @@
     border-top: 0;
   }
 
-  /* ── 4. 다니기: 소제목 칩, 단계 칩 줄 ───────────────────────── */
-  .step-toc:not([hidden]) {
-    display: flex;
-    gap: 0.6rem;
-    margin: 1rem -1.2rem 0;
-    padding: 0.2rem 1.2rem 0.6rem;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-
-  .step-toc::-webkit-scrollbar {
-    display: none;
-  }
-
-  .step-toc-chip {
-    flex: none;
-    max-width: 22rem;
-    padding: 0.5rem 1rem;
-    overflow: hidden;
-    color: var(--guide-blue-dark);
-    background: var(--guide-blue-pale);
-    border-radius: 999px;
-    font-size: 1.3rem;
-    font-weight: 700;
-    text-decoration: none;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
+  /* ── 4. 다니기: 단계 칩 줄 ───────────────────────────────────── */
   .workflow-heading {
     gap: 0.2rem;
   }
