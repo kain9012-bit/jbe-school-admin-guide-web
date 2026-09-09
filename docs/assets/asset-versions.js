@@ -2,7 +2,7 @@
 // 손으로 고치지 마세요. 자산을 바꾼 뒤 스크립트를 다시 실행하세요.
 window.GUIDE_ASSET_VERSIONS = {
   "assets/app-faithful-workflow.js": "c7307773",
-  "assets/asset-versions.js": "05c881cc",
+  "assets/asset-versions.js": "ba900afd",
   "assets/chapter1-data.js": "25c000f2",
   "assets/chapter10-data.js": "af5fb77b",
   "assets/chapter11-data.js": "88578b54",
@@ -22,6 +22,8 @@ window.GUIDE_ASSET_VERSIONS = {
   "assets/chapter7-data.js": "8820048b",
   "assets/chapter8-data.js": "df532b93",
   "assets/chapter9-data.js": "d8007a34",
+  "assets/chat-widget.css": "5d1b1026",
+  "assets/chat-widget.js": "58403941",
   "assets/form-assets.js": "be7335b8",
   "assets/global-home.css": "08447cf9",
   "assets/global-home.js": "07051591",
@@ -29,7 +31,7 @@ window.GUIDE_ASSET_VERSIONS = {
   "assets/guide-config.js": "3965322c",
   "assets/guide-search-index.js": "d82d7fff",
   "assets/header-v3.css": "b393c943",
-  "assets/header-v3.js": "a1250e9e",
+  "assets/header-v3.js": "01fdfb83",
   "assets/mobile.css": "54a7662b",
   "assets/pdf-page-map.js": "b552db95",
   "assets/search-query.js": "924289d8",

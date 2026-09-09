@@ -425,11 +425,12 @@
     // 이번 주 월요일 0시를 시작점으로 잡습니다(getDay: 0=일 … 6=토).
     const monday = new Date();
     monday.setDate(monday.getDate() - ((monday.getDay() + 6) % 7));
-    // 편을 열면 주소에 '?chapter=…'가 붙어 경로가 편마다 달라집니다. 그래서
-    // '/' 한 경로만 세면 대부분의 방문이 빠집니다. 사이트 전체 합(TOTAL)을
-    // 읽어 모든 편의 방문을 더한 '누적'을 보여 줍니다.
+    // 페이지뷰는 경로를 전부 '/'로 통일해 보냅니다(index.html). 그래서 '/'
+    // 경로의 방문 수가 곧 '사람 수(세션 기준)'입니다. 예전에는 편마다 경로가
+    // 달라 TOTAL(경로 합)을 읽었는데, 그러면 한 사람이 세 편을 보면 3으로
+    // 부풀려졌습니다. 편별 이벤트(chapter-NN)는 이 합에 넣지 않습니다.
     const read = (query) =>
-      fetch(`${GOAT}/counter/TOTAL.json${query}`)
+      fetch(`${GOAT}/counter//.json${query}`)
         .then((res) => (res.ok ? res.json() : null))
         .then((json) => (json && typeof json.count === "string" ? json.count : null))
         .catch(() => null);
@@ -441,6 +442,28 @@
     });
   }
   setupVisitorCount();
+
+  // 편별 인기는 페이지뷰와 별도의 이벤트로 보냅니다. GoatCounter 화면의
+  // 'Pages' 목록에 chapter-02처럼 나오고, 방문(사람 수)과는 섞이지 않습니다.
+  // count.js가 비동기로 늦게 오므로 준비될 때까지 잠깐 기다립니다.
+  function countChapterEvent() {
+    const id = new URLSearchParams(location.search).get("chapter");
+    if (!/^\d{2}$/.test(id || "")) return;
+    let tries = 0;
+    const send = () => {
+      if (window.goatcounter && typeof window.goatcounter.count === "function") {
+        window.goatcounter.count({
+          path: `chapter-${id}`,
+          title: `제${Number(id)}편`,
+          event: true,
+        });
+        return;
+      }
+      if (tries++ < 40) window.setTimeout(send, 250);
+    };
+    send();
+  }
+  countChapterEvent();
 
   renderChapterGrid();
 })();

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="assets/structured-details.css?v=e24f31d5" />
     <link rel="stylesheet" href="assets/global-home.css?v=08447cf9" />
     <link rel="stylesheet" href="assets/mobile.css?v=54a7662b" />
+    <link rel="stylesheet" href="assets/chat-widget.css?v=5d1b1026" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">본문 바로가기</a>
@@ -289,23 +290,33 @@
     </dialog>
 
     <script src="vendor/krds/krds.min.js?v=579109fc"></script>
-    <script src="assets/asset-versions.js?v=f5067e83"></script>
+    <script src="assets/asset-versions.js?v=0e46379c"></script>
     <script src="assets/guide-config.js?v=3965322c"></script>
     <script src="assets/guide-search-index.js?v=d82d7fff"></script>
     <script src="assets/search-query.js?v=924289d8"></script>
     <script src="assets/form-assets.js?v=be7335b8"></script>
     <script src="assets/structured-details.js?v=8c636be6"></script>
-    <script src="assets/header-v3.js?v=a1250e9e"></script>
+    <script src="assets/header-v3.js?v=01fdfb83"></script>
     <script src="assets/pdf-page-map.js?v=b552db95"></script>
     <script src="assets/guide-bootstrap-workflow.js?v=4b93fb7c"></script>
 
     <!-- 방문 통계(GoatCounter). 쿠키·개인식별자를 쓰지 않습니다.
          jbe-guide.goatcounter.com 사이트를 만들고 설정에서
-         'Allow adding visitor counts on your website'를 켜야 값이 옵니다. -->
+         'Allow adding visitor counts on your website'를 켜야 값이 옵니다.
+
+         경로는 전부 '/'로 통일해서 보냅니다. 편을 열면 주소가 '?chapter=02'처럼
+         편마다 달라지는데, GoatCounter는 경로마다 방문을 따로 세므로 한 사람이
+         세 편을 보면 방문 3이 되어 사람 수가 부풀려집니다. 경로를 하나로 두면
+         같은 세션의 한 사람은 1로 잡힙니다. 편별 인기는 별도 이벤트
+         (chapter-02 …)로 보냅니다(header-v3.js). -->
+    <script>
+      window.goatcounter = { path: function () { return "/"; } };
+    </script>
     <script
       data-goatcounter="https://jbe-guide.goatcounter.com/count"
       async
       src="//gc.zgo.at/count.js"
     ></script>
+    <script src="assets/chat-widget.js?v=58403941"></script>
   </body>
 </html>
