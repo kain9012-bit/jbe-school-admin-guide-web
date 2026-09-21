@@ -95,8 +95,24 @@
   }
 
   /* ── 2. 글자·여백 ─────────────────────────────────────────────── */
-  #krds-masthead {
-    display: none; /* '이 누리집은 … 웹 시범판입니다' 머리띠 */
+  /* 머리띠는 '이 누리집은 … 웹 시범판입니다' 문구를 감추고, 오른쪽의 방문 수만
+     얇은 줄로 남깁니다. 방문 수가 아직 없으면 줄째 감춥니다. */
+  #krds-masthead .toggle-head .nuri-txt {
+    display: none;
+  }
+
+  #krds-masthead:has(#visitor-count[hidden]) {
+    display: none;
+  }
+
+  #krds-masthead .toggle-head .inner {
+    min-height: 0;
+    padding: 0.4rem 0;
+    justify-content: flex-end;
+  }
+
+  #krds-masthead .visitor-count {
+    font-size: 1.2rem;
   }
 
   #krds-header .inner,
