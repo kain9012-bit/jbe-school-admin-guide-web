@@ -269,6 +269,7 @@
     if (options.blockId) params.set("block", options.blockId);
     if (options.formId) params.set("form", options.formId);
     if (options.faqNumber) params.set("faq", options.faqNumber);
+    if (options.anchor) params.set("at", options.anchor);
     return `#${params.toString()}`;
   }
 
@@ -1577,7 +1578,85 @@
     renderStep(work, step, options.faqNumber);
     document.title = `${work.title} · ${step.title} | 학교행정업무 길라잡이`;
     if (options.formId) requestAnimationFrame(() => openForm(options.formId));
+    else if (options.blockId || options.faqNumber) scrollToTarget(options);
     else if (!stayedInSameWork) window.scrollTo({ top: 0, behavior: "instant" });
+  }
+
+  // 검색 결과로 들어오면 그 업무의 첫머리가 아니라, 찾은 말이 든 그 자리로
+  // 바로 내려 줍니다. 페이지 맨 위에서 다시 찾아 내려가야 하면 검색한 보람이
+  // 없습니다. 고정 머리글에 가리지 않게 그 높이만큼 위를 비우고, 잠깐 빛을
+  // 내어 어디인지 알려 줍니다.
+  // 긴 블록 안에서 검색이 가리킨 줄을 찾습니다. anchor는 그 조각 첫 줄의 글자를
+  // 빈칸 없이 이은 것이므로, 화면 글도 빈칸을 빼고 견줍니다. 맞는 것 가운데
+  // 가장 안쪽 요소를 고른 뒤 표의 줄·목록 한 줄 단위로 넓혀 빛나게 합니다.
+  // 첫 줄이 여러 칸에 걸치면(세로로 합친 '상여수당' 칸 + '정근수당' 칸) 통째로는
+  // 한 칸에 들지 않으므로, 앞을 조금씩 떼어 가며 가장 깊이 들어가는 쪽을 씁니다.
+  function findAnchor(block, anchor) {
+    // 화면 글에는 글자 사이 가운뎃점·폭 없는 빈칸이 끼어 있으므로 글자와 숫자만 견줍니다.
+    const strip = (text) => String(text || "").replace(/[^\p{L}\p{N}]+/gu, "");
+    const squeeze = (node) => strip(node.textContent);
+    anchor = strip(anchor);
+    if (anchor.length < 6) return null;
+    const descend = (root, needle) => {
+      let node = root;
+      let depth = 0;
+      for (;;) {
+        const child = [...node.children].find((one) => squeeze(one).includes(needle));
+        if (!child) break;
+        node = child;
+        depth += 1;
+      }
+      return { node, depth };
+    };
+    if (!squeeze(block).includes(anchor)) return null;
+    // 떼어 낸 짧은 글은 다른 곳에도 있을 수 있으므로, 온전한 첫 줄이 든 자리 안에서만 찾습니다.
+    const base = descend(block, anchor).node;
+    let best = { node: base, depth: 0 };
+    for (let cut = 2; anchor.length - cut >= 8; cut += 2) {
+      const found = descend(base, anchor.slice(cut));
+      if (found.depth > best.depth) best = found;
+    }
+    if (best.node === block) return null;
+    const row = best.node.closest("tr, li, p, dt, dd, h3, h4, h5, h6");
+    return row && block.contains(row) ? row : best.node;
+  }
+
+  function scrollToTarget({ blockId, faqNumber, anchor }) {
+    const find = () => {
+      if (blockId) {
+        const escaped = window.CSS && CSS.escape ? CSS.escape(blockId) : blockId;
+        const block = document.querySelector(`[data-source-block="${escaped}"]`);
+        if (block) return (anchor && findAnchor(block, anchor)) || block;
+      }
+      if (faqNumber) {
+        const faq = document.querySelector("#related-faqs .faq-targeted");
+        if (faq) return faq;
+      }
+      // 찾는 조각이 화면에 따로 그려지지 않은 경우(근거 법령 상자로 옮겨진 줄,
+      // 위의 흐름도로 그린 줄)는 그 항목 카드의 첫머리로 갑니다.
+      return byId("step-panel");
+    };
+    // 표·사진이 다 그려진 뒤에 재야 자리가 맞습니다.
+    requestAnimationFrame(() =>
+      requestAnimationFrame(() => {
+        const target = find();
+        if (!target) return;
+        // 휴대전화에서 접혀 있는 TIP이면 펼칩니다.
+        const tip = target.closest('[data-tip="1"]');
+        if (tip) tip.setAttribute("data-open", "1");
+        const header = document.querySelector("#krds-header");
+        const offset = (header ? header.getBoundingClientRect().height : 0) + 16;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: Math.max(0, top), behavior: "instant" });
+        if (target.id !== "step-panel") {
+          target.classList.remove("is-search-target");
+          // 같은 자리를 두 번 찾아도 다시 빛나게 한 박자 쉽니다.
+          void target.offsetWidth;
+          target.classList.add("is-search-target");
+          window.setTimeout(() => target.classList.remove("is-search-target"), 2600);
+        }
+      })
+    );
   }
 
   // 화면을 정했으니 '불러오는 중' 자리는 없앱니다.
@@ -1610,6 +1689,7 @@
       blockId: params.get("block") || "",
       formId: params.get("form") || "",
       faqNumber: params.get("faq") || "",
+      anchor: params.get("at") || "",
     });
   }
 
@@ -1635,6 +1715,7 @@
       blockId: item.blockId || "",
       formId: item.formId || "",
       faqNumber: item.faqNumber || "",
+      anchor: item.anchor || "",
     };
     let stepId = "";
     if (!item.chapterId || item.chapterId === activeChapter.id) {
@@ -1665,7 +1746,13 @@
       .join("");
   }
 
-  function runSearch(query) {
+  // 낱말 검색 결과를 바로 보여 주고, 뜻 검색(서버)이 돌아오면 둘을 합쳐 다시 그립니다.
+  // semanticHits가 없으면 새 검색이고, 있으면 같은 검색을 합친 결과로 다시 그리는 것입니다.
+  let searchToken = 0;
+  function runSearch(query, semanticHits) {
+    const fresh = semanticHits === undefined;
+    if (fresh) searchToken += 1;
+    const token = searchToken;
     const trimmed = query.trim();
     if (!trimmed) {
       searchStatus.textContent =
@@ -1678,14 +1765,40 @@
       types: scope.types,
       limit: 300,
     });
-    const groups = window.GUIDE_SEARCH.groupByWork(found.results).slice(0, 20);
+    const fused =
+      semanticHits && semanticHits.length
+        ? window.GUIDE_SEARCH.fuse(allChapterSearchIndex, found.results, semanticHits, {
+            types: scope.types,
+            wordCount: found.wordCount,
+          })
+        : null;
+    // 낱말로는 안 걸리고 뜻으로만 걸린 글의 수입니다.
+    const extra = fused ? fused.filter((entry) => entry.lexical === undefined).length : 0;
+    const total = found.total + extra;
+    if (fresh) {
+      window.GUIDE_SEARCH.semantic(trimmed).then((hits) => {
+        if (token !== searchToken) return;
+        if (!hits && found.total) return;
+        runSearch(query, hits || []);
+      });
+    }
+    const groups = window.GUIDE_SEARCH.groupByWork(fused || found.results).slice(0, 20);
 
     const where = currentSearchScope === "all" ? "" : `${scope.label}에서 `;
-    searchStatus.textContent = found.total
-      ? `${where}‘${trimmed}’ 검색 결과 업무 ${groups.length}곳 · 원문 ${found.total}건`
-      : `${where}‘${trimmed}’과 일치하는 원문이 없습니다.`;
+    const waiting = fresh && !total && window.GUIDE_SEARCH.semanticPossible();
+    searchStatus.textContent = total
+      ? `${where}‘${trimmed}’ 검색 결과 업무 ${groups.length}곳 · 원문 ${total}건${
+          extra ? ` (뜻이 가까운 글 ${extra}건 포함)` : ""
+        }`
+      : waiting
+        ? `${where}‘${trimmed}’과 뜻이 가까운 글을 찾는 중입니다…`
+        : `${where}‘${trimmed}’과 일치하는 원문이 없습니다.`;
 
-    if (!found.total) {
+    if (waiting) {
+      searchResults.innerHTML = "";
+      return;
+    }
+    if (!total) {
       searchResults.innerHTML = `<p class="empty-state">${
         currentSearchScope === "all"
           ? "원문에 그 말이 없습니다. 매뉴얼에 쓰인 다른 말로 찾아보세요."
@@ -1703,8 +1816,8 @@
         // 여기까지 발췌를 넣으면 바로 아래 항목과 똑같은 글이 두 번 나옵니다.
         // 적을 것이 없으면 줄을 빼야지, 업무 이름을 한 번 더 적으면 안 됩니다.
         const lead = head.description ? escapeHtml(head.description) : "";
-        const inside = group.hits
-          .filter((entry) => entry.item !== head)
+        const others = group.hits.filter((entry) => entry.item !== head);
+        const inside = others
           .slice(0, 4)
           .map(
             (entry) => `
@@ -1719,7 +1832,7 @@
               </a>`
           )
           .join("");
-        const more = group.hits.length > 5 ? group.hits.length - 5 : 0;
+        const more = Math.max(0, others.length - 4);
         return `
           <section class="search-group">
             <a class="search-result" href="${escapeHtml(searchResultHref(head))}">
@@ -1799,7 +1912,16 @@
     if (lastFocusedElement instanceof HTMLElement) lastFocusedElement.focus();
   });
   searchResults.addEventListener("click", (event) => {
-    if (event.target.closest(".search-result")) closeSearch();
+    // 묶음 머리뿐 아니라 그 안의 항목을 눌러도 닫습니다. 같은 편 안의 항목은
+    // 주소의 # 뒤만 바뀌므로, 닫지 않으면 대화상자 뒤에서 화면만 바뀝니다.
+    const link = event.target.closest(".search-result, .search-hit");
+    if (!link) return;
+    closeSearch();
+    // 지금 주소와 똑같은 곳을 누르면 hashchange가 일어나지 않으므로 직접 다시 그립니다.
+    if (link.getAttribute("href") === location.hash) {
+      event.preventDefault();
+      renderRoute();
+    }
   });
   document.querySelector(".quick-keywords")?.addEventListener("click", (event) => {
     const button = event.target.closest("[data-query]");

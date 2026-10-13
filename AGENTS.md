@@ -287,9 +287,24 @@ stamp_asset_versions.js       자산 번호
 - 서버: `api/chat.mjs` — Vercel Node 함수. 질문 → OpenRouter 임베딩(baai/bge-m3) →
   `api/_data/rag-index.json`에서 벡터+낱말(BM25) 하이브리드 검색 → 상위 8조각을 근거로
   Gemini Flash(OpenRouter) 답변을 흘려보냄. 첫 줄은 근거 JSON, 그 뒤가 답.
-- 색인 만들기(원문이 바뀌면 다시): `$env:OPENROUTER_API_KEY="..."; node scripts/build_rag_index.mjs`
+- 색인 만들기(원문이 바뀌면 다시): 먼저 `node scripts/build_structured_search_index.js`로
+  통합검색 색인을 만든 뒤 `node scripts/build_rag_index.mjs`. 키는 환경변수
+  `OPENROUTER_API_KEY` 또는 `.env.local`(gitignore됨)의 같은 이름 줄에서 읽음.
   (`--dry`는 조각만 만들어 tmp/rag-chunks.json에 씀). 결과 `api/_data/rag-index.json`은 커밋함.
   받은 임베딩은 tmp/rag-embed-cache.json에 남아 바뀐 조각만 다시 받음.
+  조각은 통합검색 색인(guide-search-index.js)의 항목과 같고 id도 같음
+  (긴 블록은 소제목 단위로 나뉘어 `블록id~n`, 첫 줄은 anchor).
+
+## 통합검색 '뜻으로 찾기'
+
+- `api/search.mjs`: `GET /api/search?q=` → 검색어를 bge-m3로 임베딩해 rag-index.json의
+  조각과 코사인 유사도 상위 40개 `{id, score}`를 돌려줌. `GET /api/search`는 준비 상태.
+  같은 검색어는 CDN에 하루 캐시. 상한 `SEARCH_PER_MINUTE`(30), `SEARCH_DAILY_LIMIT`(5000).
+- 브라우저(`search-query.js`의 `semantic`/`fuse`): 낱말 검색 결과를 먼저 그리고, 서버 답이
+  오면 두 순위를 RRF로 합쳐 다시 그림. 유사도 0.45(`SEMANTIC_FLOOR`) 미만은 버림.
+  서버가 없거나(깃허브 페이지·file://) 따옴표·빼기 검색이면 낱말 검색만.
+- 묶음 안 항목은 점수순, 다만 한 종류가 보이는 4칸을 다 차지하면 빠진 종류의 최고 1건과
+  맞바꿈(`diversify`). 결과 링크의 `at=`(anchor)로 긴 블록 안의 그 줄까지 내려가 빛냄.
 - 비밀은 코드에 없음. Vercel 프로젝트 → Settings → Environment Variables:
   `OPENROUTER_API_KEY`(필수), `RAG_CHAT_MODEL`(기본 google/gemini-2.5-flash),
   `RAG_DAILY_LIMIT`(기본 500), `RAG_PER_MINUTE`(기본 5). 키가 바뀌면 여기만 고침.

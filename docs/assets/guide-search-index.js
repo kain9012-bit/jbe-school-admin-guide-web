@@ -1,5 +1,6 @@
 window.GUIDE_SEARCH_INDEX = [
   {
+    "id": "official-documents",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -12,6 +13,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "official-documents"
   },
   {
+    "id": "official-documents-b1",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -24,6 +26,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-documents-b1"
   },
   {
+    "id": "official-documents-b2",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -36,6 +39,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-documents-b2"
   },
   {
+    "id": "official-documents-b3",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -48,6 +52,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-documents-b3"
   },
   {
+    "id": "official-documents-b4",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -60,6 +65,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-documents-b4"
   },
   {
+    "id": "official-documents-b5",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -72,6 +78,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-documents-b5"
   },
   {
+    "id": "official-documents-b6",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -84,6 +91,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-documents-b6"
   },
   {
+    "id": "official-documents-b7",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -96,6 +104,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-documents-b7"
   },
   {
+    "id": "official-documents-b8",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -108,6 +117,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-documents-b8"
   },
   {
+    "id": "official-documents-b9",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -120,6 +130,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-documents-b9"
   },
   {
+    "id": "official-documents-b10",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -132,6 +143,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-documents-b10"
   },
   {
+    "id": "official-documents-b11",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -144,6 +156,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-documents-b11"
   },
   {
+    "id": "official-documents-b12",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -156,6 +169,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-documents-b12"
   },
   {
+    "id": "official-documents-b13",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -168,6 +182,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-documents-b13"
   },
   {
+    "id": "official-documents-b14",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -180,6 +195,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-documents-b14"
   },
   {
+    "id": "official-documents-b15",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -192,6 +208,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-documents-b15"
   },
   {
+    "id": "official-documents:form:예시1",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -204,6 +221,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시1"
   },
   {
+    "id": "official-documents:faq:1",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -216,6 +234,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "official-documents:faq:2",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -228,6 +247,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "official-documents:faq:3",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -240,6 +260,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "official-documents:faq:4",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -252,6 +273,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "official-documents:faq:5",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -264,6 +286,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "official-documents:faq:6",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -276,6 +299,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "6"
   },
   {
+    "id": "k-edufine",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -288,6 +312,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "k-edufine"
   },
   {
+    "id": "k-edufine-b1",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -300,6 +325,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "k-edufine-b1"
   },
   {
+    "id": "k-edufine-b2",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -312,6 +338,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "k-edufine-b2"
   },
   {
+    "id": "k-edufine-b3",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -324,6 +351,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "k-edufine-b3"
   },
   {
+    "id": "k-edufine-b4",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -336,6 +364,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "k-edufine-b4"
   },
   {
+    "id": "k-edufine-b5",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -348,6 +377,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "k-edufine-b5"
   },
   {
+    "id": "k-edufine-b6",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -360,6 +390,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "k-edufine-b6"
   },
   {
+    "id": "k-edufine-b7",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -372,6 +403,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "k-edufine-b7"
   },
   {
+    "id": "k-edufine-b8",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -384,6 +416,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "k-edufine-b8"
   },
   {
+    "id": "k-edufine-b9",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -396,6 +429,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "k-edufine-b9"
   },
   {
+    "id": "k-edufine-b10",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -408,6 +442,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "k-edufine-b10"
   },
   {
+    "id": "k-edufine-b11",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -420,6 +455,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "k-edufine-b11"
   },
   {
+    "id": "k-edufine:faq:1",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -432,6 +468,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "k-edufine:faq:2",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -444,6 +481,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "k-edufine:faq:3",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -456,6 +494,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "k-edufine:faq:4",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -468,6 +507,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "k-edufine:faq:5",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -480,6 +520,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "k-edufine:faq:6",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -492,6 +533,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "6"
   },
   {
+    "id": "k-edufine:faq:7",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -504,6 +546,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "7"
   },
   {
+    "id": "k-edufine:faq:8",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -516,6 +559,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "8"
   },
   {
+    "id": "k-edufine:faq:9",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -528,6 +572,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "9"
   },
   {
+    "id": "k-edufine:faq:10",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -540,6 +585,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "10"
   },
   {
+    "id": "k-edufine:faq:11",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -552,6 +598,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "11"
   },
   {
+    "id": "k-edufine:faq:12",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -564,6 +611,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "12"
   },
   {
+    "id": "k-edufine:faq:13",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -576,6 +624,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "13"
   },
   {
+    "id": "k-edufine:faq:14",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -588,6 +637,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "14"
   },
   {
+    "id": "k-edufine:faq:15",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -600,6 +650,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "15"
   },
   {
+    "id": "k-edufine:faq:16",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -612,6 +663,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "16"
   },
   {
+    "id": "k-edufine:faq:17",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -624,6 +676,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "17"
   },
   {
+    "id": "k-edufine:faq:18",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -636,6 +689,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "18"
   },
   {
+    "id": "k-edufine:faq:19",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -648,6 +702,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "19"
   },
   {
+    "id": "k-edufine:faq:20",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -660,6 +715,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "20"
   },
   {
+    "id": "k-edufine:faq:21",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -672,6 +728,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "21"
   },
   {
+    "id": "k-edufine:faq:22",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -684,6 +741,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "22"
   },
   {
+    "id": "k-edufine:faq:23",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -696,6 +754,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "23"
   },
   {
+    "id": "k-edufine:faq:24",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -708,6 +767,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "24"
   },
   {
+    "id": "k-edufine:faq:25",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -720,6 +780,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "25"
   },
   {
+    "id": "k-edufine:faq:26",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -732,6 +793,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "26"
   },
   {
+    "id": "k-edufine:faq:27",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -744,6 +806,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "27"
   },
   {
+    "id": "k-edufine:faq:28",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -756,6 +819,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "28"
   },
   {
+    "id": "k-edufine:faq:29",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -768,6 +832,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "29"
   },
   {
+    "id": "k-edufine:faq:30",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -780,6 +845,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "30"
   },
   {
+    "id": "k-edufine:faq:31",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -792,6 +858,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "31"
   },
   {
+    "id": "k-edufine:faq:32",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -804,6 +871,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "32"
   },
   {
+    "id": "k-edufine:faq:33",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -816,6 +884,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "33"
   },
   {
+    "id": "k-edufine:faq:34",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -828,6 +897,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "34"
   },
   {
+    "id": "k-edufine:faq:35",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -840,6 +910,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "35"
   },
   {
+    "id": "k-edufine:faq:36",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -852,6 +923,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "36"
   },
   {
+    "id": "k-edufine:faq:37",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -864,6 +936,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "37"
   },
   {
+    "id": "k-edufine:faq:38",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -876,6 +949,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "38"
   },
   {
+    "id": "k-edufine:faq:39",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -888,6 +962,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "39"
   },
   {
+    "id": "k-edufine:faq:40",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -900,6 +975,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "40"
   },
   {
+    "id": "k-edufine:faq:41",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -912,6 +988,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "41"
   },
   {
+    "id": "k-edufine:faq:42",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -924,6 +1001,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "42"
   },
   {
+    "id": "k-edufine:faq:43",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -936,6 +1014,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "43"
   },
   {
+    "id": "k-edufine:faq:44",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -948,6 +1027,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "44"
   },
   {
+    "id": "k-edufine:faq:45",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -960,6 +1040,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "45"
   },
   {
+    "id": "official-seals",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -972,6 +1053,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "official-seals"
   },
   {
+    "id": "official-seals-b1",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -984,6 +1066,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-seals-b1"
   },
   {
+    "id": "official-seals-b2",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -996,6 +1079,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-seals-b2"
   },
   {
+    "id": "official-seals-b3",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1008,6 +1092,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-seals-b3"
   },
   {
+    "id": "official-seals-b4",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1020,6 +1105,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-seals-b4"
   },
   {
+    "id": "official-seals-b5",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1032,6 +1118,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-seals-b5"
   },
   {
+    "id": "official-seals-b6",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1044,6 +1131,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-seals-b6"
   },
   {
+    "id": "official-seals-b7",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1056,6 +1144,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-seals-b7"
   },
   {
+    "id": "official-seals-b8",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1068,6 +1157,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-seals-b8"
   },
   {
+    "id": "official-seals-b9",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1080,6 +1170,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-seals-b9"
   },
   {
+    "id": "official-seals-b10",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1092,6 +1183,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-seals-b10"
   },
   {
+    "id": "official-seals-b11",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1104,6 +1196,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-seals-b11"
   },
   {
+    "id": "official-seals-b12",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1116,6 +1209,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-seals-b12"
   },
   {
+    "id": "official-seals-b13",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1128,6 +1222,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-seals-b13"
   },
   {
+    "id": "official-seals-b14",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1140,6 +1235,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-seals-b14"
   },
   {
+    "id": "official-seals-b15",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1152,6 +1248,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-seals-b15"
   },
   {
+    "id": "official-seals-b16",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1164,6 +1261,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-seals-b16"
   },
   {
+    "id": "official-seals-b17",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1176,6 +1274,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-seals-b17"
   },
   {
+    "id": "official-seals-b18",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1188,6 +1287,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "official-seals-b18"
   },
   {
+    "id": "official-seals:form:서식1",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1200,6 +1300,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식1"
   },
   {
+    "id": "official-seals:form:서식2",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1212,6 +1313,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식2"
   },
   {
+    "id": "official-seals:form:서식3",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1224,6 +1326,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식3"
   },
   {
+    "id": "official-seals:form:예시2",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1236,6 +1339,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시2"
   },
   {
+    "id": "official-seals:form:예시2-1",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1248,6 +1352,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시2-1"
   },
   {
+    "id": "official-seals:form:예시3",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1260,6 +1365,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시3"
   },
   {
+    "id": "official-seals:form:예시4",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1272,6 +1378,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시4"
   },
   {
+    "id": "acting-duty",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1284,6 +1391,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "acting-duty"
   },
   {
+    "id": "acting-duty-b1",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1296,6 +1404,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "acting-duty-b1"
   },
   {
+    "id": "acting-duty-b2",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1308,6 +1417,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "acting-duty-b2"
   },
   {
+    "id": "acting-duty-b3",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1320,6 +1430,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "acting-duty-b3"
   },
   {
+    "id": "acting-duty-b4",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1332,6 +1443,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "acting-duty-b4"
   },
   {
+    "id": "acting-duty-b5",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1344,6 +1456,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "acting-duty-b5"
   },
   {
+    "id": "acting-duty-b6",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1356,6 +1469,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "acting-duty-b6"
   },
   {
+    "id": "acting-duty-b7",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1368,6 +1482,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "acting-duty-b7"
   },
   {
+    "id": "acting-duty-b8",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1380,6 +1495,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "acting-duty-b8"
   },
   {
+    "id": "acting-duty-b9",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1392,6 +1508,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "acting-duty-b9"
   },
   {
+    "id": "acting-duty-b10",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1404,6 +1521,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "acting-duty-b10"
   },
   {
+    "id": "acting-duty-b11",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1416,6 +1534,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "acting-duty-b11"
   },
   {
+    "id": "acting-duty:form:서식4",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1428,6 +1547,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식4"
   },
   {
+    "id": "acting-duty:faq:1",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1440,6 +1560,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "handover",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1452,6 +1573,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "handover"
   },
   {
+    "id": "handover-b1",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1464,6 +1586,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "handover-b1"
   },
   {
+    "id": "handover-b2",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1476,6 +1599,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "handover-b2"
   },
   {
+    "id": "handover-b3",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1488,6 +1612,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "handover-b3"
   },
   {
+    "id": "handover-b4",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1500,6 +1625,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "handover-b4"
   },
   {
+    "id": "handover-b5",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1512,6 +1638,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "handover-b5"
   },
   {
+    "id": "handover-b6",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1524,6 +1651,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "handover-b6"
   },
   {
+    "id": "handover-b7",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1536,6 +1664,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "handover-b7"
   },
   {
+    "id": "handover-b8",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1548,6 +1677,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "handover-b8"
   },
   {
+    "id": "handover-b9",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1560,6 +1690,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "handover-b9"
   },
   {
+    "id": "records",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1572,6 +1703,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "records"
   },
   {
+    "id": "records-b1",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1584,6 +1716,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "records-b1"
   },
   {
+    "id": "records-b2",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1596,6 +1729,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "records-b2"
   },
   {
+    "id": "records-b3",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1608,6 +1742,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "records-b3"
   },
   {
+    "id": "records-b4",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1620,6 +1755,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "records-b4"
   },
   {
+    "id": "records-b5",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1632,6 +1768,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "records-b5"
   },
   {
+    "id": "records-b6",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1644,6 +1781,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "records-b6"
   },
   {
+    "id": "records-b7",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1656,6 +1794,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "records-b7"
   },
   {
+    "id": "records-b8",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1668,6 +1807,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "records-b8"
   },
   {
+    "id": "records-b9",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1680,6 +1820,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "records-b9"
   },
   {
+    "id": "records-b10",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1692,6 +1833,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "records-b10"
   },
   {
+    "id": "records-b11",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1704,6 +1846,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "records-b11"
   },
   {
+    "id": "records-b12",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1716,6 +1859,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "records-b12"
   },
   {
+    "id": "records-b13",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1728,6 +1872,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "records-b13"
   },
   {
+    "id": "records-b14",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1740,6 +1885,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "records-b14"
   },
   {
+    "id": "records-b15",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1752,6 +1898,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "records-b15"
   },
   {
+    "id": "records-b16",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1764,6 +1911,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "records-b16"
   },
   {
+    "id": "records-b17",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1776,6 +1924,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "records-b17"
   },
   {
+    "id": "records-b18",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1788,6 +1937,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "records-b18"
   },
   {
+    "id": "records-b19",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1800,6 +1950,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "records-b19"
   },
   {
+    "id": "records:form:서식5",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1812,6 +1963,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식5"
   },
   {
+    "id": "records:form:서식6",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1824,6 +1976,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식6"
   },
   {
+    "id": "records:faq:1",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1836,6 +1989,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "records:faq:2",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1848,6 +2002,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "background-check",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1860,6 +2015,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "background-check"
   },
   {
+    "id": "background-check-b1",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1872,6 +2028,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "background-check-b1"
   },
   {
+    "id": "background-check-b2",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1884,6 +2041,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "background-check-b2"
   },
   {
+    "id": "background-check-b3",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1896,6 +2054,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "background-check-b3"
   },
   {
+    "id": "background-check-b4",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1908,6 +2067,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "background-check-b4"
   },
   {
+    "id": "background-check-b5",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1920,6 +2080,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "background-check-b5"
   },
   {
+    "id": "background-check-b6",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1932,6 +2093,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "background-check-b6"
   },
   {
+    "id": "background-check-b7",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1944,6 +2106,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "background-check-b7"
   },
   {
+    "id": "background-check-b8",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1956,6 +2119,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "background-check-b8"
   },
   {
+    "id": "background-check-b9",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1968,6 +2132,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "background-check-b9"
   },
   {
+    "id": "background-check-b10",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1980,6 +2145,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "background-check-b10"
   },
   {
+    "id": "background-check-b11",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -1992,6 +2158,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "background-check-b11"
   },
   {
+    "id": "background-check-b12",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2004,6 +2171,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "background-check-b12"
   },
   {
+    "id": "background-check-b13",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2016,6 +2184,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "background-check-b13"
   },
   {
+    "id": "background-check-b14",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2028,6 +2197,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "background-check-b14"
   },
   {
+    "id": "background-check-b15",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2040,6 +2210,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "background-check-b15"
   },
   {
+    "id": "background-check:form:서식7",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2052,6 +2223,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식7"
   },
   {
+    "id": "background-check:form:서식8",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2064,6 +2236,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식8"
   },
   {
+    "id": "background-check:form:서식9",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2076,6 +2249,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식9"
   },
   {
+    "id": "background-check:form:예시5-1",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2088,6 +2262,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시5-1"
   },
   {
+    "id": "background-check:form:예시5-2",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2100,6 +2275,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시5-2"
   },
   {
+    "id": "background-check:form:예시6",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2112,6 +2288,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시6"
   },
   {
+    "id": "background-check:faq:1",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2124,6 +2301,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "cyber-security-day",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2136,6 +2314,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "cyber-security-day"
   },
   {
+    "id": "cyber-security-day-b1",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2148,6 +2327,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "cyber-security-day-b1"
   },
   {
+    "id": "cyber-security-day-b2",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2160,6 +2340,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "cyber-security-day-b2"
   },
   {
+    "id": "cyber-security-day-b3",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2172,6 +2353,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "cyber-security-day-b3"
   },
   {
+    "id": "cyber-security-day-b4",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2184,6 +2366,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "cyber-security-day-b4"
   },
   {
+    "id": "cyber-security-day-b5",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2196,6 +2379,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "cyber-security-day-b5"
   },
   {
+    "id": "cyber-security-day-b6",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2208,6 +2392,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "cyber-security-day-b6"
   },
   {
+    "id": "cyber-security-day-b7",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2220,6 +2405,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "cyber-security-day-b7"
   },
   {
+    "id": "cyber-security-day-b8",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2232,6 +2418,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "cyber-security-day-b8"
   },
   {
+    "id": "cyber-security-day-b9",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2244,6 +2431,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "cyber-security-day-b9"
   },
   {
+    "id": "cyber-security-day-b10",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2256,6 +2444,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "cyber-security-day-b10"
   },
   {
+    "id": "cyber-security-day-b11",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2268,6 +2457,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "cyber-security-day-b11"
   },
   {
+    "id": "facility-security",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2280,6 +2470,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "facility-security"
   },
   {
+    "id": "facility-security-b1",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2292,6 +2483,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "facility-security-b1"
   },
   {
+    "id": "facility-security-b2",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2304,6 +2496,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "facility-security-b2"
   },
   {
+    "id": "facility-security-b3",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2316,6 +2509,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "facility-security-b3"
   },
   {
+    "id": "facility-security-b4",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2328,6 +2522,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "facility-security-b4"
   },
   {
+    "id": "facility-security-b5",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2340,6 +2535,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "facility-security-b5"
   },
   {
+    "id": "facility-security-b6",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2352,6 +2548,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "facility-security-b6"
   },
   {
+    "id": "facility-security-b7",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2364,6 +2561,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "facility-security-b7"
   },
   {
+    "id": "facility-security:form:서식10",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2376,6 +2574,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식10"
   },
   {
+    "id": "facility-security:form:서식11",
     "chapterId": "01",
     "chapterLabel": "제1편",
     "chapterTitle": "행정업무 및 보안",
@@ -2388,6 +2587,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식11"
   },
   {
+    "id": "c02-w00",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2401,19 +2601,37 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c02-w00-b1~1",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
     "type": "매뉴얼 원문",
     "workTitle": "한눈에 보기",
-    "title": "흐름도 / 제증명 민원 발급 절차 1. 발급 절차 교육기관 방문 후 신분…",
+    "title": "흐름도 / 제증명 민원 발급 절차 1. 발급 절차 교육기관 방문 후 신분… › 흐름도 / 제증명 민원 발급 절차",
     "description": "흐름도 / 제증명 민원 발급 절차 1. 발급 절차 교육기관 방문 후 신분증 제시 / ⇒ / 발급 절차 / ⇒ / 민원서류 수령 ☞ 위치: [나이스] 민원 → 민원업무 →민원처리→ 민원접수 ◦ 민원사무명 선택(기본정보 입력)→발급정보조회 → 추가정보 입력 → 발급 분 류 학생 관련 (졸업증명서 등) / 검정고시 관련 (합격증명서 등) / 인사 관련 (경력증명서 등) 2. 나이스 미조회 시 해당 학교·기관으로 팩스민원 발급 공통 / 발 급 절 차 ☞ [나이스] 민원…",
-    "text": "한눈에 보기\n\n흐름도 / 제증명 민원 발급 절차 1. 발급 절차 교육기관 방문 후 신분증 제시 / ⇒ / 발급 절차 / ⇒ / 민원서류 수령 ☞ 위치: [나이스] 민원 → 민원업무 →민원처리→ 민원접수 ◦ 민원사무명 선택(기본정보 입력)→발급정보조회 → 추가정보 입력 → 발급 분 류 학생 관련 (졸업증명서 등) / 검정고시 관련 (합격증명서 등) / 인사 관련 (경력증명서 등) 2. 나이스 미조회 시 해당 학교·기관으로 팩스민원 발급 공통 / 발 급 절 차 ☞ [나이스] 민원 →민원업무→민원처리→ 민원접수 → 기타발급등록 접수기관 / ◦ 팩스민원 신청서 작성(민원인)→ 본인(신청인) 또는 대리인 신분확인(민원 담당자) ◦ 처리기관으로 팩스민원 신청서 전송 처리기관 / ◦ 접수구분(팩스), 팩스구분(팩스처리) 정보입력 후 저장 → 발급번호 생성 ◦ 처리기관 고무인, 직인 날인, 발급번호 기입 후 교부기관에 전송 - 나이스 발급 건: 나이스 발급 - 나이스 미발급 건: 공부 확인 후 민원서류 작성 교부기관 / ◦ 민원서류 팩스 수신 → 본인 또는 대리인 신분 확인(민원 담당자) ◦ 접수구분(팩스), 팩스구분(팩스접수) 정보입력 후 저장 → 발급번호 생성 ◦ 교부기관 고무인, 직인 날인, 교부번호 기입 후 민원인에게 교부\n기준연도 / 나이스 민원발급 제증명 종류 및 발급 가능 기준연도 구 분 / 발급 기준연도 학생 / 성적증명서 / 2003년 이후 졸업생부터 성적증명서(영문) / 중: 2013년 이후 입학생부터 고: 2014년 이후 입학생부터 졸업증명서(국문, 영문) / 1982년 이후 졸업생부터 제적증명서 / 2003년 이후 제적생부터 학교생활기록부 / 2003년 이후 졸업생부터 검정고시 / 검정고시 성적증명서(국문, 영문) / 1979년 이후 합격자부터 검정고시 합격증명서(국문, 영문) 검정고시 과목합격증명서 인사 / 교원 / 재직자 또는 2003년 이후 퇴직자부터 (재직증명서, 경력증명서, 퇴직증명원, 연수이수확인원, 수상확인원) 지방공무원 / 재직자 또는 2003년 이후 퇴직자부터 (재직증명서, 경력증명서, 퇴직증명원, 수상확인원) 교육공무직 / 1984년 이후 임용된 재직자(재직증명서, 경력증명서)",
+    "text": "한눈에 보기\n\n흐름도 / 제증명 민원 발급 절차 1. 발급 절차 교육기관 방문 후 신분증 제시 / ⇒ / 발급 절차 / ⇒ / 민원서류 수령 ☞ 위치: [나이스] 민원 → 민원업무 →민원처리→ 민원접수 ◦ 민원사무명 선택(기본정보 입력)→발급정보조회 → 추가정보 입력 → 발급 분 류 학생 관련 (졸업증명서 등) / 검정고시 관련 (합격증명서 등) / 인사 관련 (경력증명서 등) 2. 나이스 미조회 시 해당 학교·기관으로 팩스민원 발급 공통 / 발 급 절 차 ☞ [나이스] 민원 →민원업무→민원처리→ 민원접수 → 기타발급등록 접수기관 / ◦ 팩스민원 신청서 작성(민원인)→ 본인(신청인) 또는 대리인 신분확인(민원 담당자) ◦ 처리기관으로 팩스민원 신청서 전송 처리기관 / ◦ 접수구분(팩스), 팩스구분(팩스처리) 정보입력 후 저장 → 발급번호 생성 ◦ 처리기관 고무인, 직인 날인, 발급번호 기입 후 교부기관에 전송 - 나이스 발급 건: 나이스 발급 - 나이스 미발급 건: 공부 확인 후 민원서류 작성 교부기관 / ◦ 민원서류 팩스 수신 → 본인 또는 대리인 신분 확인(민원 담당자) ◦ 접수구분(팩스), 팩스구분(팩스접수) 정보입력 후 저장 → 발급번호 생성 ◦ 교부기관 고무인, 직인 날인, 교부번호 기입 후 민원인에게 교부",
     "workId": "c02-w00",
     "blockId": "c02-w00-b1",
+    "anchor": "흐름도/제증명민원발급절차1.발급절차교육기관방",
     "weight": 0.6
   },
   {
+    "id": "c02-w00-b1~2",
+    "chapterId": "02",
+    "chapterLabel": "제2편",
+    "chapterTitle": "민원 및 정보공개",
+    "type": "매뉴얼 원문",
+    "workTitle": "한눈에 보기",
+    "title": "흐름도 / 제증명 민원 발급 절차 1. 발급 절차 교육기관 방문 후 신분… › 기준연도 / 나이스 민원발급 제증명 종류 및 발급 가능 기준연도 구 분 / 발급 기준연",
+    "description": "기준연도 / 나이스 민원발급 제증명 종류 및 발급 가능 기준연도 구 분 / 발급 기준연도 학생 / 성적증명서 / 2003년 이후 졸업생부터 성적증명서(영문) / 중: 2013년 이후 입학생부터 고: 2014년 이후 입학생부터 졸업증명서(국문, 영문) / 1982년 이후 졸업생부터 제적증명서 / 2003년 이후 제적생부터 학교생활기록부 / 2003년 이후 졸업생부터 검정고시 / 검정고시 성적증명서(국문, 영문) / 1979년 이후 합격자부터 검정고시 합격증명서(국…",
+    "text": "한눈에 보기\n\n기준연도 / 나이스 민원발급 제증명 종류 및 발급 가능 기준연도 구 분 / 발급 기준연도 학생 / 성적증명서 / 2003년 이후 졸업생부터 성적증명서(영문) / 중: 2013년 이후 입학생부터 고: 2014년 이후 입학생부터 졸업증명서(국문, 영문) / 1982년 이후 졸업생부터 제적증명서 / 2003년 이후 제적생부터 학교생활기록부 / 2003년 이후 졸업생부터 검정고시 / 검정고시 성적증명서(국문, 영문) / 1979년 이후 합격자부터 검정고시 합격증명서(국문, 영문) 검정고시 과목합격증명서 인사 / 교원 / 재직자 또는 2003년 이후 퇴직자부터 (재직증명서, 경력증명서, 퇴직증명원, 연수이수확인원, 수상확인원) 지방공무원 / 재직자 또는 2003년 이후 퇴직자부터 (재직증명서, 경력증명서, 퇴직증명원, 수상확인원) 교육공무직 / 1984년 이후 임용된 재직자(재직증명서, 경력증명서)",
+    "workId": "c02-w00",
+    "blockId": "c02-w00-b1",
+    "anchor": "기준연도/나이스민원발급제증명종류및발급가능기준",
+    "weight": 0.6
+  },
+  {
+    "id": "c02-w01",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2426,6 +2644,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c02-w01"
   },
   {
+    "id": "c02-w01-b1",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2438,6 +2657,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b1"
   },
   {
+    "id": "c02-w01-b2",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2450,6 +2670,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b2"
   },
   {
+    "id": "c02-w01-b3",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2462,6 +2683,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b3"
   },
   {
+    "id": "c02-w01-b4",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2474,6 +2696,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b4"
   },
   {
+    "id": "c02-w01-b5",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2486,6 +2709,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b5"
   },
   {
+    "id": "c02-w01-b6",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2498,6 +2722,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b6"
   },
   {
+    "id": "c02-w01-b7",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2510,6 +2735,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b7"
   },
   {
+    "id": "c02-w01-b8",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2522,6 +2748,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b8"
   },
   {
+    "id": "c02-w01-b9",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2534,6 +2761,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b9"
   },
   {
+    "id": "c02-w01-b10",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2546,6 +2774,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b10"
   },
   {
+    "id": "c02-w01-b11",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2558,6 +2787,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b11"
   },
   {
+    "id": "c02-w01-b12",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2570,6 +2800,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b12"
   },
   {
+    "id": "c02-w01-b13",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2582,6 +2813,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b13"
   },
   {
+    "id": "c02-w01-b14",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2594,6 +2826,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b14"
   },
   {
+    "id": "c02-w01-b15",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2606,6 +2839,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b15"
   },
   {
+    "id": "c02-w01-b16",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2618,6 +2852,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b16"
   },
   {
+    "id": "c02-w01-b17",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2630,6 +2865,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b17"
   },
   {
+    "id": "c02-w01-b18",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2642,6 +2878,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b18"
   },
   {
+    "id": "c02-w01-b19",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2654,6 +2891,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b19"
   },
   {
+    "id": "c02-w01-b20",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2666,6 +2904,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b20"
   },
   {
+    "id": "c02-w01-b21",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2678,6 +2917,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b21"
   },
   {
+    "id": "c02-w01-b22",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2690,6 +2930,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b22"
   },
   {
+    "id": "c02-w01-b23",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2702,6 +2943,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b23"
   },
   {
+    "id": "c02-w01-b24",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2714,6 +2956,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b24"
   },
   {
+    "id": "c02-w01-b25",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2726,6 +2969,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b25"
   },
   {
+    "id": "c02-w01-b26",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2738,6 +2982,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b26"
   },
   {
+    "id": "c02-w01-b27",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2750,6 +2995,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b27"
   },
   {
+    "id": "c02-w01-b28",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2762,6 +3008,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b28"
   },
   {
+    "id": "c02-w01-b29",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2774,6 +3021,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b29"
   },
   {
+    "id": "c02-w01-b30",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2786,6 +3034,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b30"
   },
   {
+    "id": "c02-w01-b31",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2798,6 +3047,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w01-b31"
   },
   {
+    "id": "c02-w01:form:서식1",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2810,6 +3060,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식1"
   },
   {
+    "id": "c02-w01:form:서식2",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2822,6 +3073,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식2"
   },
   {
+    "id": "c02-w01:form:서식3",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2834,6 +3086,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식3"
   },
   {
+    "id": "c02-w01:faq:7",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2846,6 +3099,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "7"
   },
   {
+    "id": "c02-w01:faq:8",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2858,6 +3112,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "8"
   },
   {
+    "id": "c02-w02",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2870,6 +3125,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c02-w02"
   },
   {
+    "id": "c02-w02-b1",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2882,6 +3138,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b1"
   },
   {
+    "id": "c02-w02-b2",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2894,6 +3151,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b2"
   },
   {
+    "id": "c02-w02-b3",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2906,6 +3164,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b3"
   },
   {
+    "id": "c02-w02-b4",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2918,6 +3177,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b4"
   },
   {
+    "id": "c02-w02-b5",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2930,6 +3190,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b5"
   },
   {
+    "id": "c02-w02-b6",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2942,6 +3203,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b6"
   },
   {
+    "id": "c02-w02-b7",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2954,6 +3216,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b7"
   },
   {
+    "id": "c02-w02-b8",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2966,6 +3229,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b8"
   },
   {
+    "id": "c02-w02-b9",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2978,6 +3242,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b9"
   },
   {
+    "id": "c02-w02-b10",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -2990,6 +3255,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b10"
   },
   {
+    "id": "c02-w02-b11",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3002,6 +3268,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b11"
   },
   {
+    "id": "c02-w02-b12",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3014,6 +3281,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b12"
   },
   {
+    "id": "c02-w02-b13",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3026,6 +3294,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b13"
   },
   {
+    "id": "c02-w02-b14",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3038,6 +3307,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b14"
   },
   {
+    "id": "c02-w02-b15",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3050,6 +3320,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b15"
   },
   {
+    "id": "c02-w02-b16",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3062,6 +3333,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b16"
   },
   {
+    "id": "c02-w02-b17",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3074,6 +3346,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b17"
   },
   {
+    "id": "c02-w02-b18",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3086,6 +3359,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b18"
   },
   {
+    "id": "c02-w02-b19",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3098,6 +3372,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b19"
   },
   {
+    "id": "c02-w02-b20",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3110,6 +3385,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b20"
   },
   {
+    "id": "c02-w02-b21",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3122,6 +3398,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b21"
   },
   {
+    "id": "c02-w02-b22",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3134,6 +3411,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b22"
   },
   {
+    "id": "c02-w02-b23",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3146,6 +3424,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b23"
   },
   {
+    "id": "c02-w02-b24",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3158,6 +3437,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b24"
   },
   {
+    "id": "c02-w02-b25",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3170,6 +3450,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b25"
   },
   {
+    "id": "c02-w02-b26",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3182,6 +3463,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b26"
   },
   {
+    "id": "c02-w02-b27",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3194,6 +3476,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b27"
   },
   {
+    "id": "c02-w02-b28",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3206,6 +3489,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b28"
   },
   {
+    "id": "c02-w02-b29",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3218,6 +3502,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w02-b29"
   },
   {
+    "id": "c02-w02:form:서식4",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3230,6 +3515,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식4"
   },
   {
+    "id": "c02-w02:form:서식5",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3242,6 +3528,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식5"
   },
   {
+    "id": "c02-w02:form:참고1",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3254,6 +3541,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고1"
   },
   {
+    "id": "c02-w02:faq:1",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3266,6 +3554,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c02-w02:faq:2",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3278,6 +3567,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c02-w02:faq:3",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3290,6 +3580,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c02-w02:faq:4",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3302,6 +3593,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c02-w02:faq:5",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3314,6 +3606,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "c02-w02:faq:6",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3326,6 +3619,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "6"
   },
   {
+    "id": "c02-w03",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3338,6 +3632,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c02-w03"
   },
   {
+    "id": "c02-w03-b1",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3350,6 +3645,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b1"
   },
   {
+    "id": "c02-w03-b2",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3362,6 +3658,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b2"
   },
   {
+    "id": "c02-w03-b3",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3374,6 +3671,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b3"
   },
   {
+    "id": "c02-w03-b4",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3386,6 +3684,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b4"
   },
   {
+    "id": "c02-w03-b5",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3398,6 +3697,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b5"
   },
   {
+    "id": "c02-w03-b6",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3410,6 +3710,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b6"
   },
   {
+    "id": "c02-w03-b7",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3422,6 +3723,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b7"
   },
   {
+    "id": "c02-w03-b8",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3434,6 +3736,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b8"
   },
   {
+    "id": "c02-w03-b9",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3446,6 +3749,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b9"
   },
   {
+    "id": "c02-w03-b10",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3458,6 +3762,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b10"
   },
   {
+    "id": "c02-w03-b11",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3470,6 +3775,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b11"
   },
   {
+    "id": "c02-w03-b12",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3482,6 +3788,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b12"
   },
   {
+    "id": "c02-w03-b13",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3494,6 +3801,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b13"
   },
   {
+    "id": "c02-w03-b14",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3506,6 +3814,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b14"
   },
   {
+    "id": "c02-w03-b15",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3518,6 +3827,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b15"
   },
   {
+    "id": "c02-w03-b16",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3530,6 +3840,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b16"
   },
   {
+    "id": "c02-w03-b17",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3542,6 +3853,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b17"
   },
   {
+    "id": "c02-w03-b18",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3554,6 +3866,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b18"
   },
   {
+    "id": "c02-w03-b19",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3566,6 +3879,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b19"
   },
   {
+    "id": "c02-w03-b20",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3578,6 +3892,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b20"
   },
   {
+    "id": "c02-w03-b21",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3590,6 +3905,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b21"
   },
   {
+    "id": "c02-w03-b22",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3602,6 +3918,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b22"
   },
   {
+    "id": "c02-w03-b23",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3614,6 +3931,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b23"
   },
   {
+    "id": "c02-w03-b24",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3626,6 +3944,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b24"
   },
   {
+    "id": "c02-w03-b25",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3638,6 +3957,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b25"
   },
   {
+    "id": "c02-w03-b26",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3650,6 +3970,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b26"
   },
   {
+    "id": "c02-w03-b27",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3662,6 +3983,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b27"
   },
   {
+    "id": "c02-w03-b28",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3674,6 +3996,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w03-b28"
   },
   {
+    "id": "c02-w03:form:서식6",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3686,6 +4009,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식6"
   },
   {
+    "id": "c02-w03:form:서식7",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3698,6 +4022,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식7"
   },
   {
+    "id": "c02-w03:form:서식8",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3710,6 +4035,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식8"
   },
   {
+    "id": "c02-w03:form:서식9",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3722,6 +4048,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식9"
   },
   {
+    "id": "c02-w03:form:서식10",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3734,6 +4061,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식10"
   },
   {
+    "id": "c02-w03:form:서식11",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3746,6 +4074,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식11"
   },
   {
+    "id": "c02-w03:form:서식12",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3758,6 +4087,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식12"
   },
   {
+    "id": "c02-w03:form:서식13",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3770,6 +4100,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식13"
   },
   {
+    "id": "c02-w03:form:서식14",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3782,6 +4113,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식14"
   },
   {
+    "id": "c02-w03:form:서식15",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3794,6 +4126,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식15"
   },
   {
+    "id": "c02-w03:form:참고2",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3806,6 +4139,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고2"
   },
   {
+    "id": "c02-w03:form:참고3",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3818,6 +4152,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고3"
   },
   {
+    "id": "c02-w03:faq:1",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3830,6 +4165,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c02-w03:faq:2",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3842,6 +4178,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c02-w03:faq:3",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3854,6 +4191,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c02-w03:faq:4",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3866,6 +4204,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c02-w03:faq:5",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3878,6 +4217,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "c02-w03:faq:6",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3890,6 +4230,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "6"
   },
   {
+    "id": "c02-w04",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3902,6 +4243,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c02-w04"
   },
   {
+    "id": "c02-w04-b1",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3914,6 +4256,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w04-b1"
   },
   {
+    "id": "c02-w04-b2",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3926,6 +4269,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w04-b2"
   },
   {
+    "id": "c02-w04-b3",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3938,6 +4282,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w04-b3"
   },
   {
+    "id": "c02-w04-b4",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3950,6 +4295,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w04-b4"
   },
   {
+    "id": "c02-w04-b5",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3962,6 +4308,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w04-b5"
   },
   {
+    "id": "c02-w04-b6",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3974,6 +4321,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w04-b6"
   },
   {
+    "id": "c02-w04-b7",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3986,6 +4334,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w04-b7"
   },
   {
+    "id": "c02-w05",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -3998,6 +4347,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c02-w05"
   },
   {
+    "id": "c02-w05-b1",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -4010,6 +4360,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w05-b1"
   },
   {
+    "id": "c02-w05-b2",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -4022,6 +4373,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w05-b2"
   },
   {
+    "id": "c02-w05-b3",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -4034,6 +4386,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w05-b3"
   },
   {
+    "id": "c02-w05-b4",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -4046,6 +4399,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w05-b4"
   },
   {
+    "id": "c02-w05-b5",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -4058,6 +4412,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w05-b5"
   },
   {
+    "id": "c02-w05-b6",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -4070,6 +4425,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w05-b6"
   },
   {
+    "id": "c02-w05-b7",
     "chapterId": "02",
     "chapterLabel": "제2편",
     "chapterTitle": "민원 및 정보공개",
@@ -4082,6 +4438,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c02-w05-b7"
   },
   {
+    "id": "c03-w00",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4095,6 +4452,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c03-w00-b1",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4108,6 +4466,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "local-personnel",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4120,6 +4479,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "local-personnel"
   },
   {
+    "id": "local-personnel-b1",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4132,6 +4492,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "local-personnel-b1"
   },
   {
+    "id": "local-personnel-b2",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4144,6 +4505,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "local-personnel-b2"
   },
   {
+    "id": "local-personnel-b3",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4156,6 +4518,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "local-personnel-b3"
   },
   {
+    "id": "local-personnel-b4",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4168,6 +4531,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "local-personnel-b4"
   },
   {
+    "id": "local-personnel-b5",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4180,6 +4544,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "local-personnel-b5"
   },
   {
+    "id": "local-personnel-b6",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4192,6 +4557,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "local-personnel-b6"
   },
   {
+    "id": "local-personnel-b7",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4204,6 +4570,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "local-personnel-b7"
   },
   {
+    "id": "local-personnel-b8",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4216,6 +4583,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "local-personnel-b8"
   },
   {
+    "id": "local-personnel-b9",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4228,6 +4596,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "local-personnel-b9"
   },
   {
+    "id": "local-personnel-b10",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4240,6 +4609,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "local-personnel-b10"
   },
   {
+    "id": "local-personnel-b11",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4252,6 +4622,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "local-personnel-b11"
   },
   {
+    "id": "local-personnel-b12",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4264,6 +4635,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "local-personnel-b12"
   },
   {
+    "id": "local-personnel-b13",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4276,6 +4648,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "local-personnel-b13"
   },
   {
+    "id": "local-personnel-b14",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4288,6 +4661,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "local-personnel-b14"
   },
   {
+    "id": "local-personnel-b15",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4300,6 +4674,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "local-personnel-b15"
   },
   {
+    "id": "local-personnel-b16",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4312,6 +4687,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "local-personnel-b16"
   },
   {
+    "id": "local-personnel-b17",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4324,6 +4700,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "local-personnel-b17"
   },
   {
+    "id": "local-personnel-b18",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4336,6 +4713,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "local-personnel-b18"
   },
   {
+    "id": "local-personnel-b19",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4348,6 +4726,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "local-personnel-b19"
   },
   {
+    "id": "local-personnel-b20",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4360,6 +4739,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "local-personnel-b20"
   },
   {
+    "id": "local-personnel:faq:1",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4372,6 +4752,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "local-personnel:faq:2",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4384,6 +4765,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "local-personnel:faq:3",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4396,6 +4778,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "local-personnel:faq:4",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4408,6 +4791,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "local-personnel:faq:9",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4420,6 +4804,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "9"
   },
   {
+    "id": "local-personnel:faq:15",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4432,6 +4817,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "15"
   },
   {
+    "id": "local-personnel:faq:16",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4444,6 +4830,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "16"
   },
   {
+    "id": "local-personnel:faq:17",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4456,6 +4843,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "17"
   },
   {
+    "id": "local-personnel:faq:19",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4468,6 +4856,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "19"
   },
   {
+    "id": "performance-appraisal",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4480,6 +4869,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "performance-appraisal"
   },
   {
+    "id": "performance-appraisal-b1",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4492,6 +4882,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "performance-appraisal-b1"
   },
   {
+    "id": "performance-appraisal-b2",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4504,6 +4895,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "performance-appraisal-b2"
   },
   {
+    "id": "performance-appraisal-b3",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4516,6 +4908,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "performance-appraisal-b3"
   },
   {
+    "id": "performance-appraisal-b4",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4528,6 +4921,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "performance-appraisal-b4"
   },
   {
+    "id": "performance-appraisal-b5",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4540,6 +4934,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "performance-appraisal-b5"
   },
   {
+    "id": "performance-appraisal-b6",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4552,6 +4947,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "performance-appraisal-b6"
   },
   {
+    "id": "performance-appraisal-b7",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4564,6 +4960,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "performance-appraisal-b7"
   },
   {
+    "id": "performance-appraisal-b8",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4576,6 +4973,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "performance-appraisal-b8"
   },
   {
+    "id": "performance-appraisal-b9",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4588,6 +4986,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "performance-appraisal-b9"
   },
   {
+    "id": "performance-appraisal-b10",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4600,6 +4999,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "performance-appraisal-b10"
   },
   {
+    "id": "performance-appraisal:form:예시1",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4612,6 +5012,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시1"
   },
   {
+    "id": "performance-appraisal:form:예시2",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4624,6 +5025,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시2"
   },
   {
+    "id": "performance-appraisal:form:예시2-1",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4636,6 +5038,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시2-1"
   },
   {
+    "id": "performance-appraisal:form:예시3",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4648,6 +5051,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시3"
   },
   {
+    "id": "performance-appraisal:form:참고1",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4660,6 +5064,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고1"
   },
   {
+    "id": "performance-appraisal:form:참고2",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4672,6 +5077,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고2"
   },
   {
+    "id": "performance-appraisal:faq:6",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4684,6 +5090,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "6"
   },
   {
+    "id": "training",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4696,6 +5103,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "training"
   },
   {
+    "id": "training-b1",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4708,6 +5116,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "training-b1"
   },
   {
+    "id": "training-b2",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4720,6 +5129,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "training-b2"
   },
   {
+    "id": "training-b3",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4732,6 +5142,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "training-b3"
   },
   {
+    "id": "training-b4",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4744,6 +5155,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "training-b4"
   },
   {
+    "id": "training-b5",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4756,6 +5168,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "training-b5"
   },
   {
+    "id": "training-b6",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4768,6 +5181,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "training-b6"
   },
   {
+    "id": "training-b7",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4780,6 +5194,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "training-b7"
   },
   {
+    "id": "training-b8",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4792,6 +5207,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "training-b8"
   },
   {
+    "id": "training-b9",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4804,6 +5220,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "training-b9"
   },
   {
+    "id": "training-b10",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4816,6 +5233,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "training-b10"
   },
   {
+    "id": "training-b11",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4828,6 +5246,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "training-b11"
   },
   {
+    "id": "training-b12",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4840,6 +5259,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "training-b12"
   },
   {
+    "id": "training:form:참고3",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4852,6 +5272,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고3"
   },
   {
+    "id": "training:faq:7",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4864,6 +5285,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "7"
   },
   {
+    "id": "awards",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4876,6 +5298,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "awards"
   },
   {
+    "id": "awards-b1",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4888,6 +5311,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "awards-b1"
   },
   {
+    "id": "awards-b2",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4900,6 +5324,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "awards-b2"
   },
   {
+    "id": "awards-b3",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4912,6 +5337,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "awards-b3"
   },
   {
+    "id": "awards-b4",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4924,6 +5350,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "awards-b4"
   },
   {
+    "id": "awards-b5",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4936,6 +5363,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "awards-b5"
   },
   {
+    "id": "awards-b6",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4948,6 +5376,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "awards-b6"
   },
   {
+    "id": "awards-b7",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4960,6 +5389,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "awards-b7"
   },
   {
+    "id": "awards-b8",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4972,6 +5402,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "awards-b8"
   },
   {
+    "id": "awards-b9",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4984,6 +5415,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "awards-b9"
   },
   {
+    "id": "awards-b10",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -4996,6 +5428,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "awards-b10"
   },
   {
+    "id": "awards:form:예시4",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5008,6 +5441,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시4"
   },
   {
+    "id": "awards:form:예시4-1",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5020,6 +5454,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시4-1"
   },
   {
+    "id": "awards:form:예시4-2",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5032,6 +5467,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시4-2"
   },
   {
+    "id": "awards:faq:8",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5044,6 +5480,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "8"
   },
   {
+    "id": "status-rights",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5056,6 +5493,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "status-rights"
   },
   {
+    "id": "status-rights-b1",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5068,6 +5506,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b1"
   },
   {
+    "id": "status-rights-b2",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5080,6 +5519,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b2"
   },
   {
+    "id": "status-rights-b3",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5092,6 +5532,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b3"
   },
   {
+    "id": "status-rights-b4",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5104,18 +5545,35 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b4"
   },
   {
+    "id": "status-rights-b5~1",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
     "type": "매뉴얼 원문",
     "workTitle": "신분 및 권익보장",
-    "title": "2. 휴직사유 및 기간",
+    "title": "2. 휴직사유 및 기간 › 구분 기간 결원보충 봉급 수당 연봉 적용자 경력인정",
     "description": "▸직권휴직 구분 기간 결원보충 봉급 수당 연봉 적용자 경력인정 승진소요 최저연수 경력평정 승급 질병휴직 (요양) 1년 이내 (1년 범위 연장 가능) 6월 이상 (병가와 질병휴직을 연속 6월 이상) 1년 이내: 70% 1년 초과: 50% 공통수당: 봉급과 동일 기타수당: 미지급 1년 이내: 60% 1년 초과: 40% 제외 제외 제외 질병휴직 (공상) 3년 이내 (2년 범위 연장 가능) 6월 이상 전액 전액 산입 산입 복직 시 산입 병역휴직 복무기간 6월 이상 미지…",
-    "text": "신분 및 권익보장\n2. 휴직사유 및 기간\n▸직권휴직\n구분 기간 결원보충 봉급 수당 연봉 적용자 경력인정\n승진소요 최저연수 경력평정 승급\n질병휴직 (요양) 1년 이내 (1년 범위 연장 가능) 6월 이상 (병가와 질병휴직을 연속 6월 이상) 1년 이내: 70% 1년 초과: 50% 공통수당: 봉급과 동일 기타수당: 미지급 1년 이내: 60% 1년 초과: 40% 제외 제외 제외\n질병휴직 (공상) 3년 이내 (2년 범위 연장 가능) 6월 이상 전액 전액 산입 산입 복직 시 산입\n병역휴직 복무기간 6월 이상 미지급 미지급 미지급 산입 산입 복직 시 산입\n행방불명 휴직 3개월 이내 불가 미지급 미지급 미지급 제외 제외 제외\n법률의무 수행 의무 수행기간 6월 이상 미지급 미지급 미지급 산입 산입 복직 시 산입\n노조 전임자 전임기간 6월 이상 미지급 미지급 미지급 산입 산입 복직 시 산입\n▸청원휴직\n구분 기간 결원보충 봉급 수당 연봉 적용자 경력인정\n승진소요 최저연수 경력평정 승급\n고용휴직 채용기간 (민간기업 3년 이내) 6월 이상 미지급 미지급 미지급 산입 산입 복직 시 산입\n유학휴직 3년 이내 (2년 범위 연장 가능) 6월 이상 50% (2년 이내) 50% (2년 이내) 40% (2년 이내) 50% 산입 50% 산입 복직 시 산입\n연수휴직 2년 이내 6월 이상 미지급 미지급 미지급 제외 제외 제외\n육아휴직 자녀 1명당 3년 이내 6월 이상 (출산휴가와 연계한 경우 3월 이상, 휴가시작일 또는 휴직 명령일부터) 미지급 규정에 따라 지급 「지방공무원 수당 등에 관한 규정」 제11조의2 (육아휴직수당) 미지급 산입 산입 최초 1년 1. 셋째 이후 전 기간 2. 1년 6월 (1) 동일자녀에 대하여 부모 모두 3개월 이상 육아휴직 (2) 한부모가족지원법에 따른 부 또는 모 (3) 행정안전부장관이 정하는 장애가 있는 자녀의 부 또는 모\n가족돌봄 휴직 1년 이내 (재직기간 중 총 3년 이내) 6월 이상 미지급 미지급 미지급 제외 제외 제외\n해외동반 휴직 3년 이내 (2년 범위 연장 가능) 6월 이상 미지급 미지급 미지급 제외 제외 제외\n자기개발 휴직 1년 이내 6월 이상 미지급 미지급 미지급 제외 제외 제외",
+    "text": "신분 및 권익보장\n2. 휴직사유 및 기간\n▸직권휴직\n구분 기간 결원보충 봉급 수당 연봉 적용자 경력인정\n승진소요 최저연수 경력평정 승급\n질병휴직 (요양) 1년 이내 (1년 범위 연장 가능) 6월 이상 (병가와 질병휴직을 연속 6월 이상) 1년 이내: 70% 1년 초과: 50% 공통수당: 봉급과 동일 기타수당: 미지급 1년 이내: 60% 1년 초과: 40% 제외 제외 제외\n질병휴직 (공상) 3년 이내 (2년 범위 연장 가능) 6월 이상 전액 전액 산입 산입 복직 시 산입\n병역휴직 복무기간 6월 이상 미지급 미지급 미지급 산입 산입 복직 시 산입\n행방불명 휴직 3개월 이내 불가 미지급 미지급 미지급 제외 제외 제외\n법률의무 수행 의무 수행기간 6월 이상 미지급 미지급 미지급 산입 산입 복직 시 산입\n노조 전임자 전임기간 6월 이상 미지급 미지급 미지급 산입 산입 복직 시 산입\n▸청원휴직\n구분 기간 결원보충 봉급 수당 연봉 적용자 경력인정\n승진소요 최저연수 경력평정 승급\n고용휴직 채용기간 (민간기업 3년 이내) 6월 이상 미지급 미지급 미지급 산입 산입 복직 시 산입\n유학휴직 3년 이내 (2년 범위 연장 가능) 6월 이상 50% (2년 이내) 50% (2년 이내) 40% (2년 이내) 50% 산입 50% 산입 복직 시 산입",
     "workId": "status-rights",
-    "blockId": "status-rights-b5"
+    "blockId": "status-rights-b5",
+    "anchor": "구분기간결원보충봉급수당연봉적용자경력인정"
   },
   {
+    "id": "status-rights-b5~2",
+    "chapterId": "03",
+    "chapterLabel": "제3편",
+    "chapterTitle": "인사관리",
+    "type": "매뉴얼 원문",
+    "workTitle": "신분 및 권익보장",
+    "title": "2. 휴직사유 및 기간 › 연수휴직 2년 이내 6월 이상 미지급 미지급 미지급 제외 제외 제외",
+    "description": "연수휴직 2년 이내 6월 이상 미지급 미지급 미지급 제외 제외 제외 육아휴직 자녀 1명당 3년 이내 6월 이상 (출산휴가와 연계한 경우 3월 이상, 휴가시작일 또는 휴직 명령일부터) 미지급 규정에 따라 지급 「지방공무원 수당 등에 관한 규정」 제11조의2 (육아휴직수당) 미지급 산입 산입 최초 1년 1. 셋째 이후 전 기간 2. 1년 6월 (1) 동일자녀에 대하여 부모 모두 3개월 이상 육아휴직 (2) 한부모가족지원법에 따른 부 또는 모 (3) 행정안전부장관이…",
+    "text": "신분 및 권익보장\n2. 휴직사유 및 기간\n연수휴직 2년 이내 6월 이상 미지급 미지급 미지급 제외 제외 제외\n육아휴직 자녀 1명당 3년 이내 6월 이상 (출산휴가와 연계한 경우 3월 이상, 휴가시작일 또는 휴직 명령일부터) 미지급 규정에 따라 지급 「지방공무원 수당 등에 관한 규정」 제11조의2 (육아휴직수당) 미지급 산입 산입 최초 1년 1. 셋째 이후 전 기간 2. 1년 6월 (1) 동일자녀에 대하여 부모 모두 3개월 이상 육아휴직 (2) 한부모가족지원법에 따른 부 또는 모 (3) 행정안전부장관이 정하는 장애가 있는 자녀의 부 또는 모\n가족돌봄 휴직 1년 이내 (재직기간 중 총 3년 이내) 6월 이상 미지급 미지급 미지급 제외 제외 제외\n해외동반 휴직 3년 이내 (2년 범위 연장 가능) 6월 이상 미지급 미지급 미지급 제외 제외 제외\n자기개발 휴직 1년 이내 6월 이상 미지급 미지급 미지급 제외 제외 제외",
+    "workId": "status-rights",
+    "blockId": "status-rights-b5",
+    "anchor": "연수휴직2년이내6월이상미지급미지급미지급제외제"
+  },
+  {
+    "id": "status-rights-b6",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5128,6 +5586,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b6"
   },
   {
+    "id": "status-rights-b7",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5140,6 +5599,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b7"
   },
   {
+    "id": "status-rights-b8",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5152,6 +5612,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b8"
   },
   {
+    "id": "status-rights-b9",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5164,6 +5625,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b9"
   },
   {
+    "id": "status-rights-b10",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5176,6 +5638,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b10"
   },
   {
+    "id": "status-rights-b11",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5188,6 +5651,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b11"
   },
   {
+    "id": "status-rights-b12",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5200,6 +5664,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b12"
   },
   {
+    "id": "status-rights-b13",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5212,6 +5677,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b13"
   },
   {
+    "id": "status-rights-b14",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5224,6 +5690,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b14"
   },
   {
+    "id": "status-rights-b15",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5236,6 +5703,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b15"
   },
   {
+    "id": "status-rights-b16",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5248,6 +5716,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b16"
   },
   {
+    "id": "status-rights-b17",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5260,6 +5729,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b17"
   },
   {
+    "id": "status-rights-b18",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5272,6 +5742,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b18"
   },
   {
+    "id": "status-rights-b19",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5284,6 +5755,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b19"
   },
   {
+    "id": "status-rights-b20",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5296,6 +5768,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b20"
   },
   {
+    "id": "status-rights-b21",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5308,6 +5781,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b21"
   },
   {
+    "id": "status-rights-b22",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5320,6 +5794,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b22"
   },
   {
+    "id": "status-rights-b23",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5332,6 +5807,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b23"
   },
   {
+    "id": "status-rights-b24",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5344,6 +5820,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b24"
   },
   {
+    "id": "status-rights-b25",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5356,6 +5833,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b25"
   },
   {
+    "id": "status-rights-b26",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5368,6 +5846,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b26"
   },
   {
+    "id": "status-rights-b27",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5380,6 +5859,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b27"
   },
   {
+    "id": "status-rights-b28",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5392,6 +5872,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "status-rights-b28"
   },
   {
+    "id": "status-rights:form:서식1",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5404,6 +5885,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식1"
   },
   {
+    "id": "status-rights:form:서식2",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5416,6 +5898,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식2"
   },
   {
+    "id": "status-rights:form:서식3",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5428,6 +5911,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식3"
   },
   {
+    "id": "status-rights:form:서식4",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5440,6 +5924,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식4"
   },
   {
+    "id": "status-rights:form:서식5",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5452,6 +5937,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식5"
   },
   {
+    "id": "status-rights:form:서식6",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5464,6 +5950,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식6"
   },
   {
+    "id": "status-rights:form:서식7",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5476,6 +5963,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식7"
   },
   {
+    "id": "status-rights:form:예시5",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5488,6 +5976,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시5"
   },
   {
+    "id": "status-rights:form:예시5-1",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5500,6 +5989,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시5-1"
   },
   {
+    "id": "status-rights:form:예시5-2",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5512,6 +6002,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시5-2"
   },
   {
+    "id": "status-rights:form:예시6",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5524,6 +6015,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시6"
   },
   {
+    "id": "status-rights:faq:5",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5536,6 +6028,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "status-rights:faq:10",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5548,6 +6041,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "10"
   },
   {
+    "id": "status-rights:faq:11",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5560,6 +6054,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "11"
   },
   {
+    "id": "status-rights:faq:12",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5572,6 +6067,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "12"
   },
   {
+    "id": "status-rights:faq:13",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5584,6 +6080,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "13"
   },
   {
+    "id": "status-rights:faq:14",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5596,6 +6093,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "14"
   },
   {
+    "id": "status-rights:faq:18",
     "chapterId": "03",
     "chapterLabel": "제3편",
     "chapterTitle": "인사관리",
@@ -5608,6 +6106,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "18"
   },
   {
+    "id": "c04-w00",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5621,6 +6120,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c04-w00-b1",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5634,6 +6134,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c04-w01",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5646,6 +6147,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c04-w01"
   },
   {
+    "id": "c04-w01-b1",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5658,6 +6160,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b1"
   },
   {
+    "id": "c04-w01-b2",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5670,6 +6173,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b2"
   },
   {
+    "id": "c04-w01-b3",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5682,6 +6186,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b3"
   },
   {
+    "id": "c04-w01-b4",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5694,6 +6199,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b4"
   },
   {
+    "id": "c04-w01-b5",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5706,6 +6212,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b5"
   },
   {
+    "id": "c04-w01-b6",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5718,6 +6225,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b6"
   },
   {
+    "id": "c04-w01-b7",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5730,6 +6238,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b7"
   },
   {
+    "id": "c04-w01-b8",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5742,6 +6251,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b8"
   },
   {
+    "id": "c04-w01-b9",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5754,6 +6264,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b9"
   },
   {
+    "id": "c04-w01-b10",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5766,6 +6277,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b10"
   },
   {
+    "id": "c04-w01-b11",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5778,6 +6290,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b11"
   },
   {
+    "id": "c04-w01-b12",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5790,6 +6303,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b12"
   },
   {
+    "id": "c04-w01-b13",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5802,6 +6316,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b13"
   },
   {
+    "id": "c04-w01-b14",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5814,6 +6329,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b14"
   },
   {
+    "id": "c04-w01-b15",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5826,6 +6342,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b15"
   },
   {
+    "id": "c04-w01-b16",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5838,6 +6355,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b16"
   },
   {
+    "id": "c04-w01-b17",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5850,6 +6368,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b17"
   },
   {
+    "id": "c04-w01-b18",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5862,6 +6381,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b18"
   },
   {
+    "id": "c04-w01-b19",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5874,6 +6394,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b19"
   },
   {
+    "id": "c04-w01-b20",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5886,6 +6407,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b20"
   },
   {
+    "id": "c04-w01-b21",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5898,6 +6420,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b21"
   },
   {
+    "id": "c04-w01-b22",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5910,6 +6433,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b22"
   },
   {
+    "id": "c04-w01-b23",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5922,6 +6446,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b23"
   },
   {
+    "id": "c04-w01-b24",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5934,6 +6459,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b24"
   },
   {
+    "id": "c04-w01-b25",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5946,6 +6472,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b25"
   },
   {
+    "id": "c04-w01-b26",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5958,6 +6485,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b26"
   },
   {
+    "id": "c04-w01-b27",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5970,6 +6498,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b27"
   },
   {
+    "id": "c04-w01-b28",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5982,6 +6511,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b28"
   },
   {
+    "id": "c04-w01-b29",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -5994,6 +6524,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b29"
   },
   {
+    "id": "c04-w01-b30",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6006,6 +6537,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b30"
   },
   {
+    "id": "c04-w01-b31",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6018,6 +6550,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b31"
   },
   {
+    "id": "c04-w01-b32",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6030,6 +6563,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b32"
   },
   {
+    "id": "c04-w01-b33",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6042,6 +6576,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b33"
   },
   {
+    "id": "c04-w01-b34",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6054,6 +6589,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b34"
   },
   {
+    "id": "c04-w01-b35",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6066,6 +6602,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b35"
   },
   {
+    "id": "c04-w01-b36",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6078,6 +6615,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b36"
   },
   {
+    "id": "c04-w01-b37",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6090,6 +6628,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b37"
   },
   {
+    "id": "c04-w01-b38",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6102,6 +6641,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b38"
   },
   {
+    "id": "c04-w01-b39",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6114,6 +6654,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b39"
   },
   {
+    "id": "c04-w01-b40",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6126,6 +6667,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b40"
   },
   {
+    "id": "c04-w01-b41",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6138,6 +6680,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b41"
   },
   {
+    "id": "c04-w01-b42",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6150,6 +6693,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b42"
   },
   {
+    "id": "c04-w01-b43",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6162,6 +6706,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w01-b43"
   },
   {
+    "id": "c04-w01:form:서식3",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6174,6 +6719,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식3"
   },
   {
+    "id": "c04-w01:faq:1",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6186,6 +6732,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c04-w01:faq:2",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6198,6 +6745,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c04-w01:faq:3",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6210,6 +6758,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c04-w01:faq:2#2",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6222,6 +6771,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c04-w01:faq:5",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6234,6 +6784,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "c04-w01:faq:3#2",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6246,6 +6797,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c04-w01:faq:4",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6258,6 +6810,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c04-w01:faq:5#2",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6270,6 +6823,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "c04-w01:faq:6",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6282,6 +6836,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "6"
   },
   {
+    "id": "c04-w01:faq:7",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6294,6 +6849,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "7"
   },
   {
+    "id": "c04-w01:faq:8",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6306,6 +6862,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "8"
   },
   {
+    "id": "c04-w01:faq:9",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6318,6 +6875,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "9"
   },
   {
+    "id": "c04-w01:faq:11",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6330,6 +6888,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "11"
   },
   {
+    "id": "c04-w01:faq:1#2",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6342,6 +6901,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c04-w01:faq:2#3",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6354,6 +6914,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c04-w01:faq:1#3",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6366,6 +6927,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c04-w01:faq:2#4",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6378,6 +6940,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c04-w01:faq:3#3",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6390,6 +6953,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c04-w01:faq:4#2",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6402,6 +6966,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c04-w01:faq:5#3",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6414,6 +6979,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "c04-w01:faq:1#4",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6426,6 +6992,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c04-w01:faq:2#5",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6438,6 +7005,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c04-w01:faq:3#4",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6450,6 +7018,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c04-w01:faq:4#3",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6462,6 +7031,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c04-w01:faq:5#4",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6474,6 +7044,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "c04-w01:faq:6#2",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6486,6 +7057,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "6"
   },
   {
+    "id": "c04-w01:faq:7#2",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6498,6 +7070,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "7"
   },
   {
+    "id": "c04-w01:faq:8#2",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6510,6 +7083,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "8"
   },
   {
+    "id": "c04-w01:faq:1#5",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6522,6 +7096,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c04-w01:faq:3#5",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6534,6 +7109,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c04-w01:faq:4#4",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6546,6 +7122,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c04-w01:faq:5#5",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6558,6 +7135,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "c04-w01:faq:6#3",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6570,6 +7148,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "6"
   },
   {
+    "id": "c04-w01:faq:7#3",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6582,6 +7161,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "7"
   },
   {
+    "id": "c04-w01:faq:8#3",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6594,6 +7174,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "8"
   },
   {
+    "id": "c04-w01:faq:9#2",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6606,6 +7187,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "9"
   },
   {
+    "id": "c04-w01:faq:2#6",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6618,6 +7200,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c04-w01:faq:3#6",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6630,6 +7213,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c04-w01:faq:4#5",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6642,6 +7226,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c04-w01:faq:5#6",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6654,6 +7239,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "c04-w01:faq:6#4",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6666,6 +7252,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "6"
   },
   {
+    "id": "c04-w01:faq:7#4",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6678,6 +7265,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "7"
   },
   {
+    "id": "c04-w01:faq:8#4",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6690,6 +7278,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "8"
   },
   {
+    "id": "c04-w01:faq:9#3",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6702,6 +7291,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "9"
   },
   {
+    "id": "c04-w01:faq:1#6",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6714,6 +7304,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c04-w01:faq:2#7",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6726,6 +7317,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c04-w01:faq:3#7",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6738,6 +7330,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c04-w01:faq:4#6",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6750,6 +7343,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c04-w01:faq:5#7",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6762,6 +7356,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "c04-w01:faq:6#5",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6774,6 +7369,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "6"
   },
   {
+    "id": "c04-w01:faq:7#5",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6786,6 +7382,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "7"
   },
   {
+    "id": "c04-w01:faq:8#5",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6798,6 +7395,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "8"
   },
   {
+    "id": "c04-w01:faq:2#8",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6810,6 +7408,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c04-w01:faq:3#8",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6822,6 +7421,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c04-w01:faq:4#7",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6834,6 +7434,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c04-w01:faq:6#6",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6846,6 +7447,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "6"
   },
   {
+    "id": "c04-w01:faq:7#6",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6858,6 +7460,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "7"
   },
   {
+    "id": "c04-w01:faq:8#6",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6870,6 +7473,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "8"
   },
   {
+    "id": "c04-w01:faq:1#7",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6882,6 +7486,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c04-w01:faq:2#9",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6894,6 +7499,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c04-w01:faq:3#9",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6906,6 +7512,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c04-w01:faq:4#8",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6918,6 +7525,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c04-w01:faq:5#8",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6930,6 +7538,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "c04-w01:faq:6#7",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6942,6 +7551,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "6"
   },
   {
+    "id": "c04-w01:faq:7#7",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6954,6 +7564,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "7"
   },
   {
+    "id": "c04-w01:faq:8#7",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6966,6 +7577,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "8"
   },
   {
+    "id": "c04-w01:faq:7#8",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6978,6 +7590,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "7"
   },
   {
+    "id": "c04-w02",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -6990,6 +7603,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c04-w02"
   },
   {
+    "id": "c04-w02-b1",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7002,6 +7616,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w02-b1"
   },
   {
+    "id": "c04-w02-b2",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7014,6 +7629,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w02-b2"
   },
   {
+    "id": "c04-w02-b3",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7026,6 +7642,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w02-b3"
   },
   {
+    "id": "c04-w02-b4",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7038,6 +7655,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w02-b4"
   },
   {
+    "id": "c04-w02-b5",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7050,6 +7668,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w02-b5"
   },
   {
+    "id": "c04-w02-b6",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7062,6 +7681,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w02-b6"
   },
   {
+    "id": "c04-w02-b7",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7074,6 +7694,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w02-b7"
   },
   {
+    "id": "c04-w02-b8",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7086,6 +7707,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w02-b8"
   },
   {
+    "id": "c04-w02:form:서식4",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7098,6 +7720,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식4"
   },
   {
+    "id": "c04-w02:faq:10",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7110,6 +7733,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "10"
   },
   {
+    "id": "c04-w03",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7122,6 +7746,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c04-w03"
   },
   {
+    "id": "c04-w03-b1",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7134,6 +7759,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w03-b1"
   },
   {
+    "id": "c04-w03-b2",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7146,6 +7772,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w03-b2"
   },
   {
+    "id": "c04-w03-b3",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7158,6 +7785,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w03-b3"
   },
   {
+    "id": "c04-w03-b4",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7170,6 +7798,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w03-b4"
   },
   {
+    "id": "c04-w03-b5",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7182,6 +7811,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w03-b5"
   },
   {
+    "id": "c04-w03-b6",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7194,6 +7824,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w03-b6"
   },
   {
+    "id": "c04-w03-b7",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7206,6 +7837,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w03-b7"
   },
   {
+    "id": "c04-w03-b8",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7218,6 +7850,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w03-b8"
   },
   {
+    "id": "c04-w03-b9",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7230,6 +7863,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w03-b9"
   },
   {
+    "id": "c04-w03:form:서식5",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7242,6 +7876,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식5"
   },
   {
+    "id": "c04-w03:form:서식6",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7254,6 +7889,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식6"
   },
   {
+    "id": "c04-w03:form:서식7",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7266,6 +7902,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식7"
   },
   {
+    "id": "c04-w03:faq:1",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7278,6 +7915,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c04-w04",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7290,6 +7928,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c04-w04"
   },
   {
+    "id": "c04-w04-b1",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7302,6 +7941,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w04-b1"
   },
   {
+    "id": "c04-w04-b2",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7314,6 +7954,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w04-b2"
   },
   {
+    "id": "c04-w04-b3",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7326,6 +7967,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w04-b3"
   },
   {
+    "id": "c04-w04-b4",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7338,6 +7980,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w04-b4"
   },
   {
+    "id": "c04-w04-b5",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7350,6 +7993,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w04-b5"
   },
   {
+    "id": "c04-w05",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7362,6 +8006,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c04-w05"
   },
   {
+    "id": "c04-w05-b1",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7374,6 +8019,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w05-b1"
   },
   {
+    "id": "c04-w05-b2",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7386,6 +8032,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w05-b2"
   },
   {
+    "id": "c04-w05-b3",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7398,6 +8045,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w05-b3"
   },
   {
+    "id": "c04-w05-b4",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7410,6 +8058,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w05-b4"
   },
   {
+    "id": "c04-w05-b5",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7422,6 +8071,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w05-b5"
   },
   {
+    "id": "c04-w05-b6",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7434,6 +8084,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w05-b6"
   },
   {
+    "id": "c04-w05-b7",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7446,6 +8097,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w05-b7"
   },
   {
+    "id": "c04-w05:faq:1",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7458,6 +8110,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c04-w06",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7470,6 +8123,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c04-w06"
   },
   {
+    "id": "c04-w06-b1",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7482,6 +8136,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w06-b1"
   },
   {
+    "id": "c04-w06-b2",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7494,6 +8149,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w06-b2"
   },
   {
+    "id": "c04-w06-b3",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7506,6 +8162,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w06-b3"
   },
   {
+    "id": "c04-w06-b4",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7518,6 +8175,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w06-b4"
   },
   {
+    "id": "c04-w06-b5",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7530,6 +8188,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w06-b5"
   },
   {
+    "id": "c04-w06-b6",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7542,6 +8201,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w06-b6"
   },
   {
+    "id": "c04-w06-b7",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7554,6 +8214,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w06-b7"
   },
   {
+    "id": "c04-w06-b8",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7566,6 +8227,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w06-b8"
   },
   {
+    "id": "c04-w06-b9",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7578,6 +8240,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w06-b9"
   },
   {
+    "id": "c04-w06-b10",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7590,6 +8253,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w06-b10"
   },
   {
+    "id": "c04-w06-b11",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7602,6 +8266,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w06-b11"
   },
   {
+    "id": "c04-w06-b12",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7614,6 +8279,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w06-b12"
   },
   {
+    "id": "c04-w06-b13",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7626,6 +8292,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w06-b13"
   },
   {
+    "id": "c04-w06-b14",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7638,6 +8305,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w06-b14"
   },
   {
+    "id": "c04-w06-b15",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7650,6 +8318,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w06-b15"
   },
   {
+    "id": "c04-w06-b16",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7662,6 +8331,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w06-b16"
   },
   {
+    "id": "c04-w06-b17",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7674,6 +8344,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w06-b17"
   },
   {
+    "id": "c04-w06-b18",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7686,6 +8357,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w06-b18"
   },
   {
+    "id": "c04-w06-b19",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7698,6 +8370,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w06-b19"
   },
   {
+    "id": "c04-w06-b20",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7710,6 +8383,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w06-b20"
   },
   {
+    "id": "c04-w06-b21",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7722,6 +8396,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c04-w06-b21"
   },
   {
+    "id": "c04-w06:form:서식1",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7734,6 +8409,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식1"
   },
   {
+    "id": "c04-w06:form:서식2",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7746,6 +8422,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식2"
   },
   {
+    "id": "c04-w06:form:예시1",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7758,6 +8435,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시1"
   },
   {
+    "id": "c04-w06:form:예시2",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7770,6 +8448,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시2"
   },
   {
+    "id": "c04-w06:form:예시3",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7782,6 +8461,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시3"
   },
   {
+    "id": "c04-w06:faq:1",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7794,6 +8474,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c04-w06:faq:3",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7806,6 +8487,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c04-w06:faq:4",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7818,6 +8500,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c04-w06:faq:6",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7830,6 +8513,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "6"
   },
   {
+    "id": "c04-w06:faq:7",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7842,6 +8526,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "7"
   },
   {
+    "id": "c04-w06:faq:2",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7854,6 +8539,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c04-w06:faq:5",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7866,6 +8552,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "c04-w06:faq:9",
     "chapterId": "04",
     "chapterLabel": "제4편",
     "chapterTitle": "복무",
@@ -7878,6 +8565,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "9"
   },
   {
+    "id": "c05-w00",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -7891,6 +8579,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c05-w00-b1",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -7904,6 +8593,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c05-w01",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -7916,6 +8606,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c05-w01"
   },
   {
+    "id": "c05-w01-b1",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -7928,6 +8619,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w01-b1"
   },
   {
+    "id": "c05-w01-b2",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -7940,6 +8632,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w01-b2"
   },
   {
+    "id": "c05-w01-b3",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -7952,6 +8645,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w01-b3"
   },
   {
+    "id": "c05-w01-b4",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -7964,6 +8658,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w01-b4"
   },
   {
+    "id": "c05-w01-b5",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -7976,6 +8671,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w01-b5"
   },
   {
+    "id": "c05-w01-b6",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -7988,6 +8684,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w01-b6"
   },
   {
+    "id": "c05-w01-b7",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8000,6 +8697,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w01-b7"
   },
   {
+    "id": "c05-w01-b8",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8012,6 +8710,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w01-b8"
   },
   {
+    "id": "c05-w01-b9",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8024,6 +8723,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w01-b9"
   },
   {
+    "id": "c05-w01-b10",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8036,6 +8736,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w01-b10"
   },
   {
+    "id": "c05-w01-b11",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8048,6 +8749,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w01-b11"
   },
   {
+    "id": "c05-w01-b12",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8060,6 +8762,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w01-b12"
   },
   {
+    "id": "c05-w01-b13",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8072,6 +8775,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w01-b13"
   },
   {
+    "id": "c05-w01-b14",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8084,6 +8788,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w01-b14"
   },
   {
+    "id": "c05-w01-b15",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8096,6 +8801,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w01-b15"
   },
   {
+    "id": "c05-w01-b16",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8108,6 +8814,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w01-b16"
   },
   {
+    "id": "c05-w01-b17",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8120,6 +8827,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w01-b17"
   },
   {
+    "id": "c05-w01-b18",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8132,6 +8840,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w01-b18"
   },
   {
+    "id": "c05-w01-b19",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8144,6 +8853,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w01-b19"
   },
   {
+    "id": "c05-w01-b20",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8156,6 +8866,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w01-b20"
   },
   {
+    "id": "c05-w01-b21",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8168,6 +8879,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w01-b21"
   },
   {
+    "id": "c05-w01-b22",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8180,18 +8892,35 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w01-b22"
   },
   {
+    "id": "c05-w01-b23~1",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
     "type": "매뉴얼 원문",
     "workTitle": "감사",
-    "title": "6. 일상감사 실시절차와 방법",
+    "title": "6. 일상감사 실시절차와 방법 › 일상감사 의뢰 ◦일상감사의뢰서[서식1] 및 관련서류를 첨부하여 감사관에게 일상감사 의뢰",
     "description": "절 차 방 법 일상감사 의뢰 ◦일상감사의뢰서[서식1] 및 관련서류를 첨부하여 감사관에게 일상감사 의뢰 ※ 시설공사는 관할 교육지원청(사립 고등학교는 도교육청(시설과))의 사전 설계도서 검토 후 결과를 첨부하여 의뢰 ◦소요기간: 최소 7~10일 ⇓ 감사 실시 ◦감사중점사항 - 사업추진의 합법성 및 필요성 - 사업추진 내용의 타당성(경제성․효과성․효율성) - 사업목적의 명확성 - 사업추진 주체의 적정성 - 재원조달 및 집행의 적정성 - 원가계산 및 예정가격 산정의…",
-    "text": "감사\n6. 일상감사 실시절차와 방법\n절 차 방 법\n일상감사 의뢰 ◦일상감사의뢰서[서식1] 및 관련서류를 첨부하여 감사관에게 일상감사 의뢰 ※ 시설공사는 관할 교육지원청(사립 고등학교는 도교육청(시설과))의 사전 설계도서 검토 후 결과를 첨부하여 의뢰 ◦소요기간: 최소 7~10일\n⇓\n감사 실시 ◦감사중점사항 - 사업추진의 합법성 및 필요성 - 사업추진 내용의 타당성(경제성․효과성․효율성) - 사업목적의 명확성 - 사업추진 주체의 적정성 - 재원조달 및 집행의 적정성 - 원가계산 및 예정가격 산정의 적정성 ※ 계약심사와 중복되는 경우, 계약심사 결과로 갈음할 수 있음 - 계약방법 및 절차의 적정성 - 지명입찰계약, 수의계약의 경우 해당 계약방법의 사유에 해당되는지 여부 - 예산의 목적 외 사용 여부 등\n⇓\n감사의견 통보 ◦일상감사를 요청받은 날(일상감사 관련서류를 제출받은 날)로부터 7일 이내 (계약심사와 중복되는 경우 10일 이내, 토․공휴일 제외)에 일상감사 의견서[서식2]를 집행부서의 장에게 통보 ◦다만, 사안이 복잡하거나 신중한 처리 등을 위하여 집행부서의 장과 협의하여 1차에 한하여 7일 이내 기간 연장 가능\n⇓\n재검토 요청 및 처리 등 ◦일상감사 의견에 이의가 있는 경우에는 의견서를 받은 날로부터 7일 이내에 그 사유와 입증자료 등 필요한 서류를 첨부하여 감사관에게 재검토 요청 가능 ◦감사관은 재검토 요청이 있는 날로부터 7일 이내에 재검토 요구사유와 관련 증빙자료를 검토 후 그에 따라 기각, 감사의견의 변경 등 조치\n⇓\n일상감사 의견의 이행 ◦집행부서의 장은 대상 사업에 대하여 최종결재권자의 결재를 받을 때 일상감사 의견서와 그 조치결과(부적정 사유를 통보받았을 때에는 그 사유를 포함) 첨부 ◦집행부서의 장은 일상감사 의견에 따라 적절한 조치를 취하고, 그 결과를 일상감사 의견서를 통보 받은 날로부터 1개월 이내에 일상감사 의견에 대한 조치결과 통보서[서식3]에 따라 감사관에게 통보. ◦일상감사 결과 적정 의견에 대하여는 조치결과의 통보 생략 가능",
+    "text": "감사\n6. 일상감사 실시절차와 방법\n절 차 방 법\n일상감사 의뢰 ◦일상감사의뢰서[서식1] 및 관련서류를 첨부하여 감사관에게 일상감사 의뢰 ※ 시설공사는 관할 교육지원청(사립 고등학교는 도교육청(시설과))의 사전 설계도서 검토 후 결과를 첨부하여 의뢰 ◦소요기간: 최소 7~10일\n⇓\n감사 실시 ◦감사중점사항 - 사업추진의 합법성 및 필요성 - 사업추진 내용의 타당성(경제성․효과성․효율성) - 사업목적의 명확성 - 사업추진 주체의 적정성 - 재원조달 및 집행의 적정성 - 원가계산 및 예정가격 산정의 적정성 ※ 계약심사와 중복되는 경우, 계약심사 결과로 갈음할 수 있음 - 계약방법 및 절차의 적정성 - 지명입찰계약, 수의계약의 경우 해당 계약방법의 사유에 해당되는지 여부 - 예산의 목적 외 사용 여부 등\n⇓\n감사의견 통보 ◦일상감사를 요청받은 날(일상감사 관련서류를 제출받은 날)로부터 7일 이내 (계약심사와 중복되는 경우 10일 이내, 토․공휴일 제외)에 일상감사 의견서[서식2]를 집행부서의 장에게 통보 ◦다만, 사안이 복잡하거나 신중한 처리 등을 위하여 집행부서의 장과 협의하여 1차에 한하여 7일 이내 기간 연장 가능\n⇓",
     "workId": "c05-w01",
-    "blockId": "c05-w01-b23"
+    "blockId": "c05-w01-b23",
+    "anchor": "일상감사의뢰◦일상감사의뢰서[서식1]및관련서류"
   },
   {
+    "id": "c05-w01-b23~2",
+    "chapterId": "05",
+    "chapterLabel": "제5편",
+    "chapterTitle": "감사",
+    "type": "매뉴얼 원문",
+    "workTitle": "감사",
+    "title": "6. 일상감사 실시절차와 방법 › 재검토 요청 및 처리 등 ◦일상감사 의견에 이의가 있는 경우에는 의견서를 받은 날로부터",
+    "description": "재검토 요청 및 처리 등 ◦일상감사 의견에 이의가 있는 경우에는 의견서를 받은 날로부터 7일 이내에 그 사유와 입증자료 등 필요한 서류를 첨부하여 감사관에게 재검토 요청 가능 ◦감사관은 재검토 요청이 있는 날로부터 7일 이내에 재검토 요구사유와 관련 증빙자료를 검토 후 그에 따라 기각, 감사의견의 변경 등 조치 ⇓ 일상감사 의견의 이행 ◦집행부서의 장은 대상 사업에 대하여 최종결재권자의 결재를 받을 때 일상감사 의견서와 그 조치결과(부적정 사유를 통보받았을 때에…",
+    "text": "감사\n6. 일상감사 실시절차와 방법\n재검토 요청 및 처리 등 ◦일상감사 의견에 이의가 있는 경우에는 의견서를 받은 날로부터 7일 이내에 그 사유와 입증자료 등 필요한 서류를 첨부하여 감사관에게 재검토 요청 가능 ◦감사관은 재검토 요청이 있는 날로부터 7일 이내에 재검토 요구사유와 관련 증빙자료를 검토 후 그에 따라 기각, 감사의견의 변경 등 조치\n⇓\n일상감사 의견의 이행 ◦집행부서의 장은 대상 사업에 대하여 최종결재권자의 결재를 받을 때 일상감사 의견서와 그 조치결과(부적정 사유를 통보받았을 때에는 그 사유를 포함) 첨부 ◦집행부서의 장은 일상감사 의견에 따라 적절한 조치를 취하고, 그 결과를 일상감사 의견서를 통보 받은 날로부터 1개월 이내에 일상감사 의견에 대한 조치결과 통보서[서식3]에 따라 감사관에게 통보. ◦일상감사 결과 적정 의견에 대하여는 조치결과의 통보 생략 가능",
+    "workId": "c05-w01",
+    "blockId": "c05-w01-b23",
+    "anchor": "재검토요청및처리등◦일상감사의견에이의가있는경우"
+  },
+  {
+    "id": "c05-w01:form:예시1",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8204,6 +8933,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시1"
   },
   {
+    "id": "c05-w01:form:예시2",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8216,6 +8946,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시2"
   },
   {
+    "id": "c05-w01:form:서식1",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8228,6 +8959,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식1"
   },
   {
+    "id": "c05-w01:form:서식2",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8240,6 +8972,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식2"
   },
   {
+    "id": "c05-w01:form:서식3",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8252,6 +8985,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식3"
   },
   {
+    "id": "c05-w01:form:참고1",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8264,6 +8998,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고1"
   },
   {
+    "id": "c05-w02",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8276,6 +9011,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c05-w02"
   },
   {
+    "id": "c05-w02-b1",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8288,6 +9024,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w02-b1"
   },
   {
+    "id": "c05-w02-b2",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8300,6 +9037,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w02-b2"
   },
   {
+    "id": "c05-w02-b3",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8312,6 +9050,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w02-b3"
   },
   {
+    "id": "c05-w02-b4",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8324,6 +9063,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w02-b4"
   },
   {
+    "id": "c05-w02-b5",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8336,6 +9076,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w02-b5"
   },
   {
+    "id": "c05-w02-b6",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8348,6 +9089,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w02-b6"
   },
   {
+    "id": "c05-w02-b7",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8360,6 +9102,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w02-b7"
   },
   {
+    "id": "c05-w02:form:참고2",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8372,6 +9115,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고2"
   },
   {
+    "id": "c05-w03",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8384,6 +9128,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c05-w03"
   },
   {
+    "id": "c05-w03-b1",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8396,6 +9141,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w03-b1"
   },
   {
+    "id": "c05-w03-b2",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8408,6 +9154,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w03-b2"
   },
   {
+    "id": "c05-w03-b3",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8420,6 +9167,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w03-b3"
   },
   {
+    "id": "c05-w03-b4",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8432,6 +9180,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w03-b4"
   },
   {
+    "id": "c05-w03-b5",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8444,6 +9193,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w03-b5"
   },
   {
+    "id": "c05-w03-b6",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8456,6 +9206,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w03-b6"
   },
   {
+    "id": "c05-w03:form:참고3",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8468,6 +9219,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고3"
   },
   {
+    "id": "c05-w04",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8480,6 +9232,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c05-w04"
   },
   {
+    "id": "c05-w04-b1",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8492,6 +9245,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w04-b1"
   },
   {
+    "id": "c05-w04-b2",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8504,6 +9258,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w04-b2"
   },
   {
+    "id": "c05-w04-b3",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8516,6 +9271,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w04-b3"
   },
   {
+    "id": "c05-w04-b4",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8528,6 +9284,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w04-b4"
   },
   {
+    "id": "c05-w04-b5",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8540,6 +9297,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w04-b5"
   },
   {
+    "id": "c05-w04-b6",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8552,6 +9310,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w04-b6"
   },
   {
+    "id": "c05-w04:form:참고4",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8564,6 +9323,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고4"
   },
   {
+    "id": "c05-w05",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8576,6 +9336,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c05-w05"
   },
   {
+    "id": "c05-w05-b1",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8588,6 +9349,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w05-b1"
   },
   {
+    "id": "c05-w05-b2",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8600,6 +9362,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w05-b2"
   },
   {
+    "id": "c05-w05-b3",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8612,6 +9375,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w05-b3"
   },
   {
+    "id": "c05-w05-b4",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8624,6 +9388,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w05-b4"
   },
   {
+    "id": "c05-w05-b5",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8636,6 +9401,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w05-b5"
   },
   {
+    "id": "c05-w05-b6",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8648,6 +9414,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w05-b6"
   },
   {
+    "id": "c05-w05-b7",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8660,6 +9427,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w05-b7"
   },
   {
+    "id": "c05-w05-b8",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8672,6 +9440,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w05-b8"
   },
   {
+    "id": "c05-w05-b9",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8684,6 +9453,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w05-b9"
   },
   {
+    "id": "c05-w05-b10",
     "chapterId": "05",
     "chapterLabel": "제5편",
     "chapterTitle": "감사",
@@ -8696,6 +9466,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c05-w05-b10"
   },
   {
+    "id": "c06-w00",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8709,6 +9480,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c06-w00-b1",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8722,6 +9494,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c06-w01",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8734,6 +9507,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c06-w01"
   },
   {
+    "id": "c06-w01-b1",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8746,6 +9520,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b1"
   },
   {
+    "id": "c06-w01-b2",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8758,6 +9533,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b2"
   },
   {
+    "id": "c06-w01-b3",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8770,6 +9546,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b3"
   },
   {
+    "id": "c06-w01-b4",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8782,6 +9559,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b4"
   },
   {
+    "id": "c06-w01-b5",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8794,6 +9572,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b5"
   },
   {
+    "id": "c06-w01-b6",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8806,6 +9585,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b6"
   },
   {
+    "id": "c06-w01-b7",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8818,6 +9598,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b7"
   },
   {
+    "id": "c06-w01-b8",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8830,6 +9611,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b8"
   },
   {
+    "id": "c06-w01-b9",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8842,6 +9624,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b9"
   },
   {
+    "id": "c06-w01-b10",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8854,6 +9637,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b10"
   },
   {
+    "id": "c06-w01-b11",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8866,6 +9650,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b11"
   },
   {
+    "id": "c06-w01-b12",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8878,6 +9663,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b12"
   },
   {
+    "id": "c06-w01-b13",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8890,6 +9676,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b13"
   },
   {
+    "id": "c06-w01-b14",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8902,6 +9689,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b14"
   },
   {
+    "id": "c06-w01-b15",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8914,6 +9702,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b15"
   },
   {
+    "id": "c06-w01-b16",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8926,18 +9715,35 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b16"
   },
   {
+    "id": "c06-w01-b17~1",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
     "type": "매뉴얼 원문",
     "workTitle": "학교발전기금",
-    "title": "기탁방법 (접수방법) ◦ 접수처에 직접 접수(학교발전기금 기탁서 작성)…",
-    "description": "기탁방법 (접수방법) ◦ 접수처에 직접 접수(학교발전기금 기탁서 작성) ◦ 금융기관 또는 체신관서를 통한 접수(학교발전기금 기탁서 작성) ◦ 온라인을 통한 접수(학교 누리집에 학교발전기금 기탁서 양식 탑재) ⇩ 사업내역 등록 ◦ 구분별(사용목적, 금품종류, 기부대상)로 선택하여 사용 용도에 맞게 작성 ◦ 사업명, 사업 목적 및 조성 방법 등을 기재 [K-에듀파인] 발전기금 → 사업관리 → 기금사업관리 → 사업등록 ⇩ 학교발전기금 접수 ◦ 접수처: 학교발전기금회계…",
-    "text": "학교발전기금\n\n기탁방법 (접수방법) ◦ 접수처에 직접 접수(학교발전기금 기탁서 작성) ◦ 금융기관 또는 체신관서를 통한 접수(학교발전기금 기탁서 작성) ◦ 온라인을 통한 접수(학교 누리집에 학교발전기금 기탁서 양식 탑재)\n⇩\n사업내역 등록 ◦ 구분별(사용목적, 금품종류, 기부대상)로 선택하여 사용 용도에 맞게 작성 ◦ 사업명, 사업 목적 및 조성 방법 등을 기재 [K-에듀파인] 발전기금 → 사업관리 → 기금사업관리 → 사업등록\n⇩\n학교발전기금 접수 ◦ 접수처: 학교발전기금회계출납원 사무실 또는 지정 금융기관 ◦ 수납자: 학교발전기금회계출납원 ▸접수처 표식: 발전기금 접수처 입구에 “학교발전기금 접수처” 명판 부착 ◦ 접수절차 ▸발전기금 접수처리(K-에듀파인 활용): 금전 및 유가증권, 도서 및 물품, 수목 및 재산 [K-에듀파인] 발전기금 → 접수관리 → 기금접수관리 → 학교발전기금기탁서 출력 → 학교발전기금 접수대장 출력 후 결재 ※ 도서, 물품, 수목 및 재산이 접수된 경우 관계대장에 등재 ▸발전기금 접수 후 접수내역(기탁일자, 기탁자, 사용용도, 세부내역, 금액 등)을 학교 누리집에 분기별 종료 후 1개월 이내 탑재(공개) ▸기탁자가 요구 시 기탁자의 명의 공개 또는 제시 가능 ※ 단, 기탁자 자녀(학생) 명의 공개나 표시는 불가 ▸발전기금 접수현황 보고(결산보고 시): 관할청 [K-에듀파인] 발전기금 → 결산관리 → 접수현황보고관리 ▸접수내역은 학교운영위원장에게 결재를 받음 ◦ 접수 제한 ▸리베이트(어린이 신문, 우유 납품업체, 편입학 학부모 제공 기부금) 등 반대급부를 요구하는 기부금품 ▸유지·관리에 인력 또는 경비가 과다하게 소요되는 차량, 건물 등의 기부(유지관리에 경비가 과다하게 소요되지 않는 차량 장기렌탈 비용은 예외) 단, 관할청의 승인을 얻으면 접수 가능 ▸각종 선거·선출에 영향을 미칠 수 있는 기부 ▸교직원 복지(인건비성 경비, 교직원 연수비, 회식비, 체육복 구입비 등)를 목적으로 하는 기부 ※ 학교운동부지도자(코치 포함)의 인건비(각종수당, 성과급, 여비, 체육복 구입비, 연수, 회식비 등 포함)를 발전기금으로 조성하여 지원하는 것은 불가함 ▸기타 법령이나 발전기금의 목적을 벗어나는 기부\n⇩\n수입일계 처리 ◦ 기탁금을 접수한 날 수입일계 처리하여 수입일계표 작성 후 학교운영위원장 최종 결재 [K-에듀파인] 발전기금 → 접수관리 → 수입일계관리 → 수입일계표 출력 후 결재",
+    "title": "기탁방법 (접수방법) ◦ 접수처에 직접 접수(학교발전기금 기탁서 작성)… › 기탁방법 (접수방법) ◦ 접수처에 직접 접수(학교발전기금 기탁서 작성) ◦ 금융기관 또",
+    "description": "기탁방법 (접수방법) ◦ 접수처에 직접 접수(학교발전기금 기탁서 작성) ◦ 금융기관 또는 체신관서를 통한 접수(학교발전기금 기탁서 작성) ◦ 온라인을 통한 접수(학교 누리집에 학교발전기금 기탁서 양식 탑재) ⇩ 사업내역 등록 ◦ 구분별(사용목적, 금품종류, 기부대상)로 선택하여 사용 용도에 맞게 작성 ◦ 사업명, 사업 목적 및 조성 방법 등을 기재 [K-에듀파인] 발전기금 → 사업관리 → 기금사업관리 → 사업등록 ⇩",
+    "text": "학교발전기금\n\n기탁방법 (접수방법) ◦ 접수처에 직접 접수(학교발전기금 기탁서 작성) ◦ 금융기관 또는 체신관서를 통한 접수(학교발전기금 기탁서 작성) ◦ 온라인을 통한 접수(학교 누리집에 학교발전기금 기탁서 양식 탑재)\n⇩\n사업내역 등록 ◦ 구분별(사용목적, 금품종류, 기부대상)로 선택하여 사용 용도에 맞게 작성 ◦ 사업명, 사업 목적 및 조성 방법 등을 기재 [K-에듀파인] 발전기금 → 사업관리 → 기금사업관리 → 사업등록\n⇩",
     "workId": "c06-w01",
-    "blockId": "c06-w01-b17"
+    "blockId": "c06-w01-b17",
+    "anchor": "기탁방법(접수방법)◦접수처에직접접수(학교발전"
   },
   {
+    "id": "c06-w01-b17~2",
+    "chapterId": "06",
+    "chapterLabel": "제6편",
+    "chapterTitle": "학교발전기금 및 세입세출외현금",
+    "type": "매뉴얼 원문",
+    "workTitle": "학교발전기금",
+    "title": "기탁방법 (접수방법) ◦ 접수처에 직접 접수(학교발전기금 기탁서 작성)… › 학교발전기금 접수 ◦ 접수처: 학교발전기금회계출납원 사무실 또는 지정 금융기관 ◦ 수납",
+    "description": "학교발전기금 접수 ◦ 접수처: 학교발전기금회계출납원 사무실 또는 지정 금융기관 ◦ 수납자: 학교발전기금회계출납원 ▸접수처 표식: 발전기금 접수처 입구에 “학교발전기금 접수처” 명판 부착 ◦ 접수절차 ▸발전기금 접수처리(K-에듀파인 활용): 금전 및 유가증권, 도서 및 물품, 수목 및 재산 [K-에듀파인] 발전기금 → 접수관리 → 기금접수관리 → 학교발전기금기탁서 출력 → 학교발전기금 접수대장 출력 후 결재 ※ 도서, 물품, 수목 및 재산이 접수된 경우 관계대장에…",
+    "text": "학교발전기금\n\n학교발전기금 접수 ◦ 접수처: 학교발전기금회계출납원 사무실 또는 지정 금융기관 ◦ 수납자: 학교발전기금회계출납원 ▸접수처 표식: 발전기금 접수처 입구에 “학교발전기금 접수처” 명판 부착 ◦ 접수절차 ▸발전기금 접수처리(K-에듀파인 활용): 금전 및 유가증권, 도서 및 물품, 수목 및 재산 [K-에듀파인] 발전기금 → 접수관리 → 기금접수관리 → 학교발전기금기탁서 출력 → 학교발전기금 접수대장 출력 후 결재 ※ 도서, 물품, 수목 및 재산이 접수된 경우 관계대장에 등재 ▸발전기금 접수 후 접수내역(기탁일자, 기탁자, 사용용도, 세부내역, 금액 등)을 학교 누리집에 분기별 종료 후 1개월 이내 탑재(공개) ▸기탁자가 요구 시 기탁자의 명의 공개 또는 제시 가능 ※ 단, 기탁자 자녀(학생) 명의 공개나 표시는 불가 ▸발전기금 접수현황 보고(결산보고 시): 관할청 [K-에듀파인] 발전기금 → 결산관리 → 접수현황보고관리 ▸접수내역은 학교운영위원장에게 결재를 받음 ◦ 접수 제한 ▸리베이트(어린이 신문, 우유 납품업체, 편입학 학부모 제공 기부금) 등 반대급부를 요구하는 기부금품 ▸유지·관리에 인력 또는 경비가 과다하게 소요되는 차량, 건물 등의 기부(유지관리에 경비가 과다하게 소요되지 않는 차량 장기렌탈 비용은 예외) 단, 관할청의 승인을 얻으면 접수 가능 ▸각종 선거·선출에 영향을 미칠 수 있는 기부 ▸교직원 복지(인건비성 경비, 교직원 연수비, 회식비, 체육복 구입비 등)를 목적으로 하는 기부 ※ 학교운동부지도자(코치 포함)의 인건비(각종수당, 성과급, 여비, 체육복 구입비, 연수, 회식비 등 포함)를 발전기금으로 조성하여 지원하는 것은 불가함 ▸기타 법령이나 발전기금의 목적을 벗어나는 기부\n⇩\n수입일계 처리 ◦ 기탁금을 접수한 날 수입일계 처리하여 수입일계표 작성 후 학교운영위원장 최종 결재 [K-에듀파인] 발전기금 → 접수관리 → 수입일계관리 → 수입일계표 출력 후 결재",
+    "workId": "c06-w01",
+    "blockId": "c06-w01-b17",
+    "anchor": "학교발전기금접수◦접수처:학교발전기금회계출납원"
+  },
+  {
+    "id": "c06-w01-b18",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8950,6 +9756,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b18"
   },
   {
+    "id": "c06-w01-b19",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8962,6 +9769,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b19"
   },
   {
+    "id": "c06-w01-b20",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8974,6 +9782,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b20"
   },
   {
+    "id": "c06-w01-b21",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8986,6 +9795,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b21"
   },
   {
+    "id": "c06-w01-b22",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -8998,6 +9808,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b22"
   },
   {
+    "id": "c06-w01-b23",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9010,6 +9821,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b23"
   },
   {
+    "id": "c06-w01-b24",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9022,6 +9834,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b24"
   },
   {
+    "id": "c06-w01-b25",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9034,6 +9847,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b25"
   },
   {
+    "id": "c06-w01-b26",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9046,6 +9860,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b26"
   },
   {
+    "id": "c06-w01-b27",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9058,6 +9873,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b27"
   },
   {
+    "id": "c06-w01-b28",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9070,6 +9886,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b28"
   },
   {
+    "id": "c06-w01-b29",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9082,6 +9899,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b29"
   },
   {
+    "id": "c06-w01-b30",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9094,6 +9912,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b30"
   },
   {
+    "id": "c06-w01-b31",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9106,6 +9925,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b31"
   },
   {
+    "id": "c06-w01-b32",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9118,6 +9938,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b32"
   },
   {
+    "id": "c06-w01-b33",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9130,6 +9951,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b33"
   },
   {
+    "id": "c06-w01-b34",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9142,6 +9964,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b34"
   },
   {
+    "id": "c06-w01-b35",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9154,6 +9977,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b35"
   },
   {
+    "id": "c06-w01-b36",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9166,6 +9990,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b36"
   },
   {
+    "id": "c06-w01-b37",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9178,6 +10003,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b37"
   },
   {
+    "id": "c06-w01-b38",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9190,6 +10016,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b38"
   },
   {
+    "id": "c06-w01-b39",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9202,6 +10029,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b39"
   },
   {
+    "id": "c06-w01-b40",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9214,6 +10042,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b40"
   },
   {
+    "id": "c06-w01-b41",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9226,6 +10055,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b41"
   },
   {
+    "id": "c06-w01-b42",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9238,6 +10068,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b42"
   },
   {
+    "id": "c06-w01-b43",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9250,6 +10081,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b43"
   },
   {
+    "id": "c06-w01-b44",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9262,6 +10094,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b44"
   },
   {
+    "id": "c06-w01-b45",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9274,6 +10107,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b45"
   },
   {
+    "id": "c06-w01-b46",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9286,6 +10120,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b46"
   },
   {
+    "id": "c06-w01-b47",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9298,6 +10133,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b47"
   },
   {
+    "id": "c06-w01-b48",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9310,6 +10146,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b48"
   },
   {
+    "id": "c06-w01-b49",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9322,6 +10159,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b49"
   },
   {
+    "id": "c06-w01-b50",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9334,6 +10172,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b50"
   },
   {
+    "id": "c06-w01-b51",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9346,6 +10185,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b51"
   },
   {
+    "id": "c06-w01-b52",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9358,6 +10198,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b52"
   },
   {
+    "id": "c06-w01-b53",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9370,6 +10211,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b53"
   },
   {
+    "id": "c06-w01-b54",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9382,18 +10224,49 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w01-b54"
   },
   {
+    "id": "c06-w01-b55~1",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
     "type": "매뉴얼 원문",
     "workTitle": "학교발전기금",
-    "title": "세부내용 10. 월별 학교발전기금 업무 처리 일정",
+    "title": "세부내용 10. 월별 학교발전기금 업무 처리 일정 › 2월 중 ◦ 학교발전기금 운용계획 수립 ▸회계연도 개시 전(2월 중) 초·중등교육법 시",
     "description": "2월 중 ◦ 학교발전기금 운용계획 수립 ▸회계연도 개시 전(2월 중) 초·중등교육법 시행규칙 별지 제26호 서식에 발전기금 운용계획서를 작성하여 학교운영위원회 승인 필요 ▸학교운영위원회 심의·의결 후 10일 이내 전체 계획서를 학교 홈페이지 등 공개 ▸발전기금 접수 및 집행내역이 없더라도 발전기금 장부에 잔액이 존재하면 매년 발전기금 운용계획서를 수립(단, 잔액이 0원인 경우 발전기금 운용계획서 생략 가능) ☞ 발전기금 운용계획 심의 사항 - 사업목적, 기금조성…",
-    "text": "학교발전기금\n세부내용 10. 월별 학교발전기금 업무 처리 일정\n2월 중 ◦ 학교발전기금 운용계획 수립 ▸회계연도 개시 전(2월 중) 초·중등교육법 시행규칙 별지 제26호 서식에 발전기금 운용계획서를 작성하여 학교운영위원회 승인 필요 ▸학교운영위원회 심의·의결 후 10일 이내 전체 계획서를 학교 홈페이지 등 공개 ▸발전기금 접수 및 집행내역이 없더라도 발전기금 장부에 잔액이 존재하면 매년 발전기금 운용계획서를 수립(단, 잔액이 0원인 경우 발전기금 운용계획서 생략 가능) ☞ 발전기금 운용계획 심의 사항 - 사업목적, 기금조성방법, 수입 및 지출 계획, 그밖에 기금의 운용 및 관리에 필요한 사항\n⇩\n3월 중 ◦ 당해연도 사업등록 및 이월처리 ▸학운위에서 사전(2월 중) 심의 후 확정한 당해연도 사업내용을 K-에듀파인에 등록하여야 집행잔액 이월처리, 사업관리카드 사업내용 반영, 품의작성 시 사업선택이 가능 ▸학교발전기금회계 집행잔액은 학교회계와 달리 별도로 이월금 등록처리를 실시하여야 당해연도 현금출납부에 수입액으로 반영이 되며 이에 대해 집행이 가능 ☞ 사업등록 경로 - [K-에듀파인] 발전기금 → 사업관리 → 기금사업관리 ☞ 전년도 집행잔액 이월처리 경로 - [K-에듀파인] 발전기금 → 접수관리 → 이월금 및 이자, 기타관리 ☞ 학교발전기금 이월금 수입일계 반영 경로 - [K-에듀파인] 발전기금 → 접수관리 → 수입일계관리\n⇩\n3 ~ 4월 중 ◦ 학교발전기금 결산 처리 ▸지난 회계연도 발전기금 회계결산을 출납폐쇄기한(3월 20일) 이후에 실시하여 학교운영위원회 심의를 거쳐 학교 홈페이지 등에 공개 ☞ 결산 처리 방법 - 월마감(발전기금 → 결산관리 → 월마감관리) - 결산보고서 작성(발전기금 → 결산관리 → 결산보고관리) - 발전기금결산보고서 학교운영위원회 심의 - 발전기금결산보고서 공개(확정 후 10일 이내, 회계연도 종료 후 5월 31일까지)\n⇩\n5월 중 ◦ 학교발전기금 결산내역 제출 ▸회계연도 종료 후 3개월 이내(5월 31일까지) 관할교육지원청(초·중), 본청 예산과(고·특수·각종학교)로 제출(도교육청 예산과에서 사전 공문 안내) ☞ 결산 관련 제출 자료 - 결산보고서(PDF), 잔액증명서, 예금잔액 불부합조서(해당학교), 결산현황(EXCEL)",
+    "text": "학교발전기금\n세부내용 10. 월별 학교발전기금 업무 처리 일정\n2월 중 ◦ 학교발전기금 운용계획 수립 ▸회계연도 개시 전(2월 중) 초·중등교육법 시행규칙 별지 제26호 서식에 발전기금 운용계획서를 작성하여 학교운영위원회 승인 필요 ▸학교운영위원회 심의·의결 후 10일 이내 전체 계획서를 학교 홈페이지 등 공개 ▸발전기금 접수 및 집행내역이 없더라도 발전기금 장부에 잔액이 존재하면 매년 발전기금 운용계획서를 수립(단, 잔액이 0원인 경우 발전기금 운용계획서 생략 가능) ☞ 발전기금 운용계획 심의 사항 - 사업목적, 기금조성방법, 수입 및 지출 계획, 그밖에 기금의 운용 및 관리에 필요한 사항\n⇩",
     "workId": "c06-w01",
-    "blockId": "c06-w01-b55"
+    "blockId": "c06-w01-b55",
+    "anchor": "2월중◦학교발전기금운용계획수립▸회계연도개시전"
   },
   {
+    "id": "c06-w01-b55~2",
+    "chapterId": "06",
+    "chapterLabel": "제6편",
+    "chapterTitle": "학교발전기금 및 세입세출외현금",
+    "type": "매뉴얼 원문",
+    "workTitle": "학교발전기금",
+    "title": "세부내용 10. 월별 학교발전기금 업무 처리 일정 › 3월 중 ◦ 당해연도 사업등록 및 이월처리 ▸학운위에서 사전(2월 중) 심의 후 확정한",
+    "description": "3월 중 ◦ 당해연도 사업등록 및 이월처리 ▸학운위에서 사전(2월 중) 심의 후 확정한 당해연도 사업내용을 K-에듀파인에 등록하여야 집행잔액 이월처리, 사업관리카드 사업내용 반영, 품의작성 시 사업선택이 가능 ▸학교발전기금회계 집행잔액은 학교회계와 달리 별도로 이월금 등록처리를 실시하여야 당해연도 현금출납부에 수입액으로 반영이 되며 이에 대해 집행이 가능 ☞ 사업등록 경로 - [K-에듀파인] 발전기금 → 사업관리 → 기금사업관리 ☞ 전년도 집행잔액 이월처리 경로…",
+    "text": "학교발전기금\n세부내용 10. 월별 학교발전기금 업무 처리 일정\n3월 중 ◦ 당해연도 사업등록 및 이월처리 ▸학운위에서 사전(2월 중) 심의 후 확정한 당해연도 사업내용을 K-에듀파인에 등록하여야 집행잔액 이월처리, 사업관리카드 사업내용 반영, 품의작성 시 사업선택이 가능 ▸학교발전기금회계 집행잔액은 학교회계와 달리 별도로 이월금 등록처리를 실시하여야 당해연도 현금출납부에 수입액으로 반영이 되며 이에 대해 집행이 가능 ☞ 사업등록 경로 - [K-에듀파인] 발전기금 → 사업관리 → 기금사업관리 ☞ 전년도 집행잔액 이월처리 경로 - [K-에듀파인] 발전기금 → 접수관리 → 이월금 및 이자, 기타관리 ☞ 학교발전기금 이월금 수입일계 반영 경로 - [K-에듀파인] 발전기금 → 접수관리 → 수입일계관리\n⇩\n3 ~ 4월 중 ◦ 학교발전기금 결산 처리 ▸지난 회계연도 발전기금 회계결산을 출납폐쇄기한(3월 20일) 이후에 실시하여 학교운영위원회 심의를 거쳐 학교 홈페이지 등에 공개 ☞ 결산 처리 방법 - 월마감(발전기금 → 결산관리 → 월마감관리) - 결산보고서 작성(발전기금 → 결산관리 → 결산보고관리) - 발전기금결산보고서 학교운영위원회 심의 - 발전기금결산보고서 공개(확정 후 10일 이내, 회계연도 종료 후 5월 31일까지)\n⇩",
+    "workId": "c06-w01",
+    "blockId": "c06-w01-b55",
+    "anchor": "3월중◦당해연도사업등록및이월처리▸학운위에서사"
+  },
+  {
+    "id": "c06-w01-b55~3",
+    "chapterId": "06",
+    "chapterLabel": "제6편",
+    "chapterTitle": "학교발전기금 및 세입세출외현금",
+    "type": "매뉴얼 원문",
+    "workTitle": "학교발전기금",
+    "title": "세부내용 10. 월별 학교발전기금 업무 처리 일정 › 5월 중 ◦ 학교발전기금 결산내역 제출 ▸회계연도 종료 후 3개월 이내(5월 31일까지",
+    "description": "5월 중 ◦ 학교발전기금 결산내역 제출 ▸회계연도 종료 후 3개월 이내(5월 31일까지) 관할교육지원청(초·중), 본청 예산과(고·특수·각종학교)로 제출(도교육청 예산과에서 사전 공문 안내) ☞ 결산 관련 제출 자료 - 결산보고서(PDF), 잔액증명서, 예금잔액 불부합조서(해당학교), 결산현황(EXCEL)",
+    "text": "학교발전기금\n세부내용 10. 월별 학교발전기금 업무 처리 일정\n5월 중 ◦ 학교발전기금 결산내역 제출 ▸회계연도 종료 후 3개월 이내(5월 31일까지) 관할교육지원청(초·중), 본청 예산과(고·특수·각종학교)로 제출(도교육청 예산과에서 사전 공문 안내) ☞ 결산 관련 제출 자료 - 결산보고서(PDF), 잔액증명서, 예금잔액 불부합조서(해당학교), 결산현황(EXCEL)",
+    "workId": "c06-w01",
+    "blockId": "c06-w01-b55",
+    "anchor": "5월중◦학교발전기금결산내역제출▸회계연도종료후"
+  },
+  {
+    "id": "c06-w01:form:서식1",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9406,6 +10279,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식1"
   },
   {
+    "id": "c06-w01:form:참고1",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9418,6 +10292,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고1"
   },
   {
+    "id": "c06-w01:faq:1",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9430,6 +10305,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c06-w01:faq:2",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9442,6 +10318,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c06-w01:faq:3",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9454,6 +10331,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c06-w01:faq:4",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9466,6 +10344,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c06-w01:faq:5",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9478,6 +10357,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "c06-w01:faq:6",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9490,6 +10370,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "6"
   },
   {
+    "id": "c06-w01:faq:7",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9502,6 +10383,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "7"
   },
   {
+    "id": "c06-w01:faq:8",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9514,6 +10396,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "8"
   },
   {
+    "id": "c06-w01:faq:9",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9526,6 +10409,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "9"
   },
   {
+    "id": "c06-w02",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9538,6 +10422,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c06-w02"
   },
   {
+    "id": "c06-w02-b1",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9550,6 +10435,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w02-b1"
   },
   {
+    "id": "c06-w02-b2",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9562,6 +10448,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w02-b2"
   },
   {
+    "id": "c06-w02-b3",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9574,6 +10461,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w02-b3"
   },
   {
+    "id": "c06-w02-b4",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9586,6 +10474,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w02-b4"
   },
   {
+    "id": "c06-w02-b5",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9598,6 +10487,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w02-b5"
   },
   {
+    "id": "c06-w02-b6",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9610,6 +10500,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w02-b6"
   },
   {
+    "id": "c06-w02-b7",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9622,6 +10513,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w02-b7"
   },
   {
+    "id": "c06-w02-b8",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9634,6 +10526,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w02-b8"
   },
   {
+    "id": "c06-w02-b9",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9646,6 +10539,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w02-b9"
   },
   {
+    "id": "c06-w02-b10",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9658,6 +10552,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w02-b10"
   },
   {
+    "id": "c06-w02-b11",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9670,6 +10565,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w02-b11"
   },
   {
+    "id": "c06-w02-b12",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9682,6 +10578,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w02-b12"
   },
   {
+    "id": "c06-w02-b13",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9694,6 +10591,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w02-b13"
   },
   {
+    "id": "c06-w02-b14",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9706,6 +10604,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w02-b14"
   },
   {
+    "id": "c06-w02-b15",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9718,6 +10617,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w02-b15"
   },
   {
+    "id": "c06-w02-b16",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9730,6 +10630,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w02-b16"
   },
   {
+    "id": "c06-w02-b17",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9742,6 +10643,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w02-b17"
   },
   {
+    "id": "c06-w02:form:참고2",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9754,6 +10656,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고2"
   },
   {
+    "id": "c06-w03",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9766,6 +10669,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c06-w03"
   },
   {
+    "id": "c06-w03-b1",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9778,6 +10682,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w03-b1"
   },
   {
+    "id": "c06-w03-b2",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9790,6 +10695,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w03-b2"
   },
   {
+    "id": "c06-w03-b3",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9802,18 +10708,49 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w03-b3"
   },
   {
+    "id": "c06-w03-b4~1",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
     "type": "매뉴얼 원문",
     "workTitle": "4대 사회보험",
-    "title": "4대 사회보험 가입기준 및 내용 구 분 국민연금 건강보험 고용보험 산재보…",
-    "description": "4대 사회보험 가입기준 및 내용 구 분 국민연금 건강보험 고용보험 산재보험 가입대상 ・1개월동안 아래 세 조건 중 하나 이상 충족되는 대상 ① 노동일수 8일 이상 ② 노동시간 60시간 이상 ③ 소득 220만원 이상 ・1개월 이상이면서 노동시간이 월 60시간 이상인 노동자 ・월 소정노동시간 60시간 이상 또는 주 15시간 이상인 자 ・모든 노동자 가입연령 ・만18세 이상 60세 미만 ・연령제한 없음 ・연령제한 없음 ・연령제한 없음 직장가입 제외자 ・60세 이상 노…",
-    "text": "4대 사회보험\n\n4대 사회보험 가입기준 및 내용\n구 분 국민연금 건강보험 고용보험 산재보험\n가입대상 ・1개월동안 아래 세 조건 중 하나 이상 충족되는 대상 ① 노동일수 8일 이상 ② 노동시간 60시간 이상 ③ 소득 220만원 이상 ・1개월 이상이면서 노동시간이 월 60시간 이상인 노동자 ・월 소정노동시간 60시간 이상 또는 주 15시간 이상인 자 ・모든 노동자\n가입연령 ・만18세 이상 60세 미만 ・연령제한 없음 ・연령제한 없음 ・연령제한 없음\n직장가입 제외자 ・60세 이상 노동자 ・타 공적연금 가입자 ・퇴직연금 등 수급자 ・1개월 미만 일용노동자 ・월 60시간 또는 주 15시간 미만 단시간 노동자 ・만18세 미만자 및 국민기초생활수급자도 당연가입 대상이나, 본인이 희망할 경우 미가입 가능 ・의료급여수급자 ・1개월 미만 일용노동자 ・월 60시간 미만 단시간노동자 ・유공자 등 의료보호 대상자도 당연가입 대상이나, 본인이 희망할 경우 미가입 가능 ・월 소정노동시간 60시간 미만 또는 주 15시간 미만인 자 ※ 다만, 3개월 이상 계속하여 노동을 제공하는 자와 1개월 미만 고용된 일용노동자는 가입 대상 ・65세 이상은 실업급여 제외 - 개인부담금 X - 기관부담금 중 고용안정・직업능력개발사업은 해당 ・가입 제외 대상 없음\n취득・상실 신고기한 ・자격취득(상실)일로부터 다음 달 15일 이내 ・자격취득(상실)일로부터 14일 이내 ・자격취득(상실)일로부터 다음 달 15일 이내 ・자격취득(상실)일로부터 다음 달 15일 이내\n자격상실일 ・사유 발생 다음 날 ※ 퇴직일이 8.31.인 경우 자격상실일은 9.1.\n부과방법 ・취득일이 1일인 경우: 당연부과 ・취득일이 2일 이후인 경우: - 취득월 희망여부에 따라 부과 (미희망 시 당월 미부과) ・취득일이 1일인 경우: 당연부과 ・취득일이 2일 이후인 경우: 당월 미부과 ・취득일이 1일인 경우: 당연부과 ・취득일이 2일 이후인 경우: 당월 미부과\n해당연도 보험료적용 (정산 반영) ・매년 7월 ・매년 4월 ・매년 4월 ・매년 4월 (계약기간 만료자는 만료 다음달 정산보험료부과·납부)\n기관별 연락처 ・국민연금공단 (1355) ・국민건강보험공단 (1577-1000) ・근로복지공단 (1588-0075)\n납부 ・다음 달 10일까지",
+    "title": "4대 사회보험 가입기준 및 내용 구 분 국민연금 건강보험 고용보험 산재보… › 4대 사회보험 가입기준 및 내용",
+    "description": "4대 사회보험 가입기준 및 내용 구 분 국민연금 건강보험 고용보험 산재보험 가입대상 ・1개월동안 아래 세 조건 중 하나 이상 충족되는 대상 ① 노동일수 8일 이상 ② 노동시간 60시간 이상 ③ 소득 220만원 이상 ・1개월 이상이면서 노동시간이 월 60시간 이상인 노동자 ・월 소정노동시간 60시간 이상 또는 주 15시간 이상인 자 ・모든 노동자 가입연령 ・만18세 이상 60세 미만 ・연령제한 없음 ・연령제한 없음 ・연령제한 없음",
+    "text": "4대 사회보험\n\n4대 사회보험 가입기준 및 내용\n구 분 국민연금 건강보험 고용보험 산재보험\n가입대상 ・1개월동안 아래 세 조건 중 하나 이상 충족되는 대상 ① 노동일수 8일 이상 ② 노동시간 60시간 이상 ③ 소득 220만원 이상 ・1개월 이상이면서 노동시간이 월 60시간 이상인 노동자 ・월 소정노동시간 60시간 이상 또는 주 15시간 이상인 자 ・모든 노동자\n가입연령 ・만18세 이상 60세 미만 ・연령제한 없음 ・연령제한 없음 ・연령제한 없음",
     "workId": "c06-w03",
-    "blockId": "c06-w03-b4"
+    "blockId": "c06-w03-b4",
+    "anchor": "4대사회보험가입기준및내용"
   },
   {
+    "id": "c06-w03-b4~2",
+    "chapterId": "06",
+    "chapterLabel": "제6편",
+    "chapterTitle": "학교발전기금 및 세입세출외현금",
+    "type": "매뉴얼 원문",
+    "workTitle": "4대 사회보험",
+    "title": "4대 사회보험 가입기준 및 내용 구 분 국민연금 건강보험 고용보험 산재보… › 직장가입 제외자 ・60세 이상 노동자 ・타 공적연금 가입자 ・퇴직연금 등 수급자 ・1개",
+    "description": "직장가입 제외자 ・60세 이상 노동자 ・타 공적연금 가입자 ・퇴직연금 등 수급자 ・1개월 미만 일용노동자 ・월 60시간 또는 주 15시간 미만 단시간 노동자 ・만18세 미만자 및 국민기초생활수급자도 당연가입 대상이나, 본인이 희망할 경우 미가입 가능 ・의료급여수급자 ・1개월 미만 일용노동자 ・월 60시간 미만 단시간노동자 ・유공자 등 의료보호 대상자도 당연가입 대상이나, 본인이 희망할 경우 미가입 가능 ・월 소정노동시간 60시간 미만 또는 주 15시간 미만인 자…",
+    "text": "4대 사회보험\n\n직장가입 제외자 ・60세 이상 노동자 ・타 공적연금 가입자 ・퇴직연금 등 수급자 ・1개월 미만 일용노동자 ・월 60시간 또는 주 15시간 미만 단시간 노동자 ・만18세 미만자 및 국민기초생활수급자도 당연가입 대상이나, 본인이 희망할 경우 미가입 가능 ・의료급여수급자 ・1개월 미만 일용노동자 ・월 60시간 미만 단시간노동자 ・유공자 등 의료보호 대상자도 당연가입 대상이나, 본인이 희망할 경우 미가입 가능 ・월 소정노동시간 60시간 미만 또는 주 15시간 미만인 자 ※ 다만, 3개월 이상 계속하여 노동을 제공하는 자와 1개월 미만 고용된 일용노동자는 가입 대상 ・65세 이상은 실업급여 제외 - 개인부담금 X - 기관부담금 중 고용안정・직업능력개발사업은 해당 ・가입 제외 대상 없음\n취득・상실 신고기한 ・자격취득(상실)일로부터 다음 달 15일 이내 ・자격취득(상실)일로부터 14일 이내 ・자격취득(상실)일로부터 다음 달 15일 이내 ・자격취득(상실)일로부터 다음 달 15일 이내\n자격상실일 ・사유 발생 다음 날 ※ 퇴직일이 8.31.인 경우 자격상실일은 9.1.",
+    "workId": "c06-w03",
+    "blockId": "c06-w03-b4",
+    "anchor": "직장가입제외자・60세이상노동자・타공적연금가입"
+  },
+  {
+    "id": "c06-w03-b4~3",
+    "chapterId": "06",
+    "chapterLabel": "제6편",
+    "chapterTitle": "학교발전기금 및 세입세출외현금",
+    "type": "매뉴얼 원문",
+    "workTitle": "4대 사회보험",
+    "title": "4대 사회보험 가입기준 및 내용 구 분 국민연금 건강보험 고용보험 산재보… › 부과방법 ・취득일이 1일인 경우: 당연부과 ・취득일이 2일 이후인 경우: - 취득월 희",
+    "description": "부과방법 ・취득일이 1일인 경우: 당연부과 ・취득일이 2일 이후인 경우: - 취득월 희망여부에 따라 부과 (미희망 시 당월 미부과) ・취득일이 1일인 경우: 당연부과 ・취득일이 2일 이후인 경우: 당월 미부과 ・취득일이 1일인 경우: 당연부과 ・취득일이 2일 이후인 경우: 당월 미부과 해당연도 보험료적용 (정산 반영) ・매년 7월 ・매년 4월 ・매년 4월 ・매년 4월 (계약기간 만료자는 만료 다음달 정산보험료부과·납부) 기관별 연락처 ・국민연금공단 (1355)…",
+    "text": "4대 사회보험\n\n부과방법 ・취득일이 1일인 경우: 당연부과 ・취득일이 2일 이후인 경우: - 취득월 희망여부에 따라 부과 (미희망 시 당월 미부과) ・취득일이 1일인 경우: 당연부과 ・취득일이 2일 이후인 경우: 당월 미부과 ・취득일이 1일인 경우: 당연부과 ・취득일이 2일 이후인 경우: 당월 미부과\n해당연도 보험료적용 (정산 반영) ・매년 7월 ・매년 4월 ・매년 4월 ・매년 4월 (계약기간 만료자는 만료 다음달 정산보험료부과·납부)\n기관별 연락처 ・국민연금공단 (1355) ・국민건강보험공단 (1577-1000) ・근로복지공단 (1588-0075)\n납부 ・다음 달 10일까지",
+    "workId": "c06-w03",
+    "blockId": "c06-w03-b4",
+    "anchor": "부과방법・취득일이1일인경우:당연부과・취득일이"
+  },
+  {
+    "id": "c06-w03-b5",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9826,6 +10763,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w03-b5"
   },
   {
+    "id": "c06-w03-b6",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9838,6 +10776,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w03-b6"
   },
   {
+    "id": "c06-w03-b7",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9850,6 +10789,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w03-b7"
   },
   {
+    "id": "c06-w03-b8",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9862,6 +10802,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w03-b8"
   },
   {
+    "id": "c06-w03-b9",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9874,6 +10815,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w03-b9"
   },
   {
+    "id": "c06-w03-b10",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9886,6 +10828,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w03-b10"
   },
   {
+    "id": "c06-w03-b11",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9898,6 +10841,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w03-b11"
   },
   {
+    "id": "c06-w03-b12",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9910,6 +10854,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w03-b12"
   },
   {
+    "id": "c06-w03-b13",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9922,6 +10867,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w03-b13"
   },
   {
+    "id": "c06-w03-b14",
     "chapterId": "06",
     "chapterLabel": "제6편",
     "chapterTitle": "학교발전기금 및 세입세출외현금",
@@ -9934,6 +10880,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c06-w03-b14"
   },
   {
+    "id": "c07-w00",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -9947,6 +10894,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c07-w00-b1",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -9960,6 +10908,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c07-w01",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -9972,6 +10921,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c07-w01"
   },
   {
+    "id": "c07-w01-b1",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -9984,6 +10934,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w01-b1"
   },
   {
+    "id": "c07-w01-b2",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -9996,6 +10947,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w01-b2"
   },
   {
+    "id": "c07-w01-b3",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10008,6 +10960,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w01-b3"
   },
   {
+    "id": "c07-w01-b4",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10020,6 +10973,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w01-b4"
   },
   {
+    "id": "c07-w01-b5",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10032,6 +10986,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w01-b5"
   },
   {
+    "id": "c07-w01-b6",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10044,6 +10999,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w01-b6"
   },
   {
+    "id": "c07-w01-b7",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10056,6 +11012,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w01-b7"
   },
   {
+    "id": "c07-w01-b8",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10068,6 +11025,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w01-b8"
   },
   {
+    "id": "c07-w01-b9",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10080,6 +11038,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w01-b9"
   },
   {
+    "id": "c07-w01-b10",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10092,6 +11051,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w01-b10"
   },
   {
+    "id": "c07-w01-b11",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10104,6 +11064,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w01-b11"
   },
   {
+    "id": "c07-w01-b12",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10116,6 +11077,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w01-b12"
   },
   {
+    "id": "c07-w01-b13",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10128,6 +11090,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w01-b13"
   },
   {
+    "id": "c07-w01-b14",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10140,18 +11103,553 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w01-b14"
   },
   {
+    "id": "c07-w01-b15~1",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
     "type": "매뉴얼 원문",
     "workTitle": "보수작업",
-    "title": "3. 급여 및 수당의 이해",
+    "title": "3. 급여 및 수당의 이해 › 월봉급 봉급(본봉) (공무원보수규정제2장)",
     "description": "구 분 지 급 요 령 월 봉 급 봉급(본봉) (공무원보수규정제2장) 1. 봉급월액은 공무원보수규정 제5조(공무원별 봉급표)에 명시된 금액으로 한다 2. 보수는 법령에 특별한 규정이 있는 경우를 제외하고는 신규채용, 승진, 전직, 전보, 승급, 감봉, 그 밖의 모든 임용에서 발령일을 기준으로 그 월액을 일할계산 ▸신규임용 및 퇴직 시 월봉급액 - 신규 임용 시: 일할계산 (예시) 2025. 3. 5일자 9급 1호봉으로 신규 임용 시 봉급지급은? → 2,000,90…",
-    "text": "보수작업\n3. 급여 및 수당의 이해\n구 분 지 급 요 령\n월 봉 급 봉급(본봉) (공무원보수규정제2장) 1. 봉급월액은 공무원보수규정 제5조(공무원별 봉급표)에 명시된 금액으로 한다 2. 보수는 법령에 특별한 규정이 있는 경우를 제외하고는 신규채용, 승진, 전직, 전보, 승급, 감봉, 그 밖의 모든 임용에서 발령일을 기준으로 그 월액을 일할계산 ▸신규임용 및 퇴직 시 월봉급액 - 신규 임용 시: 일할계산 (예시) 2025. 3. 5일자 9급 1호봉으로 신규 임용 시 봉급지급은? → 2,000,900원 ☓ 27 / 31일=1,742,710원 (원단위 이하 절사) - 5년 이상 근속자가 15일 이상 근무 후 퇴직 시: 전액지급 ※ 금고이상의 형을 받아 면직되는 경우 제외 3. 보수 감액 기간별 / 사유 / 보수 감액률 징계처분기간 / 강등(직무에 종사하지 못하는 3개월) / 보수 전액 감 정직 / 보수 전액 감 감봉 / 보수의 1 / 3 감 결근기간 / 연가일수를 초과한 결근일수 / 봉급일액 감 무급휴가기간 / 무급휴가일수 / 봉급일액 감 휴직기간 / 신체·정신상 장애로 인한 장기요양휴직 (질병휴직) / 1년 이하 / 봉급의 70% 지급 1~2년 이하 / 봉급의 50% 지급 공무상질병 또는 부상에 의한 휴직 / 봉급 전액 지급 직위해제기간 / 직무수행 능력 부족, 근무성적이 극히 나쁜 자 / 봉급의 80% 지급 고위공무원단 일반직공무원으로서 법 제70조의2제1항제2호~제5호 적격심사 요구받은 자 / 봉급의 70% 지급 그 밖의 사유 / 그 밖의 사유 / 봉급의 50% 지급 직위해제일로부터 3개월 이후 직위를 부여받지 못한 경우 / 봉급의 30% 지급 4. 정기승급(공무원보수규정 제13조) ▸공무원의 호봉 간 승급에 필요한 기간은 1년으로 함 ▸공무원의 호봉은 매월 1일자로 승급함\n근 속 가 봉 근속가봉 (공무원보수규정 제30조2) 교육공무원 중 최고 호봉을 받고 근무성적이 양호한 사람에게는 승급기간을 초과할 때마다 정기승급일이 속하는 달부터 봉급에 근속 가봉을 가산하여 지급하되, 가산하는 횟수는 10회를 초과하지 못함 (나이스 교원봉급표 참고) 1호봉 → 2호봉 → … → 40호봉 → 근1호봉 → 근2호봉 → … → 근10호봉\n상 여 수 당 대우공무원수당(지방공무원수당등에관한규정제5조의2) 1. 지급대상: 지방공무원 임용령 제31조의 규정에 의하여 대우공무원으로 선발된 자 2. 지급액: 해당공무원 월봉급액의 4.1%를 지급 ▸6급 대우공무원 중 필수실무요원으로 지정된 자에 대하여는 월 10만원의 가산금을 지급 ※ 주의사항: 대우공무원수당과 월봉급액을 합산한 금액이 상위직급으로 승진 시의 월봉급액을 초과할 경우에는 해당직급 월봉급액과 상위직급월봉급액의 차액을 대우공무원수당으로 지급 3. 정직・감봉・직위해제 및 휴직으로 봉급이 감액지급되는 자에게는「지방공무원수당 등에 관한 규정」 별표4의 구분에 따라 감액지급\n구 분 지 급 요 령\n상 여 수 당 정근수당 (공무원 수당등에관한규정제7조) 1. 1월 정근수당: 1월 1일 현재 공무원의 신분을 보유하고 1월 1일 현재 봉급이 지급되는 자 중 지급대상 기간인 전년도 7월 1일부터 12월 31일까지의 기간 중 1월 이상 봉급이 지급된 공무원(봉급의 일부가 지급된 공무원을 포함)에게 지급 2. 7월 정근수당: 7월 1일 현재 공무원의 신분을 보유하고 7월 1일 현재 봉급이 지급되는 자 중 지급대상 기간인 해당년도 1월 1일부터 6월 30일까지의 기간 중 1월 이상 봉급이 지급된 공무원(봉급의 일부가 지급된 공무원을 포함)에게 지급 근무연수 / 월봉급액의 해당지급율 / 근무연수 / 월봉급액의 해당지급율 2년 미만 / 10% / 8년 미만 / 35% 5년 미만 / 20% / 9년 미만 / 40% 6년 미만 / 25% / 10년 미만 / 45% 7년 미만 / 30% / 10년 이상 / 50% ※ ‘월봉급액’은 해당 공무원의 1월 1일 및 7월 1일 현재 봉급표상의 월봉급액을 말함 ※ 정근수당, 정근수당가산금, 정근수당추가가산금 근무연수 계산 시 유의사항 ▸근무연수 계산 구 분 / 근무연수 계산 기준일 / ◦매월 1일 교육공무원 / ◦공무원보수규정 별표22 교육공무원등의 경력환산율표에 의하여 계산 기타공무원 / ◦국가공무원법 제2조와 지방공무원법 제2조에 규정된 공무원(봉급을 받지 아니하거나 비상근으로 근무한 경력은 인사혁신처장이 인정하는 경력에 한한다)으로 근무한 기간을 합산하여 계산됨 ⇒ 따라서 교육공무원의 경우 공무원보수규정 별표22에 해당하는 경력은 근무연수에 계산되며 기타공무원은 공무원보수규정 별표16, 별표17, 별표19 등의 공무원경력에 해당되는 경력이 근무연수에 계산됨 3. 지급방법 구 분 / 지급방법 계산방법 / ◦신규 임용 공무원, 직위해제 또는 휴직처분을 받은 공무원의 경우 해당 지급대상 기간 중 공무원으로 실제 근무한 기간에 따라 아래의 산식과 같이 계산하여 지급 ▸직위해제 처분기간은 실제 근무하지 않은 기간으로 봄 ▸군복무, 법정의무수행・고용, 유학・노조전임・육아에 따른 휴직과 공무상 질병 또는 부상에 따른 휴직기간, 「교육공무원법」 제12조제1항제5호에 따라 특별채용된 자의 사립학교 근무기간은 실제 근무한 기간으로 봄 ▸지급액 = / 영 제7조제1항의 정근수당액 / × / 실제 근무한 기간(개월) 6(개월) 지급제외 / ◦지급대상 기간 중 징계처분을 받은 공무원 ※ 기간의 적용: 실제 근무한 기간이 15일 이상인 경우는 1개월로 계산하고, 15일미만인 경우에는 계산하지 않음\n구 분 지 급 요 령\n상 여 수 당 정근수당가산금 (공무원 수당등에관한규정 제7조) 지급대상 / 근무연수 / 월 지급액 / 추가가산금 교육공무원 일반직공무원 / 20년이상 / 100,000원 / ◦ 근무연수가 20년 이상 25년 미만인 자 에게는 월 10,000원 가산 지급 ◦ 25년 이상인 자에게는 월 30,000원 가산 지급 15년이상 20년미만 / 80,000원 10년이상 15년미만 / 60,000원 5년이상 10년미만 / 50,000원 5년 미만 / 30,000원 / 2024.1.1. 신설 ※ 근무연수: 정근수당 근무연수 계산에 준용\n모범공무원수당 모범공무원수당(모범공무원규정제8조의2) 1. 지급대상: 모범공무원규정에 의하여 모범공무원으로 선발된 자 2. 지급액: 월 50,000원 3. 지급방법: 모범공무원으로 선발된 날이 속하는 달의 다음 달부터 3년간 지급 ▸월중 면직 시: 전액 지급 ▸퇴직, 면직, 직위해제 처분 시: 사유가 발생한 날이 속하는 달의 다음 달부터 부지급\n가 계 보 전 수 당 가족수당 (공무원 수당등에관한규정제10조) 1. 지급대상: 부양가족이 있는 모든 공무원(비전임계약직공무원 제외) 2. 부양가족요건(기본요건) ▸부양의무를 가진 공무원과 주민등록표상 세대를 같이 하여야 함 ▸해당 공무원의 주소 또는 거소에서 실제로 생계를 같이 하여야 함 ▸동 규정 제10조제2항제1호 내지 제4호 해당자(부양가족의 범위)이어야 함 - 다만 취학・요양 또는 주거의 형편이나 공무원의 근무 형편으로 별거하고 있는 경우에는 배우자·자녀 및 배우자와 주소・생계를 같이 하는 직계존속은 부양가족에 포함 3. 부양가족의 범위 1. 배우자 2. 본인 및 배우자의 60세(여자인 경우는 55세)이상의 직계존속 및 60세 미만의 직계존속 중 장애의 정도가 심한 자(계부 및 계모 포함) ▸여기서 직계존속은 조부모(외조부모 포함) 및 부모(양부모 포함)를 말한다 3. 본인 및 배우자의 19세 미만의 직계비속 및 19세 이상의 직계비속 중 장애의 정도가 심한 자 ▸여기서 직계비속은 자(子)및 손(孫, 외손포함)을 말한다. 4. 본인 및 배우자의 형제자매 중 장애의 정도가 심한 자와 본인 및 배우자의 부모가 사망하거나 장애의 정도가 심한 자인 경우 본인 및 배우자의 19세 미만의 형제자매 ※ 3, 4항의 20세 미만 → 19세 미만으로 변경(2018.1.1.부터 적용) 4. 지급액: 배우자 월40,000원, 부양가족 1인당 월20,000원 (부양가족의 수는 배우자 포함 4인 이내) ▸단, 자녀의 경우, 부양가족의 수가 4인 초과시에도 가족수당을 지급할 수 있으며 첫째 자녀 50,000원, 둘째 자녀 80,000원, 셋째 이후 자녀 120,000원 지급 (2025.1.1.부터 적용, 가족관계증명서 등 확인) 5. 부양가족의 신고 ▸부양가족이 있을 경우 부양가족신고서[서식1]를 소속기관장에게 제출 ▸부양가족에 변동이 있을 경우에는 부양가족신고서에 변동사항을 기재하여 신고 ▸‘장애의 정도가 심한 사람’은 공무원수당 등에 관한 규정 제10조제3항에 해당하는 자로서 의사의 진단서 또는 장애인등록증 사본 제출 ▸부양가족 중 배우자가 공무원, 국고 및 지방비에서 인건비가 보조되는 기관에서 근무하는 경우 부양가족신고서의 직업란에 이를 기재하고, 특기사항란에 해당가족의 소속기관, 연락처 및 해당기관에서 가족수당 지급여부 등을 기재하여야 함 ▸보수지급 기관에서는 주민등록시스템과 급여시스템 연계를 통한 부양가족 변동사항을 확인하고 가족수당을 지급받는 소속 공무원의 부양가족 변동 사항을 주기적으로 보수지급 전에 주민등록정보를 활용하여 확인할 수 있음\n구 분 지 급 요 령\n가 계 보 전 수 당 가족수당 (공무원 수당등에관한규정제10조) 6. 지급 시 유의사항 ▸부부공무원(인건비가 국고 또는 지방비에서 보조되는 기관에서 근무하는 자 포함)일 경우 그 중 1인에게만 지급하며, 부양가족신고서에 상대방의 동의서를 첨부하여 제출 ▸가족수당은 그 지급 사유가 발생한 날이 속하는 달부터 지급하므로 공무원 본인이 부양가족 신고를 하지 않아 가족수당을 지급받지 못한 경우에도 그 후 부양가족을 신고하면 지급 사유가 발생한 날이 속하는 달까지 소급 지급이 가능하나, 민법 제163조제1호의 규정에 따라 신고한 날로부터 3년까지 소급하여 지급받을 수 있음(과다 지급된 보수는 국가재정법 제96조 금전채권과 채무의 소멸시효에 따라 5년까지 환수)\n육아 휴직수당 (공무원 수당등에 관한규정제11조의3) 1. 지급대상: 국가공무원법 제71조제2항제4호 사유［만8세 이하(취학중인 경우 초등학교 2학년 이하)의 자녀를 양육하기 위하여 필요하거나, 임신 또는 출산하게 된 때로 30일 이상 휴직한 남·녀 공무원] 2. 지급기간: 휴직일 또는 지정일부터 최초 1년 이내이나 다음의 어느 하나에 해당하는 공무원의 경우 지급기간은 휴직일 또는 지정일로부터 최초 18개월 이내로 한다. 가) 같은 자녀를 대상으로 부모가 모두 육아휴직을 각각 3개월 이상 사용한 경우의 부 또는 모 ※ 증빙 방법 - 배우자가 공무원인 경우: (육아)휴직증명서, 인사발령(휴직)통지서 등 공문 - 배우자가 공무원이 아닌 경우: ｢남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률｣에 따른 육아휴직에 대하여 사업장에서 발행한 육아휴직확인서 또는 관할 고용복지센터에서 발급한 육아휴직을 입증하는 서류 등을 소속기관장에게 제출하여 신청(육아휴직 기간 및 대상 자녀가 기재된 것이어야 함) 나) ｢한부모가족지원법｣ 제4조제1호의 부 또는 모 다) 인사혁신처장이 정하는 장애가 있는 자녀의 부 또는 모 3 총 지급액(‘25.1.1.부터 적용) 기 간 / 지급액 육아휴직 시작일 ~ 3개월 / 육아휴직 시작일을 기준으로 한 월 봉급액 (상한액 250만원) 육아휴직 4개월 ~ 6개월 / 육아휴직 시작일을 기준으로 한 월 봉급액 (상한액 200만원) 육아휴직 7개월째 이후 / 육아휴직 시작일을 기준으로 한 월 봉급액의 80퍼센트 (상한액 160만원, 하한액 70만원) 4. 같은 자녀에 대하여 부모가 순차적으로 육아휴직을 하여 두 번째 육아휴직을 한 사람이 공무원인 경우(‘25.1.1.부터 적용) 기 간 / 지급액 육아휴직 시작일 ~ 6개월 / 육아휴직 시작일을 기준으로 한 월 봉급액 ·2개월째까지 상한액: 250만원 / ·3개월째 상한액: 300만원 ·4개월째 상한액: 350만원 / ·5개월째 상한액: 400만원 ·6개월째 상한액: 450만원 육아휴직 7개월째 이후 / 육아휴직 시작일을 기준으로 한 월 봉급액의 80퍼센트 (상한액 160만원) 5. 「한부모가족지원법」제4조제1호의 모 또는 부에 해당하는 공무원(2025.1.1.) 기 간 / 지급액 육아휴직 시작일 ~ 3개월 / 육아휴직 시작일을 기준으로 한 월 봉급액(상한액 300만원) 육아휴직 4개월 ~ 6개월 / 육아휴직 시작일을 기준으로 한 월 봉급액(상한액 200만원) 육아휴직 7개월째 이후 / 육아휴직 시작일을 기준으로 한 월 봉급액의 80퍼센트(상한액 160만원)\n구 분 지 급 요 령\n특 수 지 근 무 수 당 특수지근무수당[도서벽지수당] (공무원수당등에관한규정제12조) 1. 지급대상: 교통이 불편하고 문화·교육시설이 거의 없는 지역이나 근무환경이 특수한 기관에 근무하는 공무원 2. 지급액 급지별 / 가지역 / 나지역 / 다지역 / 라지역 지급액 / 60,000원 / 50,000원 / 40,000원 / 30,000원 ▸지급대상 지역 및 기관의 등급별 구분은 동 규정 별표 7의2의 특수지근무수당(도서벽지수당) 지급대상 지역등급 구분기준표에 의함 ▸전북특별자치도교육청 특수지근무수당 지급대상 지역 및 기관과 그 등급별 구분에 관한 조례(현황: 2025.3.1.기준) 도서 [을지(다)지역] 위도초·중·고 벽지 [을지(다)지역] 무녀도초, 선유도중, 동상초 [병지(라)지역] 수곡초, 전북특별자치도교육청학생수련원, 송풍초, 용담중, 괴목초, 구천초, 부남초, 부남중, 부당초, 번암초동화분교, 동산초, 시산초, 가평초\n특 수 근 무 수 당 위험근무수당(같은규정 제13조) 1. 지급대상: 위험한 직무에 종사하는 공무원 2. 지급액: 동 규정 별표8의 위험근무수당 지급구분표 및 별표9의 위험근무수당 등급별 구분표에 의함(갑종 60,000원, 을종 50,000원, 병종 40,000원) 3. 예시: 학교 식생활관 실제 조리 업무 종사자 수당(월 5만원), 방학 중 지급 제외\n업무대행수당(같은규정 제14조의2) 1. 지급대상: 병가, 출산휴가, 유산휴가, 사산휴가, 공무상 질병휴직 또는 육아휴직 중인 공무원의 업무를 대행하는 공무원 (병가, 유산휴가, 사산휴가의 경우에 30일 이상 병가 또는 휴가를 사용하는 공무원, 공무상 질병휴직의 경우에 6개월 미만 휴직하는 공무원으로 한정) 2. 지급액: 200,000원 ※ 같은 업무를 대행하는 공무원이 여러 명일 경우 1 / n로 지급\n기술정보수당(지방공무원수당등에관한규정제14조 및 별표9 제1호가목) 1. 지급대상 ▸기술직군의 각 직렬의 공무원 및 행정직군 전산직렬 공무원(지방공무원임용령 별표1) ▸｢위험물안전관리법｣에 따라 위험물안전관리자로 선임된 사람 및 ｢도시가스사업법｣에 따라 안전관리자로 선임된 사람 2. 지급액 지급대상 / 월지급액 / 가산금(가, 나는 병급 가능) 5급 이상 / 50,000원이하 / 가. 기술정보 당 지급대상자 중 국가기술자격법에 의한 기술 기능분야 자격증 소지자 가산금 지급 - 기술사: 월 50,000원 이하 - 기능장․기사: 월 30,000원 이하 - 산업기사: 월 20,000원 이하 나. 지방공무원임용령 별표1 기술직군 운전직렬 - 7급 이상: 월 10,000원 이하 - 8급 이하: 월 20,000원 이하 6급, 7급 / 30,000원이하 8급 이하 / 20,000원이하\n구 분 지 급 요 령\n특 수 근 무 수 당 연구업무수당(지방공무원수당등에 관한규정 제14조) 대상자 / 장학관・ 교육연구관 / 장학사・ 교육연구사 / 대상자 / 연구직 공무원 / 교육연수기관・공무원교육훈련기관 원장 / 부장 / 장학관(사), 교육연구관(사) 지급액 / 22,000원 / 17,000원 / 지급액 / 80,000원 / 110,000원 / 100,000원 / 80,000원 장학관・교육연구관으로서 4급상당에게는 지급하지 않음 / 가산금: 3급상당 연구관 월 60,000원 라목 / 가목 / 다목 ※ 라목과 다목은 병급 가능\n교원등에관한 보전수당 (공무원수당등에관한 규정 별표11) 1. 학교교원에 대한 지급구분표(별표11 제2호 나목): 삭제(개정 2021.1.5.) 구 분 / 유치원·초등학교·중학교 교원 / 고등학교(도서벽지) / 고등학교(그 외 지역) 년 수 / 2015. 폐지 / 5년 미만 / 5년 미만 지급액 / 18,000원(삭제) / 15,000원(삭제) 2. 교장, 교감 및 전문직에 대한 지급구분표 구 분 / 교장, 원장, 장학관, 교육연구관(1, 2, 3급 상당) / 교감, 원감, 장학관, 교육연구관(4, 5급 상당) 지급액 / 70,000원 / 10,000원\n교직수당 (별표11 제2호 다목) 1. 지급대상: 교육장, 장학관(사), 교육연구관(사)과 교장・원장・교감・원감・수석교사・교사 2. 지급액: 월 250,000원 ※ 다음 가산금 지급대상에 해당하는 교원에게는 가산금을 지급하되, 둘 이상일 경우 해당 가산금을 함께 지급\n교직가산1 (원로교사) 1. 지급대상: 고등학교 이하 각급학교에서 근무하는 교원 중 매달 1일 현재 기준 교육경력 30년 이상(유아교육법 제20조제1항, 초・중등교육법 제19조제1항, 장애인 등에 대한 특수교육법 제25조제1항, 고등교육법 제14조제1항부터 제4항까지) 55세 이상인 교사(‘21.1.5.부터 일부개정) 2. 지급액: 월 50,000원\n교직가산2 (보직교사) 1. 지급대상: 고등학교 이하 각급학교에 근무하는 보직교사 2. 지급액: 월 150,000원(‘24.1.1.부터 적용)\n교직가산3 (특수학교, 특수학급 국악학교 안전지도) 1. 지급대상: 고등학교 이하 공립의 특수학교에 근무하는 교원 및 특수학급을 담당하는 교원, 국악고등학교에 근무하는 교원, 고등학교부설 방송통신고등학교의 겸직 교원 2. 지급액: 월 50,000원(국악고등학교 근무 교원, 고교부설 방송통신고 겸직 교원) 월 120,000원(공립 특수학교 근무 교원 및 특수학급 담당 교원, ‘24.1.1.부터 적용) 월 30,000원(유치원, 초등학교, 특수학급 등·하교 통학버스에 월 10회 이상 동승하여 안전을 지도하는 교원, 운전만을 하는 사람은 제외)\n구 분 지 급 요 령\n특 수 업 무 수 당 교직가산4 (학급담당) 1. 지급대상: 고등학교 이하 각급학교에 근무하는 교원 중 학급담당교원 2. 지급액: 월 200,000원(‘24.1.1.부터 적용)\n교직가산5 (실과담당) 1. 지급대상: 농업·수산·해운 또는 공업계 학과가 설치되어 있는 고등학교의 교장·교감과 다음의 표시과목에 해당하는 교원자격증을 가지고 해당 교과목을 담당하는 실과 담당교원 2. 지급액 호봉별 / 31~40 / 22~30 / 14~21 / 9~13 / 5~8 / 1~4 / 가산금 지급액 / 50,000원 / 45,000원 / 40,000원 / 35,000원 / 30,000원 / 25,000원 / 단, 기계공고, 전자공고 교장,교감,기계과목,전자통신,전기과목 교사 월 10,000원 가산\n교직가산6 (보건) 1. 지급대상: 고등학교 이하 각급학교에 근무하는 보건교사 2. 지급액: 월 40,000원\n교직가산7 (통합학교겸임) 1. 지급대상: 초등학교 병설유치원의 원장과 원감을 겸임하는 초등학교 교장・교감, 통합・운영학교의 교장,교감으로서 초등학교, 중학교 또는 고등학교 중 둘 이상의 학교의 장을 겸임하는 교원(교감 2017.1.1.신설) 2. 지급액: 겸임교장 월 100,000원, 겸임교감 월 50,000원\n교직가산8 (영양교사) 1. 지급대상: 고등학교 이하 각급학교에서 근무하는 영양교사 2. 지급액: 월 40,000원 ▸교육경력외 고등학교 이하 각급학교에서 「학교급식법」(법률 제6935호로 개정되기 전) 제7조제1항에 따라 학교급식시설에 배치된 학교급식 전담직원으로서 일반직공무원으로 근무한 경력을 포함, 총 경력 30년 이상이면서 55세 이상인 영양교사는 월 50,000원 가산함 다만, 교직가산1 지급요건을 충족하는 경우 교직가산1만 지급(2020.1.1.부터 적용)\n교직가산9 (사서교사) 1. 지급대상: 고등학교 이하 각급학교에서 근무하는 사서교사 2. 지급액: 월 30,000원(2017.1.1.신설)\n교직가산10 (상담교사) 1. 지급대상: 전문상담교사 및 전문상담순회교사 2. 지급액: 월 30,000원(2018.1.1.신설)\n학교운영수당 (일반직) 1. 지급대상: 공립학교에 근무하는 6급 이하 일반직공무원 (고등학교 등으로 확대, 2021.3.1.부터 적용) 2. 지급액: 월 30,000원(2018.1.1.신설)\n겸임수당 (전북특별자치도 교육감소속지방공무원보직관리규정 제4조의2) 1. 지급대상: 병설·부설·통합 운영학교 행정실에 보직된 지방공무원 2. 지급액: 월 50,000원(2019.4.18.신설) 겸임 발령을 받은 지방공무원을 대상으로 매월 인건비에 포함하여 지급\n구 분 지 급 요 령\n특 수 업 무 수 당 특수직무1 (민원)수당 (별표11조 제3호 바목) 1. 지급대상: 각급 행정기관에 설치된 민원실에서 민원창구를 담당하며 상시로 직접 민원서류를 취급하는 공무원 2. 지급액: 월 50,000원 이하(3만원에서 2만원 인상, 2017.1.1.부터 적용)\n특수직무2 (사서)수당 1. 지급대상: 사서직공무원 2. 지급액: 5급 이상(월 40,000원 이하), 6급 이하(월 30,000원 이하)\n중요직무급 (공무원수당등에관한규정제14조 별표11 제3호 사목) 1. 지급대상: 중요직무 선정 결과에 따른 대상자 2. 지급액 지급대상 / 월 지급 상한액 / 비고 교육공무원 / 100,000 / 교육공무원 중요직무급 운영계획 참고 고위공무원단에 속하는 공무원 / 300,000 3급(상당) 또는 4급(상당) 공무원(과장급) / 200,000 4급(상당) 또는 5급(상당) 공무원 / 150,000 6급(상당)이하 공무원 / 100,000\n교원연구비 교원연구비 (교원연구비 지급에 관한 규정 별표1) 1. 지급대상: 공립 유, 공·사립 초,중,고・특수학교 교원 특수교육지원센터 배치된 순회교사(「장애인 등에 대한 특수교육법」 제11조 및 제25조제1항) 교육행정기관 배치된 전문상담순회교사(「초·중등교육법 시행령」 제40조의2) 교육행정기관 배치된 순회교사(「교육공무원법」 제22조의2) 2. 지급액 구 분 / 유․초등 교원 / 중등교원 / 비고 교 장 / 75,000 / 60,000 교 감 / 65,000 / 60,000 수석교사 / 60,000 / 60,000 / 2023.3.1.부터 적용 보직교사 / 60,000 / 60,000 교사 / 5년 이상 / 60,000 / 60,000 5년 미만 / 75,000 / 75,000(78,000)* / *도서벽지 근무 교원 3천원 가산 ※ 교원연구비 지급시 유의사항(2020학년도 학교회계 예산편성 및 운영지침) 정직·직위해제·휴직 또는 파견으로 당해 학교에 근무하지 아니한 월의 교원연구비는 지급하지 아니함. 다만, 유·초·중·특수학교 이외의 기관으로 파견 시 학교와 동일하게 학생을 지도하는 경우에는 지급 가능\n초 과 근 무 수 당 등 시간외근무수당 (공무원수당등에관한 규정제15조) 1. 지급대상: 근무명령에 따라 규정된 근무시간 외에 근무한 경우 2. 지급시기: 초과근무를 한 다음 달의 보수지급일(단, 12월분은 12월 31일 이전 지급) 3. 지급시간: 1일 4시간, 월 57시간 이내 (현업공무원의 경우 정액분 미지급 및 1일 4시간, 월 57시간 이내의 한도 미적용)\n구 분 지 급 요 령\n초 과 근 무 수 당 등 시간외근무수당 (공무원수당등에관한 규정제15조) 4. 지급시간 수 계산방법 구 분 / 1일 지급시간 계산 정규 근무시간 이후 시간외근무 / ▸1시간 미만: 미지급 ▸1시간 이상 5시간미만: 1시간 공제한 후 4시간 이내에서 매 분 단위로 합산 ▸5시간 이상: 4시간만 인정 정규 근무시간 이전 1시간 이상 시간외근무 / ▸1시간 이상 조기 출근한 시간외근무에 한하여 당일 정규퇴근 시간 이후의 시간외근무시간과 합산하여 1시간을 공제 후 매 분 단위까지 합산 휴무토요일 및 휴일근무 / ▸1시간 미만: 미지급 ▸1시간 이상 4시간 미만: 공제없이 매 분 단위까지 합산 ▸4시간 이상: 4시간만 인정\n5. 일반대상자의 시간외근무수당 정액분 지급 구 분 / 내 용 정액분 기준 / ◦근무일 기준으로 정직・직위해제・휴직・연가・병가・공가・특별휴가・방학・결근 및 외출 등을 제외한 월간 출근(또는 출장) 근무 일수가 15일 이상인 자에 대해 별도의 초과근무명령이나 승인 없이 월 10시간분의 시간외수당을 정액분으로 지급 ◦실제 출근일수가 월15일 미만인 경우에는 매 1일마다 15분의 1에 해당하는 금액을 감액 지급 육아시간 사용 대상자 / ◦일반대상자의 경우 육아시간을 2시간 또는 모성보호시간 2시간을 사용하더라도 나머지 시간을 모두 근무하였다면 정액분 지급에 영향을 미치지 않음 방학 중 / ◦방학은 월간 출근(또는 출장) 근무일수에서 제외되나, 방학기간 중 학교장의 근무명령에 의해 특별히 출근하여 「국가공무원 복무규정」에서 정한 근무시간 이상 근무하는 경우에는 정규근무일로 간주하여 월간 출근(출장) 근무 6. 지급제외 대상자 ▸초과근무에 대하여 다른 방법으로 금전적 보상을 하는 경우 (예: 시험감독 근무, 보충수업지도) ▸재외근무공무원 및 국외파견공무원(공무원수당 등에 관한 규정 제4조) ▸당직명령에 의한 당직근무자(재택당직자 포함) ▸1월 이상 파견공무원 ▸자연보호, 농촌일손돕기, 국경일 및 각종기념일 행사지원으로 인한 초과근무자, 을지연습 기간 중의 초과근무자 및 비상소집 등 동원에 따른 초과근무자 7. 초과근무 및 수당지급 절차 ▸[나이스] 복무 → 초과근무 → 초과근무확인에서 초과근무명령서 및 초과근무확인대장을 대조하여 초과근무시간 확인 입력 → 초과근무월별집계에서 월별 시간외근무 생성 ▸급여담당자: 복무 작업 후 기초자료 생성하면 시간외근무내역 반영 8. 시간외근무수당 단가표 ▸[나이스] 공무원급여 → 기준관리 → 급여기준관리 → 초과근무수당단가표 9. 초과근무 확인서 출력 ▸[나이스] 복무 → 초과근무월별집계 → 조회 → 근무일수계산 → 출력(결재 후 보관)\n구 분 지 급 요 령\n초 과 근 무 수 당 등 시간외근무수당 (공무원수당등에관한 규정제15조) 10. 공무원 출장기간 중 초과근무수당 ▸관련공문 - 공무원의 출장기간 중 초과근무 운영 관련 안내(총무과-18562, 2015.12.8.) - 공무원 출장기간 중 초과근무수당 처리지침 안내(총무과-11147, 2017.7.26.) ▸공무원의 출장기간 중 초과근무는 원칙적으로 인정되지 않으나 아래의 경우에 한해시간외근무수당 지급이 가능함 ① 출장의 목적상 필연적으로 시간외근무의 발생이 예상되는 경우 ② 학교장 판단 하에 교육과정 운영상 필요하다고 인정될 때 ② 시간외근무 명령에 따라 출장 중 또는 출장 후 「공무원 복무 규정」 상의 근무시간 외에 근무를 하고 ③ 초과근무한 시간에 대하여 명백히 인정할 수 있는 객관적인 증빙자료가 있는 경우 ▸출장 중 초과근무 인정 예시 ① 교육과정과 연계된 현장체험학습, 수학여행, 휴일 중 행사 등의 교육활동을 실시하는 경우 교원 본연의 업무가 포함된 사전계획서에 따라 국내출장과 초과근무명령이 적법한 절차에 의해 승인되어 교육활동을 수행한 경우 출장 중 시간외근무수당 지급 가능(국외출장 제외) ② 수련활동과 이를 위해 평일 근무시간 이후 또는 휴무 토요일·공휴일에 실시하는 사전 답사 ③ 평일 근무시간 이후 또는 휴무 토요일·공휴일에 대회에 참가하는 학생 인솔 등 ④ 교육지원청 예산업무 담당자가 도교육청에서 예산편성 합동작업을 하는 경우 출장 중 시간외근무수당 지급 가능 ※인정 불가한 예: 교직원체육대회, 교직원 연수, 문화공연, 전국대회 참관 등\n실 비 변 상 등 정액급식비 (같은규정 제18조) 1. 지급대상: 모든 공무원 2. 지급액: 월 140,000원(개정 2020.1.7.)\n명절휴가비 (같은규정 제18조의3) 1. 지급대상: 설날 및 추석날 현재 재직 중인 공무원 2. 지급기준일・지급액・지급시기 지급기준일 / 지 급 액 / 지급시기 설 날 추석날 / 지급기준일 현재의 월봉급액×60% / 보수지급일 또는 지급기준일 전후 15일 이내에 각 기관장이 정하는 날 ※ 월중 인사 발령 시 지급방법: 월중 인사 발령 시(신규채용, 퇴직, 승진, 승급 등 각종 임용) 지급기준일(설날, 추석날)을 기준으로 결정 ※ 지급기준일 현재 징계처분에 따른 감봉으로 봉급이 감액지급되는 경우에는 감액되기 전 월봉급액을 기준으로 지급\n구 분 지 급 요 령\n실 비 변 상 등 연가보상비(같은규정제18조의5) 1. 지급대상: 1급 이하 공무원 (단, 교육공무원은 제외하나, 방학이 없는 기관 근무자는 포함) 2. 지급액 ▸ 6월30일 기준 연가보상비: 6월30일 현재의 월봉급액의 86%×1 / 30×연가보상일수(5일) ▸ 12월31일 기준 연가보상비: (12월31일 현재의 월봉금액의 86%×1 / 30×연가보상일수) - (6월30일 기준 지급 받은 연가보상비) 3. 연도 중 퇴직자에 대한 지급방법 ▸ 6월 말 이전 퇴직: 퇴직일 전일 현재의 월봉급액×86%×1 / 30×5일 ▸ 7월 이후 12월 말 전 퇴직 - 6월말 보상: 연가잔여일수 10일 이상자에게 5일 보상 - 퇴직일 기준 보상: 퇴직일 전일 현재의 월봉급액×86%×1 / 30×연가보상일수 - [6월 30일 기준 지급한 연가보상비] ▸연가보상일수 = 미사용연가일수×[12월-제외기간(월)] / 12월 ▸미사용연가일수 = 지급기준일 현재「국가공무원복무규정」에 따라 산정된 연가일수 - 사용한 연가일수 ▸연가보상비 지급대상인 연가일수는 지방공무원 복무규정 제7조제4항에 따라 20일 지급 ▸제외기간 = 연도 중 지급대상에서 제외되거나 실제 근무하지 않은 기간 (각 제외기간을 합산하여 15일 이상은 1월로 하고, 연가보상일수 계산 시 절상) ※ 예) 지급대상자인 장학사가 교원으로서 근무한 기간, 퇴직자의 경우 미근무기간, 연도 중 임용자의 경우 미 근무기간, 교육 파견(1개월 이상)기간, 연간통산 병가(공무상병가 제외), 공로퇴직연수 기간, 30일 이상(연속된 경우) 국외출장의 경우 그 출장기간 ※ 특별휴가, 공가, 공무상 질병휴직, 공무상 병가, 사병으로 군입대 시 입대 후의 미근무기간과 복직 시 군인으로 복무했던 기간은 연가보상일수 산정의 제외기간에 포함하지 않음 ▸연가일수에서의 공제: 결근일수・정직일수 및 직위해제일수는 연가일수에서 공제, 법령에 따른 의무수행이나 공무상 질병 또는 부상으로 인해 휴직한 경우를 제외한 휴직의 경우에는 다음 산식에 의하여 산출된 일수를 공제 ⇒ 공제할 연가일수 = 해당년도 휴직기간(개월) / 12(개월) × 해당년도 연가일수 재직기간 / 연가일수 / 재직기간 / 연가일수 1개월 이상 1년 미만 / 11 / 4년 이상 5년 미만 / 17 1년 이상 3년 미만 / 15 / 5년 이상 6년 미만 / 20 3년 이상 4년 미만 / 16 / 6년 이상 / 21\n구 분 지 급 요 령\n실 비 변 상 등 연가보상비 (같은규정 제18조의5) 공무원보수등의업무지침 4. 저축연가의 보상방법 ▸보상비 지급이 가능(인사혁신처장이 정하는 사유에 한함)한 저축연가의 보상비는 각 연가의 저축 해당연도 12월 31일 월봉급액을 기준으로 함 ｢지방공무원 복무 규정｣ 제7조의10(연가저축) ①공무원은 연가보상비 지급대상인 연가 일수 및 제4조제4항에 따라 전환된 연가 일수 중 사용하지 않고 남은 연가 일수를 그 해의 마지막 날을 기준으로 이월ㆍ저축하여 사용할 수 있다. ② 제1항에 따라 이월ㆍ저축한 연가에 대해서는 연가보상비를 지급하지 않는다. 다만, 다음 각 호의 사유에 해당하는 경우에는 연가보상비를 지급한다. 1. 법 제62조제1항제1호에 따라 직권면직된 경우 2. 공무원이 사망한 경우 5. 지급방법 ▸ 지방공무원 복무규정에 따라 산정된 연가일수에서 사용한 일수를 제외한 미사용 연가일수에 대해서만 지급\n직급보조비(같은규정제18조의6) 및 별표15 1. 지급대상: 공무원 2. 지급액 직급 / 4급,교(원)장,장학관, 교육연구관(4급상당) / 5급,교(원)감,장학관, 교육연구관(5급상당) / 6급,장학사, 교육연구사 / 7급 / 8,9급 지급액 / 400,000원 (교(원)장 50,000원 추가) / 250,000원 (교(원)감 50,000원 추가) / 185,000원 / 180,000원 / 175,000원\n신분변동 시 보수지급방법(2025년 기준)\n☞ 공무원보수 등의 업무지침, 지방공무원보수업무 등 처리지침 ※ 아래 표는 참고용으로 자세한 사항은 반드시 업무지침 확인\n구 분 연봉제 호봉제 대우공무원수당 정근수당 정근수당 가산금 가족수당 가족수당 가산금 자녀학비 보조수당 주택수당 특수지 근무수당 위 험 근무수당 특 수 업무수당 시간외 근무수당 관리 업무수당 정액 급식비 명절 휴가비 연가 보상비 직급 보조비\n직위 해제 직무수행능력부족 7할 8할 2할감 1월 1 / 6감 2할감 2할감 2할감 2할감 2할감 2) 2) 2) 실적,× 2) 2) 3) 4) 2)\n적격심사 요구받은 고공단 1) 6․3할 7․4할 3․6할감 1월 1 / 6감 3․6할감 3․6할감 3․6할감 3․6할감 3․6할감 2) 2) 2) 실적,× 2) 2) 3) 4) 2)\n기타사유1) 교육공무원 4․2할 7․5․4․3할 3․5․6․7 할감 1월 1 / 6감 3․5․6․7할감 3․5․6․ 7할감 3․5․6․7 할감 3․5․6․7할감 3․5․6․7 할감 2) 2) 2) 실적,× 2) 2) 3) × 2)\n지방공무원 5․3할 5․7할감 5․7할감 5․7할감 5․7할감 5․7할감 5․7할감 4)\n징계 견 책 ○ ○ ○ × 전 액 지 급\n감 봉 1 / 3감 1 / 3감 1 / 3감 × 1 / 3감 1 / 3감 1 / 3감 1 / 3감 1 / 3감 1 / 3감 1 / 3감 1 / 3감 전 액 지 급\n정 직 징계사유발생일에 따라 5) × × × × × × × × × × × × 실적,× × × 지급기준일 정직× 4) ×\n강등 (직무에 종사하지 못하는 3개월) 징계사유발생일에 따라5) × × × × × × × × × × × × 실적,× × × 지급기준일 강등× 4) ×\n해 임 일할계산 일할계산 일할계산 × 일할계산 일할계산 일할계산 일할계산 일할계산 일할 계산 일할 계산 일할 계산 실적,× 일할 계산 일할계산 지급기준일 해임× × 일할 계산\n파 면 일할계산 일할계산 일할계산 × 일할계산 일할계산 일할계산 일할계산 일할계산 일할 계산 일할 계산 일할 계산 실적,× 일할 계산 일할계산 지급기준일 파면× × 일할 계산\n휴직 질병휴직(§71①1호) 1년이하 6할 1~2년이하 4할 1년이하 7할 1~2년이하 5할 1년이하 3할감 1~2년이하 5할감 6) 1년이하 3할감 1~2년이하 5할감 1년이하 3할감 1~2년이하 5할감 1년이하 3할감 1~2년이하 5할감 1년이하 3할감 1~2년이하 5할감 1년이하 3할감 1~2년이하 5할감 일 할,× 일 할,× 일 할,× 실적,× 일 할,× 일할,× 지급기준일 휴직× 4) 일할,×\n공무상질병휴직 ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ 실적,× ○ ○ ○ ○ ○\n병역휴직(법§71①3호) × × × × 복직후 감액× × × × × × × × × 실적,× × × × 7) ×\n천재지변 등 휴직(법§71①4호) × × × × × × × × × × × × 실적,× × × × × ×\n국내외임시채용(고용) × × × × 복직후 감액× × × × × × × × × 실적,× × × × × ×\n해외유학, 1년이상 국외연수 휴직 4할 (2년 이하) 5할 (2년 이하) 5할감 (2년 이하) 전액지급 (2년 이하) 5할감 (2년 이하) 5할감 (2년 이하) 5할감 (2년 이하) 5할감 (2년 이하) 5할감 (2년 이하) 일 할,× 일 할,× 일 할,× 실적,× 일 할,× 일할,× 지급기준일 휴직× 4) 일할,×\n법정의무수행 (§71①5호) × × × × 복직후 감액× × × × × × × × × 실적,× × × × × ×\n가사,연수,해외동반휴직 등 × × × × × × × × × × × × 실적,× × × × × ×\n육 아 휴 직 육아휴직 시작일로부터 6개월간 월봉급액, 7개월째 이후 월봉급액의 80퍼센트 지급 (상한선 3개월까지 250만원, 4~6개월까지 200만원, 7개월째 이후 160만원)\n파견 국 내 파 견 ○ ○ ○ ○ ○ ○ ○ ○ ○ 8) 8) 8) 9) ○ ○ ○ 7) ○\n공로연수파견 ○ ○ ○ ○ ○ ○ ○ ○ ○ × × × × ○ ○ ○ 7) ○\n국외파견 (30일이상) ○ ○ ○ ○ ○ ○ ○ ○ ○ × × × × ○ × ○ 7) ○\n출장 국 내 출 장 ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○\n국외출장 (30일이상) ○ ○ ○ ○ ○ ○ ○ ○ ○ × × × × ○ ○ ○ 7) ○\n결근 연봉 일액감 봉급 일액감 ○ ○ ○ ○ ○ ○ ○ 일액 감 일액 감 일액 감 × ○ 일액 감 ○ × 일액 감\n휴가 연가,병가,공가,특별휴가 ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ × ○ ○ ○ 7) ○\n무급인 특별휴가 연봉일액감 봉급일액감 ○ ○ ○ ○ ○ ○ ○ 일액 감 일액 감 일액 감 × ○ 일액 감 ○ ○ 일액 감\n연봉제 고정급적 연봉제 ○ ○ ○ × × ○ ○ ○ × ○ ○ ○ × × ○ × ○ ○\n성과급적 연봉제 ○ ○ ○ × × ○ ○ ○ × ○ ○ ○ ○ × ○ × ○ ○\n(전문임기제) ○ ○ ○ × × ○ ○ ○ × × × × ○ ○ ○ × ○ ○\n퇴직 정년▪명예퇴직, 조기▪자진퇴직 11) 11) ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ 10) ○ ○ ○ 7) ○\n대 기 발 령 ○ ○ ○ ○ ○ ○ ○ ○ ○ × × × × × × ○ 7) ○\n1) ｢공무원보수규정｣ 제29조(직위해제기간 중의 봉급 감액) 참고\n｢지방공무원법｣ 제65조의3 규정에 따라 직위해제된 공무원의 3월 이내 직위해제 기간: 50%감액, 직위해제일로부터 3월이 지난 뒤에도 직위를 부여받지 못한 때 3월이 지난 후의 직위해제기간: 70% 감액\n2) 월중에 직위해제, 강등･정직처분 또는 복직: 실제 근무일수에 따라 일할계산 / 미근무 시: 미지급(다만, 특수업무수당 중 교원에대한보전수당은 대우공무원수당, 정근수당 가산금, 가족수당, 자녀학비보조수당 및 주택수당의 감액방법에 따라 감액한다.)\n3) 지급기준일(설날, 추석날) 현재 직위해제중: 미지급\n4) 결근, 강등･정직, 직위해제 일수를 연가일수에서 공제(국가공무원복무규정 제17조)한 후 지급 / 휴직의 경우(법령에 의한 휴직이나 공무상 휴직 제외) 다음 산식과 같이 계산: 연가일수-(해당연도 휴직기간(월) / 12*해당연도 연가일수) 단, 대기발령, 징계처분, 휴직 중에 있는 자는 제외\n5) 징계사유 발생일에 따라 기준일 이전이면 2 / 3감액, 이후면 전액 감액, 공무원 보수업무등의 처리지침, 지방공무원보수업무 등 처리지침 확인\n6) 휴직 1월에 대하여 수당액의 1 / 6감액(실제 근무한 기간 15일 이상은 1월 계산, 15일 미만 계산×)\n7) 연가보상비 계산 시 해당기간을 제외기간에 포함하여 산출하는 기간: 부사관 또는 장교로 군입대한 경우 미근무기간(사병으로 군 입대 시 미근무기간은 제외기간 미산입), 교육파견(1개월 이상) 기간, 공로퇴직 연수기간, 퇴직 후 미근무기간, 대기발령기간, 병가기간(특별휴가, 공가는 제외기간에 미산입), 국외파견 및 국외출장(1개월 이상) 기간\n8)① 파견기간이 30일 이상(연속된 기간)인 경우 지급할 수 없으나 예외적 인정(직무교육파견 등)\n- 본연의 업무와 관련된 직무교육(「공무원 인재개발법 시행령」제7조에 따른 직급별 기본교육훈련과정 및 직무분야별 전문교육훈련과정에 상당하는 직무교육)을 위한 교육훈련파견\n- 파견받은 기관의 업무성격이나 근무여건이 특수지근무수당･위험근무수당･특수업무수당･업무대행수당 및 군법무관수당의 지급요건에 해당하는 경우\n② 특수업무수당 중 교육공무원에게 지급되는 교원 등에 대한 보전수당･교직수당은 지급되나, 교직수당 가산금 2)부터 10)까지는 지급하지 아니한다. 다만, 파견받은 기관의 업무성격이나 근무여건이 가산금 지급요건에 해당되는 경우에는 지급한다.\n9) 공무원임용령 제41조제1항제4호 및 6호 규정에 의한 1개월 이상 파견 시 정액×, 실적×\n10) 1일 이상 출근 시 정액분 모두 지급\n11) 5년 이상 근속한 공무원이 월 중에 15일 이상을 근무한 후 면직되는 날이 속하는 달의 봉급 또는 연봉을 전액 지급\n급여 작업 점검 시 월별 참고사항\n매월 공통사항 ① 주민정보연계 결과 확인 (나이스 → 공무원급여 → 월급여 → 가족사항관리 → 주민정보연계결과확인) ② 교직원공제회 공제내역 파일반영 확인 ③ 조정수당 입력 시 십 원 단위로 입력(원단위 입력 금지) ④ 조정수당은 교특회계수당으로 입력(학교회계수당 입력 금지) ⑤ 급여지급대상자 확인(교육공무직원, 정원외기간제교사 삭제) ⑥ 호봉승급, 휴직, 대우공무원 임용 등 인사정보 반영 확인 ⑦ 전월 초과근무내역(시간외수당 정액분, 초과분) 확인 ⑧ 부양가족 변동내역 확인 ⑨ 육아휴직수당 지급대상자 유급 기간 확인 및 육아휴직수당 복직합산금 지급 확인 ‣공무원급여>월급여>수당계산내역>육아휴직수당지급내역 육아휴직복직합산금지급예정자 확인(2024년 이후 휴직자 첫째만 / 2025년 이후 폐지)\n인사발령 포함 월 공통사항 (정기인사 1,3,7,9월 등) ① 전입교직원 급여 확인사항 ‣전입교직원의 가족수당, 원천징수동의서 등 각종 신고서 취합 ‣전입교직원 건강보험 근무처 변동 신고 및 나이스 급여기본사항(계좌번호) 입력 ② 복직 및 휴직 교직원 급여 확인사항 ‣복직교직원: 건강보험 복직신고 및 건강보험료 납부액 처리(분할 및 일시) ‣휴직교직원: 휴직종류에 따른 수당 확인, 건강보험공단에 신분변동(휴직) 처리 ③ 승진자(교장 승진) 급여 확인사항 ‣시간외수당: 교장 승진 전 2월 시간외수당 지급 ‣관리업무수당: 교장 승진 시 기본급의 7.8% ④ 1, 7월 일반직 인사이동자 중 교육청 → 학교로 발령 난 경우 특수업무수당(민원 등) 지급 여부 확인 ⑤ 교원 보직발령사항(담임, 부장교사 등) 나이스 입력, 승진자(교장, 교감) 확인 ⑥ 전출기관에서 시간외근무수당 내역확인 통보공문 확인 후 급여 반영 ⑦ 전출직원 시간외근무수당 내역확인 전출교에 공문 통보\n1월 ① 인사발령 포함 월 공통사항(전입교직원, 휴･복직, 승진자) 급여사항 확인(표 상단 참고) ② 1월 정기인사 변동자(신규, 전출, 전입자) 건강보험 전입신고, 공제금, 가족수당 신고 확인 ※ 1월 가족수당과 근무연수 확인 철저 ⇒ 맞춤형복지 포인트 연초 배정점수와 연계 ③ 12월 시간외수당 미지급분만 지급 (정액분 없음, 12월 근무자 중 15일 미만 근무자는 일할계산 환수) ④ 1월 정근수당 지급 ⑤ 공무원 보수규정 개정에 따른 공무원 급여인상분 반영 내역 및 수당변동 사항 확인⑥ 연말정산을 위한 기타수당 지급내역 전출교에 통보 ⑦ 연말정산 작업\n2월 ① 연말정산 마감결과 차감징수액 반영 ② 명절휴가비(지급시기 달라질 수 있음) 지급 ③ 교원 방학 중 시간외수당 정액분 지급을 위한 근무일수 확인 철저 ④ 2월 말 퇴직자 연말정산 중도정산 및 건강보험 상실신고 ⑤ 2월 말 퇴직자 맞춤형복지 잔여포인트 사용 안내(3월 말까지 사용가능) 후 정산완료\n급여 작업 점검 시 월별 참고사항\n3월 ① 인사발령 포함 월 공통사항(전입교직원, 휴･복직, 승진자) 급여사항 확인(표 상단 참고) ② 교원 방학 중 시간외수당 정액분 지급을 위한 근무일수 확인 철저 ③ 교원 보직발령사항(담임, 부장교사 등) 나이스 입력, 승진자(교장, 교감) 확인\n4월 ① 건강보험 연말정산 실시 ‣국민건강보험(4대보험) EDI파일을 다운받아 나이스 → 급여 → 건강보험공단정산파일처리 반영 ‣건강보험 연말정산 금액 징수 및 건강보험 인상분 금액 반영분 확인\n6월 ① 6월 말 퇴직자 연말정산 중도정산 및 건강보험 상실신고 ② 6월 말 퇴직자 맞춤형복지 잔여포인트 사용 안내(7월 말까지 사용가능) 후 정산완료\n7월 ① 인사발령 포함 월 공통사항(전입교직원, 휴･복직, 승진자) 급여사항 확인(표 상단 참고) ② 7월 정근수당 지급, 연가보상비(5일분) 지급, 6월 말 퇴직자 연가보상비 지급 ‣연가보상비(일반직·교육전문직 대상, 학교 교원 대상 아님) 지급\n8월 ① 교원 방학 중 시간외수당 정액분 지급을 위한 근무일수 확인 철저 ② 8월 말 퇴직자 연말정산 중도정산 및 건강보험 상실신고 ③ 8월 말 퇴직자 맞춤형복지 잔여포인트 사용 안내(9월 말까지 사용가능) 후 정산완료\n9월 ① 명절휴가비 지급 및 인사발령 포함 월 공통사항(전입교직원, 휴･복직, 승진자) 급여사항 확인(표 상단 참고)\n12월 ① 연가보상비(7월 지급한 연가보상 일수를 제외한 나머지) 및 12월 시간외 정액분 및 초과분 지급(교육청 업무 일정에 따라 달라질 수 있음)\n교직수당가산금 종류\n순 수당 수당명 금액(월)\n1 교직수당가산금1 원로교사 월5만원\n2 교직수당가산금2 보직교사 월15만원\n3 교직수당가산금3_1 특수학급 월12만원\n4 교직수당가산금4 담임교사 월20만원\n5 교직수당가산금5 실과담당교원 호봉별 상이\n6 교직수당가산금6 보건교사 월4만원\n7 교직수당가산금7 겸임교장 / 교감 월10만원 / 월5만원\n8 교직수당가산금8 영양교사 월4만원\n9 교직수당가산금9 사서교사 월3만원\n10 교직수당가산금10 전문상담교사 월3만원\n※ 공무원수당 등에 관한 규정 및 [별표11] 참고\n나이스 급여작업 체크리스트\n작업일 업무구분 업무처리 시 점검사항 확인여부\n매월 1~2일 기초자료생성 ➀ 매월 호봉승급 대상자의 승급처리 확인은 하였는가? YES□ NO□\n➁ 전월 초과근무내역은 생성·확인을 하였는가? - 나이스-복무-초과근무월별집계 확인여부 - 근무일수 15일 미만자(휴직자, 병가자 등) 시간외수당 정액분<10시간> 일할계산 여부 - 근무일수가 없는 장기병가자 또는 휴직자의 시간외근무수당 정액분 생성여부 ★근무일수 0일로 입력 YES□ NO□ YES□ NO□ YES□ NO□\n➂ (인사변동 시) 전입자의 급여기본사항은 변경하였는가? - 전입기관에서의 건강보험공단 전입신고여부 - 신규임용자 계좌번호 누락 여부 - 전입자의 급여공제코드 수정 여부 - 전입교원의 급여직종 변경(전문직↔교원) 변경 여부 YES□ NO□ YES□ NO□ YES□ NO□ YES□ NO□\n➃ (3월, 9월) 교원의 보직구분(부장교사, 학급담임...)등 급여기본사항은 변경하였는가? YES□ NO□\n➄ 명절휴가비 급여포함 여부는 확인하였는가? - (명절휴가비 지급 월) 명절휴가비 급여포함 여부 ▪포함 체크 - (명절휴가비 지급 월의 익월) 명절휴가비 급여포함 여부 ▪포함안함 체크 YES□ NO□ YES□ NO□\n⇩ ⇩ ⇩\n매월 1~3일 대상자 일괄생성 ➅ 대상자 일괄생성 후 교육공무직원 등 대상자가 아닌 자는 삭제하였는가? ▪ 교육공무직원 삭제방법 ⅰ) 월급여-작업-대상자선정(개인)에서 교육공무직원 삭제 ⅱ) 급여기본사항-비정규직 이름 검색-급여관리구분을 ‘해당없음’으로 선택 후 저장 YES□ NO□\n작업일 업무구분 업무처리 시 점검사항 확인여부\n매월 1~3일 급여조정 및 확인 ➆ 육아휴직자의 급여지급 내역 확인은 제대로 하였는가? - (명절휴가비 지급 월) 육아휴직자에게 명절휴가비를 지급하지는 않았는가? ★명절휴가비 지급대상 아님 - 자녀 1명당 육아휴직 1년 초과자에게 육아휴직수당을 지급하지는 않았는가? - 육아휴직 복직 후 7개월째 되는 자에게 ‘육아휴직수당 복직합산금’은 지급하였는가? YES□ NO□ YES□ NO□ YES□ NO□\n➇ 신분변동자에 대한 급여반영내역 확인은 제대로 하였는가? - 월 중 육아휴직자, 병역휴직자, 중도퇴직자 등의 급여 일할 계산 확인여부 - 징계대상자(정직, 감봉, 직위해제)에 대한 급여 감액 확인여부 YES□ NO□ YES□ NO□\n➈ 휴일수당 지급 여부? ▪ 전북특별자치도교육청 소속 교직원 중에는 휴일수당 지급대상자가 없으므로 휴일수당이 입력된 경우는 삭제 후 시간외근무수당으로 변경 입력할 것 YES□ NO□\n➉ 가계보전수당(가족수당 변동내역) 지급확인 여부 YES□ NO□\n⑪ 특수근무수당 지급확인 여부 - 특수지근무수당, 보직교사수당, 원로교사수당, 파견자에 대한 교직수당 지급내역, 겸임수당 지급내역 등 YES□ NO□\n⇩ ⇩ ⇩\n매월 3일경 월급여 일괄작업 ⑫ 교직원공제회 파일 일괄 반영은 확인하였는가? YES□ NO□\n⇩ ⇩\n급여대장 출력-확인 ⑬ 나이스 급여대장(개인별명세, 기관집계)을 출력하여 대상자 누락사항과 급여작업 및 조정내역을 최종확인 하였는가? YES□ NO□",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n구 분 지 급 요 령\n월 봉 급 봉급(본봉) (공무원보수규정제2장) 1. 봉급월액은 공무원보수규정 제5조(공무원별 봉급표)에 명시된 금액으로 한다 2. 보수는 법령에 특별한 규정이 있는 경우를 제외하고는 신규채용, 승진, 전직, 전보, 승급, 감봉, 그 밖의 모든 임용에서 발령일을 기준으로 그 월액을 일할계산 ▸신규임용 및 퇴직 시 월봉급액 - 신규 임용 시: 일할계산 (예시) 2025. 3. 5일자 9급 1호봉으로 신규 임용 시 봉급지급은? → 2,000,900원 ☓ 27 / 31일=1,742,710원 (원단위 이하 절사) - 5년 이상 근속자가 15일 이상 근무 후 퇴직 시: 전액지급 ※ 금고이상의 형을 받아 면직되는 경우 제외 3. 보수 감액 기간별 / 사유 / 보수 감액률 징계처분기간 / 강등(직무에 종사하지 못하는 3개월) / 보수 전액 감 정직 / 보수 전액 감 감봉 / 보수의 1 / 3 감 결근기간 / 연가일수를 초과한 결근일수 / 봉급일액 감 무급휴가기간 / 무급휴가일수 / 봉급일액 감 휴직기간 / 신체·정신상 장애로 인한 장기요양휴직 (질병휴직) / 1년 이하 / 봉급의 70% 지급 1~2년 이하 / 봉급의 50% 지급 공무상질병 또는 부상에 의한 휴직 / 봉급 전액 지급 직위해제기간 / 직무수행 능력 부족, 근무성적이 극히 나쁜 자 / 봉급의 80% 지급 고위공무원단 일반직공무원으로서 법 제70조의2제1항제2호~제5호 적격심사 요구받은 자 / 봉급의 70% 지급 그 밖의 사유 / 그 밖의 사유 / 봉급의 50% 지급 직위해제일로부터 3개월 이후 직위를 부여받지 못한 경우 / 봉급의 30% 지급 4. 정기승급(공무원보수규정 제13조) ▸공무원의 호봉 간 승급에 필요한 기간은 1년으로 함 ▸공무원의 호봉은 매월 1일자로 승급함",
     "workId": "c07-w01",
-    "blockId": "c07-w01-b15"
+    "blockId": "c07-w01-b15",
+    "anchor": "월봉급봉급(본봉)(공무원보수규정제2장)1.봉"
   },
   {
+    "id": "c07-w01-b15~2",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 근속가봉 근속가봉 (공무원보수규정 제30조2) 교육공무원 중 최고 호봉을 받고 근무성적",
+    "description": "근 속 가 봉 근속가봉 (공무원보수규정 제30조2) 교육공무원 중 최고 호봉을 받고 근무성적이 양호한 사람에게는 승급기간을 초과할 때마다 정기승급일이 속하는 달부터 봉급에 근속 가봉을 가산하여 지급하되, 가산하는 횟수는 10회를 초과하지 못함 (나이스 교원봉급표 참고) 1호봉 → 2호봉 → … → 40호봉 → 근1호봉 → 근2호봉 → … → 근10호봉 상 여 수 당 대우공무원수당(지방공무원수당등에관한규정제5조의2) 1. 지급대상: 지방공무원 임용령 제31조의 규…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n근 속 가 봉 근속가봉 (공무원보수규정 제30조2) 교육공무원 중 최고 호봉을 받고 근무성적이 양호한 사람에게는 승급기간을 초과할 때마다 정기승급일이 속하는 달부터 봉급에 근속 가봉을 가산하여 지급하되, 가산하는 횟수는 10회를 초과하지 못함 (나이스 교원봉급표 참고) 1호봉 → 2호봉 → … → 40호봉 → 근1호봉 → 근2호봉 → … → 근10호봉\n상 여 수 당 대우공무원수당(지방공무원수당등에관한규정제5조의2) 1. 지급대상: 지방공무원 임용령 제31조의 규정에 의하여 대우공무원으로 선발된 자 2. 지급액: 해당공무원 월봉급액의 4.1%를 지급 ▸6급 대우공무원 중 필수실무요원으로 지정된 자에 대하여는 월 10만원의 가산금을 지급 ※ 주의사항: 대우공무원수당과 월봉급액을 합산한 금액이 상위직급으로 승진 시의 월봉급액을 초과할 경우에는 해당직급 월봉급액과 상위직급월봉급액의 차액을 대우공무원수당으로 지급 3. 정직・감봉・직위해제 및 휴직으로 봉급이 감액지급되는 자에게는「지방공무원수당 등에 관한 규정」 별표4의 구분에 따라 감액지급\n구 분 지 급 요 령",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "근속가봉근속가봉(공무원보수규정제30조2)교육"
+  },
+  {
+    "id": "c07-w01-b15~3",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 상여수당 정근수당 (공무원 수당등에관한규정제7조)",
+    "description": "상 여 수 당 정근수당 (공무원 수당등에관한규정제7조) 1. 1월 정근수당: 1월 1일 현재 공무원의 신분을 보유하고 1월 1일 현재 봉급이 지급되는 자 중 지급대상 기간인 전년도 7월 1일부터 12월 31일까지의 기간 중 1월 이상 봉급이 지급된 공무원(봉급의 일부가 지급된 공무원을 포함)에게 지급 2. 7월 정근수당: 7월 1일 현재 공무원의 신분을 보유하고 7월 1일 현재 봉급이 지급되는 자 중 지급대상 기간인 해당년도 1월 1일부터 6월 30일까지의 기간…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n상 여 수 당 정근수당 (공무원 수당등에관한규정제7조) 1. 1월 정근수당: 1월 1일 현재 공무원의 신분을 보유하고 1월 1일 현재 봉급이 지급되는 자 중 지급대상 기간인 전년도 7월 1일부터 12월 31일까지의 기간 중 1월 이상 봉급이 지급된 공무원(봉급의 일부가 지급된 공무원을 포함)에게 지급 2. 7월 정근수당: 7월 1일 현재 공무원의 신분을 보유하고 7월 1일 현재 봉급이 지급되는 자 중 지급대상 기간인 해당년도 1월 1일부터 6월 30일까지의 기간 중 1월 이상 봉급이 지급된 공무원(봉급의 일부가 지급된 공무원을 포함)에게 지급 근무연수 / 월봉급액의 해당지급율 / 근무연수 / 월봉급액의 해당지급율 2년 미만 / 10% / 8년 미만 / 35% 5년 미만 / 20% / 9년 미만 / 40% 6년 미만 / 25% / 10년 미만 / 45% 7년 미만 / 30% / 10년 이상 / 50% ※ ‘월봉급액’은 해당 공무원의 1월 1일 및 7월 1일 현재 봉급표상의 월봉급액을 말함 ※ 정근수당, 정근수당가산금, 정근수당추가가산금 근무연수 계산 시 유의사항 ▸근무연수 계산 구 분 / 근무연수 계산 기준일 / ◦매월 1일 교육공무원 / ◦공무원보수규정 별표22 교육공무원등의 경력환산율표에 의하여 계산 기타공무원 / ◦국가공무원법 제2조와 지방공무원법 제2조에 규정된 공무원(봉급을 받지 아니하거나 비상근으로 근무한 경력은 인사혁신처장이 인정하는 경력에 한한다)으로 근무한 기간을 합산하여 계산됨 ⇒ 따라서 교육공무원의 경우 공무원보수규정 별표22에 해당하는 경력은 근무연수에 계산되며 기타공무원은 공무원보수규정 별표16, 별표17, 별표19 등의 공무원경력에 해당되는 경력이 근무연수에 계산됨 3. 지급방법 구 분 / 지급방법 계산방법 / ◦신규 임용 공무원, 직위해제 또는 휴직처분을 받은 공무원의 경우 해당 지급대상 기간 중 공무원으로 실제 근무한 기간에 따라 아래의 산식과 같이 계산하여 지급 ▸직위해제 처분기간은 실제 근무하지 않은 기간으로 봄 ▸군복무, 법정의무수행・고용, 유학・노조전임・육아에 따른 휴직과 공무상 질병 또는 부상에 따른 휴직기간, 「교육공무원법」 제12조제1항제5호에 따라 특별채용된 자의 사립학교 근무기간은 실제 근무한 기간으로 봄 ▸지급액 = / 영 제7조제1항의 정근수당액 / × / 실제 근무한 기간(개월) 6(개월) 지급제외 / ◦지급대상 기간 중 징계처분을 받은 공무원 ※ 기간의 적용: 실제 근무한 기간이 15일 이상인 경우는 1개월로 계산하고, 15일미만인 경우에는 계산하지 않음",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "상여수당정근수당(공무원수당등에관한규정제7조)"
+  },
+  {
+    "id": "c07-w01-b15~4",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 상여수당 정근수당가산금 (공무원 수당등에관한규정 제7조) 지급대상 / 근무연수 / 월",
+    "description": "구 분 지 급 요 령 상 여 수 당 정근수당가산금 (공무원 수당등에관한규정 제7조) 지급대상 / 근무연수 / 월 지급액 / 추가가산금 교육공무원 일반직공무원 / 20년이상 / 100,000원 / ◦ 근무연수가 20년 이상 25년 미만인 자 에게는 월 10,000원 가산 지급 ◦ 25년 이상인 자에게는 월 30,000원 가산 지급 15년이상 20년미만 / 80,000원 10년이상 15년미만 / 60,000원 5년이상 10년미만 / 50,000원 5년 미만 / 30…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n구 분 지 급 요 령\n상 여 수 당 정근수당가산금 (공무원 수당등에관한규정 제7조) 지급대상 / 근무연수 / 월 지급액 / 추가가산금 교육공무원 일반직공무원 / 20년이상 / 100,000원 / ◦ 근무연수가 20년 이상 25년 미만인 자 에게는 월 10,000원 가산 지급 ◦ 25년 이상인 자에게는 월 30,000원 가산 지급 15년이상 20년미만 / 80,000원 10년이상 15년미만 / 60,000원 5년이상 10년미만 / 50,000원 5년 미만 / 30,000원 / 2024.1.1. 신설 ※ 근무연수: 정근수당 근무연수 계산에 준용\n모범공무원수당 모범공무원수당(모범공무원규정제8조의2) 1. 지급대상: 모범공무원규정에 의하여 모범공무원으로 선발된 자 2. 지급액: 월 50,000원 3. 지급방법: 모범공무원으로 선발된 날이 속하는 달의 다음 달부터 3년간 지급 ▸월중 면직 시: 전액 지급 ▸퇴직, 면직, 직위해제 처분 시: 사유가 발생한 날이 속하는 달의 다음 달부터 부지급",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "상여수당정근수당가산금(공무원수당등에관한규정제"
+  },
+  {
+    "id": "c07-w01-b15~5",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 가계보전수당 가족수당 (공무원 수당등에관한규정제10조)",
+    "description": "가 계 보 전 수 당 가족수당 (공무원 수당등에관한규정제10조) 1. 지급대상: 부양가족이 있는 모든 공무원(비전임계약직공무원 제외) 2. 부양가족요건(기본요건) ▸부양의무를 가진 공무원과 주민등록표상 세대를 같이 하여야 함 ▸해당 공무원의 주소 또는 거소에서 실제로 생계를 같이 하여야 함 ▸동 규정 제10조제2항제1호 내지 제4호 해당자(부양가족의 범위)이어야 함 - 다만 취학・요양 또는 주거의 형편이나 공무원의 근무 형편으로 별거하고 있는 경우에는 배우자·자…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n가 계 보 전 수 당 가족수당 (공무원 수당등에관한규정제10조) 1. 지급대상: 부양가족이 있는 모든 공무원(비전임계약직공무원 제외) 2. 부양가족요건(기본요건) ▸부양의무를 가진 공무원과 주민등록표상 세대를 같이 하여야 함 ▸해당 공무원의 주소 또는 거소에서 실제로 생계를 같이 하여야 함 ▸동 규정 제10조제2항제1호 내지 제4호 해당자(부양가족의 범위)이어야 함 - 다만 취학・요양 또는 주거의 형편이나 공무원의 근무 형편으로 별거하고 있는 경우에는 배우자·자녀 및 배우자와 주소・생계를 같이 하는 직계존속은 부양가족에 포함 3. 부양가족의 범위 1. 배우자 2. 본인 및 배우자의 60세(여자인 경우는 55세)이상의 직계존속 및 60세 미만의 직계존속 중 장애의 정도가 심한 자(계부 및 계모 포함) ▸여기서 직계존속은 조부모(외조부모 포함) 및 부모(양부모 포함)를 말한다 3. 본인 및 배우자의 19세 미만의 직계비속 및 19세 이상의 직계비속 중 장애의 정도가 심한 자 ▸여기서 직계비속은 자(子)및 손(孫, 외손포함)을 말한다. 4. 본인 및 배우자의 형제자매 중 장애의 정도가 심한 자와 본인 및 배우자의 부모가 사망하거나 장애의 정도가 심한 자인 경우 본인 및 배우자의 19세 미만의 형제자매 ※ 3, 4항의 20세 미만 → 19세 미만으로 변경(2018.1.1.부터 적용) 4. 지급액: 배우자 월40,000원, 부양가족 1인당 월20,000원 (부양가족의 수는 배우자 포함 4인 이내) ▸단, 자녀의 경우, 부양가족의 수가 4인 초과시에도 가족수당을 지급할 수 있으며 첫째 자녀 50,000원, 둘째 자녀 80,000원, 셋째 이후 자녀 120,000원 지급 (2025.1.1.부터 적용, 가족관계증명서 등 확인) 5. 부양가족의 신고 ▸부양가족이 있을 경우 부양가족신고서[서식1]를 소속기관장에게 제출 ▸부양가족에 변동이 있을 경우에는 부양가족신고서에 변동사항을 기재하여 신고 ▸‘장애의 정도가 심한 사람’은 공무원수당 등에 관한 규정 제10조제3항에 해당하는 자로서 의사의 진단서 또는 장애인등록증 사본 제출 ▸부양가족 중 배우자가 공무원, 국고 및 지방비에서 인건비가 보조되는 기관에서 근무하는 경우 부양가족신고서의 직업란에 이를 기재하고, 특기사항란에 해당가족의 소속기관, 연락처 및 해당기관에서 가족수당 지급여부 등을 기재하여야 함 ▸보수지급 기관에서는 주민등록시스템과 급여시스템 연계를 통한 부양가족 변동사항을 확인하고 가족수당을 지급받는 소속 공무원의 부양가족 변동 사항을 주기적으로 보수지급 전에 주민등록정보를 활용하여 확인할 수 있음",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "가계보전수당가족수당(공무원수당등에관한규정제1"
+  },
+  {
+    "id": "c07-w01-b15~6",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 가계보전수당 가족수당 (공무원 수당등에관한규정제10조)",
+    "description": "구 분 지 급 요 령 가 계 보 전 수 당 가족수당 (공무원 수당등에관한규정제10조) 6. 지급 시 유의사항 ▸부부공무원(인건비가 국고 또는 지방비에서 보조되는 기관에서 근무하는 자 포함)일 경우 그 중 1인에게만 지급하며, 부양가족신고서에 상대방의 동의서를 첨부하여 제출 ▸가족수당은 그 지급 사유가 발생한 날이 속하는 달부터 지급하므로 공무원 본인이 부양가족 신고를 하지 않아 가족수당을 지급받지 못한 경우에도 그 후 부양가족을 신고하면 지급 사유가 발생한 날이…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n구 분 지 급 요 령\n가 계 보 전 수 당 가족수당 (공무원 수당등에관한규정제10조) 6. 지급 시 유의사항 ▸부부공무원(인건비가 국고 또는 지방비에서 보조되는 기관에서 근무하는 자 포함)일 경우 그 중 1인에게만 지급하며, 부양가족신고서에 상대방의 동의서를 첨부하여 제출 ▸가족수당은 그 지급 사유가 발생한 날이 속하는 달부터 지급하므로 공무원 본인이 부양가족 신고를 하지 않아 가족수당을 지급받지 못한 경우에도 그 후 부양가족을 신고하면 지급 사유가 발생한 날이 속하는 달까지 소급 지급이 가능하나, 민법 제163조제1호의 규정에 따라 신고한 날로부터 3년까지 소급하여 지급받을 수 있음(과다 지급된 보수는 국가재정법 제96조 금전채권과 채무의 소멸시효에 따라 5년까지 환수)",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "가계보전수당가족수당(공무원수당등에관한규정제1"
+  },
+  {
+    "id": "c07-w01-b15~7",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 육아 휴직수당 (공무원 수당등에 관한규정제11조의3)",
+    "description": "육아 휴직수당 (공무원 수당등에 관한규정제11조의3) 1. 지급대상: 국가공무원법 제71조제2항제4호 사유［만8세 이하(취학중인 경우 초등학교 2학년 이하)의 자녀를 양육하기 위하여 필요하거나, 임신 또는 출산하게 된 때로 30일 이상 휴직한 남·녀 공무원] 2. 지급기간: 휴직일 또는 지정일부터 최초 1년 이내이나 다음의 어느 하나에 해당하는 공무원의 경우 지급기간은 휴직일 또는 지정일로부터 최초 18개월 이내로 한다. 가) 같은 자녀를 대상으로 부모가 모두…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n육아 휴직수당 (공무원 수당등에 관한규정제11조의3) 1. 지급대상: 국가공무원법 제71조제2항제4호 사유［만8세 이하(취학중인 경우 초등학교 2학년 이하)의 자녀를 양육하기 위하여 필요하거나, 임신 또는 출산하게 된 때로 30일 이상 휴직한 남·녀 공무원] 2. 지급기간: 휴직일 또는 지정일부터 최초 1년 이내이나 다음의 어느 하나에 해당하는 공무원의 경우 지급기간은 휴직일 또는 지정일로부터 최초 18개월 이내로 한다. 가) 같은 자녀를 대상으로 부모가 모두 육아휴직을 각각 3개월 이상 사용한 경우의 부 또는 모 ※ 증빙 방법 - 배우자가 공무원인 경우: (육아)휴직증명서, 인사발령(휴직)통지서 등 공문 - 배우자가 공무원이 아닌 경우: ｢남녀고용평등과 일ㆍ가정 양립 지원에 관한 법률｣에 따른 육아휴직에 대하여 사업장에서 발행한 육아휴직확인서 또는 관할 고용복지센터에서 발급한 육아휴직을 입증하는 서류 등을 소속기관장에게 제출하여 신청(육아휴직 기간 및 대상 자녀가 기재된 것이어야 함) 나) ｢한부모가족지원법｣ 제4조제1호의 부 또는 모 다) 인사혁신처장이 정하는 장애가 있는 자녀의 부 또는 모 3 총 지급액(‘25.1.1.부터 적용) 기 간 / 지급액 육아휴직 시작일 ~ 3개월 / 육아휴직 시작일을 기준으로 한 월 봉급액 (상한액 250만원) 육아휴직 4개월 ~ 6개월 / 육아휴직 시작일을 기준으로 한 월 봉급액 (상한액 200만원) 육아휴직 7개월째 이후 / 육아휴직 시작일을 기준으로 한 월 봉급액의 80퍼센트 (상한액 160만원, 하한액 70만원) 4. 같은 자녀에 대하여 부모가 순차적으로 육아휴직을 하여 두 번째 육아휴직을 한 사람이 공무원인 경우(‘25.1.1.부터 적용) 기 간 / 지급액 육아휴직 시작일 ~ 6개월 / 육아휴직 시작일을 기준으로 한 월 봉급액 ·2개월째까지 상한액: 250만원 / ·3개월째 상한액: 300만원 ·4개월째 상한액: 350만원 / ·5개월째 상한액: 400만원 ·6개월째 상한액: 450만원 육아휴직 7개월째 이후 / 육아휴직 시작일을 기준으로 한 월 봉급액의 80퍼센트 (상한액 160만원) 5. 「한부모가족지원법」제4조제1호의 모 또는 부에 해당하는 공무원(2025.1.1.) 기 간 / 지급액 육아휴직 시작일 ~ 3개월 / 육아휴직 시작일을 기준으로 한 월 봉급액(상한액 300만원) 육아휴직 4개월 ~ 6개월 / 육아휴직 시작일을 기준으로 한 월 봉급액(상한액 200만원) 육아휴직 7개월째 이후 / 육아휴직 시작일을 기준으로 한 월 봉급액의 80퍼센트(상한액 160만원)",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "육아휴직수당(공무원수당등에관한규정제11조의3"
+  },
+  {
+    "id": "c07-w01-b15~8",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 특수지근무수당 특수지근무수당[도서벽지수당] (공무원수당등에관한규정제12조)",
+    "description": "구 분 지 급 요 령 특 수 지 근 무 수 당 특수지근무수당[도서벽지수당] (공무원수당등에관한규정제12조) 1. 지급대상: 교통이 불편하고 문화·교육시설이 거의 없는 지역이나 근무환경이 특수한 기관에 근무하는 공무원 2. 지급액 급지별 / 가지역 / 나지역 / 다지역 / 라지역 지급액 / 60,000원 / 50,000원 / 40,000원 / 30,000원 ▸지급대상 지역 및 기관의 등급별 구분은 동 규정 별표 7의2의 특수지근무수당(도서벽지수당) 지급대상 지역등…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n구 분 지 급 요 령\n특 수 지 근 무 수 당 특수지근무수당[도서벽지수당] (공무원수당등에관한규정제12조) 1. 지급대상: 교통이 불편하고 문화·교육시설이 거의 없는 지역이나 근무환경이 특수한 기관에 근무하는 공무원 2. 지급액 급지별 / 가지역 / 나지역 / 다지역 / 라지역 지급액 / 60,000원 / 50,000원 / 40,000원 / 30,000원 ▸지급대상 지역 및 기관의 등급별 구분은 동 규정 별표 7의2의 특수지근무수당(도서벽지수당) 지급대상 지역등급 구분기준표에 의함 ▸전북특별자치도교육청 특수지근무수당 지급대상 지역 및 기관과 그 등급별 구분에 관한 조례(현황: 2025.3.1.기준) 도서 [을지(다)지역] 위도초·중·고 벽지 [을지(다)지역] 무녀도초, 선유도중, 동상초 [병지(라)지역] 수곡초, 전북특별자치도교육청학생수련원, 송풍초, 용담중, 괴목초, 구천초, 부남초, 부남중, 부당초, 번암초동화분교, 동산초, 시산초, 가평초",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "특수지근무수당특수지근무수당[도서벽지수당](공"
+  },
+  {
+    "id": "c07-w01-b15~9",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 특수근무수당 위험근무수당(같은규정 제13조)",
+    "description": "특 수 근 무 수 당 위험근무수당(같은규정 제13조) 1. 지급대상: 위험한 직무에 종사하는 공무원 2. 지급액: 동 규정 별표8의 위험근무수당 지급구분표 및 별표9의 위험근무수당 등급별 구분표에 의함(갑종 60,000원, 을종 50,000원, 병종 40,000원) 3. 예시: 학교 식생활관 실제 조리 업무 종사자 수당(월 5만원), 방학 중 지급 제외 업무대행수당(같은규정 제14조의2) 1. 지급대상: 병가, 출산휴가, 유산휴가, 사산휴가, 공무상 질병휴직 또…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n특 수 근 무 수 당 위험근무수당(같은규정 제13조) 1. 지급대상: 위험한 직무에 종사하는 공무원 2. 지급액: 동 규정 별표8의 위험근무수당 지급구분표 및 별표9의 위험근무수당 등급별 구분표에 의함(갑종 60,000원, 을종 50,000원, 병종 40,000원) 3. 예시: 학교 식생활관 실제 조리 업무 종사자 수당(월 5만원), 방학 중 지급 제외\n업무대행수당(같은규정 제14조의2) 1. 지급대상: 병가, 출산휴가, 유산휴가, 사산휴가, 공무상 질병휴직 또는 육아휴직 중인 공무원의 업무를 대행하는 공무원 (병가, 유산휴가, 사산휴가의 경우에 30일 이상 병가 또는 휴가를 사용하는 공무원, 공무상 질병휴직의 경우에 6개월 미만 휴직하는 공무원으로 한정) 2. 지급액: 200,000원 ※ 같은 업무를 대행하는 공무원이 여러 명일 경우 1 / n로 지급",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "특수근무수당위험근무수당(같은규정제13조)1."
+  },
+  {
+    "id": "c07-w01-b15~10",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 기술정보수당(지방공무원수당등에관한규정제14조 및 별표9 제1호가목)",
+    "description": "기술정보수당(지방공무원수당등에관한규정제14조 및 별표9 제1호가목) 1. 지급대상 ▸기술직군의 각 직렬의 공무원 및 행정직군 전산직렬 공무원(지방공무원임용령 별표1) ▸｢위험물안전관리법｣에 따라 위험물안전관리자로 선임된 사람 및 ｢도시가스사업법｣에 따라 안전관리자로 선임된 사람 2. 지급액 지급대상 / 월지급액 / 가산금(가, 나는 병급 가능) 5급 이상 / 50,000원이하 / 가. 기술정보 당 지급대상자 중 국가기술자격법에 의한 기술 기능분야 자격증 소지자…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n기술정보수당(지방공무원수당등에관한규정제14조 및 별표9 제1호가목) 1. 지급대상 ▸기술직군의 각 직렬의 공무원 및 행정직군 전산직렬 공무원(지방공무원임용령 별표1) ▸｢위험물안전관리법｣에 따라 위험물안전관리자로 선임된 사람 및 ｢도시가스사업법｣에 따라 안전관리자로 선임된 사람 2. 지급액 지급대상 / 월지급액 / 가산금(가, 나는 병급 가능) 5급 이상 / 50,000원이하 / 가. 기술정보 당 지급대상자 중 국가기술자격법에 의한 기술 기능분야 자격증 소지자 가산금 지급 - 기술사: 월 50,000원 이하 - 기능장․기사: 월 30,000원 이하 - 산업기사: 월 20,000원 이하 나. 지방공무원임용령 별표1 기술직군 운전직렬 - 7급 이상: 월 10,000원 이하 - 8급 이하: 월 20,000원 이하 6급, 7급 / 30,000원이하 8급 이하 / 20,000원이하\n구 분 지 급 요 령",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "기술정보수당(지방공무원수당등에관한규정제14조"
+  },
+  {
+    "id": "c07-w01-b15~11",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 특수근무수당 연구업무수당(지방공무원수당등에 관한규정 제14조) 대상자 / 장학관・ 교육",
+    "description": "특 수 근 무 수 당 연구업무수당(지방공무원수당등에 관한규정 제14조) 대상자 / 장학관・ 교육연구관 / 장학사・ 교육연구사 / 대상자 / 연구직 공무원 / 교육연수기관・공무원교육훈련기관 원장 / 부장 / 장학관(사), 교육연구관(사) 지급액 / 22,000원 / 17,000원 / 지급액 / 80,000원 / 110,000원 / 100,000원 / 80,000원 장학관・교육연구관으로서 4급상당에게는 지급하지 않음 / 가산금: 3급상당 연구관 월 60,000원 라…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n특 수 근 무 수 당 연구업무수당(지방공무원수당등에 관한규정 제14조) 대상자 / 장학관・ 교육연구관 / 장학사・ 교육연구사 / 대상자 / 연구직 공무원 / 교육연수기관・공무원교육훈련기관 원장 / 부장 / 장학관(사), 교육연구관(사) 지급액 / 22,000원 / 17,000원 / 지급액 / 80,000원 / 110,000원 / 100,000원 / 80,000원 장학관・교육연구관으로서 4급상당에게는 지급하지 않음 / 가산금: 3급상당 연구관 월 60,000원 라목 / 가목 / 다목 ※ 라목과 다목은 병급 가능\n교원등에관한 보전수당 (공무원수당등에관한 규정 별표11) 1. 학교교원에 대한 지급구분표(별표11 제2호 나목): 삭제(개정 2021.1.5.) 구 분 / 유치원·초등학교·중학교 교원 / 고등학교(도서벽지) / 고등학교(그 외 지역) 년 수 / 2015. 폐지 / 5년 미만 / 5년 미만 지급액 / 18,000원(삭제) / 15,000원(삭제) 2. 교장, 교감 및 전문직에 대한 지급구분표 구 분 / 교장, 원장, 장학관, 교육연구관(1, 2, 3급 상당) / 교감, 원감, 장학관, 교육연구관(4, 5급 상당) 지급액 / 70,000원 / 10,000원",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "특수근무수당연구업무수당(지방공무원수당등에관한"
+  },
+  {
+    "id": "c07-w01-b15~12",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 교직수당 (별표11 제2호 다목)",
+    "description": "교직수당 (별표11 제2호 다목) 1. 지급대상: 교육장, 장학관(사), 교육연구관(사)과 교장・원장・교감・원감・수석교사・교사 2. 지급액: 월 250,000원 ※ 다음 가산금 지급대상에 해당하는 교원에게는 가산금을 지급하되, 둘 이상일 경우 해당 가산금을 함께 지급 교직가산1 (원로교사) 1. 지급대상: 고등학교 이하 각급학교에서 근무하는 교원 중 매달 1일 현재 기준 교육경력 30년 이상(유아교육법 제20조제1항, 초・중등교육법 제19조제1항, 장애인 등에…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n교직수당 (별표11 제2호 다목) 1. 지급대상: 교육장, 장학관(사), 교육연구관(사)과 교장・원장・교감・원감・수석교사・교사 2. 지급액: 월 250,000원 ※ 다음 가산금 지급대상에 해당하는 교원에게는 가산금을 지급하되, 둘 이상일 경우 해당 가산금을 함께 지급\n교직가산1 (원로교사) 1. 지급대상: 고등학교 이하 각급학교에서 근무하는 교원 중 매달 1일 현재 기준 교육경력 30년 이상(유아교육법 제20조제1항, 초・중등교육법 제19조제1항, 장애인 등에 대한 특수교육법 제25조제1항, 고등교육법 제14조제1항부터 제4항까지) 55세 이상인 교사(‘21.1.5.부터 일부개정) 2. 지급액: 월 50,000원\n교직가산2 (보직교사) 1. 지급대상: 고등학교 이하 각급학교에 근무하는 보직교사 2. 지급액: 월 150,000원(‘24.1.1.부터 적용)",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "교직수당(별표11제2호다목)1.지급대상:교육"
+  },
+  {
+    "id": "c07-w01-b15~13",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 교직가산3 (특수학교, 특수학급 국악학교 안전지도)",
+    "description": "교직가산3 (특수학교, 특수학급 국악학교 안전지도) 1. 지급대상: 고등학교 이하 공립의 특수학교에 근무하는 교원 및 특수학급을 담당하는 교원, 국악고등학교에 근무하는 교원, 고등학교부설 방송통신고등학교의 겸직 교원 2. 지급액: 월 50,000원(국악고등학교 근무 교원, 고교부설 방송통신고 겸직 교원) 월 120,000원(공립 특수학교 근무 교원 및 특수학급 담당 교원, ‘24.1.1.부터 적용) 월 30,000원(유치원, 초등학교, 특수학급 등·하교 통학버스…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n교직가산3 (특수학교, 특수학급 국악학교 안전지도) 1. 지급대상: 고등학교 이하 공립의 특수학교에 근무하는 교원 및 특수학급을 담당하는 교원, 국악고등학교에 근무하는 교원, 고등학교부설 방송통신고등학교의 겸직 교원 2. 지급액: 월 50,000원(국악고등학교 근무 교원, 고교부설 방송통신고 겸직 교원) 월 120,000원(공립 특수학교 근무 교원 및 특수학급 담당 교원, ‘24.1.1.부터 적용) 월 30,000원(유치원, 초등학교, 특수학급 등·하교 통학버스에 월 10회 이상 동승하여 안전을 지도하는 교원, 운전만을 하는 사람은 제외)\n구 분 지 급 요 령\n특 수 업 무 수 당 교직가산4 (학급담당) 1. 지급대상: 고등학교 이하 각급학교에 근무하는 교원 중 학급담당교원 2. 지급액: 월 200,000원(‘24.1.1.부터 적용)",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "교직가산3(특수학교,특수학급국악학교안전지도)"
+  },
+  {
+    "id": "c07-w01-b15~14",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 교직가산5 (실과담당)",
+    "description": "교직가산5 (실과담당) 1. 지급대상: 농업·수산·해운 또는 공업계 학과가 설치되어 있는 고등학교의 교장·교감과 다음의 표시과목에 해당하는 교원자격증을 가지고 해당 교과목을 담당하는 실과 담당교원 2. 지급액 호봉별 / 31~40 / 22~30 / 14~21 / 9~13 / 5~8 / 1~4 / 가산금 지급액 / 50,000원 / 45,000원 / 40,000원 / 35,000원 / 30,000원 / 25,000원 / 단, 기계공고, 전자공고 교장,교감,기계과목…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n교직가산5 (실과담당) 1. 지급대상: 농업·수산·해운 또는 공업계 학과가 설치되어 있는 고등학교의 교장·교감과 다음의 표시과목에 해당하는 교원자격증을 가지고 해당 교과목을 담당하는 실과 담당교원 2. 지급액 호봉별 / 31~40 / 22~30 / 14~21 / 9~13 / 5~8 / 1~4 / 가산금 지급액 / 50,000원 / 45,000원 / 40,000원 / 35,000원 / 30,000원 / 25,000원 / 단, 기계공고, 전자공고 교장,교감,기계과목,전자통신,전기과목 교사 월 10,000원 가산\n교직가산6 (보건) 1. 지급대상: 고등학교 이하 각급학교에 근무하는 보건교사 2. 지급액: 월 40,000원\n교직가산7 (통합학교겸임) 1. 지급대상: 초등학교 병설유치원의 원장과 원감을 겸임하는 초등학교 교장・교감, 통합・운영학교의 교장,교감으로서 초등학교, 중학교 또는 고등학교 중 둘 이상의 학교의 장을 겸임하는 교원(교감 2017.1.1.신설) 2. 지급액: 겸임교장 월 100,000원, 겸임교감 월 50,000원",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "교직가산5(실과담당)1.지급대상:농업·수산·"
+  },
+  {
+    "id": "c07-w01-b15~15",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 교직가산8 (영양교사)",
+    "description": "교직가산8 (영양교사) 1. 지급대상: 고등학교 이하 각급학교에서 근무하는 영양교사 2. 지급액: 월 40,000원 ▸교육경력외 고등학교 이하 각급학교에서 「학교급식법」(법률 제6935호로 개정되기 전) 제7조제1항에 따라 학교급식시설에 배치된 학교급식 전담직원으로서 일반직공무원으로 근무한 경력을 포함, 총 경력 30년 이상이면서 55세 이상인 영양교사는 월 50,000원 가산함 다만, 교직가산1 지급요건을 충족하는 경우 교직가산1만 지급(2020.1.1.부터…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n교직가산8 (영양교사) 1. 지급대상: 고등학교 이하 각급학교에서 근무하는 영양교사 2. 지급액: 월 40,000원 ▸교육경력외 고등학교 이하 각급학교에서 「학교급식법」(법률 제6935호로 개정되기 전) 제7조제1항에 따라 학교급식시설에 배치된 학교급식 전담직원으로서 일반직공무원으로 근무한 경력을 포함, 총 경력 30년 이상이면서 55세 이상인 영양교사는 월 50,000원 가산함 다만, 교직가산1 지급요건을 충족하는 경우 교직가산1만 지급(2020.1.1.부터 적용)\n교직가산9 (사서교사) 1. 지급대상: 고등학교 이하 각급학교에서 근무하는 사서교사 2. 지급액: 월 30,000원(2017.1.1.신설)\n교직가산10 (상담교사) 1. 지급대상: 전문상담교사 및 전문상담순회교사 2. 지급액: 월 30,000원(2018.1.1.신설)\n학교운영수당 (일반직) 1. 지급대상: 공립학교에 근무하는 6급 이하 일반직공무원 (고등학교 등으로 확대, 2021.3.1.부터 적용) 2. 지급액: 월 30,000원(2018.1.1.신설)",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "교직가산8(영양교사)1.지급대상:고등학교이하"
+  },
+  {
+    "id": "c07-w01-b15~16",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 겸임수당 (전북특별자치도 교육감소속지방공무원보직관리규정 제4조의2)",
+    "description": "겸임수당 (전북특별자치도 교육감소속지방공무원보직관리규정 제4조의2) 1. 지급대상: 병설·부설·통합 운영학교 행정실에 보직된 지방공무원 2. 지급액: 월 50,000원(2019.4.18.신설) 겸임 발령을 받은 지방공무원을 대상으로 매월 인건비에 포함하여 지급 구 분 지 급 요 령 특 수 업 무 수 당 특수직무1 (민원)수당 (별표11조 제3호 바목) 1. 지급대상: 각급 행정기관에 설치된 민원실에서 민원창구를 담당하며 상시로 직접 민원서류를 취급하는 공무원 2…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n겸임수당 (전북특별자치도 교육감소속지방공무원보직관리규정 제4조의2) 1. 지급대상: 병설·부설·통합 운영학교 행정실에 보직된 지방공무원 2. 지급액: 월 50,000원(2019.4.18.신설) 겸임 발령을 받은 지방공무원을 대상으로 매월 인건비에 포함하여 지급\n구 분 지 급 요 령\n특 수 업 무 수 당 특수직무1 (민원)수당 (별표11조 제3호 바목) 1. 지급대상: 각급 행정기관에 설치된 민원실에서 민원창구를 담당하며 상시로 직접 민원서류를 취급하는 공무원 2. 지급액: 월 50,000원 이하(3만원에서 2만원 인상, 2017.1.1.부터 적용)\n특수직무2 (사서)수당 1. 지급대상: 사서직공무원 2. 지급액: 5급 이상(월 40,000원 이하), 6급 이하(월 30,000원 이하)",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "겸임수당(전북특별자치도교육감소속지방공무원보직"
+  },
+  {
+    "id": "c07-w01-b15~17",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 중요직무급 (공무원수당등에관한규정제14조 별표11 제3호 사목)",
+    "description": "중요직무급 (공무원수당등에관한규정제14조 별표11 제3호 사목) 1. 지급대상: 중요직무 선정 결과에 따른 대상자 2. 지급액 지급대상 / 월 지급 상한액 / 비고 교육공무원 / 100,000 / 교육공무원 중요직무급 운영계획 참고 고위공무원단에 속하는 공무원 / 300,000 3급(상당) 또는 4급(상당) 공무원(과장급) / 200,000 4급(상당) 또는 5급(상당) 공무원 / 150,000 6급(상당)이하 공무원 / 100,000",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n중요직무급 (공무원수당등에관한규정제14조 별표11 제3호 사목) 1. 지급대상: 중요직무 선정 결과에 따른 대상자 2. 지급액 지급대상 / 월 지급 상한액 / 비고 교육공무원 / 100,000 / 교육공무원 중요직무급 운영계획 참고 고위공무원단에 속하는 공무원 / 300,000 3급(상당) 또는 4급(상당) 공무원(과장급) / 200,000 4급(상당) 또는 5급(상당) 공무원 / 150,000 6급(상당)이하 공무원 / 100,000",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "중요직무급(공무원수당등에관한규정제14조별표1"
+  },
+  {
+    "id": "c07-w01-b15~18",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 교원연구비 교원연구비 (교원연구비 지급에 관한 규정 별표1)",
+    "description": "교원연구비 교원연구비 (교원연구비 지급에 관한 규정 별표1) 1. 지급대상: 공립 유, 공·사립 초,중,고・특수학교 교원 특수교육지원센터 배치된 순회교사(「장애인 등에 대한 특수교육법」 제11조 및 제25조제1항) 교육행정기관 배치된 전문상담순회교사(「초·중등교육법 시행령」 제40조의2) 교육행정기관 배치된 순회교사(「교육공무원법」 제22조의2) 2. 지급액 구 분 / 유․초등 교원 / 중등교원 / 비고 교 장 / 75,000 / 60,000 교 감 / 65,0…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n교원연구비 교원연구비 (교원연구비 지급에 관한 규정 별표1) 1. 지급대상: 공립 유, 공·사립 초,중,고・특수학교 교원 특수교육지원센터 배치된 순회교사(「장애인 등에 대한 특수교육법」 제11조 및 제25조제1항) 교육행정기관 배치된 전문상담순회교사(「초·중등교육법 시행령」 제40조의2) 교육행정기관 배치된 순회교사(「교육공무원법」 제22조의2) 2. 지급액 구 분 / 유․초등 교원 / 중등교원 / 비고 교 장 / 75,000 / 60,000 교 감 / 65,000 / 60,000 수석교사 / 60,000 / 60,000 / 2023.3.1.부터 적용 보직교사 / 60,000 / 60,000 교사 / 5년 이상 / 60,000 / 60,000 5년 미만 / 75,000 / 75,000(78,000)* / *도서벽지 근무 교원 3천원 가산 ※ 교원연구비 지급시 유의사항(2020학년도 학교회계 예산편성 및 운영지침) 정직·직위해제·휴직 또는 파견으로 당해 학교에 근무하지 아니한 월의 교원연구비는 지급하지 아니함. 다만, 유·초·중·특수학교 이외의 기관으로 파견 시 학교와 동일하게 학생을 지도하는 경우에는 지급 가능",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "교원연구비교원연구비(교원연구비지급에관한규정별"
+  },
+  {
+    "id": "c07-w01-b15~19",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 초과근무수당등 시간외근무수당 (공무원수당등에관한 규정제15조)",
+    "description": "초 과 근 무 수 당 등 시간외근무수당 (공무원수당등에관한 규정제15조) 1. 지급대상: 근무명령에 따라 규정된 근무시간 외에 근무한 경우 2. 지급시기: 초과근무를 한 다음 달의 보수지급일(단, 12월분은 12월 31일 이전 지급) 3. 지급시간: 1일 4시간, 월 57시간 이내 (현업공무원의 경우 정액분 미지급 및 1일 4시간, 월 57시간 이내의 한도 미적용) 구 분 지 급 요 령 초 과 근 무 수 당 등 시간외근무수당 (공무원수당등에관한 규정제15조) 4…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n초 과 근 무 수 당 등 시간외근무수당 (공무원수당등에관한 규정제15조) 1. 지급대상: 근무명령에 따라 규정된 근무시간 외에 근무한 경우 2. 지급시기: 초과근무를 한 다음 달의 보수지급일(단, 12월분은 12월 31일 이전 지급) 3. 지급시간: 1일 4시간, 월 57시간 이내 (현업공무원의 경우 정액분 미지급 및 1일 4시간, 월 57시간 이내의 한도 미적용)\n구 분 지 급 요 령\n초 과 근 무 수 당 등 시간외근무수당 (공무원수당등에관한 규정제15조) 4. 지급시간 수 계산방법 구 분 / 1일 지급시간 계산 정규 근무시간 이후 시간외근무 / ▸1시간 미만: 미지급 ▸1시간 이상 5시간미만: 1시간 공제한 후 4시간 이내에서 매 분 단위로 합산 ▸5시간 이상: 4시간만 인정 정규 근무시간 이전 1시간 이상 시간외근무 / ▸1시간 이상 조기 출근한 시간외근무에 한하여 당일 정규퇴근 시간 이후의 시간외근무시간과 합산하여 1시간을 공제 후 매 분 단위까지 합산 휴무토요일 및 휴일근무 / ▸1시간 미만: 미지급 ▸1시간 이상 4시간 미만: 공제없이 매 분 단위까지 합산 ▸4시간 이상: 4시간만 인정",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "초과근무수당등시간외근무수당(공무원수당등에관한"
+  },
+  {
+    "id": "c07-w01-b15~20",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 5. 일반대상자의 시간외근무수당 정액분 지급 구 분 / 내 용 정액분 기준 / ◦근무일",
+    "description": "5. 일반대상자의 시간외근무수당 정액분 지급 구 분 / 내 용 정액분 기준 / ◦근무일 기준으로 정직・직위해제・휴직・연가・병가・공가・특별휴가・방학・결근 및 외출 등을 제외한 월간 출근(또는 출장) 근무 일수가 15일 이상인 자에 대해 별도의 초과근무명령이나 승인 없이 월 10시간분의 시간외수당을 정액분으로 지급 ◦실제 출근일수가 월15일 미만인 경우에는 매 1일마다 15분의 1에 해당하는 금액을 감액 지급 육아시간 사용 대상자 / ◦일반대상자의 경우 육아시간을…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n5. 일반대상자의 시간외근무수당 정액분 지급 구 분 / 내 용 정액분 기준 / ◦근무일 기준으로 정직・직위해제・휴직・연가・병가・공가・특별휴가・방학・결근 및 외출 등을 제외한 월간 출근(또는 출장) 근무 일수가 15일 이상인 자에 대해 별도의 초과근무명령이나 승인 없이 월 10시간분의 시간외수당을 정액분으로 지급 ◦실제 출근일수가 월15일 미만인 경우에는 매 1일마다 15분의 1에 해당하는 금액을 감액 지급 육아시간 사용 대상자 / ◦일반대상자의 경우 육아시간을 2시간 또는 모성보호시간 2시간을 사용하더라도 나머지 시간을 모두 근무하였다면 정액분 지급에 영향을 미치지 않음 방학 중 / ◦방학은 월간 출근(또는 출장) 근무일수에서 제외되나, 방학기간 중 학교장의 근무명령에 의해 특별히 출근하여 「국가공무원 복무규정」에서 정한 근무시간 이상 근무하는 경우에는 정규근무일로 간주하여 월간 출근(출장) 근무 6. 지급제외 대상자 ▸초과근무에 대하여 다른 방법으로 금전적 보상을 하는 경우 (예: 시험감독 근무, 보충수업지도) ▸재외근무공무원 및 국외파견공무원(공무원수당 등에 관한 규정 제4조) ▸당직명령에 의한 당직근무자(재택당직자 포함) ▸1월 이상 파견공무원 ▸자연보호, 농촌일손돕기, 국경일 및 각종기념일 행사지원으로 인한 초과근무자, 을지연습 기간 중의 초과근무자 및 비상소집 등 동원에 따른 초과근무자 7. 초과근무 및 수당지급 절차 ▸[나이스] 복무 → 초과근무 → 초과근무확인에서 초과근무명령서 및 초과근무확인대장을 대조하여 초과근무시간 확인 입력 → 초과근무월별집계에서 월별 시간외근무 생성 ▸급여담당자: 복무 작업 후 기초자료 생성하면 시간외근무내역 반영 8. 시간외근무수당 단가표 ▸[나이스] 공무원급여 → 기준관리 → 급여기준관리 → 초과근무수당단가표 9. 초과근무 확인서 출력 ▸[나이스] 복무 → 초과근무월별집계 → 조회 → 근무일수계산 → 출력(결재 후 보관)",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "5.일반대상자의시간외근무수당정액분지급구분/내"
+  },
+  {
+    "id": "c07-w01-b15~21",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 초과근무수당등 시간외근무수당 (공무원수당등에관한 규정제15조)",
+    "description": "구 분 지 급 요 령 초 과 근 무 수 당 등 시간외근무수당 (공무원수당등에관한 규정제15조) 10. 공무원 출장기간 중 초과근무수당 ▸관련공문 - 공무원의 출장기간 중 초과근무 운영 관련 안내(총무과-18562, 2015.12.8.) - 공무원 출장기간 중 초과근무수당 처리지침 안내(총무과-11147, 2017.7.26.) ▸공무원의 출장기간 중 초과근무는 원칙적으로 인정되지 않으나 아래의 경우에 한해시간외근무수당 지급이 가능함 ① 출장의 목적상 필연적으로 시…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n구 분 지 급 요 령\n초 과 근 무 수 당 등 시간외근무수당 (공무원수당등에관한 규정제15조) 10. 공무원 출장기간 중 초과근무수당 ▸관련공문 - 공무원의 출장기간 중 초과근무 운영 관련 안내(총무과-18562, 2015.12.8.) - 공무원 출장기간 중 초과근무수당 처리지침 안내(총무과-11147, 2017.7.26.) ▸공무원의 출장기간 중 초과근무는 원칙적으로 인정되지 않으나 아래의 경우에 한해시간외근무수당 지급이 가능함 ① 출장의 목적상 필연적으로 시간외근무의 발생이 예상되는 경우 ② 학교장 판단 하에 교육과정 운영상 필요하다고 인정될 때 ② 시간외근무 명령에 따라 출장 중 또는 출장 후 「공무원 복무 규정」 상의 근무시간 외에 근무를 하고 ③ 초과근무한 시간에 대하여 명백히 인정할 수 있는 객관적인 증빙자료가 있는 경우 ▸출장 중 초과근무 인정 예시 ① 교육과정과 연계된 현장체험학습, 수학여행, 휴일 중 행사 등의 교육활동을 실시하는 경우 교원 본연의 업무가 포함된 사전계획서에 따라 국내출장과 초과근무명령이 적법한 절차에 의해 승인되어 교육활동을 수행한 경우 출장 중 시간외근무수당 지급 가능(국외출장 제외) ② 수련활동과 이를 위해 평일 근무시간 이후 또는 휴무 토요일·공휴일에 실시하는 사전 답사 ③ 평일 근무시간 이후 또는 휴무 토요일·공휴일에 대회에 참가하는 학생 인솔 등 ④ 교육지원청 예산업무 담당자가 도교육청에서 예산편성 합동작업을 하는 경우 출장 중 시간외근무수당 지급 가능 ※인정 불가한 예: 교직원체육대회, 교직원 연수, 문화공연, 전국대회 참관 등",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "초과근무수당등시간외근무수당(공무원수당등에관한"
+  },
+  {
+    "id": "c07-w01-b15~22",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 실비변상등 정액급식비 (같은규정 제18조)",
+    "description": "실 비 변 상 등 정액급식비 (같은규정 제18조) 1. 지급대상: 모든 공무원 2. 지급액: 월 140,000원(개정 2020.1.7.) 명절휴가비 (같은규정 제18조의3) 1. 지급대상: 설날 및 추석날 현재 재직 중인 공무원 2. 지급기준일・지급액・지급시기 지급기준일 / 지 급 액 / 지급시기 설 날 추석날 / 지급기준일 현재의 월봉급액×60% / 보수지급일 또는 지급기준일 전후 15일 이내에 각 기관장이 정하는 날 ※ 월중 인사 발령 시 지급방법: 월중 인…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n실 비 변 상 등 정액급식비 (같은규정 제18조) 1. 지급대상: 모든 공무원 2. 지급액: 월 140,000원(개정 2020.1.7.)\n명절휴가비 (같은규정 제18조의3) 1. 지급대상: 설날 및 추석날 현재 재직 중인 공무원 2. 지급기준일・지급액・지급시기 지급기준일 / 지 급 액 / 지급시기 설 날 추석날 / 지급기준일 현재의 월봉급액×60% / 보수지급일 또는 지급기준일 전후 15일 이내에 각 기관장이 정하는 날 ※ 월중 인사 발령 시 지급방법: 월중 인사 발령 시(신규채용, 퇴직, 승진, 승급 등 각종 임용) 지급기준일(설날, 추석날)을 기준으로 결정 ※ 지급기준일 현재 징계처분에 따른 감봉으로 봉급이 감액지급되는 경우에는 감액되기 전 월봉급액을 기준으로 지급\n구 분 지 급 요 령",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "실비변상등정액급식비(같은규정제18조)1.지급"
+  },
+  {
+    "id": "c07-w01-b15~23",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 실비변상등 연가보상비(같은규정제18조의5)",
+    "description": "실 비 변 상 등 연가보상비(같은규정제18조의5) 1. 지급대상: 1급 이하 공무원 (단, 교육공무원은 제외하나, 방학이 없는 기관 근무자는 포함) 2. 지급액 ▸ 6월30일 기준 연가보상비: 6월30일 현재의 월봉급액의 86%×1 / 30×연가보상일수(5일) ▸ 12월31일 기준 연가보상비: (12월31일 현재의 월봉금액의 86%×1 / 30×연가보상일수) - (6월30일 기준 지급 받은 연가보상비) 3. 연도 중 퇴직자에 대한 지급방법 ▸ 6월 말 이전 퇴직…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n실 비 변 상 등 연가보상비(같은규정제18조의5) 1. 지급대상: 1급 이하 공무원 (단, 교육공무원은 제외하나, 방학이 없는 기관 근무자는 포함) 2. 지급액 ▸ 6월30일 기준 연가보상비: 6월30일 현재의 월봉급액의 86%×1 / 30×연가보상일수(5일) ▸ 12월31일 기준 연가보상비: (12월31일 현재의 월봉금액의 86%×1 / 30×연가보상일수) - (6월30일 기준 지급 받은 연가보상비) 3. 연도 중 퇴직자에 대한 지급방법 ▸ 6월 말 이전 퇴직: 퇴직일 전일 현재의 월봉급액×86%×1 / 30×5일 ▸ 7월 이후 12월 말 전 퇴직 - 6월말 보상: 연가잔여일수 10일 이상자에게 5일 보상 - 퇴직일 기준 보상: 퇴직일 전일 현재의 월봉급액×86%×1 / 30×연가보상일수 - [6월 30일 기준 지급한 연가보상비] ▸연가보상일수 = 미사용연가일수×[12월-제외기간(월)] / 12월 ▸미사용연가일수 = 지급기준일 현재「국가공무원복무규정」에 따라 산정된 연가일수 - 사용한 연가일수 ▸연가보상비 지급대상인 연가일수는 지방공무원 복무규정 제7조제4항에 따라 20일 지급 ▸제외기간 = 연도 중 지급대상에서 제외되거나 실제 근무하지 않은 기간 (각 제외기간을 합산하여 15일 이상은 1월로 하고, 연가보상일수 계산 시 절상) ※ 예) 지급대상자인 장학사가 교원으로서 근무한 기간, 퇴직자의 경우 미근무기간, 연도 중 임용자의 경우 미 근무기간, 교육 파견(1개월 이상)기간, 연간통산 병가(공무상병가 제외), 공로퇴직연수 기간, 30일 이상(연속된 경우) 국외출장의 경우 그 출장기간 ※ 특별휴가, 공가, 공무상 질병휴직, 공무상 병가, 사병으로 군입대 시 입대 후의 미근무기간과 복직 시 군인으로 복무했던 기간은 연가보상일수 산정의 제외기간에 포함하지 않음 ▸연가일수에서의 공제: 결근일수・정직일수 및 직위해제일수는 연가일수에서 공제, 법령에 따른 의무수행이나 공무상 질병 또는 부상으로 인해 휴직한 경우를 제외한 휴직의 경우에는 다음 산식에 의하여 산출된 일수를 공제 ⇒ 공제할 연가일수 = 해당년도 휴직기간(개월) / 12(개월) × 해당년도 연가일수 재직기간 / 연가일수 / 재직기간 / 연가일수 1개월 이상 1년 미만 / 11 / 4년 이상 5년 미만 / 17 1년 이상 3년 미만 / 15 / 5년 이상 6년 미만 / 20 3년 이상 4년 미만 / 16 / 6년 이상 / 21",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "실비변상등연가보상비(같은규정제18조의5)1."
+  },
+  {
+    "id": "c07-w01-b15~24",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 실비변상등 연가보상비 (같은규정 제18조의5) 공무원보수등의업무지침",
+    "description": "구 분 지 급 요 령 실 비 변 상 등 연가보상비 (같은규정 제18조의5) 공무원보수등의업무지침 4. 저축연가의 보상방법 ▸보상비 지급이 가능(인사혁신처장이 정하는 사유에 한함)한 저축연가의 보상비는 각 연가의 저축 해당연도 12월 31일 월봉급액을 기준으로 함 ｢지방공무원 복무 규정｣ 제7조의10(연가저축) ①공무원은 연가보상비 지급대상인 연가 일수 및 제4조제4항에 따라 전환된 연가 일수 중 사용하지 않고 남은 연가 일수를 그 해의 마지막 날을 기준으로 이월…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n구 분 지 급 요 령\n실 비 변 상 등 연가보상비 (같은규정 제18조의5) 공무원보수등의업무지침 4. 저축연가의 보상방법 ▸보상비 지급이 가능(인사혁신처장이 정하는 사유에 한함)한 저축연가의 보상비는 각 연가의 저축 해당연도 12월 31일 월봉급액을 기준으로 함 ｢지방공무원 복무 규정｣ 제7조의10(연가저축) ①공무원은 연가보상비 지급대상인 연가 일수 및 제4조제4항에 따라 전환된 연가 일수 중 사용하지 않고 남은 연가 일수를 그 해의 마지막 날을 기준으로 이월ㆍ저축하여 사용할 수 있다. ② 제1항에 따라 이월ㆍ저축한 연가에 대해서는 연가보상비를 지급하지 않는다. 다만, 다음 각 호의 사유에 해당하는 경우에는 연가보상비를 지급한다. 1. 법 제62조제1항제1호에 따라 직권면직된 경우 2. 공무원이 사망한 경우 5. 지급방법 ▸ 지방공무원 복무규정에 따라 산정된 연가일수에서 사용한 일수를 제외한 미사용 연가일수에 대해서만 지급",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "실비변상등연가보상비(같은규정제18조의5)공무"
+  },
+  {
+    "id": "c07-w01-b15~25",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 직급보조비(같은규정제18조의6) 및 별표15",
+    "description": "직급보조비(같은규정제18조의6) 및 별표15 1. 지급대상: 공무원 2. 지급액 직급 / 4급,교(원)장,장학관, 교육연구관(4급상당) / 5급,교(원)감,장학관, 교육연구관(5급상당) / 6급,장학사, 교육연구사 / 7급 / 8,9급 지급액 / 400,000원 (교(원)장 50,000원 추가) / 250,000원 (교(원)감 50,000원 추가) / 185,000원 / 180,000원 / 175,000원 신분변동 시 보수지급방법(2025년 기준) ☞ 공무원보수…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n직급보조비(같은규정제18조의6) 및 별표15 1. 지급대상: 공무원 2. 지급액 직급 / 4급,교(원)장,장학관, 교육연구관(4급상당) / 5급,교(원)감,장학관, 교육연구관(5급상당) / 6급,장학사, 교육연구사 / 7급 / 8,9급 지급액 / 400,000원 (교(원)장 50,000원 추가) / 250,000원 (교(원)감 50,000원 추가) / 185,000원 / 180,000원 / 175,000원\n신분변동 시 보수지급방법(2025년 기준)\n☞ 공무원보수 등의 업무지침, 지방공무원보수업무 등 처리지침 ※ 아래 표는 참고용으로 자세한 사항은 반드시 업무지침 확인\n구 분 연봉제 호봉제 대우공무원수당 정근수당 정근수당 가산금 가족수당 가족수당 가산금 자녀학비 보조수당 주택수당 특수지 근무수당 위 험 근무수당 특 수 업무수당 시간외 근무수당 관리 업무수당 정액 급식비 명절 휴가비 연가 보상비 직급 보조비\n직위 해제 직무수행능력부족 7할 8할 2할감 1월 1 / 6감 2할감 2할감 2할감 2할감 2할감 2) 2) 2) 실적,× 2) 2) 3) 4) 2)",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "직급보조비(같은규정제18조의6)및별표151."
+  },
+  {
+    "id": "c07-w01-b15~26",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 적격심사 요구받은 고공단 1) 6․3할 7․4할 3․6할감 1월 1 / 6감 3․6할감",
+    "description": "적격심사 요구받은 고공단 1) 6․3할 7․4할 3․6할감 1월 1 / 6감 3․6할감 3․6할감 3․6할감 3․6할감 3․6할감 2) 2) 2) 실적,× 2) 2) 3) 4) 2) 기타사유1) 교육공무원 4․2할 7․5․4․3할 3․5․6․7 할감 1월 1 / 6감 3․5․6․7할감 3․5․6․ 7할감 3․5․6․7 할감 3․5․6․7할감 3․5․6․7 할감 2) 2) 2) 실적,× 2) 2) 3) × 2) 지방공무원 5․3할 5․7할감 5․7할감 5․7할감…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n적격심사 요구받은 고공단 1) 6․3할 7․4할 3․6할감 1월 1 / 6감 3․6할감 3․6할감 3․6할감 3․6할감 3․6할감 2) 2) 2) 실적,× 2) 2) 3) 4) 2)\n기타사유1) 교육공무원 4․2할 7․5․4․3할 3․5․6․7 할감 1월 1 / 6감 3․5․6․7할감 3․5․6․ 7할감 3․5․6․7 할감 3․5․6․7할감 3․5․6․7 할감 2) 2) 2) 실적,× 2) 2) 3) × 2)\n지방공무원 5․3할 5․7할감 5․7할감 5․7할감 5․7할감 5․7할감 5․7할감 4)\n징계 견 책 ○ ○ ○ × 전 액 지 급\n감 봉 1 / 3감 1 / 3감 1 / 3감 × 1 / 3감 1 / 3감 1 / 3감 1 / 3감 1 / 3감 1 / 3감 1 / 3감 1 / 3감 전 액 지 급\n정 직 징계사유발생일에 따라 5) × × × × × × × × × × × × 실적,× × × 지급기준일 정직× 4) ×\n강등 (직무에 종사하지 못하는 3개월) 징계사유발생일에 따라5) × × × × × × × × × × × × 실적,× × × 지급기준일 강등× 4) ×",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "적격심사요구받은고공단1)6․3할7․4할3․6"
+  },
+  {
+    "id": "c07-w01-b15~27",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 해 임 일할계산 일할계산 일할계산 × 일할계산 일할계산 일할계산 일할계산 일할계산 일할",
+    "description": "해 임 일할계산 일할계산 일할계산 × 일할계산 일할계산 일할계산 일할계산 일할계산 일할 계산 일할 계산 일할 계산 실적,× 일할 계산 일할계산 지급기준일 해임× × 일할 계산 파 면 일할계산 일할계산 일할계산 × 일할계산 일할계산 일할계산 일할계산 일할계산 일할 계산 일할 계산 일할 계산 실적,× 일할 계산 일할계산 지급기준일 파면× × 일할 계산 휴직 질병휴직(§71①1호) 1년이하 6할 1~2년이하 4할 1년이하 7할 1~2년이하 5할 1년이하 3할감 1~2…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n해 임 일할계산 일할계산 일할계산 × 일할계산 일할계산 일할계산 일할계산 일할계산 일할 계산 일할 계산 일할 계산 실적,× 일할 계산 일할계산 지급기준일 해임× × 일할 계산\n파 면 일할계산 일할계산 일할계산 × 일할계산 일할계산 일할계산 일할계산 일할계산 일할 계산 일할 계산 일할 계산 실적,× 일할 계산 일할계산 지급기준일 파면× × 일할 계산\n휴직 질병휴직(§71①1호) 1년이하 6할 1~2년이하 4할 1년이하 7할 1~2년이하 5할 1년이하 3할감 1~2년이하 5할감 6) 1년이하 3할감 1~2년이하 5할감 1년이하 3할감 1~2년이하 5할감 1년이하 3할감 1~2년이하 5할감 1년이하 3할감 1~2년이하 5할감 1년이하 3할감 1~2년이하 5할감 일 할,× 일 할,× 일 할,× 실적,× 일 할,× 일할,× 지급기준일 휴직× 4) 일할,×\n공무상질병휴직 ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ 실적,× ○ ○ ○ ○ ○\n병역휴직(법§71①3호) × × × × 복직후 감액× × × × × × × × × 실적,× × × × 7) ×\n천재지변 등 휴직(법§71①4호) × × × × × × × × × × × × 실적,× × × × × ×",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "해임일할계산일할계산일할계산×일할계산일할계산일"
+  },
+  {
+    "id": "c07-w01-b15~28",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 국내외임시채용(고용) × × × × 복직후 감액× × × × × × × × × 실적,×",
+    "description": "국내외임시채용(고용) × × × × 복직후 감액× × × × × × × × × 실적,× × × × × × 해외유학, 1년이상 국외연수 휴직 4할 (2년 이하) 5할 (2년 이하) 5할감 (2년 이하) 전액지급 (2년 이하) 5할감 (2년 이하) 5할감 (2년 이하) 5할감 (2년 이하) 5할감 (2년 이하) 5할감 (2년 이하) 일 할,× 일 할,× 일 할,× 실적,× 일 할,× 일할,× 지급기준일 휴직× 4) 일할,× 법정의무수행 (§71①5호) × × × ×…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n국내외임시채용(고용) × × × × 복직후 감액× × × × × × × × × 실적,× × × × × ×\n해외유학, 1년이상 국외연수 휴직 4할 (2년 이하) 5할 (2년 이하) 5할감 (2년 이하) 전액지급 (2년 이하) 5할감 (2년 이하) 5할감 (2년 이하) 5할감 (2년 이하) 5할감 (2년 이하) 5할감 (2년 이하) 일 할,× 일 할,× 일 할,× 실적,× 일 할,× 일할,× 지급기준일 휴직× 4) 일할,×\n법정의무수행 (§71①5호) × × × × 복직후 감액× × × × × × × × × 실적,× × × × × ×\n가사,연수,해외동반휴직 등 × × × × × × × × × × × × 실적,× × × × × ×\n육 아 휴 직 육아휴직 시작일로부터 6개월간 월봉급액, 7개월째 이후 월봉급액의 80퍼센트 지급 (상한선 3개월까지 250만원, 4~6개월까지 200만원, 7개월째 이후 160만원)\n파견 국 내 파 견 ○ ○ ○ ○ ○ ○ ○ ○ ○ 8) 8) 8) 9) ○ ○ ○ 7) ○\n공로연수파견 ○ ○ ○ ○ ○ ○ ○ ○ ○ × × × × ○ ○ ○ 7) ○\n국외파견 (30일이상) ○ ○ ○ ○ ○ ○ ○ ○ ○ × × × × ○ × ○ 7) ○",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "국내외임시채용(고용)××××복직후감액××××"
+  },
+  {
+    "id": "c07-w01-b15~29",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 출장 국내출장 ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○",
+    "description": "출장 국 내 출 장 ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ 국외출장 (30일이상) ○ ○ ○ ○ ○ ○ ○ ○ ○ × × × × ○ ○ ○ 7) ○ 결근 연봉 일액감 봉급 일액감 ○ ○ ○ ○ ○ ○ ○ 일액 감 일액 감 일액 감 × ○ 일액 감 ○ × 일액 감 휴가 연가,병가,공가,특별휴가 ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ × ○ ○ ○ 7) ○ 무급인 특별휴가 연봉일액감 봉급일액감 ○ ○ ○ ○ ○ ○ ○ 일액 감 일액 감…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n출장 국 내 출 장 ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○\n국외출장 (30일이상) ○ ○ ○ ○ ○ ○ ○ ○ ○ × × × × ○ ○ ○ 7) ○\n결근 연봉 일액감 봉급 일액감 ○ ○ ○ ○ ○ ○ ○ 일액 감 일액 감 일액 감 × ○ 일액 감 ○ × 일액 감\n휴가 연가,병가,공가,특별휴가 ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ × ○ ○ ○ 7) ○\n무급인 특별휴가 연봉일액감 봉급일액감 ○ ○ ○ ○ ○ ○ ○ 일액 감 일액 감 일액 감 × ○ 일액 감 ○ ○ 일액 감\n연봉제 고정급적 연봉제 ○ ○ ○ × × ○ ○ ○ × ○ ○ ○ × × ○ × ○ ○\n성과급적 연봉제 ○ ○ ○ × × ○ ○ ○ × ○ ○ ○ ○ × ○ × ○ ○\n(전문임기제) ○ ○ ○ × × ○ ○ ○ × × × × ○ ○ ○ × ○ ○\n퇴직 정년▪명예퇴직, 조기▪자진퇴직 11) 11) ○ ○ ○ ○ ○ ○ ○ ○ ○ ○ 10) ○ ○ ○ 7) ○\n대 기 발 령 ○ ○ ○ ○ ○ ○ ○ ○ ○ × × × × × × ○ 7) ○\n1) ｢공무원보수규정｣ 제29조(직위해제기간 중의 봉급 감액) 참고",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "출장국내출장○○○○○○○○○○○○○○○○○○"
+  },
+  {
+    "id": "c07-w01-b15~30",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › ｢지방공무원법｣ 제65조의3 규정에 따라 직위해제된 공무원의 3월 이내 직위해제 기간:",
+    "description": "｢지방공무원법｣ 제65조의3 규정에 따라 직위해제된 공무원의 3월 이내 직위해제 기간: 50%감액, 직위해제일로부터 3월이 지난 뒤에도 직위를 부여받지 못한 때 3월이 지난 후의 직위해제기간: 70% 감액 2) 월중에 직위해제, 강등･정직처분 또는 복직: 실제 근무일수에 따라 일할계산 / 미근무 시: 미지급(다만, 특수업무수당 중 교원에대한보전수당은 대우공무원수당, 정근수당 가산금, 가족수당, 자녀학비보조수당 및 주택수당의 감액방법에 따라 감액한다.) 3) 지급…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n｢지방공무원법｣ 제65조의3 규정에 따라 직위해제된 공무원의 3월 이내 직위해제 기간: 50%감액, 직위해제일로부터 3월이 지난 뒤에도 직위를 부여받지 못한 때 3월이 지난 후의 직위해제기간: 70% 감액\n2) 월중에 직위해제, 강등･정직처분 또는 복직: 실제 근무일수에 따라 일할계산 / 미근무 시: 미지급(다만, 특수업무수당 중 교원에대한보전수당은 대우공무원수당, 정근수당 가산금, 가족수당, 자녀학비보조수당 및 주택수당의 감액방법에 따라 감액한다.)\n3) 지급기준일(설날, 추석날) 현재 직위해제중: 미지급\n4) 결근, 강등･정직, 직위해제 일수를 연가일수에서 공제(국가공무원복무규정 제17조)한 후 지급 / 휴직의 경우(법령에 의한 휴직이나 공무상 휴직 제외) 다음 산식과 같이 계산: 연가일수-(해당연도 휴직기간(월) / 12*해당연도 연가일수) 단, 대기발령, 징계처분, 휴직 중에 있는 자는 제외\n5) 징계사유 발생일에 따라 기준일 이전이면 2 / 3감액, 이후면 전액 감액, 공무원 보수업무등의 처리지침, 지방공무원보수업무 등 처리지침 확인\n6) 휴직 1월에 대하여 수당액의 1 / 6감액(실제 근무한 기간 15일 이상은 1월 계산, 15일 미만 계산×)",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "｢지방공무원법｣제65조의3규정에따라직위해제된"
+  },
+  {
+    "id": "c07-w01-b15~31",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 7) 연가보상비 계산 시 해당기간을 제외기간에 포함하여 산출하는 기간: 부사관 또는 장",
+    "description": "7) 연가보상비 계산 시 해당기간을 제외기간에 포함하여 산출하는 기간: 부사관 또는 장교로 군입대한 경우 미근무기간(사병으로 군 입대 시 미근무기간은 제외기간 미산입), 교육파견(1개월 이상) 기간, 공로퇴직 연수기간, 퇴직 후 미근무기간, 대기발령기간, 병가기간(특별휴가, 공가는 제외기간에 미산입), 국외파견 및 국외출장(1개월 이상) 기간 8)① 파견기간이 30일 이상(연속된 기간)인 경우 지급할 수 없으나 예외적 인정(직무교육파견 등) - 본연의 업무와 관…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n7) 연가보상비 계산 시 해당기간을 제외기간에 포함하여 산출하는 기간: 부사관 또는 장교로 군입대한 경우 미근무기간(사병으로 군 입대 시 미근무기간은 제외기간 미산입), 교육파견(1개월 이상) 기간, 공로퇴직 연수기간, 퇴직 후 미근무기간, 대기발령기간, 병가기간(특별휴가, 공가는 제외기간에 미산입), 국외파견 및 국외출장(1개월 이상) 기간\n8)① 파견기간이 30일 이상(연속된 기간)인 경우 지급할 수 없으나 예외적 인정(직무교육파견 등)\n- 본연의 업무와 관련된 직무교육(「공무원 인재개발법 시행령」제7조에 따른 직급별 기본교육훈련과정 및 직무분야별 전문교육훈련과정에 상당하는 직무교육)을 위한 교육훈련파견\n- 파견받은 기관의 업무성격이나 근무여건이 특수지근무수당･위험근무수당･특수업무수당･업무대행수당 및 군법무관수당의 지급요건에 해당하는 경우\n② 특수업무수당 중 교육공무원에게 지급되는 교원 등에 대한 보전수당･교직수당은 지급되나, 교직수당 가산금 2)부터 10)까지는 지급하지 아니한다. 다만, 파견받은 기관의 업무성격이나 근무여건이 가산금 지급요건에 해당되는 경우에는 지급한다.",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "7)연가보상비계산시해당기간을제외기간에포함하여"
+  },
+  {
+    "id": "c07-w01-b15~32",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 9) 공무원임용령 제41조제1항제4호 및 6호 규정에 의한 1개월 이상 파견 시 정액×",
+    "description": "9) 공무원임용령 제41조제1항제4호 및 6호 규정에 의한 1개월 이상 파견 시 정액×, 실적× 10) 1일 이상 출근 시 정액분 모두 지급 11) 5년 이상 근속한 공무원이 월 중에 15일 이상을 근무한 후 면직되는 날이 속하는 달의 봉급 또는 연봉을 전액 지급 급여 작업 점검 시 월별 참고사항 매월 공통사항 ① 주민정보연계 결과 확인 (나이스 → 공무원급여 → 월급여 → 가족사항관리 → 주민정보연계결과확인) ② 교직원공제회 공제내역 파일반영 확인 ③ 조정수당…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n9) 공무원임용령 제41조제1항제4호 및 6호 규정에 의한 1개월 이상 파견 시 정액×, 실적×\n10) 1일 이상 출근 시 정액분 모두 지급\n11) 5년 이상 근속한 공무원이 월 중에 15일 이상을 근무한 후 면직되는 날이 속하는 달의 봉급 또는 연봉을 전액 지급\n급여 작업 점검 시 월별 참고사항\n매월 공통사항 ① 주민정보연계 결과 확인 (나이스 → 공무원급여 → 월급여 → 가족사항관리 → 주민정보연계결과확인) ② 교직원공제회 공제내역 파일반영 확인 ③ 조정수당 입력 시 십 원 단위로 입력(원단위 입력 금지) ④ 조정수당은 교특회계수당으로 입력(학교회계수당 입력 금지) ⑤ 급여지급대상자 확인(교육공무직원, 정원외기간제교사 삭제) ⑥ 호봉승급, 휴직, 대우공무원 임용 등 인사정보 반영 확인 ⑦ 전월 초과근무내역(시간외수당 정액분, 초과분) 확인 ⑧ 부양가족 변동내역 확인 ⑨ 육아휴직수당 지급대상자 유급 기간 확인 및 육아휴직수당 복직합산금 지급 확인 ‣공무원급여>월급여>수당계산내역>육아휴직수당지급내역 육아휴직복직합산금지급예정자 확인(2024년 이후 휴직자 첫째만 / 2025년 이후 폐지)",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "9)공무원임용령제41조제1항제4호및6호규정에"
+  },
+  {
+    "id": "c07-w01-b15~33",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 인사발령 포함 월 공통사항 (정기인사 1,3,7,9월 등) ① 전입교직원 급여 확인사항",
+    "description": "인사발령 포함 월 공통사항 (정기인사 1,3,7,9월 등) ① 전입교직원 급여 확인사항 ‣전입교직원의 가족수당, 원천징수동의서 등 각종 신고서 취합 ‣전입교직원 건강보험 근무처 변동 신고 및 나이스 급여기본사항(계좌번호) 입력 ② 복직 및 휴직 교직원 급여 확인사항 ‣복직교직원: 건강보험 복직신고 및 건강보험료 납부액 처리(분할 및 일시) ‣휴직교직원: 휴직종류에 따른 수당 확인, 건강보험공단에 신분변동(휴직) 처리 ③ 승진자(교장 승진) 급여 확인사항 ‣시간외…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n인사발령 포함 월 공통사항 (정기인사 1,3,7,9월 등) ① 전입교직원 급여 확인사항 ‣전입교직원의 가족수당, 원천징수동의서 등 각종 신고서 취합 ‣전입교직원 건강보험 근무처 변동 신고 및 나이스 급여기본사항(계좌번호) 입력 ② 복직 및 휴직 교직원 급여 확인사항 ‣복직교직원: 건강보험 복직신고 및 건강보험료 납부액 처리(분할 및 일시) ‣휴직교직원: 휴직종류에 따른 수당 확인, 건강보험공단에 신분변동(휴직) 처리 ③ 승진자(교장 승진) 급여 확인사항 ‣시간외수당: 교장 승진 전 2월 시간외수당 지급 ‣관리업무수당: 교장 승진 시 기본급의 7.8% ④ 1, 7월 일반직 인사이동자 중 교육청 → 학교로 발령 난 경우 특수업무수당(민원 등) 지급 여부 확인 ⑤ 교원 보직발령사항(담임, 부장교사 등) 나이스 입력, 승진자(교장, 교감) 확인 ⑥ 전출기관에서 시간외근무수당 내역확인 통보공문 확인 후 급여 반영 ⑦ 전출직원 시간외근무수당 내역확인 전출교에 공문 통보",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "인사발령포함월공통사항(정기인사1,3,7,9월"
+  },
+  {
+    "id": "c07-w01-b15~34",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 1월 ① 인사발령 포함 월 공통사항(전입교직원, 휴･복직, 승진자) 급여사항 확인(표",
+    "description": "1월 ① 인사발령 포함 월 공통사항(전입교직원, 휴･복직, 승진자) 급여사항 확인(표 상단 참고) ② 1월 정기인사 변동자(신규, 전출, 전입자) 건강보험 전입신고, 공제금, 가족수당 신고 확인 ※ 1월 가족수당과 근무연수 확인 철저 ⇒ 맞춤형복지 포인트 연초 배정점수와 연계 ③ 12월 시간외수당 미지급분만 지급 (정액분 없음, 12월 근무자 중 15일 미만 근무자는 일할계산 환수) ④ 1월 정근수당 지급 ⑤ 공무원 보수규정 개정에 따른 공무원 급여인상분 반영…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n1월 ① 인사발령 포함 월 공통사항(전입교직원, 휴･복직, 승진자) 급여사항 확인(표 상단 참고) ② 1월 정기인사 변동자(신규, 전출, 전입자) 건강보험 전입신고, 공제금, 가족수당 신고 확인 ※ 1월 가족수당과 근무연수 확인 철저 ⇒ 맞춤형복지 포인트 연초 배정점수와 연계 ③ 12월 시간외수당 미지급분만 지급 (정액분 없음, 12월 근무자 중 15일 미만 근무자는 일할계산 환수) ④ 1월 정근수당 지급 ⑤ 공무원 보수규정 개정에 따른 공무원 급여인상분 반영 내역 및 수당변동 사항 확인⑥ 연말정산을 위한 기타수당 지급내역 전출교에 통보 ⑦ 연말정산 작업\n2월 ① 연말정산 마감결과 차감징수액 반영 ② 명절휴가비(지급시기 달라질 수 있음) 지급 ③ 교원 방학 중 시간외수당 정액분 지급을 위한 근무일수 확인 철저 ④ 2월 말 퇴직자 연말정산 중도정산 및 건강보험 상실신고 ⑤ 2월 말 퇴직자 맞춤형복지 잔여포인트 사용 안내(3월 말까지 사용가능) 후 정산완료\n급여 작업 점검 시 월별 참고사항",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "1월①인사발령포함월공통사항(전입교직원,휴･복"
+  },
+  {
+    "id": "c07-w01-b15~35",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 3월 ① 인사발령 포함 월 공통사항(전입교직원, 휴･복직, 승진자) 급여사항 확인(표",
+    "description": "3월 ① 인사발령 포함 월 공통사항(전입교직원, 휴･복직, 승진자) 급여사항 확인(표 상단 참고) ② 교원 방학 중 시간외수당 정액분 지급을 위한 근무일수 확인 철저 ③ 교원 보직발령사항(담임, 부장교사 등) 나이스 입력, 승진자(교장, 교감) 확인 4월 ① 건강보험 연말정산 실시 ‣국민건강보험(4대보험) EDI파일을 다운받아 나이스 → 급여 → 건강보험공단정산파일처리 반영 ‣건강보험 연말정산 금액 징수 및 건강보험 인상분 금액 반영분 확인 6월 ① 6월 말 퇴…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n3월 ① 인사발령 포함 월 공통사항(전입교직원, 휴･복직, 승진자) 급여사항 확인(표 상단 참고) ② 교원 방학 중 시간외수당 정액분 지급을 위한 근무일수 확인 철저 ③ 교원 보직발령사항(담임, 부장교사 등) 나이스 입력, 승진자(교장, 교감) 확인\n4월 ① 건강보험 연말정산 실시 ‣국민건강보험(4대보험) EDI파일을 다운받아 나이스 → 급여 → 건강보험공단정산파일처리 반영 ‣건강보험 연말정산 금액 징수 및 건강보험 인상분 금액 반영분 확인\n6월 ① 6월 말 퇴직자 연말정산 중도정산 및 건강보험 상실신고 ② 6월 말 퇴직자 맞춤형복지 잔여포인트 사용 안내(7월 말까지 사용가능) 후 정산완료\n7월 ① 인사발령 포함 월 공통사항(전입교직원, 휴･복직, 승진자) 급여사항 확인(표 상단 참고) ② 7월 정근수당 지급, 연가보상비(5일분) 지급, 6월 말 퇴직자 연가보상비 지급 ‣연가보상비(일반직·교육전문직 대상, 학교 교원 대상 아님) 지급\n8월 ① 교원 방학 중 시간외수당 정액분 지급을 위한 근무일수 확인 철저 ② 8월 말 퇴직자 연말정산 중도정산 및 건강보험 상실신고 ③ 8월 말 퇴직자 맞춤형복지 잔여포인트 사용 안내(9월 말까지 사용가능) 후 정산완료",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "3월①인사발령포함월공통사항(전입교직원,휴･복"
+  },
+  {
+    "id": "c07-w01-b15~36",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 9월 ① 명절휴가비 지급 및 인사발령 포함 월 공통사항(전입교직원, 휴･복직, 승진자)",
+    "description": "9월 ① 명절휴가비 지급 및 인사발령 포함 월 공통사항(전입교직원, 휴･복직, 승진자) 급여사항 확인(표 상단 참고) 12월 ① 연가보상비(7월 지급한 연가보상 일수를 제외한 나머지) 및 12월 시간외 정액분 및 초과분 지급(교육청 업무 일정에 따라 달라질 수 있음) 교직수당가산금 종류 순 수당 수당명 금액(월) 1 교직수당가산금1 원로교사 월5만원 2 교직수당가산금2 보직교사 월15만원 3 교직수당가산금3_1 특수학급 월12만원 4 교직수당가산금4 담임교사 월…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n9월 ① 명절휴가비 지급 및 인사발령 포함 월 공통사항(전입교직원, 휴･복직, 승진자) 급여사항 확인(표 상단 참고)\n12월 ① 연가보상비(7월 지급한 연가보상 일수를 제외한 나머지) 및 12월 시간외 정액분 및 초과분 지급(교육청 업무 일정에 따라 달라질 수 있음)\n교직수당가산금 종류\n순 수당 수당명 금액(월)\n1 교직수당가산금1 원로교사 월5만원\n2 교직수당가산금2 보직교사 월15만원\n3 교직수당가산금3_1 특수학급 월12만원\n4 교직수당가산금4 담임교사 월20만원\n5 교직수당가산금5 실과담당교원 호봉별 상이\n6 교직수당가산금6 보건교사 월4만원\n7 교직수당가산금7 겸임교장 / 교감 월10만원 / 월5만원\n8 교직수당가산금8 영양교사 월4만원\n9 교직수당가산금9 사서교사 월3만원\n10 교직수당가산금10 전문상담교사 월3만원\n※ 공무원수당 등에 관한 규정 및 [별표11] 참고\n나이스 급여작업 체크리스트\n작업일 업무구분 업무처리 시 점검사항 확인여부\n매월 1~2일 기초자료생성 ➀ 매월 호봉승급 대상자의 승급처리 확인은 하였는가? YES□ NO□",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "9월①명절휴가비지급및인사발령포함월공통사항(전"
+  },
+  {
+    "id": "c07-w01-b15~37",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › ➁ 전월 초과근무내역은 생성·확인을 하였는가? - 나이스-복무-초과근무월별집계 확인여부",
+    "description": "➁ 전월 초과근무내역은 생성·확인을 하였는가? - 나이스-복무-초과근무월별집계 확인여부 - 근무일수 15일 미만자(휴직자, 병가자 등) 시간외수당 정액분<10시간> 일할계산 여부 - 근무일수가 없는 장기병가자 또는 휴직자의 시간외근무수당 정액분 생성여부 ★근무일수 0일로 입력 YES□ NO□ YES□ NO□ YES□ NO□ ➂ (인사변동 시) 전입자의 급여기본사항은 변경하였는가? - 전입기관에서의 건강보험공단 전입신고여부 - 신규임용자 계좌번호 누락 여부 - 전…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n➁ 전월 초과근무내역은 생성·확인을 하였는가? - 나이스-복무-초과근무월별집계 확인여부 - 근무일수 15일 미만자(휴직자, 병가자 등) 시간외수당 정액분<10시간> 일할계산 여부 - 근무일수가 없는 장기병가자 또는 휴직자의 시간외근무수당 정액분 생성여부 ★근무일수 0일로 입력 YES□ NO□ YES□ NO□ YES□ NO□\n➂ (인사변동 시) 전입자의 급여기본사항은 변경하였는가? - 전입기관에서의 건강보험공단 전입신고여부 - 신규임용자 계좌번호 누락 여부 - 전입자의 급여공제코드 수정 여부 - 전입교원의 급여직종 변경(전문직↔교원) 변경 여부 YES□ NO□ YES□ NO□ YES□ NO□ YES□ NO□\n➃ (3월, 9월) 교원의 보직구분(부장교사, 학급담임...)등 급여기본사항은 변경하였는가? YES□ NO□\n➄ 명절휴가비 급여포함 여부는 확인하였는가? - (명절휴가비 지급 월) 명절휴가비 급여포함 여부 ▪포함 체크 - (명절휴가비 지급 월의 익월) 명절휴가비 급여포함 여부 ▪포함안함 체크 YES□ NO□ YES□ NO□\n⇩ ⇩ ⇩",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "➁전월초과근무내역은생성·확인을하였는가?-나이"
+  },
+  {
+    "id": "c07-w01-b15~38",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › 매월 1~3일 대상자 일괄생성 ➅ 대상자 일괄생성 후 교육공무직원 등 대상자가 아닌 자",
+    "description": "매월 1~3일 대상자 일괄생성 ➅ 대상자 일괄생성 후 교육공무직원 등 대상자가 아닌 자는 삭제하였는가? ▪ 교육공무직원 삭제방법 ⅰ) 월급여-작업-대상자선정(개인)에서 교육공무직원 삭제 ⅱ) 급여기본사항-비정규직 이름 검색-급여관리구분을 ‘해당없음’으로 선택 후 저장 YES□ NO□ 작업일 업무구분 업무처리 시 점검사항 확인여부 매월 1~3일 급여조정 및 확인 ➆ 육아휴직자의 급여지급 내역 확인은 제대로 하였는가? - (명절휴가비 지급 월) 육아휴직자에게 명절휴…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n매월 1~3일 대상자 일괄생성 ➅ 대상자 일괄생성 후 교육공무직원 등 대상자가 아닌 자는 삭제하였는가? ▪ 교육공무직원 삭제방법 ⅰ) 월급여-작업-대상자선정(개인)에서 교육공무직원 삭제 ⅱ) 급여기본사항-비정규직 이름 검색-급여관리구분을 ‘해당없음’으로 선택 후 저장 YES□ NO□\n작업일 업무구분 업무처리 시 점검사항 확인여부\n매월 1~3일 급여조정 및 확인 ➆ 육아휴직자의 급여지급 내역 확인은 제대로 하였는가? - (명절휴가비 지급 월) 육아휴직자에게 명절휴가비를 지급하지는 않았는가? ★명절휴가비 지급대상 아님 - 자녀 1명당 육아휴직 1년 초과자에게 육아휴직수당을 지급하지는 않았는가? - 육아휴직 복직 후 7개월째 되는 자에게 ‘육아휴직수당 복직합산금’은 지급하였는가? YES□ NO□ YES□ NO□ YES□ NO□\n➇ 신분변동자에 대한 급여반영내역 확인은 제대로 하였는가? - 월 중 육아휴직자, 병역휴직자, 중도퇴직자 등의 급여 일할 계산 확인여부 - 징계대상자(정직, 감봉, 직위해제)에 대한 급여 감액 확인여부 YES□ NO□ YES□ NO□",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "매월1~3일대상자일괄생성➅대상자일괄생성후교육"
+  },
+  {
+    "id": "c07-w01-b15~39",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "보수작업",
+    "title": "3. 급여 및 수당의 이해 › ➈ 휴일수당 지급 여부? ▪ 전북특별자치도교육청 소속 교직원 중에는 휴일수당 지급대상자",
+    "description": "➈ 휴일수당 지급 여부? ▪ 전북특별자치도교육청 소속 교직원 중에는 휴일수당 지급대상자가 없으므로 휴일수당이 입력된 경우는 삭제 후 시간외근무수당으로 변경 입력할 것 YES□ NO□ ➉ 가계보전수당(가족수당 변동내역) 지급확인 여부 YES□ NO□ ⑪ 특수근무수당 지급확인 여부 - 특수지근무수당, 보직교사수당, 원로교사수당, 파견자에 대한 교직수당 지급내역, 겸임수당 지급내역 등 YES□ NO□ ⇩ ⇩ ⇩ 매월 3일경 월급여 일괄작업 ⑫ 교직원공제회 파일 일괄…",
+    "text": "보수작업\n3. 급여 및 수당의 이해\n➈ 휴일수당 지급 여부? ▪ 전북특별자치도교육청 소속 교직원 중에는 휴일수당 지급대상자가 없으므로 휴일수당이 입력된 경우는 삭제 후 시간외근무수당으로 변경 입력할 것 YES□ NO□\n➉ 가계보전수당(가족수당 변동내역) 지급확인 여부 YES□ NO□\n⑪ 특수근무수당 지급확인 여부 - 특수지근무수당, 보직교사수당, 원로교사수당, 파견자에 대한 교직수당 지급내역, 겸임수당 지급내역 등 YES□ NO□\n⇩ ⇩ ⇩\n매월 3일경 월급여 일괄작업 ⑫ 교직원공제회 파일 일괄 반영은 확인하였는가? YES□ NO□\n⇩ ⇩\n급여대장 출력-확인 ⑬ 나이스 급여대장(개인별명세, 기관집계)을 출력하여 대상자 누락사항과 급여작업 및 조정내역을 최종확인 하였는가? YES□ NO□",
+    "workId": "c07-w01",
+    "blockId": "c07-w01-b15",
+    "anchor": "➈휴일수당지급여부?▪전북특별자치도교육청소속교"
+  },
+  {
+    "id": "c07-w01:form:서식1",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10164,6 +11662,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식1"
   },
   {
+    "id": "c07-w01:form:서식6",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10176,6 +11675,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식6"
   },
   {
+    "id": "c07-w01:form:참고1",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10188,6 +11688,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고1"
   },
   {
+    "id": "c07-w01:form:참고2",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10200,6 +11701,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고2"
   },
   {
+    "id": "c07-w01:faq:1",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10212,6 +11714,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c07-w01:faq:2",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10224,6 +11727,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c07-w01:faq:3",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10236,6 +11740,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c07-w01:faq:4",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10248,6 +11753,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c07-w01:faq:5",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10260,6 +11766,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "c07-w01:faq:6",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10272,6 +11779,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "6"
   },
   {
+    "id": "c07-w01:faq:7",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10284,6 +11792,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "7"
   },
   {
+    "id": "c07-w01:faq:8",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10296,6 +11805,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "8"
   },
   {
+    "id": "c07-w01:faq:9",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10308,6 +11818,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "9"
   },
   {
+    "id": "c07-w01:faq:10",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10320,6 +11831,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "10"
   },
   {
+    "id": "c07-w01:faq:1#2",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10332,6 +11844,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c07-w01:faq:2#2",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10344,6 +11857,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c07-w01:faq:1#3",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10356,6 +11870,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c07-w01:faq:2#3",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10368,6 +11883,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c07-w01:faq:3#2",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10380,6 +11896,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c07-w01:faq:4#2",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10392,6 +11909,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c07-w01:faq:5#2",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10404,6 +11922,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "c07-w01:faq:6#2",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10416,6 +11935,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "6"
   },
   {
+    "id": "c07-w01:faq:7#2",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10428,6 +11948,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "7"
   },
   {
+    "id": "c07-w01:faq:8#2",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10440,6 +11961,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "8"
   },
   {
+    "id": "c07-w01:faq:9#2",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10452,6 +11974,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "9"
   },
   {
+    "id": "c07-w01:faq:10#2",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10464,6 +11987,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "10"
   },
   {
+    "id": "c07-w01:faq:12",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10476,6 +12000,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "12"
   },
   {
+    "id": "c07-w01:faq:1#4",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10488,6 +12013,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c07-w01:faq:2#4",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10500,6 +12026,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c07-w01:faq:3#3",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10512,6 +12039,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c07-w01:faq:4#3",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10524,6 +12052,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c07-w01:faq:2#5",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10536,6 +12065,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c07-w01:faq:3#4",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10548,6 +12078,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c07-w01:faq:4#4",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10560,6 +12091,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c07-w01:faq:5#3",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10572,6 +12104,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "c07-w01:faq:6#3",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10584,6 +12117,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "6"
   },
   {
+    "id": "c07-w01:faq:7#3",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10596,6 +12130,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "7"
   },
   {
+    "id": "c07-w01:faq:8#3",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10608,6 +12143,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "8"
   },
   {
+    "id": "c07-w01:faq:1#5",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10620,6 +12156,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c07-w01:faq:2#6",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10632,6 +12169,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c07-w01:faq:3#5",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10644,6 +12182,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c07-w01:faq:4#5",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10656,6 +12195,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c07-w01:faq:1#6",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10668,6 +12208,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c07-w01:faq:2#7",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10680,6 +12221,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c07-w01:faq:3#6",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10692,6 +12234,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c07-w01:faq:4#6",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10704,6 +12247,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c07-w01:faq:5#4",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10716,6 +12260,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "c07-w01:faq:6#4",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10728,6 +12273,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "6"
   },
   {
+    "id": "c07-w01:faq:7#4",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10740,6 +12286,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "7"
   },
   {
+    "id": "c07-w01:faq:8#4",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10752,6 +12299,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "8"
   },
   {
+    "id": "c07-w01:faq:12#2",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10764,6 +12312,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "12"
   },
   {
+    "id": "c07-w01:faq:1#7",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10776,6 +12325,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c07-w02",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10788,6 +12338,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c07-w02"
   },
   {
+    "id": "c07-w02-b1",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10800,6 +12351,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w02-b1"
   },
   {
+    "id": "c07-w02-b2",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10812,6 +12364,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w02-b2"
   },
   {
+    "id": "c07-w02-b3",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10824,6 +12377,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w02-b3"
   },
   {
+    "id": "c07-w02-b4",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10836,6 +12390,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w02-b4"
   },
   {
+    "id": "c07-w02-b5",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10848,6 +12403,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w02-b5"
   },
   {
+    "id": "c07-w02-b6",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10860,6 +12416,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w02-b6"
   },
   {
+    "id": "c07-w02-b7",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10872,6 +12429,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w02-b7"
   },
   {
+    "id": "c07-w02-b8",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10884,6 +12442,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w02-b8"
   },
   {
+    "id": "c07-w02-b9",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10896,6 +12455,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w02-b9"
   },
   {
+    "id": "c07-w02-b10",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10908,6 +12468,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w02-b10"
   },
   {
+    "id": "c07-w02-b11",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10920,6 +12481,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w02-b11"
   },
   {
+    "id": "c07-w02-b12",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10932,6 +12494,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w02-b12"
   },
   {
+    "id": "c07-w02-b13",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10944,6 +12507,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w02-b13"
   },
   {
+    "id": "c07-w02-b14",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10956,6 +12520,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w02-b14"
   },
   {
+    "id": "c07-w02-b15",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10968,6 +12533,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w02-b15"
   },
   {
+    "id": "c07-w02-b16",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10980,6 +12546,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w02-b16"
   },
   {
+    "id": "c07-w02-b17",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -10992,6 +12559,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w02-b17"
   },
   {
+    "id": "c07-w02-b18",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11004,6 +12572,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w02-b18"
   },
   {
+    "id": "c07-w02-b19",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11016,6 +12585,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w02-b19"
   },
   {
+    "id": "c07-w02-b20",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11028,6 +12598,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w02-b20"
   },
   {
+    "id": "c07-w02-b21",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11040,6 +12611,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w02-b21"
   },
   {
+    "id": "c07-w03",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11052,6 +12624,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c07-w03"
   },
   {
+    "id": "c07-w03-b1",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11064,6 +12637,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w03-b1"
   },
   {
+    "id": "c07-w03-b2",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11076,6 +12650,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w03-b2"
   },
   {
+    "id": "c07-w03-b3",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11088,6 +12663,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w03-b3"
   },
   {
+    "id": "c07-w03-b4",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11100,6 +12676,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w03-b4"
   },
   {
+    "id": "c07-w03-b5",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11112,6 +12689,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w03-b5"
   },
   {
+    "id": "c07-w03-b6",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11124,6 +12702,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w03-b6"
   },
   {
+    "id": "c07-w03-b7",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11136,6 +12715,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w03-b7"
   },
   {
+    "id": "c07-w03-b8",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11148,6 +12728,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w03-b8"
   },
   {
+    "id": "c07-w03-b9",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11160,6 +12741,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w03-b9"
   },
   {
+    "id": "c07-w03-b10",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11172,6 +12754,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w03-b10"
   },
   {
+    "id": "c07-w03-b11",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11184,6 +12767,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w03-b11"
   },
   {
+    "id": "c07-w03-b12",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11196,6 +12780,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w03-b12"
   },
   {
+    "id": "c07-w03-b13",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11208,6 +12793,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w03-b13"
   },
   {
+    "id": "c07-w03-b14",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11220,6 +12806,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w03-b14"
   },
   {
+    "id": "c07-w03-b15",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11232,6 +12819,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w03-b15"
   },
   {
+    "id": "c07-w03-b16",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11244,6 +12832,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w03-b16"
   },
   {
+    "id": "c07-w03-b17",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11256,6 +12845,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w03-b17"
   },
   {
+    "id": "c07-w03-b18",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11268,6 +12858,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w03-b18"
   },
   {
+    "id": "c07-w03-b19",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11280,6 +12871,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w03-b19"
   },
   {
+    "id": "c07-w03-b20",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11292,6 +12884,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w03-b20"
   },
   {
+    "id": "c07-w03-b21",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11304,6 +12897,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w03-b21"
   },
   {
+    "id": "c07-w03-b22",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11316,6 +12910,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w03-b22"
   },
   {
+    "id": "c07-w03-b23",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11328,18 +12923,35 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w03-b23"
   },
   {
+    "id": "c07-w03-b24~1",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
     "type": "매뉴얼 원문",
     "workTitle": "공무원연금",
-    "title": "3. 구비서류",
+    "title": "3. 구비서류 › 공통 서류 1. 공무상요양승인신청서 1부 (공단누리집 → 고객참여와 상담 → 각종서식",
     "description": "구분 구 비 서 류 비 고 공통 서류 1. 공무상요양승인신청서 1부 (공단누리집 → 고객참여와 상담 → 각종서식 → 재해보상서식) 2. 진단서 원본(상병분류기호 기재) 1부 3. 최초로 내원한 병원의 의무기록지 사본 1부 신청인 4. 상병경위조사서 1부 신청기관 추 가 서 류 질병의 경우 1. 건강진단결과통보서 및 건강검진문진표 사본 1부(내과질환에 한함) ▸건강진단을 받은 병 · 의원 또는 건강보험공단(지사)에서 발병 전 2회분 발급받아 제출 신청인 또는 기…",
-    "text": "공무원연금\n3. 구비서류\n구분 구 비 서 류 비 고\n공통 서류 1. 공무상요양승인신청서 1부 (공단누리집 → 고객참여와 상담 → 각종서식 → 재해보상서식) 2. 진단서 원본(상병분류기호 기재) 1부 3. 최초로 내원한 병원의 의무기록지 사본 1부 신청인\n4. 상병경위조사서 1부 신청기관\n추 가 서 류 질병의 경우 1. 건강진단결과통보서 및 건강검진문진표 사본 1부(내과질환에 한함) ▸건강진단을 받은 병 · 의원 또는 건강보험공단(지사)에서 발병 전 2회분 발급받아 제출 신청인 또는 기 관\n2. 초과근무를 확인할 수 있는 서류(발병 전 6개월분) 사본 1부(감염성 질병 제외) ▸지문인식기록지 등 수당 지급내역이 아닌 실제 근무시간 내역 기 관\n3. 해당 질병에 따라 제출하여야 할 서류 ▸무릎 및 어깨 등, 척추 및 뇌질환: 영상 CD ▸심장 및 신장: 심장초음파검사결과지, 신장기능검사결과지 ▸치과질환: 파노라마 사진, 경과기록지(향후 진료소견 포함) ▸이명, 난청: 순음청력검사, 이음향 방사검사, 이명도검사결과지(이명) / 청성뇌간반응검사 결과지(난청) ▸정신과: 건강보험요양급여내역(비밀번호 해제하여 제출), 심리검사결과지, 정신과치료내역(의무기록지 등) 신청인\n추 가 서 류 사고의 경우 □ 사고유형별 제출서류 구 분 / 직무수행 / 출퇴근 중 / 출장 중 / 행사 중 / 당직근무 / 교육훈련 일반사고 / ① / ④ 교통사고 / ②③⑥⑦ / ①③⑥⑦ / ②③⑥⑦ / ②③④⑥⑦ / ②③⑥⑦ / ②③⑥⑦ 폭행사고 / ⑤⑦ / ①⑤⑦ / ②⑤⑦ / ④⑤⑦ / ⑤⑦ / ⑤⑥⑦ [ 해당 서류명 ] 번호 / 서 류 명 / 번호 / 서 류 명 ① / 출 · 퇴근 경로도 / ⑤ / 사건처리부(송치서) 또는 공소장 사본 사건사고사실확인원 ② / 이동경로도 / ⑥ / 보험사고접보서 또는 보험금지급내역서 사본 ③ / 교통사고사실확인원 / ⑦ / 합의서 사본(합의한 경우 합의금액 기재) ④ / 행사계획 관련공문 및 예산집행내역 ※ 상기 유형에 적합하지 아니한 경우에는 유사한 유형의 서류 제출 ※ 객관적 입증이 필요한 경우 목격자 진술서, 보건일지, 방학 중 교육활동일지 등 공무상 부상임을 입증하고자 하는 기타 증빙서류 제출 신청인 또는 기 관",
+    "text": "공무원연금\n3. 구비서류\n구분 구 비 서 류 비 고\n공통 서류 1. 공무상요양승인신청서 1부 (공단누리집 → 고객참여와 상담 → 각종서식 → 재해보상서식) 2. 진단서 원본(상병분류기호 기재) 1부 3. 최초로 내원한 병원의 의무기록지 사본 1부 신청인\n4. 상병경위조사서 1부 신청기관\n추 가 서 류 질병의 경우 1. 건강진단결과통보서 및 건강검진문진표 사본 1부(내과질환에 한함) ▸건강진단을 받은 병 · 의원 또는 건강보험공단(지사)에서 발병 전 2회분 발급받아 제출 신청인 또는 기 관\n2. 초과근무를 확인할 수 있는 서류(발병 전 6개월분) 사본 1부(감염성 질병 제외) ▸지문인식기록지 등 수당 지급내역이 아닌 실제 근무시간 내역 기 관\n3. 해당 질병에 따라 제출하여야 할 서류 ▸무릎 및 어깨 등, 척추 및 뇌질환: 영상 CD ▸심장 및 신장: 심장초음파검사결과지, 신장기능검사결과지 ▸치과질환: 파노라마 사진, 경과기록지(향후 진료소견 포함) ▸이명, 난청: 순음청력검사, 이음향 방사검사, 이명도검사결과지(이명) / 청성뇌간반응검사 결과지(난청) ▸정신과: 건강보험요양급여내역(비밀번호 해제하여 제출), 심리검사결과지, 정신과치료내역(의무기록지 등) 신청인",
     "workId": "c07-w03",
-    "blockId": "c07-w03-b24"
+    "blockId": "c07-w03-b24",
+    "anchor": "공통서류1.공무상요양승인신청서1부(공단누리집"
   },
   {
+    "id": "c07-w03-b24~2",
+    "chapterId": "07",
+    "chapterLabel": "제7편",
+    "chapterTitle": "공무원 보수",
+    "type": "매뉴얼 원문",
+    "workTitle": "공무원연금",
+    "title": "3. 구비서류 › 추가서류 사고의 경우 □ 사고유형별 제출서류 구 분 / 직무수행 / 출퇴근 중 / 출장",
+    "description": "추 가 서 류 사고의 경우 □ 사고유형별 제출서류 구 분 / 직무수행 / 출퇴근 중 / 출장 중 / 행사 중 / 당직근무 / 교육훈련 일반사고 / ① / ④ 교통사고 / ②③⑥⑦ / ①③⑥⑦ / ②③⑥⑦ / ②③④⑥⑦ / ②③⑥⑦ / ②③⑥⑦ 폭행사고 / ⑤⑦ / ①⑤⑦ / ②⑤⑦ / ④⑤⑦ / ⑤⑦ / ⑤⑥⑦ [ 해당 서류명 ] 번호 / 서 류 명 / 번호 / 서 류 명 ① / 출 · 퇴근 경로도 / ⑤ / 사건처리부(송치서) 또는 공소장 사본 사건사고사실확인…",
+    "text": "공무원연금\n3. 구비서류\n추 가 서 류 사고의 경우 □ 사고유형별 제출서류 구 분 / 직무수행 / 출퇴근 중 / 출장 중 / 행사 중 / 당직근무 / 교육훈련 일반사고 / ① / ④ 교통사고 / ②③⑥⑦ / ①③⑥⑦ / ②③⑥⑦ / ②③④⑥⑦ / ②③⑥⑦ / ②③⑥⑦ 폭행사고 / ⑤⑦ / ①⑤⑦ / ②⑤⑦ / ④⑤⑦ / ⑤⑦ / ⑤⑥⑦ [ 해당 서류명 ] 번호 / 서 류 명 / 번호 / 서 류 명 ① / 출 · 퇴근 경로도 / ⑤ / 사건처리부(송치서) 또는 공소장 사본 사건사고사실확인원 ② / 이동경로도 / ⑥ / 보험사고접보서 또는 보험금지급내역서 사본 ③ / 교통사고사실확인원 / ⑦ / 합의서 사본(합의한 경우 합의금액 기재) ④ / 행사계획 관련공문 및 예산집행내역 ※ 상기 유형에 적합하지 아니한 경우에는 유사한 유형의 서류 제출 ※ 객관적 입증이 필요한 경우 목격자 진술서, 보건일지, 방학 중 교육활동일지 등 공무상 부상임을 입증하고자 하는 기타 증빙서류 제출 신청인 또는 기 관",
+    "workId": "c07-w03",
+    "blockId": "c07-w03-b24",
+    "anchor": "추가서류사고의경우□사고유형별제출서류구분/직무"
+  },
+  {
+    "id": "c07-w03:form:참고3",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11352,6 +12964,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고3"
   },
   {
+    "id": "c07-w03:form:참고4",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11364,6 +12977,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고4"
   },
   {
+    "id": "c07-w04",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11376,6 +12990,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c07-w04"
   },
   {
+    "id": "c07-w04-b1",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11388,6 +13003,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b1"
   },
   {
+    "id": "c07-w04-b2",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11400,6 +13016,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b2"
   },
   {
+    "id": "c07-w04-b3",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11412,6 +13029,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b3"
   },
   {
+    "id": "c07-w04-b4",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11424,6 +13042,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b4"
   },
   {
+    "id": "c07-w04-b5",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11436,6 +13055,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b5"
   },
   {
+    "id": "c07-w04-b6",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11448,6 +13068,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b6"
   },
   {
+    "id": "c07-w04-b7",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11460,6 +13081,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b7"
   },
   {
+    "id": "c07-w04-b8",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11472,6 +13094,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b8"
   },
   {
+    "id": "c07-w04-b9",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11484,6 +13107,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b9"
   },
   {
+    "id": "c07-w04-b10",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11496,6 +13120,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b10"
   },
   {
+    "id": "c07-w04-b11",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11508,6 +13133,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b11"
   },
   {
+    "id": "c07-w04-b12",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11520,6 +13146,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b12"
   },
   {
+    "id": "c07-w04-b13",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11532,6 +13159,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b13"
   },
   {
+    "id": "c07-w04-b14",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11544,6 +13172,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b14"
   },
   {
+    "id": "c07-w04-b15",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11556,6 +13185,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b15"
   },
   {
+    "id": "c07-w04-b16",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11568,6 +13198,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b16"
   },
   {
+    "id": "c07-w04-b17",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11580,6 +13211,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b17"
   },
   {
+    "id": "c07-w04-b18",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11592,6 +13224,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b18"
   },
   {
+    "id": "c07-w04-b19",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11604,6 +13237,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b19"
   },
   {
+    "id": "c07-w04-b20",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11616,6 +13250,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b20"
   },
   {
+    "id": "c07-w04-b21",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11628,6 +13263,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b21"
   },
   {
+    "id": "c07-w04-b22",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11640,6 +13276,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b22"
   },
   {
+    "id": "c07-w04-b23",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11652,6 +13289,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b23"
   },
   {
+    "id": "c07-w04-b24",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11664,6 +13302,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b24"
   },
   {
+    "id": "c07-w04-b25",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11676,6 +13315,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b25"
   },
   {
+    "id": "c07-w04-b26",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11688,6 +13328,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b26"
   },
   {
+    "id": "c07-w04-b27",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11700,6 +13341,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b27"
   },
   {
+    "id": "c07-w04-b28",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11712,6 +13354,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b28"
   },
   {
+    "id": "c07-w04-b29",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11724,6 +13367,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b29"
   },
   {
+    "id": "c07-w04-b30",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11736,6 +13380,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w04-b30"
   },
   {
+    "id": "c07-w04:form:서식7",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11748,6 +13393,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식7"
   },
   {
+    "id": "c07-w04:form:서식8",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11760,6 +13406,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식8"
   },
   {
+    "id": "c07-w04:form:서식9",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11772,6 +13419,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식9"
   },
   {
+    "id": "c07-w04:form:서식10",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11784,6 +13432,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식10"
   },
   {
+    "id": "c07-w05",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11796,6 +13445,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c07-w05"
   },
   {
+    "id": "c07-w05-b1",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11808,6 +13458,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w05-b1"
   },
   {
+    "id": "c07-w05-b2",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11820,6 +13471,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w05-b2"
   },
   {
+    "id": "c07-w05-b3",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11832,6 +13484,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w05-b3"
   },
   {
+    "id": "c07-w05-b4",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11844,6 +13497,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w05-b4"
   },
   {
+    "id": "c07-w05-b5",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11856,6 +13510,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w05-b5"
   },
   {
+    "id": "c07-w05-b6",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11868,6 +13523,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w05-b6"
   },
   {
+    "id": "c07-w05-b7",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11880,6 +13536,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w05-b7"
   },
   {
+    "id": "c07-w05-b8",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11892,6 +13549,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w05-b8"
   },
   {
+    "id": "c07-w05-b9",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11904,6 +13562,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w05-b9"
   },
   {
+    "id": "c07-w05-b10",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11916,6 +13575,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w05-b10"
   },
   {
+    "id": "c07-w05-b11",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11928,6 +13588,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w05-b11"
   },
   {
+    "id": "c07-w05-b12",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11940,6 +13601,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w05-b12"
   },
   {
+    "id": "c07-w05-b13",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11952,6 +13614,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w05-b13"
   },
   {
+    "id": "c07-w05-b14",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11964,6 +13627,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w05-b14"
   },
   {
+    "id": "c07-w05-b15",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11976,6 +13640,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w05-b15"
   },
   {
+    "id": "c07-w06",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -11988,6 +13653,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c07-w06"
   },
   {
+    "id": "c07-w06-b1",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -12000,6 +13666,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w06-b1"
   },
   {
+    "id": "c07-w06-b2",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -12012,6 +13679,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w06-b2"
   },
   {
+    "id": "c07-w06-b3",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -12024,6 +13692,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w06-b3"
   },
   {
+    "id": "c07-w06-b4",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -12036,6 +13705,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w06-b4"
   },
   {
+    "id": "c07-w06-b5",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -12048,6 +13718,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w06-b5"
   },
   {
+    "id": "c07-w06-b6",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -12060,6 +13731,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w06-b6"
   },
   {
+    "id": "c07-w06-b7",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -12072,6 +13744,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w06-b7"
   },
   {
+    "id": "c07-w06-b8",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -12084,6 +13757,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w06-b8"
   },
   {
+    "id": "c07-w06-b9",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -12096,6 +13770,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w06-b9"
   },
   {
+    "id": "c07-w06-b10",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -12108,6 +13783,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w06-b10"
   },
   {
+    "id": "c07-w06-b11",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -12120,6 +13796,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w06-b11"
   },
   {
+    "id": "c07-w06-b12",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -12132,6 +13809,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w06-b12"
   },
   {
+    "id": "c07-w06-b13",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -12144,6 +13822,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w06-b13"
   },
   {
+    "id": "c07-w06-b14",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -12156,6 +13835,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w06-b14"
   },
   {
+    "id": "c07-w06-b15",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -12168,6 +13848,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w06-b15"
   },
   {
+    "id": "c07-w06-b16",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -12180,6 +13861,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w06-b16"
   },
   {
+    "id": "c07-w06-b17",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -12192,6 +13874,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c07-w06-b17"
   },
   {
+    "id": "c07-w06:form:서식2",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -12204,6 +13887,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식2"
   },
   {
+    "id": "c07-w06:form:서식3",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -12216,6 +13900,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식3"
   },
   {
+    "id": "c07-w06:form:서식4",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -12228,6 +13913,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식4"
   },
   {
+    "id": "c07-w06:form:서식5",
     "chapterId": "07",
     "chapterLabel": "제7편",
     "chapterTitle": "공무원 보수",
@@ -12240,6 +13926,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식5"
   },
   {
+    "id": "c08-w00",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12253,6 +13940,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c08-w00-b1",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12266,6 +13954,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c08-w01",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12278,6 +13967,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c08-w01"
   },
   {
+    "id": "c08-w01-b1",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12290,6 +13980,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w01-b1"
   },
   {
+    "id": "c08-w01-b2",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12302,6 +13993,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w01-b2"
   },
   {
+    "id": "c08-w01-b3",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12314,30 +14006,63 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w01-b3"
   },
   {
+    "id": "c08-w01-b4~1",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
     "type": "매뉴얼 원문",
     "workTitle": "교육공무직원 개념",
-    "title": "2. 교육공무직원의 분류",
+    "title": "2. 교육공무직원의 분류 › 1 전북특별자치도교육감 소속 교육공무직원 관리규정 무기계약노동자 기간의 정함이 없는 노",
     "description": "순 분 류 기 준 분 류 내 용 1 전북특별자치도교육감 소속 교육공무직원 관리규정 무기계약노동자 기간의 정함이 없는 노동계약 체결 노동자 기간제노동자 기간의 정함이 있는 노동계약 체결 노동자 ※ 기간제 및 단시간근로자 보호 등에 관한 법률 제2조제1호에 따른 기간제노동자 단시간노동자 사업장에서 같은 종류 업무에 종사하는 통상 노동자의 1주 동안의 소정 노동시간에 비하여 짧은 노동자 초단시간노동자 4주간을 평균하여 1주간의 소정노동시간이 15시간 미만 노동자 2…",
-    "text": "교육공무직원 개념\n2. 교육공무직원의 분류\n순 분 류 기 준 분 류 내 용\n1 전북특별자치도교육감 소속 교육공무직원 관리규정 무기계약노동자 기간의 정함이 없는 노동계약 체결 노동자\n기간제노동자 기간의 정함이 있는 노동계약 체결 노동자 ※ 기간제 및 단시간근로자 보호 등에 관한 법률 제2조제1호에 따른 기간제노동자\n단시간노동자 사업장에서 같은 종류 업무에 종사하는 통상 노동자의 1주 동안의 소정 노동시간에 비하여 짧은 노동자\n초단시간노동자 4주간을 평균하여 1주간의 소정노동시간이 15시간 미만 노동자\n2 노동형태에 따른 분류 (전북특별자치도교육청 / 전북학교비정규직 연대회의 단체협약서) 상시전일노동자 (주40시간, 상시근무) 영양사, 사서, 교무실무사, 구 학부모회직원, 사무실무사, 과학실무사, 전산실무사, 행정실무사, 수영강사, 과학문화해설사, 특수행정실무사(기관) 등\n방학 중 비상시 노동자 (주40시간, 방학 중 비근무) 조리실무사, 특수교육지도사, 특수행정실무사(학교) 등\n시간제 노동자 (주40시간 미만) 급식보조, 통학버스안전지도사, 돌봄전담사, 늘봄실무사 등\n3 기본급 지급유형에 따른 분류 (교육공무직원 종합운영계획) Ⅰ유형 학부모지원전문가, 사서, 영양사, 교육복지사 등\nⅡ유형 교무실무사, 조리실무사, 특수교육지도사 등\nⅡ유형 시간비례 노동자 급식보조, 통학버스안전지도사 등\n임금Ⅱ유형의 기본급 시간비례+복지3종+ 정기상여금, 가족수당 미화원, 경비원, 시설관리원 ※ 복지 3종: 명절휴가비, 급식비, 맞춤형복지비 ※ 정기상여금 연 50만원, 가족수당(공무원 준용)\n사업부서의 사업계획 구 학부모회직원(호봉제), 사감 등\n4 정원 및 채용승인에 따른 분류 정원관리직종 상시, 지속적 업무를 하는 직종으로 정원 변동 시 정원 승인 필요 ※ 전북특별자치도교육청 교육공무직원 정원관리 규정 별표 참고\n한시정원직종 현원(무기계약자)만 인정되는 정원 직종으로 자연감소 등의 원인으로 결원이 발생해도 충원할 수 없음\n채용직종 무기계약 대상 직종이 아닌 정원 외 관리직종으로 계약기간 3개월 이상 교육공무직원을 채용 시 승인 요청 필요",
+    "text": "교육공무직원 개념\n2. 교육공무직원의 분류\n순 분 류 기 준 분 류 내 용\n1 전북특별자치도교육감 소속 교육공무직원 관리규정 무기계약노동자 기간의 정함이 없는 노동계약 체결 노동자\n기간제노동자 기간의 정함이 있는 노동계약 체결 노동자 ※ 기간제 및 단시간근로자 보호 등에 관한 법률 제2조제1호에 따른 기간제노동자\n단시간노동자 사업장에서 같은 종류 업무에 종사하는 통상 노동자의 1주 동안의 소정 노동시간에 비하여 짧은 노동자\n초단시간노동자 4주간을 평균하여 1주간의 소정노동시간이 15시간 미만 노동자\n2 노동형태에 따른 분류 (전북특별자치도교육청 / 전북학교비정규직 연대회의 단체협약서) 상시전일노동자 (주40시간, 상시근무) 영양사, 사서, 교무실무사, 구 학부모회직원, 사무실무사, 과학실무사, 전산실무사, 행정실무사, 수영강사, 과학문화해설사, 특수행정실무사(기관) 등\n방학 중 비상시 노동자 (주40시간, 방학 중 비근무) 조리실무사, 특수교육지도사, 특수행정실무사(학교) 등\n시간제 노동자 (주40시간 미만) 급식보조, 통학버스안전지도사, 돌봄전담사, 늘봄실무사 등\n3 기본급 지급유형에 따른 분류 (교육공무직원 종합운영계획) Ⅰ유형 학부모지원전문가, 사서, 영양사, 교육복지사 등",
     "workId": "c08-w01",
-    "blockId": "c08-w01-b4"
+    "blockId": "c08-w01-b4",
+    "anchor": "1전북특별자치도교육감소속교육공무직원관리규정무"
   },
   {
+    "id": "c08-w01-b4~2",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
     "type": "매뉴얼 원문",
     "workTitle": "교육공무직원 개념",
-    "title": "3. 용어 정의",
-    "description": "용어 정 의 관리총괄부서 ◦교육공무직원 관련 업무를 총괄하고 교육공무직원을 보호하기 위한 노동조건, 복무 기준 등에 대한 종합적인 관리계획을 수립하며, 사업부서별 인력 운영에 대한 조정 역할을 담당하는 도교육청 소관부서 사업부서 ◦부서의 사업과 관련된 교육공무직원의 정원, 배치기준, 업무분장, 임금지급 등에 관한 구체적인 운영 계획을 수립하고 시행하는 도교육청 소관부서 채용기관 ◦교육공무직원의 임용 또는 전보나 교류 등에 따른 인사를 실시하는 각급 교육기관 운영…",
-    "text": "교육공무직원 개념\n3. 용어 정의\n용어 정 의\n관리총괄부서 ◦교육공무직원 관련 업무를 총괄하고 교육공무직원을 보호하기 위한 노동조건, 복무 기준 등에 대한 종합적인 관리계획을 수립하며, 사업부서별 인력 운영에 대한 조정 역할을 담당하는 도교육청 소관부서\n사업부서 ◦부서의 사업과 관련된 교육공무직원의 정원, 배치기준, 업무분장, 임금지급 등에 관한 구체적인 운영 계획을 수립하고 시행하는 도교육청 소관부서\n채용기관 ◦교육공무직원의 임용 또는 전보나 교류 등에 따른 인사를 실시하는 각급 교육기관\n운영기관 ◦교육공무직원의 업무와 복무를 직접 지휘하고 관리하는 각급 교육기관\n각급 교육기관 ◦전북특별자치도교육감 소속 도교육청 각 부서, 직속기관, 교육지원청(소속기관 포함), 공립학교\n교육공무직원 ◦채용기관의 장과 사법적인 노동계약을 체결하고 각급 교육기관에서 교육행정 또는 교육활동 지원 업무 등의 실무를 담당하는 노동자 ▸(무기계약노동자) 기간의 정함이 없는 노동계약을 체결한 노동자 ▸(기간제노동자) 기간의 정함이 있는 노동계약을 체결한 노동자 ▸(단시간노동자) 1주 동안의 소정노동시간이 그 사업장에서 같은 종류의 업무에 종사하는 통상 노동자의 1주 동안의 소정노동시간에 비하여 짧은 노동자 ▸(초단시간노동자) 4주간을 평균하여 1주간의 소정노동시간이 15시간 미만인 노동자\n정원직종 ◦상시․지속적 업무를 하는 처음부터 정규직인 무기계약 대상 직종 ▸정원의 증․감 변동 시 정원 승인 요청\n한시정원직종 ◦현원(무기계약자)만 인정되는 한시정원 직종 ※ 퇴직 등 자연감소로 결원이 발생해도 충원 금지, 퇴직 시까지만 현원 유지\n기간제채용 직종 ◦일정한 기간이 정해진 기간제 노동자(무기계약 대상 아님) ▸도교육청 사업부서에서 사업추진을 위해 계약기간 3개월 이상 교육공무직원 채용 필요 시 기간제 채용 승인 요청\n인력관리 부서협의 ◦사업부서의 교육공무직원 정원 직종 책정 및 증․감과 기간제 채용 직종 승인 요구 등에 따른 적정 여부 협의․조정\n상시·지속적 업무 ◦연중 9개월 이상 계속되고, 향후 2년 이상 계속될 것으로 예상되는 업무",
+    "title": "2. 교육공무직원의 분류 › Ⅱ유형 교무실무사, 조리실무사, 특수교육지도사 등",
+    "description": "Ⅱ유형 교무실무사, 조리실무사, 특수교육지도사 등 Ⅱ유형 시간비례 노동자 급식보조, 통학버스안전지도사 등 임금Ⅱ유형의 기본급 시간비례+복지3종+ 정기상여금, 가족수당 미화원, 경비원, 시설관리원 ※ 복지 3종: 명절휴가비, 급식비, 맞춤형복지비 ※ 정기상여금 연 50만원, 가족수당(공무원 준용) 사업부서의 사업계획 구 학부모회직원(호봉제), 사감 등 4 정원 및 채용승인에 따른 분류 정원관리직종 상시, 지속적 업무를 하는 직종으로 정원 변동 시 정원 승인 필요…",
+    "text": "교육공무직원 개념\n2. 교육공무직원의 분류\nⅡ유형 교무실무사, 조리실무사, 특수교육지도사 등\nⅡ유형 시간비례 노동자 급식보조, 통학버스안전지도사 등\n임금Ⅱ유형의 기본급 시간비례+복지3종+ 정기상여금, 가족수당 미화원, 경비원, 시설관리원 ※ 복지 3종: 명절휴가비, 급식비, 맞춤형복지비 ※ 정기상여금 연 50만원, 가족수당(공무원 준용)\n사업부서의 사업계획 구 학부모회직원(호봉제), 사감 등\n4 정원 및 채용승인에 따른 분류 정원관리직종 상시, 지속적 업무를 하는 직종으로 정원 변동 시 정원 승인 필요 ※ 전북특별자치도교육청 교육공무직원 정원관리 규정 별표 참고\n한시정원직종 현원(무기계약자)만 인정되는 정원 직종으로 자연감소 등의 원인으로 결원이 발생해도 충원할 수 없음\n채용직종 무기계약 대상 직종이 아닌 정원 외 관리직종으로 계약기간 3개월 이상 교육공무직원을 채용 시 승인 요청 필요",
     "workId": "c08-w01",
-    "blockId": "c08-w01-b5"
+    "blockId": "c08-w01-b4",
+    "anchor": "Ⅱ유형교무실무사,조리실무사,특수교육지도사등"
   },
   {
+    "id": "c08-w01-b5~1",
+    "chapterId": "08",
+    "chapterLabel": "제8편",
+    "chapterTitle": "교육공무직원",
+    "type": "매뉴얼 원문",
+    "workTitle": "교육공무직원 개념",
+    "title": "3. 용어 정의 › 관리총괄부서 ◦교육공무직원 관련 업무를 총괄하고 교육공무직원을 보호하기 위한 노동조건,",
+    "description": "용어 정 의 관리총괄부서 ◦교육공무직원 관련 업무를 총괄하고 교육공무직원을 보호하기 위한 노동조건, 복무 기준 등에 대한 종합적인 관리계획을 수립하며, 사업부서별 인력 운영에 대한 조정 역할을 담당하는 도교육청 소관부서 사업부서 ◦부서의 사업과 관련된 교육공무직원의 정원, 배치기준, 업무분장, 임금지급 등에 관한 구체적인 운영 계획을 수립하고 시행하는 도교육청 소관부서 채용기관 ◦교육공무직원의 임용 또는 전보나 교류 등에 따른 인사를 실시하는 각급 교육기관 운영…",
+    "text": "교육공무직원 개념\n3. 용어 정의\n용어 정 의\n관리총괄부서 ◦교육공무직원 관련 업무를 총괄하고 교육공무직원을 보호하기 위한 노동조건, 복무 기준 등에 대한 종합적인 관리계획을 수립하며, 사업부서별 인력 운영에 대한 조정 역할을 담당하는 도교육청 소관부서\n사업부서 ◦부서의 사업과 관련된 교육공무직원의 정원, 배치기준, 업무분장, 임금지급 등에 관한 구체적인 운영 계획을 수립하고 시행하는 도교육청 소관부서\n채용기관 ◦교육공무직원의 임용 또는 전보나 교류 등에 따른 인사를 실시하는 각급 교육기관\n운영기관 ◦교육공무직원의 업무와 복무를 직접 지휘하고 관리하는 각급 교육기관\n각급 교육기관 ◦전북특별자치도교육감 소속 도교육청 각 부서, 직속기관, 교육지원청(소속기관 포함), 공립학교",
+    "workId": "c08-w01",
+    "blockId": "c08-w01-b5",
+    "anchor": "관리총괄부서◦교육공무직원관련업무를총괄하고교육"
+  },
+  {
+    "id": "c08-w01-b5~2",
+    "chapterId": "08",
+    "chapterLabel": "제8편",
+    "chapterTitle": "교육공무직원",
+    "type": "매뉴얼 원문",
+    "workTitle": "교육공무직원 개념",
+    "title": "3. 용어 정의 › 교육공무직원 ◦채용기관의 장과 사법적인 노동계약을 체결하고 각급 교육기관에서 교육행정",
+    "description": "교육공무직원 ◦채용기관의 장과 사법적인 노동계약을 체결하고 각급 교육기관에서 교육행정 또는 교육활동 지원 업무 등의 실무를 담당하는 노동자 ▸(무기계약노동자) 기간의 정함이 없는 노동계약을 체결한 노동자 ▸(기간제노동자) 기간의 정함이 있는 노동계약을 체결한 노동자 ▸(단시간노동자) 1주 동안의 소정노동시간이 그 사업장에서 같은 종류의 업무에 종사하는 통상 노동자의 1주 동안의 소정노동시간에 비하여 짧은 노동자 ▸(초단시간노동자) 4주간을 평균하여 1주간의 소정…",
+    "text": "교육공무직원 개념\n3. 용어 정의\n교육공무직원 ◦채용기관의 장과 사법적인 노동계약을 체결하고 각급 교육기관에서 교육행정 또는 교육활동 지원 업무 등의 실무를 담당하는 노동자 ▸(무기계약노동자) 기간의 정함이 없는 노동계약을 체결한 노동자 ▸(기간제노동자) 기간의 정함이 있는 노동계약을 체결한 노동자 ▸(단시간노동자) 1주 동안의 소정노동시간이 그 사업장에서 같은 종류의 업무에 종사하는 통상 노동자의 1주 동안의 소정노동시간에 비하여 짧은 노동자 ▸(초단시간노동자) 4주간을 평균하여 1주간의 소정노동시간이 15시간 미만인 노동자\n정원직종 ◦상시․지속적 업무를 하는 처음부터 정규직인 무기계약 대상 직종 ▸정원의 증․감 변동 시 정원 승인 요청\n한시정원직종 ◦현원(무기계약자)만 인정되는 한시정원 직종 ※ 퇴직 등 자연감소로 결원이 발생해도 충원 금지, 퇴직 시까지만 현원 유지\n기간제채용 직종 ◦일정한 기간이 정해진 기간제 노동자(무기계약 대상 아님) ▸도교육청 사업부서에서 사업추진을 위해 계약기간 3개월 이상 교육공무직원 채용 필요 시 기간제 채용 승인 요청\n인력관리 부서협의 ◦사업부서의 교육공무직원 정원 직종 책정 및 증․감과 기간제 채용 직종 승인 요구 등에 따른 적정 여부 협의․조정\n상시·지속적 업무 ◦연중 9개월 이상 계속되고, 향후 2년 이상 계속될 것으로 예상되는 업무",
+    "workId": "c08-w01",
+    "blockId": "c08-w01-b5",
+    "anchor": "교육공무직원◦채용기관의장과사법적인노동계약을체"
+  },
+  {
+    "id": "c08-w02",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12350,6 +14075,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c08-w02"
   },
   {
+    "id": "c08-w02-b1",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12362,6 +14088,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w02-b1"
   },
   {
+    "id": "c08-w02-b2",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12374,6 +14101,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w02-b2"
   },
   {
+    "id": "c08-w02-b3",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12386,6 +14114,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w02-b3"
   },
   {
+    "id": "c08-w02-b4",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12398,6 +14127,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w02-b4"
   },
   {
+    "id": "c08-w02-b5",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12410,6 +14140,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w02-b5"
   },
   {
+    "id": "c08-w02-b6",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12422,6 +14153,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w02-b6"
   },
   {
+    "id": "c08-w02-b7",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12434,6 +14166,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w02-b7"
   },
   {
+    "id": "c08-w02-b8",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12446,6 +14179,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w02-b8"
   },
   {
+    "id": "c08-w02-b9",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12458,6 +14192,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w02-b9"
   },
   {
+    "id": "c08-w02-b10",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12470,6 +14205,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w02-b10"
   },
   {
+    "id": "c08-w02-b11",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12482,6 +14218,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w02-b11"
   },
   {
+    "id": "c08-w02-b12",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12494,6 +14231,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w02-b12"
   },
   {
+    "id": "c08-w03",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12506,6 +14244,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c08-w03"
   },
   {
+    "id": "c08-w03-b1",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12518,6 +14257,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w03-b1"
   },
   {
+    "id": "c08-w03-b2",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12530,6 +14270,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w03-b2"
   },
   {
+    "id": "c08-w03-b3",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12542,6 +14283,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w03-b3"
   },
   {
+    "id": "c08-w03-b4",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12554,42 +14296,91 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w03-b4"
   },
   {
+    "id": "c08-w03-b5~1",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
     "type": "매뉴얼 원문",
     "workTitle": "교육공무직원 채용",
-    "title": "2. 채용 구분",
+    "title": "2. 채용 구분 › ▸도교육청 주관 신규채용 절차",
     "description": "▸도교육청 주관 신규채용 절차 구 분 도교육청 주관 신규채용 대상 ◦교육장 관리대상 직종 중 정년퇴직 등으로 예상되는 결원인력 중 채용기관의 위탁을 받은 인원 ※채용기관은 사업부서의 결원보충 승인절차 이행 불필요 시험진행 ◦채용을 위탁받은 부서(노사협력과)와 직종 소관 사업부서 간 협의를 통해 채용직종 및 인원, 모집방법, 응시자격 등 결정 결과보고 ◦사업부서는 채용기관에 최종합격자 안내 ◦채용기관은 계약체결 및 근무지 발령 후 5일 이내 사업부서에 채용결과 보…",
-    "text": "교육공무직원 채용\n2. 채용 구분\n▸도교육청 주관 신규채용 절차\n구 분 도교육청 주관 신규채용\n대상 ◦교육장 관리대상 직종 중 정년퇴직 등으로 예상되는 결원인력 중 채용기관의 위탁을 받은 인원 ※채용기관은 사업부서의 결원보충 승인절차 이행 불필요\n시험진행 ◦채용을 위탁받은 부서(노사협력과)와 직종 소관 사업부서 간 협의를 통해 채용직종 및 인원, 모집방법, 응시자격 등 결정\n결과보고 ◦사업부서는 채용기관에 최종합격자 안내 ◦채용기관은 계약체결 및 근무지 발령 후 5일 이내 사업부서에 채용결과 보고\n사업부서 ⇨ 채용기관 (채용 위탁) ⇨ 도교육청 (노사협력과) ⇨ 사업부서 ⇨ 채용기관\n인사교류 및 중기계획 반영 후 신규충원 인원 검토 지역별․직종별 충원인력 요구 채용계획수립, 공고, 채용시험, 합격자 통보 등 최종합격자 채용기관에 안내 계약체결 근무지 발령\n▸각급 교육기관 주관 신규채용 절차\n구 분 각급 교육기관 주관 신규채용\n승인절차 ◦정원 범위 내 현원 퇴직 등으로 결원이 발생하는 경우 반드시 사업부서에 사전 결원 보충 승인요청하여 사전 승인 받은 후 채용절차 진행 ※촉탁직 노동자(시설관리원, 미화원, 경비원)의 의원면직, 평가 결과 부적합 등으로 결원이 발생하여 무기계약 노동자(55세 이상, 정년 65세)로 채용할 경우도 해당 사업부서에 결원보충 승인 요청 절차 이행\n시험진행 ◦각급 교육기관에서 관리 직종을 대상으로 서류전형, 필기시험, 실기시험 중 하나 이상과 면접시험을 통하여 채용\n결과보고 ◦채용일로부터 5일 이내 사업부서에 채용결과 보고 ※ 채용승인을 받은 기간제 노동자도 사업부서에 채용결과 보고\n채용기관 ⇨ 사업부서 ⇨ 채용기관 ⇨ 사업부서\n결원보충 승인요청 ‣각급학교→교육지원청 ‣교육지원청, 직속기관 결원요청 검토 후 승인(공문) →채용기관 채용(노동계약) 채용결과보고(5일 이내) →사업부서 채용결과보고(반기별) →관리총괄부서\n▸결원보충 승인절차\n채용기관 ⇨ 사업부서 ⇨ 채용기관 ⇨ 사업부서\n결원보충 승인요청(공문) 각급 학교 / ⇨ / 교육 지원청 / ⇨ 교육지원청 직속기관 / ⇨ 결원요청 검토 후 승인(공문) ⇩ 채용기관 채용(노동계약), 채용결과보고(5일이내) ⇩ 사업부서 채용결과보고 (3월말, 9월말) ⇩ 관리총괄부서",
+    "text": "교육공무직원 채용\n2. 채용 구분\n▸도교육청 주관 신규채용 절차\n구 분 도교육청 주관 신규채용\n대상 ◦교육장 관리대상 직종 중 정년퇴직 등으로 예상되는 결원인력 중 채용기관의 위탁을 받은 인원 ※채용기관은 사업부서의 결원보충 승인절차 이행 불필요\n시험진행 ◦채용을 위탁받은 부서(노사협력과)와 직종 소관 사업부서 간 협의를 통해 채용직종 및 인원, 모집방법, 응시자격 등 결정\n결과보고 ◦사업부서는 채용기관에 최종합격자 안내 ◦채용기관은 계약체결 및 근무지 발령 후 5일 이내 사업부서에 채용결과 보고\n사업부서 ⇨ 채용기관 (채용 위탁) ⇨ 도교육청 (노사협력과) ⇨ 사업부서 ⇨ 채용기관\n인사교류 및 중기계획 반영 후 신규충원 인원 검토 지역별․직종별 충원인력 요구 채용계획수립, 공고, 채용시험, 합격자 통보 등 최종합격자 채용기관에 안내 계약체결 근무지 발령\n▸각급 교육기관 주관 신규채용 절차\n구 분 각급 교육기관 주관 신규채용",
     "workId": "c08-w03",
-    "blockId": "c08-w03-b5"
+    "blockId": "c08-w03-b5",
+    "anchor": "▸도교육청주관신규채용절차"
   },
   {
+    "id": "c08-w03-b5~2",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
     "type": "매뉴얼 원문",
     "workTitle": "교육공무직원 채용",
-    "title": "3. 채용 절차",
+    "title": "2. 채용 구분 › 승인절차 ◦정원 범위 내 현원 퇴직 등으로 결원이 발생하는 경우 반드시 사업부서에 사전",
+    "description": "승인절차 ◦정원 범위 내 현원 퇴직 등으로 결원이 발생하는 경우 반드시 사업부서에 사전 결원 보충 승인요청하여 사전 승인 받은 후 채용절차 진행 ※촉탁직 노동자(시설관리원, 미화원, 경비원)의 의원면직, 평가 결과 부적합 등으로 결원이 발생하여 무기계약 노동자(55세 이상, 정년 65세)로 채용할 경우도 해당 사업부서에 결원보충 승인 요청 절차 이행 시험진행 ◦각급 교육기관에서 관리 직종을 대상으로 서류전형, 필기시험, 실기시험 중 하나 이상과 면접시험을 통하여…",
+    "text": "교육공무직원 채용\n2. 채용 구분\n승인절차 ◦정원 범위 내 현원 퇴직 등으로 결원이 발생하는 경우 반드시 사업부서에 사전 결원 보충 승인요청하여 사전 승인 받은 후 채용절차 진행 ※촉탁직 노동자(시설관리원, 미화원, 경비원)의 의원면직, 평가 결과 부적합 등으로 결원이 발생하여 무기계약 노동자(55세 이상, 정년 65세)로 채용할 경우도 해당 사업부서에 결원보충 승인 요청 절차 이행\n시험진행 ◦각급 교육기관에서 관리 직종을 대상으로 서류전형, 필기시험, 실기시험 중 하나 이상과 면접시험을 통하여 채용\n결과보고 ◦채용일로부터 5일 이내 사업부서에 채용결과 보고 ※ 채용승인을 받은 기간제 노동자도 사업부서에 채용결과 보고\n채용기관 ⇨ 사업부서 ⇨ 채용기관 ⇨ 사업부서\n결원보충 승인요청 ‣각급학교→교육지원청 ‣교육지원청, 직속기관 결원요청 검토 후 승인(공문) →채용기관 채용(노동계약) 채용결과보고(5일 이내) →사업부서 채용결과보고(반기별) →관리총괄부서\n▸결원보충 승인절차\n채용기관 ⇨ 사업부서 ⇨ 채용기관 ⇨ 사업부서\n결원보충 승인요청(공문) 각급 학교 / ⇨ / 교육 지원청 / ⇨ 교육지원청 직속기관 / ⇨ 결원요청 검토 후 승인(공문) ⇩ 채용기관 채용(노동계약), 채용결과보고(5일이내) ⇩ 사업부서 채용결과보고 (3월말, 9월말) ⇩ 관리총괄부서",
+    "workId": "c08-w03",
+    "blockId": "c08-w03-b5",
+    "anchor": "승인절차◦정원범위내현원퇴직등으로결원이발생하는"
+  },
+  {
+    "id": "c08-w03-b6~1",
+    "chapterId": "08",
+    "chapterLabel": "제8편",
+    "chapterTitle": "교육공무직원",
+    "type": "매뉴얼 원문",
+    "workTitle": "교육공무직원 채용",
+    "title": "3. 채용 절차 › 사전승인 ◦ 정원직종은 각 기관의 정원 증감 발생 시 정원승인 절차 이행 ◦ 3개월이상",
     "description": "절 차 내 용 사전승인 ◦ 정원직종은 각 기관의 정원 증감 발생 시 정원승인 절차 이행 ◦ 3개월이상 기간제 노동자 채용 시 채용승인 절차 이행 ⇓ 채용계획 수립 ◦ 채용시기·채용규모, 모집단위, 지원자격, 채용조건, 전형단계별 평가방법, 선발배수, 우대사항 등을 포함하여 채용계획 수립 ◦ 채용기관의 장은 채용목적, 채용인원, 채용절차 및 기준 등 채용 전반에 대한 주요사항을 사업부서와 사전협의 ⇓ 인사위원회 심의 ◦ 채용기관(도교육청, 직속기관, 교육지원청,…",
-    "text": "교육공무직원 채용\n3. 채용 절차\n절 차 내 용\n사전승인 ◦ 정원직종은 각 기관의 정원 증감 발생 시 정원승인 절차 이행 ◦ 3개월이상 기간제 노동자 채용 시 채용승인 절차 이행\n⇓\n채용계획 수립 ◦ 채용시기·채용규모, 모집단위, 지원자격, 채용조건, 전형단계별 평가방법, 선발배수, 우대사항 등을 포함하여 채용계획 수립 ◦ 채용기관의 장은 채용목적, 채용인원, 채용절차 및 기준 등 채용 전반에 대한 주요사항을 사업부서와 사전협의\n⇓\n인사위원회 심의 ◦ 채용기관(도교육청, 직속기관, 교육지원청, 학교)은 노동자의 신규채용 관련 사항(채용계획 및 공고문 등)을 채용기관 인사위원회에서 심의 ◦ 촉탁직 노동자 재고용 여부 결정 시 인사위원회 심의\n⇓\n채용공고 ◦ 원서접수 마감일 전 5일 이상 누리집 등 공고(초일은 불산입) ◦ 채용공고 후 내용 변경의 경우 원서접수 마감일 3일 전까지 공고 단, 경미한 오류사항 정정 및 응시자에게 불리한 변경이 아닌 경우 인사위원회 심의·의결 생략 ※ 채용공고 생략의 경우 등 예외 사항은 공정채용규칙 제13조제3항~제5항 참고 ◦ 기간제노동자 채용 시 공고문 및 계약서에 아래 사항 표기 필수 - 계약기간 만료 시 원칙적으로 계약 종료 - 대체 노동자는 계약 중이라도 원 노동자가 복직하거나 원 노동자 퇴직에 따른 무기계약직 노동자 발령 시 계약이 종료됨을 반드시 표기 ◦ 교육공무직원 관리규정 제16조제1항을 공고문에 안내하고 계약기간 중 결격사유 확인 시 고용관계 종료\n⇓\n채용시험 ◦ 필기시험, 실기시험, 서류전형 하나 이상과 면접시험을 통하여 채용 ◦ 심사위원 3명 이상 선정(3분의1 이상 외부위원 위촉) 단, 응시요건 적부여부만 판단하는 서류전형의 경우 내부위원만으로 위촉 가능\n⇓\n합격자 공고 ◦ 최종합격자 발표, 채용구비서류 제출 안내\n⇓\n결격사유 조회 ◦ 성범죄 · 아동학대 범죄 전력 조회 등\n⇓\n노동계약 ◦ 노동계약서 작성 및 교부",
+    "text": "교육공무직원 채용\n3. 채용 절차\n절 차 내 용\n사전승인 ◦ 정원직종은 각 기관의 정원 증감 발생 시 정원승인 절차 이행 ◦ 3개월이상 기간제 노동자 채용 시 채용승인 절차 이행\n⇓\n채용계획 수립 ◦ 채용시기·채용규모, 모집단위, 지원자격, 채용조건, 전형단계별 평가방법, 선발배수, 우대사항 등을 포함하여 채용계획 수립 ◦ 채용기관의 장은 채용목적, 채용인원, 채용절차 및 기준 등 채용 전반에 대한 주요사항을 사업부서와 사전협의\n⇓\n인사위원회 심의 ◦ 채용기관(도교육청, 직속기관, 교육지원청, 학교)은 노동자의 신규채용 관련 사항(채용계획 및 공고문 등)을 채용기관 인사위원회에서 심의 ◦ 촉탁직 노동자 재고용 여부 결정 시 인사위원회 심의\n⇓",
     "workId": "c08-w03",
-    "blockId": "c08-w03-b6"
+    "blockId": "c08-w03-b6",
+    "anchor": "사전승인◦정원직종은각기관의정원증감발생시정원승"
   },
   {
+    "id": "c08-w03-b6~2",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
     "type": "매뉴얼 원문",
     "workTitle": "교육공무직원 채용",
-    "title": "4. 수습기간 운영",
-    "description": "▸운영방법 - 노동자 신규채용 시 발령일로부터 3개월 이내 수습기간 운영 - 수습기간 중 노동자의 근무태도 및 근무수행 능력이 불량한 때에는 부적격 사유를 제시하고 인사위원회 심의를 통하여 노동계약 해지 가능 - 채용공고 및 노동계약서 작성 시 수습기간 운영 명시(수습기간은 근속년수 포함) ※ 단, 기간제 노동자는 수습평가제도 적용 대상 아님 ※ 채용공고 및 노동계약서 작성 시(예시) 채용일로부터 3개월은 수습기간이며, 수습기간 중인 노동자는 평가를 통해 계속근…",
-    "text": "교육공무직원 채용\n4. 수습기간 운영\n▸운영방법\n- 노동자 신규채용 시 발령일로부터 3개월 이내 수습기간 운영\n- 수습기간 중 노동자의 근무태도 및 근무수행 능력이 불량한 때에는 부적격 사유를 제시하고 인사위원회 심의를 통하여 노동계약 해지 가능\n- 채용공고 및 노동계약서 작성 시 수습기간 운영 명시(수습기간은 근속년수 포함)\n※ 단, 기간제 노동자는 수습평가제도 적용 대상 아님\n※ 채용공고 및 노동계약서 작성 시(예시) 채용일로부터 3개월은 수습기간이며, 수습기간 중인 노동자는 평가를 통해 계속근로가 부적격하다고 인정되는 경우 노동계약 해지 가능\n▸수습평가 절차\n대 상 절 차\n각급기관 자체채용 노동자 ① (계획수립) 수습평가에 대한 자체계획 수립 - 평가위원회 구성, 평정결과전환기준, 평가 방법 등 ② (심사평가) 수습기간 만료일 15일전까지 평가위원회 개최하여 심사평가완료 ③ (평가결과 반영) - 기준점수 이상인 경우 수습기간 해제 - 기준점수 미만으로 노동계약 해지 대상일 경우 인사위원회 심의 후 해지통보\n교육장 관리대상 노동자 ① (계획수립) 채용기관(교육지원청)에서 수습평가에 대한 계획 수립 후 운영기관(학교 등)에 심사평가결과 요구 ② (심사평가) 운영기관에서 수습기간 만료일 15일전까지 심사평가 후 채용기관에 결과 제출 - 심사평가 결과가 부적격일 경우 관련 증빙자료를 반드시 첨부하여 제출 ③ (평가결과 반영) - 기준점수 이상인 경우는 채용기관에서 수습기간 만료일까지 수습기간 해제 후 운영기관장에게 통보 - 기준점수 미만 경우(노동 계약해지 대상일 경우)는 채용기관에서 인사위원회 심의하여 수습기간 만료일까지 노동계약 해지통보\n도교육청 사업부서 채용 노동자 ① (계획수립) 수습평가에 대한 자체계획 수립 - 평가위원 구성, 평정결과전환기준, 평가 방법 등 ② (심사평가) 수습기간 만료일 15일전까지 평가위원회 운영하여 심사평가 ③ (평가결과 반영) - 기준점수 이상인 경우 수습기간 해제 - 기준점수 미만으로 노동계약 해지 대상일 경우 도교육청 교육공무직원 인사위원회 심의 후 해지통보\n※ 수습평가일 이후더라도 수급기간 3개월 중 잔여 수급기간 내 부적격 사유가 발생한 경우 재평가 가능\n* 노동계약 해지 시에는 노동계약 해지 통보서를 노동자에게 통지하고 수령증을 반드시 보관",
+    "title": "3. 채용 절차 › 채용공고 ◦ 원서접수 마감일 전 5일 이상 누리집 등 공고(초일은 불산입) ◦ 채용공고",
+    "description": "채용공고 ◦ 원서접수 마감일 전 5일 이상 누리집 등 공고(초일은 불산입) ◦ 채용공고 후 내용 변경의 경우 원서접수 마감일 3일 전까지 공고 단, 경미한 오류사항 정정 및 응시자에게 불리한 변경이 아닌 경우 인사위원회 심의·의결 생략 ※ 채용공고 생략의 경우 등 예외 사항은 공정채용규칙 제13조제3항~제5항 참고 ◦ 기간제노동자 채용 시 공고문 및 계약서에 아래 사항 표기 필수 - 계약기간 만료 시 원칙적으로 계약 종료 - 대체 노동자는 계약 중이라도 원 노동…",
+    "text": "교육공무직원 채용\n3. 채용 절차\n채용공고 ◦ 원서접수 마감일 전 5일 이상 누리집 등 공고(초일은 불산입) ◦ 채용공고 후 내용 변경의 경우 원서접수 마감일 3일 전까지 공고 단, 경미한 오류사항 정정 및 응시자에게 불리한 변경이 아닌 경우 인사위원회 심의·의결 생략 ※ 채용공고 생략의 경우 등 예외 사항은 공정채용규칙 제13조제3항~제5항 참고 ◦ 기간제노동자 채용 시 공고문 및 계약서에 아래 사항 표기 필수 - 계약기간 만료 시 원칙적으로 계약 종료 - 대체 노동자는 계약 중이라도 원 노동자가 복직하거나 원 노동자 퇴직에 따른 무기계약직 노동자 발령 시 계약이 종료됨을 반드시 표기 ◦ 교육공무직원 관리규정 제16조제1항을 공고문에 안내하고 계약기간 중 결격사유 확인 시 고용관계 종료\n⇓\n채용시험 ◦ 필기시험, 실기시험, 서류전형 하나 이상과 면접시험을 통하여 채용 ◦ 심사위원 3명 이상 선정(3분의1 이상 외부위원 위촉) 단, 응시요건 적부여부만 판단하는 서류전형의 경우 내부위원만으로 위촉 가능\n⇓\n합격자 공고 ◦ 최종합격자 발표, 채용구비서류 제출 안내\n⇓\n결격사유 조회 ◦ 성범죄 · 아동학대 범죄 전력 조회 등\n⇓\n노동계약 ◦ 노동계약서 작성 및 교부",
     "workId": "c08-w03",
-    "blockId": "c08-w03-b7"
+    "blockId": "c08-w03-b6",
+    "anchor": "채용공고◦원서접수마감일전5일이상누리집등공고("
   },
   {
+    "id": "c08-w03-b7~1",
+    "chapterId": "08",
+    "chapterLabel": "제8편",
+    "chapterTitle": "교육공무직원",
+    "type": "매뉴얼 원문",
+    "workTitle": "교육공무직원 채용",
+    "title": "4. 수습기간 운영 › - 노동자 신규채용 시 발령일로부터 3개월 이내 수습기간 운영",
+    "description": "▸운영방법 - 노동자 신규채용 시 발령일로부터 3개월 이내 수습기간 운영 - 수습기간 중 노동자의 근무태도 및 근무수행 능력이 불량한 때에는 부적격 사유를 제시하고 인사위원회 심의를 통하여 노동계약 해지 가능 - 채용공고 및 노동계약서 작성 시 수습기간 운영 명시(수습기간은 근속년수 포함) ※ 단, 기간제 노동자는 수습평가제도 적용 대상 아님 ※ 채용공고 및 노동계약서 작성 시(예시) 채용일로부터 3개월은 수습기간이며, 수습기간 중인 노동자는 평가를 통해 계속근…",
+    "text": "교육공무직원 채용\n4. 수습기간 운영\n▸운영방법\n- 노동자 신규채용 시 발령일로부터 3개월 이내 수습기간 운영\n- 수습기간 중 노동자의 근무태도 및 근무수행 능력이 불량한 때에는 부적격 사유를 제시하고 인사위원회 심의를 통하여 노동계약 해지 가능\n- 채용공고 및 노동계약서 작성 시 수습기간 운영 명시(수습기간은 근속년수 포함)\n※ 단, 기간제 노동자는 수습평가제도 적용 대상 아님\n※ 채용공고 및 노동계약서 작성 시(예시) 채용일로부터 3개월은 수습기간이며, 수습기간 중인 노동자는 평가를 통해 계속근로가 부적격하다고 인정되는 경우 노동계약 해지 가능\n▸수습평가 절차\n대 상 절 차\n각급기관 자체채용 노동자 ① (계획수립) 수습평가에 대한 자체계획 수립 - 평가위원회 구성, 평정결과전환기준, 평가 방법 등 ② (심사평가) 수습기간 만료일 15일전까지 평가위원회 개최하여 심사평가완료 ③ (평가결과 반영) - 기준점수 이상인 경우 수습기간 해제 - 기준점수 미만으로 노동계약 해지 대상일 경우 인사위원회 심의 후 해지통보",
+    "workId": "c08-w03",
+    "blockId": "c08-w03-b7",
+    "anchor": "-노동자신규채용시발령일로부터3개월이내수습기간"
+  },
+  {
+    "id": "c08-w03-b7~2",
+    "chapterId": "08",
+    "chapterLabel": "제8편",
+    "chapterTitle": "교육공무직원",
+    "type": "매뉴얼 원문",
+    "workTitle": "교육공무직원 채용",
+    "title": "4. 수습기간 운영 › 교육장 관리대상 노동자 ① (계획수립) 채용기관(교육지원청)에서 수습평가에 대한 계획",
+    "description": "교육장 관리대상 노동자 ① (계획수립) 채용기관(교육지원청)에서 수습평가에 대한 계획 수립 후 운영기관(학교 등)에 심사평가결과 요구 ② (심사평가) 운영기관에서 수습기간 만료일 15일전까지 심사평가 후 채용기관에 결과 제출 - 심사평가 결과가 부적격일 경우 관련 증빙자료를 반드시 첨부하여 제출 ③ (평가결과 반영) - 기준점수 이상인 경우는 채용기관에서 수습기간 만료일까지 수습기간 해제 후 운영기관장에게 통보 - 기준점수 미만 경우(노동 계약해지 대상일 경우)…",
+    "text": "교육공무직원 채용\n4. 수습기간 운영\n교육장 관리대상 노동자 ① (계획수립) 채용기관(교육지원청)에서 수습평가에 대한 계획 수립 후 운영기관(학교 등)에 심사평가결과 요구 ② (심사평가) 운영기관에서 수습기간 만료일 15일전까지 심사평가 후 채용기관에 결과 제출 - 심사평가 결과가 부적격일 경우 관련 증빙자료를 반드시 첨부하여 제출 ③ (평가결과 반영) - 기준점수 이상인 경우는 채용기관에서 수습기간 만료일까지 수습기간 해제 후 운영기관장에게 통보 - 기준점수 미만 경우(노동 계약해지 대상일 경우)는 채용기관에서 인사위원회 심의하여 수습기간 만료일까지 노동계약 해지통보\n도교육청 사업부서 채용 노동자 ① (계획수립) 수습평가에 대한 자체계획 수립 - 평가위원 구성, 평정결과전환기준, 평가 방법 등 ② (심사평가) 수습기간 만료일 15일전까지 평가위원회 운영하여 심사평가 ③ (평가결과 반영) - 기준점수 이상인 경우 수습기간 해제 - 기준점수 미만으로 노동계약 해지 대상일 경우 도교육청 교육공무직원 인사위원회 심의 후 해지통보\n※ 수습평가일 이후더라도 수급기간 3개월 중 잔여 수급기간 내 부적격 사유가 발생한 경우 재평가 가능\n* 노동계약 해지 시에는 노동계약 해지 통보서를 노동자에게 통지하고 수령증을 반드시 보관",
+    "workId": "c08-w03",
+    "blockId": "c08-w03-b7",
+    "anchor": "교육장관리대상노동자①(계획수립)채용기관(교육"
+  },
+  {
+    "id": "c08-w03-b8",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12602,6 +14393,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w03-b8"
   },
   {
+    "id": "c08-w03-b9",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12614,6 +14406,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w03-b9"
   },
   {
+    "id": "c08-w03-b10",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12626,6 +14419,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w03-b10"
   },
   {
+    "id": "c08-w03-b11",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12638,6 +14432,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w03-b11"
   },
   {
+    "id": "c08-w03-b12",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12650,6 +14445,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w03-b12"
   },
   {
+    "id": "c08-w04",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12662,6 +14458,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c08-w04"
   },
   {
+    "id": "c08-w04-b1",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12674,6 +14471,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w04-b1"
   },
   {
+    "id": "c08-w04-b2",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12686,6 +14484,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w04-b2"
   },
   {
+    "id": "c08-w04-b3",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12698,6 +14497,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w04-b3"
   },
   {
+    "id": "c08-w04-b4",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12710,18 +14510,35 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w04-b4"
   },
   {
+    "id": "c08-w04-b5~1",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
     "type": "매뉴얼 원문",
     "workTitle": "교육공무직원 임금",
-    "title": "2. 보수유형",
+    "title": "2. 보수유형 › ▸근무연수에 따른 단일 보수체계를 반영한 교육공무직원 보수표에 따라 지급",
     "description": "▸근무연수에 따른 단일 보수체계를 반영한 교육공무직원 보수표에 따라 지급 ▸월급액 지급방법 구 분 상시 전일 노동자 방학 중 비상시 노동자 비고 학기 중 방학 중 학기 중 방학 중 기본급 전액지급 전액지급 전액지급 일할계산 근속수당 전액지급 전액지급 전액지급 전액지급 가족수당 전액지급 전액지급 전액지급 전액지급 면허가산수당 전액지급 전액지급 전액지급 일할계산 특수업무수당 전액지급 전액지급 전액지급 일할계산 특수직무수당 전액지급 일할계산 특별근무수당 전액지급 일할…",
-    "text": "교육공무직원 임금\n2. 보수유형\n▸근무연수에 따른 단일 보수체계를 반영한 교육공무직원 보수표에 따라 지급\n▸월급액 지급방법\n구 분 상시 전일 노동자 방학 중 비상시 노동자 비고\n학기 중 방학 중 학기 중 방학 중\n기본급 전액지급 전액지급 전액지급 일할계산\n근속수당 전액지급 전액지급 전액지급 전액지급\n가족수당 전액지급 전액지급 전액지급 전액지급\n면허가산수당 전액지급 전액지급 전액지급 일할계산\n특수업무수당 전액지급 전액지급 전액지급 일할계산\n특수직무수당 전액지급 일할계산\n특별근무수당 전액지급 일할계산\n직무수당 전액지급\n조리사수당 전액지급 일할계산\n위험수당 전액지급 전액지급 전액지급 일할계산\n급식비 전액지급 전액지급 전액지급 일할계산\n정기상여금 전액지급 전액지급 전액지급 전액지급 연 2회\n명절휴가비 전액지급 전액지급 전액지급 전액지급 연 2회\n▸방학 중 비상시 노동자 보수지급 방법\n방학기간이 속하지 않는 달 방학기간이 속한 달\n월급액 전액 지급 월급액 일할계산\n일할계산 항목 기본급, 면허가산수당, 특수업무수당, 특수직무수당, 특별근무수당, 조리사수당, 위험수당, 급식비\n전액지급 항목 근속수당, 가족수당, 정기상여금, 명절휴가비 맞춤형복지비, 건강검진비\n▸방학중 주휴일 임금지급 방법\n구분 방학일, 개학일이 있는 주 방학 중 노동이 있는 주\n토요일 (휴무일) ◦(방학일, 개학일이 있는 주) 주휴일 유급이면 토요일 유급 ◦(방학중) 주휴일 유급이면 토요일 유급 ◦(방학중) 주휴일 무급이면 토요일 무급\n일요일 (주휴일) ◦유급요건 2가지 충족 시 유급 ① 방학일, 개학일이 있는 주 ② 1주 소정노동일 개근 ◦유급요건 2가지 모두 충족 시 유급 ① 1주 2일의 소정노동시간 이상 근무 ② 소정노동일 모두 개근\n※소정노동시간: 「근로기준법」 제2조에 따른 노동시간의 범위에서 노동자와 사용자 사이에 정한 학기중 노동시간\n※개근: 근무시간에 관계없이 출근만 하면 개근임",
+    "text": "교육공무직원 임금\n2. 보수유형\n▸근무연수에 따른 단일 보수체계를 반영한 교육공무직원 보수표에 따라 지급\n▸월급액 지급방법\n구 분 상시 전일 노동자 방학 중 비상시 노동자 비고\n학기 중 방학 중 학기 중 방학 중\n기본급 전액지급 전액지급 전액지급 일할계산\n근속수당 전액지급 전액지급 전액지급 전액지급\n가족수당 전액지급 전액지급 전액지급 전액지급\n면허가산수당 전액지급 전액지급 전액지급 일할계산\n특수업무수당 전액지급 전액지급 전액지급 일할계산\n특수직무수당 전액지급 일할계산\n특별근무수당 전액지급 일할계산\n직무수당 전액지급\n조리사수당 전액지급 일할계산\n위험수당 전액지급 전액지급 전액지급 일할계산\n급식비 전액지급 전액지급 전액지급 일할계산\n정기상여금 전액지급 전액지급 전액지급 전액지급 연 2회\n명절휴가비 전액지급 전액지급 전액지급 전액지급 연 2회\n▸방학 중 비상시 노동자 보수지급 방법\n방학기간이 속하지 않는 달 방학기간이 속한 달\n월급액 전액 지급 월급액 일할계산\n일할계산 항목 기본급, 면허가산수당, 특수업무수당, 특수직무수당, 특별근무수당, 조리사수당, 위험수당, 급식비\n전액지급 항목 근속수당, 가족수당, 정기상여금, 명절휴가비 맞춤형복지비, 건강검진비\n▸방학중 주휴일 임금지급 방법",
     "workId": "c08-w04",
-    "blockId": "c08-w04-b5"
+    "blockId": "c08-w04-b5",
+    "anchor": "▸근무연수에따른단일보수체계를반영한교육공무직원"
   },
   {
+    "id": "c08-w04-b5~2",
+    "chapterId": "08",
+    "chapterLabel": "제8편",
+    "chapterTitle": "교육공무직원",
+    "type": "매뉴얼 원문",
+    "workTitle": "교육공무직원 임금",
+    "title": "2. 보수유형 › 구분 방학일, 개학일이 있는 주 방학 중 노동이 있는 주",
+    "description": "구분 방학일, 개학일이 있는 주 방학 중 노동이 있는 주 토요일 (휴무일) ◦(방학일, 개학일이 있는 주) 주휴일 유급이면 토요일 유급 ◦(방학중) 주휴일 유급이면 토요일 유급 ◦(방학중) 주휴일 무급이면 토요일 무급 일요일 (주휴일) ◦유급요건 2가지 충족 시 유급 ① 방학일, 개학일이 있는 주 ② 1주 소정노동일 개근 ◦유급요건 2가지 모두 충족 시 유급 ① 1주 2일의 소정노동시간 이상 근무 ② 소정노동일 모두 개근 ※소정노동시간: 「근로기준법」 제2조에…",
+    "text": "교육공무직원 임금\n2. 보수유형\n구분 방학일, 개학일이 있는 주 방학 중 노동이 있는 주\n토요일 (휴무일) ◦(방학일, 개학일이 있는 주) 주휴일 유급이면 토요일 유급 ◦(방학중) 주휴일 유급이면 토요일 유급 ◦(방학중) 주휴일 무급이면 토요일 무급\n일요일 (주휴일) ◦유급요건 2가지 충족 시 유급 ① 방학일, 개학일이 있는 주 ② 1주 소정노동일 개근 ◦유급요건 2가지 모두 충족 시 유급 ① 1주 2일의 소정노동시간 이상 근무 ② 소정노동일 모두 개근\n※소정노동시간: 「근로기준법」 제2조에 따른 노동시간의 범위에서 노동자와 사용자 사이에 정한 학기중 노동시간\n※개근: 근무시간에 관계없이 출근만 하면 개근임",
+    "workId": "c08-w04",
+    "blockId": "c08-w04-b5",
+    "anchor": "구분방학일,개학일이있는주방학중노동이있는주"
+  },
+  {
+    "id": "c08-w04-b6",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12734,18 +14551,49 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w04-b6"
   },
   {
+    "id": "c08-w04-b7~1",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
     "type": "매뉴얼 원문",
     "workTitle": "교육공무직원 임금",
-    "title": "4. 각종수당 지급기준",
+    "title": "4. 각종수당 지급기준 › 수당명 지급액 산정기준일 지급기준 신분변동 계산방법",
     "description": "수당명 지급액 산정기준일 지급기준 신분변동 계산방법 명절휴가비 연185만원 (92.5천원, 2회) 설날 및 추석날 현재 재직 중 ◦노동계약기간이 1년 이상이고 ◦주 소정노동시간이 15시간 이상인 노동자 맞춤형 복지비 연65만원 월할계산 건강검진비 35만원 이내 (2년 주기 지원) 홀수년도는 홀수년도 출생자, 짝수년도는 짝수년도 출생자 ◦위 수당과 기준 동일 ◦중간입사자, 복직자, 퇴직자 동일 적용(월할계산 미적용) ◦기관·학교 동일 사용기간: 매년1.1~12.1…",
-    "text": "교육공무직원 임금\n4. 각종수당 지급기준\n수당명 지급액 산정기준일 지급기준 신분변동 계산방법\n명절휴가비 연185만원 (92.5천원, 2회) 설날 및 추석날 현재 재직 중 ◦노동계약기간이 1년 이상이고 ◦주 소정노동시간이 15시간 이상인 노동자\n맞춤형 복지비 연65만원 월할계산\n건강검진비 35만원 이내 (2년 주기 지원) 홀수년도는 홀수년도 출생자, 짝수년도는 짝수년도 출생자 ◦위 수당과 기준 동일 ◦중간입사자, 복직자, 퇴직자 동일 적용(월할계산 미적용) ◦기관·학교 동일 사용기간: 매년1.1~12.15(이월 금지) ◦2월말 학교 근무 퇴직자 중 퇴직하는 연도에 건강검진대상자인 경우: 매년1.1~2월 말(이월금지)\n근속수당 월4만원 ~92만원 (1년 이상 4만원부터 1년마다 4만원 가산, 92만원 상한) 기관, 학교 (경력산정기준일:1, 3, 5, 7, 9, 11월의 각 1일) ◦근속경력 산정기준일(연 6회) 현재 계속 노동기간과 ◦주 소정노동시간 40시간 이상인 노동자로, ◦경력이 1년 이상인 노동자(대체 노동자는 지급 제외) ◦채용 전(이전)경력 인정 범위: 공무원 및 교육공무직원 ※ 이전경력인정 산정방법: 종합운영계획 참고 일할계산\n급식비 월 15만원 매월 ◦주 소정노동시간이 15시간 이상인 노동자 일할계산\n면허가산 수당 기본급의 5% 매월 ◦노동계약기간에 관계없이 관련 자격증 소지자로서 주 소정노동시간이 40시간 이상인 영양사, 영양실무사 일할계산\n특수업무 수당 월 2만원 / 월 1만원 매월 ◦노동계약기간에 관계없이 관련 자격증 소지자로서 주 소정노동시간이 40시간 이상인 사서와 가스안전관리책임자로 선임된 식생활관 종사자 ◦교육복지조정자, 교육복지사(월 1만원) 일할계산\n특수직무수당 월 5만원 매월 ◦특수교육지도사 직종에 한하여 지급 일할계산\n특별근무수당 월 5만원 매월 ◦2~3식을 운영하는 학교(기관) 식생활관에서 근무하는 조리실무사에 한하여 지급 일할계산\n직무수당 월 40만원 / 월 24만원 매월 ◦교육복지조정자(월 40만원) ◦Wee센터 임상심리사(월 24만원) 일할계산\n조리사수당 기본급의 5% 매월 ◦노동계약기간에 관계없이 관련 자격증을 소지하고 조리사로 선임된 자로서 ◦주 소정노동시간이 40시간 이상인 노동자 ※ 학교당 조리사 1명만 해당 일할계산\n위험수당 월 5만원 매월 ◦학교(기관)의 식생활관(급식실)에서 근무하는 급식종사원 중 영양사, 영양실무사, 조리실무사 ◦주 소정노동시간이 40시간 이상인 노동자 일할계산\n가족수당 지방공무원 수당 등에 관한 규정 제10조 해당 사유 발생 시 ◦주 소정노동시간이 40시간 이상인 노동자 ※ 일부 직종 대상 상이 ◦공무원 지급 금액 준용(23.1.부터) 일할계산\n정기상여금 연100만원 (1월, 7월 급여일) 직전 반기 근무자, 12월 말, 6월 말 현재 재직 중인자 ◦직전 반기에 근무한 노동자로서, 주 소정노동시간이 40시간 이상인 노동자와 급식보조, 통학버스안전지도사, 돌봄전담사, 사감 등 (다만, 반기에 2개월 초과 휴직자 지급 제외) ※ 일부 직종 정기상여금 상이 .\n원격지 근무수당 (2025년 신설) 월 3만원 매월 ◦전보로 인하여 원격지에 근무하게 된 노동자 ◦원격지: 생활근거지와 근무지 간 교통수단이 불편하여 출근이 용이하지 않은 도서지역(연륙교 등이 설치된 경우 원격지 제외)\n※ 자녀학비보조수당은 2021년부터 미지급\n(다만, 「지방공무원 수당 등에 관한 규정」이 변경될 경우 별도 안내)",
+    "text": "교육공무직원 임금\n4. 각종수당 지급기준\n수당명 지급액 산정기준일 지급기준 신분변동 계산방법\n명절휴가비 연185만원 (92.5천원, 2회) 설날 및 추석날 현재 재직 중 ◦노동계약기간이 1년 이상이고 ◦주 소정노동시간이 15시간 이상인 노동자\n맞춤형 복지비 연65만원 월할계산\n건강검진비 35만원 이내 (2년 주기 지원) 홀수년도는 홀수년도 출생자, 짝수년도는 짝수년도 출생자 ◦위 수당과 기준 동일 ◦중간입사자, 복직자, 퇴직자 동일 적용(월할계산 미적용) ◦기관·학교 동일 사용기간: 매년1.1~12.15(이월 금지) ◦2월말 학교 근무 퇴직자 중 퇴직하는 연도에 건강검진대상자인 경우: 매년1.1~2월 말(이월금지)\n근속수당 월4만원 ~92만원 (1년 이상 4만원부터 1년마다 4만원 가산, 92만원 상한) 기관, 학교 (경력산정기준일:1, 3, 5, 7, 9, 11월의 각 1일) ◦근속경력 산정기준일(연 6회) 현재 계속 노동기간과 ◦주 소정노동시간 40시간 이상인 노동자로, ◦경력이 1년 이상인 노동자(대체 노동자는 지급 제외) ◦채용 전(이전)경력 인정 범위: 공무원 및 교육공무직원 ※ 이전경력인정 산정방법: 종합운영계획 참고 일할계산",
     "workId": "c08-w04",
-    "blockId": "c08-w04-b7"
+    "blockId": "c08-w04-b7",
+    "anchor": "수당명지급액산정기준일지급기준신분변동계산방법"
   },
   {
+    "id": "c08-w04-b7~2",
+    "chapterId": "08",
+    "chapterLabel": "제8편",
+    "chapterTitle": "교육공무직원",
+    "type": "매뉴얼 원문",
+    "workTitle": "교육공무직원 임금",
+    "title": "4. 각종수당 지급기준 › 급식비 월 15만원 매월 ◦주 소정노동시간이 15시간 이상인 노동자 일할계산",
+    "description": "급식비 월 15만원 매월 ◦주 소정노동시간이 15시간 이상인 노동자 일할계산 면허가산 수당 기본급의 5% 매월 ◦노동계약기간에 관계없이 관련 자격증 소지자로서 주 소정노동시간이 40시간 이상인 영양사, 영양실무사 일할계산 특수업무 수당 월 2만원 / 월 1만원 매월 ◦노동계약기간에 관계없이 관련 자격증 소지자로서 주 소정노동시간이 40시간 이상인 사서와 가스안전관리책임자로 선임된 식생활관 종사자 ◦교육복지조정자, 교육복지사(월 1만원) 일할계산 특수직무수당 월…",
+    "text": "교육공무직원 임금\n4. 각종수당 지급기준\n급식비 월 15만원 매월 ◦주 소정노동시간이 15시간 이상인 노동자 일할계산\n면허가산 수당 기본급의 5% 매월 ◦노동계약기간에 관계없이 관련 자격증 소지자로서 주 소정노동시간이 40시간 이상인 영양사, 영양실무사 일할계산\n특수업무 수당 월 2만원 / 월 1만원 매월 ◦노동계약기간에 관계없이 관련 자격증 소지자로서 주 소정노동시간이 40시간 이상인 사서와 가스안전관리책임자로 선임된 식생활관 종사자 ◦교육복지조정자, 교육복지사(월 1만원) 일할계산\n특수직무수당 월 5만원 매월 ◦특수교육지도사 직종에 한하여 지급 일할계산\n특별근무수당 월 5만원 매월 ◦2~3식을 운영하는 학교(기관) 식생활관에서 근무하는 조리실무사에 한하여 지급 일할계산\n직무수당 월 40만원 / 월 24만원 매월 ◦교육복지조정자(월 40만원) ◦Wee센터 임상심리사(월 24만원) 일할계산\n조리사수당 기본급의 5% 매월 ◦노동계약기간에 관계없이 관련 자격증을 소지하고 조리사로 선임된 자로서 ◦주 소정노동시간이 40시간 이상인 노동자 ※ 학교당 조리사 1명만 해당 일할계산",
+    "workId": "c08-w04",
+    "blockId": "c08-w04-b7",
+    "anchor": "급식비월15만원매월◦주소정노동시간이15시간이"
+  },
+  {
+    "id": "c08-w04-b7~3",
+    "chapterId": "08",
+    "chapterLabel": "제8편",
+    "chapterTitle": "교육공무직원",
+    "type": "매뉴얼 원문",
+    "workTitle": "교육공무직원 임금",
+    "title": "4. 각종수당 지급기준 › 위험수당 월 5만원 매월 ◦학교(기관)의 식생활관(급식실)에서 근무하는 급식종사원 중",
+    "description": "위험수당 월 5만원 매월 ◦학교(기관)의 식생활관(급식실)에서 근무하는 급식종사원 중 영양사, 영양실무사, 조리실무사 ◦주 소정노동시간이 40시간 이상인 노동자 일할계산 가족수당 지방공무원 수당 등에 관한 규정 제10조 해당 사유 발생 시 ◦주 소정노동시간이 40시간 이상인 노동자 ※ 일부 직종 대상 상이 ◦공무원 지급 금액 준용(23.1.부터) 일할계산 정기상여금 연100만원 (1월, 7월 급여일) 직전 반기 근무자, 12월 말, 6월 말 현재 재직 중인자 ◦…",
+    "text": "교육공무직원 임금\n4. 각종수당 지급기준\n위험수당 월 5만원 매월 ◦학교(기관)의 식생활관(급식실)에서 근무하는 급식종사원 중 영양사, 영양실무사, 조리실무사 ◦주 소정노동시간이 40시간 이상인 노동자 일할계산\n가족수당 지방공무원 수당 등에 관한 규정 제10조 해당 사유 발생 시 ◦주 소정노동시간이 40시간 이상인 노동자 ※ 일부 직종 대상 상이 ◦공무원 지급 금액 준용(23.1.부터) 일할계산\n정기상여금 연100만원 (1월, 7월 급여일) 직전 반기 근무자, 12월 말, 6월 말 현재 재직 중인자 ◦직전 반기에 근무한 노동자로서, 주 소정노동시간이 40시간 이상인 노동자와 급식보조, 통학버스안전지도사, 돌봄전담사, 사감 등 (다만, 반기에 2개월 초과 휴직자 지급 제외) ※ 일부 직종 정기상여금 상이 .\n원격지 근무수당 (2025년 신설) 월 3만원 매월 ◦전보로 인하여 원격지에 근무하게 된 노동자 ◦원격지: 생활근거지와 근무지 간 교통수단이 불편하여 출근이 용이하지 않은 도서지역(연륙교 등이 설치된 경우 원격지 제외)\n※ 자녀학비보조수당은 2021년부터 미지급\n(다만, 「지방공무원 수당 등에 관한 규정」이 변경될 경우 별도 안내)",
+    "workId": "c08-w04",
+    "blockId": "c08-w04-b7",
+    "anchor": "위험수당월5만원매월◦학교(기관)의식생활관(급"
+  },
+  {
+    "id": "c08-w04-b8",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12758,18 +14606,35 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w04-b8"
   },
   {
+    "id": "c08-w04-b9~1",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
     "type": "매뉴얼 원문",
     "workTitle": "교육공무직원 임금",
-    "title": "5. 임금구분(평균임금 및 통상임금)",
+    "title": "5. 임금구분(평균임금 및 통상임금) › 정 의 (근로기준법) 사유가 발생한 날 이전 3개월 동안에 그 노동자에게 지급된 임금의",
     "description": "구 분 평균임금 통상임금 정 의 (근로기준법) 사유가 발생한 날 이전 3개월 동안에 그 노동자에게 지급된 임금의 총액을 그 기간의 총일수로 나눈 금액 ※ 단, 평균임금이 통상임금보다 적으면 통상임금액을 평균임금으로 한다 노동자에게 정기적이고 일률적으로 소정노동 또는 총 노동에 대해 지급하기로 정한 시간급·일급·주급·월급 또는 도급금액 기준이 되는 수당 퇴직금, 휴업수당 연장·야간·휴일노동수당, 연차유급휴가 미사용 수당 등 산정방법 1일 평균임금 = 사유가 발생한…",
-    "text": "교육공무직원 임금\n5. 임금구분(평균임금 및 통상임금)\n구 분 평균임금 통상임금\n정 의 (근로기준법) 사유가 발생한 날 이전 3개월 동안에 그 노동자에게 지급된 임금의 총액을 그 기간의 총일수로 나눈 금액 ※ 단, 평균임금이 통상임금보다 적으면 통상임금액을 평균임금으로 한다 노동자에게 정기적이고 일률적으로 소정노동 또는 총 노동에 대해 지급하기로 정한 시간급·일급·주급·월급 또는 도급금액\n기준이 되는 수당 퇴직금, 휴업수당 연장·야간·휴일노동수당, 연차유급휴가 미사용 수당 등\n산정방법 1일 평균임금 = 사유가 발생한 날 이전 3개월(임금총액 ÷ 총 일수) 퇴직전 3개월간의 임금총액 = 사유발생일 이전 3개월간(월정임금총액 + 월단위 비월정임금총액) + 사유발생일 이전 1년간(비월정임금 총×3 / 12) 시간당 통상임금 산정방법 - 월액 통상임금 / 209시간(통상임금 산정 기준시간) ※ 209시간 = (1월평균주) × {주의 소정노동시간 + (유급 처리되는 시간)} = (365일÷12월÷7일)×(40시간+일요일 8시간)\n상세내역 자세한 내용은 교육공무직원 종합운영계획 Ⅳ. 임금 참고\n▸월급제, 시급제 직종: 명절휴가비, 정기상여금 추가\n구 분 통상임금 평균임금 구 분 통상임금 평균임금\n① 기본급 ○ ○ ⑨ 위험수당 ○ ○\n② 특수업무수당 ○ ○ ⑩ 급식비 ○ ○\n③ 특수직무수당 ○ ○ ⑪ 명절휴가비 ○ ○\n④ 특별근무수당 ○ ○ ⑫ 가족수당 × ×\n⑤ 직무수당 ○ ○ ⑬ 맞춤형복지비 × ×\n⑥ 면허가산수당 ○ ○ ⑭ 정기상여금 ○ ○\n⑦ 조리사수당 ○ ○ ⑮ 연장․야간․휴일노동 수당 × ○\n⑧ 근속수당 ○ ○ ⑯ 연차유급휴가 미사용 수당 × ○\n▸호봉제(구 학부모회직원) 직종: 정근수당, 명절휴가비, 정기상여금 추가\n구 분 통상임금 평균임금 구 분 통상임금 평균임금\n① 본봉 ○ ○ ⑦ 관리수당 ○ ○\n② 정근수당 ○ ○ ⑧ 명절휴가비 ○ ○\n③ 정근수당가산금 ○ ○ ⑨ 맞춤형복지비 × ×\n④ 정액급식비 ○ ○ ⑩ 정기상여금 ○ ○\n⑤ 직급보조비 ○ ○ ⑪ 연장․야간․휴일노동 수당 × ○\n⑥ 가족수당 × × ⑫ 연차유급휴가 미사용 수당 × ○",
+    "text": "교육공무직원 임금\n5. 임금구분(평균임금 및 통상임금)\n구 분 평균임금 통상임금\n정 의 (근로기준법) 사유가 발생한 날 이전 3개월 동안에 그 노동자에게 지급된 임금의 총액을 그 기간의 총일수로 나눈 금액 ※ 단, 평균임금이 통상임금보다 적으면 통상임금액을 평균임금으로 한다 노동자에게 정기적이고 일률적으로 소정노동 또는 총 노동에 대해 지급하기로 정한 시간급·일급·주급·월급 또는 도급금액\n기준이 되는 수당 퇴직금, 휴업수당 연장·야간·휴일노동수당, 연차유급휴가 미사용 수당 등\n산정방법 1일 평균임금 = 사유가 발생한 날 이전 3개월(임금총액 ÷ 총 일수) 퇴직전 3개월간의 임금총액 = 사유발생일 이전 3개월간(월정임금총액 + 월단위 비월정임금총액) + 사유발생일 이전 1년간(비월정임금 총×3 / 12) 시간당 통상임금 산정방법 - 월액 통상임금 / 209시간(통상임금 산정 기준시간) ※ 209시간 = (1월평균주) × {주의 소정노동시간 + (유급 처리되는 시간)} = (365일÷12월÷7일)×(40시간+일요일 8시간)\n상세내역 자세한 내용은 교육공무직원 종합운영계획 Ⅳ. 임금 참고\n▸월급제, 시급제 직종: 명절휴가비, 정기상여금 추가\n구 분 통상임금 평균임금 구 분 통상임금 평균임금\n① 기본급 ○ ○ ⑨ 위험수당 ○ ○",
     "workId": "c08-w04",
-    "blockId": "c08-w04-b9"
+    "blockId": "c08-w04-b9",
+    "anchor": "정의(근로기준법)사유가발생한날이전3개월동안에"
   },
   {
+    "id": "c08-w04-b9~2",
+    "chapterId": "08",
+    "chapterLabel": "제8편",
+    "chapterTitle": "교육공무직원",
+    "type": "매뉴얼 원문",
+    "workTitle": "교육공무직원 임금",
+    "title": "5. 임금구분(평균임금 및 통상임금) › ② 특수업무수당 ○ ○ ⑩ 급식비 ○ ○",
+    "description": "② 특수업무수당 ○ ○ ⑩ 급식비 ○ ○ ③ 특수직무수당 ○ ○ ⑪ 명절휴가비 ○ ○ ④ 특별근무수당 ○ ○ ⑫ 가족수당 × × ⑤ 직무수당 ○ ○ ⑬ 맞춤형복지비 × × ⑥ 면허가산수당 ○ ○ ⑭ 정기상여금 ○ ○ ⑦ 조리사수당 ○ ○ ⑮ 연장․야간․휴일노동 수당 × ○ ⑧ 근속수당 ○ ○ ⑯ 연차유급휴가 미사용 수당 × ○ ▸호봉제(구 학부모회직원) 직종: 정근수당, 명절휴가비, 정기상여금 추가 구 분 통상임금 평균임금 구 분 통상임금 평균임금 ① 본봉 ○…",
+    "text": "교육공무직원 임금\n5. 임금구분(평균임금 및 통상임금)\n② 특수업무수당 ○ ○ ⑩ 급식비 ○ ○\n③ 특수직무수당 ○ ○ ⑪ 명절휴가비 ○ ○\n④ 특별근무수당 ○ ○ ⑫ 가족수당 × ×\n⑤ 직무수당 ○ ○ ⑬ 맞춤형복지비 × ×\n⑥ 면허가산수당 ○ ○ ⑭ 정기상여금 ○ ○\n⑦ 조리사수당 ○ ○ ⑮ 연장․야간․휴일노동 수당 × ○\n⑧ 근속수당 ○ ○ ⑯ 연차유급휴가 미사용 수당 × ○\n▸호봉제(구 학부모회직원) 직종: 정근수당, 명절휴가비, 정기상여금 추가\n구 분 통상임금 평균임금 구 분 통상임금 평균임금\n① 본봉 ○ ○ ⑦ 관리수당 ○ ○\n② 정근수당 ○ ○ ⑧ 명절휴가비 ○ ○\n③ 정근수당가산금 ○ ○ ⑨ 맞춤형복지비 × ×\n④ 정액급식비 ○ ○ ⑩ 정기상여금 ○ ○\n⑤ 직급보조비 ○ ○ ⑪ 연장․야간․휴일노동 수당 × ○\n⑥ 가족수당 × × ⑫ 연차유급휴가 미사용 수당 × ○",
+    "workId": "c08-w04",
+    "blockId": "c08-w04-b9",
+    "anchor": "②특수업무수당○○⑩급식비○○"
+  },
+  {
+    "id": "c08-w04-b10",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12782,6 +14647,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w04-b10"
   },
   {
+    "id": "c08-w04-b11",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12794,6 +14660,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w04-b11"
   },
   {
+    "id": "c08-w04-b12",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12806,6 +14673,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w04-b12"
   },
   {
+    "id": "c08-w05",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12818,6 +14686,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c08-w05"
   },
   {
+    "id": "c08-w05-b1",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12830,6 +14699,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w05-b1"
   },
   {
+    "id": "c08-w05-b2",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12842,6 +14712,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w05-b2"
   },
   {
+    "id": "c08-w05-b3",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12854,6 +14725,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w05-b3"
   },
   {
+    "id": "c08-w05-b4",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12866,6 +14738,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w05-b4"
   },
   {
+    "id": "c08-w05-b5",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12878,6 +14751,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w05-b5"
   },
   {
+    "id": "c08-w05-b6",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12890,6 +14764,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w05-b6"
   },
   {
+    "id": "c08-w05-b7",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12902,6 +14777,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w05-b7"
   },
   {
+    "id": "c08-w05-b8",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12914,6 +14790,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w05-b8"
   },
   {
+    "id": "c08-w05-b9",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12926,6 +14803,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w05-b9"
   },
   {
+    "id": "c08-w05-b10",
     "chapterId": "08",
     "chapterLabel": "제8편",
     "chapterTitle": "교육공무직원",
@@ -12938,6 +14816,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c08-w05-b10"
   },
   {
+    "id": "c09-w00",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -12951,6 +14830,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c09-w00-b1",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -12964,6 +14844,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c09-w01",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -12976,6 +14857,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c09-w01"
   },
   {
+    "id": "c09-w01-b1",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -12988,6 +14870,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b1"
   },
   {
+    "id": "c09-w01-b2",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13000,6 +14883,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b2"
   },
   {
+    "id": "c09-w01-b3",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13012,6 +14896,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b3"
   },
   {
+    "id": "c09-w01-b4",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13024,6 +14909,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b4"
   },
   {
+    "id": "c09-w01-b5",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13036,6 +14922,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b5"
   },
   {
+    "id": "c09-w01-b6",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13048,6 +14935,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b6"
   },
   {
+    "id": "c09-w01-b7",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13060,6 +14948,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b7"
   },
   {
+    "id": "c09-w01-b8",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13072,6 +14961,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b8"
   },
   {
+    "id": "c09-w01-b9",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13084,6 +14974,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b9"
   },
   {
+    "id": "c09-w01-b10",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13096,6 +14987,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b10"
   },
   {
+    "id": "c09-w01-b11",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13108,6 +15000,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b11"
   },
   {
+    "id": "c09-w01-b12",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13120,6 +15013,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b12"
   },
   {
+    "id": "c09-w01-b13",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13132,6 +15026,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b13"
   },
   {
+    "id": "c09-w01-b14",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13144,6 +15039,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b14"
   },
   {
+    "id": "c09-w01-b15",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13156,6 +15052,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b15"
   },
   {
+    "id": "c09-w01-b16",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13168,6 +15065,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b16"
   },
   {
+    "id": "c09-w01-b17",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13180,6 +15078,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b17"
   },
   {
+    "id": "c09-w01-b18",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13192,6 +15091,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b18"
   },
   {
+    "id": "c09-w01-b19",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13204,6 +15104,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b19"
   },
   {
+    "id": "c09-w01-b20",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13216,6 +15117,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b20"
   },
   {
+    "id": "c09-w01-b21",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13228,6 +15130,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b21"
   },
   {
+    "id": "c09-w01-b22",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13240,6 +15143,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b22"
   },
   {
+    "id": "c09-w01-b23",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13252,6 +15156,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b23"
   },
   {
+    "id": "c09-w01-b24",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13264,6 +15169,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c09-w01-b24"
   },
   {
+    "id": "c09-w01:form:예시1",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13276,6 +15182,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시1"
   },
   {
+    "id": "c09-w01:form:예시2",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13288,6 +15195,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시2"
   },
   {
+    "id": "c09-w01:form:예시3",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13300,6 +15208,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시3"
   },
   {
+    "id": "c09-w01:form:참고9",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13312,6 +15221,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고9"
   },
   {
+    "id": "c09-w01:faq:1",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13324,6 +15234,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c09-w01:faq:2",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13336,6 +15247,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c09-w01:faq:3",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13348,6 +15260,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c09-w01:faq:4",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13360,6 +15273,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c09-w01:faq:5",
     "chapterId": "09",
     "chapterLabel": "제9편",
     "chapterTitle": "학교급식",
@@ -13372,6 +15286,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "c10-w00",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13385,6 +15300,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c10-w00-b1",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13398,6 +15314,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c10-w01",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13410,6 +15327,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c10-w01"
   },
   {
+    "id": "c10-w01-b1",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13422,6 +15340,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b1"
   },
   {
+    "id": "c10-w01-b2",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13434,6 +15353,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b2"
   },
   {
+    "id": "c10-w01-b3",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13446,6 +15366,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b3"
   },
   {
+    "id": "c10-w01-b4",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13458,6 +15379,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b4"
   },
   {
+    "id": "c10-w01-b5",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13470,6 +15392,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b5"
   },
   {
+    "id": "c10-w01-b6",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13482,6 +15405,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b6"
   },
   {
+    "id": "c10-w01-b7",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13494,6 +15418,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b7"
   },
   {
+    "id": "c10-w01-b8",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13506,6 +15431,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b8"
   },
   {
+    "id": "c10-w01-b9",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13518,6 +15444,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b9"
   },
   {
+    "id": "c10-w01-b10",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13530,6 +15457,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b10"
   },
   {
+    "id": "c10-w01-b11",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13542,6 +15470,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b11"
   },
   {
+    "id": "c10-w01-b12",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13554,6 +15483,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b12"
   },
   {
+    "id": "c10-w01-b13",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13566,6 +15496,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b13"
   },
   {
+    "id": "c10-w01-b14",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13578,6 +15509,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b14"
   },
   {
+    "id": "c10-w01-b15",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13590,6 +15522,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b15"
   },
   {
+    "id": "c10-w01-b16",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13602,6 +15535,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b16"
   },
   {
+    "id": "c10-w01-b17",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13614,6 +15548,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b17"
   },
   {
+    "id": "c10-w01-b18",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13626,6 +15561,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b18"
   },
   {
+    "id": "c10-w01-b19",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13638,6 +15574,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b19"
   },
   {
+    "id": "c10-w01-b20",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13650,6 +15587,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b20"
   },
   {
+    "id": "c10-w01-b21",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13662,6 +15600,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b21"
   },
   {
+    "id": "c10-w01-b22",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13674,6 +15613,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b22"
   },
   {
+    "id": "c10-w01-b23",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13686,6 +15626,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b23"
   },
   {
+    "id": "c10-w01-b24",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13698,6 +15639,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b24"
   },
   {
+    "id": "c10-w01-b25",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13710,6 +15652,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b25"
   },
   {
+    "id": "c10-w01-b26",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13722,6 +15665,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w01-b26"
   },
   {
+    "id": "c10-w01:faq:1",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13734,6 +15678,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c10-w01:faq:2",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13746,6 +15691,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c10-w01:faq:3",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13758,6 +15704,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c10-w01:faq:4",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13770,6 +15717,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c10-w01:faq:5",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13782,6 +15730,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "c10-w01:faq:6",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13794,6 +15743,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "6"
   },
   {
+    "id": "c10-w01:faq:7",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13806,6 +15756,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "7"
   },
   {
+    "id": "c10-w01:faq:8",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13818,6 +15769,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "8"
   },
   {
+    "id": "c10-w01:faq:9",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13830,6 +15782,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "9"
   },
   {
+    "id": "c10-w01:faq:10",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13842,6 +15795,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "10"
   },
   {
+    "id": "c10-w01:faq:1#2",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13854,6 +15808,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c10-w01:faq:5#2",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13866,6 +15821,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "c10-w01:faq:6#2",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13878,6 +15834,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "6"
   },
   {
+    "id": "c10-w01:faq:2#2",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13890,6 +15847,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c10-w02",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13902,6 +15860,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c10-w02"
   },
   {
+    "id": "c10-w02-b1",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13914,6 +15873,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w02-b1"
   },
   {
+    "id": "c10-w02-b2",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13926,6 +15886,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w02-b2"
   },
   {
+    "id": "c10-w02-b3",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13938,6 +15899,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w02-b3"
   },
   {
+    "id": "c10-w02-b4",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13950,6 +15912,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w02-b4"
   },
   {
+    "id": "c10-w02-b5",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13962,6 +15925,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w02-b5"
   },
   {
+    "id": "c10-w02-b6",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13974,6 +15938,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w02-b6"
   },
   {
+    "id": "c10-w02-b7",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13986,6 +15951,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w02-b7"
   },
   {
+    "id": "c10-w02-b8",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -13998,6 +15964,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w02-b8"
   },
   {
+    "id": "c10-w02-b9",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -14010,6 +15977,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w02-b9"
   },
   {
+    "id": "c10-w02-b10",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -14022,6 +15990,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w02-b10"
   },
   {
+    "id": "c10-w02-b11",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -14034,6 +16003,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w02-b11"
   },
   {
+    "id": "c10-w02-b12",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -14046,6 +16016,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w02-b12"
   },
   {
+    "id": "c10-w02-b13",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -14058,6 +16029,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w02-b13"
   },
   {
+    "id": "c10-w02-b14",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -14070,6 +16042,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w02-b14"
   },
   {
+    "id": "c10-w02-b15",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -14082,6 +16055,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w02-b15"
   },
   {
+    "id": "c10-w02-b16",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -14094,6 +16068,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w02-b16"
   },
   {
+    "id": "c10-w02-b17",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -14106,6 +16081,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w02-b17"
   },
   {
+    "id": "c10-w02-b18",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -14118,6 +16094,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w02-b18"
   },
   {
+    "id": "c10-w02-b19",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -14130,6 +16107,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w02-b19"
   },
   {
+    "id": "c10-w02-b20",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -14142,6 +16120,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w02-b20"
   },
   {
+    "id": "c10-w02-b21",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -14154,6 +16133,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w02-b21"
   },
   {
+    "id": "c10-w02-b22",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -14166,18 +16146,49 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c10-w02-b22"
   },
   {
+    "id": "c10-w02-b23~1",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
     "type": "매뉴얼 원문",
     "workTitle": "학교(유치원)운영위원회 회의",
-    "title": "세부내용 5. 심의사항",
+    "title": "세부내용 5. 심의사항 › 초·중등교육법 제32조 (기능) ◦ 학교헌장 및 학칙의 제정 또는 개정 ◦ 학교의 예산",
     "description": "구 분 심 의 사 항 초·중등교육법 제32조 (기능) ◦ 학교헌장 및 학칙의 제정 또는 개정 ◦ 학교의 예산안 및 결산 ◦ 학교교육과정의 운영방법 ◦ 교과용도서 및 교육 자료의 선정 ◦ 교복·체육복·졸업앨범 등 학부모가 경비 부담 사항 ◦ 정규학습시간 종료 후 또는 방학 기간 중의 교육활동 및 수련 활동 ◦ 교육공무원법 제29조의3제8항에 따른 공모 교장의 공모 방법, 임용, 평가 등 ◦ 교육공무원법 제31조제2항에 따른 초빙교사의 추천 ◦ 학교운영지원비의 조성…",
-    "text": "학교(유치원)운영위원회 회의\n세부내용 5. 심의사항\n구 분 심 의 사 항\n초·중등교육법 제32조 (기능) ◦ 학교헌장 및 학칙의 제정 또는 개정 ◦ 학교의 예산안 및 결산 ◦ 학교교육과정의 운영방법 ◦ 교과용도서 및 교육 자료의 선정 ◦ 교복·체육복·졸업앨범 등 학부모가 경비 부담 사항 ◦ 정규학습시간 종료 후 또는 방학 기간 중의 교육활동 및 수련 활동 ◦ 교육공무원법 제29조의3제8항에 따른 공모 교장의 공모 방법, 임용, 평가 등 ◦ 교육공무원법 제31조제2항에 따른 초빙교사의 추천 ◦ 학교운영지원비의 조성·운용 및 사용 ◦ 학교급식 ◦ 대학 입학 특별 전형 중 학교장 추천 ◦ 학교운동부의 구성·운영 ◦ 학교 운영에 대한 제안 및 건의 사항 ◦ 그 밖에 대통령령이나 시·도의 조례로 정하는 사항 ※ 심의·의결사항: 학교발전기금의 조성·운영 및 사용에 관한 사항\n초·중등교육법 시행령 제57조의2 ◦ 학생의 안전대책\n유아교육법 제19조의4 (기능) ◦ 유치원 규칙의 개정에 관한 사항 ◦ 유치원 예산 및 결산에 관한 사항 ◦ 유치원 교육과정의 운영 방법에 관한 사항, 아동학대 예방에 관한 사항 ◦ 학부모가 부담하는 경비에 관한 사항 ◦ 유치원 급식에 관한 사항 ◦ 방과후 과정 운영에 관한 사항 ◦ 유치원 운영에 대한 제안 및 건의에 관한 사항 ◦ 교육공무원법 제29조의3제8항에 따른 공모 원장의 공모 방법, 임용, 평가 등에 관한 사항 ◦ 교육공무원법 제31조제2항에 따른 초빙교사의 추천에 관한 사항 ◦ 그 밖에 대통령령이나 시·도의 조례로 정하는 사항\n전북특별자치도 도립학교 운영위원회 설치·운영에 관한 조례 제9조, 제25조 [초등학교] ◦ 학생지도를 위한 지원 사항 ◦ 교복 및 체육복의 선정, 현장체험학습 등 학부모가 경비를 부담하는 사항 (다만, 특정 동아리 등에서 특정 학생을 대상으로 하는 사항은 제외) ◦ 지역사회 교육에 관한 사항 ◦ 학부모 및 일반인을 대상으로 한 평생교육 프로그램의 설치·운영에 관한 사항 ◦ 그 밖에 학교 운영에 관한 위원들의 제안 사항과 학교장이 심의 요청한 사항 [유치원] ◦ 유아지도를 위한 지원 사항 ◦ 지역사회교육에 관한 사항 ◦ 학부모 및 일반인을 대상으로 한 평생교육 프로그램의 설치운영에 관한 사항 ◦ 그 밖에 유치원 운영에 관한 위원들의 제안 사항과 유치원장이 심의 요청한 사항",
+    "text": "학교(유치원)운영위원회 회의\n세부내용 5. 심의사항\n구 분 심 의 사 항\n초·중등교육법 제32조 (기능) ◦ 학교헌장 및 학칙의 제정 또는 개정 ◦ 학교의 예산안 및 결산 ◦ 학교교육과정의 운영방법 ◦ 교과용도서 및 교육 자료의 선정 ◦ 교복·체육복·졸업앨범 등 학부모가 경비 부담 사항 ◦ 정규학습시간 종료 후 또는 방학 기간 중의 교육활동 및 수련 활동 ◦ 교육공무원법 제29조의3제8항에 따른 공모 교장의 공모 방법, 임용, 평가 등 ◦ 교육공무원법 제31조제2항에 따른 초빙교사의 추천 ◦ 학교운영지원비의 조성·운용 및 사용 ◦ 학교급식 ◦ 대학 입학 특별 전형 중 학교장 추천 ◦ 학교운동부의 구성·운영 ◦ 학교 운영에 대한 제안 및 건의 사항 ◦ 그 밖에 대통령령이나 시·도의 조례로 정하는 사항 ※ 심의·의결사항: 학교발전기금의 조성·운영 및 사용에 관한 사항\n초·중등교육법 시행령 제57조의2 ◦ 학생의 안전대책",
     "workId": "c10-w02",
-    "blockId": "c10-w02-b23"
+    "blockId": "c10-w02-b23",
+    "anchor": "초·중등교육법제32조(기능)◦학교헌장및학칙의"
   },
   {
+    "id": "c10-w02-b23~2",
+    "chapterId": "10",
+    "chapterLabel": "제10편",
+    "chapterTitle": "학교운영위원회",
+    "type": "매뉴얼 원문",
+    "workTitle": "학교(유치원)운영위원회 회의",
+    "title": "세부내용 5. 심의사항 › 유아교육법 제19조의4 (기능) ◦ 유치원 규칙의 개정에 관한 사항 ◦ 유치원 예산 및",
+    "description": "유아교육법 제19조의4 (기능) ◦ 유치원 규칙의 개정에 관한 사항 ◦ 유치원 예산 및 결산에 관한 사항 ◦ 유치원 교육과정의 운영 방법에 관한 사항, 아동학대 예방에 관한 사항 ◦ 학부모가 부담하는 경비에 관한 사항 ◦ 유치원 급식에 관한 사항 ◦ 방과후 과정 운영에 관한 사항 ◦ 유치원 운영에 대한 제안 및 건의에 관한 사항 ◦ 교육공무원법 제29조의3제8항에 따른 공모 원장의 공모 방법, 임용, 평가 등에 관한 사항 ◦ 교육공무원법 제31조제2항에 따른 초…",
+    "text": "학교(유치원)운영위원회 회의\n세부내용 5. 심의사항\n유아교육법 제19조의4 (기능) ◦ 유치원 규칙의 개정에 관한 사항 ◦ 유치원 예산 및 결산에 관한 사항 ◦ 유치원 교육과정의 운영 방법에 관한 사항, 아동학대 예방에 관한 사항 ◦ 학부모가 부담하는 경비에 관한 사항 ◦ 유치원 급식에 관한 사항 ◦ 방과후 과정 운영에 관한 사항 ◦ 유치원 운영에 대한 제안 및 건의에 관한 사항 ◦ 교육공무원법 제29조의3제8항에 따른 공모 원장의 공모 방법, 임용, 평가 등에 관한 사항 ◦ 교육공무원법 제31조제2항에 따른 초빙교사의 추천에 관한 사항 ◦ 그 밖에 대통령령이나 시·도의 조례로 정하는 사항",
+    "workId": "c10-w02",
+    "blockId": "c10-w02-b23",
+    "anchor": "유아교육법제19조의4(기능)◦유치원규칙의개정"
+  },
+  {
+    "id": "c10-w02-b23~3",
+    "chapterId": "10",
+    "chapterLabel": "제10편",
+    "chapterTitle": "학교운영위원회",
+    "type": "매뉴얼 원문",
+    "workTitle": "학교(유치원)운영위원회 회의",
+    "title": "세부내용 5. 심의사항 › 전북특별자치도 도립학교 운영위원회 설치·운영에 관한 조례 제9조, 제25조 [초등학교]",
+    "description": "전북특별자치도 도립학교 운영위원회 설치·운영에 관한 조례 제9조, 제25조 [초등학교] ◦ 학생지도를 위한 지원 사항 ◦ 교복 및 체육복의 선정, 현장체험학습 등 학부모가 경비를 부담하는 사항 (다만, 특정 동아리 등에서 특정 학생을 대상으로 하는 사항은 제외) ◦ 지역사회 교육에 관한 사항 ◦ 학부모 및 일반인을 대상으로 한 평생교육 프로그램의 설치·운영에 관한 사항 ◦ 그 밖에 학교 운영에 관한 위원들의 제안 사항과 학교장이 심의 요청한 사항 [유치원] ◦…",
+    "text": "학교(유치원)운영위원회 회의\n세부내용 5. 심의사항\n전북특별자치도 도립학교 운영위원회 설치·운영에 관한 조례 제9조, 제25조 [초등학교] ◦ 학생지도를 위한 지원 사항 ◦ 교복 및 체육복의 선정, 현장체험학습 등 학부모가 경비를 부담하는 사항 (다만, 특정 동아리 등에서 특정 학생을 대상으로 하는 사항은 제외) ◦ 지역사회 교육에 관한 사항 ◦ 학부모 및 일반인을 대상으로 한 평생교육 프로그램의 설치·운영에 관한 사항 ◦ 그 밖에 학교 운영에 관한 위원들의 제안 사항과 학교장이 심의 요청한 사항 [유치원] ◦ 유아지도를 위한 지원 사항 ◦ 지역사회교육에 관한 사항 ◦ 학부모 및 일반인을 대상으로 한 평생교육 프로그램의 설치운영에 관한 사항 ◦ 그 밖에 유치원 운영에 관한 위원들의 제안 사항과 유치원장이 심의 요청한 사항",
+    "workId": "c10-w02",
+    "blockId": "c10-w02-b23",
+    "anchor": "전북특별자치도도립학교운영위원회설치·운영에관한"
+  },
+  {
+    "id": "c10-w02:faq:2",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -14190,6 +16201,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c10-w02:faq:3",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -14202,6 +16214,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c10-w02:faq:4",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -14214,6 +16227,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c10-w02:faq:1",
     "chapterId": "10",
     "chapterLabel": "제10편",
     "chapterTitle": "학교운영위원회",
@@ -14226,6 +16240,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c11-w00",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14239,6 +16254,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c11-w00-b1",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14252,6 +16268,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c11-w01",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14264,6 +16281,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c11-w01"
   },
   {
+    "id": "c11-w01-b1",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14276,6 +16294,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b1"
   },
   {
+    "id": "c11-w01-b2",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14288,6 +16307,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b2"
   },
   {
+    "id": "c11-w01-b3",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14300,6 +16320,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b3"
   },
   {
+    "id": "c11-w01-b4",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14312,6 +16333,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b4"
   },
   {
+    "id": "c11-w01-b5",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14324,6 +16346,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b5"
   },
   {
+    "id": "c11-w01-b6",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14336,6 +16359,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b6"
   },
   {
+    "id": "c11-w01-b7",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14348,6 +16372,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b7"
   },
   {
+    "id": "c11-w01-b8",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14360,6 +16385,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b8"
   },
   {
+    "id": "c11-w01-b9",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14372,6 +16398,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b9"
   },
   {
+    "id": "c11-w01-b10",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14384,6 +16411,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b10"
   },
   {
+    "id": "c11-w01-b11",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14396,6 +16424,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b11"
   },
   {
+    "id": "c11-w01-b12",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14408,6 +16437,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b12"
   },
   {
+    "id": "c11-w01-b13",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14420,6 +16450,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b13"
   },
   {
+    "id": "c11-w01-b14",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14432,6 +16463,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b14"
   },
   {
+    "id": "c11-w01-b15",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14444,6 +16476,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b15"
   },
   {
+    "id": "c11-w01-b16",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14456,6 +16489,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b16"
   },
   {
+    "id": "c11-w01-b17",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14468,6 +16502,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b17"
   },
   {
+    "id": "c11-w01-b18",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14480,6 +16515,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b18"
   },
   {
+    "id": "c11-w01-b19",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14492,6 +16528,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b19"
   },
   {
+    "id": "c11-w01-b20",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14504,6 +16541,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b20"
   },
   {
+    "id": "c11-w01-b21",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14516,6 +16554,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b21"
   },
   {
+    "id": "c11-w01-b22",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14528,6 +16567,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b22"
   },
   {
+    "id": "c11-w01-b23",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14540,6 +16580,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b23"
   },
   {
+    "id": "c11-w01-b24",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14552,6 +16593,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b24"
   },
   {
+    "id": "c11-w01-b25",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14564,6 +16606,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b25"
   },
   {
+    "id": "c11-w01-b26",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14576,6 +16619,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b26"
   },
   {
+    "id": "c11-w01-b27",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14588,6 +16632,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b27"
   },
   {
+    "id": "c11-w01-b28",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14600,6 +16645,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b28"
   },
   {
+    "id": "c11-w01-b29",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14612,6 +16658,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b29"
   },
   {
+    "id": "c11-w01-b30",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14624,6 +16671,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w01-b30"
   },
   {
+    "id": "c11-w01:form:서식1",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14636,6 +16684,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식1"
   },
   {
+    "id": "c11-w01:form:서식2",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14648,6 +16697,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식2"
   },
   {
+    "id": "c11-w01:form:서식3",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14660,6 +16710,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식3"
   },
   {
+    "id": "c11-w01:form:예시1",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14672,6 +16723,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시1"
   },
   {
+    "id": "c11-w01:form:예시2",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14684,6 +16736,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시2"
   },
   {
+    "id": "c11-w02",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14696,6 +16749,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c11-w02"
   },
   {
+    "id": "c11-w02-b1",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14708,6 +16762,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w02-b1"
   },
   {
+    "id": "c11-w02-b2",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14720,6 +16775,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w02-b2"
   },
   {
+    "id": "c11-w02-b3",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14732,6 +16788,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w02-b3"
   },
   {
+    "id": "c11-w02-b4",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14744,6 +16801,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w02-b4"
   },
   {
+    "id": "c11-w02-b5",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14756,6 +16814,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w02-b5"
   },
   {
+    "id": "c11-w02-b6",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14768,6 +16827,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w02-b6"
   },
   {
+    "id": "c11-w02-b7",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14780,6 +16840,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w02-b7"
   },
   {
+    "id": "c11-w02-b8",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14792,6 +16853,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w02-b8"
   },
   {
+    "id": "c11-w02-b9",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14804,18 +16866,35 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w02-b9"
   },
   {
+    "id": "c11-w02-b10~1",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
     "type": "매뉴얼 원문",
     "workTitle": "공유재산의 사용허가 및 대부",
-    "title": "6. 사용허가 · 대부 비교",
+    "title": "6. 사용허가 · 대부 비교 › 법적지위 공법상의 행위(행정처분에 해당) 사법상의 계약행위",
     "description": "구 분 사용허가 대부 종류 행정재산 일반재산 법적지위 공법상의 행위(행정처분에 해당) 사법상의 계약행위 계약방법 원칙: 일반입찰 / 예외: 지명경쟁, 수의 허가기간 5년 이내(사용료는 매년 납입고지) 개별법에서 별도 정한 경우 개별법을 따름 토지와 그 정착물: 5년(대부료는 매년 납입고지) 그 외의 재산: 1년(폐교 10년) 갱신기간 ◦갱신신청: 허가기간 종료 1개월 전 ◦갱신범위: (입찰) 1회 5년 범위, (수의) 제한없음 ※ 천재지변 또는 재난, 귀책사유…",
-    "text": "공유재산의 사용허가 및 대부\n6. 사용허가 · 대부 비교\n구 분 사용허가 대부\n종류 행정재산 일반재산\n법적지위 공법상의 행위(행정처분에 해당) 사법상의 계약행위\n계약방법 원칙: 일반입찰 / 예외: 지명경쟁, 수의\n허가기간 5년 이내(사용료는 매년 납입고지) 개별법에서 별도 정한 경우 개별법을 따름 토지와 그 정착물: 5년(대부료는 매년 납입고지) 그 외의 재산: 1년(폐교 10년)\n갱신기간 ◦갱신신청: 허가기간 종료 1개월 전 ◦갱신범위: (입찰) 1회 5년 범위, (수의) 제한없음 ※ 천재지변 또는 재난, 귀책사유 발생 시 연장 가능\n산출방법 1. 재산평정방법 기준 ◦토지: 개별공시지가(표준지 공시지가 또는 감정평가 평가액) ◦토지 이외의 재산: 시가표준액(감정평가 평가액) - 표준지 공시지가: 당해 토지와 유사한 이용가치로 인정되는 토지가격비준표(한국감정원) 기준 - 첫째 연도에는 측량 또는 감정평가 등에 든 비용을 포함 - 재산가격은 연도마다 결정 - 토지 이외의 재산은 감정평가액을 적용한 경우 감정평가일부터 3년 이내에만 적용 2. 사용(대부)료 산출방법 ◦토지: 재산평가액(개별공시지가×면적)×사용(대부)요율×사용일수 / 365 ◦건물: 재산평가액(건물평가액+토지평가액)×사용(대부)요율×사용일수 / 365 - 건물평가액: 시가표준액 또는 건물의 감정가(㎡당)×사용면적(전용+공용) - 토지평가액: 개별공시지가×사용면적 3. 사용(대부)요율 요율 / 대상(목적) 1천분의 50 이상 / 별도의 규정을 제외한 원칙 1천분의 40 이상 / 공무원 후생복지 목적으로 사용하는 경우 1천분의 25 이상 / 국가 · 지자체가 직접 공공 ‧ 공공용으로 사용하는 경우, 주거용 건물이 있는 토지를 대부하는 경우 1천분의 10 이상 / 농경지를 실경작자에게 경작 목적으로 허용하는 경우\n납부 허가를 받은 날로부터 60일 이내로 하되, 사용 전 미리 납부 대부 전 미리 납부\n100만 원을 초과하는 경우 연 6회 분납가능 (행정안전부장관이 정하는 분납이자율 적용: 가장 최근에 공시한 신규취급액기준 COFIX)\n수입 학교회계수입 교특회계수입",
+    "text": "공유재산의 사용허가 및 대부\n6. 사용허가 · 대부 비교\n구 분 사용허가 대부\n종류 행정재산 일반재산\n법적지위 공법상의 행위(행정처분에 해당) 사법상의 계약행위\n계약방법 원칙: 일반입찰 / 예외: 지명경쟁, 수의\n허가기간 5년 이내(사용료는 매년 납입고지) 개별법에서 별도 정한 경우 개별법을 따름 토지와 그 정착물: 5년(대부료는 매년 납입고지) 그 외의 재산: 1년(폐교 10년)\n갱신기간 ◦갱신신청: 허가기간 종료 1개월 전 ◦갱신범위: (입찰) 1회 5년 범위, (수의) 제한없음 ※ 천재지변 또는 재난, 귀책사유 발생 시 연장 가능",
     "workId": "c11-w02",
-    "blockId": "c11-w02-b10"
+    "blockId": "c11-w02-b10",
+    "anchor": "법적지위공법상의행위(행정처분에해당)사법상의계"
   },
   {
+    "id": "c11-w02-b10~2",
+    "chapterId": "11",
+    "chapterLabel": "제11편",
+    "chapterTitle": "재산관리",
+    "type": "매뉴얼 원문",
+    "workTitle": "공유재산의 사용허가 및 대부",
+    "title": "6. 사용허가 · 대부 비교 › 산출방법 1. 재산평정방법 기준 ◦토지: 개별공시지가(표준지 공시지가 또는 감정평가 평",
+    "description": "산출방법 1. 재산평정방법 기준 ◦토지: 개별공시지가(표준지 공시지가 또는 감정평가 평가액) ◦토지 이외의 재산: 시가표준액(감정평가 평가액) - 표준지 공시지가: 당해 토지와 유사한 이용가치로 인정되는 토지가격비준표(한국감정원) 기준 - 첫째 연도에는 측량 또는 감정평가 등에 든 비용을 포함 - 재산가격은 연도마다 결정 - 토지 이외의 재산은 감정평가액을 적용한 경우 감정평가일부터 3년 이내에만 적용 2. 사용(대부)료 산출방법 ◦토지: 재산평가액(개별공시지가…",
+    "text": "공유재산의 사용허가 및 대부\n6. 사용허가 · 대부 비교\n산출방법 1. 재산평정방법 기준 ◦토지: 개별공시지가(표준지 공시지가 또는 감정평가 평가액) ◦토지 이외의 재산: 시가표준액(감정평가 평가액) - 표준지 공시지가: 당해 토지와 유사한 이용가치로 인정되는 토지가격비준표(한국감정원) 기준 - 첫째 연도에는 측량 또는 감정평가 등에 든 비용을 포함 - 재산가격은 연도마다 결정 - 토지 이외의 재산은 감정평가액을 적용한 경우 감정평가일부터 3년 이내에만 적용 2. 사용(대부)료 산출방법 ◦토지: 재산평가액(개별공시지가×면적)×사용(대부)요율×사용일수 / 365 ◦건물: 재산평가액(건물평가액+토지평가액)×사용(대부)요율×사용일수 / 365 - 건물평가액: 시가표준액 또는 건물의 감정가(㎡당)×사용면적(전용+공용) - 토지평가액: 개별공시지가×사용면적 3. 사용(대부)요율 요율 / 대상(목적) 1천분의 50 이상 / 별도의 규정을 제외한 원칙 1천분의 40 이상 / 공무원 후생복지 목적으로 사용하는 경우 1천분의 25 이상 / 국가 · 지자체가 직접 공공 ‧ 공공용으로 사용하는 경우, 주거용 건물이 있는 토지를 대부하는 경우 1천분의 10 이상 / 농경지를 실경작자에게 경작 목적으로 허용하는 경우\n납부 허가를 받은 날로부터 60일 이내로 하되, 사용 전 미리 납부 대부 전 미리 납부\n100만 원을 초과하는 경우 연 6회 분납가능 (행정안전부장관이 정하는 분납이자율 적용: 가장 최근에 공시한 신규취급액기준 COFIX)\n수입 학교회계수입 교특회계수입",
+    "workId": "c11-w02",
+    "blockId": "c11-w02-b10",
+    "anchor": "산출방법1.재산평정방법기준◦토지:개별공시지가"
+  },
+  {
+    "id": "c11-w02:form:서식4",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14828,6 +16907,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식4"
   },
   {
+    "id": "c11-w02:form:서식5",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14840,6 +16920,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식5"
   },
   {
+    "id": "c11-w02:form:서식6",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14852,6 +16933,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식6"
   },
   {
+    "id": "c11-w03",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14864,6 +16946,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c11-w03"
   },
   {
+    "id": "c11-w03-b1",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14876,6 +16959,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w03-b1"
   },
   {
+    "id": "c11-w03-b2",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14888,6 +16972,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w03-b2"
   },
   {
+    "id": "c11-w03-b3",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14900,6 +16985,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w03-b3"
   },
   {
+    "id": "c11-w03-b4",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14912,6 +16998,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w03-b4"
   },
   {
+    "id": "c11-w03-b5",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14924,6 +17011,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w03-b5"
   },
   {
+    "id": "c11-w03-b6",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14936,6 +17024,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w03-b6"
   },
   {
+    "id": "c11-w03-b7",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14948,6 +17037,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w03-b7"
   },
   {
+    "id": "c11-w03-b8",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14960,6 +17050,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w03-b8"
   },
   {
+    "id": "c11-w03-b9",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14972,6 +17063,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w03-b9"
   },
   {
+    "id": "c11-w03:faq:8",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14984,6 +17076,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "8"
   },
   {
+    "id": "c11-w04",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -14996,6 +17089,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c11-w04"
   },
   {
+    "id": "c11-w04-b1",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15008,6 +17102,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w04-b1"
   },
   {
+    "id": "c11-w04-b2",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15020,6 +17115,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w04-b2"
   },
   {
+    "id": "c11-w04-b3",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15032,6 +17128,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w04-b3"
   },
   {
+    "id": "c11-w04-b4",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15044,6 +17141,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w04-b4"
   },
   {
+    "id": "c11-w04-b5",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15056,6 +17154,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w04-b5"
   },
   {
+    "id": "c11-w04-b6",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15068,6 +17167,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w04-b6"
   },
   {
+    "id": "c11-w04-b7",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15080,6 +17180,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w04-b7"
   },
   {
+    "id": "c11-w04-b8",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15092,6 +17193,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w04-b8"
   },
   {
+    "id": "c11-w04-b9",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15104,6 +17206,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w04-b9"
   },
   {
+    "id": "c11-w04-b10",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15116,6 +17219,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w04-b10"
   },
   {
+    "id": "c11-w04-b11",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15128,6 +17232,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w04-b11"
   },
   {
+    "id": "c11-w04-b12",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15140,6 +17245,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w04-b12"
   },
   {
+    "id": "c11-w04-b13",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15152,6 +17258,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w04-b13"
   },
   {
+    "id": "c11-w04-b14",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15164,6 +17271,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w04-b14"
   },
   {
+    "id": "c11-w04-b15",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15176,6 +17284,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w04-b15"
   },
   {
+    "id": "c11-w04-b16",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15188,6 +17297,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w04-b16"
   },
   {
+    "id": "c11-w04-b17",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15200,6 +17310,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w04-b17"
   },
   {
+    "id": "c11-w04-b18",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15212,6 +17323,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w04-b18"
   },
   {
+    "id": "c11-w04:form:서식7",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15224,6 +17336,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식7"
   },
   {
+    "id": "c11-w04:form:서식8",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15236,6 +17349,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식8"
   },
   {
+    "id": "c11-w05",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15248,6 +17362,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c11-w05"
   },
   {
+    "id": "c11-w05-b1",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15260,6 +17375,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w05-b1"
   },
   {
+    "id": "c11-w05-b2",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15272,6 +17388,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w05-b2"
   },
   {
+    "id": "c11-w05-b3",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15284,6 +17401,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w05-b3"
   },
   {
+    "id": "c11-w05-b4",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15296,6 +17414,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w05-b4"
   },
   {
+    "id": "c11-w05-b5",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15308,6 +17427,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w05-b5"
   },
   {
+    "id": "c11-w05-b6",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15320,6 +17440,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w05-b6"
   },
   {
+    "id": "c11-w05-b7",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15332,6 +17453,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w05-b7"
   },
   {
+    "id": "c11-w05-b8",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15344,6 +17466,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w05-b8"
   },
   {
+    "id": "c11-w05-b9",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15356,6 +17479,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w05-b9"
   },
   {
+    "id": "c11-w05-b10",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15368,6 +17492,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w05-b10"
   },
   {
+    "id": "c11-w05-b11",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15380,6 +17505,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w05-b11"
   },
   {
+    "id": "c11-w05-b12",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15392,6 +17518,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w05-b12"
   },
   {
+    "id": "c11-w05-b13",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15404,6 +17531,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w05-b13"
   },
   {
+    "id": "c11-w05-b14",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15416,6 +17544,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w05-b14"
   },
   {
+    "id": "c11-w05-b15",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15428,6 +17557,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w05-b15"
   },
   {
+    "id": "c11-w05-b16",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15440,6 +17570,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w05-b16"
   },
   {
+    "id": "c11-w05-b17",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15452,6 +17583,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w05-b17"
   },
   {
+    "id": "c11-w06",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15464,6 +17596,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c11-w06"
   },
   {
+    "id": "c11-w06-b1",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15476,6 +17609,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w06-b1"
   },
   {
+    "id": "c11-w06-b2",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15488,6 +17622,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w06-b2"
   },
   {
+    "id": "c11-w06-b3",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15500,6 +17635,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w06-b3"
   },
   {
+    "id": "c11-w06-b4",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15512,6 +17648,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w06-b4"
   },
   {
+    "id": "c11-w06-b5",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15524,6 +17661,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w06-b5"
   },
   {
+    "id": "c11-w06-b6",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15536,6 +17674,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w06-b6"
   },
   {
+    "id": "c11-w06-b7",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15548,6 +17687,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w06-b7"
   },
   {
+    "id": "c11-w06-b8",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15560,6 +17700,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w06-b8"
   },
   {
+    "id": "c11-w06-b9",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15572,6 +17713,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w06-b9"
   },
   {
+    "id": "c11-w06-b10",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15584,6 +17726,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w06-b10"
   },
   {
+    "id": "c11-w06-b11",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15596,6 +17739,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w06-b11"
   },
   {
+    "id": "c11-w06-b12",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15608,6 +17752,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w06-b12"
   },
   {
+    "id": "c11-w06-b13",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15620,6 +17765,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w06-b13"
   },
   {
+    "id": "c11-w06-b14",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15632,6 +17778,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w06-b14"
   },
   {
+    "id": "c11-w06-b15",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15644,6 +17791,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w06-b15"
   },
   {
+    "id": "c11-w06-b16",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15656,6 +17804,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w06-b16"
   },
   {
+    "id": "c11-w06-b17",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15668,6 +17817,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w06-b17"
   },
   {
+    "id": "c11-w07",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15680,6 +17830,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c11-w07"
   },
   {
+    "id": "c11-w07-b1",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15692,6 +17843,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w07-b1"
   },
   {
+    "id": "c11-w07-b2",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15704,6 +17856,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w07-b2"
   },
   {
+    "id": "c11-w07-b3",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15716,6 +17869,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w07-b3"
   },
   {
+    "id": "c11-w07-b4",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15728,6 +17882,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w07-b4"
   },
   {
+    "id": "c11-w07-b5",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15740,6 +17895,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w07-b5"
   },
   {
+    "id": "c11-w07-b6",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15752,6 +17908,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w07-b6"
   },
   {
+    "id": "c11-w07-b7",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15764,6 +17921,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w07-b7"
   },
   {
+    "id": "c11-w07-b8",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15776,6 +17934,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w07-b8"
   },
   {
+    "id": "c11-w07-b9",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15788,6 +17947,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w07-b9"
   },
   {
+    "id": "c11-w07-b10",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15800,6 +17960,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w07-b10"
   },
   {
+    "id": "c11-w07-b11",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15812,6 +17973,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w07-b11"
   },
   {
+    "id": "c11-w07-b12",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15824,18 +17986,49 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w07-b12"
   },
   {
+    "id": "c11-w07-b13~1",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
     "type": "매뉴얼 원문",
     "workTitle": "매점 및 자동판매기의 설치허가 ․ 위탁",
-    "title": "세부내용 3. 사용료 산출(예시)",
+    "title": "세부내용 3. 사용료 산출(예시) › (예시1) 건물 1층 일부를 매점으로 사용 · 허가할 때",
     "description": "(예시1) 건물 1층 일부를 매점으로 사용 · 허가할 때 <1층 일부 허가> 3층 2층 1층 1층 건물면적: 600㎡ 허가 전용면적: 50㎡ 층별 공용면적: 100㎡ 시가표준액: 248,000원 부지면적: 1,000㎡ 부지 공시지가: 3,000,000원 ◦건물평가액: {50㎡+300㎡×(50㎡÷1,500㎡)}×248,000원 =14,880,000원 ◦부지평가액: {0+1,000㎡×(60㎡÷1,800㎡)}×3,000,000원 =100,000,000원 ◦재산평가액:…",
-    "text": "매점 및 자동판매기의 설치허가 ․ 위탁\n세부내용 3. 사용료 산출(예시)\n(예시1) 건물 1층 일부를 매점으로 사용 · 허가할 때\n<1층 일부 허가> 3층 2층 1층 1층 건물면적: 600㎡ 허가 전용면적: 50㎡ 층별 공용면적: 100㎡ 시가표준액: 248,000원 부지면적: 1,000㎡ 부지 공시지가: 3,000,000원 ◦건물평가액: {50㎡+300㎡×(50㎡÷1,500㎡)}×248,000원 =14,880,000원 ◦부지평가액: {0+1,000㎡×(60㎡÷1,800㎡)}×3,000,000원 =100,000,000원 ◦재산평가액: 14,880,000원+100,000,000원=114,880,000원 ◦사용료: 114,880,000원×50 / 1,000=5,744,000원(1년 사용 시)\n◦건물의 총 공용면적: 300㎡(각 층별 복도, 계단 등 공용면적의 총합) ◦건물의 총 전용면적: 1,500㎡(연면적 1,800㎡-총 공용면적 300㎡) ◦사용허가 받은 자의 부지 전용면적: 0㎡(건물 사용 외 전용으로 사용하는 부지가 없는 경우에 건물 일부사용에 따른 부지 전용면적은 0㎡) ◦부지 총 공용면적: 1,000㎡(해당 건물의 부지면적을 공용면적으로 봄) ◦사용허가 받은 자의 건물면적(전용･공용면적 합계): 60㎡(전용 50㎡+공용10㎡) - 공용면적: 건물평가액 산출 공식에서 “해당 건물의 총 공용면적×(사용허가 받은 자의 건물전용면적÷해당 건물의 총 전용면적)”에 해당하는 부분으로, 300㎡×(50㎡÷1,500㎡)=10㎡\n(예시2) 건물 2층 전체를 매점으로 사용 · 허가할 때\n<2층 전체 허가> 3층 2층 1층 2층 건물면적: 600㎡ 허가 전용면적: 600㎡ 시가표준액: 248,000원 부지면적: 1,000㎡ 부지 공시지가: 3,000,000원 ◦건물평가액: {600㎡+0㎡×(600㎡÷1,800㎡)}×248,000원 =148,800,000원 ◦부지평가액: {0+1,000㎡×(600㎡÷1,800㎡)}×3,000,000원 =1,000,000,000원 ◦재산평가액: 148,800,000원+1,000,000,000원=1,148,800,000원 ◦사용료: 1,148,800,000원×50 / 1,000=57,440,000원(1년 사용 시)\n◦건물의 총 공용면적: 0㎡(건물 1개 층 전체를 사용하는 경우 공용면적은 없는 것으로 봄) ◦건물의 총 전용면적: 1,800㎡(별도 공용면적이 없으므로 600㎡×3층)",
+    "text": "매점 및 자동판매기의 설치허가 ․ 위탁\n세부내용 3. 사용료 산출(예시)\n(예시1) 건물 1층 일부를 매점으로 사용 · 허가할 때\n<1층 일부 허가> 3층 2층 1층 1층 건물면적: 600㎡ 허가 전용면적: 50㎡ 층별 공용면적: 100㎡ 시가표준액: 248,000원 부지면적: 1,000㎡ 부지 공시지가: 3,000,000원 ◦건물평가액: {50㎡+300㎡×(50㎡÷1,500㎡)}×248,000원 =14,880,000원 ◦부지평가액: {0+1,000㎡×(60㎡÷1,800㎡)}×3,000,000원 =100,000,000원 ◦재산평가액: 14,880,000원+100,000,000원=114,880,000원 ◦사용료: 114,880,000원×50 / 1,000=5,744,000원(1년 사용 시)",
     "workId": "c11-w07",
-    "blockId": "c11-w07-b13"
+    "blockId": "c11-w07-b13",
+    "anchor": "(예시1)건물1층일부를매점으로사용·허가할때"
   },
   {
+    "id": "c11-w07-b13~2",
+    "chapterId": "11",
+    "chapterLabel": "제11편",
+    "chapterTitle": "재산관리",
+    "type": "매뉴얼 원문",
+    "workTitle": "매점 및 자동판매기의 설치허가 ․ 위탁",
+    "title": "세부내용 3. 사용료 산출(예시) › ◦건물의 총 공용면적: 300㎡(각 층별 복도, 계단 등 공용면적의 총합) ◦건물의 총",
+    "description": "◦건물의 총 공용면적: 300㎡(각 층별 복도, 계단 등 공용면적의 총합) ◦건물의 총 전용면적: 1,500㎡(연면적 1,800㎡-총 공용면적 300㎡) ◦사용허가 받은 자의 부지 전용면적: 0㎡(건물 사용 외 전용으로 사용하는 부지가 없는 경우에 건물 일부사용에 따른 부지 전용면적은 0㎡) ◦부지 총 공용면적: 1,000㎡(해당 건물의 부지면적을 공용면적으로 봄) ◦사용허가 받은 자의 건물면적(전용･공용면적 합계): 60㎡(전용 50㎡+공용10㎡) - 공용면적…",
+    "text": "매점 및 자동판매기의 설치허가 ․ 위탁\n세부내용 3. 사용료 산출(예시)\n◦건물의 총 공용면적: 300㎡(각 층별 복도, 계단 등 공용면적의 총합) ◦건물의 총 전용면적: 1,500㎡(연면적 1,800㎡-총 공용면적 300㎡) ◦사용허가 받은 자의 부지 전용면적: 0㎡(건물 사용 외 전용으로 사용하는 부지가 없는 경우에 건물 일부사용에 따른 부지 전용면적은 0㎡) ◦부지 총 공용면적: 1,000㎡(해당 건물의 부지면적을 공용면적으로 봄) ◦사용허가 받은 자의 건물면적(전용･공용면적 합계): 60㎡(전용 50㎡+공용10㎡) - 공용면적: 건물평가액 산출 공식에서 “해당 건물의 총 공용면적×(사용허가 받은 자의 건물전용면적÷해당 건물의 총 전용면적)”에 해당하는 부분으로, 300㎡×(50㎡÷1,500㎡)=10㎡\n(예시2) 건물 2층 전체를 매점으로 사용 · 허가할 때",
+    "workId": "c11-w07",
+    "blockId": "c11-w07-b13",
+    "anchor": "◦건물의총공용면적:300㎡(각층별복도,계단등"
+  },
+  {
+    "id": "c11-w07-b13~3",
+    "chapterId": "11",
+    "chapterLabel": "제11편",
+    "chapterTitle": "재산관리",
+    "type": "매뉴얼 원문",
+    "workTitle": "매점 및 자동판매기의 설치허가 ․ 위탁",
+    "title": "세부내용 3. 사용료 산출(예시) › <2층 전체 허가> 3층 2층 1층 2층 건물면적: 600㎡ 허가 전용면적: 600㎡",
+    "description": "<2층 전체 허가> 3층 2층 1층 2층 건물면적: 600㎡ 허가 전용면적: 600㎡ 시가표준액: 248,000원 부지면적: 1,000㎡ 부지 공시지가: 3,000,000원 ◦건물평가액: {600㎡+0㎡×(600㎡÷1,800㎡)}×248,000원 =148,800,000원 ◦부지평가액: {0+1,000㎡×(600㎡÷1,800㎡)}×3,000,000원 =1,000,000,000원 ◦재산평가액: 148,800,000원+1,000,000,000원=1,148,800,00…",
+    "text": "매점 및 자동판매기의 설치허가 ․ 위탁\n세부내용 3. 사용료 산출(예시)\n<2층 전체 허가> 3층 2층 1층 2층 건물면적: 600㎡ 허가 전용면적: 600㎡ 시가표준액: 248,000원 부지면적: 1,000㎡ 부지 공시지가: 3,000,000원 ◦건물평가액: {600㎡+0㎡×(600㎡÷1,800㎡)}×248,000원 =148,800,000원 ◦부지평가액: {0+1,000㎡×(600㎡÷1,800㎡)}×3,000,000원 =1,000,000,000원 ◦재산평가액: 148,800,000원+1,000,000,000원=1,148,800,000원 ◦사용료: 1,148,800,000원×50 / 1,000=57,440,000원(1년 사용 시)\n◦건물의 총 공용면적: 0㎡(건물 1개 층 전체를 사용하는 경우 공용면적은 없는 것으로 봄) ◦건물의 총 전용면적: 1,800㎡(별도 공용면적이 없으므로 600㎡×3층)",
+    "workId": "c11-w07",
+    "blockId": "c11-w07-b13",
+    "anchor": "<2층전체허가>3층2층1층2층건물면적:600"
+  },
+  {
+    "id": "c11-w07-b14",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15848,6 +18041,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w07-b14"
   },
   {
+    "id": "c11-w07-b15",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15860,6 +18054,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w07-b15"
   },
   {
+    "id": "c11-w07-b16",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15872,6 +18067,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w07-b16"
   },
   {
+    "id": "c11-w07-b17",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15884,6 +18080,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w07-b17"
   },
   {
+    "id": "c11-w07-b18",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15896,6 +18093,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w07-b18"
   },
   {
+    "id": "c11-w07-b19",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15908,6 +18106,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w07-b19"
   },
   {
+    "id": "c11-w07-b20",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15920,6 +18119,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w07-b20"
   },
   {
+    "id": "c11-w07-b21",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15932,6 +18132,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w07-b21"
   },
   {
+    "id": "c11-w07-b22",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15944,6 +18145,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w07-b22"
   },
   {
+    "id": "c11-w07-b23",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15956,6 +18158,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w07-b23"
   },
   {
+    "id": "c11-w07:form:예시3",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15968,6 +18171,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시3"
   },
   {
+    "id": "c11-w07:form:예시4",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15980,6 +18184,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시4"
   },
   {
+    "id": "c11-w07:form:예시5",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -15992,6 +18197,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시5"
   },
   {
+    "id": "c11-w08",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -16004,6 +18210,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c11-w08"
   },
   {
+    "id": "c11-w08-b1",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -16016,6 +18223,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w08-b1"
   },
   {
+    "id": "c11-w08-b2",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -16028,6 +18236,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w08-b2"
   },
   {
+    "id": "c11-w08-b3",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -16040,6 +18249,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w08-b3"
   },
   {
+    "id": "c11-w08-b4",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -16052,6 +18262,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w08-b4"
   },
   {
+    "id": "c11-w08-b5",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -16064,6 +18275,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w08-b5"
   },
   {
+    "id": "c11-w08-b6",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -16076,6 +18288,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w08-b6"
   },
   {
+    "id": "c11-w08-b7",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -16088,6 +18301,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w08-b7"
   },
   {
+    "id": "c11-w08-b8",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -16100,6 +18314,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w08-b8"
   },
   {
+    "id": "c11-w08-b9",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -16112,18 +18327,49 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w08-b9"
   },
   {
+    "id": "c11-w08-b10~1",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
     "type": "매뉴얼 원문",
     "workTitle": "한국교육시설안전원 교육시설공제",
-    "title": "1. 처리절차 및 방법",
+    "title": "1. 처리절차 및 방법 › 재난 발생 (학교·기관) ◦ 화재·폭발·붕괴·태풍·홍수·호우·강풍·풍랑·해일· 대설·한",
     "description": "단계 처리절차 및 방법 비고 재난 발생 (학교·기관) ◦ 화재·폭발·붕괴·태풍·홍수·호우·강풍·풍랑·해일· 대설·한파·낙뢰 그 밖에 이와 유사한 사고 ◦ 재난이나 교육시설의 훼손·결함 등으로 생긴 우연한 사고 ↓ 공제 사고통보 (학교·기관) ◦ 교육시설 공제정보망(https: / pot.koies.or.kr / )에 공제정보망(로그인) > 공제보상 > 사고접수 > 공제사고 통보 > 사고 발생 내용 등록 (피해 사진 포함) > 저장 > 접수 * 미가입된 건물, 부…",
-    "text": "한국교육시설안전원 교육시설공제\n1. 처리절차 및 방법\n단계 처리절차 및 방법 비고\n재난 발생 (학교·기관) ◦ 화재·폭발·붕괴·태풍·홍수·호우·강풍·풍랑·해일· 대설·한파·낙뢰 그 밖에 이와 유사한 사고 ◦ 재난이나 교육시설의 훼손·결함 등으로 생긴 우연한 사고\n↓\n공제 사고통보 (학교·기관) ◦ 교육시설 공제정보망(https: / pot.koies.or.kr / )에 공제정보망(로그인) > 공제보상 > 사고접수 > 공제사고 통보 > 사고 발생 내용 등록 (피해 사진 포함) > 저장 > 접수 * 미가입된 건물, 부속물, 물품피해는 사고통보 제외(면책) * 소액사고로(소규모 피해), 자체 복구를 원하는 경우 사고통보 제외\n↓\n사고접수·현장확인 (안전원) 공제급여 신청액 산정 (학교·기관) ◦ 한국교육시설안전원 사고접수 및 현장확인 ◦ 재난복구에 필요한 금액 산정(공사 견적서 등) 후 한국교육시설안전원 담당자에게 금액 검토 * 피해복구가 시급할 경우 한국교육시설안전원과 사전 협의 후에 우선 복구 실시 가능. 단, 피해가 발생한 부분에 대해 충분한 사진 촬영 필요\n↓\n공제급여 신청 (학교·기관) ◦ 교육시설 공제정보망(https: / pot.koies.or.kr / )에 공제정보망(로그인) > 공제보상 > 공제사고현황조회 > 공제급여 신청 > 피해내용 및 신청금액입력 > 접수(학교) > 신청(도교육청, 교육지원청) → 교육시설 공제정보망 신청만으로 인정. 공문 발송은 선택사항(필요시 공문으로 신청), * 공제급여 신청 공문 제출 시 교육시설 공제정보망에서 공제급여신청서 파일을 다운받아 첨부하여 제출 필수(증빙) 서류 ① 통장사본 (학교 또는 교육청) ② 증빙서류 - 건물 : 건축물대장 - 부속물 및 물품: 재산관리대장 등 소유입증자료 - 복구비 산출내역서(견적서, 피해내역 등) 및 피해 사진 - 화재: 화재증명원 등 화재 입증서류 - 화재 외(호우,태풍,낙뢰 등): 기상현상증명서 등\n↓\n공제급여 지급 (안전원) ∙ 공제급여 검토 후 공제급여 결정 / 송금\n※ 참고영상: 한국교육시설안전원 교육시설공제(공제급여 신청) 교육동영상 (링크)\n※ 공제급여 보상 종류\n- 교육시설공제(재난):공제에 가입한 건물 및 그 부속물이 화재·폭발·붕괴·태풍·홍수·호우·강풍·풍랑·해일·대설·한파·낙뢰 그 밖에 이와 유사한 사고 및 추가 약정한 재난으로 피해를 입었을 때 재난복구비를 지급\n- 배상책임공제(시설훼손 / 결함): 피공제자가 소유, 사용 또는 관리하는 시설 및 교육시설의 용도에 따른 업무 수행 중 재난이나 교육시설의 훼손·결함 등으로 생긴 우연한 사고로 법률상 배상책임을 부담함으로써 입은 손해에 대한 위험을 보장\n※ 배상책임공제 사고는 학교 “접수” 시 안전원에 신청 완료됨",
+    "text": "한국교육시설안전원 교육시설공제\n1. 처리절차 및 방법\n단계 처리절차 및 방법 비고\n재난 발생 (학교·기관) ◦ 화재·폭발·붕괴·태풍·홍수·호우·강풍·풍랑·해일· 대설·한파·낙뢰 그 밖에 이와 유사한 사고 ◦ 재난이나 교육시설의 훼손·결함 등으로 생긴 우연한 사고\n↓\n공제 사고통보 (학교·기관) ◦ 교육시설 공제정보망(https: / pot.koies.or.kr / )에 공제정보망(로그인) > 공제보상 > 사고접수 > 공제사고 통보 > 사고 발생 내용 등록 (피해 사진 포함) > 저장 > 접수 * 미가입된 건물, 부속물, 물품피해는 사고통보 제외(면책) * 소액사고로(소규모 피해), 자체 복구를 원하는 경우 사고통보 제외\n↓\n사고접수·현장확인 (안전원) 공제급여 신청액 산정 (학교·기관) ◦ 한국교육시설안전원 사고접수 및 현장확인 ◦ 재난복구에 필요한 금액 산정(공사 견적서 등) 후 한국교육시설안전원 담당자에게 금액 검토 * 피해복구가 시급할 경우 한국교육시설안전원과 사전 협의 후에 우선 복구 실시 가능. 단, 피해가 발생한 부분에 대해 충분한 사진 촬영 필요\n↓",
     "workId": "c11-w08",
-    "blockId": "c11-w08-b10"
+    "blockId": "c11-w08-b10",
+    "anchor": "재난발생(학교·기관)◦화재·폭발·붕괴·태풍·"
   },
   {
+    "id": "c11-w08-b10~2",
+    "chapterId": "11",
+    "chapterLabel": "제11편",
+    "chapterTitle": "재산관리",
+    "type": "매뉴얼 원문",
+    "workTitle": "한국교육시설안전원 교육시설공제",
+    "title": "1. 처리절차 및 방법 › 공제급여 신청 (학교·기관) ◦ 교육시설 공제정보망(https: / pot.koies.",
+    "description": "공제급여 신청 (학교·기관) ◦ 교육시설 공제정보망(https: / pot.koies.or.kr / )에 공제정보망(로그인) > 공제보상 > 공제사고현황조회 > 공제급여 신청 > 피해내용 및 신청금액입력 > 접수(학교) > 신청(도교육청, 교육지원청) → 교육시설 공제정보망 신청만으로 인정. 공문 발송은 선택사항(필요시 공문으로 신청), * 공제급여 신청 공문 제출 시 교육시설 공제정보망에서 공제급여신청서 파일을 다운받아 첨부하여 제출 필수(증빙) 서류 ① 통장…",
+    "text": "한국교육시설안전원 교육시설공제\n1. 처리절차 및 방법\n공제급여 신청 (학교·기관) ◦ 교육시설 공제정보망(https: / pot.koies.or.kr / )에 공제정보망(로그인) > 공제보상 > 공제사고현황조회 > 공제급여 신청 > 피해내용 및 신청금액입력 > 접수(학교) > 신청(도교육청, 교육지원청) → 교육시설 공제정보망 신청만으로 인정. 공문 발송은 선택사항(필요시 공문으로 신청), * 공제급여 신청 공문 제출 시 교육시설 공제정보망에서 공제급여신청서 파일을 다운받아 첨부하여 제출 필수(증빙) 서류 ① 통장사본 (학교 또는 교육청) ② 증빙서류 - 건물 : 건축물대장 - 부속물 및 물품: 재산관리대장 등 소유입증자료 - 복구비 산출내역서(견적서, 피해내역 등) 및 피해 사진 - 화재: 화재증명원 등 화재 입증서류 - 화재 외(호우,태풍,낙뢰 등): 기상현상증명서 등\n↓\n공제급여 지급 (안전원) ∙ 공제급여 검토 후 공제급여 결정 / 송금\n※ 참고영상: 한국교육시설안전원 교육시설공제(공제급여 신청) 교육동영상 (링크)\n※ 공제급여 보상 종류",
+    "workId": "c11-w08",
+    "blockId": "c11-w08-b10",
+    "anchor": "공제급여신청(학교·기관)◦교육시설공제정보망("
+  },
+  {
+    "id": "c11-w08-b10~3",
+    "chapterId": "11",
+    "chapterLabel": "제11편",
+    "chapterTitle": "재산관리",
+    "type": "매뉴얼 원문",
+    "workTitle": "한국교육시설안전원 교육시설공제",
+    "title": "1. 처리절차 및 방법 › - 교육시설공제(재난):공제에 가입한 건물 및 그 부속물이 화재·폭발·붕괴·태풍·홍수·",
+    "description": "- 교육시설공제(재난):공제에 가입한 건물 및 그 부속물이 화재·폭발·붕괴·태풍·홍수·호우·강풍·풍랑·해일·대설·한파·낙뢰 그 밖에 이와 유사한 사고 및 추가 약정한 재난으로 피해를 입었을 때 재난복구비를 지급 - 배상책임공제(시설훼손 / 결함): 피공제자가 소유, 사용 또는 관리하는 시설 및 교육시설의 용도에 따른 업무 수행 중 재난이나 교육시설의 훼손·결함 등으로 생긴 우연한 사고로 법률상 배상책임을 부담함으로써 입은 손해에 대한 위험을 보장 ※ 배상책임공제…",
+    "text": "한국교육시설안전원 교육시설공제\n1. 처리절차 및 방법\n- 교육시설공제(재난):공제에 가입한 건물 및 그 부속물이 화재·폭발·붕괴·태풍·홍수·호우·강풍·풍랑·해일·대설·한파·낙뢰 그 밖에 이와 유사한 사고 및 추가 약정한 재난으로 피해를 입었을 때 재난복구비를 지급\n- 배상책임공제(시설훼손 / 결함): 피공제자가 소유, 사용 또는 관리하는 시설 및 교육시설의 용도에 따른 업무 수행 중 재난이나 교육시설의 훼손·결함 등으로 생긴 우연한 사고로 법률상 배상책임을 부담함으로써 입은 손해에 대한 위험을 보장\n※ 배상책임공제 사고는 학교 “접수” 시 안전원에 신청 완료됨",
+    "workId": "c11-w08",
+    "blockId": "c11-w08-b10",
+    "anchor": "-교육시설공제(재난):공제에가입한건물및그부속"
+  },
+  {
+    "id": "c11-w08-b11",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -16136,6 +18382,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c11-w08-b11"
   },
   {
+    "id": "c11-w08:form:예시6",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -16148,6 +18395,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시6"
   },
   {
+    "id": "c11-w08:faq:1",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -16160,6 +18408,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c11-w08:faq:2",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -16172,6 +18421,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c11-w08:faq:3",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -16184,6 +18434,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c11-w08:faq:4",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -16196,6 +18447,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c11-w08:faq:5",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -16208,6 +18460,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "c11-w08:faq:6",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -16220,6 +18473,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "6"
   },
   {
+    "id": "c11-w08:faq:7",
     "chapterId": "11",
     "chapterLabel": "제11편",
     "chapterTitle": "재산관리",
@@ -16232,6 +18486,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "7"
   },
   {
+    "id": "c12-w00",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16245,6 +18500,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c12-w00-b1",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16258,6 +18514,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c12-w01",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16270,6 +18527,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c12-w01"
   },
   {
+    "id": "c12-w01-b1",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16282,6 +18540,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w01-b1"
   },
   {
+    "id": "c12-w01-b2",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16294,6 +18553,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w01-b2"
   },
   {
+    "id": "c12-w01-b3",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16306,6 +18566,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w01-b3"
   },
   {
+    "id": "c12-w01-b4",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16318,6 +18579,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w01-b4"
   },
   {
+    "id": "c12-w01-b5",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16330,6 +18592,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w01-b5"
   },
   {
+    "id": "c12-w01-b6",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16342,6 +18605,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w01-b6"
   },
   {
+    "id": "c12-w01-b7",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16354,6 +18618,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w01-b7"
   },
   {
+    "id": "c12-w01-b8",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16366,6 +18631,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w01-b8"
   },
   {
+    "id": "c12-w01-b9",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16378,6 +18644,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w01-b9"
   },
   {
+    "id": "c12-w01:form:예시2",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16390,6 +18657,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시2"
   },
   {
+    "id": "c12-w01:faq:2",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16402,6 +18670,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c12-w02",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16414,6 +18683,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c12-w02"
   },
   {
+    "id": "c12-w02-b1",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16426,6 +18696,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w02-b1"
   },
   {
+    "id": "c12-w02-b2",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16438,6 +18709,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w02-b2"
   },
   {
+    "id": "c12-w02-b3",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16450,6 +18722,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w02-b3"
   },
   {
+    "id": "c12-w02-b4",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16462,6 +18735,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w02-b4"
   },
   {
+    "id": "c12-w02-b5",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16474,6 +18748,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w02-b5"
   },
   {
+    "id": "c12-w02-b6",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16486,6 +18761,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w02-b6"
   },
   {
+    "id": "c12-w02-b7",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16498,6 +18774,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w02-b7"
   },
   {
+    "id": "c12-w02-b8",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16510,6 +18787,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w02-b8"
   },
   {
+    "id": "c12-w02-b9",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16522,6 +18800,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w02-b9"
   },
   {
+    "id": "c12-w02-b10",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16534,6 +18813,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w02-b10"
   },
   {
+    "id": "c12-w02-b11",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16546,6 +18826,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w02-b11"
   },
   {
+    "id": "c12-w02:form:예시3",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16558,6 +18839,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시3"
   },
   {
+    "id": "c12-w02:form:참고3",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16570,6 +18852,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고3"
   },
   {
+    "id": "c12-w03",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16582,6 +18865,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c12-w03"
   },
   {
+    "id": "c12-w03-b1",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16594,6 +18878,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w03-b1"
   },
   {
+    "id": "c12-w03-b2",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16606,6 +18891,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w03-b2"
   },
   {
+    "id": "c12-w03-b3",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16618,6 +18904,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w03-b3"
   },
   {
+    "id": "c12-w03-b4",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16630,6 +18917,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w03-b4"
   },
   {
+    "id": "c12-w03-b5",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16642,6 +18930,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w03-b5"
   },
   {
+    "id": "c12-w03-b6",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16654,6 +18943,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w03-b6"
   },
   {
+    "id": "c12-w03-b7",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16666,6 +18956,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w03-b7"
   },
   {
+    "id": "c12-w03-b8",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16678,6 +18969,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w03-b8"
   },
   {
+    "id": "c12-w03-b9",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16690,6 +18982,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w03-b9"
   },
   {
+    "id": "c12-w03-b10",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16702,6 +18995,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w03-b10"
   },
   {
+    "id": "c12-w03-b11",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16714,6 +19008,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w03-b11"
   },
   {
+    "id": "c12-w03:form:예시4",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16726,6 +19021,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시4"
   },
   {
+    "id": "c12-w04",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16738,6 +19034,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c12-w04"
   },
   {
+    "id": "c12-w04-b1",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16750,6 +19047,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w04-b1"
   },
   {
+    "id": "c12-w04-b2",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16762,6 +19060,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w04-b2"
   },
   {
+    "id": "c12-w04-b3",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16774,6 +19073,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w04-b3"
   },
   {
+    "id": "c12-w04-b4",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16786,6 +19086,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w04-b4"
   },
   {
+    "id": "c12-w04-b5",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16798,6 +19099,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w04-b5"
   },
   {
+    "id": "c12-w04-b6",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16810,18 +19112,35 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w04-b6"
   },
   {
+    "id": "c12-w04-b7~1",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
     "type": "매뉴얼 원문",
     "workTitle": "물품재물조사",
-    "title": "4. 재물조사 결과 처리",
+    "title": "4. 재물조사 결과 처리 › ▸착오(錯誤) 기재 정리: 기록의 착오인 경우 정정(물품 규격이 다른 경우, 물품분류번",
     "description": "▸착오(錯誤) 기재 정리: 기록의 착오인 경우 정정(물품 규격이 다른 경우, 물품분류번호 변경) ▸수량 과부족 처리 구분 처리 내용 초과품 ◦장부상의 수량보다 현품이 많은 경우 ◦등재누락 여부를 재확인하여 착오사항이 있는 경우 정정 부족품 ◦장부상의 수량보다 현품이 적은 경우 ◦부족사유를 규명하여 손 · 망실 처리 ▸처리방법 구분 발생 사유 처리 방법 초과품 ◦물품 구입 후 물품대장 미등재 ◦물품대장 등재 ◦에듀파인 시스템상 물품 처분 후 해당 물품을 사용하여,…",
-    "text": "물품재물조사\n4. 재물조사 결과 처리\n▸착오(錯誤) 기재 정리: 기록의 착오인 경우 정정(물품 규격이 다른 경우, 물품분류번호 변경)\n▸수량 과부족 처리\n구분 처리 내용\n초과품 ◦장부상의 수량보다 현품이 많은 경우 ◦등재누락 여부를 재확인하여 착오사항이 있는 경우 정정\n부족품 ◦장부상의 수량보다 현품이 적은 경우 ◦부족사유를 규명하여 손 · 망실 처리\n▸처리방법\n구분 발생 사유 처리 방법\n초과품 ◦물품 구입 후 물품대장 미등재 ◦물품대장 등재\n◦에듀파인 시스템상 물품 처분 후 해당 물품을 사용하여, 물품대장 상 없는 물품이지만 실물이 있는 경우 ◦해당 물품을 처분(폐기 등)하거나, 물품대장 재등재 또는 해당 물품이 기 폐기물품임을 식별할 수 있도록 관리하여 사용하는 등 학교 상황에 맞게 처리\n◦위에 해당하지 않는 기타 사유 ◦학교 상황에 맞게 처리\n부족품 ◦물품 취득 시 물품대장 상 이중등재 ◦에듀파인상 이중등재 물품 정리 ※ 이중등재 물품 정리 시: 불용신청관리(이중등재-), 물품처분관리(이중등재-) 입력\n◦실물을 처분(폐기 등) 후 에듀파인 시스템상 처분사항을 미반영하여, 실물은 없으나 물품대장 상 등재되어 있는 경우 ◦ 에듀파인 상 물품 처분사항 반영\n◦위에 해당하지 않는 기타 사유 ◦ 학교 상황에 맞게 처리\n▸상태조사 결과 처리\n구분 처리 내용\n활용품 중 정비 필요품 ◦신속히 정비\n불용대상 가능 물품 ◦기술이 변화되거나 업무가 종료되어 장래 사용할 필요가 없어진 ‘잉여품’과 통상적으로 사용량에 비해 과다하게 보유하고 있는 ‘과장품’ 정비 ◦잉여품: 관리전환 또는 매각 ◦과장품: 신규 취득을 통제하거나 관리전환 또는 매각‧양여‧폐기\n[K-에듀파인] 물품관리 → 물품결산및재물조사 → 재물조사관리 → 재물조사결과 → 재물조사\n실사 상태 등록\n▸재물조사 결과 잃어버리거나 훼손된 물품이 발견되면 회계관계직원 등의 책임에 관한 법률에 따라 조치(2022.4.21.시행)",
+    "text": "물품재물조사\n4. 재물조사 결과 처리\n▸착오(錯誤) 기재 정리: 기록의 착오인 경우 정정(물품 규격이 다른 경우, 물품분류번호 변경)\n▸수량 과부족 처리\n구분 처리 내용\n초과품 ◦장부상의 수량보다 현품이 많은 경우 ◦등재누락 여부를 재확인하여 착오사항이 있는 경우 정정\n부족품 ◦장부상의 수량보다 현품이 적은 경우 ◦부족사유를 규명하여 손 · 망실 처리\n▸처리방법\n구분 발생 사유 처리 방법\n초과품 ◦물품 구입 후 물품대장 미등재 ◦물품대장 등재\n◦에듀파인 시스템상 물품 처분 후 해당 물품을 사용하여, 물품대장 상 없는 물품이지만 실물이 있는 경우 ◦해당 물품을 처분(폐기 등)하거나, 물품대장 재등재 또는 해당 물품이 기 폐기물품임을 식별할 수 있도록 관리하여 사용하는 등 학교 상황에 맞게 처리\n◦위에 해당하지 않는 기타 사유 ◦학교 상황에 맞게 처리\n부족품 ◦물품 취득 시 물품대장 상 이중등재 ◦에듀파인상 이중등재 물품 정리 ※ 이중등재 물품 정리 시: 불용신청관리(이중등재-), 물품처분관리(이중등재-) 입력\n◦실물을 처분(폐기 등) 후 에듀파인 시스템상 처분사항을 미반영하여, 실물은 없으나 물품대장 상 등재되어 있는 경우 ◦ 에듀파인 상 물품 처분사항 반영\n◦위에 해당하지 않는 기타 사유 ◦ 학교 상황에 맞게 처리",
     "workId": "c12-w04",
-    "blockId": "c12-w04-b7"
+    "blockId": "c12-w04-b7",
+    "anchor": "▸착오(錯誤)기재정리:기록의착오인경우정정(물"
   },
   {
+    "id": "c12-w04-b7~2",
+    "chapterId": "12",
+    "chapterLabel": "제12편",
+    "chapterTitle": "물품관리",
+    "type": "매뉴얼 원문",
+    "workTitle": "물품재물조사",
+    "title": "4. 재물조사 결과 처리 › 활용품 중 정비 필요품 ◦신속히 정비",
+    "description": "▸상태조사 결과 처리 구분 처리 내용 활용품 중 정비 필요품 ◦신속히 정비 불용대상 가능 물품 ◦기술이 변화되거나 업무가 종료되어 장래 사용할 필요가 없어진 ‘잉여품’과 통상적으로 사용량에 비해 과다하게 보유하고 있는 ‘과장품’ 정비 ◦잉여품: 관리전환 또는 매각 ◦과장품: 신규 취득을 통제하거나 관리전환 또는 매각‧양여‧폐기 [K-에듀파인] 물품관리 → 물품결산및재물조사 → 재물조사관리 → 재물조사결과 → 재물조사 실사 상태 등록 ▸재물조사 결과 잃어버리거나…",
+    "text": "물품재물조사\n4. 재물조사 결과 처리\n▸상태조사 결과 처리\n구분 처리 내용\n활용품 중 정비 필요품 ◦신속히 정비\n불용대상 가능 물품 ◦기술이 변화되거나 업무가 종료되어 장래 사용할 필요가 없어진 ‘잉여품’과 통상적으로 사용량에 비해 과다하게 보유하고 있는 ‘과장품’ 정비 ◦잉여품: 관리전환 또는 매각 ◦과장품: 신규 취득을 통제하거나 관리전환 또는 매각‧양여‧폐기\n[K-에듀파인] 물품관리 → 물품결산및재물조사 → 재물조사관리 → 재물조사결과 → 재물조사\n실사 상태 등록\n▸재물조사 결과 잃어버리거나 훼손된 물품이 발견되면 회계관계직원 등의 책임에 관한 법률에 따라 조치(2022.4.21.시행)",
+    "workId": "c12-w04",
+    "blockId": "c12-w04-b7",
+    "anchor": "활용품중정비필요품◦신속히정비"
+  },
+  {
+    "id": "c12-w04:faq:8",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16834,6 +19153,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "8"
   },
   {
+    "id": "c12-w04:faq:9",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16846,6 +19166,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "9"
   },
   {
+    "id": "c12-w05",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16858,6 +19179,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c12-w05"
   },
   {
+    "id": "c12-w05-b1",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16870,6 +19192,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b1"
   },
   {
+    "id": "c12-w05-b2",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16882,6 +19205,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b2"
   },
   {
+    "id": "c12-w05-b3",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16894,6 +19218,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b3"
   },
   {
+    "id": "c12-w05-b4",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16906,6 +19231,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b4"
   },
   {
+    "id": "c12-w05-b5",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16918,6 +19244,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b5"
   },
   {
+    "id": "c12-w05-b6",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16930,6 +19257,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b6"
   },
   {
+    "id": "c12-w05-b7",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16942,6 +19270,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b7"
   },
   {
+    "id": "c12-w05-b8",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16954,6 +19283,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b8"
   },
   {
+    "id": "c12-w05-b9",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16966,6 +19296,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b9"
   },
   {
+    "id": "c12-w05-b10",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16978,6 +19309,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b10"
   },
   {
+    "id": "c12-w05-b11",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -16990,6 +19322,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b11"
   },
   {
+    "id": "c12-w05-b12",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17002,6 +19335,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b12"
   },
   {
+    "id": "c12-w05-b13",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17014,6 +19348,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b13"
   },
   {
+    "id": "c12-w05-b14",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17026,6 +19361,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b14"
   },
   {
+    "id": "c12-w05-b15",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17038,6 +19374,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b15"
   },
   {
+    "id": "c12-w05-b16",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17050,6 +19387,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b16"
   },
   {
+    "id": "c12-w05-b17",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17062,6 +19400,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b17"
   },
   {
+    "id": "c12-w05-b18",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17074,6 +19413,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b18"
   },
   {
+    "id": "c12-w05-b19",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17086,6 +19426,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b19"
   },
   {
+    "id": "c12-w05-b20",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17098,6 +19439,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b20"
   },
   {
+    "id": "c12-w05-b21",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17110,6 +19452,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b21"
   },
   {
+    "id": "c12-w05-b22",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17122,6 +19465,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b22"
   },
   {
+    "id": "c12-w05-b23",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17134,6 +19478,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b23"
   },
   {
+    "id": "c12-w05-b24",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17146,6 +19491,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b24"
   },
   {
+    "id": "c12-w05-b25",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17158,6 +19504,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w05-b25"
   },
   {
+    "id": "c12-w05:form:예시5",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17170,6 +19517,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시5"
   },
   {
+    "id": "c12-w06",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17182,6 +19530,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c12-w06"
   },
   {
+    "id": "c12-w06-b1",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17194,6 +19543,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w06-b1"
   },
   {
+    "id": "c12-w06-b2",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17206,6 +19556,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w06-b2"
   },
   {
+    "id": "c12-w06-b3",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17218,6 +19569,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w06-b3"
   },
   {
+    "id": "c12-w06-b4",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17230,6 +19582,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w06-b4"
   },
   {
+    "id": "c12-w06-b5",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17242,6 +19595,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w06-b5"
   },
   {
+    "id": "c12-w06-b6",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17254,6 +19608,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w06-b6"
   },
   {
+    "id": "c12-w06-b7",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17266,6 +19621,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w06-b7"
   },
   {
+    "id": "c12-w06-b8",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17278,6 +19634,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w06-b8"
   },
   {
+    "id": "c12-w06-b9",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17290,6 +19647,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w06-b9"
   },
   {
+    "id": "c12-w06-b10",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17302,6 +19660,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w06-b10"
   },
   {
+    "id": "c12-w06-b11",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17314,6 +19673,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w06-b11"
   },
   {
+    "id": "c12-w06-b12",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17326,6 +19686,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w06-b12"
   },
   {
+    "id": "c12-w06-b13",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17338,6 +19699,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w06-b13"
   },
   {
+    "id": "c12-w06-b14",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17350,6 +19712,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w06-b14"
   },
   {
+    "id": "c12-w06-b15",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17362,6 +19725,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w06-b15"
   },
   {
+    "id": "c12-w06:faq:3",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17374,6 +19738,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c12-w06:faq:4",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17386,6 +19751,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c12-w06:faq:5",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17398,6 +19764,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "c12-w07",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17410,6 +19777,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c12-w07"
   },
   {
+    "id": "c12-w07-b1",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17422,6 +19790,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w07-b1"
   },
   {
+    "id": "c12-w07-b2",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17434,6 +19803,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w07-b2"
   },
   {
+    "id": "c12-w07-b3",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17446,6 +19816,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w07-b3"
   },
   {
+    "id": "c12-w07-b4",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17458,6 +19829,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w07-b4"
   },
   {
+    "id": "c12-w07-b5",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17470,6 +19842,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w07-b5"
   },
   {
+    "id": "c12-w07-b6",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17482,6 +19855,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w07-b6"
   },
   {
+    "id": "c12-w07-b7",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17494,6 +19868,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w07-b7"
   },
   {
+    "id": "c12-w07-b8",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17506,6 +19881,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w07-b8"
   },
   {
+    "id": "c12-w07-b9",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17518,6 +19894,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w07-b9"
   },
   {
+    "id": "c12-w07-b10",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17530,6 +19907,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w07-b10"
   },
   {
+    "id": "c12-w07-b11",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17542,6 +19920,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w07-b11"
   },
   {
+    "id": "c12-w07-b12",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17554,6 +19933,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w07-b12"
   },
   {
+    "id": "c12-w07:form:서식1",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17566,6 +19946,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식1"
   },
   {
+    "id": "c12-w07:form:서식2",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17578,6 +19959,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식2"
   },
   {
+    "id": "c12-w08",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17590,6 +19972,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c12-w08"
   },
   {
+    "id": "c12-w08-b1",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17602,6 +19985,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w08-b1"
   },
   {
+    "id": "c12-w08-b2",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17614,6 +19998,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w08-b2"
   },
   {
+    "id": "c12-w08-b3",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17626,6 +20011,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w08-b3"
   },
   {
+    "id": "c12-w08-b4",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17638,6 +20024,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w08-b4"
   },
   {
+    "id": "c12-w08-b5",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17650,6 +20037,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w08-b5"
   },
   {
+    "id": "c12-w08-b6",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17662,6 +20050,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w08-b6"
   },
   {
+    "id": "c12-w08-b7",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17674,6 +20063,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w08-b7"
   },
   {
+    "id": "c12-w08-b8",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17686,6 +20076,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w08-b8"
   },
   {
+    "id": "c12-w08-b9",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17698,6 +20089,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w08-b9"
   },
   {
+    "id": "c12-w08-b10",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17710,6 +20102,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w08-b10"
   },
   {
+    "id": "c12-w08-b11",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17722,6 +20115,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w08-b11"
   },
   {
+    "id": "c12-w08-b12",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17734,6 +20128,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w08-b12"
   },
   {
+    "id": "c12-w08-b13",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17746,6 +20141,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w08-b13"
   },
   {
+    "id": "c12-w08-b14",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17758,6 +20154,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w08-b14"
   },
   {
+    "id": "c12-w08-b15",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17770,6 +20167,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w08-b15"
   },
   {
+    "id": "c12-w08-b16",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17782,6 +20180,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w08-b16"
   },
   {
+    "id": "c12-w08-b17",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17794,6 +20193,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w08-b17"
   },
   {
+    "id": "c12-w08-b18",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17806,6 +20206,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w08-b18"
   },
   {
+    "id": "c12-w08-b19",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17818,6 +20219,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w08-b19"
   },
   {
+    "id": "c12-w08-b20",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17830,6 +20232,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w08-b20"
   },
   {
+    "id": "c12-w08:form:서식3",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17842,6 +20245,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식3"
   },
   {
+    "id": "c12-w08:form:예시1",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17854,6 +20258,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시1"
   },
   {
+    "id": "c12-w08:faq:1",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17866,6 +20271,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c12-w09",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17878,6 +20284,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c12-w09"
   },
   {
+    "id": "c12-w09-b1",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17890,6 +20297,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w09-b1"
   },
   {
+    "id": "c12-w09-b2",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17902,6 +20310,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w09-b2"
   },
   {
+    "id": "c12-w09-b3",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17914,6 +20323,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w09-b3"
   },
   {
+    "id": "c12-w09-b4",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17926,6 +20336,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w09-b4"
   },
   {
+    "id": "c12-w09-b5",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17938,6 +20349,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w09-b5"
   },
   {
+    "id": "c12-w09-b6",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17950,6 +20362,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w09-b6"
   },
   {
+    "id": "c12-w09-b7",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17962,6 +20375,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w09-b7"
   },
   {
+    "id": "c12-w09-b8",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17974,6 +20388,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w09-b8"
   },
   {
+    "id": "c12-w09-b9",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17986,6 +20401,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w09-b9"
   },
   {
+    "id": "c12-w09-b10",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -17998,6 +20414,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w09-b10"
   },
   {
+    "id": "c12-w09-b11",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -18010,6 +20427,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w09-b11"
   },
   {
+    "id": "c12-w09-b12",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -18022,6 +20440,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w09-b12"
   },
   {
+    "id": "c12-w09-b13",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -18034,6 +20453,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w09-b13"
   },
   {
+    "id": "c12-w09-b14",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -18046,6 +20466,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w09-b14"
   },
   {
+    "id": "c12-w09-b15",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -18058,6 +20479,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w09-b15"
   },
   {
+    "id": "c12-w09-b16",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -18070,6 +20492,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c12-w09-b16"
   },
   {
+    "id": "c12-w09:form:서식4",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -18082,6 +20505,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식4"
   },
   {
+    "id": "c12-w09:form:참고4",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -18094,6 +20518,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고4"
   },
   {
+    "id": "c12-w09:form:참고5",
     "chapterId": "12",
     "chapterLabel": "제12편",
     "chapterTitle": "물품관리",
@@ -18106,6 +20531,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고5"
   },
   {
+    "id": "c13-w00",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18119,19 +20545,52 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c13-w00-b1~1",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
     "type": "매뉴얼 원문",
     "workTitle": "한눈에 보기",
-    "title": "학교시설관리 요약",
+    "title": "학교시설관리 요약 › 분야 점검 주기 점검 자격 안전관리자 선임",
     "description": "분야 점검 주기 점검 자격 안전관리자 선임 대상 자격 및 선임기한 전기 ◦월간: 1 ~ 6회 (설비용량별로 횟수 상이) ◦(자체) 전기안전관리자 ◦(대행) 한국전기안전공사 및 대행사업자 ◦자가용전기설비 (전압 600V초과, 설비용량 75kw이상 수전설비) ◦자격: 전기산업기사 이상 ◦한국전기안전공사 또는 대행사업자 ◦1개월 이내 선임 및 신고 ◦일반용: 75kW 이하 ‣(학 교) 2년 1회 ‣(유치원) 1년 1회 ◦자가용: 75kW 이상 ‣3년 1회 ◦한국전기안…",
-    "text": "한눈에 보기\n학교시설관리 요약\n분야 점검 주기 점검 자격 안전관리자 선임\n대상 자격 및 선임기한\n전기 ◦월간: 1 ~ 6회 (설비용량별로 횟수 상이) ◦(자체) 전기안전관리자 ◦(대행) 한국전기안전공사 및 대행사업자 ◦자가용전기설비 (전압 600V초과, 설비용량 75kw이상 수전설비) ◦자격: 전기산업기사 이상 ◦한국전기안전공사 또는 대행사업자 ◦1개월 이내 선임 및 신고\n◦일반용: 75kW 이하 ‣(학 교) 2년 1회 ‣(유치원) 1년 1회 ◦자가용: 75kW 이상 ‣3년 1회 ◦한국전기안전공사\n기계 ◦성능점검: 1만㎡이상건축물 ‣매년 1회이상 ◦(자체) 초급책임 ◦(대행) 사업자 ◦연1만㎡이상 1만5천㎡미만 건축물 ◦자격: 초급, 증급 ◦유지관리대행사업자 ◦1개월 이내 선임 및 신고\n◦(자체) 중급책임 ◦(대행) 사업자 ◦연1만5천㎡이상 3만㎡미만 건축물\n소방 ◦월별: 1회 (외관 점검) ◦작동: 연 1회 이상 (정상 작동여부 조작 점검) ◦(자체) 소방안전관리자 ◦(대행) 소방시설관리업자 ◦모든 공공기관 (소화기 또는 비상경보설 만을 설치하는 경우에는 선임을 아니할 수 있음) ◦자격: 감독직에 있는 소방안전관리 강습·실무 교육 이수자 ◦1개월 이내 선임, 14일 이내 통보\n◦종합: 연 1회 이상 (법령 기준에 적합 여부) ◦(대행) 소방시설관리업자\n승강기 ◦자체: 월 1회 이상 (자격 및 경력 필요) ◦(자체) 승강기안전관리자 ◦(대행) 승강기유지관리업자 ◦모든 승강기 시설 (엘리베이터, 에스컬레이터, 휠체어리프트) ◦자격: 승강기 기능사 이상, 승강기관리교육 이수자 ◦1개월 이내 선임 및 통보\n◦정기: 1년 이하 1회 ◦정밀안전: 설치 15년 이후 3년 1회 ◦한국승강기안전공단 또는 지정검사기관\n가스 ◦자체점검 ◦(자체) 가스안전관리자 ◦LNG: 월 사용예정량 4,000㎥초과 특정가스사용시설 ◦LPG: 소형저장탱크 1톤 초과 또는 저장용기 250kg초과, 급식인원 50명이상 ◦자격: 가스안전관리교육 이수자 ◦최초: 시설사용 개시전 신고 ◦변경: 1개월 이내 선임 및 신고\n◦정기: 연 1회 ◦수시: 필요시 ◦한국가스안전공사\n유류 ◦정기: 연 1회 이상 ◦(자체) 위험물안전관리자 ◦등유·경유: 1,000ℓ이상 ◦휘발유: 200ℓ 이상 ◦자격: 위험물 기능사 이상, 위험물안전관리교육 이수자\n놀이 시설 ◦자체: 월 1회 이상 ◦(자체) 어린이놀이시설 안전관리자 ◦(대행) 안전관리 전문기관 ◦어린이놀이 기구가 설치 된 놀이시설 ◦자격: 어린이놀이시설 안전관리 교육 이수자\n◦정기: 2년 1회 ◦안전검사기관\n석면 ◦위해성 평가: 연 2회 (6개월마다) ◦(자체) 학교 석면건축물안전관리인 ◦석면건축물 학교 (석면건축자재가 사용된 면적의 합이 50㎡ 이상인 건축물) ◦자격: 학교석면건축물 안전 관리인 교육 이수자\n저수조 ◦자체: 월 1회 이상 ◦(자체) 건축물관리자 ◦저수조 사용시설 (수도법시행령 제50조 참조) ◦자격: 건축물관리자 교육 이수자",
+    "text": "한눈에 보기\n학교시설관리 요약\n분야 점검 주기 점검 자격 안전관리자 선임\n대상 자격 및 선임기한\n전기 ◦월간: 1 ~ 6회 (설비용량별로 횟수 상이) ◦(자체) 전기안전관리자 ◦(대행) 한국전기안전공사 및 대행사업자 ◦자가용전기설비 (전압 600V초과, 설비용량 75kw이상 수전설비) ◦자격: 전기산업기사 이상 ◦한국전기안전공사 또는 대행사업자 ◦1개월 이내 선임 및 신고\n◦일반용: 75kW 이하 ‣(학 교) 2년 1회 ‣(유치원) 1년 1회 ◦자가용: 75kW 이상 ‣3년 1회 ◦한국전기안전공사\n기계 ◦성능점검: 1만㎡이상건축물 ‣매년 1회이상 ◦(자체) 초급책임 ◦(대행) 사업자 ◦연1만㎡이상 1만5천㎡미만 건축물 ◦자격: 초급, 증급 ◦유지관리대행사업자 ◦1개월 이내 선임 및 신고\n◦(자체) 중급책임 ◦(대행) 사업자 ◦연1만5천㎡이상 3만㎡미만 건축물\n소방 ◦월별: 1회 (외관 점검) ◦작동: 연 1회 이상 (정상 작동여부 조작 점검) ◦(자체) 소방안전관리자 ◦(대행) 소방시설관리업자 ◦모든 공공기관 (소화기 또는 비상경보설 만을 설치하는 경우에는 선임을 아니할 수 있음) ◦자격: 감독직에 있는 소방안전관리 강습·실무 교육 이수자 ◦1개월 이내 선임, 14일 이내 통보",
     "workId": "c13-w00",
     "blockId": "c13-w00-b1",
+    "anchor": "분야점검주기점검자격안전관리자선임",
     "weight": 0.6
   },
   {
+    "id": "c13-w00-b1~2",
+    "chapterId": "13",
+    "chapterLabel": "제13편",
+    "chapterTitle": "학교시설관리",
+    "type": "매뉴얼 원문",
+    "workTitle": "한눈에 보기",
+    "title": "학교시설관리 요약 › ◦종합: 연 1회 이상 (법령 기준에 적합 여부) ◦(대행) 소방시설관리업자",
+    "description": "◦종합: 연 1회 이상 (법령 기준에 적합 여부) ◦(대행) 소방시설관리업자 승강기 ◦자체: 월 1회 이상 (자격 및 경력 필요) ◦(자체) 승강기안전관리자 ◦(대행) 승강기유지관리업자 ◦모든 승강기 시설 (엘리베이터, 에스컬레이터, 휠체어리프트) ◦자격: 승강기 기능사 이상, 승강기관리교육 이수자 ◦1개월 이내 선임 및 통보 ◦정기: 1년 이하 1회 ◦정밀안전: 설치 15년 이후 3년 1회 ◦한국승강기안전공단 또는 지정검사기관 가스 ◦자체점검 ◦(자체) 가스안…",
+    "text": "한눈에 보기\n학교시설관리 요약\n◦종합: 연 1회 이상 (법령 기준에 적합 여부) ◦(대행) 소방시설관리업자\n승강기 ◦자체: 월 1회 이상 (자격 및 경력 필요) ◦(자체) 승강기안전관리자 ◦(대행) 승강기유지관리업자 ◦모든 승강기 시설 (엘리베이터, 에스컬레이터, 휠체어리프트) ◦자격: 승강기 기능사 이상, 승강기관리교육 이수자 ◦1개월 이내 선임 및 통보\n◦정기: 1년 이하 1회 ◦정밀안전: 설치 15년 이후 3년 1회 ◦한국승강기안전공단 또는 지정검사기관\n가스 ◦자체점검 ◦(자체) 가스안전관리자 ◦LNG: 월 사용예정량 4,000㎥초과 특정가스사용시설 ◦LPG: 소형저장탱크 1톤 초과 또는 저장용기 250kg초과, 급식인원 50명이상 ◦자격: 가스안전관리교육 이수자 ◦최초: 시설사용 개시전 신고 ◦변경: 1개월 이내 선임 및 신고\n◦정기: 연 1회 ◦수시: 필요시 ◦한국가스안전공사\n유류 ◦정기: 연 1회 이상 ◦(자체) 위험물안전관리자 ◦등유·경유: 1,000ℓ이상 ◦휘발유: 200ℓ 이상 ◦자격: 위험물 기능사 이상, 위험물안전관리교육 이수자",
+    "workId": "c13-w00",
+    "blockId": "c13-w00-b1",
+    "anchor": "◦종합:연1회이상(법령기준에적합여부)◦(대행",
+    "weight": 0.6
+  },
+  {
+    "id": "c13-w00-b1~3",
+    "chapterId": "13",
+    "chapterLabel": "제13편",
+    "chapterTitle": "학교시설관리",
+    "type": "매뉴얼 원문",
+    "workTitle": "한눈에 보기",
+    "title": "학교시설관리 요약 › 놀이 시설 ◦자체: 월 1회 이상 ◦(자체) 어린이놀이시설 안전관리자 ◦(대행) 안전관",
+    "description": "놀이 시설 ◦자체: 월 1회 이상 ◦(자체) 어린이놀이시설 안전관리자 ◦(대행) 안전관리 전문기관 ◦어린이놀이 기구가 설치 된 놀이시설 ◦자격: 어린이놀이시설 안전관리 교육 이수자 ◦정기: 2년 1회 ◦안전검사기관 석면 ◦위해성 평가: 연 2회 (6개월마다) ◦(자체) 학교 석면건축물안전관리인 ◦석면건축물 학교 (석면건축자재가 사용된 면적의 합이 50㎡ 이상인 건축물) ◦자격: 학교석면건축물 안전 관리인 교육 이수자 저수조 ◦자체: 월 1회 이상 ◦(자체) 건축…",
+    "text": "한눈에 보기\n학교시설관리 요약\n놀이 시설 ◦자체: 월 1회 이상 ◦(자체) 어린이놀이시설 안전관리자 ◦(대행) 안전관리 전문기관 ◦어린이놀이 기구가 설치 된 놀이시설 ◦자격: 어린이놀이시설 안전관리 교육 이수자\n◦정기: 2년 1회 ◦안전검사기관\n석면 ◦위해성 평가: 연 2회 (6개월마다) ◦(자체) 학교 석면건축물안전관리인 ◦석면건축물 학교 (석면건축자재가 사용된 면적의 합이 50㎡ 이상인 건축물) ◦자격: 학교석면건축물 안전 관리인 교육 이수자\n저수조 ◦자체: 월 1회 이상 ◦(자체) 건축물관리자 ◦저수조 사용시설 (수도법시행령 제50조 참조) ◦자격: 건축물관리자 교육 이수자",
+    "workId": "c13-w00",
+    "blockId": "c13-w00-b1",
+    "anchor": "놀이시설◦자체:월1회이상◦(자체)어린이놀이시",
+    "weight": 0.6
+  },
+  {
+    "id": "c13-w01",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18144,6 +20603,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c13-w01"
   },
   {
+    "id": "c13-w01-b1",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18156,6 +20616,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w01-b1"
   },
   {
+    "id": "c13-w01-b2",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18168,6 +20629,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w01-b2"
   },
   {
+    "id": "c13-w01-b3",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18180,6 +20642,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w01-b3"
   },
   {
+    "id": "c13-w01-b4",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18192,6 +20655,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w01-b4"
   },
   {
+    "id": "c13-w01-b5",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18204,6 +20668,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w01-b5"
   },
   {
+    "id": "c13-w01-b6",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18216,6 +20681,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w01-b6"
   },
   {
+    "id": "c13-w01-b7",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18228,6 +20694,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w01-b7"
   },
   {
+    "id": "c13-w01-b8",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18240,6 +20707,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w01-b8"
   },
   {
+    "id": "c13-w01-b9",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18252,6 +20720,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w01-b9"
   },
   {
+    "id": "c13-w01-b10",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18264,6 +20733,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w01-b10"
   },
   {
+    "id": "c13-w01-b11",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18276,6 +20746,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w01-b11"
   },
   {
+    "id": "c13-w01-b12",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18288,6 +20759,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w01-b12"
   },
   {
+    "id": "c13-w01-b13",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18300,6 +20772,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w01-b13"
   },
   {
+    "id": "c13-w01-b14",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18312,6 +20785,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w01-b14"
   },
   {
+    "id": "c13-w01-b15",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18324,6 +20798,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w01-b15"
   },
   {
+    "id": "c13-w02",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18336,6 +20811,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c13-w02"
   },
   {
+    "id": "c13-w02-b1",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18348,6 +20824,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b1"
   },
   {
+    "id": "c13-w02-b2",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18360,6 +20837,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b2"
   },
   {
+    "id": "c13-w02-b3",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18372,18 +20850,77 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b3"
   },
   {
+    "id": "c13-w02-b4~1",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
     "type": "매뉴얼 원문",
     "workTitle": "시설물 관리위탁·정기검사",
-    "title": "2. 용역 시설관리(총괄)",
+    "title": "2. 용역 시설관리(총괄) › 전기안전 관리대행 ⋅자가용전기설비: 용량 75kw 이상 전기설비(위험시설 20kw 이상",
     "description": "구분 점검 및 관리 관련법규 전기안전 관리대행 ⋅자가용전기설비: 용량 75kw 이상 전기설비(위험시설 20kw 이상) ⋅점검횟수 구분 / 점검횟수 / 점검주체 저압 / 1kw~300kw 이하 / 월 1회 이상 / 전기안전관리 대행업체 300kw 초과 / 월 2회 이상 고압 및 특고압 / 1kw~300kw 이하 / 월 1회 이상 300kw 초과∼500kw 이하 / 월 2회 이상 500kw 초과∼700kw 이하 / 월 3회 이상 700kw 초과∼1,500kw 이하…",
-    "text": "시설물 관리위탁·정기검사\n2. 용역 시설관리(총괄)\n구분 점검 및 관리 관련법규\n전기안전 관리대행 ⋅자가용전기설비: 용량 75kw 이상 전기설비(위험시설 20kw 이상) ⋅점검횟수 구분 / 점검횟수 / 점검주체 저압 / 1kw~300kw 이하 / 월 1회 이상 / 전기안전관리 대행업체 300kw 초과 / 월 2회 이상 고압 및 특고압 / 1kw~300kw 이하 / 월 1회 이상 300kw 초과∼500kw 이하 / 월 2회 이상 500kw 초과∼700kw 이하 / 월 3회 이상 700kw 초과∼1,500kw 이하 / 월 4회 이상 1,500kw 초과∼2,000kw 이하 / 월 5회 이상 2,000kw 초과∼2,500kw 미만 / 월 6회 이상 전기안전관리법 제12조 및 22조, 같은 법 시행규칙 제31조의2, 전기안전관리자의 직무에 관한 고시 제4조\n기계설비 관리대행 대상건축물(연면적 기준) / 선임자격 / 선임인원 / 점검주체 1.5만㎡ 이상 3만㎡ 미만 / 중급책임 / 1명 / 시설물관리 전문업체 1만㎡ 이상 1.5만㎡ 미만 / 초급책임 / 1명 기계설비법 제18조\n승 강 기 유지보수 구분 / 점검횟수 / 점검시기 / 점검주체 자체검사 / 월 1회 이상 / ·매월 말일 까지 / 승강기 관리업체 정기검사 / 연 1회 이상 / ·완성검사를 받은 날의 다음 연도부터 / 한국 승강기 안전공단 정밀 검사 / 수시 / ·정기검사 결과 결함원인이 불명확한 경우 ·승강기 결함으로 중대한 사고가 발생한 경우 ·설치 후 15년이 도래한 승강기(3년마다 실시) 등 승강기 안전관리법 제29조, 제31조, 제32조 같은 법 시행규칙 제54조\n가스 안전점검 구분 / 점검횟수 / 점검시기 / 점검주체 도시가스 / 정기 / 연 1회 이상 / 완성검사 증명서를 받은 날의 다음 연도부터(전후 30일 이내) / 한국가스안전공사 (정기점검은 신청 필요) 수시 / 수시 / 수시점검 액화석유가스 (LPG) / 정기 / 연 1회 이상 / 완성검사 증명서를 받은 날의 다음 연도부터(전후 30일 이내) 수시 / 수시 / 수시점검 도시가스사업법 제17조, 액화석유가스의 안전관리 및 사업법 제37조\n먹는물 관 리 ⋅수돗물(저수조, 옥내급수관) 관리 - 저수조: 연 1회 이상, 6개 항목 검사 - 옥내급수관: 2년 주기 1회 이상, 7개 항목 검사 ⋅지하수 관리: 정밀검사 연 1회(2분기), 간이검사 연 3회(1,3,4분기) ⋅정수기 관리: 분기 1회, 2개 항목 검사 수도법 및 같은 법 시행령, 같은 법 시행규칙 학교보건법 시행규칙 먹는물 수질기준 및 검사 등에 관한 규칙\n구분 점검 및 관리 관련법규\n저수조 (물탱크) 관 리 ⋅연간 계획 수립 및 저수조 청소용역 업체의 일정에 따라 청소 요청 실시 ⋅청소 실시 횟수 - 먹는물, 생활용수(인체 접촉, 위생용) 경유: 연 2회 이상 - 소방: 연 1회 또는 미실시(청소 미실시 시 스프링클러 헤드가 이물질로 막혀 정상작동이 불가할 수 있으므로 청소 권장) ⋅관리담당자 지정 월 1회 이상 자체점검 실시 ⋅청소 및 위생 점검 서류 2년 간 보관(청소필증 및 작업사진, 점검서류 등) 수도법 제33조, 같은 법 시행규칙 제22조의3 학교보건법 제4조\n교사 내 공기질 관 리 ⋅환경위생관리자 지정 ⋅환경위생 점검 종류: 일상점검, 정기점검(반기별 1회 이상), 특별점검 ⋅공기정화장치 및 미세먼지 측정기기 관리 ⋅학교 냉난방시설 유지관리(2년에 1회 이상 종합세척) 학교보건법 제4조, 같은 법 시행규칙 제3조 학교 환경위생 및 식품위생 점검기준\n소방안전 관리대행 ⋅위탁점검: 소방시설 관리 업체 ⋅점검횟수: 월 1회 이상(2년 자체 기록 보관) ⋅작동기능점검, 종합정밀점검(연 1회, 7일 이내 관할 소방서 제출) ⋅종합정밀점검 점검시기(3장 참고) - 건축물 사용 승인이 속하는 달의 말일까지 (학교는 건축물 사용승인일이 1~6월일 경우 6월 30일까지) - 작동기능점검 점검시기는 종합정밀점검을 받은 달부터 6개월이 되는 달에 실시 공공기관의 소방안전관리에 관한 규정 제5조 및 제7조의2\n어 린 이 놀이시설 ⋅어린이놀이시설: 어린이놀이기구가 설치된 실내 · 외 놀이터 ⋅설치검사, 정기검사(2년 1회 이상), 자체점검(월 1회 이상) (4장 참고) 어린이놀이시설 안전관리법, 같은 법 시행령, 같은 법 시행규칙\n제3종 시설물 안전점검 ⋅제3종시설물(건축물): 준공 후 15년 이상 경과된 1,000㎡이상 교육시설 ⋅정기안전점검: A·B·C등급 반기 1회 이상, D·E등급 1년 3회 이상 (9장 참고) 시설물의 안전 및 유지관리에 관한 특별법\n무인경비 용역 ⋅무인경비 용역업체와 위탁계약 ⋅학교 시설물 보안관리 [제17편 학교회계 지출] 참고\n정 수 기 유지관리 ⋅정수기 관리용역 업체와 위탁계약 ⋅필터 교체 및 정수기 관리 ⋅관리담당자 지정",
+    "text": "시설물 관리위탁·정기검사\n2. 용역 시설관리(총괄)\n구분 점검 및 관리 관련법규\n전기안전 관리대행 ⋅자가용전기설비: 용량 75kw 이상 전기설비(위험시설 20kw 이상) ⋅점검횟수 구분 / 점검횟수 / 점검주체 저압 / 1kw~300kw 이하 / 월 1회 이상 / 전기안전관리 대행업체 300kw 초과 / 월 2회 이상 고압 및 특고압 / 1kw~300kw 이하 / 월 1회 이상 300kw 초과∼500kw 이하 / 월 2회 이상 500kw 초과∼700kw 이하 / 월 3회 이상 700kw 초과∼1,500kw 이하 / 월 4회 이상 1,500kw 초과∼2,000kw 이하 / 월 5회 이상 2,000kw 초과∼2,500kw 미만 / 월 6회 이상 전기안전관리법 제12조 및 22조, 같은 법 시행규칙 제31조의2, 전기안전관리자의 직무에 관한 고시 제4조\n기계설비 관리대행 대상건축물(연면적 기준) / 선임자격 / 선임인원 / 점검주체 1.5만㎡ 이상 3만㎡ 미만 / 중급책임 / 1명 / 시설물관리 전문업체 1만㎡ 이상 1.5만㎡ 미만 / 초급책임 / 1명 기계설비법 제18조",
     "workId": "c13-w02",
-    "blockId": "c13-w02-b4"
+    "blockId": "c13-w02-b4",
+    "anchor": "전기안전관리대행⋅자가용전기설비:용량75kw이"
   },
   {
+    "id": "c13-w02-b4~2",
+    "chapterId": "13",
+    "chapterLabel": "제13편",
+    "chapterTitle": "학교시설관리",
+    "type": "매뉴얼 원문",
+    "workTitle": "시설물 관리위탁·정기검사",
+    "title": "2. 용역 시설관리(총괄) › 승강기 유지보수 구분 / 점검횟수 / 점검시기 / 점검주체 자체검사 / 월 1회 이상",
+    "description": "승 강 기 유지보수 구분 / 점검횟수 / 점검시기 / 점검주체 자체검사 / 월 1회 이상 / ·매월 말일 까지 / 승강기 관리업체 정기검사 / 연 1회 이상 / ·완성검사를 받은 날의 다음 연도부터 / 한국 승강기 안전공단 정밀 검사 / 수시 / ·정기검사 결과 결함원인이 불명확한 경우 ·승강기 결함으로 중대한 사고가 발생한 경우 ·설치 후 15년이 도래한 승강기(3년마다 실시) 등 승강기 안전관리법 제29조, 제31조, 제32조 같은 법 시행규칙 제54조 가스…",
+    "text": "시설물 관리위탁·정기검사\n2. 용역 시설관리(총괄)\n승 강 기 유지보수 구분 / 점검횟수 / 점검시기 / 점검주체 자체검사 / 월 1회 이상 / ·매월 말일 까지 / 승강기 관리업체 정기검사 / 연 1회 이상 / ·완성검사를 받은 날의 다음 연도부터 / 한국 승강기 안전공단 정밀 검사 / 수시 / ·정기검사 결과 결함원인이 불명확한 경우 ·승강기 결함으로 중대한 사고가 발생한 경우 ·설치 후 15년이 도래한 승강기(3년마다 실시) 등 승강기 안전관리법 제29조, 제31조, 제32조 같은 법 시행규칙 제54조\n가스 안전점검 구분 / 점검횟수 / 점검시기 / 점검주체 도시가스 / 정기 / 연 1회 이상 / 완성검사 증명서를 받은 날의 다음 연도부터(전후 30일 이내) / 한국가스안전공사 (정기점검은 신청 필요) 수시 / 수시 / 수시점검 액화석유가스 (LPG) / 정기 / 연 1회 이상 / 완성검사 증명서를 받은 날의 다음 연도부터(전후 30일 이내) 수시 / 수시 / 수시점검 도시가스사업법 제17조, 액화석유가스의 안전관리 및 사업법 제37조",
+    "workId": "c13-w02",
+    "blockId": "c13-w02-b4",
+    "anchor": "승강기유지보수구분/점검횟수/점검시기/점검주체"
+  },
+  {
+    "id": "c13-w02-b4~3",
+    "chapterId": "13",
+    "chapterLabel": "제13편",
+    "chapterTitle": "학교시설관리",
+    "type": "매뉴얼 원문",
+    "workTitle": "시설물 관리위탁·정기검사",
+    "title": "2. 용역 시설관리(총괄) › 먹는물 관 리 ⋅수돗물(저수조, 옥내급수관) 관리 - 저수조: 연 1회 이상, 6개 항",
+    "description": "먹는물 관 리 ⋅수돗물(저수조, 옥내급수관) 관리 - 저수조: 연 1회 이상, 6개 항목 검사 - 옥내급수관: 2년 주기 1회 이상, 7개 항목 검사 ⋅지하수 관리: 정밀검사 연 1회(2분기), 간이검사 연 3회(1,3,4분기) ⋅정수기 관리: 분기 1회, 2개 항목 검사 수도법 및 같은 법 시행령, 같은 법 시행규칙 학교보건법 시행규칙 먹는물 수질기준 및 검사 등에 관한 규칙 구분 점검 및 관리 관련법규 저수조 (물탱크) 관 리 ⋅연간 계획 수립 및 저수조 청…",
+    "text": "시설물 관리위탁·정기검사\n2. 용역 시설관리(총괄)\n먹는물 관 리 ⋅수돗물(저수조, 옥내급수관) 관리 - 저수조: 연 1회 이상, 6개 항목 검사 - 옥내급수관: 2년 주기 1회 이상, 7개 항목 검사 ⋅지하수 관리: 정밀검사 연 1회(2분기), 간이검사 연 3회(1,3,4분기) ⋅정수기 관리: 분기 1회, 2개 항목 검사 수도법 및 같은 법 시행령, 같은 법 시행규칙 학교보건법 시행규칙 먹는물 수질기준 및 검사 등에 관한 규칙\n구분 점검 및 관리 관련법규\n저수조 (물탱크) 관 리 ⋅연간 계획 수립 및 저수조 청소용역 업체의 일정에 따라 청소 요청 실시 ⋅청소 실시 횟수 - 먹는물, 생활용수(인체 접촉, 위생용) 경유: 연 2회 이상 - 소방: 연 1회 또는 미실시(청소 미실시 시 스프링클러 헤드가 이물질로 막혀 정상작동이 불가할 수 있으므로 청소 권장) ⋅관리담당자 지정 월 1회 이상 자체점검 실시 ⋅청소 및 위생 점검 서류 2년 간 보관(청소필증 및 작업사진, 점검서류 등) 수도법 제33조, 같은 법 시행규칙 제22조의3 학교보건법 제4조",
+    "workId": "c13-w02",
+    "blockId": "c13-w02-b4",
+    "anchor": "먹는물관리⋅수돗물(저수조,옥내급수관)관리-저"
+  },
+  {
+    "id": "c13-w02-b4~4",
+    "chapterId": "13",
+    "chapterLabel": "제13편",
+    "chapterTitle": "학교시설관리",
+    "type": "매뉴얼 원문",
+    "workTitle": "시설물 관리위탁·정기검사",
+    "title": "2. 용역 시설관리(총괄) › 교사 내 공기질 관 리 ⋅환경위생관리자 지정 ⋅환경위생 점검 종류: 일상점검, 정기점검",
+    "description": "교사 내 공기질 관 리 ⋅환경위생관리자 지정 ⋅환경위생 점검 종류: 일상점검, 정기점검(반기별 1회 이상), 특별점검 ⋅공기정화장치 및 미세먼지 측정기기 관리 ⋅학교 냉난방시설 유지관리(2년에 1회 이상 종합세척) 학교보건법 제4조, 같은 법 시행규칙 제3조 학교 환경위생 및 식품위생 점검기준 소방안전 관리대행 ⋅위탁점검: 소방시설 관리 업체 ⋅점검횟수: 월 1회 이상(2년 자체 기록 보관) ⋅작동기능점검, 종합정밀점검(연 1회, 7일 이내 관할 소방서 제출)…",
+    "text": "시설물 관리위탁·정기검사\n2. 용역 시설관리(총괄)\n교사 내 공기질 관 리 ⋅환경위생관리자 지정 ⋅환경위생 점검 종류: 일상점검, 정기점검(반기별 1회 이상), 특별점검 ⋅공기정화장치 및 미세먼지 측정기기 관리 ⋅학교 냉난방시설 유지관리(2년에 1회 이상 종합세척) 학교보건법 제4조, 같은 법 시행규칙 제3조 학교 환경위생 및 식품위생 점검기준\n소방안전 관리대행 ⋅위탁점검: 소방시설 관리 업체 ⋅점검횟수: 월 1회 이상(2년 자체 기록 보관) ⋅작동기능점검, 종합정밀점검(연 1회, 7일 이내 관할 소방서 제출) ⋅종합정밀점검 점검시기(3장 참고) - 건축물 사용 승인이 속하는 달의 말일까지 (학교는 건축물 사용승인일이 1~6월일 경우 6월 30일까지) - 작동기능점검 점검시기는 종합정밀점검을 받은 달부터 6개월이 되는 달에 실시 공공기관의 소방안전관리에 관한 규정 제5조 및 제7조의2\n어 린 이 놀이시설 ⋅어린이놀이시설: 어린이놀이기구가 설치된 실내 · 외 놀이터 ⋅설치검사, 정기검사(2년 1회 이상), 자체점검(월 1회 이상) (4장 참고) 어린이놀이시설 안전관리법, 같은 법 시행령, 같은 법 시행규칙",
+    "workId": "c13-w02",
+    "blockId": "c13-w02-b4",
+    "anchor": "교사내공기질관리⋅환경위생관리자지정⋅환경위생점"
+  },
+  {
+    "id": "c13-w02-b4~5",
+    "chapterId": "13",
+    "chapterLabel": "제13편",
+    "chapterTitle": "학교시설관리",
+    "type": "매뉴얼 원문",
+    "workTitle": "시설물 관리위탁·정기검사",
+    "title": "2. 용역 시설관리(총괄) › 제3종 시설물 안전점검 ⋅제3종시설물(건축물): 준공 후 15년 이상 경과된 1,000",
+    "description": "제3종 시설물 안전점검 ⋅제3종시설물(건축물): 준공 후 15년 이상 경과된 1,000㎡이상 교육시설 ⋅정기안전점검: A·B·C등급 반기 1회 이상, D·E등급 1년 3회 이상 (9장 참고) 시설물의 안전 및 유지관리에 관한 특별법 무인경비 용역 ⋅무인경비 용역업체와 위탁계약 ⋅학교 시설물 보안관리 [제17편 학교회계 지출] 참고 정 수 기 유지관리 ⋅정수기 관리용역 업체와 위탁계약 ⋅필터 교체 및 정수기 관리 ⋅관리담당자 지정",
+    "text": "시설물 관리위탁·정기검사\n2. 용역 시설관리(총괄)\n제3종 시설물 안전점검 ⋅제3종시설물(건축물): 준공 후 15년 이상 경과된 1,000㎡이상 교육시설 ⋅정기안전점검: A·B·C등급 반기 1회 이상, D·E등급 1년 3회 이상 (9장 참고) 시설물의 안전 및 유지관리에 관한 특별법\n무인경비 용역 ⋅무인경비 용역업체와 위탁계약 ⋅학교 시설물 보안관리 [제17편 학교회계 지출] 참고\n정 수 기 유지관리 ⋅정수기 관리용역 업체와 위탁계약 ⋅필터 교체 및 정수기 관리 ⋅관리담당자 지정",
+    "workId": "c13-w02",
+    "blockId": "c13-w02-b4",
+    "anchor": "제3종시설물안전점검⋅제3종시설물(건축물):준"
+  },
+  {
+    "id": "c13-w02-b5",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18396,6 +20933,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b5"
   },
   {
+    "id": "c13-w02-b6",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18408,6 +20946,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b6"
   },
   {
+    "id": "c13-w02-b7",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18420,6 +20959,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b7"
   },
   {
+    "id": "c13-w02-b8",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18432,6 +20972,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b8"
   },
   {
+    "id": "c13-w02-b9",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18444,6 +20985,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b9"
   },
   {
+    "id": "c13-w02-b10",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18456,6 +20998,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b10"
   },
   {
+    "id": "c13-w02-b11",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18468,6 +21011,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b11"
   },
   {
+    "id": "c13-w02-b12",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18480,6 +21024,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b12"
   },
   {
+    "id": "c13-w02-b13",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18492,6 +21037,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b13"
   },
   {
+    "id": "c13-w02-b14",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18504,6 +21050,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b14"
   },
   {
+    "id": "c13-w02-b15",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18516,6 +21063,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b15"
   },
   {
+    "id": "c13-w02-b16",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18528,6 +21076,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b16"
   },
   {
+    "id": "c13-w02-b17",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18540,6 +21089,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b17"
   },
   {
+    "id": "c13-w02-b18",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18552,6 +21102,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b18"
   },
   {
+    "id": "c13-w02-b19",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18564,6 +21115,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b19"
   },
   {
+    "id": "c13-w02-b20",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18576,6 +21128,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b20"
   },
   {
+    "id": "c13-w02-b21",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18588,6 +21141,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b21"
   },
   {
+    "id": "c13-w02-b22",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18600,6 +21154,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b22"
   },
   {
+    "id": "c13-w02-b23",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18612,6 +21167,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b23"
   },
   {
+    "id": "c13-w02-b24",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18624,6 +21180,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b24"
   },
   {
+    "id": "c13-w02-b25",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18636,6 +21193,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b25"
   },
   {
+    "id": "c13-w02-b26",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18648,6 +21206,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b26"
   },
   {
+    "id": "c13-w02-b27",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18660,6 +21219,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b27"
   },
   {
+    "id": "c13-w02-b28",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18672,6 +21232,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b28"
   },
   {
+    "id": "c13-w02-b29",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18684,6 +21245,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b29"
   },
   {
+    "id": "c13-w02-b30",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18696,6 +21258,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b30"
   },
   {
+    "id": "c13-w02-b31",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18708,6 +21271,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b31"
   },
   {
+    "id": "c13-w02-b32",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18720,6 +21284,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b32"
   },
   {
+    "id": "c13-w02-b33",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18732,6 +21297,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b33"
   },
   {
+    "id": "c13-w02-b34",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18744,6 +21310,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b34"
   },
   {
+    "id": "c13-w02-b35",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18756,6 +21323,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b35"
   },
   {
+    "id": "c13-w02-b36",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18768,6 +21336,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b36"
   },
   {
+    "id": "c13-w02-b37",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18780,6 +21349,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b37"
   },
   {
+    "id": "c13-w02-b38",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18792,6 +21362,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b38"
   },
   {
+    "id": "c13-w02-b39",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18804,6 +21375,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b39"
   },
   {
+    "id": "c13-w02-b40",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18816,6 +21388,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b40"
   },
   {
+    "id": "c13-w02-b41",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18828,6 +21401,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b41"
   },
   {
+    "id": "c13-w02-b42",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18840,6 +21414,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b42"
   },
   {
+    "id": "c13-w02-b43",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18852,6 +21427,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b43"
   },
   {
+    "id": "c13-w02-b44",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18864,6 +21440,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b44"
   },
   {
+    "id": "c13-w02-b45",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18876,6 +21453,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b45"
   },
   {
+    "id": "c13-w02-b46",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18888,6 +21466,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b46"
   },
   {
+    "id": "c13-w02-b47",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18900,6 +21479,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b47"
   },
   {
+    "id": "c13-w02-b48",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18912,6 +21492,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b48"
   },
   {
+    "id": "c13-w02-b49",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18924,6 +21505,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b49"
   },
   {
+    "id": "c13-w02-b50",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18936,6 +21518,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b50"
   },
   {
+    "id": "c13-w02-b51",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18948,18 +21531,35 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b51"
   },
   {
+    "id": "c13-w02-b52~1",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
     "type": "매뉴얼 원문",
     "workTitle": "시설물 관리위탁·정기검사",
-    "title": "2. 수돗물 관리",
+    "title": "2. 수돗물 관리 › ▸수돗물은 직결 급수가 원칙이며, 부득이하게 저수조(물탱크) 경유 시 관리 철저",
     "description": "▸수돗물은 직결 급수가 원칙이며, 부득이하게 저수조(물탱크) 경유 시 관리 철저 ▸수도시설의 관리에 관한 교육 이수(수도법제36조 및 같은법 시행령 제52조) - 교육대상: 건축연면적 5,000㎡ 이상 학교 - 신규 지정 시 1년 이내, 이후 매 5년마다 8시간 옥내급수관 일반검사 구 분 저수조 수질검사 옥내급수관 일반검사 검사대상 ⋅저수조를 경유하여 수돗물을 먹는 물로 사용하는 학교 ※ 소방용수 또는 화장실 용수 등으로만 사용되는 저수조는 수질검사 제외 (단,…",
-    "text": "시설물 관리위탁·정기검사\n2. 수돗물 관리\n▸수돗물은 직결 급수가 원칙이며, 부득이하게 저수조(물탱크) 경유 시 관리 철저\n▸수도시설의 관리에 관한 교육 이수(수도법제36조 및 같은법 시행령 제52조)\n- 교육대상: 건축연면적 5,000㎡ 이상 학교\n- 신규 지정 시 1년 이내, 이후 매 5년마다 8시간\n옥내급수관 일반검사\n구 분 저수조 수질검사 옥내급수관 일반검사\n검사대상 ⋅저수조를 경유하여 수돗물을 먹는 물로 사용하는 학교 ※ 소방용수 또는 화장실 용수 등으로만 사용되는 저수조는 수질검사 제외 (단, 화장실 세면시설로 연결된 저수조는 검사대상 포함) ⋅수돗물 사용 모든 학교 ※ 준공검사(급수관의 갱생·교체 등의 조치를 한 경우 포함) 후 5년이 지난 급수관\n검사횟수 ⋅연1회 이상 ⋅1회 이상(2년 주기)\n검사항목 ⋅탁도, 수소이온농도, 잔류염소, 일반 세균, 총대장균군, 분원성 대장균군 또는 대장균 등(6개 항목) ⋅탁도, 수소이온농도, 색도, 철, 납, 구리, 아연 (7개 항목)\n검사 시 유의사항 ⋅저수조 또는 저수조 최단 수도꼭지에서 채수 ⋅수질검사 시료 채수는 교육청 또는 학교 담당자 입회하에 채수 및 봉인 ⋅건물 내 임의의 냉수 수도꼭지 하나 이상에서 물 1리터를 채취 ⋅수질검사 시료 채수는 교육청 또는 학교 담당자 입회하에 채수 및 봉인\n검사 후 조치사항 ⋅수질검사 결과: 학교 홈페이지 등을 통해 공개 의무화 (정보공시와 별도) ⋅부적합 판정 시 저수조 청소 등을 실시 후 재검사 실시 ⋅부적합 판정의 원인을 규명하고 지속적인 부적합 판정 시 직결수 연결 방안 마련 ⋅탁도, 수소이온농도, 색도 또는 철에 대한 검사기준 초과 시 급수관 세척 실시 (다만, 급수관이 아연도강관인 경우 검사항목 중 검사기준을 초과 하는 항목이 한 개 이상이면 반드시 갱생하거나 교체) ⋅일반검사의 검사항목에 대한 검사기준을 2회 연속 초과하거나 검사항목 중 납,구리,아연에 대한 검사 기준 초과 시 전문검사를 실시하고 급수관을 갱생 (다만, 전문검사 결과 갱생만으로 내구성을 유지할 수 없을 정도로 노후한 급수관은 새 급수관으로 교체)\n※ 국민권익위원회 권고사항 이행(2013.12.9.): 건축 연면적 5,000㎡ 미만인 학교의 경우도 저수조와 옥내급수관 수질검사를 실시할 수 있도록 행정 안내 조치 → 수질검사 결과 부적합 시 적극 개선이 이루어질 수 있도록 조치",
+    "text": "시설물 관리위탁·정기검사\n2. 수돗물 관리\n▸수돗물은 직결 급수가 원칙이며, 부득이하게 저수조(물탱크) 경유 시 관리 철저\n▸수도시설의 관리에 관한 교육 이수(수도법제36조 및 같은법 시행령 제52조)\n- 교육대상: 건축연면적 5,000㎡ 이상 학교\n- 신규 지정 시 1년 이내, 이후 매 5년마다 8시간\n옥내급수관 일반검사\n구 분 저수조 수질검사 옥내급수관 일반검사\n검사대상 ⋅저수조를 경유하여 수돗물을 먹는 물로 사용하는 학교 ※ 소방용수 또는 화장실 용수 등으로만 사용되는 저수조는 수질검사 제외 (단, 화장실 세면시설로 연결된 저수조는 검사대상 포함) ⋅수돗물 사용 모든 학교 ※ 준공검사(급수관의 갱생·교체 등의 조치를 한 경우 포함) 후 5년이 지난 급수관\n검사횟수 ⋅연1회 이상 ⋅1회 이상(2년 주기)\n검사항목 ⋅탁도, 수소이온농도, 잔류염소, 일반 세균, 총대장균군, 분원성 대장균군 또는 대장균 등(6개 항목) ⋅탁도, 수소이온농도, 색도, 철, 납, 구리, 아연 (7개 항목)",
     "workId": "c13-w02",
-    "blockId": "c13-w02-b52"
+    "blockId": "c13-w02-b52",
+    "anchor": "▸수돗물은직결급수가원칙이며,부득이하게저수조("
   },
   {
+    "id": "c13-w02-b52~2",
+    "chapterId": "13",
+    "chapterLabel": "제13편",
+    "chapterTitle": "학교시설관리",
+    "type": "매뉴얼 원문",
+    "workTitle": "시설물 관리위탁·정기검사",
+    "title": "2. 수돗물 관리 › 검사 시 유의사항 ⋅저수조 또는 저수조 최단 수도꼭지에서 채수 ⋅수질검사 시료 채수는",
+    "description": "검사 시 유의사항 ⋅저수조 또는 저수조 최단 수도꼭지에서 채수 ⋅수질검사 시료 채수는 교육청 또는 학교 담당자 입회하에 채수 및 봉인 ⋅건물 내 임의의 냉수 수도꼭지 하나 이상에서 물 1리터를 채취 ⋅수질검사 시료 채수는 교육청 또는 학교 담당자 입회하에 채수 및 봉인 검사 후 조치사항 ⋅수질검사 결과: 학교 홈페이지 등을 통해 공개 의무화 (정보공시와 별도) ⋅부적합 판정 시 저수조 청소 등을 실시 후 재검사 실시 ⋅부적합 판정의 원인을 규명하고 지속적인 부적…",
+    "text": "시설물 관리위탁·정기검사\n2. 수돗물 관리\n검사 시 유의사항 ⋅저수조 또는 저수조 최단 수도꼭지에서 채수 ⋅수질검사 시료 채수는 교육청 또는 학교 담당자 입회하에 채수 및 봉인 ⋅건물 내 임의의 냉수 수도꼭지 하나 이상에서 물 1리터를 채취 ⋅수질검사 시료 채수는 교육청 또는 학교 담당자 입회하에 채수 및 봉인\n검사 후 조치사항 ⋅수질검사 결과: 학교 홈페이지 등을 통해 공개 의무화 (정보공시와 별도) ⋅부적합 판정 시 저수조 청소 등을 실시 후 재검사 실시 ⋅부적합 판정의 원인을 규명하고 지속적인 부적합 판정 시 직결수 연결 방안 마련 ⋅탁도, 수소이온농도, 색도 또는 철에 대한 검사기준 초과 시 급수관 세척 실시 (다만, 급수관이 아연도강관인 경우 검사항목 중 검사기준을 초과 하는 항목이 한 개 이상이면 반드시 갱생하거나 교체) ⋅일반검사의 검사항목에 대한 검사기준을 2회 연속 초과하거나 검사항목 중 납,구리,아연에 대한 검사 기준 초과 시 전문검사를 실시하고 급수관을 갱생 (다만, 전문검사 결과 갱생만으로 내구성을 유지할 수 없을 정도로 노후한 급수관은 새 급수관으로 교체)\n※ 국민권익위원회 권고사항 이행(2013.12.9.): 건축 연면적 5,000㎡ 미만인 학교의 경우도 저수조와 옥내급수관 수질검사를 실시할 수 있도록 행정 안내 조치 → 수질검사 결과 부적합 시 적극 개선이 이루어질 수 있도록 조치",
+    "workId": "c13-w02",
+    "blockId": "c13-w02-b52",
+    "anchor": "검사시유의사항⋅저수조또는저수조최단수도꼭지에서"
+  },
+  {
+    "id": "c13-w02-b53",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18972,6 +21572,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b53"
   },
   {
+    "id": "c13-w02-b54",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18984,6 +21585,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b54"
   },
   {
+    "id": "c13-w02-b55",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -18996,6 +21598,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b55"
   },
   {
+    "id": "c13-w02-b56",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19008,6 +21611,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b56"
   },
   {
+    "id": "c13-w02-b57",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19020,6 +21624,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b57"
   },
   {
+    "id": "c13-w02-b58",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19032,6 +21637,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b58"
   },
   {
+    "id": "c13-w02-b59",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19044,6 +21650,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b59"
   },
   {
+    "id": "c13-w02-b60",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19056,6 +21663,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b60"
   },
   {
+    "id": "c13-w02-b61",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19068,6 +21676,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b61"
   },
   {
+    "id": "c13-w02-b62",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19080,6 +21689,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b62"
   },
   {
+    "id": "c13-w02-b63",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19092,6 +21702,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b63"
   },
   {
+    "id": "c13-w02-b64",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19104,6 +21715,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b64"
   },
   {
+    "id": "c13-w02-b65",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19116,6 +21728,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b65"
   },
   {
+    "id": "c13-w02-b66",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19128,6 +21741,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b66"
   },
   {
+    "id": "c13-w02-b67",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19140,6 +21754,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w02-b67"
   },
   {
+    "id": "c13-w02:form:서식1",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19152,6 +21767,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식1"
   },
   {
+    "id": "c13-w02:form:서식2",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19164,6 +21780,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식2"
   },
   {
+    "id": "c13-w02:form:서식3",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19176,6 +21793,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식3"
   },
   {
+    "id": "c13-w02:form:서식4",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19188,6 +21806,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식4"
   },
   {
+    "id": "c13-w02:form:서식5",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19200,6 +21819,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식5"
   },
   {
+    "id": "c13-w02:form:서식6",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19212,6 +21832,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식6"
   },
   {
+    "id": "c13-w02:form:서식7",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19224,6 +21845,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식7"
   },
   {
+    "id": "c13-w02:form:서식8",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19236,6 +21858,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식8"
   },
   {
+    "id": "c13-w02:form:서식9",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19248,6 +21871,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식9"
   },
   {
+    "id": "c13-w02:form:예시1",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19260,6 +21884,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시1"
   },
   {
+    "id": "c13-w02:form:예시2",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19272,6 +21897,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시2"
   },
   {
+    "id": "c13-w02:form:예시3",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19284,6 +21910,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시3"
   },
   {
+    "id": "c13-w02:form:예시9",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19296,6 +21923,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시9"
   },
   {
+    "id": "c13-w02:form:참고1",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19308,6 +21936,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고1"
   },
   {
+    "id": "c13-w02:form:참고2",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19320,6 +21949,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고2"
   },
   {
+    "id": "c13-w02:form:참고3",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19332,6 +21962,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고3"
   },
   {
+    "id": "c13-w03",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19344,6 +21975,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c13-w03"
   },
   {
+    "id": "c13-w03-b1",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19356,6 +21988,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b1"
   },
   {
+    "id": "c13-w03-b2",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19368,6 +22001,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b2"
   },
   {
+    "id": "c13-w03-b3",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19380,6 +22014,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b3"
   },
   {
+    "id": "c13-w03-b4",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19392,6 +22027,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b4"
   },
   {
+    "id": "c13-w03-b5",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19404,6 +22040,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b5"
   },
   {
+    "id": "c13-w03-b6",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19416,6 +22053,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b6"
   },
   {
+    "id": "c13-w03-b7",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19428,6 +22066,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b7"
   },
   {
+    "id": "c13-w03-b8",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19440,6 +22079,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b8"
   },
   {
+    "id": "c13-w03-b9",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19452,6 +22092,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b9"
   },
   {
+    "id": "c13-w03-b10",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19464,6 +22105,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b10"
   },
   {
+    "id": "c13-w03-b11",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19476,6 +22118,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b11"
   },
   {
+    "id": "c13-w03-b12",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19488,6 +22131,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b12"
   },
   {
+    "id": "c13-w03-b13",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19500,6 +22144,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b13"
   },
   {
+    "id": "c13-w03-b14",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19512,6 +22157,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b14"
   },
   {
+    "id": "c13-w03-b15",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19524,6 +22170,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b15"
   },
   {
+    "id": "c13-w03-b16",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19536,6 +22183,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b16"
   },
   {
+    "id": "c13-w03-b17",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19548,6 +22196,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b17"
   },
   {
+    "id": "c13-w03-b18",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19560,6 +22209,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b18"
   },
   {
+    "id": "c13-w03-b19",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19572,6 +22222,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b19"
   },
   {
+    "id": "c13-w03-b20",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19584,6 +22235,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b20"
   },
   {
+    "id": "c13-w03-b21",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19596,6 +22248,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b21"
   },
   {
+    "id": "c13-w03-b22",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19608,6 +22261,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b22"
   },
   {
+    "id": "c13-w03-b23",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19620,6 +22274,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b23"
   },
   {
+    "id": "c13-w03-b24",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19632,6 +22287,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b24"
   },
   {
+    "id": "c13-w03-b25",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19644,6 +22300,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b25"
   },
   {
+    "id": "c13-w03-b26",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19656,6 +22313,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b26"
   },
   {
+    "id": "c13-w03-b27",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19668,6 +22326,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b27"
   },
   {
+    "id": "c13-w03-b28",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19680,6 +22339,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b28"
   },
   {
+    "id": "c13-w03-b29",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19692,6 +22352,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b29"
   },
   {
+    "id": "c13-w03-b30",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19704,6 +22365,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b30"
   },
   {
+    "id": "c13-w03-b31",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19716,6 +22378,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w03-b31"
   },
   {
+    "id": "c13-w03:form:서식10",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19728,6 +22391,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식10"
   },
   {
+    "id": "c13-w03:form:예시4",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19740,6 +22404,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시4"
   },
   {
+    "id": "c13-w03:form:예시5",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19752,6 +22417,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시5"
   },
   {
+    "id": "c13-w03:form:참고4",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19764,6 +22430,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고4"
   },
   {
+    "id": "c13-w04",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19776,6 +22443,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c13-w04"
   },
   {
+    "id": "c13-w04-b1",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19788,6 +22456,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w04-b1"
   },
   {
+    "id": "c13-w04-b2",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19800,6 +22469,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w04-b2"
   },
   {
+    "id": "c13-w04-b3",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19812,6 +22482,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w04-b3"
   },
   {
+    "id": "c13-w04-b4",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19824,6 +22495,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w04-b4"
   },
   {
+    "id": "c13-w04-b5",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19836,6 +22508,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w04-b5"
   },
   {
+    "id": "c13-w04-b6",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19848,6 +22521,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w04-b6"
   },
   {
+    "id": "c13-w04-b7",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19860,6 +22534,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w04-b7"
   },
   {
+    "id": "c13-w04-b8",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19872,6 +22547,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w04-b8"
   },
   {
+    "id": "c13-w04-b9",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19884,6 +22560,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w04-b9"
   },
   {
+    "id": "c13-w04-b10",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19896,6 +22573,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w04-b10"
   },
   {
+    "id": "c13-w04-b11",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19908,6 +22586,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w04-b11"
   },
   {
+    "id": "c13-w04-b12",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19920,6 +22599,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w04-b12"
   },
   {
+    "id": "c13-w04-b13",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19932,6 +22612,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w04-b13"
   },
   {
+    "id": "c13-w04:form:서식11",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19944,6 +22625,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식11"
   },
   {
+    "id": "c13-w05",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19956,6 +22638,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c13-w05"
   },
   {
+    "id": "c13-w05-b1",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19968,6 +22651,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b1"
   },
   {
+    "id": "c13-w05-b2",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19980,6 +22664,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b2"
   },
   {
+    "id": "c13-w05-b3",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -19992,6 +22677,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b3"
   },
   {
+    "id": "c13-w05-b4",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20004,6 +22690,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b4"
   },
   {
+    "id": "c13-w05-b5",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20016,6 +22703,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b5"
   },
   {
+    "id": "c13-w05-b6",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20028,6 +22716,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b6"
   },
   {
+    "id": "c13-w05-b7",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20040,6 +22729,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b7"
   },
   {
+    "id": "c13-w05-b8",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20052,6 +22742,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b8"
   },
   {
+    "id": "c13-w05-b9",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20064,6 +22755,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b9"
   },
   {
+    "id": "c13-w05-b10",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20076,6 +22768,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b10"
   },
   {
+    "id": "c13-w05-b11",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20088,6 +22781,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b11"
   },
   {
+    "id": "c13-w05-b12",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20100,6 +22794,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b12"
   },
   {
+    "id": "c13-w05-b13",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20112,6 +22807,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b13"
   },
   {
+    "id": "c13-w05-b14",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20124,6 +22820,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b14"
   },
   {
+    "id": "c13-w05-b15",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20136,6 +22833,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b15"
   },
   {
+    "id": "c13-w05-b16",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20148,6 +22846,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b16"
   },
   {
+    "id": "c13-w05-b17",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20160,6 +22859,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b17"
   },
   {
+    "id": "c13-w05-b18",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20172,6 +22872,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b18"
   },
   {
+    "id": "c13-w05-b19",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20184,6 +22885,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b19"
   },
   {
+    "id": "c13-w05-b20",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20196,6 +22898,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b20"
   },
   {
+    "id": "c13-w05-b21",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20208,6 +22911,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b21"
   },
   {
+    "id": "c13-w05-b22",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20220,6 +22924,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b22"
   },
   {
+    "id": "c13-w05-b23",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20232,6 +22937,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b23"
   },
   {
+    "id": "c13-w05-b24",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20244,6 +22950,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b24"
   },
   {
+    "id": "c13-w05-b25",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20256,6 +22963,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w05-b25"
   },
   {
+    "id": "c13-w05:form:서식12",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20268,6 +22976,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식12"
   },
   {
+    "id": "c13-w05:form:예시6",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20280,6 +22989,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시6"
   },
   {
+    "id": "c13-w05:form:예시7",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20292,6 +23002,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시7"
   },
   {
+    "id": "c13-w05:form:예시8",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20304,6 +23015,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시8"
   },
   {
+    "id": "c13-w05:form:참고5",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20316,6 +23028,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고5"
   },
   {
+    "id": "c13-w06",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20328,6 +23041,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c13-w06"
   },
   {
+    "id": "c13-w06-b1",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20340,6 +23054,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w06-b1"
   },
   {
+    "id": "c13-w06-b2",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20352,6 +23067,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w06-b2"
   },
   {
+    "id": "c13-w06-b3",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20364,6 +23080,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w06-b3"
   },
   {
+    "id": "c13-w06-b4",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20376,6 +23093,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w06-b4"
   },
   {
+    "id": "c13-w06-b5",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20388,6 +23106,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w06-b5"
   },
   {
+    "id": "c13-w06-b6",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20400,6 +23119,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w06-b6"
   },
   {
+    "id": "c13-w06-b7",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20412,6 +23132,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w06-b7"
   },
   {
+    "id": "c13-w06-b8",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20424,6 +23145,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w06-b8"
   },
   {
+    "id": "c13-w06-b9",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20436,6 +23158,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w06-b9"
   },
   {
+    "id": "c13-w06-b10",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20448,6 +23171,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w06-b10"
   },
   {
+    "id": "c13-w06-b11",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20460,6 +23184,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w06-b11"
   },
   {
+    "id": "c13-w06-b12",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20472,6 +23197,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w06-b12"
   },
   {
+    "id": "c13-w06:form:예시10",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20484,6 +23210,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시10"
   },
   {
+    "id": "c13-w07",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20496,6 +23223,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c13-w07"
   },
   {
+    "id": "c13-w07-b1",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20508,6 +23236,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w07-b1"
   },
   {
+    "id": "c13-w07-b2",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20520,6 +23249,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w07-b2"
   },
   {
+    "id": "c13-w07-b3",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20532,6 +23262,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w07-b3"
   },
   {
+    "id": "c13-w07-b4",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20544,6 +23275,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w07-b4"
   },
   {
+    "id": "c13-w07-b5",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20556,6 +23288,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w07-b5"
   },
   {
+    "id": "c13-w07-b6",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20568,6 +23301,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w07-b6"
   },
   {
+    "id": "c13-w07-b7",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20580,6 +23314,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w07-b7"
   },
   {
+    "id": "c13-w07-b8",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20592,6 +23327,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w07-b8"
   },
   {
+    "id": "c13-w07-b9",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20604,6 +23340,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w07-b9"
   },
   {
+    "id": "c13-w07-b10",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20616,6 +23353,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w07-b10"
   },
   {
+    "id": "c13-w07-b11",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20628,6 +23366,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w07-b11"
   },
   {
+    "id": "c13-w07-b12",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20640,6 +23379,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w07-b12"
   },
   {
+    "id": "c13-w07-b13",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20652,6 +23392,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w07-b13"
   },
   {
+    "id": "c13-w07:form:서식13",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20664,6 +23405,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식13"
   },
   {
+    "id": "c13-w07:form:예시11",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20676,6 +23418,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시11"
   },
   {
+    "id": "c13-w08",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20688,6 +23431,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c13-w08"
   },
   {
+    "id": "c13-w08-b1",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20700,6 +23444,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w08-b1"
   },
   {
+    "id": "c13-w08-b2",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20712,6 +23457,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w08-b2"
   },
   {
+    "id": "c13-w08-b3",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20724,6 +23470,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w08-b3"
   },
   {
+    "id": "c13-w08-b4",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20736,6 +23483,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w08-b4"
   },
   {
+    "id": "c13-w08-b5",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20748,6 +23496,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w08-b5"
   },
   {
+    "id": "c13-w08-b6",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20760,6 +23509,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w08-b6"
   },
   {
+    "id": "c13-w08-b7",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20772,6 +23522,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w08-b7"
   },
   {
+    "id": "c13-w08-b8",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20784,6 +23535,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w08-b8"
   },
   {
+    "id": "c13-w08-b9",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20796,6 +23548,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w08-b9"
   },
   {
+    "id": "c13-w08-b10",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20808,6 +23561,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w08-b10"
   },
   {
+    "id": "c13-w08-b11",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20820,6 +23574,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w08-b11"
   },
   {
+    "id": "c13-w09",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20832,6 +23587,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c13-w09"
   },
   {
+    "id": "c13-w09-b1",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20844,6 +23600,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w09-b1"
   },
   {
+    "id": "c13-w09-b2",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20856,6 +23613,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w09-b2"
   },
   {
+    "id": "c13-w09-b3",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20868,6 +23626,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w09-b3"
   },
   {
+    "id": "c13-w09-b4",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20880,6 +23639,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w09-b4"
   },
   {
+    "id": "c13-w09-b5",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20892,6 +23652,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w09-b5"
   },
   {
+    "id": "c13-w09-b6",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20904,6 +23665,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w09-b6"
   },
   {
+    "id": "c13-w09-b7",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20916,6 +23678,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w09-b7"
   },
   {
+    "id": "c13-w09-b8",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20928,6 +23691,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w09-b8"
   },
   {
+    "id": "c13-w09-b9",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20940,6 +23704,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w09-b9"
   },
   {
+    "id": "c13-w09:form:서식14",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20952,6 +23717,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식14"
   },
   {
+    "id": "c13-w09:form:참고6",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20964,6 +23730,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고6"
   },
   {
+    "id": "c13-w10",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20976,6 +23743,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c13-w10"
   },
   {
+    "id": "c13-w10-b1",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -20988,6 +23756,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w10-b1"
   },
   {
+    "id": "c13-w10-b2",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21000,6 +23769,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w10-b2"
   },
   {
+    "id": "c13-w10-b3",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21012,6 +23782,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w10-b3"
   },
   {
+    "id": "c13-w10-b4",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21024,6 +23795,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w10-b4"
   },
   {
+    "id": "c13-w10-b5",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21036,6 +23808,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w10-b5"
   },
   {
+    "id": "c13-w10-b6",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21048,6 +23821,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w10-b6"
   },
   {
+    "id": "c13-w10-b7",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21060,6 +23834,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w10-b7"
   },
   {
+    "id": "c13-w10-b8",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21072,6 +23847,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w10-b8"
   },
   {
+    "id": "c13-w10-b9",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21084,6 +23860,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w10-b9"
   },
   {
+    "id": "c13-w10-b10",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21096,6 +23873,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w10-b10"
   },
   {
+    "id": "c13-w10:form:서식15",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21108,6 +23886,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식15"
   },
   {
+    "id": "c13-w10:form:서식16",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21120,6 +23899,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식16"
   },
   {
+    "id": "c13-w11",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21132,6 +23912,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c13-w11"
   },
   {
+    "id": "c13-w11-b1",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21144,6 +23925,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w11-b1"
   },
   {
+    "id": "c13-w11-b2",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21156,6 +23938,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w11-b2"
   },
   {
+    "id": "c13-w11-b3",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21168,18 +23951,49 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w11-b3"
   },
   {
+    "id": "c13-w11-b4~1",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
     "type": "매뉴얼 원문",
     "workTitle": "학교 석면관리",
-    "title": "구성원 역 할 학교장 ⋅「석면안전관리법」, 「산업안전보건법」, 「폐기물관…",
+    "title": "구성원 역 할 학교장 ⋅「석면안전관리법」, 「산업안전보건법」, 「폐기물관… › 학교장 ⋅「석면안전관리법」, 「산업안전보건법」, 「폐기물관리법」, 「학교보건법」 등 관",
     "description": "구성원 역 할 학교장 ⋅「석면안전관리법」, 「산업안전보건법」, 「폐기물관리법」, 「학교보건법」 등 관련 법령에 따른 적절한 석면자재 유지 · 관리 및 학교 내 적절한 석면관리 대책 마련 ⋅석면 비산 우려를 고려한 개 · 보수 등 적극적 안전 대비책 강구 ⋅학교 구성원 대상 석면 안전관리교육 실시 ⋅학교 석면건축물안전관리인 지정 · 변경 신고(신고방법: 나이스 → 학교환경 → 석면관리) ※ 변경신고인 경우 변경사유가 발생한 날로부터 10일 이내 ※ 석면건축물안전관…",
-    "text": "학교 석면관리\n\n구성원 역 할\n학교장 ⋅「석면안전관리법」, 「산업안전보건법」, 「폐기물관리법」, 「학교보건법」 등 관련 법령에 따른 적절한 석면자재 유지 · 관리 및 학교 내 적절한 석면관리 대책 마련 ⋅석면 비산 우려를 고려한 개 · 보수 등 적극적 안전 대비책 강구 ⋅학교 구성원 대상 석면 안전관리교육 실시 ⋅학교 석면건축물안전관리인 지정 · 변경 신고(신고방법: 나이스 → 학교환경 → 석면관리) ※ 변경신고인 경우 변경사유가 발생한 날로부터 10일 이내 ※ 석면건축물안전관리인 지정 · 변경 신고서[참고8]\n석면 건축물 안전 관리인 ⋅석면건축물조사결과(석면 지도 작성상태 등)의 적정성 등에 대한 검토 ⋅6개월마다 학교석면건축물의 손상상태, 석면비산 가능성 등의 조사(위해성 평가) 및 적절한 조치 ⋅건축물에 대한 유지 · 보수공사 시 공사관계자에게 건축물 석면지도 제공 및 공사 감시 · 감독 ⋅교육행정정보시스템(나이스) 내 석면이력 관리 ⋅학교 누리집, 교내 방송, 가정통신문 등을 통한 학교 구성원(학생, 교직원, 학부모 등) 대상 석면함유 건축자재 분포 및 위해성 등급 등 공지 · 홍보 ⋅최초 지정 및 변경(최초 지정 시 교육을 받지 않은 경우에 한하여 적용)시 3개월 이내 교육부장관이 지정한 교육기관을 통해 8시간 이상의 교육 이수 ⋅교육을 받은 날이 속하는 연도의 다음연도 1월 1일을 기준으로 2년마다(매 2년이 되는 해의 1월 1일 전까지) 4시간 이상의 보수교육 이수 ⋅석면 건축물 관리 제외: 석면건축물 제외 승인이 완료된 학교 (「석면안전관리법」시행규칙 제29조)절차 미이행 시 「석면안전관리법」시행령 제33조(석면건축물 관리기준)를 준수해야 함)\n교직원 ⋅학생과 학부모에게 교내 석면에 대한 정확한 정보제공 및 적절한 석면피해 예방교육(동영상 자료 및 홍보자료 등 활용) 실시 ⋅학생 대상 석면안전교육 실시(학교 내 석면 함유 건축자재에 대한 적절한 관리요령 등) ⋅손상된 석면함유(의심) 건축자재 발견 시 손으로 만지거나 접근하지 않고, 석면건축물안전관리인에게 연락\n학생 ⋅학교 내 석면함유 건축자재의 정확한 장소 인지 ⋅석면함유 건축자재를 훼손하지 않도록 주의 ⋅손상된 석면함유(의심) 건축자재 발견 시 손으로 만지거나 접근하지 않고, 즉시 교직원 또는 석면건축물안전관리인에게 연락",
+    "text": "학교 석면관리\n\n구성원 역 할\n학교장 ⋅「석면안전관리법」, 「산업안전보건법」, 「폐기물관리법」, 「학교보건법」 등 관련 법령에 따른 적절한 석면자재 유지 · 관리 및 학교 내 적절한 석면관리 대책 마련 ⋅석면 비산 우려를 고려한 개 · 보수 등 적극적 안전 대비책 강구 ⋅학교 구성원 대상 석면 안전관리교육 실시 ⋅학교 석면건축물안전관리인 지정 · 변경 신고(신고방법: 나이스 → 학교환경 → 석면관리) ※ 변경신고인 경우 변경사유가 발생한 날로부터 10일 이내 ※ 석면건축물안전관리인 지정 · 변경 신고서[참고8]",
     "workId": "c13-w11",
-    "blockId": "c13-w11-b4"
+    "blockId": "c13-w11-b4",
+    "anchor": "학교장⋅「석면안전관리법」,「산업안전보건법」,"
   },
   {
+    "id": "c13-w11-b4~2",
+    "chapterId": "13",
+    "chapterLabel": "제13편",
+    "chapterTitle": "학교시설관리",
+    "type": "매뉴얼 원문",
+    "workTitle": "학교 석면관리",
+    "title": "구성원 역 할 학교장 ⋅「석면안전관리법」, 「산업안전보건법」, 「폐기물관… › 석면 건축물 안전 관리인 ⋅석면건축물조사결과(석면 지도 작성상태 등)의 적정성 등에 대",
+    "description": "석면 건축물 안전 관리인 ⋅석면건축물조사결과(석면 지도 작성상태 등)의 적정성 등에 대한 검토 ⋅6개월마다 학교석면건축물의 손상상태, 석면비산 가능성 등의 조사(위해성 평가) 및 적절한 조치 ⋅건축물에 대한 유지 · 보수공사 시 공사관계자에게 건축물 석면지도 제공 및 공사 감시 · 감독 ⋅교육행정정보시스템(나이스) 내 석면이력 관리 ⋅학교 누리집, 교내 방송, 가정통신문 등을 통한 학교 구성원(학생, 교직원, 학부모 등) 대상 석면함유 건축자재 분포 및 위해성…",
+    "text": "학교 석면관리\n\n석면 건축물 안전 관리인 ⋅석면건축물조사결과(석면 지도 작성상태 등)의 적정성 등에 대한 검토 ⋅6개월마다 학교석면건축물의 손상상태, 석면비산 가능성 등의 조사(위해성 평가) 및 적절한 조치 ⋅건축물에 대한 유지 · 보수공사 시 공사관계자에게 건축물 석면지도 제공 및 공사 감시 · 감독 ⋅교육행정정보시스템(나이스) 내 석면이력 관리 ⋅학교 누리집, 교내 방송, 가정통신문 등을 통한 학교 구성원(학생, 교직원, 학부모 등) 대상 석면함유 건축자재 분포 및 위해성 등급 등 공지 · 홍보 ⋅최초 지정 및 변경(최초 지정 시 교육을 받지 않은 경우에 한하여 적용)시 3개월 이내 교육부장관이 지정한 교육기관을 통해 8시간 이상의 교육 이수 ⋅교육을 받은 날이 속하는 연도의 다음연도 1월 1일을 기준으로 2년마다(매 2년이 되는 해의 1월 1일 전까지) 4시간 이상의 보수교육 이수 ⋅석면 건축물 관리 제외: 석면건축물 제외 승인이 완료된 학교 (「석면안전관리법」시행규칙 제29조)절차 미이행 시 「석면안전관리법」시행령 제33조(석면건축물 관리기준)를 준수해야 함)",
+    "workId": "c13-w11",
+    "blockId": "c13-w11-b4",
+    "anchor": "석면건축물안전관리인⋅석면건축물조사결과(석면지"
+  },
+  {
+    "id": "c13-w11-b4~3",
+    "chapterId": "13",
+    "chapterLabel": "제13편",
+    "chapterTitle": "학교시설관리",
+    "type": "매뉴얼 원문",
+    "workTitle": "학교 석면관리",
+    "title": "구성원 역 할 학교장 ⋅「석면안전관리법」, 「산업안전보건법」, 「폐기물관… › 교직원 ⋅학생과 학부모에게 교내 석면에 대한 정확한 정보제공 및 적절한 석면피해 예방교",
+    "description": "교직원 ⋅학생과 학부모에게 교내 석면에 대한 정확한 정보제공 및 적절한 석면피해 예방교육(동영상 자료 및 홍보자료 등 활용) 실시 ⋅학생 대상 석면안전교육 실시(학교 내 석면 함유 건축자재에 대한 적절한 관리요령 등) ⋅손상된 석면함유(의심) 건축자재 발견 시 손으로 만지거나 접근하지 않고, 석면건축물안전관리인에게 연락 학생 ⋅학교 내 석면함유 건축자재의 정확한 장소 인지 ⋅석면함유 건축자재를 훼손하지 않도록 주의 ⋅손상된 석면함유(의심) 건축자재 발견 시 손으…",
+    "text": "학교 석면관리\n\n교직원 ⋅학생과 학부모에게 교내 석면에 대한 정확한 정보제공 및 적절한 석면피해 예방교육(동영상 자료 및 홍보자료 등 활용) 실시 ⋅학생 대상 석면안전교육 실시(학교 내 석면 함유 건축자재에 대한 적절한 관리요령 등) ⋅손상된 석면함유(의심) 건축자재 발견 시 손으로 만지거나 접근하지 않고, 석면건축물안전관리인에게 연락\n학생 ⋅학교 내 석면함유 건축자재의 정확한 장소 인지 ⋅석면함유 건축자재를 훼손하지 않도록 주의 ⋅손상된 석면함유(의심) 건축자재 발견 시 손으로 만지거나 접근하지 않고, 즉시 교직원 또는 석면건축물안전관리인에게 연락",
+    "workId": "c13-w11",
+    "blockId": "c13-w11-b4",
+    "anchor": "교직원⋅학생과학부모에게교내석면에대한정확한정보"
+  },
+  {
+    "id": "c13-w11-b5",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21192,6 +24006,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w11-b5"
   },
   {
+    "id": "c13-w11-b6",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21204,6 +24019,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w11-b6"
   },
   {
+    "id": "c13-w11-b7",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21216,6 +24032,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w11-b7"
   },
   {
+    "id": "c13-w11-b8",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21228,6 +24045,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w11-b8"
   },
   {
+    "id": "c13-w11-b9",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21240,6 +24058,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w11-b9"
   },
   {
+    "id": "c13-w11-b10",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21252,6 +24071,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w11-b10"
   },
   {
+    "id": "c13-w11:form:참고7",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21264,6 +24084,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고7"
   },
   {
+    "id": "c13-w11:form:참고8",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21276,6 +24097,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고8"
   },
   {
+    "id": "c13-w12",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21288,6 +24110,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c13-w12"
   },
   {
+    "id": "c13-w12-b1",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21300,6 +24123,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b1"
   },
   {
+    "id": "c13-w12-b2",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21312,6 +24136,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b2"
   },
   {
+    "id": "c13-w12-b3",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21324,6 +24149,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b3"
   },
   {
+    "id": "c13-w12-b4",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21336,6 +24162,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b4"
   },
   {
+    "id": "c13-w12-b5",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21348,6 +24175,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b5"
   },
   {
+    "id": "c13-w12-b6",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21360,6 +24188,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b6"
   },
   {
+    "id": "c13-w12-b7",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21372,6 +24201,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b7"
   },
   {
+    "id": "c13-w12-b8",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21384,6 +24214,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b8"
   },
   {
+    "id": "c13-w12-b9",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21396,6 +24227,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b9"
   },
   {
+    "id": "c13-w12-b10",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21408,6 +24240,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b10"
   },
   {
+    "id": "c13-w12-b11",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21420,6 +24253,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b11"
   },
   {
+    "id": "c13-w12-b12",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21432,6 +24266,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b12"
   },
   {
+    "id": "c13-w12-b13",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21444,6 +24279,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b13"
   },
   {
+    "id": "c13-w12-b14",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21456,6 +24292,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b14"
   },
   {
+    "id": "c13-w12-b15",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21468,6 +24305,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b15"
   },
   {
+    "id": "c13-w12-b16",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21480,6 +24318,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b16"
   },
   {
+    "id": "c13-w12-b17",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21492,6 +24331,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b17"
   },
   {
+    "id": "c13-w12-b18",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21504,6 +24344,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b18"
   },
   {
+    "id": "c13-w12-b19",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21516,6 +24357,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b19"
   },
   {
+    "id": "c13-w12-b20",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21528,6 +24370,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b20"
   },
   {
+    "id": "c13-w12-b21",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21540,6 +24383,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b21"
   },
   {
+    "id": "c13-w12-b22",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21552,6 +24396,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b22"
   },
   {
+    "id": "c13-w12-b23",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21564,6 +24409,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b23"
   },
   {
+    "id": "c13-w12-b24",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21576,6 +24422,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b24"
   },
   {
+    "id": "c13-w12-b25",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21588,6 +24435,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b25"
   },
   {
+    "id": "c13-w12-b26",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21600,6 +24448,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b26"
   },
   {
+    "id": "c13-w12-b27",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21612,6 +24461,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b27"
   },
   {
+    "id": "c13-w12-b28",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21624,6 +24474,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b28"
   },
   {
+    "id": "c13-w12-b29",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21636,6 +24487,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b29"
   },
   {
+    "id": "c13-w12-b30",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21648,6 +24500,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b30"
   },
   {
+    "id": "c13-w12-b31",
     "chapterId": "13",
     "chapterLabel": "제13편",
     "chapterTitle": "학교시설관리",
@@ -21660,6 +24513,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c13-w12-b31"
   },
   {
+    "id": "c14-w00",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21673,19 +24527,67 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c14-w00-b1~1",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
     "type": "매뉴얼 원문",
     "workTitle": "한눈에 보기",
-    "title": "구분 흐름도 주요 내용 주의 사항 본예산 예산편성 및 운영지침 시달 ▪…",
+    "title": "구분 흐름도 주요 내용 주의 사항 본예산 예산편성 및 운영지침 시달 ▪… › 구분 흐름도 주요 내용 주의 사항",
     "description": "구분 흐름도 주요 내용 주의 사항 본예산 예산편성 및 운영지침 시달 ▪ 교직원 교육실시 ▪ 학교구성원 의견수렴 ▪ 예산요구서 취합 ▪ 예산 조정 ▪ 예산(안) 편성 및 확정 ▪ 예산(안) 제출 ▪ 예산(안) 심의 ▪ 예산(안) 심의결과 송부 ▪ 예산 확정 ▪ 예산서 공개 주체 / 내용 / 법정기한 / 비고 교 육 감 / 학교회계 예산편성 기본지침 시달 / 회계연도 개시 3개월 전까지 / 11월 말 교육비특별회계 전입금 교부계획 통보 / 회계연도 개시 50일 전까…",
-    "text": "한눈에 보기\n\n구분 흐름도 주요 내용 주의 사항\n본예산 예산편성 및 운영지침 시달 ▪ 교직원 교육실시 ▪ 학교구성원 의견수렴 ▪ 예산요구서 취합 ▪ 예산 조정 ▪ 예산(안) 편성 및 확정 ▪ 예산(안) 제출 ▪ 예산(안) 심의 ▪ 예산(안) 심의결과 송부 ▪ 예산 확정 ▪ 예산서 공개 주체 / 내용 / 법정기한 / 비고 교 육 감 / 학교회계 예산편성 기본지침 시달 / 회계연도 개시 3개월 전까지 / 11월 말 교육비특별회계 전입금 교부계획 통보 / 회계연도 개시 50일 전까지 / 1월 초 학 교 장 / 예산(안) 확정 / 회계연도 개시 30일 전까지 / 1월 말 예산 확정 / 회계연도 개시 5일 전까지 / 2월 말 ◦예산서 단위 천원 산출기초 단위 원단위 ◦세입: 천원 미만 절사 세출: 천원 미만 절상 ◦산출기초 순서 -(단가)×(물량)×(횟수) ◦업무추진비 편성 적정\n성립전 예산 편성요건 발생 ▪ 성립전예산 사용 요구 ▪ 성립전예산 편성 ▪ 차기 추가경정예산에 계상 ■ 집행 제한 사유 ◦용도 지정(혹은 전액 교부)되지 않은 경우 ◦학교운영위원회 심의를 사전에 거치지 않은 수익자부담경비 ◦성립전 예산 편성 엄격 적용\n추가 경정 예산 편성요건 발생 ▪ 추가경정예산(안) 편성 ▪ 학교운영위원회 심의 ▪ 추가경정예산 확정 ▪ 추가경정예산서 공개 ■ 편성요건(본예산 편성 후) ◦예기치 못한 돌발적 사태 발생 ◦재정수요가 발생한 경우 ◦기존 예산의 추가 증액, 삭감 또는 경정의 사유가 발생 ◦성립전예산 집행 경비 추경 편성 시 누락 확인\n간주 처리 예산 추경예산(정리) 편성 이후 사업비 교부 ▪ 세입 / 세출 예산요구 ▪ 간주처리예산 확정 ▪ 간주처리예산 공개 ▪ 학교운영위원회 보고 ■ 간주처리예산 처리 방법 ◦예산심의 절차 없이 학교운영위원회의 심의 받은 것으로 간주 처리하여 심의 생략 ◦학교장의 예산확정 과정만으로 예산 성립 ◦사전 • 사후 학교운영위원회 설명 및 소명 ◦반드시 2월 말까지 예산확정 절차 수행\n이용 및 전용 사안 발생 ▪ 예산의 이 ･ 전용 요구 ▪ 타당성 검토 ▪ 학교운영위원회 심의(이용) ▪ 이 ･ 전용 예산입력 및 확정 ▪ 결산서에 예산 이⋅전용명세서 첨부 구분 / 예산의 이용 / 예산의 전용 요구권자 / 학교장 / 담당자 또는 부서장 승인권자 / 학교운영위원회 / 학교장 ◦업무추진비 이•전용 불가 ◦수익자부담수입, 정산재원, 인건비, 시설비 및 부대비 등은 다른 과목으로 이•전용 불가\n예비비 사안발생 ▪ 예비비 지출요구 ▪ 사용 요건 확인 ▪ 예비비 입력 및 확정 ▪ 예산 집행 ▪ 결산서 예비비 사용명세서 첨부(학운위 심의 ) ■ 예비비의 사용 ◦재해 복구비 등 예측할 수 없었던 경비 ◦예측 가능했더라도 재정여건의 변화 등 예산보다 초과 지출 사유가 발생한 경우 ◦업무추진비 사용 불가 ◦회계연도 종료 후 사용 불가\n이월 예산의 이월 요구 ▪ 예산의 이월 신청 및 결재 ▪ 학운위 심의 ▪ 예산의 이월 확정 ▪ 다음회계 이월금 징수 및 수입 ▪ 결산 심의시 이월비 명세서 첨부 구분 / 명시이월 / 사고이월 / 계속비이월 시기 / 최종 추경예산 성립 시점 / 회계연도말 시점 / 예산 성립 시점 절차 / 학교운영위원회 사전 심의 / 학교장 결정 / 학교운영위원회 사전 심의 ◦다음 회계연도 세입세출예산 불포함 ◦예산현액[예산액+이월비(명시+사고+계속비)]으로 관리\n결산 회계마감 및 출납폐쇄 ▪ 결산 작업 ▪ 결산 심의 ▪ 결산서 공개 ▪ 결산 보고 주체 / 내용 / 법정기한 / 비고 학 교 장 / 출납폐쇄정리 / 회계연도 종료 후 20일 / 매년 3월 20일 결산 심의 및 확정 / 회계연도 종료 후 3개월 이내 / 매년 5월 31일 ◦결산서 교육청 보고 - 기한: 결산확정 후 - 제출처 • 유·초·중 → 교육장 • 고·특수 → 교육감",
+    "text": "한눈에 보기\n\n구분 흐름도 주요 내용 주의 사항\n본예산 예산편성 및 운영지침 시달 ▪ 교직원 교육실시 ▪ 학교구성원 의견수렴 ▪ 예산요구서 취합 ▪ 예산 조정 ▪ 예산(안) 편성 및 확정 ▪ 예산(안) 제출 ▪ 예산(안) 심의 ▪ 예산(안) 심의결과 송부 ▪ 예산 확정 ▪ 예산서 공개 주체 / 내용 / 법정기한 / 비고 교 육 감 / 학교회계 예산편성 기본지침 시달 / 회계연도 개시 3개월 전까지 / 11월 말 교육비특별회계 전입금 교부계획 통보 / 회계연도 개시 50일 전까지 / 1월 초 학 교 장 / 예산(안) 확정 / 회계연도 개시 30일 전까지 / 1월 말 예산 확정 / 회계연도 개시 5일 전까지 / 2월 말 ◦예산서 단위 천원 산출기초 단위 원단위 ◦세입: 천원 미만 절사 세출: 천원 미만 절상 ◦산출기초 순서 -(단가)×(물량)×(횟수) ◦업무추진비 편성 적정\n성립전 예산 편성요건 발생 ▪ 성립전예산 사용 요구 ▪ 성립전예산 편성 ▪ 차기 추가경정예산에 계상 ■ 집행 제한 사유 ◦용도 지정(혹은 전액 교부)되지 않은 경우 ◦학교운영위원회 심의를 사전에 거치지 않은 수익자부담경비 ◦성립전 예산 편성 엄격 적용",
     "workId": "c14-w00",
     "blockId": "c14-w00-b1",
+    "anchor": "구분흐름도주요내용주의사항",
     "weight": 0.6
   },
   {
+    "id": "c14-w00-b1~2",
+    "chapterId": "14",
+    "chapterLabel": "제14편",
+    "chapterTitle": "학교회계 예결산",
+    "type": "매뉴얼 원문",
+    "workTitle": "한눈에 보기",
+    "title": "구분 흐름도 주요 내용 주의 사항 본예산 예산편성 및 운영지침 시달 ▪… › 추가 경정 예산 편성요건 발생 ▪ 추가경정예산(안) 편성 ▪ 학교운영위원회 심의 ▪ 추",
+    "description": "추가 경정 예산 편성요건 발생 ▪ 추가경정예산(안) 편성 ▪ 학교운영위원회 심의 ▪ 추가경정예산 확정 ▪ 추가경정예산서 공개 ■ 편성요건(본예산 편성 후) ◦예기치 못한 돌발적 사태 발생 ◦재정수요가 발생한 경우 ◦기존 예산의 추가 증액, 삭감 또는 경정의 사유가 발생 ◦성립전예산 집행 경비 추경 편성 시 누락 확인 간주 처리 예산 추경예산(정리) 편성 이후 사업비 교부 ▪ 세입 / 세출 예산요구 ▪ 간주처리예산 확정 ▪ 간주처리예산 공개 ▪ 학교운영위원회 보고…",
+    "text": "한눈에 보기\n\n추가 경정 예산 편성요건 발생 ▪ 추가경정예산(안) 편성 ▪ 학교운영위원회 심의 ▪ 추가경정예산 확정 ▪ 추가경정예산서 공개 ■ 편성요건(본예산 편성 후) ◦예기치 못한 돌발적 사태 발생 ◦재정수요가 발생한 경우 ◦기존 예산의 추가 증액, 삭감 또는 경정의 사유가 발생 ◦성립전예산 집행 경비 추경 편성 시 누락 확인\n간주 처리 예산 추경예산(정리) 편성 이후 사업비 교부 ▪ 세입 / 세출 예산요구 ▪ 간주처리예산 확정 ▪ 간주처리예산 공개 ▪ 학교운영위원회 보고 ■ 간주처리예산 처리 방법 ◦예산심의 절차 없이 학교운영위원회의 심의 받은 것으로 간주 처리하여 심의 생략 ◦학교장의 예산확정 과정만으로 예산 성립 ◦사전 • 사후 학교운영위원회 설명 및 소명 ◦반드시 2월 말까지 예산확정 절차 수행",
+    "workId": "c14-w00",
+    "blockId": "c14-w00-b1",
+    "anchor": "추가경정예산편성요건발생▪추가경정예산(안)편성",
+    "weight": 0.6
+  },
+  {
+    "id": "c14-w00-b1~3",
+    "chapterId": "14",
+    "chapterLabel": "제14편",
+    "chapterTitle": "학교회계 예결산",
+    "type": "매뉴얼 원문",
+    "workTitle": "한눈에 보기",
+    "title": "구분 흐름도 주요 내용 주의 사항 본예산 예산편성 및 운영지침 시달 ▪… › 이용 및 전용 사안 발생 ▪ 예산의 이 ･ 전용 요구 ▪ 타당성 검토 ▪ 학교운영위원회",
+    "description": "이용 및 전용 사안 발생 ▪ 예산의 이 ･ 전용 요구 ▪ 타당성 검토 ▪ 학교운영위원회 심의(이용) ▪ 이 ･ 전용 예산입력 및 확정 ▪ 결산서에 예산 이⋅전용명세서 첨부 구분 / 예산의 이용 / 예산의 전용 요구권자 / 학교장 / 담당자 또는 부서장 승인권자 / 학교운영위원회 / 학교장 ◦업무추진비 이•전용 불가 ◦수익자부담수입, 정산재원, 인건비, 시설비 및 부대비 등은 다른 과목으로 이•전용 불가 예비비 사안발생 ▪ 예비비 지출요구 ▪ 사용 요건 확인 ▪…",
+    "text": "한눈에 보기\n\n이용 및 전용 사안 발생 ▪ 예산의 이 ･ 전용 요구 ▪ 타당성 검토 ▪ 학교운영위원회 심의(이용) ▪ 이 ･ 전용 예산입력 및 확정 ▪ 결산서에 예산 이⋅전용명세서 첨부 구분 / 예산의 이용 / 예산의 전용 요구권자 / 학교장 / 담당자 또는 부서장 승인권자 / 학교운영위원회 / 학교장 ◦업무추진비 이•전용 불가 ◦수익자부담수입, 정산재원, 인건비, 시설비 및 부대비 등은 다른 과목으로 이•전용 불가\n예비비 사안발생 ▪ 예비비 지출요구 ▪ 사용 요건 확인 ▪ 예비비 입력 및 확정 ▪ 예산 집행 ▪ 결산서 예비비 사용명세서 첨부(학운위 심의 ) ■ 예비비의 사용 ◦재해 복구비 등 예측할 수 없었던 경비 ◦예측 가능했더라도 재정여건의 변화 등 예산보다 초과 지출 사유가 발생한 경우 ◦업무추진비 사용 불가 ◦회계연도 종료 후 사용 불가",
+    "workId": "c14-w00",
+    "blockId": "c14-w00-b1",
+    "anchor": "이용및전용사안발생▪예산의이･전용요구▪타당성검",
+    "weight": 0.6
+  },
+  {
+    "id": "c14-w00-b1~4",
+    "chapterId": "14",
+    "chapterLabel": "제14편",
+    "chapterTitle": "학교회계 예결산",
+    "type": "매뉴얼 원문",
+    "workTitle": "한눈에 보기",
+    "title": "구분 흐름도 주요 내용 주의 사항 본예산 예산편성 및 운영지침 시달 ▪… › 이월 예산의 이월 요구 ▪ 예산의 이월 신청 및 결재 ▪ 학운위 심의 ▪ 예산의 이월",
+    "description": "이월 예산의 이월 요구 ▪ 예산의 이월 신청 및 결재 ▪ 학운위 심의 ▪ 예산의 이월 확정 ▪ 다음회계 이월금 징수 및 수입 ▪ 결산 심의시 이월비 명세서 첨부 구분 / 명시이월 / 사고이월 / 계속비이월 시기 / 최종 추경예산 성립 시점 / 회계연도말 시점 / 예산 성립 시점 절차 / 학교운영위원회 사전 심의 / 학교장 결정 / 학교운영위원회 사전 심의 ◦다음 회계연도 세입세출예산 불포함 ◦예산현액[예산액+이월비(명시+사고+계속비)]으로 관리 결산 회계마감 및…",
+    "text": "한눈에 보기\n\n이월 예산의 이월 요구 ▪ 예산의 이월 신청 및 결재 ▪ 학운위 심의 ▪ 예산의 이월 확정 ▪ 다음회계 이월금 징수 및 수입 ▪ 결산 심의시 이월비 명세서 첨부 구분 / 명시이월 / 사고이월 / 계속비이월 시기 / 최종 추경예산 성립 시점 / 회계연도말 시점 / 예산 성립 시점 절차 / 학교운영위원회 사전 심의 / 학교장 결정 / 학교운영위원회 사전 심의 ◦다음 회계연도 세입세출예산 불포함 ◦예산현액[예산액+이월비(명시+사고+계속비)]으로 관리\n결산 회계마감 및 출납폐쇄 ▪ 결산 작업 ▪ 결산 심의 ▪ 결산서 공개 ▪ 결산 보고 주체 / 내용 / 법정기한 / 비고 학 교 장 / 출납폐쇄정리 / 회계연도 종료 후 20일 / 매년 3월 20일 결산 심의 및 확정 / 회계연도 종료 후 3개월 이내 / 매년 5월 31일 ◦결산서 교육청 보고 - 기한: 결산확정 후 - 제출처 • 유·초·중 → 교육장 • 고·특수 → 교육감",
+    "workId": "c14-w00",
+    "blockId": "c14-w00-b1",
+    "anchor": "이월예산의이월요구▪예산의이월신청및결재▪학운위",
+    "weight": 0.6
+  },
+  {
+    "id": "c14-w01",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21698,6 +24600,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c14-w01"
   },
   {
+    "id": "c14-w01-b1",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21710,6 +24613,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w01-b1"
   },
   {
+    "id": "c14-w01-b2",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21722,6 +24626,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w01-b2"
   },
   {
+    "id": "c14-w01-b3",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21734,6 +24639,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w01-b3"
   },
   {
+    "id": "c14-w01-b4",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21746,6 +24652,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w01-b4"
   },
   {
+    "id": "c14-w01-b5",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21758,6 +24665,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w01-b5"
   },
   {
+    "id": "c14-w01-b6",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21770,18 +24678,49 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w01-b6"
   },
   {
+    "id": "c14-w01-b7~1",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
     "type": "매뉴얼 원문",
     "workTitle": "학교회계의 이해",
-    "title": "4. 학교회계 예산의 구분",
+    "title": "4. 학교회계 예산의 구분 › 이전 수입 중앙정부이전수입 국고보조금 국고보조금",
     "description": "가. 세입예산 장 관 항 목 이전 수입 중앙정부이전수입 국고보조금 국고보조금 지방자치단체이전수입 비법정이전수입 광역(기초)지방자치단체전입금 교육경비보조금 광역(기초)지방자치단체전입금 지방교육행정기관이전수입 교육비특별회계전입금수입비 교육비특별회계전입금 기금회계전입금수입 기금회계전입금 기타이전수입 학교회계간이전수입 학교발전기금전입금,다른학교회계전입금 기타학교회계전입금 기타공공이전수입 기타공공지원금 민간이전수입 기부금 자체 수입 학부모부담수입 수익자부담수입 급식비 등…",
-    "text": "학교회계의 이해\n4. 학교회계 예산의 구분\n가. 세입예산\n장 관 항 목\n이전 수입 중앙정부이전수입 국고보조금 국고보조금\n지방자치단체이전수입 비법정이전수입 광역(기초)지방자치단체전입금\n교육경비보조금 광역(기초)지방자치단체전입금\n지방교육행정기관이전수입 교육비특별회계전입금수입비 교육비특별회계전입금\n기금회계전입금수입 기금회계전입금\n기타이전수입 학교회계간이전수입 학교발전기금전입금,다른학교회계전입금 기타학교회계전입금\n기타공공이전수입 기타공공지원금\n민간이전수입 기부금\n자체 수입 학부모부담수입 수익자부담수입 급식비 등\n행정활동수입 사용료및수수료 사용료, 수수료\n자산수입 자산매각대\n적립금처분수입 적립금처분수입\n보증금회수 보증금회수\n기타행정활동수입 지난년도수입, 이자수입, 기타행정활동수입\n기타 수입 전년도이월금 순세계잉여금 순세계잉여금\n정산대상재원사용잔액 정산대상재원사용잔액\n이월금 이월사업비\n나. 세출예산(사업별)\n정책사업 단위사업 세부사업\n인적자원운용 기타 교직원보수 교직원대체인건비, 기타수당\n교직원 복지 및 역량강화 교직원역량강화, 교직원복지\n학생복지 / 교육격차해소 급식관리 학교급식운영\n기숙사관리 기숙사운영\n보건관리 학생 및 교직원 보건안전관리. 학교환경위생관리\n교육격차해소 학비지원. 정보화비지원, 기타교육격차해소지원\n학생복지 학생장학금운영, 교육복지우선, 학생복지운영\n기본적 교육활동 교과활동 교과활동지원, 국어교과활동지원 등\n창의적체험활동 자율·자치활동, 현장체험학습활동, 동아리활동, 봉사활동, 진로활동\n자유학기(년)활동 자유학기활동\n선택적 교육활동 방과후학교운영 방과후학교운영, 늘봄교실운영, 유치원방과후과정운영\n직업교육 직업교육운영\n국제교육 국제교육운영\n독서활동 독서활동운영\n교기육성 교기운영\n기타선택적교육활동 창의교육운영, 기타선택적교육운영, 다문화교육운영\n교육활동지원 교무업무운영 방과후학교운영, 늘봄교실운영, 유치원방과후과정운영\n생활지도운영 직업교육운영\n연구학교운영 국제교육운영\n학습지원실운영 방송실운영, 정보화실운영, 공동실습소운영, 기타학습지원실 운영\n교육여건개선 교육환경개선\n학교일반운영 학교기관운영 부서기본운영, 부설기관운영, 병설유치원기본운영, 행정지원인력운용\n시설장비유지 학교시설장비유지\n학교운영협력 학교운영위원회 운영, 학부모협력, 관계기관협력\n학교시설확충 시설확충및개선 시설확충및개선\n학교재무활동 반환금 반환금\n예비비 예비비\n다. 세출예산(성질별)\n목그룹 목 세목 원가통계비목\nA00 인건비 A10 인건비 공무직보수 공무직인건비\n기간제근로자보수 기간제교원인건비, 기간제근로자인건비\n기타수당 기타수당\nB00 운영비 B10 학교운영비 일반운영비 일반수용비, 운영수당, 전기요금, 상하수도료, 연료비, 기타공공요금, 급식용식재료비, 우유급식비, 여비, 맞춤형복지비, 교직원복지비\n교육운영비 교육운영비, 학습준비물, 학생복지비\n법정부담금 기간제교원(근로자)법정부담금, 공무직법정부담금\nB20 업무추진비 일반업무추진비 일반업무추진비, 직책급업무수행경비, 목적사업업무추진비\nC00 자산취득비 C10 시설비 시설비 시설비, 임차보증금\nC20 비품구입비 비품구입비 비품구입비, 도서구입비\nC30 시설적립금 시설적립금 시설적립금\nC40 기타자산취득비 기타자산취득비 기타자산취득비\nD00 예비비 및기타 D10 예비비및기타 예비비 예비비\n반환금 반환금\n전출금 전출금",
+    "text": "학교회계의 이해\n4. 학교회계 예산의 구분\n가. 세입예산\n장 관 항 목\n이전 수입 중앙정부이전수입 국고보조금 국고보조금\n지방자치단체이전수입 비법정이전수입 광역(기초)지방자치단체전입금\n교육경비보조금 광역(기초)지방자치단체전입금\n지방교육행정기관이전수입 교육비특별회계전입금수입비 교육비특별회계전입금\n기금회계전입금수입 기금회계전입금\n기타이전수입 학교회계간이전수입 학교발전기금전입금,다른학교회계전입금 기타학교회계전입금\n기타공공이전수입 기타공공지원금\n민간이전수입 기부금\n자체 수입 학부모부담수입 수익자부담수입 급식비 등\n행정활동수입 사용료및수수료 사용료, 수수료\n자산수입 자산매각대\n적립금처분수입 적립금처분수입\n보증금회수 보증금회수\n기타행정활동수입 지난년도수입, 이자수입, 기타행정활동수입\n기타 수입 전년도이월금 순세계잉여금 순세계잉여금\n정산대상재원사용잔액 정산대상재원사용잔액\n이월금 이월사업비\n나. 세출예산(사업별)\n정책사업 단위사업 세부사업\n인적자원운용 기타 교직원보수 교직원대체인건비, 기타수당\n교직원 복지 및 역량강화 교직원역량강화, 교직원복지\n학생복지 / 교육격차해소 급식관리 학교급식운영\n기숙사관리 기숙사운영\n보건관리 학생 및 교직원 보건안전관리. 학교환경위생관리\n교육격차해소 학비지원. 정보화비지원, 기타교육격차해소지원",
     "workId": "c14-w01",
-    "blockId": "c14-w01-b7"
+    "blockId": "c14-w01-b7",
+    "anchor": "이전수입중앙정부이전수입국고보조금국고보조금"
   },
   {
+    "id": "c14-w01-b7~2",
+    "chapterId": "14",
+    "chapterLabel": "제14편",
+    "chapterTitle": "학교회계 예결산",
+    "type": "매뉴얼 원문",
+    "workTitle": "학교회계의 이해",
+    "title": "4. 학교회계 예산의 구분 › 학생복지 학생장학금운영, 교육복지우선, 학생복지운영",
+    "description": "학생복지 학생장학금운영, 교육복지우선, 학생복지운영 기본적 교육활동 교과활동 교과활동지원, 국어교과활동지원 등 창의적체험활동 자율·자치활동, 현장체험학습활동, 동아리활동, 봉사활동, 진로활동 자유학기(년)활동 자유학기활동 선택적 교육활동 방과후학교운영 방과후학교운영, 늘봄교실운영, 유치원방과후과정운영 직업교육 직업교육운영 국제교육 국제교육운영 독서활동 독서활동운영 교기육성 교기운영 기타선택적교육활동 창의교육운영, 기타선택적교육운영, 다문화교육운영 교육활동지원 교…",
+    "text": "학교회계의 이해\n4. 학교회계 예산의 구분\n학생복지 학생장학금운영, 교육복지우선, 학생복지운영\n기본적 교육활동 교과활동 교과활동지원, 국어교과활동지원 등\n창의적체험활동 자율·자치활동, 현장체험학습활동, 동아리활동, 봉사활동, 진로활동\n자유학기(년)활동 자유학기활동\n선택적 교육활동 방과후학교운영 방과후학교운영, 늘봄교실운영, 유치원방과후과정운영\n직업교육 직업교육운영\n국제교육 국제교육운영\n독서활동 독서활동운영\n교기육성 교기운영\n기타선택적교육활동 창의교육운영, 기타선택적교육운영, 다문화교육운영\n교육활동지원 교무업무운영 방과후학교운영, 늘봄교실운영, 유치원방과후과정운영\n생활지도운영 직업교육운영\n연구학교운영 국제교육운영\n학습지원실운영 방송실운영, 정보화실운영, 공동실습소운영, 기타학습지원실 운영\n교육여건개선 교육환경개선\n학교일반운영 학교기관운영 부서기본운영, 부설기관운영, 병설유치원기본운영, 행정지원인력운용\n시설장비유지 학교시설장비유지\n학교운영협력 학교운영위원회 운영, 학부모협력, 관계기관협력\n학교시설확충 시설확충및개선 시설확충및개선\n학교재무활동 반환금 반환금\n예비비 예비비\n다. 세출예산(성질별)\n목그룹 목 세목 원가통계비목\nA00 인건비 A10 인건비 공무직보수 공무직인건비\n기간제근로자보수 기간제교원인건비, 기간제근로자인건비\n기타수당 기타수당",
+    "workId": "c14-w01",
+    "blockId": "c14-w01-b7",
+    "anchor": "학생복지학생장학금운영,교육복지우선,학생복지운"
+  },
+  {
+    "id": "c14-w01-b7~3",
+    "chapterId": "14",
+    "chapterLabel": "제14편",
+    "chapterTitle": "학교회계 예결산",
+    "type": "매뉴얼 원문",
+    "workTitle": "학교회계의 이해",
+    "title": "4. 학교회계 예산의 구분 › B00 운영비 B10 학교운영비 일반운영비 일반수용비, 운영수당, 전기요금, 상하수도료",
+    "description": "B00 운영비 B10 학교운영비 일반운영비 일반수용비, 운영수당, 전기요금, 상하수도료, 연료비, 기타공공요금, 급식용식재료비, 우유급식비, 여비, 맞춤형복지비, 교직원복지비 교육운영비 교육운영비, 학습준비물, 학생복지비 법정부담금 기간제교원(근로자)법정부담금, 공무직법정부담금 B20 업무추진비 일반업무추진비 일반업무추진비, 직책급업무수행경비, 목적사업업무추진비 C00 자산취득비 C10 시설비 시설비 시설비, 임차보증금 C20 비품구입비 비품구입비 비품구입비,…",
+    "text": "학교회계의 이해\n4. 학교회계 예산의 구분\nB00 운영비 B10 학교운영비 일반운영비 일반수용비, 운영수당, 전기요금, 상하수도료, 연료비, 기타공공요금, 급식용식재료비, 우유급식비, 여비, 맞춤형복지비, 교직원복지비\n교육운영비 교육운영비, 학습준비물, 학생복지비\n법정부담금 기간제교원(근로자)법정부담금, 공무직법정부담금\nB20 업무추진비 일반업무추진비 일반업무추진비, 직책급업무수행경비, 목적사업업무추진비\nC00 자산취득비 C10 시설비 시설비 시설비, 임차보증금\nC20 비품구입비 비품구입비 비품구입비, 도서구입비\nC30 시설적립금 시설적립금 시설적립금\nC40 기타자산취득비 기타자산취득비 기타자산취득비\nD00 예비비 및기타 D10 예비비및기타 예비비 예비비\n반환금 반환금\n전출금 전출금",
+    "workId": "c14-w01",
+    "blockId": "c14-w01-b7",
+    "anchor": "B00운영비B10학교운영비일반운영비일반수용비"
+  },
+  {
+    "id": "c14-w01-b8",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21794,6 +24733,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w01-b8"
   },
   {
+    "id": "c14-w01:faq:3",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21806,6 +24746,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c14-w02",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21818,6 +24759,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c14-w02"
   },
   {
+    "id": "c14-w02-b1",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21830,6 +24772,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b1"
   },
   {
+    "id": "c14-w02-b2",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21842,6 +24785,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b2"
   },
   {
+    "id": "c14-w02-b3",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21854,6 +24798,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b3"
   },
   {
+    "id": "c14-w02-b4",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21866,6 +24811,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b4"
   },
   {
+    "id": "c14-w02-b5",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21878,6 +24824,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b5"
   },
   {
+    "id": "c14-w02-b6",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21890,6 +24837,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b6"
   },
   {
+    "id": "c14-w02-b7",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21902,6 +24850,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b7"
   },
   {
+    "id": "c14-w02-b8",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21914,6 +24863,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b8"
   },
   {
+    "id": "c14-w02-b9",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21926,6 +24876,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b9"
   },
   {
+    "id": "c14-w02-b10",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21938,6 +24889,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b10"
   },
   {
+    "id": "c14-w02-b11",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21950,6 +24902,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b11"
   },
   {
+    "id": "c14-w02-b12",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21962,6 +24915,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b12"
   },
   {
+    "id": "c14-w02-b13",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21974,6 +24928,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b13"
   },
   {
+    "id": "c14-w02-b14",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21986,6 +24941,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b14"
   },
   {
+    "id": "c14-w02-b15",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -21998,6 +24954,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b15"
   },
   {
+    "id": "c14-w02-b16",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22010,6 +24967,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b16"
   },
   {
+    "id": "c14-w02-b17",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22022,6 +24980,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b17"
   },
   {
+    "id": "c14-w02-b18",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22034,6 +24993,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b18"
   },
   {
+    "id": "c14-w02-b19",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22046,6 +25006,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b19"
   },
   {
+    "id": "c14-w02-b20",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22058,6 +25019,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b20"
   },
   {
+    "id": "c14-w02-b21",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22070,6 +25032,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b21"
   },
   {
+    "id": "c14-w02-b22",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22082,6 +25045,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b22"
   },
   {
+    "id": "c14-w02-b23",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22094,6 +25058,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b23"
   },
   {
+    "id": "c14-w02-b24",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22106,6 +25071,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b24"
   },
   {
+    "id": "c14-w02-b25",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22118,6 +25084,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b25"
   },
   {
+    "id": "c14-w02-b26",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22130,6 +25097,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b26"
   },
   {
+    "id": "c14-w02-b27",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22142,6 +25110,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b27"
   },
   {
+    "id": "c14-w02-b28",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22154,6 +25123,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b28"
   },
   {
+    "id": "c14-w02-b29",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22166,6 +25136,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b29"
   },
   {
+    "id": "c14-w02-b30",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22178,6 +25149,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b30"
   },
   {
+    "id": "c14-w02-b31",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22190,6 +25162,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b31"
   },
   {
+    "id": "c14-w02-b32",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22202,6 +25175,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b32"
   },
   {
+    "id": "c14-w02-b33",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22214,6 +25188,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b33"
   },
   {
+    "id": "c14-w02-b34",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22226,6 +25201,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b34"
   },
   {
+    "id": "c14-w02-b35",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22238,6 +25214,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b35"
   },
   {
+    "id": "c14-w02-b36",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22250,6 +25227,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b36"
   },
   {
+    "id": "c14-w02-b37",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22262,6 +25240,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b37"
   },
   {
+    "id": "c14-w02-b38",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22274,6 +25253,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w02-b38"
   },
   {
+    "id": "c14-w02:form:예시1",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22286,6 +25266,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시1"
   },
   {
+    "id": "c14-w02:form:예시2",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22298,6 +25279,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시2"
   },
   {
+    "id": "c14-w02:form:예시3",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22310,6 +25292,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시3"
   },
   {
+    "id": "c14-w02:form:예시4",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22322,6 +25305,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시4"
   },
   {
+    "id": "c14-w02:form:예시5",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22334,6 +25318,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시5"
   },
   {
+    "id": "c14-w02:form:예시5-1",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22346,6 +25331,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시5-1"
   },
   {
+    "id": "c14-w02:form:예시6",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22358,6 +25344,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시6"
   },
   {
+    "id": "c14-w02:form:예시7",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22370,6 +25357,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시7"
   },
   {
+    "id": "c14-w02:form:예시8",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22382,6 +25370,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시8"
   },
   {
+    "id": "c14-w02:form:예시9",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22394,6 +25383,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시9"
   },
   {
+    "id": "c14-w02:form:예시10",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22406,6 +25396,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시10"
   },
   {
+    "id": "c14-w02:form:예시12",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22418,6 +25409,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시12"
   },
   {
+    "id": "c14-w02:form:예시14",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22430,6 +25422,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시14"
   },
   {
+    "id": "c14-w02:form:예시16",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22442,6 +25435,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시16"
   },
   {
+    "id": "c14-w02:faq:4",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22454,6 +25448,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c14-w02:faq:1",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22466,6 +25461,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c14-w03",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22478,6 +25474,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c14-w03"
   },
   {
+    "id": "c14-w03-b1",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22490,6 +25487,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w03-b1"
   },
   {
+    "id": "c14-w03-b2",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22502,6 +25500,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w03-b2"
   },
   {
+    "id": "c14-w03-b3",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22514,6 +25513,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w03-b3"
   },
   {
+    "id": "c14-w03-b4",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22526,6 +25526,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w03-b4"
   },
   {
+    "id": "c14-w03-b5",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22538,6 +25539,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w03-b5"
   },
   {
+    "id": "c14-w03-b6",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22550,6 +25552,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w03-b6"
   },
   {
+    "id": "c14-w03-b7",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22562,6 +25565,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w03-b7"
   },
   {
+    "id": "c14-w03-b8",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22574,6 +25578,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w03-b8"
   },
   {
+    "id": "c14-w03-b9",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22586,6 +25591,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w03-b9"
   },
   {
+    "id": "c14-w03-b10",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22598,6 +25604,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w03-b10"
   },
   {
+    "id": "c14-w03:faq:1",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22610,6 +25617,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c14-w03:faq:2",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22622,6 +25630,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c14-w03:faq:3",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22634,6 +25643,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c14-w04",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22646,6 +25656,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c14-w04"
   },
   {
+    "id": "c14-w04-b1",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22658,6 +25669,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w04-b1"
   },
   {
+    "id": "c14-w04-b2",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22670,6 +25682,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w04-b2"
   },
   {
+    "id": "c14-w04-b3",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22682,6 +25695,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w04-b3"
   },
   {
+    "id": "c14-w04-b4",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22694,6 +25708,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w04-b4"
   },
   {
+    "id": "c14-w04-b5",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22706,6 +25721,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w04-b5"
   },
   {
+    "id": "c14-w04-b6",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22718,6 +25734,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w04-b6"
   },
   {
+    "id": "c14-w04-b7",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22730,6 +25747,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w04-b7"
   },
   {
+    "id": "c14-w04-b8",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22742,6 +25760,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w04-b8"
   },
   {
+    "id": "c14-w04-b9",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22754,6 +25773,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w04-b9"
   },
   {
+    "id": "c14-w04-b10",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22766,6 +25786,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w04-b10"
   },
   {
+    "id": "c14-w04-b11",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22778,6 +25799,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w04-b11"
   },
   {
+    "id": "c14-w04-b12",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22790,6 +25812,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w04-b12"
   },
   {
+    "id": "c14-w04-b13",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22802,6 +25825,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w04-b13"
   },
   {
+    "id": "c14-w04-b14",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22814,6 +25838,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w04-b14"
   },
   {
+    "id": "c14-w04-b15",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22826,6 +25851,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w04-b15"
   },
   {
+    "id": "c14-w04-b16",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22838,6 +25864,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w04-b16"
   },
   {
+    "id": "c14-w04-b17",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22850,6 +25877,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w04-b17"
   },
   {
+    "id": "c14-w04-b18",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22862,6 +25890,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w04-b18"
   },
   {
+    "id": "c14-w04:form:예시11",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22874,6 +25903,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시11"
   },
   {
+    "id": "c14-w04:faq:2",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22886,6 +25916,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c14-w04:faq:2#2",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22898,6 +25929,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c14-w04:faq:1",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22910,6 +25942,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c14-w05",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22922,6 +25955,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c14-w05"
   },
   {
+    "id": "c14-w05-b1",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22934,6 +25968,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w05-b1"
   },
   {
+    "id": "c14-w05-b2",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22946,6 +25981,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w05-b2"
   },
   {
+    "id": "c14-w05-b3",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22958,6 +25994,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w05-b3"
   },
   {
+    "id": "c14-w05-b4",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22970,6 +26007,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w05-b4"
   },
   {
+    "id": "c14-w05-b5",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22982,6 +26020,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w05-b5"
   },
   {
+    "id": "c14-w05-b6",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -22994,6 +26033,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w05-b6"
   },
   {
+    "id": "c14-w05-b7",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23006,6 +26046,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w05-b7"
   },
   {
+    "id": "c14-w05-b8",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23018,6 +26059,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w05-b8"
   },
   {
+    "id": "c14-w05-b9",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23030,6 +26072,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w05-b9"
   },
   {
+    "id": "c14-w05-b10",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23042,6 +26085,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w05-b10"
   },
   {
+    "id": "c14-w05-b11",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23054,6 +26098,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w05-b11"
   },
   {
+    "id": "c14-w05-b12",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23066,6 +26111,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w05-b12"
   },
   {
+    "id": "c14-w05-b13",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23078,6 +26124,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w05-b13"
   },
   {
+    "id": "c14-w05-b14",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23090,6 +26137,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w05-b14"
   },
   {
+    "id": "c14-w05:faq:1",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23102,6 +26150,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c14-w05:faq:2",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23114,6 +26163,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c14-w06",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23126,6 +26176,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c14-w06"
   },
   {
+    "id": "c14-w06-b1",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23138,6 +26189,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w06-b1"
   },
   {
+    "id": "c14-w06-b2",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23150,6 +26202,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w06-b2"
   },
   {
+    "id": "c14-w06-b3",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23162,6 +26215,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w06-b3"
   },
   {
+    "id": "c14-w06-b4",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23174,6 +26228,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w06-b4"
   },
   {
+    "id": "c14-w06-b5",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23186,6 +26241,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w06-b5"
   },
   {
+    "id": "c14-w06-b6",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23198,6 +26254,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w06-b6"
   },
   {
+    "id": "c14-w06-b7",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23210,6 +26267,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w06-b7"
   },
   {
+    "id": "c14-w06-b8",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23222,6 +26280,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w06-b8"
   },
   {
+    "id": "c14-w06-b9",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23234,6 +26293,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w06-b9"
   },
   {
+    "id": "c14-w06-b10",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23246,6 +26306,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w06-b10"
   },
   {
+    "id": "c14-w06-b11",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23258,6 +26319,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w06-b11"
   },
   {
+    "id": "c14-w06-b12",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23270,6 +26332,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w06-b12"
   },
   {
+    "id": "c14-w06-b13",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23282,6 +26345,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w06-b13"
   },
   {
+    "id": "c14-w06-b14",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23294,6 +26358,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w06-b14"
   },
   {
+    "id": "c14-w06-b15",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23306,6 +26371,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w06-b15"
   },
   {
+    "id": "c14-w06-b16",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23318,6 +26384,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w06-b16"
   },
   {
+    "id": "c14-w06:form:예시13",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23330,6 +26397,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시13"
   },
   {
+    "id": "c14-w06:faq:4",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23342,6 +26410,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c14-w06:faq:1",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23354,6 +26423,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c14-w06:faq:1#2",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23366,6 +26436,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c14-w07",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23378,6 +26449,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c14-w07"
   },
   {
+    "id": "c14-w07-b1",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23390,6 +26462,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w07-b1"
   },
   {
+    "id": "c14-w07-b2",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23402,6 +26475,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w07-b2"
   },
   {
+    "id": "c14-w07-b3",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23414,6 +26488,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w07-b3"
   },
   {
+    "id": "c14-w07-b4",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23426,6 +26501,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w07-b4"
   },
   {
+    "id": "c14-w07-b5",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23438,6 +26514,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w07-b5"
   },
   {
+    "id": "c14-w07-b6",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23450,6 +26527,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w07-b6"
   },
   {
+    "id": "c14-w07-b7",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23462,6 +26540,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w07-b7"
   },
   {
+    "id": "c14-w07-b8",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23474,6 +26553,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w07-b8"
   },
   {
+    "id": "c14-w07-b9",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23486,6 +26566,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w07-b9"
   },
   {
+    "id": "c14-w07-b10",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23498,6 +26579,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w07-b10"
   },
   {
+    "id": "c14-w07-b11",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23510,6 +26592,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w07-b11"
   },
   {
+    "id": "c14-w07-b12",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23522,6 +26605,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w07-b12"
   },
   {
+    "id": "c14-w07-b13",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23534,6 +26618,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w07-b13"
   },
   {
+    "id": "c14-w07-b14",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23546,6 +26631,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w07-b14"
   },
   {
+    "id": "c14-w07-b15",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23558,6 +26644,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w07-b15"
   },
   {
+    "id": "c14-w07-b16",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23570,6 +26657,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w07-b16"
   },
   {
+    "id": "c14-w07:faq:2",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23582,6 +26670,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c14-w08",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23594,6 +26683,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c14-w08"
   },
   {
+    "id": "c14-w08-b1",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23606,6 +26696,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w08-b1"
   },
   {
+    "id": "c14-w08-b2",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23618,6 +26709,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w08-b2"
   },
   {
+    "id": "c14-w08-b3",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23630,6 +26722,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w08-b3"
   },
   {
+    "id": "c14-w08-b4",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23642,6 +26735,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w08-b4"
   },
   {
+    "id": "c14-w08-b5",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23654,6 +26748,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w08-b5"
   },
   {
+    "id": "c14-w08-b6",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23666,6 +26761,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w08-b6"
   },
   {
+    "id": "c14-w08-b7",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23678,6 +26774,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w08-b7"
   },
   {
+    "id": "c14-w08-b8",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23690,6 +26787,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w08-b8"
   },
   {
+    "id": "c14-w08-b9",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23702,6 +26800,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w08-b9"
   },
   {
+    "id": "c14-w08-b10",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23714,6 +26813,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w08-b10"
   },
   {
+    "id": "c14-w08-b11",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23726,6 +26826,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w08-b11"
   },
   {
+    "id": "c14-w08-b12",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23738,6 +26839,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w08-b12"
   },
   {
+    "id": "c14-w08-b13",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23750,6 +26852,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w08-b13"
   },
   {
+    "id": "c14-w08-b14",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23762,6 +26865,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w08-b14"
   },
   {
+    "id": "c14-w08-b15",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23774,6 +26878,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w08-b15"
   },
   {
+    "id": "c14-w08-b16",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23786,6 +26891,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w08-b16"
   },
   {
+    "id": "c14-w08-b17",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23798,6 +26904,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w08-b17"
   },
   {
+    "id": "c14-w08-b18",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23810,6 +26917,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w08-b18"
   },
   {
+    "id": "c14-w08-b19",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23822,18 +26930,35 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c14-w08-b19"
   },
   {
+    "id": "c14-w08-b20~1",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
     "type": "매뉴얼 원문",
     "workTitle": "학교회계 결산",
-    "title": "[참고] 본예산 편성 체크리스트 순 내용 확인 여 부 1 업무추진비가 예…",
+    "title": "[참고] 본예산 편성 체크리스트 순 내용 확인 여 부 1 업무추진비가 예… › [참고] 본예산 편성 체크리스트",
     "description": "[참고] 본예산 편성 체크리스트 순 내용 확인 여 부 1 업무추진비가 예산편성 기본지침에서 정한 한도 내에 편성되었는지 → 교당: 3,000천원, 교직원* 1인당: 100천원, 운영위원 1인당: 100천원 * 교직원 수 : 3.1일 현재 공무원 정원 기준, 계약제교원 및 교육공무직원 등 포함하되 노동계약기간 1년 이상인 자 2 학교교육계획과 연계한 체계적인 예산 편성인지 3 예산의 금액단위는 천원단위, 산출기초는 원단위로 계상했는지 4 세입의 천원 미만은 절사,…",
-    "text": "학교회계 결산\n\n[참고] 본예산 편성 체크리스트\n순 내용 확인\n여 부\n1 업무추진비가 예산편성 기본지침에서 정한 한도 내에 편성되었는지 → 교당: 3,000천원, 교직원* 1인당: 100천원, 운영위원 1인당: 100천원 * 교직원 수 : 3.1일 현재 공무원 정원 기준, 계약제교원 및 교육공무직원 등 포함하되 노동계약기간 1년 이상인 자\n2 학교교육계획과 연계한 체계적인 예산 편성인지\n3 예산의 금액단위는 천원단위, 산출기초는 원단위로 계상했는지\n4 세입의 천원 미만은 절사, 세출의 천원 미만은 절상하여 계상했는지\n5 계량단위는 미터법 적용하였는지\n6 각종 단가는 예산편성 기준 단가를 적용하여 계상하고, 단가가 없는 경우에는 조달청, 시중 단가 등을 적용\n7 산출기초는 구체적으로 순서대로 작성하여야 하며, 산출기초 없이 총액으로 계상하지 않도록 → 산출기초 순서: 단가(원)×물량(명, 개 등)×횟수(월, 일, 회, 식 등)\n8 지급 근거 없는 수당 편성\n9 과목존치를 위한 예산 편성은 지양\n10 교직원간 친목도모를 위한 체육대회 및 전체 교직원 연수 등 행사성 경비를 업무추진비로 편성하였는지\n11 학교기본운영비 포함하는 경상운영비가 통지된 교부액에 맞게 편성되었는지\n12 세입예산 및 세출예산 사업이 적절한 원가통계비목으로 편성되었는지\n13 수익자부담경비의 세입예산과 세출예산의 금액이 동일하게 편성되었는지\n14 전기요금 등 공공요금과 학교 운영에 꼭 필요한 경직성 경비가 적절하게 편성되었는지 → 교실 냉·난방을 위한 공공요금(특히, 전기요금) 실소요액 우선 계상\n15 예산 조정 등 예산 편성 절차 및 기준을 준수하여 편성하였는지 여부\n16 학교회계 예산 확정 기한 준수 및 본예산서 공개 여부 → 학운위 예산안 상정: 회계연도 걔시 30일 전까지 학교운영위원회에 제출 → 예산확정 예산안 심의 후 회계연도 개시 5일 전까지 심의한 후 학교장에게 예산안 심의 결과를 통보하고 학교장은 예산 확정 → 예산공개: 예산확정 후 10일 이내 학부모 및 교직원에게 공개[학교누리집] 활용\n17 세입예산 및 세출예산 신설, 변경, 삭제 사항 확인 후 편하였는지 → 세입항 신설, 세입목 변경, 세부항목 삭제 및 이동 세부사업명 변경 사항 발생\n18 본예산 편성에 맞는 예산 총칙 내용 작성 여부 → 추가경정예산 편성 예산 총칙으로 작성하지 않도록 주의할 것\n19 세부사업별 요구액 합계가 예산요구서의 예산 요구 총액과 일치하는지",
+    "text": "학교회계 결산\n\n[참고] 본예산 편성 체크리스트\n순 내용 확인\n여 부\n1 업무추진비가 예산편성 기본지침에서 정한 한도 내에 편성되었는지 → 교당: 3,000천원, 교직원* 1인당: 100천원, 운영위원 1인당: 100천원 * 교직원 수 : 3.1일 현재 공무원 정원 기준, 계약제교원 및 교육공무직원 등 포함하되 노동계약기간 1년 이상인 자\n2 학교교육계획과 연계한 체계적인 예산 편성인지\n3 예산의 금액단위는 천원단위, 산출기초는 원단위로 계상했는지\n4 세입의 천원 미만은 절사, 세출의 천원 미만은 절상하여 계상했는지\n5 계량단위는 미터법 적용하였는지\n6 각종 단가는 예산편성 기준 단가를 적용하여 계상하고, 단가가 없는 경우에는 조달청, 시중 단가 등을 적용\n7 산출기초는 구체적으로 순서대로 작성하여야 하며, 산출기초 없이 총액으로 계상하지 않도록 → 산출기초 순서: 단가(원)×물량(명, 개 등)×횟수(월, 일, 회, 식 등)\n8 지급 근거 없는 수당 편성\n9 과목존치를 위한 예산 편성은 지양\n10 교직원간 친목도모를 위한 체육대회 및 전체 교직원 연수 등 행사성 경비를 업무추진비로 편성하였는지\n11 학교기본운영비 포함하는 경상운영비가 통지된 교부액에 맞게 편성되었는지",
     "workId": "c14-w08",
-    "blockId": "c14-w08-b20"
+    "blockId": "c14-w08-b20",
+    "anchor": "[참고]본예산편성체크리스트"
   },
   {
+    "id": "c14-w08-b20~2",
+    "chapterId": "14",
+    "chapterLabel": "제14편",
+    "chapterTitle": "학교회계 예결산",
+    "type": "매뉴얼 원문",
+    "workTitle": "학교회계 결산",
+    "title": "[참고] 본예산 편성 체크리스트 순 내용 확인 여 부 1 업무추진비가 예… › 12 세입예산 및 세출예산 사업이 적절한 원가통계비목으로 편성되었는지",
+    "description": "12 세입예산 및 세출예산 사업이 적절한 원가통계비목으로 편성되었는지 13 수익자부담경비의 세입예산과 세출예산의 금액이 동일하게 편성되었는지 14 전기요금 등 공공요금과 학교 운영에 꼭 필요한 경직성 경비가 적절하게 편성되었는지 → 교실 냉·난방을 위한 공공요금(특히, 전기요금) 실소요액 우선 계상 15 예산 조정 등 예산 편성 절차 및 기준을 준수하여 편성하였는지 여부 16 학교회계 예산 확정 기한 준수 및 본예산서 공개 여부 → 학운위 예산안 상정: 회계연도…",
+    "text": "학교회계 결산\n\n12 세입예산 및 세출예산 사업이 적절한 원가통계비목으로 편성되었는지\n13 수익자부담경비의 세입예산과 세출예산의 금액이 동일하게 편성되었는지\n14 전기요금 등 공공요금과 학교 운영에 꼭 필요한 경직성 경비가 적절하게 편성되었는지 → 교실 냉·난방을 위한 공공요금(특히, 전기요금) 실소요액 우선 계상\n15 예산 조정 등 예산 편성 절차 및 기준을 준수하여 편성하였는지 여부\n16 학교회계 예산 확정 기한 준수 및 본예산서 공개 여부 → 학운위 예산안 상정: 회계연도 걔시 30일 전까지 학교운영위원회에 제출 → 예산확정 예산안 심의 후 회계연도 개시 5일 전까지 심의한 후 학교장에게 예산안 심의 결과를 통보하고 학교장은 예산 확정 → 예산공개: 예산확정 후 10일 이내 학부모 및 교직원에게 공개[학교누리집] 활용\n17 세입예산 및 세출예산 신설, 변경, 삭제 사항 확인 후 편하였는지 → 세입항 신설, 세입목 변경, 세부항목 삭제 및 이동 세부사업명 변경 사항 발생\n18 본예산 편성에 맞는 예산 총칙 내용 작성 여부 → 추가경정예산 편성 예산 총칙으로 작성하지 않도록 주의할 것\n19 세부사업별 요구액 합계가 예산요구서의 예산 요구 총액과 일치하는지",
+    "workId": "c14-w08",
+    "blockId": "c14-w08-b20",
+    "anchor": "12세입예산및세출예산사업이적절한원가통계비목으"
+  },
+  {
+    "id": "c14-w08:form:서식1",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23846,6 +26971,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식1"
   },
   {
+    "id": "c14-w08:form:예시15",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23858,6 +26984,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시15"
   },
   {
+    "id": "c14-w08:faq:2",
     "chapterId": "14",
     "chapterLabel": "제14편",
     "chapterTitle": "학교회계 예결산",
@@ -23870,6 +26997,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c15-w00",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -23883,6 +27011,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c15-w00-b1",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -23896,6 +27025,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c15-w01",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -23908,6 +27038,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c15-w01"
   },
   {
+    "id": "c15-w01-b1",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -23920,6 +27051,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w01-b1"
   },
   {
+    "id": "c15-w01-b2",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -23932,6 +27064,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w01-b2"
   },
   {
+    "id": "c15-w01-b3",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -23944,6 +27077,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w01-b3"
   },
   {
+    "id": "c15-w01-b4",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -23956,18 +27090,35 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w01-b4"
   },
   {
+    "id": "c15-w01-b5~1",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
     "type": "매뉴얼 원문",
     "workTitle": "세입금 일반",
-    "title": "3. 학교 통장계좌(①)와 학교회계 장부(②) 내역 비교",
-    "description": "구분 처리절차 ①과 ②가 일치할 때 ◦회계별 수입일계표 결재요청 - [K-에듀파인] 수입관리 → 수입현황 → 징수및수납현황 → 일자별수납현황 ⇒ 회계별 납입금별 및 개인별 출력 첨부 - [K-에듀파인] 수입관리 → 출납관리 → 일계관리 → 수입일계표 → 결재요청 (하루 여러건의 수납이 있는 경우 단일건으로 처리됨. 수입일계표가 결재완료 된 일계일자는 수납 처리 및 일계 수정이 불가하므로 해당일자의 수납이 완료된 후 수입일계표 결재요청 처리) ①과 ②가 불일치할…",
-    "text": "세입금 일반\n3. 학교 통장계좌(①)와 학교회계 장부(②) 내역 비교\n구분 처리절차\n①과 ②가 일치할 때 ◦회계별 수입일계표 결재요청 - [K-에듀파인] 수입관리 → 수입현황 → 징수및수납현황 → 일자별수납현황 ⇒ 회계별 납입금별 및 개인별 출력 첨부 - [K-에듀파인] 수입관리 → 출납관리 → 일계관리 → 수입일계표 → 결재요청 (하루 여러건의 수납이 있는 경우 단일건으로 처리됨. 수입일계표가 결재완료 된 일계일자는 수납 처리 및 일계 수정이 불가하므로 해당일자의 수납이 완료된 후 수입일계표 결재요청 처리)\n①과 ②가 불일치할 때 (미징수 또는 미확정 확인) ◦미 징수결의가 있는 경우 - 징수결의서 결재 및 직접수납 여부 확인, 전일 수입 확인 후 징수결재요청 - [K-에듀파인] 수입관리 → 징수결의 → 징수결의 작성 → 작성 결재요청 도교육청 전입금 징수결의 결재는 결재 완료 후 자동으로 수입처리 됨 ※ [K-에듀파인]상 세입예산(세입사업코드, 세입예산과목 등)이 등록되지 않은 경우 징수결의를 진행할 수 없음 ◦교특회계 수입금 도금고 납부 방법 - [K-에듀파인] 수입관리 → 출납관리 → 기타전자이체취합 → 과오납(계좌)반환이체취합 → 교육금고납부취합 → 금고 직접납부에서 출력한 납부서로 학교인터넷 뱅킹(교육금고세입금납부) 또는 은행에서 도금고 불입 ※ 학교인터넷뱅킹(교육금고세입금납부)으로 불입할 경우 K-에듀파인에서 출력한 납입고지서 정보대로 ‘회계연도, 세목코드, 징수번호, C값, 납부자순번’ 누락없이 입력 - [K-에듀파인] 수입관리 → 출납관리 → 기타전자이체취합 → 과오납(계좌)반환 이체취합 → 교육금고납부취합탭 → 해당건 선택→ 이체취합 후 → 이체처리목록 → 과오납(계좌)반환이체 → 교육금고납부탭 → 전송 ◦미확정이 있는 경우(과오납금 반환결의 미확정 또는 지출 미확정 해당 건 확인) - [K-에듀파인] 수입관리 → 징수결의 → 징수결의목록 → 미확정 과오납금 반환확정 - [K-에듀파인] 지출관리 → 지출처리 → 지급명령 및 이체 → 지급명령등록→ 미확정 지출결의 이체확정 ◦신용카드 미상계금이 있는 경우 - 예금잔액 불부합 조서 작성 및 신용카드사별 불부합 내역 출력",
+    "title": "3. 학교 통장계좌(①)와 학교회계 장부(②) 내역 비교 › ①과 ②가 일치할 때 ◦회계별 수입일계표 결재요청 - [K-에듀파인] 수입관리 → 수입",
+    "description": "구분 처리절차 ①과 ②가 일치할 때 ◦회계별 수입일계표 결재요청 - [K-에듀파인] 수입관리 → 수입현황 → 징수및수납현황 → 일자별수납현황 ⇒ 회계별 납입금별 및 개인별 출력 첨부 - [K-에듀파인] 수입관리 → 출납관리 → 일계관리 → 수입일계표 → 결재요청 (하루 여러건의 수납이 있는 경우 단일건으로 처리됨. 수입일계표가 결재완료 된 일계일자는 수납 처리 및 일계 수정이 불가하므로 해당일자의 수납이 완료된 후 수입일계표 결재요청 처리)",
+    "text": "세입금 일반\n3. 학교 통장계좌(①)와 학교회계 장부(②) 내역 비교\n구분 처리절차\n①과 ②가 일치할 때 ◦회계별 수입일계표 결재요청 - [K-에듀파인] 수입관리 → 수입현황 → 징수및수납현황 → 일자별수납현황 ⇒ 회계별 납입금별 및 개인별 출력 첨부 - [K-에듀파인] 수입관리 → 출납관리 → 일계관리 → 수입일계표 → 결재요청 (하루 여러건의 수납이 있는 경우 단일건으로 처리됨. 수입일계표가 결재완료 된 일계일자는 수납 처리 및 일계 수정이 불가하므로 해당일자의 수납이 완료된 후 수입일계표 결재요청 처리)",
     "workId": "c15-w01",
-    "blockId": "c15-w01-b5"
+    "blockId": "c15-w01-b5",
+    "anchor": "①과②가일치할때◦회계별수입일계표결재요청-[K"
   },
   {
+    "id": "c15-w01-b5~2",
+    "chapterId": "15",
+    "chapterLabel": "제15편",
+    "chapterTitle": "학교회계 수입",
+    "type": "매뉴얼 원문",
+    "workTitle": "세입금 일반",
+    "title": "3. 학교 통장계좌(①)와 학교회계 장부(②) 내역 비교 › ①과 ②가 불일치할 때 (미징수 또는 미확정 확인) ◦미 징수결의가 있는 경우 - 징수",
+    "description": "①과 ②가 불일치할 때 (미징수 또는 미확정 확인) ◦미 징수결의가 있는 경우 - 징수결의서 결재 및 직접수납 여부 확인, 전일 수입 확인 후 징수결재요청 - [K-에듀파인] 수입관리 → 징수결의 → 징수결의 작성 → 작성 결재요청 도교육청 전입금 징수결의 결재는 결재 완료 후 자동으로 수입처리 됨 ※ [K-에듀파인]상 세입예산(세입사업코드, 세입예산과목 등)이 등록되지 않은 경우 징수결의를 진행할 수 없음 ◦교특회계 수입금 도금고 납부 방법 - [K-에듀파인]…",
+    "text": "세입금 일반\n3. 학교 통장계좌(①)와 학교회계 장부(②) 내역 비교\n①과 ②가 불일치할 때 (미징수 또는 미확정 확인) ◦미 징수결의가 있는 경우 - 징수결의서 결재 및 직접수납 여부 확인, 전일 수입 확인 후 징수결재요청 - [K-에듀파인] 수입관리 → 징수결의 → 징수결의 작성 → 작성 결재요청 도교육청 전입금 징수결의 결재는 결재 완료 후 자동으로 수입처리 됨 ※ [K-에듀파인]상 세입예산(세입사업코드, 세입예산과목 등)이 등록되지 않은 경우 징수결의를 진행할 수 없음 ◦교특회계 수입금 도금고 납부 방법 - [K-에듀파인] 수입관리 → 출납관리 → 기타전자이체취합 → 과오납(계좌)반환이체취합 → 교육금고납부취합 → 금고 직접납부에서 출력한 납부서로 학교인터넷 뱅킹(교육금고세입금납부) 또는 은행에서 도금고 불입 ※ 학교인터넷뱅킹(교육금고세입금납부)으로 불입할 경우 K-에듀파인에서 출력한 납입고지서 정보대로 ‘회계연도, 세목코드, 징수번호, C값, 납부자순번’ 누락없이 입력 - [K-에듀파인] 수입관리 → 출납관리 → 기타전자이체취합 → 과오납(계좌)반환 이체취합 → 교육금고납부취합탭 → 해당건 선택→ 이체취합 후 → 이체처리목록 → 과오납(계좌)반환이체 → 교육금고납부탭 → 전송 ◦미확정이 있는 경우(과오납금 반환결의 미확정 또는 지출 미확정 해당 건 확인) - [K-에듀파인] 수입관리 → 징수결의 → 징수결의목록 → 미확정 과오납금 반환확정 - [K-에듀파인] 지출관리 → 지출처리 → 지급명령 및 이체 → 지급명령등록→ 미확정 지출결의 이체확정 ◦신용카드 미상계금이 있는 경우 - 예금잔액 불부합 조서 작성 및 신용카드사별 불부합 내역 출력",
+    "workId": "c15-w01",
+    "blockId": "c15-w01-b5",
+    "anchor": "①과②가불일치할때(미징수또는미확정확인)◦미징"
+  },
+  {
+    "id": "c15-w01-b6",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -23980,6 +27131,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w01-b6"
   },
   {
+    "id": "c15-w02",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -23992,6 +27144,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c15-w02"
   },
   {
+    "id": "c15-w02-b1",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24004,6 +27157,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b1"
   },
   {
+    "id": "c15-w02-b2",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24016,6 +27170,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b2"
   },
   {
+    "id": "c15-w02-b3",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24028,6 +27183,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b3"
   },
   {
+    "id": "c15-w02-b4",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24040,6 +27196,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b4"
   },
   {
+    "id": "c15-w02-b5",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24052,6 +27209,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b5"
   },
   {
+    "id": "c15-w02-b6",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24064,6 +27222,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b6"
   },
   {
+    "id": "c15-w02-b7",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24076,6 +27235,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b7"
   },
   {
+    "id": "c15-w02-b8",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24088,6 +27248,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b8"
   },
   {
+    "id": "c15-w02-b9",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24100,6 +27261,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b9"
   },
   {
+    "id": "c15-w02-b10",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24112,6 +27274,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b10"
   },
   {
+    "id": "c15-w02-b11",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24124,6 +27287,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b11"
   },
   {
+    "id": "c15-w02-b12",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24136,6 +27300,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b12"
   },
   {
+    "id": "c15-w02-b13",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24148,6 +27313,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b13"
   },
   {
+    "id": "c15-w02-b14",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24160,6 +27326,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b14"
   },
   {
+    "id": "c15-w02-b15",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24172,6 +27339,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b15"
   },
   {
+    "id": "c15-w02-b16",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24184,6 +27352,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b16"
   },
   {
+    "id": "c15-w02-b17",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24196,6 +27365,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b17"
   },
   {
+    "id": "c15-w02-b18",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24208,6 +27378,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b18"
   },
   {
+    "id": "c15-w02-b19",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24220,6 +27391,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b19"
   },
   {
+    "id": "c15-w02-b20",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24232,6 +27404,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b20"
   },
   {
+    "id": "c15-w02-b21",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24244,6 +27417,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b21"
   },
   {
+    "id": "c15-w02-b22",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24256,6 +27430,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b22"
   },
   {
+    "id": "c15-w02-b23",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24268,6 +27443,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b23"
   },
   {
+    "id": "c15-w02-b24",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24280,6 +27456,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b24"
   },
   {
+    "id": "c15-w02-b25",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24292,6 +27469,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b25"
   },
   {
+    "id": "c15-w02-b26",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24304,6 +27482,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b26"
   },
   {
+    "id": "c15-w02-b27",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24316,6 +27495,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b27"
   },
   {
+    "id": "c15-w02-b28",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24328,6 +27508,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b28"
   },
   {
+    "id": "c15-w02-b29",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24340,6 +27521,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b29"
   },
   {
+    "id": "c15-w02-b30",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24352,6 +27534,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b30"
   },
   {
+    "id": "c15-w02-b31",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24364,6 +27547,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b31"
   },
   {
+    "id": "c15-w02-b32",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24376,6 +27560,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b32"
   },
   {
+    "id": "c15-w02-b33",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24388,6 +27573,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b33"
   },
   {
+    "id": "c15-w02-b34",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24400,6 +27586,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b34"
   },
   {
+    "id": "c15-w02-b35",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24412,6 +27599,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b35"
   },
   {
+    "id": "c15-w02-b36",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24424,6 +27612,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b36"
   },
   {
+    "id": "c15-w02-b37",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24436,6 +27625,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b37"
   },
   {
+    "id": "c15-w02-b38",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24448,6 +27638,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b38"
   },
   {
+    "id": "c15-w02-b39",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24460,6 +27651,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b39"
   },
   {
+    "id": "c15-w02-b40",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24472,6 +27664,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b40"
   },
   {
+    "id": "c15-w02-b41",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24484,6 +27677,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b41"
   },
   {
+    "id": "c15-w02-b42",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24496,6 +27690,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b42"
   },
   {
+    "id": "c15-w02-b43",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24508,6 +27703,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b43"
   },
   {
+    "id": "c15-w02-b44",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24520,6 +27716,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b44"
   },
   {
+    "id": "c15-w02-b45",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24532,6 +27729,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b45"
   },
   {
+    "id": "c15-w02-b46",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24544,6 +27742,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b46"
   },
   {
+    "id": "c15-w02-b47",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24556,6 +27755,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b47"
   },
   {
+    "id": "c15-w02-b48",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24568,6 +27768,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b48"
   },
   {
+    "id": "c15-w02-b49",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24580,6 +27781,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b49"
   },
   {
+    "id": "c15-w02-b50",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24592,6 +27794,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w02-b50"
   },
   {
+    "id": "c15-w02:form:서식1",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24604,6 +27807,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식1"
   },
   {
+    "id": "c15-w02:form:서식2",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24616,6 +27820,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식2"
   },
   {
+    "id": "c15-w02:form:서식5",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24628,6 +27833,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식5"
   },
   {
+    "id": "c15-w02:form:예시1",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24640,6 +27846,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시1"
   },
   {
+    "id": "c15-w02:form:예시2",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24652,6 +27859,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시2"
   },
   {
+    "id": "c15-w02:form:예시3",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24664,6 +27872,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시3"
   },
   {
+    "id": "c15-w02:form:예시4",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24676,6 +27885,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시4"
   },
   {
+    "id": "c15-w03",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24688,6 +27898,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c15-w03"
   },
   {
+    "id": "c15-w03-b1",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24700,6 +27911,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w03-b1"
   },
   {
+    "id": "c15-w03-b2",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24712,6 +27924,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w03-b2"
   },
   {
+    "id": "c15-w03-b3",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24724,6 +27937,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w03-b3"
   },
   {
+    "id": "c15-w03-b4",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24736,6 +27950,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w03-b4"
   },
   {
+    "id": "c15-w03-b5",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24748,6 +27963,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w03-b5"
   },
   {
+    "id": "c15-w03-b6",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24760,6 +27976,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w03-b6"
   },
   {
+    "id": "c15-w03-b7",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24772,6 +27989,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w03-b7"
   },
   {
+    "id": "c15-w03-b8",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24784,6 +28002,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w03-b8"
   },
   {
+    "id": "c15-w03-b9",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24796,6 +28015,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w03-b9"
   },
   {
+    "id": "c15-w03-b10",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24808,6 +28028,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w03-b10"
   },
   {
+    "id": "c15-w03-b11",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24820,6 +28041,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w03-b11"
   },
   {
+    "id": "c15-w03-b12",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24832,6 +28054,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w03-b12"
   },
   {
+    "id": "c15-w03-b13",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24844,6 +28067,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w03-b13"
   },
   {
+    "id": "c15-w03-b14",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24856,6 +28080,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w03-b14"
   },
   {
+    "id": "c15-w03-b15",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24868,6 +28093,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w03-b15"
   },
   {
+    "id": "c15-w03-b16",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24880,6 +28106,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w03-b16"
   },
   {
+    "id": "c15-w03:form:예시5",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24892,6 +28119,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시5"
   },
   {
+    "id": "c15-w04",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24904,6 +28132,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c15-w04"
   },
   {
+    "id": "c15-w04-b1",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24916,6 +28145,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w04-b1"
   },
   {
+    "id": "c15-w04-b2",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24928,6 +28158,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w04-b2"
   },
   {
+    "id": "c15-w04-b3",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24940,6 +28171,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w04-b3"
   },
   {
+    "id": "c15-w04-b4",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24952,6 +28184,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w04-b4"
   },
   {
+    "id": "c15-w04-b5",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24964,6 +28197,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w04-b5"
   },
   {
+    "id": "c15-w04-b6",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24976,6 +28210,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w04-b6"
   },
   {
+    "id": "c15-w04-b7",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -24988,6 +28223,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w04-b7"
   },
   {
+    "id": "c15-w04-b8",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -25000,6 +28236,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w04-b8"
   },
   {
+    "id": "c15-w04-b9",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -25012,6 +28249,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w04-b9"
   },
   {
+    "id": "c15-w04-b10",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -25024,6 +28262,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w04-b10"
   },
   {
+    "id": "c15-w04-b11",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -25036,6 +28275,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w04-b11"
   },
   {
+    "id": "c15-w04-b12",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -25048,6 +28288,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w04-b12"
   },
   {
+    "id": "c15-w04-b13",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -25060,6 +28301,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w04-b13"
   },
   {
+    "id": "c15-w04-b14",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -25072,6 +28314,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w04-b14"
   },
   {
+    "id": "c15-w04-b15",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -25084,6 +28327,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w04-b15"
   },
   {
+    "id": "c15-w04-b16",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -25096,6 +28340,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w04-b16"
   },
   {
+    "id": "c15-w04-b17",
     "chapterId": "15",
     "chapterLabel": "제15편",
     "chapterTitle": "학교회계 수입",
@@ -25108,6 +28353,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c15-w04-b17"
   },
   {
+    "id": "c16-w00",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25121,6 +28367,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c16-w00-b1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25134,6 +28381,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c16-w01",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25146,6 +28394,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c16-w01"
   },
   {
+    "id": "c16-w01-b1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25158,6 +28407,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b1"
   },
   {
+    "id": "c16-w01-b2",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25170,6 +28420,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b2"
   },
   {
+    "id": "c16-w01-b3",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25182,6 +28433,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b3"
   },
   {
+    "id": "c16-w01-b4",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25194,6 +28446,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b4"
   },
   {
+    "id": "c16-w01-b5",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25206,6 +28459,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b5"
   },
   {
+    "id": "c16-w01-b6",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25218,6 +28472,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b6"
   },
   {
+    "id": "c16-w01-b7",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25230,6 +28485,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b7"
   },
   {
+    "id": "c16-w01-b8",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25242,6 +28498,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b8"
   },
   {
+    "id": "c16-w01-b9",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25254,6 +28511,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b9"
   },
   {
+    "id": "c16-w01-b10",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25266,6 +28524,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b10"
   },
   {
+    "id": "c16-w01-b11",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25278,6 +28537,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b11"
   },
   {
+    "id": "c16-w01-b12",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25290,6 +28550,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b12"
   },
   {
+    "id": "c16-w01-b13",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25302,6 +28563,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b13"
   },
   {
+    "id": "c16-w01-b14",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25314,6 +28576,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b14"
   },
   {
+    "id": "c16-w01-b15",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25326,6 +28589,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b15"
   },
   {
+    "id": "c16-w01-b16",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25338,6 +28602,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b16"
   },
   {
+    "id": "c16-w01-b17",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25350,6 +28615,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b17"
   },
   {
+    "id": "c16-w01-b18",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25362,6 +28628,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b18"
   },
   {
+    "id": "c16-w01-b19",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25374,6 +28641,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b19"
   },
   {
+    "id": "c16-w01-b20",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25386,6 +28654,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b20"
   },
   {
+    "id": "c16-w01-b21",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25398,6 +28667,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b21"
   },
   {
+    "id": "c16-w01-b22",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25410,6 +28680,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b22"
   },
   {
+    "id": "c16-w01-b23",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25422,6 +28693,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b23"
   },
   {
+    "id": "c16-w01-b24",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25434,6 +28706,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b24"
   },
   {
+    "id": "c16-w01-b25",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25446,6 +28719,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b25"
   },
   {
+    "id": "c16-w01-b26",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25458,6 +28732,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b26"
   },
   {
+    "id": "c16-w01-b27",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25470,6 +28745,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b27"
   },
   {
+    "id": "c16-w01-b28",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25482,6 +28758,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b28"
   },
   {
+    "id": "c16-w01-b29",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25494,6 +28771,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b29"
   },
   {
+    "id": "c16-w01-b30",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25506,6 +28784,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b30"
   },
   {
+    "id": "c16-w01-b31",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25518,6 +28797,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b31"
   },
   {
+    "id": "c16-w01-b32",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25530,6 +28810,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b32"
   },
   {
+    "id": "c16-w01-b33",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25542,6 +28823,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b33"
   },
   {
+    "id": "c16-w01-b34",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25554,6 +28836,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b34"
   },
   {
+    "id": "c16-w01-b35",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25566,6 +28849,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b35"
   },
   {
+    "id": "c16-w01-b36",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25578,6 +28862,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b36"
   },
   {
+    "id": "c16-w01-b37",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25590,6 +28875,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b37"
   },
   {
+    "id": "c16-w01-b38",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25602,6 +28888,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w01-b38"
   },
   {
+    "id": "c16-w01:form:서식1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25614,6 +28901,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식1"
   },
   {
+    "id": "c16-w01:form:서식2",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25626,6 +28914,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식2"
   },
   {
+    "id": "c16-w01:form:서식3",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25638,6 +28927,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식3"
   },
   {
+    "id": "c16-w01:form:서식4",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25650,6 +28940,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식4"
   },
   {
+    "id": "c16-w01:form:예시1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25662,6 +28953,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시1"
   },
   {
+    "id": "c16-w01:form:예시2",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25674,6 +28966,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시2"
   },
   {
+    "id": "c16-w01:form:예시2-1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25686,6 +28979,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시2-1"
   },
   {
+    "id": "c16-w01:form:예시14",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25698,6 +28992,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시14"
   },
   {
+    "id": "c16-w01:form:예시15",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25710,6 +29005,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시15"
   },
   {
+    "id": "c16-w01:form:예시16",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25722,6 +29018,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시16"
   },
   {
+    "id": "c16-w01:form:참고1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25734,6 +29031,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고1"
   },
   {
+    "id": "c16-w01:faq:1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25746,6 +29044,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c16-w01:faq:2",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25758,6 +29057,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c16-w01:faq:5",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25770,6 +29070,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "c16-w01:faq:6",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25782,6 +29083,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "6"
   },
   {
+    "id": "c16-w02",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25794,6 +29096,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c16-w02"
   },
   {
+    "id": "c16-w02-b1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25806,6 +29109,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b1"
   },
   {
+    "id": "c16-w02-b2",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25818,6 +29122,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b2"
   },
   {
+    "id": "c16-w02-b3",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25830,6 +29135,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b3"
   },
   {
+    "id": "c16-w02-b4",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25842,6 +29148,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b4"
   },
   {
+    "id": "c16-w02-b5",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25854,6 +29161,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b5"
   },
   {
+    "id": "c16-w02-b6",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25866,6 +29174,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b6"
   },
   {
+    "id": "c16-w02-b7",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25878,6 +29187,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b7"
   },
   {
+    "id": "c16-w02-b8",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25890,6 +29200,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b8"
   },
   {
+    "id": "c16-w02-b9",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25902,6 +29213,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b9"
   },
   {
+    "id": "c16-w02-b10",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25914,6 +29226,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b10"
   },
   {
+    "id": "c16-w02-b11",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25926,6 +29239,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b11"
   },
   {
+    "id": "c16-w02-b12",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25938,6 +29252,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b12"
   },
   {
+    "id": "c16-w02-b13",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25950,6 +29265,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b13"
   },
   {
+    "id": "c16-w02-b14",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25962,18 +29278,35 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b14"
   },
   {
+    "id": "c16-w02-b15~1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
     "type": "매뉴얼 원문",
     "workTitle": "지출 기타 주요사항",
-    "title": "구분 내용 업무추진비 지출 원칙 ◦업무추진을 위한 접대성경비 집행 또는…",
+    "title": "구분 내용 업무추진비 지출 원칙 ◦업무추진을 위한 접대성경비 집행 또는… › 업무추진비 지출 원칙 ◦업무추진을 위한 접대성경비 집행 또는 물품의 구매는 신용카드 또",
     "description": "구분 내용 업무추진비 지출 원칙 ◦업무추진을 위한 접대성경비 집행 또는 물품의 구매는 신용카드 또는 현금영수증 사용이 원칙 접대성 경비 집행 시 증빙사항 ◦집행목적, 일시, 장소, 집행대상 등을 증빙서류에 기재 ◦건당 50만 원 이상의 경우 상대방의 소속 또는 주소 및 성명을 증빙서류에 기재 구분 내용 현금 지출 허용 범위 ◦격려금, 조의금, 축의금 등 현금 집행이 불가피한 경우에 한하여 지출 가능 ※ 지방자치단체 업무추진비 집행에 관한 규칙 참고 격려금 등 현…",
-    "text": "지출 기타 주요사항\n\n구분 내용\n업무추진비 지출 원칙 ◦업무추진을 위한 접대성경비 집행 또는 물품의 구매는 신용카드 또는 현금영수증 사용이 원칙\n접대성 경비 집행 시 증빙사항 ◦집행목적, 일시, 장소, 집행대상 등을 증빙서류에 기재 ◦건당 50만 원 이상의 경우 상대방의 소속 또는 주소 및 성명을 증빙서류에 기재\n구분 내용\n현금 지출 허용 범위 ◦격려금, 조의금, 축의금 등 현금 집행이 불가피한 경우에 한하여 지출 가능 ※ 지방자치단체 업무추진비 집행에 관한 규칙 참고\n격려금 등 현금지급 시 절차 ◦지급 목적과 대상, 금액(기지급, 금회지급) 및 지급 필요성 등의 내용이 포함된 지출품의서(기본계획을 수립·방침 포함)를 작성\n개산급 지급 시 증빙 ◦개산급으로 전달자에게 현금을 지급할 경우 전달자와 최종수요자의 영수증을 모두 징구하여 회계 증빙서류에 첨부. 다만, 최종수요자가 1인이거나 전달자를 거치지 않고 직접 최종수요자에게 지급하는 경우 제외\n최종수요자에게 영수증 징구 불가시 ◦지급목적, 지급일시, 지급금액, 지급대상자, 전달자 등이 명시된 집행내역서를 현금 전달자 등으로부터 징구하여 회계 증빙서류에 첨부하여야 함\n간담회 등 접대비 기준 ◦1인 1회당 4만 원 이하 ◦초과 시 사유 명시 필요 ※ 다만, 「청탁금지법」제2조에 따른 공직자등에 집행하는 접대비는 5만 원 이하, 기념품 및 특산품 지급은 5만 원 이하 범위에서 집행\n상품권 등 구매시 유희사항 ◦상품권 또는 고가의 선물, 기념품, 특산품 등을 구매 할 경우에는 사적으로 사용 되지 않도록 사용 용도와 물품명, 구입 및 지급일시, 수량, 수령자, 잔고 등이 기재된 물품수불부를 작성하고 결재를 받아 비치하여야 함\n행사 관련 경비(퇴임 등) ◦간소하게, 최소한의 경비만 계상\n예산 계상 금지 항목 ◦개인에게 월정액으로 지급하거나(직책급업무수행경비 제외), 사적인 경조사비, 친목을 위한 경비, 전별금 및 교직원이 개인 자격으로 가입한 단체*의 회비 등을 지급하기 위한 예산 계상 금지 * 교장단회, 교감단회, 교사회 등을 포함함",
+    "text": "지출 기타 주요사항\n\n구분 내용\n업무추진비 지출 원칙 ◦업무추진을 위한 접대성경비 집행 또는 물품의 구매는 신용카드 또는 현금영수증 사용이 원칙\n접대성 경비 집행 시 증빙사항 ◦집행목적, 일시, 장소, 집행대상 등을 증빙서류에 기재 ◦건당 50만 원 이상의 경우 상대방의 소속 또는 주소 및 성명을 증빙서류에 기재\n구분 내용\n현금 지출 허용 범위 ◦격려금, 조의금, 축의금 등 현금 집행이 불가피한 경우에 한하여 지출 가능 ※ 지방자치단체 업무추진비 집행에 관한 규칙 참고\n격려금 등 현금지급 시 절차 ◦지급 목적과 대상, 금액(기지급, 금회지급) 및 지급 필요성 등의 내용이 포함된 지출품의서(기본계획을 수립·방침 포함)를 작성\n개산급 지급 시 증빙 ◦개산급으로 전달자에게 현금을 지급할 경우 전달자와 최종수요자의 영수증을 모두 징구하여 회계 증빙서류에 첨부. 다만, 최종수요자가 1인이거나 전달자를 거치지 않고 직접 최종수요자에게 지급하는 경우 제외\n최종수요자에게 영수증 징구 불가시 ◦지급목적, 지급일시, 지급금액, 지급대상자, 전달자 등이 명시된 집행내역서를 현금 전달자 등으로부터 징구하여 회계 증빙서류에 첨부하여야 함",
     "workId": "c16-w02",
-    "blockId": "c16-w02-b15"
+    "blockId": "c16-w02-b15",
+    "anchor": "업무추진비지출원칙◦업무추진을위한접대성경비집행"
   },
   {
+    "id": "c16-w02-b15~2",
+    "chapterId": "16",
+    "chapterLabel": "제16편",
+    "chapterTitle": "학교회계 지출",
+    "type": "매뉴얼 원문",
+    "workTitle": "지출 기타 주요사항",
+    "title": "구분 내용 업무추진비 지출 원칙 ◦업무추진을 위한 접대성경비 집행 또는… › 간담회 등 접대비 기준 ◦1인 1회당 4만 원 이하 ◦초과 시 사유 명시 필요 ※ 다만",
+    "description": "간담회 등 접대비 기준 ◦1인 1회당 4만 원 이하 ◦초과 시 사유 명시 필요 ※ 다만, 「청탁금지법」제2조에 따른 공직자등에 집행하는 접대비는 5만 원 이하, 기념품 및 특산품 지급은 5만 원 이하 범위에서 집행 상품권 등 구매시 유희사항 ◦상품권 또는 고가의 선물, 기념품, 특산품 등을 구매 할 경우에는 사적으로 사용 되지 않도록 사용 용도와 물품명, 구입 및 지급일시, 수량, 수령자, 잔고 등이 기재된 물품수불부를 작성하고 결재를 받아 비치하여야 함 행사…",
+    "text": "지출 기타 주요사항\n\n간담회 등 접대비 기준 ◦1인 1회당 4만 원 이하 ◦초과 시 사유 명시 필요 ※ 다만, 「청탁금지법」제2조에 따른 공직자등에 집행하는 접대비는 5만 원 이하, 기념품 및 특산품 지급은 5만 원 이하 범위에서 집행\n상품권 등 구매시 유희사항 ◦상품권 또는 고가의 선물, 기념품, 특산품 등을 구매 할 경우에는 사적으로 사용 되지 않도록 사용 용도와 물품명, 구입 및 지급일시, 수량, 수령자, 잔고 등이 기재된 물품수불부를 작성하고 결재를 받아 비치하여야 함\n행사 관련 경비(퇴임 등) ◦간소하게, 최소한의 경비만 계상\n예산 계상 금지 항목 ◦개인에게 월정액으로 지급하거나(직책급업무수행경비 제외), 사적인 경조사비, 친목을 위한 경비, 전별금 및 교직원이 개인 자격으로 가입한 단체*의 회비 등을 지급하기 위한 예산 계상 금지 * 교장단회, 교감단회, 교사회 등을 포함함",
+    "workId": "c16-w02",
+    "blockId": "c16-w02-b15",
+    "anchor": "간담회등접대비기준◦1인1회당4만원이하◦초과시"
+  },
+  {
+    "id": "c16-w02-b16",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25986,6 +29319,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b16"
   },
   {
+    "id": "c16-w02-b17",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -25998,6 +29332,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b17"
   },
   {
+    "id": "c16-w02-b18",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26010,6 +29345,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b18"
   },
   {
+    "id": "c16-w02-b19",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26022,6 +29358,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b19"
   },
   {
+    "id": "c16-w02-b20",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26034,6 +29371,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b20"
   },
   {
+    "id": "c16-w02-b21",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26046,6 +29384,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b21"
   },
   {
+    "id": "c16-w02-b22",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26058,6 +29397,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b22"
   },
   {
+    "id": "c16-w02-b23",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26070,6 +29410,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b23"
   },
   {
+    "id": "c16-w02-b24",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26082,6 +29423,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b24"
   },
   {
+    "id": "c16-w02-b25",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26094,6 +29436,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b25"
   },
   {
+    "id": "c16-w02-b26",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26106,6 +29449,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b26"
   },
   {
+    "id": "c16-w02-b27",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26118,6 +29462,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b27"
   },
   {
+    "id": "c16-w02-b28",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26130,6 +29475,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b28"
   },
   {
+    "id": "c16-w02-b29",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26142,6 +29488,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b29"
   },
   {
+    "id": "c16-w02-b30",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26154,6 +29501,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b30"
   },
   {
+    "id": "c16-w02-b31",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26166,6 +29514,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b31"
   },
   {
+    "id": "c16-w02-b32",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26178,6 +29527,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b32"
   },
   {
+    "id": "c16-w02-b33",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26190,6 +29540,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w02-b33"
   },
   {
+    "id": "c16-w02:form:서식7",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26202,6 +29553,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식7"
   },
   {
+    "id": "c16-w02:form:서식9",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26214,6 +29566,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식9"
   },
   {
+    "id": "c16-w02:form:예시4",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26226,6 +29579,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시4"
   },
   {
+    "id": "c16-w02:form:예시5",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26238,6 +29592,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시5"
   },
   {
+    "id": "c16-w02:form:예시6",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26250,6 +29605,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시6"
   },
   {
+    "id": "c16-w02:form:예시17",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26262,6 +29618,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시17"
   },
   {
+    "id": "c16-w02:form:예시18",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26274,6 +29631,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시18"
   },
   {
+    "id": "c16-w02:form:참고2",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26286,6 +29644,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "참고2"
   },
   {
+    "id": "c16-w02:faq:3",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26298,6 +29657,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c16-w02:faq:4",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26310,6 +29670,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c16-w03",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26322,6 +29683,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c16-w03"
   },
   {
+    "id": "c16-w03-b1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26334,6 +29696,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w03-b1"
   },
   {
+    "id": "c16-w03-b2",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26346,6 +29709,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w03-b2"
   },
   {
+    "id": "c16-w03-b3",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26358,6 +29722,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w03-b3"
   },
   {
+    "id": "c16-w03-b4",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26370,6 +29735,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w03-b4"
   },
   {
+    "id": "c16-w03-b5",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26382,6 +29748,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w03-b5"
   },
   {
+    "id": "c16-w03-b6",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26394,6 +29761,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w03-b6"
   },
   {
+    "id": "c16-w03-b7",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26406,18 +29774,35 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w03-b7"
   },
   {
+    "id": "c16-w03-b8~1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
     "type": "매뉴얼 원문",
     "workTitle": "나라장터(G2B) 물품 구입",
-    "title": "세부내용 3. 물품 전자견적(G2B)",
+    "title": "세부내용 3. 물품 전자견적(G2B) › 물품 전자견적(G2B) 절차",
     "description": "물품 전자견적(G2B) 절차 업무 단계 K-에듀파인 단계 업무관리시스템 단계 및 검토사항 품의 전(前) 단계 (사업담당자) ◦사업계획 수립(결재) ◦사업 추진 적정성, 타당성 검토 ◦사업예산 확인 ◦학교운영위원회 심의(예: 졸업앨범) 품의 (사업담당자) 지출품의(결재) ◦물품 가격 시장 조사 (인터넷, 물가정보지, 거래가격) ◦품의 금액 확정 ◦K-에듀파인 연계 기안(결재) 계약방법 결정 (회계담당자) 계약방법 결정(결재) ◦K-에듀파인 연계 기안(결재) ◦전자…",
-    "text": "나라장터(G2B) 물품 구입\n세부내용 3. 물품 전자견적(G2B)\n물품 전자견적(G2B) 절차\n업무 단계 K-에듀파인 단계 업무관리시스템 단계 및 검토사항\n품의 전(前) 단계 (사업담당자) ◦사업계획 수립(결재) ◦사업 추진 적정성, 타당성 검토 ◦사업예산 확인 ◦학교운영위원회 심의(예: 졸업앨범)\n품의 (사업담당자) 지출품의(결재) ◦물품 가격 시장 조사 (인터넷, 물가정보지, 거래가격) ◦품의 금액 확정 ◦K-에듀파인 연계 기안(결재)\n계약방법 결정 (회계담당자) 계약방법 결정(결재) ◦K-에듀파인 연계 기안(결재) ◦전자견적(G2B)에 의한 수의계약 대상 여부 판단 (수의계약운영 요령 및 도교육청 지침에 따름)\n공고 (회계담당자) ◦공고문 작성(결재) ◦공고문 게시(G2B, 도교육청 누리집) ◦기초금액 입력 및 예정가격 작성(G2B)\n개찰 및 계약상대자 결정 (회계담당자) ◦개찰 및 개찰자료(개찰결과보고서, 개찰조서 등) 인쇄(G2B) ◦사업자등록증, 법인등기부등본 등을 검토하고 견적참가자격, 부정당업자 제재, 수의계약 결격여부 등을 확인하여 계약상 대자 결정(결재) ◦계약상대자 결정 공고(도교육청 누리집)\n전자계약 (회계담당자) 계약서 작성(결재) 후 원인행위 확정 ◦K-에듀파인 연계 기안(결재) ◦전자계약(G2B): 초안 송신 → 계약보증서 접수 → 인지세 전자수납(제작구매 시) → 전자계약 체결\n계약이행 (회계담당자) ◦물품의 납품\n검사 및 검수 (회계담당자, 사업담당자) 검수자 지정 및 검사검수 요청 → 회계담당자 또는 사업담당자 검수 확정 ◦납품검사 시기: 계약상대자로부터 납품완료사실을 통지받은 날로부터 14일 이내\n청구 (계약상대자) 대금지급 요청 ◦대금지급 시 필요서류: 대금청구서, 세금계산서 ◦G2B에서 검수 및 대금지급 청구가능(전자청구) ◦세금체납확인 ① 전자계약 체결시점에 업체 사전동의를 받을 경우 물품 → 대금지급 → 대급지급요청서접수 물품 → 대금지급 → 선금신청서접수 공사 / 용역 → 공사 / 용역관리 → 대금청구서접수 ② 수기로 제출받을 경우: 행정정보공동이용망 활용\n지출결의 (회계담당자) 지출결의(결재)\n대가지급 (회계담당자) 지급명령등록(결재) ◦청구 후 5일 이내(토요일 및 공휴일 제외)\n증빙서류 편철 및 보존 ◦증빙서류는 편철 후 5년간 보존",
+    "text": "나라장터(G2B) 물품 구입\n세부내용 3. 물품 전자견적(G2B)\n물품 전자견적(G2B) 절차\n업무 단계 K-에듀파인 단계 업무관리시스템 단계 및 검토사항\n품의 전(前) 단계 (사업담당자) ◦사업계획 수립(결재) ◦사업 추진 적정성, 타당성 검토 ◦사업예산 확인 ◦학교운영위원회 심의(예: 졸업앨범)\n품의 (사업담당자) 지출품의(결재) ◦물품 가격 시장 조사 (인터넷, 물가정보지, 거래가격) ◦품의 금액 확정 ◦K-에듀파인 연계 기안(결재)\n계약방법 결정 (회계담당자) 계약방법 결정(결재) ◦K-에듀파인 연계 기안(결재) ◦전자견적(G2B)에 의한 수의계약 대상 여부 판단 (수의계약운영 요령 및 도교육청 지침에 따름)\n공고 (회계담당자) ◦공고문 작성(결재) ◦공고문 게시(G2B, 도교육청 누리집) ◦기초금액 입력 및 예정가격 작성(G2B)\n개찰 및 계약상대자 결정 (회계담당자) ◦개찰 및 개찰자료(개찰결과보고서, 개찰조서 등) 인쇄(G2B) ◦사업자등록증, 법인등기부등본 등을 검토하고 견적참가자격, 부정당업자 제재, 수의계약 결격여부 등을 확인하여 계약상 대자 결정(결재) ◦계약상대자 결정 공고(도교육청 누리집)",
     "workId": "c16-w03",
-    "blockId": "c16-w03-b8"
+    "blockId": "c16-w03-b8",
+    "anchor": "물품전자견적(G2B)절차"
   },
   {
+    "id": "c16-w03-b8~2",
+    "chapterId": "16",
+    "chapterLabel": "제16편",
+    "chapterTitle": "학교회계 지출",
+    "type": "매뉴얼 원문",
+    "workTitle": "나라장터(G2B) 물품 구입",
+    "title": "세부내용 3. 물품 전자견적(G2B) › 전자계약 (회계담당자) 계약서 작성(결재) 후 원인행위 확정 ◦K-에듀파인 연계 기안(",
+    "description": "전자계약 (회계담당자) 계약서 작성(결재) 후 원인행위 확정 ◦K-에듀파인 연계 기안(결재) ◦전자계약(G2B): 초안 송신 → 계약보증서 접수 → 인지세 전자수납(제작구매 시) → 전자계약 체결 계약이행 (회계담당자) ◦물품의 납품 검사 및 검수 (회계담당자, 사업담당자) 검수자 지정 및 검사검수 요청 → 회계담당자 또는 사업담당자 검수 확정 ◦납품검사 시기: 계약상대자로부터 납품완료사실을 통지받은 날로부터 14일 이내 청구 (계약상대자) 대금지급 요청 ◦대금…",
+    "text": "나라장터(G2B) 물품 구입\n세부내용 3. 물품 전자견적(G2B)\n전자계약 (회계담당자) 계약서 작성(결재) 후 원인행위 확정 ◦K-에듀파인 연계 기안(결재) ◦전자계약(G2B): 초안 송신 → 계약보증서 접수 → 인지세 전자수납(제작구매 시) → 전자계약 체결\n계약이행 (회계담당자) ◦물품의 납품\n검사 및 검수 (회계담당자, 사업담당자) 검수자 지정 및 검사검수 요청 → 회계담당자 또는 사업담당자 검수 확정 ◦납품검사 시기: 계약상대자로부터 납품완료사실을 통지받은 날로부터 14일 이내\n청구 (계약상대자) 대금지급 요청 ◦대금지급 시 필요서류: 대금청구서, 세금계산서 ◦G2B에서 검수 및 대금지급 청구가능(전자청구) ◦세금체납확인 ① 전자계약 체결시점에 업체 사전동의를 받을 경우 물품 → 대금지급 → 대급지급요청서접수 물품 → 대금지급 → 선금신청서접수 공사 / 용역 → 공사 / 용역관리 → 대금청구서접수 ② 수기로 제출받을 경우: 행정정보공동이용망 활용\n지출결의 (회계담당자) 지출결의(결재)\n대가지급 (회계담당자) 지급명령등록(결재) ◦청구 후 5일 이내(토요일 및 공휴일 제외)\n증빙서류 편철 및 보존 ◦증빙서류는 편철 후 5년간 보존",
+    "workId": "c16-w03",
+    "blockId": "c16-w03-b8",
+    "anchor": "전자계약(회계담당자)계약서작성(결재)후원인행"
+  },
+  {
+    "id": "c16-w04",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26430,6 +29815,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c16-w04"
   },
   {
+    "id": "c16-w04-b1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26442,6 +29828,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b1"
   },
   {
+    "id": "c16-w04-b2",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26454,6 +29841,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b2"
   },
   {
+    "id": "c16-w04-b3",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26466,6 +29854,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b3"
   },
   {
+    "id": "c16-w04-b4",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26478,6 +29867,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b4"
   },
   {
+    "id": "c16-w04-b5",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26490,6 +29880,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b5"
   },
   {
+    "id": "c16-w04-b6",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26502,6 +29893,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b6"
   },
   {
+    "id": "c16-w04-b7",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26514,6 +29906,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b7"
   },
   {
+    "id": "c16-w04-b8",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26526,6 +29919,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b8"
   },
   {
+    "id": "c16-w04-b9",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26538,6 +29932,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b9"
   },
   {
+    "id": "c16-w04-b10",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26550,6 +29945,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b10"
   },
   {
+    "id": "c16-w04-b11",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26562,6 +29958,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b11"
   },
   {
+    "id": "c16-w04-b12",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26574,6 +29971,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b12"
   },
   {
+    "id": "c16-w04-b13",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26586,6 +29984,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b13"
   },
   {
+    "id": "c16-w04-b14",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26598,6 +29997,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b14"
   },
   {
+    "id": "c16-w04-b15",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26610,6 +30010,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b15"
   },
   {
+    "id": "c16-w04-b16",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26622,6 +30023,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b16"
   },
   {
+    "id": "c16-w04-b17",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26634,6 +30036,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b17"
   },
   {
+    "id": "c16-w04-b18",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26646,6 +30049,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b18"
   },
   {
+    "id": "c16-w04-b19",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26658,6 +30062,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b19"
   },
   {
+    "id": "c16-w04-b20",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26670,6 +30075,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b20"
   },
   {
+    "id": "c16-w04-b21",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26682,6 +30088,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b21"
   },
   {
+    "id": "c16-w04-b22",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26694,6 +30101,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b22"
   },
   {
+    "id": "c16-w04-b23",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26706,6 +30114,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b23"
   },
   {
+    "id": "c16-w04-b24",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26718,6 +30127,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b24"
   },
   {
+    "id": "c16-w04-b25",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26730,6 +30140,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w04-b25"
   },
   {
+    "id": "c16-w05",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26742,6 +30153,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c16-w05"
   },
   {
+    "id": "c16-w05-b1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26754,6 +30166,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w05-b1"
   },
   {
+    "id": "c16-w05-b2",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26766,6 +30179,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w05-b2"
   },
   {
+    "id": "c16-w05-b3",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26778,6 +30192,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w05-b3"
   },
   {
+    "id": "c16-w05-b4",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26790,6 +30205,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w05-b4"
   },
   {
+    "id": "c16-w05-b5",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26802,6 +30218,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w05-b5"
   },
   {
+    "id": "c16-w05-b6",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26814,6 +30231,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w05-b6"
   },
   {
+    "id": "c16-w05-b7",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26826,6 +30244,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w05-b7"
   },
   {
+    "id": "c16-w05-b8",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26838,6 +30257,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w05-b8"
   },
   {
+    "id": "c16-w05-b9",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26850,6 +30270,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w05-b9"
   },
   {
+    "id": "c16-w05-b10",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26862,6 +30283,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w05-b10"
   },
   {
+    "id": "c16-w05-b11",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26874,6 +30296,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w05-b11"
   },
   {
+    "id": "c16-w05-b12",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26886,6 +30309,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w05-b12"
   },
   {
+    "id": "c16-w05-b13",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26898,6 +30322,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w05-b13"
   },
   {
+    "id": "c16-w05:form:서식5",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26910,6 +30335,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식5"
   },
   {
+    "id": "c16-w05:faq:1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26922,6 +30348,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c16-w05:faq:2",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26934,6 +30361,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c16-w05:faq:3",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26946,6 +30374,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c16-w05:faq:4",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26958,6 +30387,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c16-w05:faq:5",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26970,6 +30400,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "5"
   },
   {
+    "id": "c16-w05:faq:6",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26982,6 +30413,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "6"
   },
   {
+    "id": "c16-w05:faq:7",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -26994,6 +30426,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "7"
   },
   {
+    "id": "c16-w05:faq:8",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27006,6 +30439,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "8"
   },
   {
+    "id": "c16-w05:faq:1#2",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27018,6 +30452,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c16-w06",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27030,6 +30465,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c16-w06"
   },
   {
+    "id": "c16-w06-b1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27042,6 +30478,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w06-b1"
   },
   {
+    "id": "c16-w06-b2",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27054,6 +30491,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w06-b2"
   },
   {
+    "id": "c16-w06-b3",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27066,6 +30504,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w06-b3"
   },
   {
+    "id": "c16-w06-b4",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27078,6 +30517,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w06-b4"
   },
   {
+    "id": "c16-w06-b5",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27090,6 +30530,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w06-b5"
   },
   {
+    "id": "c16-w06-b6",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27102,6 +30543,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w06-b6"
   },
   {
+    "id": "c16-w06-b7",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27114,6 +30556,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w06-b7"
   },
   {
+    "id": "c16-w06:faq:2",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27126,6 +30569,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c16-w06:faq:3",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27138,6 +30582,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "3"
   },
   {
+    "id": "c16-w06:faq:4",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27150,6 +30595,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "4"
   },
   {
+    "id": "c16-w07",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27162,6 +30608,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c16-w07"
   },
   {
+    "id": "c16-w07-b1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27174,6 +30621,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w07-b1"
   },
   {
+    "id": "c16-w07-b2",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27186,6 +30634,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w07-b2"
   },
   {
+    "id": "c16-w07-b3",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27198,6 +30647,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w07-b3"
   },
   {
+    "id": "c16-w07-b4",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27210,6 +30660,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w07-b4"
   },
   {
+    "id": "c16-w07-b5",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27222,6 +30673,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w07-b5"
   },
   {
+    "id": "c16-w07-b6",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27234,6 +30686,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w07-b6"
   },
   {
+    "id": "c16-w07-b7",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27246,6 +30699,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w07-b7"
   },
   {
+    "id": "c16-w07-b8",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27258,6 +30712,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w07-b8"
   },
   {
+    "id": "c16-w07-b9",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27270,6 +30725,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w07-b9"
   },
   {
+    "id": "c16-w07-b10",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27282,6 +30738,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w07-b10"
   },
   {
+    "id": "c16-w07-b11",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27294,6 +30751,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w07-b11"
   },
   {
+    "id": "c16-w07-b12",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27306,6 +30764,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w07-b12"
   },
   {
+    "id": "c16-w07:form:서식6",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27318,6 +30777,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식6"
   },
   {
+    "id": "c16-w07:faq:1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27330,6 +30790,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c16-w07:faq:2",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27342,6 +30803,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c16-w08",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27354,6 +30816,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c16-w08"
   },
   {
+    "id": "c16-w08-b1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27366,6 +30829,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w08-b1"
   },
   {
+    "id": "c16-w08-b2",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27378,6 +30842,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w08-b2"
   },
   {
+    "id": "c16-w08-b3",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27390,6 +30855,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w08-b3"
   },
   {
+    "id": "c16-w08-b4",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27402,6 +30868,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w08-b4"
   },
   {
+    "id": "c16-w08-b5",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27414,6 +30881,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w08-b5"
   },
   {
+    "id": "c16-w08-b6",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27426,6 +30894,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w08-b6"
   },
   {
+    "id": "c16-w08-b7",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27438,18 +30907,49 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w08-b7"
   },
   {
+    "id": "c16-w08-b8~1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
     "type": "매뉴얼 원문",
     "workTitle": "현장체험학습",
-    "title": "업무단계 K-에듀파인 업무관리시스템 단계 및 검토사항 품의 전 ◦계획 및…",
+    "title": "업무단계 K-에듀파인 업무관리시스템 단계 및 검토사항 품의 전 ◦계획 및… › 업무단계 K-에듀파인 업무관리시스템 단계 및 검토사항",
     "description": "업무단계 K-에듀파인 업무관리시스템 단계 및 검토사항 품의 전 ◦계획 및 준비(사업부서) 참고 품의 (사업담당자) 지출품의(결재) ◦K-에듀파인 연계 기안(결재) ◦학생 경비 및 인솔교사 경비 산출(추정액) 계약방법 결정 계약방법 결정(결재) ◦K-에듀파인 연계 기안(결재) ◦1인 견적에 의한 수의계약 대상 여부 판단 (수의계약 운영요령 및 도교육청 지침 등 확인) 기초금액 및 예정가격 작성 ◦예정가격: 1인 견적의 경우, 예정가격조서 작성은 생략가능 하나 예정…",
-    "text": "현장체험학습\n\n업무단계 K-에듀파인 업무관리시스템 단계 및 검토사항\n품의 전 ◦계획 및 준비(사업부서) 참고\n품의 (사업담당자) 지출품의(결재) ◦K-에듀파인 연계 기안(결재) ◦학생 경비 및 인솔교사 경비 산출(추정액)\n계약방법 결정 계약방법 결정(결재) ◦K-에듀파인 연계 기안(결재) ◦1인 견적에 의한 수의계약 대상 여부 판단 (수의계약 운영요령 및 도교육청 지침 등 확인)\n기초금액 및 예정가격 작성 ◦예정가격: 1인 견적의 경우, 예정가격조서 작성은 생략가능 하나 예정가격은 조사하여야 함.\n계약상대자 결정 ◦견적서 징구(결재) ◦사업자등록증 등 제반서류 확인\n계약체결 계약서 작성 (또는 원인행위 작성) ◦K-에듀파인 계약서 작성(계약서 또는 승낙사항 첨부)\n징수결의 및 수납 징수결의 작성 ◦가정통신문 발송: 현장체험학습비 납부에 관한 사항 안내 ◦참가학생 신청자 파악 후 징수결정, 이체날짜 확인 ◦참가학생 변동이 있을 경우 추가 징수결의 또는 감액 징수결의 ◦미납자 독촉 및 미납금 처리방안 논의\n사전답사 ◦사전답사 실시(교통편, 구간별 소요시간, 위생상태 등 점검) ◦사전답사 실시 결과보고서 작성\n여행 실시 전 준비 참가자 변동 시 지출담당자: 조정결의 (원인행위금액 변동) 세입담당자: 감액결의 (징수결의금액 변동) ◦추진계획 최종 안내(학생, 학부모 안내) ◦상품 구입, 승차책임자 지정, 잔류학생지도 계획 수립 ◦교사에게 지급되는 시간외수당, 여비 산정 ◦입장료 등 현지에서 집행할 경비가 있을 경우 임시출납원 임명 및 개산급 지급 ※ 품의 결재 후, 학교 법인카드를 사용하여 집행하는 경우는 임시출납원 임명 불필요 ◦참가자 변동사항 확인 후 최종 명단 확정\n업무단계 K-에듀파인 업무관리시스템 단계 및 검토사항\n현장체험학습 / 수련활동 실시 ◦학생수송차량 운전자 사전 음주 감지 ▸운송사업자가 차고지에서 음주감지 실시, 운송사업자는 운전자가 음주로 확인 시 운전자 교체 및 학교에 결과 통보 ▸당일 출발시 학교에서 음주감지 실시, 이를 대신하여 운송사업자가 제출한 음주여부확인 기록지로 대체 가능 ▸숙박지에서는 음주감지 실시(음주감지기 활용 권장) ▸음주 감지 거부 및 운전자 음주 의심 시 112에 신고\n검사 및 검수 검수자 지정·요청 사업담당자 검사검수 (결재) 회계담당 검수확정 ◦K-에듀파인 연계 기안 ◦K-에듀파인 검수자 지정 및 검수요청 / 사업담당자 검수완료 ◦K-에듀파인 회계담당자 검수확정\n정산 및 청구 대금지급요청 ◦활동참여 학생 변동사항 알림 ◦종료 후 10일 이내 정산 ◦대금 청구서, 세금계산서 또는 계산서 징구 ◦G2B에서 검수 및 대금지급 청구가능(전자청구) ◦임시경비 집행 후 정산서 제출 ▸집행 후 5일 이내 정산 보고 ▸불용액(잔액)은 10일 이내에 해당 회계과목으로 반납\n지출결의 지출결의(결재) ◦K-에듀파인 지출결의(결재)\n대가지급 지급명령등록(결재) ◦청구 후 5일 이내(토요일 및 공휴일 제외)\n집행결과 공개 ◦집행잔액 발생 시 학부모에게 환불, 정산일로부터 10일 이내 집행결과 공개\n평가 및 평가결과 공개 (사업담당자) ◦숙박형 현장체험학습 평가결과: 실시 14일 이내 학교 누리 집 및 도교육청 현장체험학습 공개방에 탑재\n☞ 수련활동 및 현장체험학습 유의사항[예시19]\n▸경비 집행 시 유의사항\n▸인솔교직원의 여비 및 시간외수당 지급방법\n▸학생 단체 교육활동 시 보험 가입 관련 고려사항\n☞ 수련활동 위탁용역[예시20]\n☞ 현장체험학습 위탁용역[예시21] , 현장체험학습 업체별 수의계약[예시22]",
+    "text": "현장체험학습\n\n업무단계 K-에듀파인 업무관리시스템 단계 및 검토사항\n품의 전 ◦계획 및 준비(사업부서) 참고\n품의 (사업담당자) 지출품의(결재) ◦K-에듀파인 연계 기안(결재) ◦학생 경비 및 인솔교사 경비 산출(추정액)\n계약방법 결정 계약방법 결정(결재) ◦K-에듀파인 연계 기안(결재) ◦1인 견적에 의한 수의계약 대상 여부 판단 (수의계약 운영요령 및 도교육청 지침 등 확인)\n기초금액 및 예정가격 작성 ◦예정가격: 1인 견적의 경우, 예정가격조서 작성은 생략가능 하나 예정가격은 조사하여야 함.\n계약상대자 결정 ◦견적서 징구(결재) ◦사업자등록증 등 제반서류 확인\n계약체결 계약서 작성 (또는 원인행위 작성) ◦K-에듀파인 계약서 작성(계약서 또는 승낙사항 첨부)\n징수결의 및 수납 징수결의 작성 ◦가정통신문 발송: 현장체험학습비 납부에 관한 사항 안내 ◦참가학생 신청자 파악 후 징수결정, 이체날짜 확인 ◦참가학생 변동이 있을 경우 추가 징수결의 또는 감액 징수결의 ◦미납자 독촉 및 미납금 처리방안 논의\n사전답사 ◦사전답사 실시(교통편, 구간별 소요시간, 위생상태 등 점검) ◦사전답사 실시 결과보고서 작성",
     "workId": "c16-w08",
-    "blockId": "c16-w08-b8"
+    "blockId": "c16-w08-b8",
+    "anchor": "업무단계K-에듀파인업무관리시스템단계및검토사항"
   },
   {
+    "id": "c16-w08-b8~2",
+    "chapterId": "16",
+    "chapterLabel": "제16편",
+    "chapterTitle": "학교회계 지출",
+    "type": "매뉴얼 원문",
+    "workTitle": "현장체험학습",
+    "title": "업무단계 K-에듀파인 업무관리시스템 단계 및 검토사항 품의 전 ◦계획 및… › 여행 실시 전 준비 참가자 변동 시 지출담당자: 조정결의 (원인행위금액 변동) 세입담당",
+    "description": "여행 실시 전 준비 참가자 변동 시 지출담당자: 조정결의 (원인행위금액 변동) 세입담당자: 감액결의 (징수결의금액 변동) ◦추진계획 최종 안내(학생, 학부모 안내) ◦상품 구입, 승차책임자 지정, 잔류학생지도 계획 수립 ◦교사에게 지급되는 시간외수당, 여비 산정 ◦입장료 등 현지에서 집행할 경비가 있을 경우 임시출납원 임명 및 개산급 지급 ※ 품의 결재 후, 학교 법인카드를 사용하여 집행하는 경우는 임시출납원 임명 불필요 ◦참가자 변동사항 확인 후 최종 명단 확…",
+    "text": "현장체험학습\n\n여행 실시 전 준비 참가자 변동 시 지출담당자: 조정결의 (원인행위금액 변동) 세입담당자: 감액결의 (징수결의금액 변동) ◦추진계획 최종 안내(학생, 학부모 안내) ◦상품 구입, 승차책임자 지정, 잔류학생지도 계획 수립 ◦교사에게 지급되는 시간외수당, 여비 산정 ◦입장료 등 현지에서 집행할 경비가 있을 경우 임시출납원 임명 및 개산급 지급 ※ 품의 결재 후, 학교 법인카드를 사용하여 집행하는 경우는 임시출납원 임명 불필요 ◦참가자 변동사항 확인 후 최종 명단 확정\n업무단계 K-에듀파인 업무관리시스템 단계 및 검토사항\n현장체험학습 / 수련활동 실시 ◦학생수송차량 운전자 사전 음주 감지 ▸운송사업자가 차고지에서 음주감지 실시, 운송사업자는 운전자가 음주로 확인 시 운전자 교체 및 학교에 결과 통보 ▸당일 출발시 학교에서 음주감지 실시, 이를 대신하여 운송사업자가 제출한 음주여부확인 기록지로 대체 가능 ▸숙박지에서는 음주감지 실시(음주감지기 활용 권장) ▸음주 감지 거부 및 운전자 음주 의심 시 112에 신고",
+    "workId": "c16-w08",
+    "blockId": "c16-w08-b8",
+    "anchor": "여행실시전준비참가자변동시지출담당자:조정결의("
+  },
+  {
+    "id": "c16-w08-b8~3",
+    "chapterId": "16",
+    "chapterLabel": "제16편",
+    "chapterTitle": "학교회계 지출",
+    "type": "매뉴얼 원문",
+    "workTitle": "현장체험학습",
+    "title": "업무단계 K-에듀파인 업무관리시스템 단계 및 검토사항 품의 전 ◦계획 및… › 검사 및 검수 검수자 지정·요청 사업담당자 검사검수 (결재) 회계담당 검수확정 ◦K-에",
+    "description": "검사 및 검수 검수자 지정·요청 사업담당자 검사검수 (결재) 회계담당 검수확정 ◦K-에듀파인 연계 기안 ◦K-에듀파인 검수자 지정 및 검수요청 / 사업담당자 검수완료 ◦K-에듀파인 회계담당자 검수확정 정산 및 청구 대금지급요청 ◦활동참여 학생 변동사항 알림 ◦종료 후 10일 이내 정산 ◦대금 청구서, 세금계산서 또는 계산서 징구 ◦G2B에서 검수 및 대금지급 청구가능(전자청구) ◦임시경비 집행 후 정산서 제출 ▸집행 후 5일 이내 정산 보고 ▸불용액(잔액)은 1…",
+    "text": "현장체험학습\n\n검사 및 검수 검수자 지정·요청 사업담당자 검사검수 (결재) 회계담당 검수확정 ◦K-에듀파인 연계 기안 ◦K-에듀파인 검수자 지정 및 검수요청 / 사업담당자 검수완료 ◦K-에듀파인 회계담당자 검수확정\n정산 및 청구 대금지급요청 ◦활동참여 학생 변동사항 알림 ◦종료 후 10일 이내 정산 ◦대금 청구서, 세금계산서 또는 계산서 징구 ◦G2B에서 검수 및 대금지급 청구가능(전자청구) ◦임시경비 집행 후 정산서 제출 ▸집행 후 5일 이내 정산 보고 ▸불용액(잔액)은 10일 이내에 해당 회계과목으로 반납\n지출결의 지출결의(결재) ◦K-에듀파인 지출결의(결재)\n대가지급 지급명령등록(결재) ◦청구 후 5일 이내(토요일 및 공휴일 제외)\n집행결과 공개 ◦집행잔액 발생 시 학부모에게 환불, 정산일로부터 10일 이내 집행결과 공개\n평가 및 평가결과 공개 (사업담당자) ◦숙박형 현장체험학습 평가결과: 실시 14일 이내 학교 누리 집 및 도교육청 현장체험학습 공개방에 탑재\n☞ 수련활동 및 현장체험학습 유의사항[예시19]\n▸경비 집행 시 유의사항\n▸인솔교직원의 여비 및 시간외수당 지급방법\n▸학생 단체 교육활동 시 보험 가입 관련 고려사항\n☞ 수련활동 위탁용역[예시20]\n☞ 현장체험학습 위탁용역[예시21] , 현장체험학습 업체별 수의계약[예시22]",
+    "workId": "c16-w08",
+    "blockId": "c16-w08-b8",
+    "anchor": "검사및검수검수자지정·요청사업담당자검사검수(결"
+  },
+  {
+    "id": "c16-w08-b9",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27462,6 +30962,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w08-b9"
   },
   {
+    "id": "c16-w08-b10",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27474,6 +30975,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w08-b10"
   },
   {
+    "id": "c16-w08-b11",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27486,6 +30988,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w08-b11"
   },
   {
+    "id": "c16-w08-b12",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27498,6 +31001,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w08-b12"
   },
   {
+    "id": "c16-w08-b13",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27510,6 +31014,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w08-b13"
   },
   {
+    "id": "c16-w08-b14",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27522,6 +31027,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w08-b14"
   },
   {
+    "id": "c16-w08-b15",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27534,6 +31040,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w08-b15"
   },
   {
+    "id": "c16-w08-b16",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27546,6 +31053,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w08-b16"
   },
   {
+    "id": "c16-w08-b17",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27558,6 +31066,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w08-b17"
   },
   {
+    "id": "c16-w08-b18",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27570,6 +31079,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w08-b18"
   },
   {
+    "id": "c16-w08:form:예시13",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27582,6 +31092,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시13"
   },
   {
+    "id": "c16-w08:form:예시19",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27594,6 +31105,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시19"
   },
   {
+    "id": "c16-w08:form:예시20",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27606,6 +31118,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시20"
   },
   {
+    "id": "c16-w08:form:예시21",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27618,6 +31131,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시21"
   },
   {
+    "id": "c16-w08:form:예시22",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27630,6 +31144,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시22"
   },
   {
+    "id": "c16-w09",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27642,6 +31157,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c16-w09"
   },
   {
+    "id": "c16-w09-b1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27654,6 +31170,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w09-b1"
   },
   {
+    "id": "c16-w09-b2",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27666,6 +31183,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w09-b2"
   },
   {
+    "id": "c16-w09-b3",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27678,18 +31196,35 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w09-b3"
   },
   {
+    "id": "c16-w09-b4~1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
     "type": "매뉴얼 원문",
     "workTitle": "교복(학교주관) 구매",
-    "title": "교복선정위원회 구성 ◦교원, 학부모, 학생 등 7명 이상, 교원을 제외한…",
+    "title": "교복선정위원회 구성 ◦교원, 학부모, 학생 등 7명 이상, 교원을 제외한… › 교복선정위원회 구성 ◦교원, 학부모, 학생 등 7명 이상, 교원을 제외한 위원이 과반수",
     "description": "교복선정위원회 구성 ◦교원, 학부모, 학생 등 7명 이상, 교원을 제외한 위원이 과반수 이상 되도록 구성 ⇩ 디자인 선정·공개 ◦학교 구성원의 의견 수렴 후 디자인 선정, 교복에 대한 규정에 개정사항 반영 ◦교복 디자인 변경사항은 도교육청, 학교 누리집을 통해 즉시 공개(의무) 입찰공고문 게시일 기준으로 최소 1달 이전 공개 권장 ⇩ 구매계획 수립 ◦교복의 품질기준, 디자인, 상한 가격, 구매절차 및 입찰방법, 참가자 신청 일정 및 비용 납부, A / S 방안…",
-    "text": "교복(학교주관) 구매\n\n교복선정위원회 구성 ◦교원, 학부모, 학생 등 7명 이상, 교원을 제외한 위원이 과반수 이상 되도록 구성\n⇩\n디자인 선정·공개 ◦학교 구성원의 의견 수렴 후 디자인 선정, 교복에 대한 규정에 개정사항 반영 ◦교복 디자인 변경사항은 도교육청, 학교 누리집을 통해 즉시 공개(의무) 입찰공고문 게시일 기준으로 최소 1달 이전 공개 권장\n⇩\n구매계획 수립 ◦교복의 품질기준, 디자인, 상한 가격, 구매절차 및 입찰방법, 참가자 신청 일정 및 비용 납부, A / S 방안 등에 관한 사항을 포함 ◦제안요청서 작성(제안서 평가 항목 및 배점기준 포함)\n⇩\n교복선정위원회 심의 ◦제안요청서 확정, 입찰 및 제안조건 심의 등\n⇩\n학교운영위원회 심의 ◦교복선정위원회 심의사항 확정\n⇩\n기초금액 산출 ◦거래 실례가격, 견적가격 등, 도교육청 교복 학교 주관 구매 상한가격 이하\n⇩\n계약심사 요청 ◦추정금액 2천만원 이상, 도교육청 심사부서(감사관)에 계약심사 요청\n⇩\n사전규격 공개 ◦추정가격 5천만원 이상, 5일(긴급 3일) ◦제안요청서, 과업설명서 공개\n⇩\n입찰공고 및 제안서 접수 ◦공고기간: 추정가격 1억원 미만-10일, 1억원 이상 10억원 미만-20일 ◦교복의 품질 심사 및 가격 경쟁(제안서: 학교 직접 제출 / 가격입찰서: G2B제출)\n⇩\n제안서평가 및 적격업체 선정 ◦정량평가는 계량화하여 수치로 평가하고, 정성평가는 최고점수와 최저점수를 제외하고 합산하여 산술평균 ◦객관적인 평가를 위해 업체명이 노출되지 않도록 블라인드 심사 실시 ◦제안서 평가결과 학교가 정한 기준점수 이상을 모두 적격업체로 선정\n⇩\n가격 개찰 및 계약 체결 ◦적격자로 확정된 자에 한하여 가격 입찰서 개찰 ◦예정가격 이하 최저가격 입찰자로 낙찰자를 결정하고 통보 ◦낙찰 통지를 받은 날로부터 10일 이내에 계약 체결\n⇩\n검사검수 및 배부 ◦물품 납품 완료 통지를 받은 날로부터 14일 이내에 검사․검수 실시 ◦필요시 학교 자체 교복 품질검사 실시\n⇩\n대급지급 ◦동복, 하복 분할 정산을 통한 대금 지급 ◦대금청구를 받은 날로부터 5일 이내(토,공휴일 제외) 지급",
+    "text": "교복(학교주관) 구매\n\n교복선정위원회 구성 ◦교원, 학부모, 학생 등 7명 이상, 교원을 제외한 위원이 과반수 이상 되도록 구성\n⇩\n디자인 선정·공개 ◦학교 구성원의 의견 수렴 후 디자인 선정, 교복에 대한 규정에 개정사항 반영 ◦교복 디자인 변경사항은 도교육청, 학교 누리집을 통해 즉시 공개(의무) 입찰공고문 게시일 기준으로 최소 1달 이전 공개 권장\n⇩\n구매계획 수립 ◦교복의 품질기준, 디자인, 상한 가격, 구매절차 및 입찰방법, 참가자 신청 일정 및 비용 납부, A / S 방안 등에 관한 사항을 포함 ◦제안요청서 작성(제안서 평가 항목 및 배점기준 포함)\n⇩\n교복선정위원회 심의 ◦제안요청서 확정, 입찰 및 제안조건 심의 등\n⇩\n학교운영위원회 심의 ◦교복선정위원회 심의사항 확정\n⇩\n기초금액 산출 ◦거래 실례가격, 견적가격 등, 도교육청 교복 학교 주관 구매 상한가격 이하\n⇩\n계약심사 요청 ◦추정금액 2천만원 이상, 도교육청 심사부서(감사관)에 계약심사 요청\n⇩\n사전규격 공개 ◦추정가격 5천만원 이상, 5일(긴급 3일) ◦제안요청서, 과업설명서 공개\n⇩",
     "workId": "c16-w09",
-    "blockId": "c16-w09-b4"
+    "blockId": "c16-w09-b4",
+    "anchor": "교복선정위원회구성◦교원,학부모,학생등7명이상"
   },
   {
+    "id": "c16-w09-b4~2",
+    "chapterId": "16",
+    "chapterLabel": "제16편",
+    "chapterTitle": "학교회계 지출",
+    "type": "매뉴얼 원문",
+    "workTitle": "교복(학교주관) 구매",
+    "title": "교복선정위원회 구성 ◦교원, 학부모, 학생 등 7명 이상, 교원을 제외한… › 입찰공고 및 제안서 접수 ◦공고기간: 추정가격 1억원 미만-10일, 1억원 이상 10억",
+    "description": "입찰공고 및 제안서 접수 ◦공고기간: 추정가격 1억원 미만-10일, 1억원 이상 10억원 미만-20일 ◦교복의 품질 심사 및 가격 경쟁(제안서: 학교 직접 제출 / 가격입찰서: G2B제출) ⇩ 제안서평가 및 적격업체 선정 ◦정량평가는 계량화하여 수치로 평가하고, 정성평가는 최고점수와 최저점수를 제외하고 합산하여 산술평균 ◦객관적인 평가를 위해 업체명이 노출되지 않도록 블라인드 심사 실시 ◦제안서 평가결과 학교가 정한 기준점수 이상을 모두 적격업체로 선정 ⇩ 가격…",
+    "text": "교복(학교주관) 구매\n\n입찰공고 및 제안서 접수 ◦공고기간: 추정가격 1억원 미만-10일, 1억원 이상 10억원 미만-20일 ◦교복의 품질 심사 및 가격 경쟁(제안서: 학교 직접 제출 / 가격입찰서: G2B제출)\n⇩\n제안서평가 및 적격업체 선정 ◦정량평가는 계량화하여 수치로 평가하고, 정성평가는 최고점수와 최저점수를 제외하고 합산하여 산술평균 ◦객관적인 평가를 위해 업체명이 노출되지 않도록 블라인드 심사 실시 ◦제안서 평가결과 학교가 정한 기준점수 이상을 모두 적격업체로 선정\n⇩\n가격 개찰 및 계약 체결 ◦적격자로 확정된 자에 한하여 가격 입찰서 개찰 ◦예정가격 이하 최저가격 입찰자로 낙찰자를 결정하고 통보 ◦낙찰 통지를 받은 날로부터 10일 이내에 계약 체결\n⇩\n검사검수 및 배부 ◦물품 납품 완료 통지를 받은 날로부터 14일 이내에 검사․검수 실시 ◦필요시 학교 자체 교복 품질검사 실시\n⇩\n대급지급 ◦동복, 하복 분할 정산을 통한 대금 지급 ◦대금청구를 받은 날로부터 5일 이내(토,공휴일 제외) 지급",
+    "workId": "c16-w09",
+    "blockId": "c16-w09-b4",
+    "anchor": "입찰공고및제안서접수◦공고기간:추정가격1억원미"
+  },
+  {
+    "id": "c16-w09-b5",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27702,6 +31237,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w09-b5"
   },
   {
+    "id": "c16-w10",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27714,6 +31250,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c16-w10"
   },
   {
+    "id": "c16-w10-b1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27726,6 +31263,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w10-b1"
   },
   {
+    "id": "c16-w10-b2",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27738,6 +31276,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w10-b2"
   },
   {
+    "id": "c16-w10-b3",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27750,6 +31289,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w10-b3"
   },
   {
+    "id": "c16-w10-b4",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27762,6 +31302,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w10-b4"
   },
   {
+    "id": "c16-w10-b5",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27774,6 +31315,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w10-b5"
   },
   {
+    "id": "c16-w11",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27786,6 +31328,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c16-w11"
   },
   {
+    "id": "c16-w11-b1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27798,6 +31341,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w11-b1"
   },
   {
+    "id": "c16-w11-b2",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27810,6 +31354,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w11-b2"
   },
   {
+    "id": "c16-w11-b3",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27822,6 +31367,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w11-b3"
   },
   {
+    "id": "c16-w11-b4",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27834,6 +31380,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w11-b4"
   },
   {
+    "id": "c16-w11-b5",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27846,6 +31393,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w11-b5"
   },
   {
+    "id": "c16-w11-b6",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27858,6 +31406,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w11-b6"
   },
   {
+    "id": "c16-w12",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27870,6 +31419,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c16-w12"
   },
   {
+    "id": "c16-w12-b1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27882,6 +31432,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w12-b1"
   },
   {
+    "id": "c16-w12-b2",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27894,6 +31445,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w12-b2"
   },
   {
+    "id": "c16-w12-b3",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27906,6 +31458,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w12-b3"
   },
   {
+    "id": "c16-w12-b4",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27918,6 +31471,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w12-b4"
   },
   {
+    "id": "c16-w12-b5",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27930,6 +31484,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w12-b5"
   },
   {
+    "id": "c16-w12-b6",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27942,6 +31497,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w12-b6"
   },
   {
+    "id": "c16-w12-b7",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27954,6 +31510,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w12-b7"
   },
   {
+    "id": "c16-w12-b8",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27966,6 +31523,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w12-b8"
   },
   {
+    "id": "c16-w12-b9",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27978,6 +31536,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w12-b9"
   },
   {
+    "id": "c16-w12-b10",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -27990,6 +31549,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w12-b10"
   },
   {
+    "id": "c16-w12-b11",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -28002,6 +31562,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w12-b11"
   },
   {
+    "id": "c16-w12-b12",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -28014,6 +31575,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w12-b12"
   },
   {
+    "id": "c16-w12-b13",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -28026,6 +31588,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w12-b13"
   },
   {
+    "id": "c16-w13",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -28038,6 +31601,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c16-w13"
   },
   {
+    "id": "c16-w13-b1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -28050,6 +31614,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w13-b1"
   },
   {
+    "id": "c16-w13-b2",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -28062,6 +31627,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w13-b2"
   },
   {
+    "id": "c16-w13-b3",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -28074,18 +31640,35 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w13-b3"
   },
   {
+    "id": "c16-w13-b4~1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
     "type": "매뉴얼 원문",
     "workTitle": "소득세 및 지방소득세",
-    "title": "1. 소득세법에 따른 원천징수의 구분",
+    "title": "1. 소득세법에 따른 원천징수의 구분 › 구분 근로소득세(제20조) 사업소득세(제19조) 기타소득세(제21조) 퇴직소득세(제22",
     "description": "구분 근로소득세(제20조) 사업소득세(제19조) 기타소득세(제21조) 퇴직소득세(제22조) 해당소득 ◦일반적으로 고용관계 또는 유사한 계약에 의하여 비독립적인 인적용역 근로를 제공하고 대가로 지급받은 소득 ◦급여 기타 이와 유사한 성질의 것으로 급여·봉급·급료·상여금 등 ◦영리를 목적으로 당사자의 계산과 책임 하에 계속적·반복적으로 행하는 활동을 통하여 얻는 소득 ◦고용관계 없이 일시적으로 강연·심사·원고작성 등의 인적용역을 제공하고 그 대가로 받는 소득 ◦공적…",
-    "text": "소득세 및 지방소득세\n1. 소득세법에 따른 원천징수의 구분\n구분 근로소득세(제20조) 사업소득세(제19조) 기타소득세(제21조) 퇴직소득세(제22조)\n해당소득 ◦일반적으로 고용관계 또는 유사한 계약에 의하여 비독립적인 인적용역 근로를 제공하고 대가로 지급받은 소득 ◦급여 기타 이와 유사한 성질의 것으로 급여·봉급·급료·상여금 등 ◦영리를 목적으로 당사자의 계산과 책임 하에 계속적·반복적으로 행하는 활동을 통하여 얻는 소득 ◦고용관계 없이 일시적으로 강연·심사·원고작성 등의 인적용역을 제공하고 그 대가로 받는 소득 ◦공적연금관련법에 따라 받는 일시금 및 사용자부담금을 기초로 하며 현실적인 퇴직을 원인으로 지급받는 소득 ◦1년 이상 근무한 노동자의 퇴직으로 인해 지급받은 퇴직금\n대상 ◦교원, 지방공무원, 교육공무직원, 계약제 교원 등 ◦현직교원의 소속기관 방과후학교 강사료 ◦강의를 전문적, 직업적으로 하는 방과후학교 강사 ◦속기사, 변호사 등 전문직종 ◦현직교사가 소속기관 외 타 기관에 초빙되어 방과후학교 강사로 활동할 때 ◦고용관계가 없는 자가 일시적으로 강의할 때 ◦1년 이상 근무한 노동자로 퇴직금 지급대상에 해당되는 기간제 교사, 교육공무직원 등\n원천징수 세율 ◦「소득세법」 제55조에 따른 기본세율을 적용하되, 매월분에 대해서는 동법 시행령 근로소득 간이세액표를 따름 ◦소득세(3%)+ 지방소득세(소득세의 10%) ◦소득세(기타소득의 60%를 필요경비로 공제한 기타소득금액의 20%)+지방소득세(소득세의 10%) ◦매년 퇴직소득 세액계산 프로그램 산출결과에 따른 소득세 및 지방소득세\n▸기타소득: 1회 강사료가 125,000원 이상인 경우 원천징수(과세대상) [지급액-(지급액×필요경비(60%))]×20%] = [소득세(8%), 지방소득세(소득세의 10%)] ▸귀속 퇴직소득 세액계산 프로그램 사용방법: 국세청 홈택스 → 자료실 → ‘퇴직소득’ 검색 매년 세율이 변동되므로 해당연도 귀속 프로그램을 다운받아 사용",
+    "text": "소득세 및 지방소득세\n1. 소득세법에 따른 원천징수의 구분\n구분 근로소득세(제20조) 사업소득세(제19조) 기타소득세(제21조) 퇴직소득세(제22조)\n해당소득 ◦일반적으로 고용관계 또는 유사한 계약에 의하여 비독립적인 인적용역 근로를 제공하고 대가로 지급받은 소득 ◦급여 기타 이와 유사한 성질의 것으로 급여·봉급·급료·상여금 등 ◦영리를 목적으로 당사자의 계산과 책임 하에 계속적·반복적으로 행하는 활동을 통하여 얻는 소득 ◦고용관계 없이 일시적으로 강연·심사·원고작성 등의 인적용역을 제공하고 그 대가로 받는 소득 ◦공적연금관련법에 따라 받는 일시금 및 사용자부담금을 기초로 하며 현실적인 퇴직을 원인으로 지급받는 소득 ◦1년 이상 근무한 노동자의 퇴직으로 인해 지급받은 퇴직금\n대상 ◦교원, 지방공무원, 교육공무직원, 계약제 교원 등 ◦현직교원의 소속기관 방과후학교 강사료 ◦강의를 전문적, 직업적으로 하는 방과후학교 강사 ◦속기사, 변호사 등 전문직종 ◦현직교사가 소속기관 외 타 기관에 초빙되어 방과후학교 강사로 활동할 때 ◦고용관계가 없는 자가 일시적으로 강의할 때 ◦1년 이상 근무한 노동자로 퇴직금 지급대상에 해당되는 기간제 교사, 교육공무직원 등",
     "workId": "c16-w13",
-    "blockId": "c16-w13-b4"
+    "blockId": "c16-w13-b4",
+    "anchor": "구분근로소득세(제20조)사업소득세(제19조)"
   },
   {
+    "id": "c16-w13-b4~2",
+    "chapterId": "16",
+    "chapterLabel": "제16편",
+    "chapterTitle": "학교회계 지출",
+    "type": "매뉴얼 원문",
+    "workTitle": "소득세 및 지방소득세",
+    "title": "1. 소득세법에 따른 원천징수의 구분 › 원천징수 세율 ◦「소득세법」 제55조에 따른 기본세율을 적용하되, 매월분에 대해서는 동",
+    "description": "원천징수 세율 ◦「소득세법」 제55조에 따른 기본세율을 적용하되, 매월분에 대해서는 동법 시행령 근로소득 간이세액표를 따름 ◦소득세(3%)+ 지방소득세(소득세의 10%) ◦소득세(기타소득의 60%를 필요경비로 공제한 기타소득금액의 20%)+지방소득세(소득세의 10%) ◦매년 퇴직소득 세액계산 프로그램 산출결과에 따른 소득세 및 지방소득세 ▸기타소득: 1회 강사료가 125,000원 이상인 경우 원천징수(과세대상) [지급액-(지급액×필요경비(60%))]×20%] =…",
+    "text": "소득세 및 지방소득세\n1. 소득세법에 따른 원천징수의 구분\n원천징수 세율 ◦「소득세법」 제55조에 따른 기본세율을 적용하되, 매월분에 대해서는 동법 시행령 근로소득 간이세액표를 따름 ◦소득세(3%)+ 지방소득세(소득세의 10%) ◦소득세(기타소득의 60%를 필요경비로 공제한 기타소득금액의 20%)+지방소득세(소득세의 10%) ◦매년 퇴직소득 세액계산 프로그램 산출결과에 따른 소득세 및 지방소득세\n▸기타소득: 1회 강사료가 125,000원 이상인 경우 원천징수(과세대상) [지급액-(지급액×필요경비(60%))]×20%] = [소득세(8%), 지방소득세(소득세의 10%)] ▸귀속 퇴직소득 세액계산 프로그램 사용방법: 국세청 홈택스 → 자료실 → ‘퇴직소득’ 검색 매년 세율이 변동되므로 해당연도 귀속 프로그램을 다운받아 사용",
+    "workId": "c16-w13",
+    "blockId": "c16-w13-b4",
+    "anchor": "원천징수세율◦「소득세법」제55조에따른기본세율"
+  },
+  {
+    "id": "c16-w13-b5",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -28098,6 +31681,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w13-b5"
   },
   {
+    "id": "c16-w13-b6",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -28110,6 +31694,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w13-b6"
   },
   {
+    "id": "c16-w13-b7",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -28122,6 +31707,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w13-b7"
   },
   {
+    "id": "c16-w13-b8",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -28134,6 +31720,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w13-b8"
   },
   {
+    "id": "c16-w13-b9",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -28146,6 +31733,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c16-w13-b9"
   },
   {
+    "id": "c16-w13:faq:1",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -28158,6 +31746,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "1"
   },
   {
+    "id": "c16-w13:faq:2",
     "chapterId": "16",
     "chapterLabel": "제16편",
     "chapterTitle": "학교회계 지출",
@@ -28170,6 +31759,7 @@ window.GUIDE_SEARCH_INDEX = [
     "faqNumber": "2"
   },
   {
+    "id": "c17-w00",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28183,6 +31773,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c17-w00-b1",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28196,6 +31787,7 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c17-w01",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28208,6 +31800,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c17-w01"
   },
   {
+    "id": "c17-w01-b1",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28220,6 +31813,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b1"
   },
   {
+    "id": "c17-w01-b2",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28232,6 +31826,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b2"
   },
   {
+    "id": "c17-w01-b3",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28244,6 +31839,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b3"
   },
   {
+    "id": "c17-w01-b4",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28256,6 +31852,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b4"
   },
   {
+    "id": "c17-w01-b5",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28268,6 +31865,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b5"
   },
   {
+    "id": "c17-w01-b6",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28280,6 +31878,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b6"
   },
   {
+    "id": "c17-w01-b7",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28292,6 +31891,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b7"
   },
   {
+    "id": "c17-w01-b8",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28304,6 +31904,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b8"
   },
   {
+    "id": "c17-w01-b9",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28316,6 +31917,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b9"
   },
   {
+    "id": "c17-w01-b10",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28328,6 +31930,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b10"
   },
   {
+    "id": "c17-w01-b11",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28340,6 +31943,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b11"
   },
   {
+    "id": "c17-w01-b12",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28352,18 +31956,49 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b12"
   },
   {
+    "id": "c17-w01-b13~1",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
     "type": "매뉴얼 원문",
     "workTitle": "계약 일반",
-    "title": "세부내용 4. 계약 업무 절차",
+    "title": "세부내용 4. 계약 업무 절차 › 계약심사 [예시 1] ◦원가심사대상: 공사 추정금액 5억원(종합공사가 아닌 공사의 경우",
     "description": "계약 절차 주 요 내 용 계약심사 [예시 1] ◦원가심사대상: 공사 추정금액 5억원(종합공사가 아닌 공사의 경우 3억원 이상), 추정금액 용역 7천만원이상, 물품 추정금액 2천만원 이상 ※ 사립학교 공사계약은 계약심사 대신 일상감사로 대체함 ◦설계변경심사대상: 계약금액 10% 이상 증가 시 일상감사 [예시 2] ◦계약 일상감사대상 - 물품 제조·구매: 추정금액 5천만원 이상 ※ 도교육청 각 부서의 경우 추정금액 1억원 이상, 교육지원청의 경우 추정금액 5천만원…",
-    "text": "계약 일반\n세부내용 4. 계약 업무 절차\n계약 절차 주 요 내 용\n계약심사 [예시 1] ◦원가심사대상: 공사 추정금액 5억원(종합공사가 아닌 공사의 경우 3억원 이상), 추정금액 용역 7천만원이상, 물품 추정금액 2천만원 이상 ※ 사립학교 공사계약은 계약심사 대신 일상감사로 대체함 ◦설계변경심사대상: 계약금액 10% 이상 증가 시\n일상감사 [예시 2] ◦계약 일상감사대상 - 물품 제조·구매: 추정금액 5천만원 이상 ※ 도교육청 각 부서의 경우 추정금액 1억원 이상, 교육지원청의 경우 추정금액 5천만원 이상의 신·이설학교 물품 구매시일상감사 대상 - 공사계약: 추정금액 5천만원 이상 ※ 도교육청 각 부서와 교육지원청의 경우 추정금액 1억원 이상의 수의계약 건, 직속기관의 경우 추정금액 1억원 이상일 경우 일상감사 대상 ◦설계변경에 따른 일상감사 대상 - 설계변경 등으로 공사비가 당초보다 10% 이상 증액된 공사(설계용역) 중 시설공사의 경우 증액 1억이상, 설계용역의 경우 증액 3천만원 이상일 시 일상감사 대상\n품의서 작성 유의사항 - 집행내용이 예산편성 목적과 부합되는 지 - 예산은 배정되어 있는지 여부 - 집행예정금액은 법령 또는 기준 내의 단가에 의한 산출인지 여부 - 산출내역(원가계산)이 관련 법령에 따라 올바르게 작성 되어있는지 확인 - 견적서를 제출 받은 경우 견적 금액이 적절한지 확인\n계약방법 결정 [예시 3] ◦계약 목적물별: 공사 계약 / 물품제조·구매 등 계약 / 용역 계약 등 ◦경쟁 형태별: 일반 입찰 / 제한 입찰 / 지명 입찰 / 수의 계약 등 ◦계약체결 형태별: 총액 / 단가 계약, 확정 / 개산 계약, 단독 / 공동 계약 등 ◦입찰 시 낙찰자 선정 방법별: 적격 심사 / 2단계 입찰 / 협상에 의한 계약 등\n입찰 공고 또는 수의견적 제출 안내 공고 [예시 4] ◦입찰 및 수의견적 제출 공고 장소: 지정정보처리장치 ◦수의견적 제출 안내 공고 금액 기준(지방계약법 시행령 제25조 1항 5호) - 물품, 용역 계약: 추정가격 2천만원 초과 1억원이하 - 공사 계약: 종합공사(추정가격 2천만원 초과 4억원이하), 전문공사(추정가격 2천만원 초과 2억원 이하), 그 외 공사(전기,통신,소방등)(추정가격 2천만원 이상 1억 6천만원 미만) ◦수의견적 제출 안내 공고 기간(지방자치단체 입찰 및 계약집행기준 제5장 수의계약 운영 요령) - 공고: 공고일 + 3일 + 개찰일(총 5일) ※ 토요일,공휴일은 수의견적 제출 안내 공고 기간에 포함되지 않음 ◦입찰 공고 기간(지방계약법 시행령 제35조) - 공고: 공고일 + 7일 + 개찰일(총 9일) - 긴급공고: 공고일 + 5일 + 개찰일(총 7일) - 재공고: 공고일 + 5일 + 개찰일(총 7일)",
+    "text": "계약 일반\n세부내용 4. 계약 업무 절차\n계약 절차 주 요 내 용\n계약심사 [예시 1] ◦원가심사대상: 공사 추정금액 5억원(종합공사가 아닌 공사의 경우 3억원 이상), 추정금액 용역 7천만원이상, 물품 추정금액 2천만원 이상 ※ 사립학교 공사계약은 계약심사 대신 일상감사로 대체함 ◦설계변경심사대상: 계약금액 10% 이상 증가 시\n일상감사 [예시 2] ◦계약 일상감사대상 - 물품 제조·구매: 추정금액 5천만원 이상 ※ 도교육청 각 부서의 경우 추정금액 1억원 이상, 교육지원청의 경우 추정금액 5천만원 이상의 신·이설학교 물품 구매시일상감사 대상 - 공사계약: 추정금액 5천만원 이상 ※ 도교육청 각 부서와 교육지원청의 경우 추정금액 1억원 이상의 수의계약 건, 직속기관의 경우 추정금액 1억원 이상일 경우 일상감사 대상 ◦설계변경에 따른 일상감사 대상 - 설계변경 등으로 공사비가 당초보다 10% 이상 증액된 공사(설계용역) 중 시설공사의 경우 증액 1억이상, 설계용역의 경우 증액 3천만원 이상일 시 일상감사 대상",
     "workId": "c17-w01",
-    "blockId": "c17-w01-b13"
+    "blockId": "c17-w01-b13",
+    "anchor": "계약심사[예시1]◦원가심사대상:공사추정금액5"
   },
   {
+    "id": "c17-w01-b13~2",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "계약 일반",
+    "title": "세부내용 4. 계약 업무 절차 › 품의서 작성 유의사항 - 집행내용이 예산편성 목적과 부합되는 지 - 예산은 배정되어 있",
+    "description": "품의서 작성 유의사항 - 집행내용이 예산편성 목적과 부합되는 지 - 예산은 배정되어 있는지 여부 - 집행예정금액은 법령 또는 기준 내의 단가에 의한 산출인지 여부 - 산출내역(원가계산)이 관련 법령에 따라 올바르게 작성 되어있는지 확인 - 견적서를 제출 받은 경우 견적 금액이 적절한지 확인 계약방법 결정 [예시 3] ◦계약 목적물별: 공사 계약 / 물품제조·구매 등 계약 / 용역 계약 등 ◦경쟁 형태별: 일반 입찰 / 제한 입찰 / 지명 입찰 / 수의 계약 등…",
+    "text": "계약 일반\n세부내용 4. 계약 업무 절차\n품의서 작성 유의사항 - 집행내용이 예산편성 목적과 부합되는 지 - 예산은 배정되어 있는지 여부 - 집행예정금액은 법령 또는 기준 내의 단가에 의한 산출인지 여부 - 산출내역(원가계산)이 관련 법령에 따라 올바르게 작성 되어있는지 확인 - 견적서를 제출 받은 경우 견적 금액이 적절한지 확인\n계약방법 결정 [예시 3] ◦계약 목적물별: 공사 계약 / 물품제조·구매 등 계약 / 용역 계약 등 ◦경쟁 형태별: 일반 입찰 / 제한 입찰 / 지명 입찰 / 수의 계약 등 ◦계약체결 형태별: 총액 / 단가 계약, 확정 / 개산 계약, 단독 / 공동 계약 등 ◦입찰 시 낙찰자 선정 방법별: 적격 심사 / 2단계 입찰 / 협상에 의한 계약 등",
+    "workId": "c17-w01",
+    "blockId": "c17-w01-b13",
+    "anchor": "품의서작성유의사항-집행내용이예산편성목적과부합"
+  },
+  {
+    "id": "c17-w01-b13~3",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "계약 일반",
+    "title": "세부내용 4. 계약 업무 절차 › 입찰 공고 또는 수의견적 제출 안내 공고 [예시 4] ◦입찰 및 수의견적 제출 공고 장",
+    "description": "입찰 공고 또는 수의견적 제출 안내 공고 [예시 4] ◦입찰 및 수의견적 제출 공고 장소: 지정정보처리장치 ◦수의견적 제출 안내 공고 금액 기준(지방계약법 시행령 제25조 1항 5호) - 물품, 용역 계약: 추정가격 2천만원 초과 1억원이하 - 공사 계약: 종합공사(추정가격 2천만원 초과 4억원이하), 전문공사(추정가격 2천만원 초과 2억원 이하), 그 외 공사(전기,통신,소방등)(추정가격 2천만원 이상 1억 6천만원 미만) ◦수의견적 제출 안내 공고 기간(지방…",
+    "text": "계약 일반\n세부내용 4. 계약 업무 절차\n입찰 공고 또는 수의견적 제출 안내 공고 [예시 4] ◦입찰 및 수의견적 제출 공고 장소: 지정정보처리장치 ◦수의견적 제출 안내 공고 금액 기준(지방계약법 시행령 제25조 1항 5호) - 물품, 용역 계약: 추정가격 2천만원 초과 1억원이하 - 공사 계약: 종합공사(추정가격 2천만원 초과 4억원이하), 전문공사(추정가격 2천만원 초과 2억원 이하), 그 외 공사(전기,통신,소방등)(추정가격 2천만원 이상 1억 6천만원 미만) ◦수의견적 제출 안내 공고 기간(지방자치단체 입찰 및 계약집행기준 제5장 수의계약 운영 요령) - 공고: 공고일 + 3일 + 개찰일(총 5일) ※ 토요일,공휴일은 수의견적 제출 안내 공고 기간에 포함되지 않음 ◦입찰 공고 기간(지방계약법 시행령 제35조) - 공고: 공고일 + 7일 + 개찰일(총 9일) - 긴급공고: 공고일 + 5일 + 개찰일(총 7일) - 재공고: 공고일 + 5일 + 개찰일(총 7일)",
+    "workId": "c17-w01",
+    "blockId": "c17-w01-b13",
+    "anchor": "입찰공고또는수의견적제출안내공고[예시4]◦입찰"
+  },
+  {
+    "id": "c17-w01-b14",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28376,18 +32011,49 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b14"
   },
   {
+    "id": "c17-w01-b15~1",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
     "type": "매뉴얼 원문",
     "workTitle": "계약 일반",
-    "title": "계약 절차 주 요 내 용 - 2단계 경쟁입찰(추정가격 1억미만): 공고일…",
+    "title": "계약 절차 주 요 내 용 - 2단계 경쟁입찰(추정가격 1억미만): 공고일… › - 2단계 경쟁입찰(추정가격 1억미만): 공고일 + 10일 + 규격제안서 제출 마감일",
     "description": "계약 절차 주 요 내 용 - 2단계 경쟁입찰(추정가격 1억미만): 공고일 + 10일 + 규격제안서 제출 마감일 - 2단계 경쟁입찰(추정가격 1억~10억미만): 공고일 + 20일 + 규격제안서 제출 마감일 - 2단계 경쟁입찰(추정가격 10억이상): 공고일 + 40일 + 규격제안서 제출 마감일 - 2단계 경쟁입찰(긴급): 공고일 + 10일 + 규격제안서 제출 마감일 - 공사계약(추정가격 10억원 미만): 공고일 + 7일 + 입찰서 제출 마감일(총9일) ◦수의견적 제…",
-    "text": "계약 일반\n\n계약 절차 주 요 내 용\n- 2단계 경쟁입찰(추정가격 1억미만): 공고일 + 10일 + 규격제안서 제출 마감일 - 2단계 경쟁입찰(추정가격 1억~10억미만): 공고일 + 20일 + 규격제안서 제출 마감일 - 2단계 경쟁입찰(추정가격 10억이상): 공고일 + 40일 + 규격제안서 제출 마감일 - 2단계 경쟁입찰(긴급): 공고일 + 10일 + 규격제안서 제출 마감일 - 공사계약(추정가격 10억원 미만): 공고일 + 7일 + 입찰서 제출 마감일(총9일) ◦수의견적 제출 안내공고 시 업무순서 - G2B: 발주계획 입력 → 공고 입력 → 공고문 게시 → 기초금액 입력 → 개찰 - S2B: 공고 입력(공고문 입력 시 기초금액 입력) → 공고문 게시 → 복수예가 작성 → 개찰 ◦입찰 공고 시 업무순서 - G2B: 발주계획 입력 → 사전규격 공개 입력(수의계약이나 5천만원 미만 입찰, 공사계약시 생략 가능, 공개기간은 5일, 긴급시 3일, 초일 불산입) → 공고 입력 → 공고문 게시 → 기초금액 입력 → 개찰 ◦특이사항 - 경쟁입찰 시 입찰자가 1인뿐인 경우 재공고 입찰을 실시하지 않고 수의계약 가능 ※ 지방자치단체를 당사자로하는 계약에 관한 법률 시행령의 수의계약 등 한시적 특례 적용기간에 관한 고시(2025.12.31.까지)\n현장설명 및 설계서 열람 필요 시 현장설명 및 설계서 열람 - 추정가격 300억원 이상 공사의 경우 현장설명 및 청취 의무(지방계약법 시행령 제15조)\n입찰서 제출 (계약희망업체) 입찰서의 제출(지방계약법 시행령 제39조) - 입찰공고 시 표시된 장소와 일시에 입찰서 제출\n개찰 [예시 5] 개찰(지방계약법 시행령 제40조)\n적격심사 [예시 6] ◦적격심사 실시(낙찰하한율, 적격통과점수 확인) - 예정가격 이하 최저가 입찰자 순으로 계약이행능력 심사 후 결정 ◦적격심사 서류 접수: 적격심사 낙찰자 결정 기준에 따라 변동 ※ 지방자치단체 입찰 시 낙찰자 결정기준: 7일 이내, 조달청 일반용역 적격심사 세부기준: 5일 이내 등\n계약상대자결정 및 계약체결 [예시 7] ◦낙찰자 통보 후 10일이내 계약체결 완료 ◦표준계약서 작성(계약체결·이행·대가지급 참고)\n계약이행 과업지시서 예정공정표, 산출내역서, 설계서 등 발주자가 명시한 내역 이행 여부 확인 실시\n선금지급 [예시 8] 업체 요청 시 선금 지급\n검사검수 ◦기한: 계약의 이행을 완료한 사실을 통지받은 날로부터 14일 이내 ※ 현행: 지방자치단체를 당사자로 하는 계약에 관한 법률 시행령의 수의계약 등 한시적 특례 적용기간에 관한 고시에 따라 7일로 단축(2025.12.31.까지) ◦검사조서 생략이 가능한 경우: 계약금액 3천만 원 이하의 계약, 매각계약의 경우, 전기·가스·수도의 공급 계약 등 그 성질상 조서 작성이 필요하지 아니한 계약(지방계약법 17조 제3항)\n대가 지급 기한: 청구일로부터 5일 이내(공휴일 및 토요일 제외) ※ 현행: 지방자치단체를 당사자로 하는 계약에 관한 법률 시행령의 수의계약 등 한시적 특례 적용기간에 관한 고시에 따라 3일로 단축(2025.12.31.까지)\n대장 등재 및 하자보수관리 관련대장정리: 통합자산(시설,물품 등), 연혁지, 시설배치도",
+    "text": "계약 일반\n\n계약 절차 주 요 내 용\n- 2단계 경쟁입찰(추정가격 1억미만): 공고일 + 10일 + 규격제안서 제출 마감일 - 2단계 경쟁입찰(추정가격 1억~10억미만): 공고일 + 20일 + 규격제안서 제출 마감일 - 2단계 경쟁입찰(추정가격 10억이상): 공고일 + 40일 + 규격제안서 제출 마감일 - 2단계 경쟁입찰(긴급): 공고일 + 10일 + 규격제안서 제출 마감일 - 공사계약(추정가격 10억원 미만): 공고일 + 7일 + 입찰서 제출 마감일(총9일) ◦수의견적 제출 안내공고 시 업무순서 - G2B: 발주계획 입력 → 공고 입력 → 공고문 게시 → 기초금액 입력 → 개찰 - S2B: 공고 입력(공고문 입력 시 기초금액 입력) → 공고문 게시 → 복수예가 작성 → 개찰 ◦입찰 공고 시 업무순서 - G2B: 발주계획 입력 → 사전규격 공개 입력(수의계약이나 5천만원 미만 입찰, 공사계약시 생략 가능, 공개기간은 5일, 긴급시 3일, 초일 불산입) → 공고 입력 → 공고문 게시 → 기초금액 입력 → 개찰 ◦특이사항 - 경쟁입찰 시 입찰자가 1인뿐인 경우 재공고 입찰을 실시하지 않고 수의계약 가능 ※ 지방자치단체를 당사자로하는 계약에 관한 법률 시행령의 수의계약 등 한시적 특례 적용기간에 관한 고시(2025.12.31.까지)",
     "workId": "c17-w01",
-    "blockId": "c17-w01-b15"
+    "blockId": "c17-w01-b15",
+    "anchor": "-2단계경쟁입찰(추정가격1억미만):공고일+1"
   },
   {
+    "id": "c17-w01-b15~2",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "계약 일반",
+    "title": "계약 절차 주 요 내 용 - 2단계 경쟁입찰(추정가격 1억미만): 공고일… › 현장설명 및 설계서 열람 필요 시 현장설명 및 설계서 열람 - 추정가격 300억원 이상",
+    "description": "현장설명 및 설계서 열람 필요 시 현장설명 및 설계서 열람 - 추정가격 300억원 이상 공사의 경우 현장설명 및 청취 의무(지방계약법 시행령 제15조) 입찰서 제출 (계약희망업체) 입찰서의 제출(지방계약법 시행령 제39조) - 입찰공고 시 표시된 장소와 일시에 입찰서 제출 개찰 [예시 5] 개찰(지방계약법 시행령 제40조) 적격심사 [예시 6] ◦적격심사 실시(낙찰하한율, 적격통과점수 확인) - 예정가격 이하 최저가 입찰자 순으로 계약이행능력 심사 후 결정 ◦적…",
+    "text": "계약 일반\n\n현장설명 및 설계서 열람 필요 시 현장설명 및 설계서 열람 - 추정가격 300억원 이상 공사의 경우 현장설명 및 청취 의무(지방계약법 시행령 제15조)\n입찰서 제출 (계약희망업체) 입찰서의 제출(지방계약법 시행령 제39조) - 입찰공고 시 표시된 장소와 일시에 입찰서 제출\n개찰 [예시 5] 개찰(지방계약법 시행령 제40조)\n적격심사 [예시 6] ◦적격심사 실시(낙찰하한율, 적격통과점수 확인) - 예정가격 이하 최저가 입찰자 순으로 계약이행능력 심사 후 결정 ◦적격심사 서류 접수: 적격심사 낙찰자 결정 기준에 따라 변동 ※ 지방자치단체 입찰 시 낙찰자 결정기준: 7일 이내, 조달청 일반용역 적격심사 세부기준: 5일 이내 등\n계약상대자결정 및 계약체결 [예시 7] ◦낙찰자 통보 후 10일이내 계약체결 완료 ◦표준계약서 작성(계약체결·이행·대가지급 참고)\n계약이행 과업지시서 예정공정표, 산출내역서, 설계서 등 발주자가 명시한 내역 이행 여부 확인 실시\n선금지급 [예시 8] 업체 요청 시 선금 지급",
+    "workId": "c17-w01",
+    "blockId": "c17-w01-b15",
+    "anchor": "현장설명및설계서열람필요시현장설명및설계서열람-"
+  },
+  {
+    "id": "c17-w01-b15~3",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "계약 일반",
+    "title": "계약 절차 주 요 내 용 - 2단계 경쟁입찰(추정가격 1억미만): 공고일… › 검사검수 ◦기한: 계약의 이행을 완료한 사실을 통지받은 날로부터 14일 이내 ※ 현행:",
+    "description": "검사검수 ◦기한: 계약의 이행을 완료한 사실을 통지받은 날로부터 14일 이내 ※ 현행: 지방자치단체를 당사자로 하는 계약에 관한 법률 시행령의 수의계약 등 한시적 특례 적용기간에 관한 고시에 따라 7일로 단축(2025.12.31.까지) ◦검사조서 생략이 가능한 경우: 계약금액 3천만 원 이하의 계약, 매각계약의 경우, 전기·가스·수도의 공급 계약 등 그 성질상 조서 작성이 필요하지 아니한 계약(지방계약법 17조 제3항) 대가 지급 기한: 청구일로부터 5일 이내(…",
+    "text": "계약 일반\n\n검사검수 ◦기한: 계약의 이행을 완료한 사실을 통지받은 날로부터 14일 이내 ※ 현행: 지방자치단체를 당사자로 하는 계약에 관한 법률 시행령의 수의계약 등 한시적 특례 적용기간에 관한 고시에 따라 7일로 단축(2025.12.31.까지) ◦검사조서 생략이 가능한 경우: 계약금액 3천만 원 이하의 계약, 매각계약의 경우, 전기·가스·수도의 공급 계약 등 그 성질상 조서 작성이 필요하지 아니한 계약(지방계약법 17조 제3항)\n대가 지급 기한: 청구일로부터 5일 이내(공휴일 및 토요일 제외) ※ 현행: 지방자치단체를 당사자로 하는 계약에 관한 법률 시행령의 수의계약 등 한시적 특례 적용기간에 관한 고시에 따라 3일로 단축(2025.12.31.까지)\n대장 등재 및 하자보수관리 관련대장정리: 통합자산(시설,물품 등), 연혁지, 시설배치도",
+    "workId": "c17-w01",
+    "blockId": "c17-w01-b15",
+    "anchor": "검사검수◦기한:계약의이행을완료한사실을통지받은"
+  },
+  {
+    "id": "c17-w01-b16",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28400,6 +32066,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b16"
   },
   {
+    "id": "c17-w01-b17",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28412,6 +32079,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b17"
   },
   {
+    "id": "c17-w01-b18",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28424,6 +32092,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b18"
   },
   {
+    "id": "c17-w01-b19",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28436,6 +32105,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b19"
   },
   {
+    "id": "c17-w01-b20",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28448,6 +32118,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b20"
   },
   {
+    "id": "c17-w01-b21",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28460,6 +32131,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b21"
   },
   {
+    "id": "c17-w01-b22",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28472,6 +32144,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b22"
   },
   {
+    "id": "c17-w01-b23",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28484,6 +32157,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b23"
   },
   {
+    "id": "c17-w01-b24",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28496,6 +32170,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b24"
   },
   {
+    "id": "c17-w01-b25",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28508,6 +32183,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b25"
   },
   {
+    "id": "c17-w01-b26",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28520,6 +32196,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b26"
   },
   {
+    "id": "c17-w01-b27",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28532,6 +32209,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b27"
   },
   {
+    "id": "c17-w01-b28",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28544,6 +32222,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b28"
   },
   {
+    "id": "c17-w01-b29",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28556,6 +32235,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b29"
   },
   {
+    "id": "c17-w01-b30",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28568,6 +32248,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b30"
   },
   {
+    "id": "c17-w01-b31",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28580,6 +32261,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b31"
   },
   {
+    "id": "c17-w01-b32",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28592,6 +32274,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b32"
   },
   {
+    "id": "c17-w01-b33",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28604,6 +32287,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b33"
   },
   {
+    "id": "c17-w01-b34",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28616,18 +32300,35 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b34"
   },
   {
+    "id": "c17-w01-b35~1",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
     "type": "매뉴얼 원문",
     "workTitle": "계약 일반",
-    "title": "TIP",
+    "title": "TIP › 계약 금액 (A) / 선금 지급액 (B) / 월별 / 기성금 청구(E) / 기성율 (C",
     "description": "▪ 선금 정산 예 (단위: 천원) 계약 금액 (A) / 선금 지급액 (B) / 월별 / 기성금 청구(E) / 기성율 (C / A) / 기성부분 대가상당액 (C) / 선금정산액 (D) / 실지급액 누적 (C-D) / 월별실 기성금 지급액 120,000 / 84,000 / 1 / 10,000 / 8% / 10,000 / 7,000 / 3,000 / 3,000 2 / 10,000 / 17% / 20,000 / 14,000 / 6,000 / 3,000 3 / 10,00…",
-    "text": "계약 일반\nTIP\n▪ 선금 정산 예\n(단위: 천원)\n계약 금액 (A) / 선금 지급액 (B) / 월별 / 기성금 청구(E) / 기성율 (C / A) / 기성부분 대가상당액 (C) / 선금정산액 (D) / 실지급액 누적 (C-D) / 월별실 기성금 지급액\n120,000 / 84,000 / 1 / 10,000 / 8% / 10,000 / 7,000 / 3,000 / 3,000\n2 / 10,000 / 17% / 20,000 / 14,000 / 6,000 / 3,000\n3 / 10,000 / 25% / 30,000 / 21,000 / 9,000 / 3,000\n4 / 10,000 / 33% / 40,000 / 28,000 / 12,000 / 3,000\n5 / 10,000 / 42% / 50,000 / 35,000 / 15,000 / 3,000\n6 / 10,000 / 50% / 60,000 / 42,000 / 18,000 / 3,000\n7 / 10,000 / 58% / 70,000 / 49,000 / 21,000 / 3,000\n8 / 10,000 / 67% / 80,000 / 56,000 / 24,000 / 3,000\n9 / 10,000 / 75% / 90,000 / 63,000 / 27,000 / 3,000\n10 / 10,000 / 83% / 100,000 / 70,000 / 30,000 / 3,000\n11 / 10,000 / 92% / 110,000 / 77,000 / 33,000 / 3,000\n12 / 10,000 / 100% / 120,000 / 84,000 / 36,000 / 3,000\n※ 기성금 청구액: 업체에서 기성부분 청구 한 금액\n※ 기성부분대가 상당액: 이번달 기성금 청구액 + 전달 기성부분대가상당액\n※ 선금 정산액: 선금지급액 * 기성부분대가상당액 / 계약금액\n※ 실지급액 누적: 실지급액 누적 해당월 기성부분대가상당액 – 해당월 선금 정산액\n※ 월별실기성금 지급액: 해당월 실지급액 누적 – 전달 실지급액 누적",
+    "text": "계약 일반\nTIP\n▪ 선금 정산 예\n(단위: 천원)\n계약 금액 (A) / 선금 지급액 (B) / 월별 / 기성금 청구(E) / 기성율 (C / A) / 기성부분 대가상당액 (C) / 선금정산액 (D) / 실지급액 누적 (C-D) / 월별실 기성금 지급액\n120,000 / 84,000 / 1 / 10,000 / 8% / 10,000 / 7,000 / 3,000 / 3,000\n2 / 10,000 / 17% / 20,000 / 14,000 / 6,000 / 3,000\n3 / 10,000 / 25% / 30,000 / 21,000 / 9,000 / 3,000\n4 / 10,000 / 33% / 40,000 / 28,000 / 12,000 / 3,000\n5 / 10,000 / 42% / 50,000 / 35,000 / 15,000 / 3,000\n6 / 10,000 / 50% / 60,000 / 42,000 / 18,000 / 3,000\n7 / 10,000 / 58% / 70,000 / 49,000 / 21,000 / 3,000\n8 / 10,000 / 67% / 80,000 / 56,000 / 24,000 / 3,000",
     "workId": "c17-w01",
-    "blockId": "c17-w01-b35"
+    "blockId": "c17-w01-b35",
+    "anchor": "계약금액(A)/선금지급액(B)/월별/기성금청"
   },
   {
+    "id": "c17-w01-b35~2",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "계약 일반",
+    "title": "TIP › 9 / 10,000 / 75% / 90,000 / 63,000 / 27,000 / 3,",
+    "description": "9 / 10,000 / 75% / 90,000 / 63,000 / 27,000 / 3,000 10 / 10,000 / 83% / 100,000 / 70,000 / 30,000 / 3,000 11 / 10,000 / 92% / 110,000 / 77,000 / 33,000 / 3,000 12 / 10,000 / 100% / 120,000 / 84,000 / 36,000 / 3,000 ※ 기성금 청구액: 업체에서 기성부분 청구 한 금액 ※ 기성부분대가 상당액: 이번…",
+    "text": "계약 일반\nTIP\n9 / 10,000 / 75% / 90,000 / 63,000 / 27,000 / 3,000\n10 / 10,000 / 83% / 100,000 / 70,000 / 30,000 / 3,000\n11 / 10,000 / 92% / 110,000 / 77,000 / 33,000 / 3,000\n12 / 10,000 / 100% / 120,000 / 84,000 / 36,000 / 3,000\n※ 기성금 청구액: 업체에서 기성부분 청구 한 금액\n※ 기성부분대가 상당액: 이번달 기성금 청구액 + 전달 기성부분대가상당액\n※ 선금 정산액: 선금지급액 * 기성부분대가상당액 / 계약금액\n※ 실지급액 누적: 실지급액 누적 해당월 기성부분대가상당액 – 해당월 선금 정산액\n※ 월별실기성금 지급액: 해당월 실지급액 누적 – 전달 실지급액 누적",
+    "workId": "c17-w01",
+    "blockId": "c17-w01-b35",
+    "anchor": "9/10,000/75%/90,000/63,0"
+  },
+  {
+    "id": "c17-w01-b36",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28640,6 +32341,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b36"
   },
   {
+    "id": "c17-w01-b37",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28652,6 +32354,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b37"
   },
   {
+    "id": "c17-w01-b38",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28664,18 +32367,49 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b38"
   },
   {
+    "id": "c17-w01-b39~1",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
     "type": "매뉴얼 원문",
     "workTitle": "계약 일반",
-    "title": "9. 하자보수(하자보수보증금 납부서[서식 8] or 하자보수보증서 징구)",
+    "title": "9. 하자보수(하자보수보증금 납부서[서식 8] or 하자보수보증서 징구) › ‣하자담보 시작일(지방계약법 시행령 제69조)",
     "description": "‣하자담보 시작일(지방계약법 시행령 제69조) - 공사계약: 전체 목적물 인수일과 준공검사완료일 중 먼저 도래한 날 - 물품,용역계약: 전체 목적물 인수일과 검사를 완료날 중 먼저 도래한 날 ‣공종별 하자담보기간(지방계약법 시행규칙 제68조) 공사별 세부공종별 책임기간 비고 상․하수도 ①철근콘크리트·철골구조부 7년 건설산업 기본법 ②관로 매설·기기설치 3년 조경 ①조경시설물 또는 조경식재 2년 건축 ①대형 공공성 건축물의 기둥 및 내력벽 10년 ②대형공공성 건축…",
-    "text": "계약 일반\n9. 하자보수(하자보수보증금 납부서[서식 8] or 하자보수보증서 징구)\n‣하자담보 시작일(지방계약법 시행령 제69조)\n- 공사계약: 전체 목적물 인수일과 준공검사완료일 중 먼저 도래한 날\n- 물품,용역계약: 전체 목적물 인수일과 검사를 완료날 중 먼저 도래한 날\n‣공종별 하자담보기간(지방계약법 시행규칙 제68조)\n공사별 세부공종별 책임기간 비고\n상․하수도 ①철근콘크리트·철골구조부 7년 건설산업 기본법\n②관로 매설·기기설치 3년\n조경 ①조경시설물 또는 조경식재 2년\n건축 ①대형 공공성 건축물의 기둥 및 내력벽 10년\n②대형공공성 건축물 중 기둥 및 내력벽 외의 구조상 주요부분과 ① 외의 건축물 중 구조상 주요부분 5년\n③건축물 중 ①·②와 전문공사를 제외한 기타 부분 1년\n전문공사 ①실내건축\n③미장·타일\n⑤도장\n⑦창호설치\n⑨판금\n⑭보일러 설치\n⑮⑫·⑭외의 건물 내 설비\n⑰보링\n⑱건축물조립(건축물의 기둥 및 내력벽의 조립을 제외하며, 이는 건축에 따름)\n②토공 2년\n공사별 세부공종별 책임기간 비고\n전문공사 ⑥석공사․조적 2년 건설산업 기본법\n⑩철물(교량,터널,철도,공항·삭도,항만·사방간척,도로,댐,상·하수도, 관개수로·매립, 부지정지, 조경, 발전·가스 및 산업설비, 기타토목공사에 해당하는 철골은 제외)\n⑫급배수,공동구,지하저수조,냉난방,환기,공기조환,자동제어,가스,배연설비\n⑯아스팔트 포장\n⑲온실설치\n④방수 3년\n⑧지붕\n⑪철근콘크리트(교량,터널,철도,공항·삭도,항만·사방간척,도로,댐,상·하수도, 관개수로·매립, 부지정지, 조경, 발전·가스 및 산업설비, 기타토목공사에 해당하는 철근콘크리트는 제외) 및 콘크리트 포장\n⑬승강기 및 인양기기 설비\n전기 배전설비 철탑공사 3년 전기 공사업법\n배전설비 철탑공사 외의 배전설비공사 2년\n그 밖의 전기설비공사 1년\n통신 그 밖의 통신공사 1년 정보통신 공사업법\n소방 피난기구, 유도등, 유도표지, 비상경보설비, 비상조명등, 비상방송설비 및 무선통신보조설비 2년 소방시설 공사업법\n자동식소화기, 옥내소화전설비, 스프링클러설비, 소방시설공사업법 간이스프링클러설비, 물분무등소화설비, 옥외소화전설비, 자동화재탐지설비, 상수도소화용수설비 및 소화활동설비(무선통신보조설비는 제외) 3년\n물품 물품 제조 및 구매 지방계약법상 규정되어 있지 않음 (물품 성질 및 실정에 맞게 기간 설정)\n용역 용역\n‣공종별 하자보수보증금율\n공종구분 하자보수 보증금률\n철도, 댐, 터널, 철강교설치, 발전설비, 교량, 상하수도구조물 등 중요 구조물 공사 및 조경공사 5%\n공항, 항만, 삭도설치, 방파제, 사방, 간척 등 공사 4%\n관개수로, 도로(포장공사를 포함한다), 매립, 상하수도관로, 하천, 일반건축 등 공사 3%\n제1호부터 제3호까지의 공사 외의 공사 2%\n물품의 제조 3%\n수리, 가공, 구매, 용역 2%\n‣하자검사(지방자치단체 입찰 및 계약집행기준 제9장 11절)\n- 하자담보 책임기간 중 연 2회 이상 정기검사\n- 하자담보 책임기간이 만료되기 14일 전부터 만료일까지의 기간 중에 최종검사\n※ 하자검사조서[서식 10], 하자보수관리부[서식 11] 작성 비치\n- 하자보수의 이행\n※ 하자보수착공신고서 제출: 하자보수 통보받은 7일 이내(설계서 첨부 및 공사이행 소요기간 명시)\n- 시급을 요하는 경우에는 즉시 하자공사 착공\n※ 하자검사조서 생략 가능: 계약금액 3천만 원 이하 공사(단, 하자보수보증급 지급각서[서식 9]는 반드시 징구)",
+    "text": "계약 일반\n9. 하자보수(하자보수보증금 납부서[서식 8] or 하자보수보증서 징구)\n‣하자담보 시작일(지방계약법 시행령 제69조)\n- 공사계약: 전체 목적물 인수일과 준공검사완료일 중 먼저 도래한 날\n- 물품,용역계약: 전체 목적물 인수일과 검사를 완료날 중 먼저 도래한 날\n‣공종별 하자담보기간(지방계약법 시행규칙 제68조)\n공사별 세부공종별 책임기간 비고\n상․하수도 ①철근콘크리트·철골구조부 7년 건설산업 기본법\n②관로 매설·기기설치 3년\n조경 ①조경시설물 또는 조경식재 2년\n건축 ①대형 공공성 건축물의 기둥 및 내력벽 10년\n②대형공공성 건축물 중 기둥 및 내력벽 외의 구조상 주요부분과 ① 외의 건축물 중 구조상 주요부분 5년\n③건축물 중 ①·②와 전문공사를 제외한 기타 부분 1년\n전문공사 ①실내건축\n③미장·타일\n⑤도장\n⑦창호설치\n⑨판금\n⑭보일러 설치\n⑮⑫·⑭외의 건물 내 설비\n⑰보링\n⑱건축물조립(건축물의 기둥 및 내력벽의 조립을 제외하며, 이는 건축에 따름)\n②토공 2년\n공사별 세부공종별 책임기간 비고\n전문공사 ⑥석공사․조적 2년 건설산업 기본법\n⑩철물(교량,터널,철도,공항·삭도,항만·사방간척,도로,댐,상·하수도, 관개수로·매립, 부지정지, 조경, 발전·가스 및 산업설비, 기타토목공사에 해당하는 철골은 제외)\n⑫급배수,공동구,지하저수조,냉난방,환기,공기조환,자동제어,가스,배연설비",
     "workId": "c17-w01",
-    "blockId": "c17-w01-b39"
+    "blockId": "c17-w01-b39",
+    "anchor": "‣하자담보시작일(지방계약법시행령제69조)"
   },
   {
+    "id": "c17-w01-b39~2",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "계약 일반",
+    "title": "9. 하자보수(하자보수보증금 납부서[서식 8] or 하자보수보증서 징구) › ⑪철근콘크리트(교량,터널,철도,공항·삭도,항만·사방간척,도로,댐,상·하수도, 관개수로·",
+    "description": "⑯아스팔트 포장 ⑲온실설치 ④방수 3년 ⑧지붕 ⑪철근콘크리트(교량,터널,철도,공항·삭도,항만·사방간척,도로,댐,상·하수도, 관개수로·매립, 부지정지, 조경, 발전·가스 및 산업설비, 기타토목공사에 해당하는 철근콘크리트는 제외) 및 콘크리트 포장 ⑬승강기 및 인양기기 설비 전기 배전설비 철탑공사 3년 전기 공사업법 배전설비 철탑공사 외의 배전설비공사 2년 그 밖의 전기설비공사 1년 통신 그 밖의 통신공사 1년 정보통신 공사업법 소방 피난기구, 유도등, 유도표지,…",
+    "text": "계약 일반\n9. 하자보수(하자보수보증금 납부서[서식 8] or 하자보수보증서 징구)\n⑯아스팔트 포장\n⑲온실설치\n④방수 3년\n⑧지붕\n⑪철근콘크리트(교량,터널,철도,공항·삭도,항만·사방간척,도로,댐,상·하수도, 관개수로·매립, 부지정지, 조경, 발전·가스 및 산업설비, 기타토목공사에 해당하는 철근콘크리트는 제외) 및 콘크리트 포장\n⑬승강기 및 인양기기 설비\n전기 배전설비 철탑공사 3년 전기 공사업법\n배전설비 철탑공사 외의 배전설비공사 2년\n그 밖의 전기설비공사 1년\n통신 그 밖의 통신공사 1년 정보통신 공사업법\n소방 피난기구, 유도등, 유도표지, 비상경보설비, 비상조명등, 비상방송설비 및 무선통신보조설비 2년 소방시설 공사업법\n자동식소화기, 옥내소화전설비, 스프링클러설비, 소방시설공사업법 간이스프링클러설비, 물분무등소화설비, 옥외소화전설비, 자동화재탐지설비, 상수도소화용수설비 및 소화활동설비(무선통신보조설비는 제외) 3년\n물품 물품 제조 및 구매 지방계약법상 규정되어 있지 않음 (물품 성질 및 실정에 맞게 기간 설정)\n용역 용역\n‣공종별 하자보수보증금율\n공종구분 하자보수 보증금률\n철도, 댐, 터널, 철강교설치, 발전설비, 교량, 상하수도구조물 등 중요 구조물 공사 및 조경공사 5%\n공항, 항만, 삭도설치, 방파제, 사방, 간척 등 공사 4%",
+    "workId": "c17-w01",
+    "blockId": "c17-w01-b39",
+    "anchor": "⑪철근콘크리트(교량,터널,철도,공항·삭도,항"
+  },
+  {
+    "id": "c17-w01-b39~3",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "계약 일반",
+    "title": "9. 하자보수(하자보수보증금 납부서[서식 8] or 하자보수보증서 징구) › 관개수로, 도로(포장공사를 포함한다), 매립, 상하수도관로, 하천, 일반건축 등 공사",
+    "description": "관개수로, 도로(포장공사를 포함한다), 매립, 상하수도관로, 하천, 일반건축 등 공사 3% 제1호부터 제3호까지의 공사 외의 공사 2% 물품의 제조 3% 수리, 가공, 구매, 용역 2% ‣하자검사(지방자치단체 입찰 및 계약집행기준 제9장 11절) - 하자담보 책임기간 중 연 2회 이상 정기검사 - 하자담보 책임기간이 만료되기 14일 전부터 만료일까지의 기간 중에 최종검사 ※ 하자검사조서[서식 10], 하자보수관리부[서식 11] 작성 비치 - 하자보수의 이행 ※…",
+    "text": "계약 일반\n9. 하자보수(하자보수보증금 납부서[서식 8] or 하자보수보증서 징구)\n관개수로, 도로(포장공사를 포함한다), 매립, 상하수도관로, 하천, 일반건축 등 공사 3%\n제1호부터 제3호까지의 공사 외의 공사 2%\n물품의 제조 3%\n수리, 가공, 구매, 용역 2%\n‣하자검사(지방자치단체 입찰 및 계약집행기준 제9장 11절)\n- 하자담보 책임기간 중 연 2회 이상 정기검사\n- 하자담보 책임기간이 만료되기 14일 전부터 만료일까지의 기간 중에 최종검사\n※ 하자검사조서[서식 10], 하자보수관리부[서식 11] 작성 비치\n- 하자보수의 이행\n※ 하자보수착공신고서 제출: 하자보수 통보받은 7일 이내(설계서 첨부 및 공사이행 소요기간 명시)\n- 시급을 요하는 경우에는 즉시 하자공사 착공\n※ 하자검사조서 생략 가능: 계약금액 3천만 원 이하 공사(단, 하자보수보증급 지급각서[서식 9]는 반드시 징구)",
+    "workId": "c17-w01",
+    "blockId": "c17-w01-b39",
+    "anchor": "관개수로,도로(포장공사를포함한다),매립,상하"
+  },
+  {
+    "id": "c17-w01-b40",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28688,6 +32422,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w01-b40"
   },
   {
+    "id": "c17-w01:form:서식1",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28700,6 +32435,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식1"
   },
   {
+    "id": "c17-w01:form:서식2",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28712,6 +32448,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식2"
   },
   {
+    "id": "c17-w01:form:서식3",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28724,6 +32461,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식3"
   },
   {
+    "id": "c17-w01:form:서식4",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28736,6 +32474,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식4"
   },
   {
+    "id": "c17-w01:form:서식5",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28748,6 +32487,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식5"
   },
   {
+    "id": "c17-w01:form:서식6",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28760,6 +32500,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식6"
   },
   {
+    "id": "c17-w01:form:서식7",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28772,6 +32513,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식7"
   },
   {
+    "id": "c17-w01:form:서식8",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28784,6 +32526,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식8"
   },
   {
+    "id": "c17-w01:form:서식9",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28796,6 +32539,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식9"
   },
   {
+    "id": "c17-w01:form:서식10",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28808,6 +32552,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식10"
   },
   {
+    "id": "c17-w01:form:서식11",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28820,6 +32565,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식11"
   },
   {
+    "id": "c17-w01:form:서식12",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28832,6 +32578,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식12"
   },
   {
+    "id": "c17-w01:form:예시1",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28844,6 +32591,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시1"
   },
   {
+    "id": "c17-w01:form:예시2",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28856,6 +32604,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시2"
   },
   {
+    "id": "c17-w01:form:예시3",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28868,6 +32617,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시3"
   },
   {
+    "id": "c17-w01:form:예시4",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28880,6 +32630,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시4"
   },
   {
+    "id": "c17-w01:form:서식0",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28892,6 +32643,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식0"
   },
   {
+    "id": "c17-w01:form:예시5",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28904,6 +32656,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시5"
   },
   {
+    "id": "c17-w01:form:예시6",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28916,6 +32669,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시6"
   },
   {
+    "id": "c17-w01:form:예시7",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28928,6 +32682,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시7"
   },
   {
+    "id": "c17-w01:form:예시8",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28940,6 +32695,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시8"
   },
   {
+    "id": "c17-w02",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28952,6 +32708,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c17-w02"
   },
   {
+    "id": "c17-w02-b1",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28964,6 +32721,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w02-b1"
   },
   {
+    "id": "c17-w02-b2",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28976,6 +32734,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w02-b2"
   },
   {
+    "id": "c17-w02-b3",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -28988,6 +32747,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w02-b3"
   },
   {
+    "id": "c17-w02-b4",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29000,6 +32760,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w02-b4"
   },
   {
+    "id": "c17-w02-b5",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29012,30 +32773,105 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w02-b5"
   },
   {
+    "id": "c17-w02-b6~1",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
     "type": "매뉴얼 원문",
     "workTitle": "계약 심사",
-    "title": "4. 계약 심사 제외 대상",
+    "title": "4. 계약 심사 제외 대상 › 공사 물가변동에 의한 설계변경 대상 사업 ◦물가변동에 따른 설계변경 금액 산정 시 행정",
     "description": "분야 대상사업 제외사유 공사 물가변동에 의한 설계변경 대상 사업 ◦물가변동에 따른 설계변경 금액 산정 시 행정기관, 한국은행 등이 조사 발표한 지수를 활용 산출하여 심사 실익 없음 ◦「지방자치단체를 당사자로 하는 계약에 관한 법률 시행령」 제73조(물가 변동으로 인한 계약금액의 조정) 사회기반시설에 대한 민간 투자사업 ◦주무관청의 고시사업에 대하여 제안서 평가 및 협상에 의한 사업추진 방식으로 심사 실익 없음 ◦「사회기반시설에 대한 민간투자법」 제9조(민간부문의…",
-    "text": "계약 심사\n4. 계약 심사 제외 대상\n분야 대상사업 제외사유\n공사 물가변동에 의한 설계변경 대상 사업 ◦물가변동에 따른 설계변경 금액 산정 시 행정기관, 한국은행 등이 조사 발표한 지수를 활용 산출하여 심사 실익 없음 ◦「지방자치단체를 당사자로 하는 계약에 관한 법률 시행령」 제73조(물가 변동으로 인한 계약금액의 조정)\n사회기반시설에 대한 민간 투자사업 ◦주무관청의 고시사업에 대하여 제안서 평가 및 협상에 의한 사업추진 방식으로 심사 실익 없음 ◦「사회기반시설에 대한 민간투자법」 제9조(민간부문의 사업제안 등)\n조달청 공사원가 사전검토 대상 사업 ◦조달청에서 사전 원가계산 하는 사업으로 심사 실익 없음 ◦「조달사업에 관한 법률 시행령」 제28조(지방자치단체 공사원가의 사전검토)\n용역 설계공모방식에 따른 발주 용역 ◦예산편성지침에 의하여 산출하고, 평가위원의 제안서 평가에 따른 사업추진 방식으로 심사 실익 없음 ◦「건축서비스산업 진흥법」 제21조(설계공모의 활성화 등)\n행사 용역 ◦공연․만찬․홍보 등 행사 용역은 출연자(초청가수 등)에 따라 가격이 상이하고, 홍보방법(TV, 신문, 라디오,인터넷 등) 및 횟수 등에 따라 가격이 결정되어 심사 곤란 ◦「계약심사업무 처리 규칙」 제4조(계약심사 제외사업) 제10호\n디자인 개발 ◦창작 및 예술성을 기초로 하고 있어 계량화할 수 있는 관련 규정이 미비하여 적정가격 심사 곤란 ◦「지방자치단체 입찰 및 계약 집행기준」 제3장 계약심사 운영요령\n통학버스 임차 용역 ◦<통학버스 임차용역 원가계산 프로그램>에 의하여 원가를 산정하는 경우 심사 실익 없음 ◦2024년도 전세 통학버스 원가 산정 검토 및 표준원가구성(행정과, 2023. 10.) ◦계약심사업무 처리 규칙」 제4조(계약심사 제외사업) 제10호\n소프트웨어사업 과업 심의 대상 사업 ◦소프트웨어사업 과업심의위원회에서 원가계산 등 소요비용을 심의하므로 심사의 실익이 없음 ◦「소프트웨어 진흥법」 제50조(소프트웨어사업 과업심의 위원회) 및 「공공소프트웨어사업 과업심의 가이드」\n물품 공연, 예술품 및 전시모형 등제작 구매 ◦연출자의 구상이 반영되어야 하는 예술창작품 성격을 갖고 있어 적정가격 심사 곤란 ◦「지방자치단체 입찰 및 계약집행기준」 제3장 계약심사 운영요령\n조달청 제3자 단가계약 또는 다수공급자계약 2단계경쟁 대상 물품 구매 ◦조달청에서 제3자단가계약 또는 다수공급자계약 2단계경쟁 대상 물품 구매로 심사 불가 ◦「조달사업에 관한 법률 시행령」 제12조(제3자를 위한 단가 계약) 및 제13조(다수공급자계약) 제3항\n분야 대상사업 제외사유\n물품 방송‧장비 구축운영 지침에 의한 심의 대상 물품 구매 ◦발주기관의 제안 요청서 심의위원회에서 추정금액을 결정하는 사항으로 심사 실익 없음 ◦「공공기관 방송장비 구축‧운영 지침」(과학기술정보통신부 고시 제2024-27호, 2024. 7. 9.)\n유류(가스) 구매 ◦유류(가스)는 한국석유공사가 매주 변동 가격을 고시하여 심사 곤란 ◦「지방자치단체 입찰 및 계약 집행기준」 제3장 계약심사 운영요령\n상품권,종량제봉투 등 규격제품 구매 ◦지정 규격제품(완제품)에 대한 구입으로 심사 실익 없음 ◦「지방자치단체 입찰 및 계약 집행기준」 제3장 계약심사 운영요령\n농‧축‧수산물등 (급식 식재료 포함) 구매 ◦물품 특성 상 구매시기, 생산지, 신선도, 질적 차이 등에 따라 가격이 결정되어 심사 곤란 ※ 급식 식재료, 위탁급식 포함 ◦「지방자치단체 입찰 및 계약 집행기준」 제3장 계약심사 운영요령 ◦ 「계약심사업무 처리 규칙」 제4조(계약심사 제외사업) 제10호\n동‧식물(화환 등 포함) 구매 ◦동․식물의 경우 건강이나 상태, 희소성 등에 따라 가격이 달라지므로 기준가격 설정 곤란 ◦「계약심사업무 처리 규칙」 제4조(계약심사 제외사업) 제7조 및 제10호\n도서 구매 ◦도서 입찰 시 기초금액의 정가 입찰을 권고하고 있어 적정 금액 심사 곤란 ◦「출판문화산업 진흥법」 제22조(간행물 정가 표시 및 판매)\n공사 용역 물품 기타 계약심사의 실익이 없는 사업 ◦위 외 별도 부서(기관, 위원회 등)에서 원가심사에 준하는 규격 및 경비 등을 심사하거나, 지침‧고시 등에 의해 단가가 정해진 경우 심사의 실익이 없음 ◦「계약심사업무 처리 규칙」 제4조(계약심사 제외사업) 제10호\n협상에 의한 계약체결 대상 사업 ◦협상에 의한 계약체결 대상 사업으로 제안서 평가 위원회에서 심사하여 적정금액 심사 곤란 ◦「지방자치단체를 당사자로 하는 계약에 관한 법률 시행령」 제43조(협상에 의한 계약체결)\n조달청의뢰 계약체결 대상 사업 ◦예산편성지침에 의하여 산출하고, 조달청에서 계약하는 사업으로 심사 실익 없음 ◦「조달사업에 관한 법률 시행령」 제27조(조달업무의 지원 및 대행)\n기타 규칙 제4조 제10호에 의한 사업 ◦사업의 성격이나 취지에 비추어 심사가 불필요하다고 전북특별자치도교육감이 인정하는 사업 ◦「계약심사업무 처리 규칙」 제4조(계약심사 제외사업) 제10호",
+    "text": "계약 심사\n4. 계약 심사 제외 대상\n분야 대상사업 제외사유\n공사 물가변동에 의한 설계변경 대상 사업 ◦물가변동에 따른 설계변경 금액 산정 시 행정기관, 한국은행 등이 조사 발표한 지수를 활용 산출하여 심사 실익 없음 ◦「지방자치단체를 당사자로 하는 계약에 관한 법률 시행령」 제73조(물가 변동으로 인한 계약금액의 조정)\n사회기반시설에 대한 민간 투자사업 ◦주무관청의 고시사업에 대하여 제안서 평가 및 협상에 의한 사업추진 방식으로 심사 실익 없음 ◦「사회기반시설에 대한 민간투자법」 제9조(민간부문의 사업제안 등)\n조달청 공사원가 사전검토 대상 사업 ◦조달청에서 사전 원가계산 하는 사업으로 심사 실익 없음 ◦「조달사업에 관한 법률 시행령」 제28조(지방자치단체 공사원가의 사전검토)\n용역 설계공모방식에 따른 발주 용역 ◦예산편성지침에 의하여 산출하고, 평가위원의 제안서 평가에 따른 사업추진 방식으로 심사 실익 없음 ◦「건축서비스산업 진흥법」 제21조(설계공모의 활성화 등)",
     "workId": "c17-w02",
-    "blockId": "c17-w02-b6"
+    "blockId": "c17-w02-b6",
+    "anchor": "공사물가변동에의한설계변경대상사업◦물가변동에따"
   },
   {
+    "id": "c17-w02-b6~2",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
     "type": "매뉴얼 원문",
     "workTitle": "계약 심사",
-    "title": "5. 분야별 계약심사(원가) 서류 제출 목록",
-    "description": "‣공사 구분 제출 서류 목록 필수 ◦공사계약 심사 요청서 [서식 13] ◦설계도면, 공사설계 설명서(공사 시방서), 현장설명서, 과업내용서, 관급자재 현황 ◦설계 내역서 (비목별 기초계산서, 수량산출서, 노무비·기계경비 산출서, 일위대가표, 단가산출서, 견적서 등) 기타 필요 ◦소프트웨어 자료 (엑셀 내역 파일, Auto CAD 도면 등) ※ 엑셀 파일은 연계 공종 간 링크된 형식으로 제출 ◦품셈과 표준시장단가를 동시에 적용하는 경우 품셈을 적용한 내역서와 표준…",
-    "text": "계약 심사\n5. 분야별 계약심사(원가) 서류 제출 목록\n‣공사\n구분 제출 서류 목록\n필수 ◦공사계약 심사 요청서 [서식 13] ◦설계도면, 공사설계 설명서(공사 시방서), 현장설명서, 과업내용서, 관급자재 현황 ◦설계 내역서 (비목별 기초계산서, 수량산출서, 노무비·기계경비 산출서, 일위대가표, 단가산출서, 견적서 등)\n기타 필요 ◦소프트웨어 자료 (엑셀 내역 파일, Auto CAD 도면 등) ※ 엑셀 파일은 연계 공종 간 링크된 형식으로 제출 ◦품셈과 표준시장단가를 동시에 적용하는 경우 품셈을 적용한 내역서와 표준시장단가를 적용한 내역서 ◦신기술·신공법 관련 자료 ◦방침서, 계획서, 기술 심사 조건, 내진 구조 성능 확인서 등 기타 심사에 필요한 자료\n‣용역\n구분 제출 서류 목록\n필수 ◦(기술, 일반, 학술) 용역 계약 심사 요청서 [서식 14] ◦과업 내용서 ◦설계 내역서 (비목별 기초계산서, 수량산출서, 노무비 산출근거, 일위대가표 및단가산출서, 견적서 등)\n기타 필요 ◦소프트웨어 참고자료 (엑셀 내역 파일 등) ◦방침서 (내부규정 문서) ◦계획서 등 기타 심사에 필요한 서류\n‣물품\n구분 제출 서류 목록\n필수 ◦물품 계약 심사요청서 서식 15 ◦산출 기초 조사서 ◦규격서 및 설명서 (사양서 등) ◦설계 내역서 (제조 원가계산서, 일위대가표 등)\n기타 필요 ◦과업내용서, 설계설명서 (시방서 등) ◦수입물품 관련 서류 (수입원, 수입물품 원가계산서 등) ◦수리 관련 서류 (수리 명세서, 수리단위별 내역서 등) ◦임차 관련 서류 (임차대상, 기간, 장소 및 임차조건 등) ◦시장재고, 유통여부, 견적서 등 기타 참고자료\n‣설계변경\n구분 제출 서류 목록\n필수 ◦설계변경 심사 요청서[서식 16] ◦설계도면, 공사 설계 설명서(공사시방서), 현장 설명서, 과업내용서 ◦설계내역서(비목별 기초계산서, 수량산출서, 노무비 산출 근거, 기계 경비 산출서, 일위대가표 및 단가산출서, 견적서, 계약내역서, 예정가격 산출내역서 등)\n기타 필요 소프트웨어 참고자료(엑셀 내역 파일, Auto Cad 도면)",
+    "title": "4. 계약 심사 제외 대상 › 행사 용역 ◦공연․만찬․홍보 등 행사 용역은 출연자(초청가수 등)에 따라 가격이 상이하",
+    "description": "행사 용역 ◦공연․만찬․홍보 등 행사 용역은 출연자(초청가수 등)에 따라 가격이 상이하고, 홍보방법(TV, 신문, 라디오,인터넷 등) 및 횟수 등에 따라 가격이 결정되어 심사 곤란 ◦「계약심사업무 처리 규칙」 제4조(계약심사 제외사업) 제10호 디자인 개발 ◦창작 및 예술성을 기초로 하고 있어 계량화할 수 있는 관련 규정이 미비하여 적정가격 심사 곤란 ◦「지방자치단체 입찰 및 계약 집행기준」 제3장 계약심사 운영요령 통학버스 임차 용역 ◦<통학버스 임차용역 원가…",
+    "text": "계약 심사\n4. 계약 심사 제외 대상\n행사 용역 ◦공연․만찬․홍보 등 행사 용역은 출연자(초청가수 등)에 따라 가격이 상이하고, 홍보방법(TV, 신문, 라디오,인터넷 등) 및 횟수 등에 따라 가격이 결정되어 심사 곤란 ◦「계약심사업무 처리 규칙」 제4조(계약심사 제외사업) 제10호\n디자인 개발 ◦창작 및 예술성을 기초로 하고 있어 계량화할 수 있는 관련 규정이 미비하여 적정가격 심사 곤란 ◦「지방자치단체 입찰 및 계약 집행기준」 제3장 계약심사 운영요령\n통학버스 임차 용역 ◦<통학버스 임차용역 원가계산 프로그램>에 의하여 원가를 산정하는 경우 심사 실익 없음 ◦2024년도 전세 통학버스 원가 산정 검토 및 표준원가구성(행정과, 2023. 10.) ◦계약심사업무 처리 규칙」 제4조(계약심사 제외사업) 제10호\n소프트웨어사업 과업 심의 대상 사업 ◦소프트웨어사업 과업심의위원회에서 원가계산 등 소요비용을 심의하므로 심사의 실익이 없음 ◦「소프트웨어 진흥법」 제50조(소프트웨어사업 과업심의 위원회) 및 「공공소프트웨어사업 과업심의 가이드」",
     "workId": "c17-w02",
-    "blockId": "c17-w02-b7"
+    "blockId": "c17-w02-b6",
+    "anchor": "행사용역◦공연․만찬․홍보등행사용역은출연자(초"
   },
   {
+    "id": "c17-w02-b6~3",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "계약 심사",
+    "title": "4. 계약 심사 제외 대상 › 물품 공연, 예술품 및 전시모형 등제작 구매 ◦연출자의 구상이 반영되어야 하는 예술창작",
+    "description": "물품 공연, 예술품 및 전시모형 등제작 구매 ◦연출자의 구상이 반영되어야 하는 예술창작품 성격을 갖고 있어 적정가격 심사 곤란 ◦「지방자치단체 입찰 및 계약집행기준」 제3장 계약심사 운영요령 조달청 제3자 단가계약 또는 다수공급자계약 2단계경쟁 대상 물품 구매 ◦조달청에서 제3자단가계약 또는 다수공급자계약 2단계경쟁 대상 물품 구매로 심사 불가 ◦「조달사업에 관한 법률 시행령」 제12조(제3자를 위한 단가 계약) 및 제13조(다수공급자계약) 제3항 분야 대상사업…",
+    "text": "계약 심사\n4. 계약 심사 제외 대상\n물품 공연, 예술품 및 전시모형 등제작 구매 ◦연출자의 구상이 반영되어야 하는 예술창작품 성격을 갖고 있어 적정가격 심사 곤란 ◦「지방자치단체 입찰 및 계약집행기준」 제3장 계약심사 운영요령\n조달청 제3자 단가계약 또는 다수공급자계약 2단계경쟁 대상 물품 구매 ◦조달청에서 제3자단가계약 또는 다수공급자계약 2단계경쟁 대상 물품 구매로 심사 불가 ◦「조달사업에 관한 법률 시행령」 제12조(제3자를 위한 단가 계약) 및 제13조(다수공급자계약) 제3항\n분야 대상사업 제외사유\n물품 방송‧장비 구축운영 지침에 의한 심의 대상 물품 구매 ◦발주기관의 제안 요청서 심의위원회에서 추정금액을 결정하는 사항으로 심사 실익 없음 ◦「공공기관 방송장비 구축‧운영 지침」(과학기술정보통신부 고시 제2024-27호, 2024. 7. 9.)\n유류(가스) 구매 ◦유류(가스)는 한국석유공사가 매주 변동 가격을 고시하여 심사 곤란 ◦「지방자치단체 입찰 및 계약 집행기준」 제3장 계약심사 운영요령\n상품권,종량제봉투 등 규격제품 구매 ◦지정 규격제품(완제품)에 대한 구입으로 심사 실익 없음 ◦「지방자치단체 입찰 및 계약 집행기준」 제3장 계약심사 운영요령",
+    "workId": "c17-w02",
+    "blockId": "c17-w02-b6",
+    "anchor": "물품공연,예술품및전시모형등제작구매◦연출자의구"
+  },
+  {
+    "id": "c17-w02-b6~4",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "계약 심사",
+    "title": "4. 계약 심사 제외 대상 › 농‧축‧수산물등 (급식 식재료 포함) 구매 ◦물품 특성 상 구매시기, 생산지, 신선도,",
+    "description": "농‧축‧수산물등 (급식 식재료 포함) 구매 ◦물품 특성 상 구매시기, 생산지, 신선도, 질적 차이 등에 따라 가격이 결정되어 심사 곤란 ※ 급식 식재료, 위탁급식 포함 ◦「지방자치단체 입찰 및 계약 집행기준」 제3장 계약심사 운영요령 ◦ 「계약심사업무 처리 규칙」 제4조(계약심사 제외사업) 제10호 동‧식물(화환 등 포함) 구매 ◦동․식물의 경우 건강이나 상태, 희소성 등에 따라 가격이 달라지므로 기준가격 설정 곤란 ◦「계약심사업무 처리 규칙」 제4조(계약심사…",
+    "text": "계약 심사\n4. 계약 심사 제외 대상\n농‧축‧수산물등 (급식 식재료 포함) 구매 ◦물품 특성 상 구매시기, 생산지, 신선도, 질적 차이 등에 따라 가격이 결정되어 심사 곤란 ※ 급식 식재료, 위탁급식 포함 ◦「지방자치단체 입찰 및 계약 집행기준」 제3장 계약심사 운영요령 ◦ 「계약심사업무 처리 규칙」 제4조(계약심사 제외사업) 제10호\n동‧식물(화환 등 포함) 구매 ◦동․식물의 경우 건강이나 상태, 희소성 등에 따라 가격이 달라지므로 기준가격 설정 곤란 ◦「계약심사업무 처리 규칙」 제4조(계약심사 제외사업) 제7조 및 제10호\n도서 구매 ◦도서 입찰 시 기초금액의 정가 입찰을 권고하고 있어 적정 금액 심사 곤란 ◦「출판문화산업 진흥법」 제22조(간행물 정가 표시 및 판매)\n공사 용역 물품 기타 계약심사의 실익이 없는 사업 ◦위 외 별도 부서(기관, 위원회 등)에서 원가심사에 준하는 규격 및 경비 등을 심사하거나, 지침‧고시 등에 의해 단가가 정해진 경우 심사의 실익이 없음 ◦「계약심사업무 처리 규칙」 제4조(계약심사 제외사업) 제10호",
+    "workId": "c17-w02",
+    "blockId": "c17-w02-b6",
+    "anchor": "농‧축‧수산물등(급식식재료포함)구매◦물품특성"
+  },
+  {
+    "id": "c17-w02-b6~5",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "계약 심사",
+    "title": "4. 계약 심사 제외 대상 › 협상에 의한 계약체결 대상 사업 ◦협상에 의한 계약체결 대상 사업으로 제안서 평가 위원",
+    "description": "협상에 의한 계약체결 대상 사업 ◦협상에 의한 계약체결 대상 사업으로 제안서 평가 위원회에서 심사하여 적정금액 심사 곤란 ◦「지방자치단체를 당사자로 하는 계약에 관한 법률 시행령」 제43조(협상에 의한 계약체결) 조달청의뢰 계약체결 대상 사업 ◦예산편성지침에 의하여 산출하고, 조달청에서 계약하는 사업으로 심사 실익 없음 ◦「조달사업에 관한 법률 시행령」 제27조(조달업무의 지원 및 대행) 기타 규칙 제4조 제10호에 의한 사업 ◦사업의 성격이나 취지에 비추어 심…",
+    "text": "계약 심사\n4. 계약 심사 제외 대상\n협상에 의한 계약체결 대상 사업 ◦협상에 의한 계약체결 대상 사업으로 제안서 평가 위원회에서 심사하여 적정금액 심사 곤란 ◦「지방자치단체를 당사자로 하는 계약에 관한 법률 시행령」 제43조(협상에 의한 계약체결)\n조달청의뢰 계약체결 대상 사업 ◦예산편성지침에 의하여 산출하고, 조달청에서 계약하는 사업으로 심사 실익 없음 ◦「조달사업에 관한 법률 시행령」 제27조(조달업무의 지원 및 대행)\n기타 규칙 제4조 제10호에 의한 사업 ◦사업의 성격이나 취지에 비추어 심사가 불필요하다고 전북특별자치도교육감이 인정하는 사업 ◦「계약심사업무 처리 규칙」 제4조(계약심사 제외사업) 제10호",
+    "workId": "c17-w02",
+    "blockId": "c17-w02-b6",
+    "anchor": "협상에의한계약체결대상사업◦협상에의한계약체결대"
+  },
+  {
+    "id": "c17-w02-b7~1",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "계약 심사",
+    "title": "5. 분야별 계약심사(원가) 서류 제출 목록 › 필수 ◦공사계약 심사 요청서 [서식 13] ◦설계도면, 공사설계 설명서(공사 시방서),",
+    "description": "‣공사 구분 제출 서류 목록 필수 ◦공사계약 심사 요청서 [서식 13] ◦설계도면, 공사설계 설명서(공사 시방서), 현장설명서, 과업내용서, 관급자재 현황 ◦설계 내역서 (비목별 기초계산서, 수량산출서, 노무비·기계경비 산출서, 일위대가표, 단가산출서, 견적서 등) 기타 필요 ◦소프트웨어 자료 (엑셀 내역 파일, Auto CAD 도면 등) ※ 엑셀 파일은 연계 공종 간 링크된 형식으로 제출 ◦품셈과 표준시장단가를 동시에 적용하는 경우 품셈을 적용한 내역서와 표준…",
+    "text": "계약 심사\n5. 분야별 계약심사(원가) 서류 제출 목록\n‣공사\n구분 제출 서류 목록\n필수 ◦공사계약 심사 요청서 [서식 13] ◦설계도면, 공사설계 설명서(공사 시방서), 현장설명서, 과업내용서, 관급자재 현황 ◦설계 내역서 (비목별 기초계산서, 수량산출서, 노무비·기계경비 산출서, 일위대가표, 단가산출서, 견적서 등)\n기타 필요 ◦소프트웨어 자료 (엑셀 내역 파일, Auto CAD 도면 등) ※ 엑셀 파일은 연계 공종 간 링크된 형식으로 제출 ◦품셈과 표준시장단가를 동시에 적용하는 경우 품셈을 적용한 내역서와 표준시장단가를 적용한 내역서 ◦신기술·신공법 관련 자료 ◦방침서, 계획서, 기술 심사 조건, 내진 구조 성능 확인서 등 기타 심사에 필요한 자료\n‣용역\n구분 제출 서류 목록\n필수 ◦(기술, 일반, 학술) 용역 계약 심사 요청서 [서식 14] ◦과업 내용서 ◦설계 내역서 (비목별 기초계산서, 수량산출서, 노무비 산출근거, 일위대가표 및단가산출서, 견적서 등)\n기타 필요 ◦소프트웨어 참고자료 (엑셀 내역 파일 등) ◦방침서 (내부규정 문서) ◦계획서 등 기타 심사에 필요한 서류\n‣물품\n구분 제출 서류 목록",
+    "workId": "c17-w02",
+    "blockId": "c17-w02-b7",
+    "anchor": "필수◦공사계약심사요청서[서식13]◦설계도면,"
+  },
+  {
+    "id": "c17-w02-b7~2",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "계약 심사",
+    "title": "5. 분야별 계약심사(원가) 서류 제출 목록 › 필수 ◦물품 계약 심사요청서 서식 15 ◦산출 기초 조사서 ◦규격서 및 설명서 (사양서",
+    "description": "필수 ◦물품 계약 심사요청서 서식 15 ◦산출 기초 조사서 ◦규격서 및 설명서 (사양서 등) ◦설계 내역서 (제조 원가계산서, 일위대가표 등) 기타 필요 ◦과업내용서, 설계설명서 (시방서 등) ◦수입물품 관련 서류 (수입원, 수입물품 원가계산서 등) ◦수리 관련 서류 (수리 명세서, 수리단위별 내역서 등) ◦임차 관련 서류 (임차대상, 기간, 장소 및 임차조건 등) ◦시장재고, 유통여부, 견적서 등 기타 참고자료 ‣설계변경 구분 제출 서류 목록 필수 ◦설계변경…",
+    "text": "계약 심사\n5. 분야별 계약심사(원가) 서류 제출 목록\n필수 ◦물품 계약 심사요청서 서식 15 ◦산출 기초 조사서 ◦규격서 및 설명서 (사양서 등) ◦설계 내역서 (제조 원가계산서, 일위대가표 등)\n기타 필요 ◦과업내용서, 설계설명서 (시방서 등) ◦수입물품 관련 서류 (수입원, 수입물품 원가계산서 등) ◦수리 관련 서류 (수리 명세서, 수리단위별 내역서 등) ◦임차 관련 서류 (임차대상, 기간, 장소 및 임차조건 등) ◦시장재고, 유통여부, 견적서 등 기타 참고자료\n‣설계변경\n구분 제출 서류 목록\n필수 ◦설계변경 심사 요청서[서식 16] ◦설계도면, 공사 설계 설명서(공사시방서), 현장 설명서, 과업내용서 ◦설계내역서(비목별 기초계산서, 수량산출서, 노무비 산출 근거, 기계 경비 산출서, 일위대가표 및 단가산출서, 견적서, 계약내역서, 예정가격 산출내역서 등)\n기타 필요 소프트웨어 참고자료(엑셀 내역 파일, Auto Cad 도면)",
+    "workId": "c17-w02",
+    "blockId": "c17-w02-b7",
+    "anchor": "필수◦물품계약심사요청서서식15◦산출기초조사서"
+  },
+  {
+    "id": "c17-w02-b8",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29048,6 +32884,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w02-b8"
   },
   {
+    "id": "c17-w02-b9",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29060,6 +32897,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w02-b9"
   },
   {
+    "id": "c17-w02-b10",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29072,6 +32910,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w02-b10"
   },
   {
+    "id": "c17-w02:form:서식13",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29084,6 +32923,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식13"
   },
   {
+    "id": "c17-w02:form:서식14",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29096,6 +32936,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식14"
   },
   {
+    "id": "c17-w02:form:서식15",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29108,6 +32949,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식15"
   },
   {
+    "id": "c17-w02:form:서식16",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29120,6 +32962,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식16"
   },
   {
+    "id": "c17-w03",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29132,6 +32975,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c17-w03"
   },
   {
+    "id": "c17-w03-b1",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29144,6 +32988,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w03-b1"
   },
   {
+    "id": "c17-w03-b2",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29156,18 +33001,35 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w03-b2"
   },
   {
+    "id": "c17-w03-b3~1",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
     "type": "매뉴얼 원문",
     "workTitle": "계약의 유형",
-    "title": "계약구분 내 용 공사 계약 건설공사 (건설산업기본법 시행령) 종합공사 토…",
+    "title": "계약구분 내 용 공사 계약 건설공사 (건설산업기본법 시행령) 종합공사 토… › 공사 계약 건설공사 (건설산업기본법 시행령) 종합공사 토목, 건축, 토목・건축, 산업・",
     "description": "계약구분 내 용 공사 계약 건설공사 (건설산업기본법 시행령) 종합공사 토목, 건축, 토목・건축, 산업・환경설비, 조경공사업 총 5종의 공사 계약 전문 공사 지반조성・포장공사, 실내건축공사, 금속창호・지붕건축물조립공사, 도장・습식・방수・석공사, 조경식재・시설물공사, 철근・콘크리트공사, 구조물해체・비계 공사, 상・하수도설비공사, 철도・궤도공사, 철강구조물공사, 수중・준설공사, 승강기・삭도공사, 기계가스설비공사, 가스난방공사 등 총 14종의 공사 계약 전기공사 (전기…",
-    "text": "계약의 유형\n\n계약구분 내 용\n공사 계약 건설공사 (건설산업기본법 시행령) 종합공사 토목, 건축, 토목・건축, 산업・환경설비, 조경공사업 총 5종의 공사 계약\n전문 공사 지반조성・포장공사, 실내건축공사, 금속창호・지붕건축물조립공사, 도장・습식・방수・석공사, 조경식재・시설물공사, 철근・콘크리트공사, 구조물해체・비계 공사, 상・하수도설비공사, 철도・궤도공사, 철강구조물공사, 수중・준설공사, 승강기・삭도공사, 기계가스설비공사, 가스난방공사 등 총 14종의 공사 계약\n전기공사 (전기공사업법) ◦전기공사업법에 따른 계약 ◦전기공사는 전기공사업자가 아니면 도급받거나 시공 불가 ※ 전기공사업법 제3조에 명시된 공사는 예외적으로 전기공사업자가 아니더라도 시공 가능 ◦건설공사와 분리 발주 대상(같은 법 제11조)\n정보통신공사 (정보통신공사업법) ◦정보통신공사업법에 따른 계약 ◦정보통신공사는 정보통신공사업자가 아니면 도급받거나 시공 불가 ※ 정보통신공사업법 제3조에 명시된 공사는 예외적으로 정보통신공사업자가 아니더라도 시공 가능 ◦정보통신공사의 종류 - 통신설비, 방송설비, 정보설비, 기타설비(정보통신전용 전기시설설비) ◦건설공사와 분리발주 대상(같은 법 제25조)\n소방시설공사 (소방시설공사업법) ◦소방시설공사업법에 따른 계약 ◦소방시설공사업의 종류 - 전문소방시설공사업(모든 특정시설공사) - 일반소방시설공사업[연면적 1만㎡ 미만 특정소방대상에 설치되는(기계분야 ․ 전기분야)] - 소방공사감리업(소방공사의 품질 ․ 시공 관리에 대한 기술지도 ) - 방염처리업(화재예방, 소방시설 설치 및 관리에 관한 법률 제20조에 따른 방염대상물품에 대하여 방염처리 하는 영업) - 전문소방시설설계업(모든 특정소방대상물 소방시설의 설계) - 일반소방시설설계업[연면적 3만㎡ 미만 특정소방대상물 소방설계(기계분야 ․ 전기분야)] ◦건설공사와 분리발주 대상(같은 법 제21조)\n기타공사 문화재공사, 환경 관련 시설물 공사 계약 등\n물 품 계 약 구매, 제조구매 등 ◦구매계약: 시중 유통품을 구입하는 계약 ◦제조구매계약: 발주자의 요구에 따라 제조된 물품을 구매하는 계약 - 정부지원 특정법률 준수의무: 중소기업제품구매 촉진 및 판로지원에 관한 법률, 중증장애인생산품 우선구매 특별법, 여성기업지원에 관한 법률 등\n용 역 계 약 기술용역 건설기술용역, 엔지니어링사업, 건설사업관리, 공사설계・감리・측량용역 계약\n학술연구용역 정책의 개발 및 연구, 수요・공급의 예측 용역 계약\n일반용역 정보통신관련용역, 폐기물처리용역, 시설물관리・청소・경비 용역, 육상운송용역, 학술용역, 광고 및 디자인용역, 장비유지보수용역 등(기술용역과 학술연구용역을 제외한 나머지 용역)",
+    "text": "계약의 유형\n\n계약구분 내 용\n공사 계약 건설공사 (건설산업기본법 시행령) 종합공사 토목, 건축, 토목・건축, 산업・환경설비, 조경공사업 총 5종의 공사 계약\n전문 공사 지반조성・포장공사, 실내건축공사, 금속창호・지붕건축물조립공사, 도장・습식・방수・석공사, 조경식재・시설물공사, 철근・콘크리트공사, 구조물해체・비계 공사, 상・하수도설비공사, 철도・궤도공사, 철강구조물공사, 수중・준설공사, 승강기・삭도공사, 기계가스설비공사, 가스난방공사 등 총 14종의 공사 계약\n전기공사 (전기공사업법) ◦전기공사업법에 따른 계약 ◦전기공사는 전기공사업자가 아니면 도급받거나 시공 불가 ※ 전기공사업법 제3조에 명시된 공사는 예외적으로 전기공사업자가 아니더라도 시공 가능 ◦건설공사와 분리 발주 대상(같은 법 제11조)\n정보통신공사 (정보통신공사업법) ◦정보통신공사업법에 따른 계약 ◦정보통신공사는 정보통신공사업자가 아니면 도급받거나 시공 불가 ※ 정보통신공사업법 제3조에 명시된 공사는 예외적으로 정보통신공사업자가 아니더라도 시공 가능 ◦정보통신공사의 종류 - 통신설비, 방송설비, 정보설비, 기타설비(정보통신전용 전기시설설비) ◦건설공사와 분리발주 대상(같은 법 제25조)",
     "workId": "c17-w03",
-    "blockId": "c17-w03-b3"
+    "blockId": "c17-w03-b3",
+    "anchor": "공사계약건설공사(건설산업기본법시행령)종합공사"
   },
   {
+    "id": "c17-w03-b3~2",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "계약의 유형",
+    "title": "계약구분 내 용 공사 계약 건설공사 (건설산업기본법 시행령) 종합공사 토… › 소방시설공사 (소방시설공사업법) ◦소방시설공사업법에 따른 계약 ◦소방시설공사업의 종류",
+    "description": "소방시설공사 (소방시설공사업법) ◦소방시설공사업법에 따른 계약 ◦소방시설공사업의 종류 - 전문소방시설공사업(모든 특정시설공사) - 일반소방시설공사업[연면적 1만㎡ 미만 특정소방대상에 설치되는(기계분야 ․ 전기분야)] - 소방공사감리업(소방공사의 품질 ․ 시공 관리에 대한 기술지도 ) - 방염처리업(화재예방, 소방시설 설치 및 관리에 관한 법률 제20조에 따른 방염대상물품에 대하여 방염처리 하는 영업) - 전문소방시설설계업(모든 특정소방대상물 소방시설의 설계) -…",
+    "text": "계약의 유형\n\n소방시설공사 (소방시설공사업법) ◦소방시설공사업법에 따른 계약 ◦소방시설공사업의 종류 - 전문소방시설공사업(모든 특정시설공사) - 일반소방시설공사업[연면적 1만㎡ 미만 특정소방대상에 설치되는(기계분야 ․ 전기분야)] - 소방공사감리업(소방공사의 품질 ․ 시공 관리에 대한 기술지도 ) - 방염처리업(화재예방, 소방시설 설치 및 관리에 관한 법률 제20조에 따른 방염대상물품에 대하여 방염처리 하는 영업) - 전문소방시설설계업(모든 특정소방대상물 소방시설의 설계) - 일반소방시설설계업[연면적 3만㎡ 미만 특정소방대상물 소방설계(기계분야 ․ 전기분야)] ◦건설공사와 분리발주 대상(같은 법 제21조)\n기타공사 문화재공사, 환경 관련 시설물 공사 계약 등\n물 품 계 약 구매, 제조구매 등 ◦구매계약: 시중 유통품을 구입하는 계약 ◦제조구매계약: 발주자의 요구에 따라 제조된 물품을 구매하는 계약 - 정부지원 특정법률 준수의무: 중소기업제품구매 촉진 및 판로지원에 관한 법률, 중증장애인생산품 우선구매 특별법, 여성기업지원에 관한 법률 등\n용 역 계 약 기술용역 건설기술용역, 엔지니어링사업, 건설사업관리, 공사설계・감리・측량용역 계약\n학술연구용역 정책의 개발 및 연구, 수요・공급의 예측 용역 계약\n일반용역 정보통신관련용역, 폐기물처리용역, 시설물관리・청소・경비 용역, 육상운송용역, 학술용역, 광고 및 디자인용역, 장비유지보수용역 등(기술용역과 학술연구용역을 제외한 나머지 용역)",
+    "workId": "c17-w03",
+    "blockId": "c17-w03-b3",
+    "anchor": "소방시설공사(소방시설공사업법)◦소방시설공사업"
+  },
+  {
+    "id": "c17-w03-b4",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29180,6 +33042,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w03-b4"
   },
   {
+    "id": "c17-w03-b5",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29192,6 +33055,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w03-b5"
   },
   {
+    "id": "c17-w03-b6",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29204,18 +33068,35 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w03-b6"
   },
   {
+    "id": "c17-w03-b7~1",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
     "type": "매뉴얼 원문",
     "workTitle": "계약의 유형",
-    "title": "계약구분 내용 계약이행기간 단년도계약 이행기간이 해당 연도 내에 있으며,…",
+    "title": "계약구분 내용 계약이행기간 단년도계약 이행기간이 해당 연도 내에 있으며,… › 계약이행기간 단년도계약 이행기간이 해당 연도 내에 있으며, 해당 연도의 예산 범위 내에",
     "description": "계약구분 내용 계약이행기간 단년도계약 이행기간이 해당 연도 내에 있으며, 해당 연도의 예산 범위 내에서 체결하는 계약 장기계속계약 ◦수년간 계속하여 존속할 필요가 있거나 그 이행에 수년을 요하는 경우 체결하는 계약 - 공사이행에 수년을 요하며, 설계서 등에 전체의 공사내용이 확정된 공사 ▷ 해당 연도 분 예산확보(장기간 총사업비 예산 미확보) ▷ 같은 회계연도 내에서 차수 계약 실시 ▷ 입찰공고 시 총 사업 기간 및 금액을 부기하며, 매년 예산범위 내에서 계약체…",
-    "text": "계약의 유형\n\n계약구분 내용\n계약이행기간 단년도계약 이행기간이 해당 연도 내에 있으며, 해당 연도의 예산 범위 내에서 체결하는 계약\n장기계속계약 ◦수년간 계속하여 존속할 필요가 있거나 그 이행에 수년을 요하는 경우 체결하는 계약 - 공사이행에 수년을 요하며, 설계서 등에 전체의 공사내용이 확정된 공사 ▷ 해당 연도 분 예산확보(장기간 총사업비 예산 미확보) ▷ 같은 회계연도 내에서 차수 계약 실시 ▷ 입찰공고 시 총 사업 기간 및 금액을 부기하며, 매년 예산범위 내에서 계약체결 및 계약 이행함\n계속비 계약 ◦완성에 수년을 요하는 공사, 제조 및 연구개발 시 체결하는 계약\n- 학교신설, 청사이전 등 계속비 예산으로 편성된 사업\n▷ 총사업비 예산 확보 ▷ 입찰공고 시 총 사업 기간 및 금액을 부기하며, 총 사업 금액으로 계약체결 및 계약 이행함\n총액 / 단가여부 총액계약 해당 계약목적물 전체에 대하여 총액으로 체결하는 계약\n단가계약 일정기간 계속 계약을 체결할 필요가 있을 때 해당 연도 예산범위 안에서 단가에 대해 체결하는 계약(지방계약법 제25조)\n금액 확정 여부 확정계약 계약금액 확정 후 체결하는 계약\n개산계약 계약금액을 확정하지 않고 개산 가격으로 체결하는 계약으로, 사후정산 필요(지방계약법 제27조)\n계약자수 단독계약 계약상대자를 1인으로 하여 체결하는 계약\n공동계약 ◦계약상대자를 2인 이상으로 결성된 공동수급체와 체결하는 계약(지방계약법 제29조) - 계약이행책임방식: 분담이행방식(각자), 공동이행방식(공동), 주계약자관리방식 (1차, 주계약자) ※ 입찰공고 시, 공동계약 이행방식과 구성원 자격제한사항을 명시하며 구성원 일부 또는 모두가 입찰참가자격을 각각 구비하도록 제한해서는 안됨 ※ 지역의무 공동도급제도: 건설업 등의 균형발전을 위하여 필요하다고 인정하는 공사의 경우에는 공사현장을 관할하는 특별시·광역시 및 도에 주된 영업소가 있는 자 중 일정 비율 이상을 수급체로 구성해야 하는 제도",
+    "text": "계약의 유형\n\n계약구분 내용\n계약이행기간 단년도계약 이행기간이 해당 연도 내에 있으며, 해당 연도의 예산 범위 내에서 체결하는 계약\n장기계속계약 ◦수년간 계속하여 존속할 필요가 있거나 그 이행에 수년을 요하는 경우 체결하는 계약 - 공사이행에 수년을 요하며, 설계서 등에 전체의 공사내용이 확정된 공사 ▷ 해당 연도 분 예산확보(장기간 총사업비 예산 미확보) ▷ 같은 회계연도 내에서 차수 계약 실시 ▷ 입찰공고 시 총 사업 기간 및 금액을 부기하며, 매년 예산범위 내에서 계약체결 및 계약 이행함\n계속비 계약 ◦완성에 수년을 요하는 공사, 제조 및 연구개발 시 체결하는 계약\n- 학교신설, 청사이전 등 계속비 예산으로 편성된 사업\n▷ 총사업비 예산 확보 ▷ 입찰공고 시 총 사업 기간 및 금액을 부기하며, 총 사업 금액으로 계약체결 및 계약 이행함\n총액 / 단가여부 총액계약 해당 계약목적물 전체에 대하여 총액으로 체결하는 계약\n단가계약 일정기간 계속 계약을 체결할 필요가 있을 때 해당 연도 예산범위 안에서 단가에 대해 체결하는 계약(지방계약법 제25조)\n금액 확정 여부 확정계약 계약금액 확정 후 체결하는 계약",
     "workId": "c17-w03",
-    "blockId": "c17-w03-b7"
+    "blockId": "c17-w03-b7",
+    "anchor": "계약이행기간단년도계약이행기간이해당연도내에있으"
   },
   {
+    "id": "c17-w03-b7~2",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "계약의 유형",
+    "title": "계약구분 내용 계약이행기간 단년도계약 이행기간이 해당 연도 내에 있으며,… › 개산계약 계약금액을 확정하지 않고 개산 가격으로 체결하는 계약으로, 사후정산 필요(지방",
+    "description": "개산계약 계약금액을 확정하지 않고 개산 가격으로 체결하는 계약으로, 사후정산 필요(지방계약법 제27조) 계약자수 단독계약 계약상대자를 1인으로 하여 체결하는 계약 공동계약 ◦계약상대자를 2인 이상으로 결성된 공동수급체와 체결하는 계약(지방계약법 제29조) - 계약이행책임방식: 분담이행방식(각자), 공동이행방식(공동), 주계약자관리방식 (1차, 주계약자) ※ 입찰공고 시, 공동계약 이행방식과 구성원 자격제한사항을 명시하며 구성원 일부 또는 모두가 입찰참가자격을 각…",
+    "text": "계약의 유형\n\n개산계약 계약금액을 확정하지 않고 개산 가격으로 체결하는 계약으로, 사후정산 필요(지방계약법 제27조)\n계약자수 단독계약 계약상대자를 1인으로 하여 체결하는 계약\n공동계약 ◦계약상대자를 2인 이상으로 결성된 공동수급체와 체결하는 계약(지방계약법 제29조) - 계약이행책임방식: 분담이행방식(각자), 공동이행방식(공동), 주계약자관리방식 (1차, 주계약자) ※ 입찰공고 시, 공동계약 이행방식과 구성원 자격제한사항을 명시하며 구성원 일부 또는 모두가 입찰참가자격을 각각 구비하도록 제한해서는 안됨 ※ 지역의무 공동도급제도: 건설업 등의 균형발전을 위하여 필요하다고 인정하는 공사의 경우에는 공사현장을 관할하는 특별시·광역시 및 도에 주된 영업소가 있는 자 중 일정 비율 이상을 수급체로 구성해야 하는 제도",
+    "workId": "c17-w03",
+    "blockId": "c17-w03-b7",
+    "anchor": "개산계약계약금액을확정하지않고개산가격으로체결하"
+  },
+  {
+    "id": "c17-w03-b8",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29228,6 +33109,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w03-b8"
   },
   {
+    "id": "c17-w03-b9",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29240,6 +33122,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w03-b9"
   },
   {
+    "id": "c17-w03-b10",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29252,18 +33135,49 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w03-b10"
   },
   {
+    "id": "c17-w03-b11~1",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
     "type": "매뉴얼 원문",
     "workTitle": "계약의 유형",
-    "title": "계약구분 내용 입찰계약 일반입찰 ◦계약내용을 공고하여 일정한 자격을 갖춘…",
+    "title": "계약구분 내용 입찰계약 일반입찰 ◦계약내용을 공고하여 일정한 자격을 갖춘… › 입찰계약 일반입찰 ◦계약내용을 공고하여 일정한 자격을 갖춘 불특정 다수를 대상으로 한",
     "description": "계약구분 내용 입찰계약 일반입찰 ◦계약내용을 공고하여 일정한 자격을 갖춘 불특정 다수를 대상으로 한 입찰 ◦입찰참가자의 자격 - 다른 법령에 따른 자격요건(허가·면허·등록 등) - 보안측정 등 조사가 필요한 경우에 관계기관의 적합 판정 - 사업자등록증 교부 또는 납세번호를 부여받은 자 제한입찰 계약의 목적을 효과적으로 달성하기 위해 실적, 소재지 등으로 자격을 제한한 입찰 지명입찰 특수한 설비·기술·자재 또는 실적을 가진 자를 지명하여 실시하는 입찰 조달계약 제…",
-    "text": "계약의 유형\n\n계약구분 내용\n입찰계약 일반입찰 ◦계약내용을 공고하여 일정한 자격을 갖춘 불특정 다수를 대상으로 한 입찰 ◦입찰참가자의 자격 - 다른 법령에 따른 자격요건(허가·면허·등록 등) - 보안측정 등 조사가 필요한 경우에 관계기관의 적합 판정 - 사업자등록증 교부 또는 납세번호를 부여받은 자\n제한입찰 계약의 목적을 효과적으로 달성하기 위해 실적, 소재지 등으로 자격을 제한한 입찰\n지명입찰 특수한 설비·기술·자재 또는 실적을 가진 자를 지명하여 실시하는 입찰\n조달계약 제3자 단가 계약 수요기관과 공급처 간 거래에 있어 조달청이 적절한 단가를 결정하고 단가등록을 통해 조달청을 거쳐 구입하는 계약\n다수공급자계약 2단계경쟁 품질, 성능, 효율 등이 동등하거나 유사한 제품 중 수요기관이 선택할 수 있도록, 일정 기준을 충족한 2인 이상을 대상으로 가격협상을 통해 체결하는 계약 ※ 중소기업자간경쟁제품이 아닌 경우: 1회 납품요구대상 구매예산이 5천만 원 이상 시 다수공급자계약 이용 ※ 중소기업간경쟁물품 또는 중소기업 제조 품목: 1회 납품요구대상 구매예산이 1억 원 이상 시 다수공급자계약 이용\n수 의 계 약 2인 이상 견적제출 수의계약 수의계약 안내공고를 통해 2인 이상의 견적 참여자로부터 견적을 제출받아 계약상대자를 결정하는 계약 ※ 일정한 경우를 제외하고는 지정정보처리장치 이용이 원칙\n1인 견적 제출가능 수의계약 ◦1인으로부터 견적을 제출받아 견적가격을 거래실례가격 등과 비교·검토하고 품질 등을 고려하여 계약상대자를 결정하는 계약 - 1인 견적 계약가능 대상 ▷ 용역 / 공사: 추정가격 2천만 원 이하 ▷ 물품제조·구매: 추정가격 2천만 원 이하 - 추정가격 5천만 원 이하 1인 견적 가능한 경우 ▷ 여성기업(여성기업지원에 관한 법률 제2조 제1호) ▷ 장애인기업(장애인기업활동 촉진법 제2조 제2호)\n계약구분 내용\n수 의 계 약 1인 견적 제출가능 수의계약 ▷ 취약계층 고용비율 30% 이상인 아래 제시된 사회적경제기업 ※ 사회적기업(사회적기업 육성법 제2조 제1호) ※ 사회적협동조합(협동조합 기본법 제2조 제3호) ※ 자활기업(국민기초생활 보장법 제18조) ※ 마을기업(도시재생 활성화 및 지원에 관한 특별법 제2조 제1항 제9호) ※ 3의 경우 취약계층 고용비율 확인서를 발급받아 증빙자료로 첨부하고 이때 취약계층 고용비율은 30% 이상[취약계층 고용비율 고시(행정안전부 고시 제2018-49호)] ▷ 청년창업기업(중소기업창업 지원법 제2조제11호)",
+    "text": "계약의 유형\n\n계약구분 내용\n입찰계약 일반입찰 ◦계약내용을 공고하여 일정한 자격을 갖춘 불특정 다수를 대상으로 한 입찰 ◦입찰참가자의 자격 - 다른 법령에 따른 자격요건(허가·면허·등록 등) - 보안측정 등 조사가 필요한 경우에 관계기관의 적합 판정 - 사업자등록증 교부 또는 납세번호를 부여받은 자\n제한입찰 계약의 목적을 효과적으로 달성하기 위해 실적, 소재지 등으로 자격을 제한한 입찰\n지명입찰 특수한 설비·기술·자재 또는 실적을 가진 자를 지명하여 실시하는 입찰\n조달계약 제3자 단가 계약 수요기관과 공급처 간 거래에 있어 조달청이 적절한 단가를 결정하고 단가등록을 통해 조달청을 거쳐 구입하는 계약\n다수공급자계약 2단계경쟁 품질, 성능, 효율 등이 동등하거나 유사한 제품 중 수요기관이 선택할 수 있도록, 일정 기준을 충족한 2인 이상을 대상으로 가격협상을 통해 체결하는 계약 ※ 중소기업자간경쟁제품이 아닌 경우: 1회 납품요구대상 구매예산이 5천만 원 이상 시 다수공급자계약 이용 ※ 중소기업간경쟁물품 또는 중소기업 제조 품목: 1회 납품요구대상 구매예산이 1억 원 이상 시 다수공급자계약 이용",
     "workId": "c17-w03",
-    "blockId": "c17-w03-b11"
+    "blockId": "c17-w03-b11",
+    "anchor": "입찰계약일반입찰◦계약내용을공고하여일정한자격을"
   },
   {
+    "id": "c17-w03-b11~2",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "계약의 유형",
+    "title": "계약구분 내용 입찰계약 일반입찰 ◦계약내용을 공고하여 일정한 자격을 갖춘… › 수의계약 2인 이상 견적제출 수의계약 수의계약 안내공고를 통해 2인 이상의 견적 참여자",
+    "description": "수 의 계 약 2인 이상 견적제출 수의계약 수의계약 안내공고를 통해 2인 이상의 견적 참여자로부터 견적을 제출받아 계약상대자를 결정하는 계약 ※ 일정한 경우를 제외하고는 지정정보처리장치 이용이 원칙 1인 견적 제출가능 수의계약 ◦1인으로부터 견적을 제출받아 견적가격을 거래실례가격 등과 비교·검토하고 품질 등을 고려하여 계약상대자를 결정하는 계약 - 1인 견적 계약가능 대상 ▷ 용역 / 공사: 추정가격 2천만 원 이하 ▷ 물품제조·구매: 추정가격 2천만 원 이하…",
+    "text": "계약의 유형\n\n수 의 계 약 2인 이상 견적제출 수의계약 수의계약 안내공고를 통해 2인 이상의 견적 참여자로부터 견적을 제출받아 계약상대자를 결정하는 계약 ※ 일정한 경우를 제외하고는 지정정보처리장치 이용이 원칙\n1인 견적 제출가능 수의계약 ◦1인으로부터 견적을 제출받아 견적가격을 거래실례가격 등과 비교·검토하고 품질 등을 고려하여 계약상대자를 결정하는 계약 - 1인 견적 계약가능 대상 ▷ 용역 / 공사: 추정가격 2천만 원 이하 ▷ 물품제조·구매: 추정가격 2천만 원 이하 - 추정가격 5천만 원 이하 1인 견적 가능한 경우 ▷ 여성기업(여성기업지원에 관한 법률 제2조 제1호) ▷ 장애인기업(장애인기업활동 촉진법 제2조 제2호)\n계약구분 내용",
+    "workId": "c17-w03",
+    "blockId": "c17-w03-b11",
+    "anchor": "수의계약2인이상견적제출수의계약수의계약안내공고"
+  },
+  {
+    "id": "c17-w03-b11~3",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "계약의 유형",
+    "title": "계약구분 내용 입찰계약 일반입찰 ◦계약내용을 공고하여 일정한 자격을 갖춘… › 수의계약 1인 견적 제출가능 수의계약 ▷ 취약계층 고용비율 30% 이상인 아래 제시된",
+    "description": "수 의 계 약 1인 견적 제출가능 수의계약 ▷ 취약계층 고용비율 30% 이상인 아래 제시된 사회적경제기업 ※ 사회적기업(사회적기업 육성법 제2조 제1호) ※ 사회적협동조합(협동조합 기본법 제2조 제3호) ※ 자활기업(국민기초생활 보장법 제18조) ※ 마을기업(도시재생 활성화 및 지원에 관한 특별법 제2조 제1항 제9호) ※ 3의 경우 취약계층 고용비율 확인서를 발급받아 증빙자료로 첨부하고 이때 취약계층 고용비율은 30% 이상[취약계층 고용비율 고시(행정안전부 고…",
+    "text": "계약의 유형\n\n수 의 계 약 1인 견적 제출가능 수의계약 ▷ 취약계층 고용비율 30% 이상인 아래 제시된 사회적경제기업 ※ 사회적기업(사회적기업 육성법 제2조 제1호) ※ 사회적협동조합(협동조합 기본법 제2조 제3호) ※ 자활기업(국민기초생활 보장법 제18조) ※ 마을기업(도시재생 활성화 및 지원에 관한 특별법 제2조 제1항 제9호) ※ 3의 경우 취약계층 고용비율 확인서를 발급받아 증빙자료로 첨부하고 이때 취약계층 고용비율은 30% 이상[취약계층 고용비율 고시(행정안전부 고시 제2018-49호)] ▷ 청년창업기업(중소기업창업 지원법 제2조제11호)",
+    "workId": "c17-w03",
+    "blockId": "c17-w03-b11",
+    "anchor": "수의계약1인견적제출가능수의계약▷취약계층고용비"
+  },
+  {
+    "id": "c17-w03-b12",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29276,6 +33190,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w03-b12"
   },
   {
+    "id": "c17-w03-b13",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29288,6 +33203,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w03-b13"
   },
   {
+    "id": "c17-w03-b14",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29300,6 +33216,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w03-b14"
   },
   {
+    "id": "c17-w03-b15",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29312,6 +33229,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w03-b15"
   },
   {
+    "id": "c17-w03-b16",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29324,6 +33242,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w03-b16"
   },
   {
+    "id": "c17-w03-b17",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29336,6 +33255,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w03-b17"
   },
   {
+    "id": "c17-w04",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29348,6 +33268,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c17-w04"
   },
   {
+    "id": "c17-w04-b1",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29360,6 +33281,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w04-b1"
   },
   {
+    "id": "c17-w04-b2",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29372,6 +33294,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w04-b2"
   },
   {
+    "id": "c17-w04-b3",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29384,6 +33307,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w04-b3"
   },
   {
+    "id": "c17-w04-b4",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29396,6 +33320,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w04-b4"
   },
   {
+    "id": "c17-w04-b5",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29408,18 +33333,49 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w04-b5"
   },
   {
+    "id": "c17-w04-b6~1",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
     "type": "매뉴얼 원문",
     "workTitle": "계약 방법",
-    "title": "TIP",
+    "title": "TIP › ▪ 2인 이상 수의견적과 입찰의 구분",
     "description": "▪ 2인 이상 수의견적과 입찰의 구분 구분 / 2인 이상 수의견적 / 입찰 적용대상 / ◦공사: 추정가격 2천만 원 초과 ~ 4억 원 이하(종합 / 2억 원 이하(전문) / 1억 6천만 원 이하(전기 등 그 밖의 공사) ◦물품 / 용역: 추정가격 2천만원 초과 ~ 1억 원 이하 / ◦물품 / 용역: 추정가격 1억 원 초과 ◦공사: 추정가격 4억 원 초과(종합) / 2억 원 초과(전문) / 1억 6천만 원 초과(전기 등 그 밖의 공사) 공고방법 / 지정정보처리장치…",
-    "text": "계약 방법\nTIP\n▪ 2인 이상 수의견적과 입찰의 구분\n구분 / 2인 이상 수의견적 / 입찰\n적용대상 / ◦공사: 추정가격 2천만 원 초과 ~ 4억 원 이하(종합 / 2억 원 이하(전문) / 1억 6천만 원 이하(전기 등 그 밖의 공사) ◦물품 / 용역: 추정가격 2천만원 초과 ~ 1억 원 이하 / ◦물품 / 용역: 추정가격 1억 원 초과 ◦공사: 추정가격 4억 원 초과(종합) / 2억 원 초과(전문) / 1억 6천만 원 초과(전기 등 그 밖의 공사)\n공고방법 / 지정정보처리장치 / 지정정보처리장치\n공고명 / ○○건 수의계약 안내공고 / ○○건 입찰공고\n공고기간 / 3일 이상(토요일 및 공휴일 제외) / 7일(긴급 및 재공고는 5일) 이상\n입찰보증금 / 납부하지 않음 / 납부\n계약상대자 결정 / ◦공사: 예정가격에서 국민연금보험료, 국민건강보험료, 퇴직공제부금비, 노인장기요양보험료, 산업안전보건관리비, 안전관리비, 품질관리비(이하 “국민연금보험료 등”)의 합산액을 감액한 금액의 89.745%이상 견적한 자 중 최저가를 견적하고 수의계약 배제사유에 해당하지 않는 자 ◦물품 ․ 용역 - 추정가격 2천만 원 이하: 예정가격 대비 90% 이상 견적한 자 중 최저가를 견적하고 수의계약 배제사유에 해당하지 않는 자 - 추정가격 2천만 원 초과 ~ 1억원 이하: 예정가격 대비 88% 이상 견적한 자 중 최저가를 견적하고 수의계약 배제사유에 해당하지 않는 자 - 간행물 구입 계약: 가격에 상관없이 예정가격 대비 90% 이상 견적한 자 중 최저가를 견적하고 수의계약 배제사유에 해당 하지 않는 자 / ◦물품: 적격심사 / 계약이행능력심사 ◦용역: 적격심사 ◦공사: 적격심사 ※ 세부기준별 적격통과 점수 및 낙찰하한율 확인\n지역제한 / ◦공사현장·납품소재지를 관할하는 시 ․ 군, 인접 시 ․ 군, 시 ․ 도, 인접 시 ․ 도 제한 가능 ◦지역제한과 실적제한 중복 제한 가능함 / ◦본점소재지(법인) 또는 사업장 소재지(개인사업자)가 관할 시 ․ 도내에 있는 업체 ※ 시 ․ 군으로 제한 불가 ◦물품 ․ 용역 입찰 시 지역과 실적 중복 제한 불가\n부정당업자 제재 조치 / ◦계약상대자 결정 후 계약 체결하지 않을 경우 수의계약배제사유로 3개월간 수의계약 제한 ◦계약체결 후 이행을 하지 않을 경우 계약보증금 세입 조치와 부정당업자 제재 조치 / 낙찰자결정 후 계약을 체결하지 않거나 계약체결 후 계약이행을 하지 아니한 경우, 입찰 ․ 계약보증금 세입 조치 및 부정당업자 제재 조치\n근거법령 / 지방자치단체 입찰 및 계약 집행기준 제5장 수의계약 운영요령 / 지방계약법, 시행령, 시행규칙",
+    "text": "계약 방법\nTIP\n▪ 2인 이상 수의견적과 입찰의 구분\n구분 / 2인 이상 수의견적 / 입찰\n적용대상 / ◦공사: 추정가격 2천만 원 초과 ~ 4억 원 이하(종합 / 2억 원 이하(전문) / 1억 6천만 원 이하(전기 등 그 밖의 공사) ◦물품 / 용역: 추정가격 2천만원 초과 ~ 1억 원 이하 / ◦물품 / 용역: 추정가격 1억 원 초과 ◦공사: 추정가격 4억 원 초과(종합) / 2억 원 초과(전문) / 1억 6천만 원 초과(전기 등 그 밖의 공사)\n공고방법 / 지정정보처리장치 / 지정정보처리장치\n공고명 / ○○건 수의계약 안내공고 / ○○건 입찰공고\n공고기간 / 3일 이상(토요일 및 공휴일 제외) / 7일(긴급 및 재공고는 5일) 이상\n입찰보증금 / 납부하지 않음 / 납부",
     "workId": "c17-w04",
-    "blockId": "c17-w04-b6"
+    "blockId": "c17-w04-b6",
+    "anchor": "▪2인이상수의견적과입찰의구분"
   },
   {
+    "id": "c17-w04-b6~2",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "계약 방법",
+    "title": "TIP › 계약상대자 결정 / ◦공사: 예정가격에서 국민연금보험료, 국민건강보험료, 퇴직공제부금비",
+    "description": "계약상대자 결정 / ◦공사: 예정가격에서 국민연금보험료, 국민건강보험료, 퇴직공제부금비, 노인장기요양보험료, 산업안전보건관리비, 안전관리비, 품질관리비(이하 “국민연금보험료 등”)의 합산액을 감액한 금액의 89.745%이상 견적한 자 중 최저가를 견적하고 수의계약 배제사유에 해당하지 않는 자 ◦물품 ․ 용역 - 추정가격 2천만 원 이하: 예정가격 대비 90% 이상 견적한 자 중 최저가를 견적하고 수의계약 배제사유에 해당하지 않는 자 - 추정가격 2천만 원 초과…",
+    "text": "계약 방법\nTIP\n계약상대자 결정 / ◦공사: 예정가격에서 국민연금보험료, 국민건강보험료, 퇴직공제부금비, 노인장기요양보험료, 산업안전보건관리비, 안전관리비, 품질관리비(이하 “국민연금보험료 등”)의 합산액을 감액한 금액의 89.745%이상 견적한 자 중 최저가를 견적하고 수의계약 배제사유에 해당하지 않는 자 ◦물품 ․ 용역 - 추정가격 2천만 원 이하: 예정가격 대비 90% 이상 견적한 자 중 최저가를 견적하고 수의계약 배제사유에 해당하지 않는 자 - 추정가격 2천만 원 초과 ~ 1억원 이하: 예정가격 대비 88% 이상 견적한 자 중 최저가를 견적하고 수의계약 배제사유에 해당하지 않는 자 - 간행물 구입 계약: 가격에 상관없이 예정가격 대비 90% 이상 견적한 자 중 최저가를 견적하고 수의계약 배제사유에 해당 하지 않는 자 / ◦물품: 적격심사 / 계약이행능력심사 ◦용역: 적격심사 ◦공사: 적격심사 ※ 세부기준별 적격통과 점수 및 낙찰하한율 확인",
+    "workId": "c17-w04",
+    "blockId": "c17-w04-b6",
+    "anchor": "계약상대자결정/◦공사:예정가격에서국민연금보험"
+  },
+  {
+    "id": "c17-w04-b6~3",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "계약 방법",
+    "title": "TIP › 지역제한 / ◦공사현장·납품소재지를 관할하는 시 ․ 군, 인접 시 ․ 군, 시 ․ 도,",
+    "description": "지역제한 / ◦공사현장·납품소재지를 관할하는 시 ․ 군, 인접 시 ․ 군, 시 ․ 도, 인접 시 ․ 도 제한 가능 ◦지역제한과 실적제한 중복 제한 가능함 / ◦본점소재지(법인) 또는 사업장 소재지(개인사업자)가 관할 시 ․ 도내에 있는 업체 ※ 시 ․ 군으로 제한 불가 ◦물품 ․ 용역 입찰 시 지역과 실적 중복 제한 불가 부정당업자 제재 조치 / ◦계약상대자 결정 후 계약 체결하지 않을 경우 수의계약배제사유로 3개월간 수의계약 제한 ◦계약체결 후 이행을 하지 않…",
+    "text": "계약 방법\nTIP\n지역제한 / ◦공사현장·납품소재지를 관할하는 시 ․ 군, 인접 시 ․ 군, 시 ․ 도, 인접 시 ․ 도 제한 가능 ◦지역제한과 실적제한 중복 제한 가능함 / ◦본점소재지(법인) 또는 사업장 소재지(개인사업자)가 관할 시 ․ 도내에 있는 업체 ※ 시 ․ 군으로 제한 불가 ◦물품 ․ 용역 입찰 시 지역과 실적 중복 제한 불가\n부정당업자 제재 조치 / ◦계약상대자 결정 후 계약 체결하지 않을 경우 수의계약배제사유로 3개월간 수의계약 제한 ◦계약체결 후 이행을 하지 않을 경우 계약보증금 세입 조치와 부정당업자 제재 조치 / 낙찰자결정 후 계약을 체결하지 않거나 계약체결 후 계약이행을 하지 아니한 경우, 입찰 ․ 계약보증금 세입 조치 및 부정당업자 제재 조치\n근거법령 / 지방자치단체 입찰 및 계약 집행기준 제5장 수의계약 운영요령 / 지방계약법, 시행령, 시행규칙",
+    "workId": "c17-w04",
+    "blockId": "c17-w04-b6",
+    "anchor": "지역제한/◦공사현장·납품소재지를관할하는시․군"
+  },
+  {
+    "id": "c17-w04-b7",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29432,6 +33388,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w04-b7"
   },
   {
+    "id": "c17-w04-b8",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29444,6 +33401,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w04-b8"
   },
   {
+    "id": "c17-w04-b9",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29456,6 +33414,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w04-b9"
   },
   {
+    "id": "c17-w04-b10",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29468,6 +33427,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w04-b10"
   },
   {
+    "id": "c17-w04-b11",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29480,18 +33440,35 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w04-b11"
   },
   {
+    "id": "c17-w04-b12~1",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
     "type": "매뉴얼 원문",
     "workTitle": "계약 방법",
-    "title": "1. 1인견적 수의계약 순서 단계 업무내용 세부사항 및 참고자료 1 예산…",
+    "title": "1. 1인견적 수의계약 순서 단계 업무내용 세부사항 및 참고자료 1 예산… › 1. 1인견적 수의계약 순서",
     "description": "1. 1인견적 수의계약 순서 단계 업무내용 세부사항 및 참고자료 1 예산 집행 품의 (사업계획서) ◦해당 사업부서에서 작성 ◦시방서, 도면, 사양서 등 첨부 2 예정가격 조사 참고: 예정가격의 의의 및 작성 절차 3 견적서 제출 요청 ◦수의계약 대상 업체에 견적 요청 ◦견적서는 계약상대자 결정의 기초자료로 활용 4 사업 내부결재 견적 결과, 예정가격 등을 반영한 내부결재 진행 5 계약상대자 결정 ◦거래실례가격, 통계자료, 감정가격, 유사 실례가격과 비교 ◦품질,…",
-    "text": "계약 방법\n\n1. 1인견적 수의계약 순서\n단계 업무내용 세부사항 및 참고자료\n1 예산 집행 품의 (사업계획서) ◦해당 사업부서에서 작성 ◦시방서, 도면, 사양서 등 첨부\n2 예정가격 조사 참고: 예정가격의 의의 및 작성 절차\n3 견적서 제출 요청 ◦수의계약 대상 업체에 견적 요청 ◦견적서는 계약상대자 결정의 기초자료로 활용\n4 사업 내부결재 견적 결과, 예정가격 등을 반영한 내부결재 진행\n5 계약상대자 결정 ◦거래실례가격, 통계자료, 감정가격, 유사 실례가격과 비교 ◦품질, 납품기한, 사후관리 등을 종합 고려 ◦계약상대자의 면허·등록·부정당업자 제재 여부 확인 필수\n단계 업무내용 세부사항 및 참고자료\n6 계약체결 및 검수 계약 체결 후 이행 및 물품·용역 검수 절차 진행 ※ 참고: 계약체결·이행·대가지급\n7 계약과정 정보공개 ◦공개 대상: 교육행정기관 및 각급학교 ◦공개 항목: 발주계획, 입찰공고, 개찰결과, 계약내용, 감리·검사, 대가지급현황 등 ◦공개 시기: 매월 다음 달 5일까지 ◦공개 기간: 계약이행 완료일로부터 5년 이상 ◦학교는 100만 원 이상 수의계약부터 공개 대상 ※ K에듀파인 시스템과 연계되어 정보가 자동공개됨\n2. 1인견적 수의계약 사유\n구분 1인 견적에 의한 수의계약 사유\n일정금액이하 (추정가격) 기타사유\n공사 종합공사 2천만 원 이하 ◦하자 구분 곤란, 혼잡, 마감공사 및 특허공법 등에 따른 수의계약(시행령 제25조제1항제4호 가,나,다,마목) ◦천재지변, 작전상의 병력이동, 긴급한 행사, 감염병 발생 및 유행 등 입찰에 부칠 여유가 없는 경우 등(시행령 제25조제1항제1호~제3호, 제4호 라, 바~하목, 제6호~제8호) ◦계약을 해제·해지 경우(시행령 제27조) ◦재공고입찰 결과 입찰이 성립하지 아니 하거나 낙찰자가 없는 경우(시행령 제26조제1항) ◦시행령 제95조제1항제4호에 따른 대안입찰, 같은 항 제5호에 따른 일괄입찰 또는 제127조제2호, 제3호에 따른 기술제안입찰로 발주되었으나 재공고입찰 결과 입찰자가 1인 뿐인 경우 ◦지정정보처리장치를 이용하여 견적서를 제출 받았으나 견적서 제출자가 1인 뿐인 경우로서 다시 견적서를 제출 받더라도 견적서 제출자가 1인 뿐일 것으로 명백히 예상되는 경우(시행령 제30조제1항제3호) ◦(금액기준 예외) 추정가격 5천만 원 이하 1인 견적 가능한 경우 - 여성기업(여성기업지원에 관한 법률 제2조제1호) - 장애인기업(장애인기업활동 촉진법 제2조제2호) - 취약계층 고용비율 30% 이상 아래 사회적경제기업 ▷ 사회적기업(사회적기업 육성법 제2조제1호) ▷ 사회적협동조합(협동조합 기본법 제2조제3호) ▷ 자활기업(국민기초생활 보장법 제18조) ▷ 마을기업(도시재생 활성화 및 지원에 관한 특별법 제2조제1항제9호) ※ 취약계층 고용비율 확인서 발급기준은 지방자치단체 입찰 및 계약 집행기준 제5장 수의계약 운영요령 [별표 3] 확인 - 청년창업기업(중소기업창업 지원법 제2조제11호)\n전문공사 2천만 원 이하\n전기소방 통신 2천만 원 이하\n물품제조·구매 2천만 원 이하\n용역· 기타 2천만 원 이하",
+    "text": "계약 방법\n\n1. 1인견적 수의계약 순서\n단계 업무내용 세부사항 및 참고자료\n1 예산 집행 품의 (사업계획서) ◦해당 사업부서에서 작성 ◦시방서, 도면, 사양서 등 첨부\n2 예정가격 조사 참고: 예정가격의 의의 및 작성 절차\n3 견적서 제출 요청 ◦수의계약 대상 업체에 견적 요청 ◦견적서는 계약상대자 결정의 기초자료로 활용\n4 사업 내부결재 견적 결과, 예정가격 등을 반영한 내부결재 진행\n5 계약상대자 결정 ◦거래실례가격, 통계자료, 감정가격, 유사 실례가격과 비교 ◦품질, 납품기한, 사후관리 등을 종합 고려 ◦계약상대자의 면허·등록·부정당업자 제재 여부 확인 필수\n단계 업무내용 세부사항 및 참고자료\n6 계약체결 및 검수 계약 체결 후 이행 및 물품·용역 검수 절차 진행 ※ 참고: 계약체결·이행·대가지급\n7 계약과정 정보공개 ◦공개 대상: 교육행정기관 및 각급학교 ◦공개 항목: 발주계획, 입찰공고, 개찰결과, 계약내용, 감리·검사, 대가지급현황 등 ◦공개 시기: 매월 다음 달 5일까지 ◦공개 기간: 계약이행 완료일로부터 5년 이상 ◦학교는 100만 원 이상 수의계약부터 공개 대상 ※ K에듀파인 시스템과 연계되어 정보가 자동공개됨\n2. 1인견적 수의계약 사유",
     "workId": "c17-w04",
-    "blockId": "c17-w04-b12"
+    "blockId": "c17-w04-b12",
+    "anchor": "1.1인견적수의계약순서"
   },
   {
+    "id": "c17-w04-b12~2",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "계약 방법",
+    "title": "1. 1인견적 수의계약 순서 단계 업무내용 세부사항 및 참고자료 1 예산… › 구분 1인 견적에 의한 수의계약 사유",
+    "description": "구분 1인 견적에 의한 수의계약 사유 일정금액이하 (추정가격) 기타사유 공사 종합공사 2천만 원 이하 ◦하자 구분 곤란, 혼잡, 마감공사 및 특허공법 등에 따른 수의계약(시행령 제25조제1항제4호 가,나,다,마목) ◦천재지변, 작전상의 병력이동, 긴급한 행사, 감염병 발생 및 유행 등 입찰에 부칠 여유가 없는 경우 등(시행령 제25조제1항제1호~제3호, 제4호 라, 바~하목, 제6호~제8호) ◦계약을 해제·해지 경우(시행령 제27조) ◦재공고입찰 결과 입찰이 성…",
+    "text": "계약 방법\n\n구분 1인 견적에 의한 수의계약 사유\n일정금액이하 (추정가격) 기타사유\n공사 종합공사 2천만 원 이하 ◦하자 구분 곤란, 혼잡, 마감공사 및 특허공법 등에 따른 수의계약(시행령 제25조제1항제4호 가,나,다,마목) ◦천재지변, 작전상의 병력이동, 긴급한 행사, 감염병 발생 및 유행 등 입찰에 부칠 여유가 없는 경우 등(시행령 제25조제1항제1호~제3호, 제4호 라, 바~하목, 제6호~제8호) ◦계약을 해제·해지 경우(시행령 제27조) ◦재공고입찰 결과 입찰이 성립하지 아니 하거나 낙찰자가 없는 경우(시행령 제26조제1항) ◦시행령 제95조제1항제4호에 따른 대안입찰, 같은 항 제5호에 따른 일괄입찰 또는 제127조제2호, 제3호에 따른 기술제안입찰로 발주되었으나 재공고입찰 결과 입찰자가 1인 뿐인 경우 ◦지정정보처리장치를 이용하여 견적서를 제출 받았으나 견적서 제출자가 1인 뿐인 경우로서 다시 견적서를 제출 받더라도 견적서 제출자가 1인 뿐일 것으로 명백히 예상되는 경우(시행령 제30조제1항제3호) ◦(금액기준 예외) 추정가격 5천만 원 이하 1인 견적 가능한 경우 - 여성기업(여성기업지원에 관한 법률 제2조제1호) - 장애인기업(장애인기업활동 촉진법 제2조제2호) - 취약계층 고용비율 30% 이상 아래 사회적경제기업 ▷ 사회적기업(사회적기업 육성법 제2조제1호) ▷ 사회적협동조합(협동조합 기본법 제2조제3호) ▷ 자활기업(국민기초생활 보장법 제18조) ▷ 마을기업(도시재생 활성화 및 지원에 관한 특별법 제2조제1항제9호) ※ 취약계층 고용비율 확인서 발급기준은 지방자치단체 입찰 및 계약 집행기준 제5장 수의계약 운영요령 [별표 3] 확인 - 청년창업기업(중소기업창업 지원법 제2조제11호)\n전문공사 2천만 원 이하\n전기소방 통신 2천만 원 이하\n물품제조·구매 2천만 원 이하\n용역· 기타 2천만 원 이하",
+    "workId": "c17-w04",
+    "blockId": "c17-w04-b12",
+    "anchor": "구분1인견적에의한수의계약사유"
+  },
+  {
+    "id": "c17-w04-b13",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29504,6 +33481,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w04-b13"
   },
   {
+    "id": "c17-w04-b14",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29516,6 +33494,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w04-b14"
   },
   {
+    "id": "c17-w04-b15",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29528,6 +33507,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w04-b15"
   },
   {
+    "id": "c17-w04-b16",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29540,6 +33520,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w04-b16"
   },
   {
+    "id": "c17-w04-b17",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29552,6 +33533,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w04-b17"
   },
   {
+    "id": "c17-w04-b18",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29564,18 +33546,63 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w04-b18"
   },
   {
+    "id": "c17-w04-b19~1",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
     "type": "매뉴얼 원문",
     "workTitle": "계약 방법",
-    "title": "항목 내용 비고 MAS(다수공급자계약) 개념 조달청이 품질·성능·효율 등…",
+    "title": "항목 내용 비고 MAS(다수공급자계약) 개념 조달청이 품질·성능·효율 등… › MAS(다수공급자계약) 개념 조달청이 품질·성능·효율 등에서 유사한 물품을 공급 가능한",
     "description": "항목 내용 비고 MAS(다수공급자계약) 개념 조달청이 품질·성능·효율 등에서 유사한 물품을 공급 가능한 자 2인 이상과 단가계약을 체결하고, 수요기관이 나라장터 종합쇼핑몰에서 자유롭게 선택하여 구매하는 제도 나라장터 종합쇼핑몰 이용 적용 대상 및 기준 ◦일반 물품(모든 기관): 5천만 원 이상 ◦중소기업 제조 물품: 1억원 이상 ※ 5천만원 이상의 경우에도 다수공급자계약 가능 ◦중기간 경쟁물품: 1억 원 이상 1회 납품요구 기준 (세부품명 및 업체 구분 없이 총…",
-    "text": "계약 방법\n\n항목 내용 비고\nMAS(다수공급자계약) 개념 조달청이 품질·성능·효율 등에서 유사한 물품을 공급 가능한 자 2인 이상과 단가계약을 체결하고, 수요기관이 나라장터 종합쇼핑몰에서 자유롭게 선택하여 구매하는 제도 나라장터 종합쇼핑몰 이용\n적용 대상 및 기준 ◦일반 물품(모든 기관): 5천만 원 이상 ◦중소기업 제조 물품: 1억원 이상 ※ 5천만원 이상의 경우에도 다수공급자계약 가능 ◦중기간 경쟁물품: 1억 원 이상 1회 납품요구 기준 (세부품명 및 업체 구분 없이 총합금액 기준) ※ 설치비 제외\n항목 내용 비고\n분할발주 제한 조건 G2B 시스템 자동 차단 조건: 동일 업체, 동일 세부품명 기준 최근 30일 이내 분할 발주 시 시스템 자동 차단 적용\n계약상대자 2인 미만 시 처리 수요기관 구매희망 규격을 충족하면서 예산 범위 내 계약대상자가 2인 미만일 경우, 아래 방식으로 2단계 경쟁 실시 - 구매 희망 규격 내 세부품명이 2개 이상이면서 해당 세부품명의 물품분류번호 상위 2자리(대분류번호)가 모두 동일한 경우 → 공동수급체 구성 또는 제안공고 - 그 외 → 제안공고 방식 적용 물품 다수공급자계약 업무처리규정 제52조 제7항\n다수공급자계약 2단계 경쟁 업무처리 절차 ◦제안요청 (5억 원 이하) - 수요기관 제안요청 - 업체 제안서 제출 - 제안서 평가 - 납품요구 및 납품 - 대금지급 ◦대상업체 5개사 이상 선정 ◦종합평가방식 또는 표준평가방식 적용\n◦제안공고 (5억 원 이상) - 수요기관 제안공고 - 업체 제안서 제출 - 제안서 평가 - 납품요구 및 납품 - 대금지급 규격·수량·예산·평가 방법 공고\n예산 집행 품의 ◦사업계획서에 상세 규격 명시 ◦물품선정위원회를 통해 5개 이상 업체 사전 선정\n내부결재 및 공고문 작성 ◦공고문 작성 시 공동수급체 등록 마감일은 공고일 기준 최소 5일 이후로 설정 ◦공동수급체 구성 시 - 각 구성원 1개 이상 세부품명 등록 - 같은 세부품명 중복 등록 불가 [예시 9] 참고\n유의사항 제안서 제출 마감일은 공휴일 및 토요일 제외, 제안요청일 또는 제안공고일 기준 만 5일 이후로 설정\n제안요청 ◦5개사 이상 납품 대상업체 선정 ※ 예산범위 내에서 2인 이상 5인 미만일 경우, 사유서[서식 18] 제출 시 경쟁 가능 ◦물품분류번호(8자리)와 세부품명 동일 (옵션 제외) ◦설치비가 옵션품목으로 계약된 경우 제안요청 대상에서 제외\n제안요청 취소 가능 사유 - 제안요청서 입력 오류 등 자체 과실 - 사업 변경으로 인해 제안요청 결과로 목적 달성 불가능 - 계속 진행이 불합리하다고 판단되는 경우 ※ 예산감소로 인한 취소는 당초예산 변경 시만 가능 ※ 계약상대자에게 취소사유서[서식 19] 통보 필요 물품 다수공급자계약 업무처리규정 제56조\n항목 내용 비고\n제안서 제출 (계약희망업체) ◦제안가격은 나라장터 계약단가 이하로 가능 ◦계약가격의 90% 미만으로 제안 불가(중소기업자간 경쟁물품인 경우에 한함) ◦할인율이 10% 초과하는 경우에도 90%로 평가 ◦할인행사 또는 다량납품 요건 중 높은 할인율 기준으로 제안\n◦제안서 제출 거부 시 나라장터 계약조건으로 제안 간주 ◦제안서 취소 가능 여부 - 마감 전: 취소 가능하나 재제출 불가 ※ 물품: 취소시 쇼핑몰 가격으로 제출한 것으로 간주 ※ 용역: 취소시 평가대상에서 제외 - 마감 후 ▷ 물품: 취소 불가 ▷ 용역: 제안가격 오류시 가능(조건부) ◦제안서 보완: - 일부 서류 누락 또는 불명확 시 3일 이내 보완 가능 - 기한 내 미제출 시 기존 서류 + 나라장터 계약조건으로 평가 물품 다수공급자계약 업무처리규정 제54조의2 용역 다수공급자계약 업무처리규정 제29조 물품 다수공급자계약 업무처리규정 제54조 용역 다수공급자계약 업무처리규정 제30조\n납품대상업체 선정기준 제안서 평가 종합점수 기준 - 물품: 2단계 경쟁 종합평가 또는 표준평가방식에 따라 최고 점수 제안자 선정 - 용역: 2단계 경쟁 종합평가방식에 따라 최고 점수 제안자 선정 물품 다수공급자계약 업무처리규정 용역 다수공급자계약 업무처리규정\n동점자 처리 ◦물품: 물품 다수공급자계약 업무처리규정 제53조 참고 ◦용역: 용역 다수공급자계약 업무처리규정 제24조 참고\n납품요구 ◦제안 유효기간 내 납품요구 가능 (유효기간 경과 시 납품요구 불가) ◦계약 수정 시 유효기간 내 업체 동의 얻으면 납품요구 가능 (계약 종료 후 불가) ◦납품요구량 변경 시 납품대상업체 동의 필요 ◦제안가격 변경 시 상호 협의된 가격 반영",
+    "text": "계약 방법\n\n항목 내용 비고\nMAS(다수공급자계약) 개념 조달청이 품질·성능·효율 등에서 유사한 물품을 공급 가능한 자 2인 이상과 단가계약을 체결하고, 수요기관이 나라장터 종합쇼핑몰에서 자유롭게 선택하여 구매하는 제도 나라장터 종합쇼핑몰 이용\n적용 대상 및 기준 ◦일반 물품(모든 기관): 5천만 원 이상 ◦중소기업 제조 물품: 1억원 이상 ※ 5천만원 이상의 경우에도 다수공급자계약 가능 ◦중기간 경쟁물품: 1억 원 이상 1회 납품요구 기준 (세부품명 및 업체 구분 없이 총합금액 기준) ※ 설치비 제외\n항목 내용 비고\n분할발주 제한 조건 G2B 시스템 자동 차단 조건: 동일 업체, 동일 세부품명 기준 최근 30일 이내 분할 발주 시 시스템 자동 차단 적용\n계약상대자 2인 미만 시 처리 수요기관 구매희망 규격을 충족하면서 예산 범위 내 계약대상자가 2인 미만일 경우, 아래 방식으로 2단계 경쟁 실시 - 구매 희망 규격 내 세부품명이 2개 이상이면서 해당 세부품명의 물품분류번호 상위 2자리(대분류번호)가 모두 동일한 경우 → 공동수급체 구성 또는 제안공고 - 그 외 → 제안공고 방식 적용 물품 다수공급자계약 업무처리규정 제52조 제7항",
     "workId": "c17-w04",
-    "blockId": "c17-w04-b19"
+    "blockId": "c17-w04-b19",
+    "anchor": "MAS(다수공급자계약)개념조달청이품질·성능·"
   },
   {
+    "id": "c17-w04-b19~2",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "계약 방법",
+    "title": "항목 내용 비고 MAS(다수공급자계약) 개념 조달청이 품질·성능·효율 등… › 다수공급자계약 2단계 경쟁 업무처리 절차 ◦제안요청 (5억 원 이하) - 수요기관 제안",
+    "description": "다수공급자계약 2단계 경쟁 업무처리 절차 ◦제안요청 (5억 원 이하) - 수요기관 제안요청 - 업체 제안서 제출 - 제안서 평가 - 납품요구 및 납품 - 대금지급 ◦대상업체 5개사 이상 선정 ◦종합평가방식 또는 표준평가방식 적용 ◦제안공고 (5억 원 이상) - 수요기관 제안공고 - 업체 제안서 제출 - 제안서 평가 - 납품요구 및 납품 - 대금지급 규격·수량·예산·평가 방법 공고 예산 집행 품의 ◦사업계획서에 상세 규격 명시 ◦물품선정위원회를 통해 5개 이상 업…",
+    "text": "계약 방법\n\n다수공급자계약 2단계 경쟁 업무처리 절차 ◦제안요청 (5억 원 이하) - 수요기관 제안요청 - 업체 제안서 제출 - 제안서 평가 - 납품요구 및 납품 - 대금지급 ◦대상업체 5개사 이상 선정 ◦종합평가방식 또는 표준평가방식 적용\n◦제안공고 (5억 원 이상) - 수요기관 제안공고 - 업체 제안서 제출 - 제안서 평가 - 납품요구 및 납품 - 대금지급 규격·수량·예산·평가 방법 공고\n예산 집행 품의 ◦사업계획서에 상세 규격 명시 ◦물품선정위원회를 통해 5개 이상 업체 사전 선정\n내부결재 및 공고문 작성 ◦공고문 작성 시 공동수급체 등록 마감일은 공고일 기준 최소 5일 이후로 설정 ◦공동수급체 구성 시 - 각 구성원 1개 이상 세부품명 등록 - 같은 세부품명 중복 등록 불가 [예시 9] 참고\n유의사항 제안서 제출 마감일은 공휴일 및 토요일 제외, 제안요청일 또는 제안공고일 기준 만 5일 이후로 설정\n제안요청 ◦5개사 이상 납품 대상업체 선정 ※ 예산범위 내에서 2인 이상 5인 미만일 경우, 사유서[서식 18] 제출 시 경쟁 가능 ◦물품분류번호(8자리)와 세부품명 동일 (옵션 제외) ◦설치비가 옵션품목으로 계약된 경우 제안요청 대상에서 제외",
+    "workId": "c17-w04",
+    "blockId": "c17-w04-b19",
+    "anchor": "다수공급자계약2단계경쟁업무처리절차◦제안요청("
+  },
+  {
+    "id": "c17-w04-b19~3",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "계약 방법",
+    "title": "항목 내용 비고 MAS(다수공급자계약) 개념 조달청이 품질·성능·효율 등… › 제안요청 취소 가능 사유 - 제안요청서 입력 오류 등 자체 과실 - 사업 변경으로 인해",
+    "description": "제안요청 취소 가능 사유 - 제안요청서 입력 오류 등 자체 과실 - 사업 변경으로 인해 제안요청 결과로 목적 달성 불가능 - 계속 진행이 불합리하다고 판단되는 경우 ※ 예산감소로 인한 취소는 당초예산 변경 시만 가능 ※ 계약상대자에게 취소사유서[서식 19] 통보 필요 물품 다수공급자계약 업무처리규정 제56조 항목 내용 비고 제안서 제출 (계약희망업체) ◦제안가격은 나라장터 계약단가 이하로 가능 ◦계약가격의 90% 미만으로 제안 불가(중소기업자간 경쟁물품인 경우에…",
+    "text": "계약 방법\n\n제안요청 취소 가능 사유 - 제안요청서 입력 오류 등 자체 과실 - 사업 변경으로 인해 제안요청 결과로 목적 달성 불가능 - 계속 진행이 불합리하다고 판단되는 경우 ※ 예산감소로 인한 취소는 당초예산 변경 시만 가능 ※ 계약상대자에게 취소사유서[서식 19] 통보 필요 물품 다수공급자계약 업무처리규정 제56조\n항목 내용 비고\n제안서 제출 (계약희망업체) ◦제안가격은 나라장터 계약단가 이하로 가능 ◦계약가격의 90% 미만으로 제안 불가(중소기업자간 경쟁물품인 경우에 한함) ◦할인율이 10% 초과하는 경우에도 90%로 평가 ◦할인행사 또는 다량납품 요건 중 높은 할인율 기준으로 제안",
+    "workId": "c17-w04",
+    "blockId": "c17-w04-b19",
+    "anchor": "제안요청취소가능사유-제안요청서입력오류등자체과"
+  },
+  {
+    "id": "c17-w04-b19~4",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "계약 방법",
+    "title": "항목 내용 비고 MAS(다수공급자계약) 개념 조달청이 품질·성능·효율 등… › ◦제안서 제출 거부 시 나라장터 계약조건으로 제안 간주 ◦제안서 취소 가능 여부 - 마",
+    "description": "◦제안서 제출 거부 시 나라장터 계약조건으로 제안 간주 ◦제안서 취소 가능 여부 - 마감 전: 취소 가능하나 재제출 불가 ※ 물품: 취소시 쇼핑몰 가격으로 제출한 것으로 간주 ※ 용역: 취소시 평가대상에서 제외 - 마감 후 ▷ 물품: 취소 불가 ▷ 용역: 제안가격 오류시 가능(조건부) ◦제안서 보완: - 일부 서류 누락 또는 불명확 시 3일 이내 보완 가능 - 기한 내 미제출 시 기존 서류 + 나라장터 계약조건으로 평가 물품 다수공급자계약 업무처리규정 제54조의…",
+    "text": "계약 방법\n\n◦제안서 제출 거부 시 나라장터 계약조건으로 제안 간주 ◦제안서 취소 가능 여부 - 마감 전: 취소 가능하나 재제출 불가 ※ 물품: 취소시 쇼핑몰 가격으로 제출한 것으로 간주 ※ 용역: 취소시 평가대상에서 제외 - 마감 후 ▷ 물품: 취소 불가 ▷ 용역: 제안가격 오류시 가능(조건부) ◦제안서 보완: - 일부 서류 누락 또는 불명확 시 3일 이내 보완 가능 - 기한 내 미제출 시 기존 서류 + 나라장터 계약조건으로 평가 물품 다수공급자계약 업무처리규정 제54조의2 용역 다수공급자계약 업무처리규정 제29조 물품 다수공급자계약 업무처리규정 제54조 용역 다수공급자계약 업무처리규정 제30조\n납품대상업체 선정기준 제안서 평가 종합점수 기준 - 물품: 2단계 경쟁 종합평가 또는 표준평가방식에 따라 최고 점수 제안자 선정 - 용역: 2단계 경쟁 종합평가방식에 따라 최고 점수 제안자 선정 물품 다수공급자계약 업무처리규정 용역 다수공급자계약 업무처리규정\n동점자 처리 ◦물품: 물품 다수공급자계약 업무처리규정 제53조 참고 ◦용역: 용역 다수공급자계약 업무처리규정 제24조 참고\n납품요구 ◦제안 유효기간 내 납품요구 가능 (유효기간 경과 시 납품요구 불가) ◦계약 수정 시 유효기간 내 업체 동의 얻으면 납품요구 가능 (계약 종료 후 불가) ◦납품요구량 변경 시 납품대상업체 동의 필요 ◦제안가격 변경 시 상호 협의된 가격 반영",
+    "workId": "c17-w04",
+    "blockId": "c17-w04-b19",
+    "anchor": "◦제안서제출거부시나라장터계약조건으로제안간주◦"
+  },
+  {
+    "id": "c17-w04:form:서식17",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29588,6 +33615,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식17"
   },
   {
+    "id": "c17-w04:form:서식18",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29600,6 +33628,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식18"
   },
   {
+    "id": "c17-w04:form:서식19",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29612,6 +33641,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식19"
   },
   {
+    "id": "c17-w04:form:예시9",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29624,6 +33654,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시9"
   },
   {
+    "id": "c17-w05",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29636,6 +33667,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c17-w05"
   },
   {
+    "id": "c17-w05-b1",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29648,6 +33680,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w05-b1"
   },
   {
+    "id": "c17-w05-b2",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29660,6 +33693,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w05-b2"
   },
   {
+    "id": "c17-w05-b3",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29672,6 +33706,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w05-b3"
   },
   {
+    "id": "c17-w05-b4",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29684,6 +33719,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w05-b4"
   },
   {
+    "id": "c17-w05-b5",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29696,18 +33732,49 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w05-b5"
   },
   {
+    "id": "c17-w05-b6~1",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
     "type": "매뉴얼 원문",
     "workTitle": "부정당업자 제재",
-    "title": "<부정당업자 제재절차> 제재절차 세부사항 계약체결요구 또는 계약진행 물품…",
+    "title": "<부정당업자 제재절차> 제재절차 세부사항 계약체결요구 또는 계약진행 물품… › 계약체결요구 또는 계약진행 물품 · 용역 · 시설공사 계약에 있어 계약상대자가 - 계약",
     "description": "<부정당업자 제재절차> 제재절차 세부사항 계약체결요구 또는 계약진행 물품 · 용역 · 시설공사 계약에 있어 계약상대자가 - 계약을 체결(또는 계약을 이행)하지 않거나 - 계약조건을 위반한 경우 발생 계약이행(계약체결) 촉구 계약이행 촉구 또는 계약위반에 대한 시정요구 공문발송 (내용증명, 2~3차례) - 부정당업자 제재처분 가능하다는 내용 반드시 명시 부정당업자제재 사유 발생 ◦업체의 계약포기서 제출 - 계약 체결 포기 또는 계약 이행 포기(경영상태 악화 등)…",
-    "text": "부정당업자 제재\n\n<부정당업자 제재절차>\n제재절차 세부사항\n계약체결요구 또는 계약진행 물품 · 용역 · 시설공사 계약에 있어 계약상대자가 - 계약을 체결(또는 계약을 이행)하지 않거나 - 계약조건을 위반한 경우 발생\n계약이행(계약체결) 촉구 계약이행 촉구 또는 계약위반에 대한 시정요구 공문발송 (내용증명, 2~3차례) - 부정당업자 제재처분 가능하다는 내용 반드시 명시\n부정당업자제재 사유 발생 ◦업체의 계약포기서 제출 - 계약 체결 포기 또는 계약 이행 포기(경영상태 악화 등) ◦계약조건 위반에 따른 시정 촉구를 받고도 이에 응하지 않는 경우 등 부정당업자 제재 사유 발생\n처분사전통지 및 의견청취 ◦부정당업자 제재처분을 하고자 하는 경우에는 처분사항을 사전에 통지하고, 대상자에게 의견 진술의 기회를 부여 ⇒ 내용증명 발송 ◦[공사]부정당업자 제재 처분[예시10] ◦사전통지 내용 - 처분의 제목 - 당사자의 성명 또는 명칭과 주소 - 처분하고자 하는 원인이 되는 사실과 처분의 내용 및 법적 근거(부정당업자 제재 ○개월 처분) - 위에 대한 의견을 제출할 수 있다는 뜻과 의견제출기한 내에 의견을 제출하지 아니하는 경우에는 의견이 없는 것으로 간주함을 명시 - 의견 제출 기관의 명칭과 주소 - 의견 제출 기한: 의견 제출에 필요한 상당한 기간을 고려하여 산정(통상 10일 이상) - 기타 필요한 사항\n부정당업자 제재 처분 요청 ◦부정당업자 제재 처분 요청 - 초 ․ 중학교 → 교육지원청 → 전북특별자치도교육청(재무과) - 그 외 기관 → 전북특별자치도교육청(재무과) ◦제출서류 - 부정당업자 제재 심의요청서(제재 요청기간 명시) - 계약심의위원회 심의 보충 자료 - 제재 대상자가 제출한 의견서 - 기타 관련서류 사본(법인인 경우 등기부등본 등)\n제재절차 세부사항\n도교육청 처리사항 시행 ◦처분검토 - 부정당업자 제재사유 타당여부 검토 - 부정당업자 제재기간 검토 - 의견제출내용과 제재사유가 부족할 경우 재청문 실시 ◦계약심의위원회 심의 및 제재조치 ◦제재내용 통보 - 부정당업자의 제재는 당사자에게 문서로 통지(송달) - 처분의 고지내용 ▷ 처분의 근거와 이유 ▷ 처분행정청, 담당자의 소속, 성명, 전화번호 ▷ 처분에 대한 행정심판을 제기할 수 있는지 여부 ▷ 불복절차 및 청구기간 - 국가종합전자조달시스템 상에 게시(관보게재 폐지) ▷ 업체(상호)명, 주소, 성명(법인인 경우 대표자), 주민등록번호(법인등록번호), 사업자등록번호, 관계법령상 면허 또는 등록번호 ▷ 입찰참가자격 제한기간 ▷ 입찰참가자격을 제한하는 구체적인 사유",
+    "text": "부정당업자 제재\n\n<부정당업자 제재절차>\n제재절차 세부사항\n계약체결요구 또는 계약진행 물품 · 용역 · 시설공사 계약에 있어 계약상대자가 - 계약을 체결(또는 계약을 이행)하지 않거나 - 계약조건을 위반한 경우 발생\n계약이행(계약체결) 촉구 계약이행 촉구 또는 계약위반에 대한 시정요구 공문발송 (내용증명, 2~3차례) - 부정당업자 제재처분 가능하다는 내용 반드시 명시\n부정당업자제재 사유 발생 ◦업체의 계약포기서 제출 - 계약 체결 포기 또는 계약 이행 포기(경영상태 악화 등) ◦계약조건 위반에 따른 시정 촉구를 받고도 이에 응하지 않는 경우 등 부정당업자 제재 사유 발생",
     "workId": "c17-w05",
-    "blockId": "c17-w05-b6"
+    "blockId": "c17-w05-b6",
+    "anchor": "계약체결요구또는계약진행물품·용역·시설공사계약"
   },
   {
+    "id": "c17-w05-b6~2",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "부정당업자 제재",
+    "title": "<부정당업자 제재절차> 제재절차 세부사항 계약체결요구 또는 계약진행 물품… › 처분사전통지 및 의견청취 ◦부정당업자 제재처분을 하고자 하는 경우에는 처분사항을 사전에",
+    "description": "처분사전통지 및 의견청취 ◦부정당업자 제재처분을 하고자 하는 경우에는 처분사항을 사전에 통지하고, 대상자에게 의견 진술의 기회를 부여 ⇒ 내용증명 발송 ◦[공사]부정당업자 제재 처분[예시10] ◦사전통지 내용 - 처분의 제목 - 당사자의 성명 또는 명칭과 주소 - 처분하고자 하는 원인이 되는 사실과 처분의 내용 및 법적 근거(부정당업자 제재 ○개월 처분) - 위에 대한 의견을 제출할 수 있다는 뜻과 의견제출기한 내에 의견을 제출하지 아니하는 경우에는 의견이 없는…",
+    "text": "부정당업자 제재\n\n처분사전통지 및 의견청취 ◦부정당업자 제재처분을 하고자 하는 경우에는 처분사항을 사전에 통지하고, 대상자에게 의견 진술의 기회를 부여 ⇒ 내용증명 발송 ◦[공사]부정당업자 제재 처분[예시10] ◦사전통지 내용 - 처분의 제목 - 당사자의 성명 또는 명칭과 주소 - 처분하고자 하는 원인이 되는 사실과 처분의 내용 및 법적 근거(부정당업자 제재 ○개월 처분) - 위에 대한 의견을 제출할 수 있다는 뜻과 의견제출기한 내에 의견을 제출하지 아니하는 경우에는 의견이 없는 것으로 간주함을 명시 - 의견 제출 기관의 명칭과 주소 - 의견 제출 기한: 의견 제출에 필요한 상당한 기간을 고려하여 산정(통상 10일 이상) - 기타 필요한 사항\n부정당업자 제재 처분 요청 ◦부정당업자 제재 처분 요청 - 초 ․ 중학교 → 교육지원청 → 전북특별자치도교육청(재무과) - 그 외 기관 → 전북특별자치도교육청(재무과) ◦제출서류 - 부정당업자 제재 심의요청서(제재 요청기간 명시) - 계약심의위원회 심의 보충 자료 - 제재 대상자가 제출한 의견서 - 기타 관련서류 사본(법인인 경우 등기부등본 등)\n제재절차 세부사항",
+    "workId": "c17-w05",
+    "blockId": "c17-w05-b6",
+    "anchor": "처분사전통지및의견청취◦부정당업자제재처분을하고"
+  },
+  {
+    "id": "c17-w05-b6~3",
+    "chapterId": "17",
+    "chapterLabel": "제17편",
+    "chapterTitle": "학교회계 계약",
+    "type": "매뉴얼 원문",
+    "workTitle": "부정당업자 제재",
+    "title": "<부정당업자 제재절차> 제재절차 세부사항 계약체결요구 또는 계약진행 물품… › 도교육청 처리사항 시행 ◦처분검토 - 부정당업자 제재사유 타당여부 검토 - 부정당업자",
+    "description": "도교육청 처리사항 시행 ◦처분검토 - 부정당업자 제재사유 타당여부 검토 - 부정당업자 제재기간 검토 - 의견제출내용과 제재사유가 부족할 경우 재청문 실시 ◦계약심의위원회 심의 및 제재조치 ◦제재내용 통보 - 부정당업자의 제재는 당사자에게 문서로 통지(송달) - 처분의 고지내용 ▷ 처분의 근거와 이유 ▷ 처분행정청, 담당자의 소속, 성명, 전화번호 ▷ 처분에 대한 행정심판을 제기할 수 있는지 여부 ▷ 불복절차 및 청구기간 - 국가종합전자조달시스템 상에 게시(관보게…",
+    "text": "부정당업자 제재\n\n도교육청 처리사항 시행 ◦처분검토 - 부정당업자 제재사유 타당여부 검토 - 부정당업자 제재기간 검토 - 의견제출내용과 제재사유가 부족할 경우 재청문 실시 ◦계약심의위원회 심의 및 제재조치 ◦제재내용 통보 - 부정당업자의 제재는 당사자에게 문서로 통지(송달) - 처분의 고지내용 ▷ 처분의 근거와 이유 ▷ 처분행정청, 담당자의 소속, 성명, 전화번호 ▷ 처분에 대한 행정심판을 제기할 수 있는지 여부 ▷ 불복절차 및 청구기간 - 국가종합전자조달시스템 상에 게시(관보게재 폐지) ▷ 업체(상호)명, 주소, 성명(법인인 경우 대표자), 주민등록번호(법인등록번호), 사업자등록번호, 관계법령상 면허 또는 등록번호 ▷ 입찰참가자격 제한기간 ▷ 입찰참가자격을 제한하는 구체적인 사유",
+    "workId": "c17-w05",
+    "blockId": "c17-w05-b6",
+    "anchor": "도교육청처리사항시행◦처분검토-부정당업자제재사"
+  },
+  {
+    "id": "c17-w05-b7",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29720,6 +33787,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w05-b7"
   },
   {
+    "id": "c17-w05-b8",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29732,6 +33800,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w05-b8"
   },
   {
+    "id": "c17-w05-b9",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29744,6 +33813,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w05-b9"
   },
   {
+    "id": "c17-w05-b10",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29756,6 +33826,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w05-b10"
   },
   {
+    "id": "c17-w05:form:예시10",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29768,6 +33839,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시10"
   },
   {
+    "id": "c17-w06",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29780,6 +33852,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c17-w06"
   },
   {
+    "id": "c17-w06-b1",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29792,6 +33865,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w06-b1"
   },
   {
+    "id": "c17-w06-b2",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29804,6 +33878,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w06-b2"
   },
   {
+    "id": "c17-w06-b3",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29816,6 +33891,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w06-b3"
   },
   {
+    "id": "c17-w06-b4",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29828,6 +33904,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w06-b4"
   },
   {
+    "id": "c17-w06-b5",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29840,6 +33917,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w06-b5"
   },
   {
+    "id": "c17-w06-b6",
     "chapterId": "17",
     "chapterLabel": "제17편",
     "chapterTitle": "학교회계 계약",
@@ -29852,6 +33930,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c17-w06-b6"
   },
   {
+    "id": "c18-w00",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -29865,19 +33944,52 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c18-w00-b1~1",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
     "type": "매뉴얼 원문",
     "workTitle": "한눈에 보기",
-    "title": "신설학교 설립 및 개교 준비 개요",
+    "title": "신설학교 설립 및 개교 준비 개요 › 도교육청 관할 교육지원청 교육청 지원 ◦개교 업무 세부 추진계획 작성 · 통보(공사도면",
     "description": "추진기관 분야 주요내용 도교육청 관할 교육지원청 교육청 지원 ◦개교 업무 세부 추진계획 작성 · 통보(공사도면 포함) ◦개설사무취급학교 지정 및 학교장 겸임 발령 ◦도교육청 부서별 개교 준비 경비 세부내역 송부, ⋅공인관리 안내 공문 발송 ◦교육정보화(기관코드, 인증서 발급, 국가망 신청, 신설학교 누리집 신청, 감독청 누리집 ID 부여) 관련 안내 기관등록 ◦고유번호증 발급, 공인 제작, ⋅초고속 국가망 신청, 전화가설 ◦나이스 기관 인증서 발급, ⋅지정정보처…",
-    "text": "한눈에 보기\n신설학교 설립 및 개교 준비 개요\n추진기관 분야 주요내용\n도교육청 관할 교육지원청 교육청 지원 ◦개교 업무 세부 추진계획 작성 · 통보(공사도면 포함) ◦개설사무취급학교 지정 및 학교장 겸임 발령 ◦도교육청 부서별 개교 준비 경비 세부내역 송부, ⋅공인관리 안내 공문 발송 ◦교육정보화(기관코드, 인증서 발급, 국가망 신청, 신설학교 누리집 신청, 감독청 누리집 ID 부여) 관련 안내\n기관등록 ◦고유번호증 발급, 공인 제작, ⋅초고속 국가망 신청, 전화가설 ◦나이스 기관 인증서 발급, ⋅지정정보처리장치 수요기관 등록 ◦급여 관련 기관등록, ⋅맞춤형 복지 기관 생성 ◦학교 누리집 개통 신청(전북특별자치도교육청미래교육연구원)\n재산 ◦등기\n신설학교 설립사무 ◦설립사무팀(행정실) 업무분장, ⋅설립사무팀 집기 구입 및 배치 ◦각종 교육 이수(사용시설 안전관리자, 대표자 위생교육)\n예산집행 ◦개교 경비 집행계획 작성 ◦교구 및 물품 선정위원회 구성 및 물품 구매 ◦교실 및 식생활관 비품, 업무용 책상 및 의자 우선 선정 (개교 실별 물품 수량 사전파악 후 구매추진) ◦정보화기기(컴퓨터 및 텔레비전) 구매방법 선정 ◦사무용 장비 및 소모품, 관리실 집기, 화장실 용품 구매 및 배치 ◦벽시계, 거울, 교실용 소모품, 청소용품, 쓰레기통 등 구매 및 배치 ◦교기제작 및 태극기, 각 실 표찰 구매 및 설치, ⋅교가(원가) 제작\n시설현황 파악 ◦공사중인 경우 설계변경이 필요한 부분은 시설변경 긴급요청 ◦개교 학교 배치도 작성(교무실과 협의하여 교실배치 결정)\n학교회계 관리 ◦학교회계 금고계약 및 계좌 개설, EFT(전자자금이체) 신청 ◦학교 법인카드 발급, ⋅스쿨뱅킹 자동납부 신용카드 가맹점 개설 ◦회계관계공무원 재정보증보험 가입 ◦학교회계 예산편성, ⋅각종 용역계약 체결\n일반행정 ◦학교 위임전결규정 제정, ⋅학교운영위원회 규정 초안 제정 ◦당직근무 방식 선정 및 계약체결(무인경비시스템 등) ◦각급학교 비치장부 목록 확인\n시설물 관리 ◦도면 인계인수(건축 / 토목 / 전기통신 / 소방 / 설비), 하자보수 업체 연락처 정리, 전기 / 소방 / 통신 / 설비 사용법 인계인수 ◦개교(원) 전 입주 청소(식생활관 청소 포함) ◦충분한 환기 및 베이크아웃, ⋅학교 실내 공기질 측정\n시설관리 선임자 신고 ◦가스안전관리자, 소방시설안전관리자, 승강기안전관리자 선임신고 ◦전기안전관리 대행 업체 선정 및 계약, 전기안전관리자 선임신고 ◦어린이놀이시설 등록 및 안전관리자 선임신고\n도교육청 관할 교육지원청 신설학교 협업 업무 보건 / 급식 관리 ◦급식기계 · 기구 구입 ◦급식수급계획 작성 및 급식업체 선정(입찰), 급식 관련 시 · 군청 신고 ◦교육환경보호구역 설정, 먹는 물 관리 등\n교육공무직원채용 ◦채용 및 근로계약 체결\n유관기관 협력 ◦도로명주소 및 건물번호 부여 신청 ◦도로 점용 신청, 어린이보호구역 지정, 전화번호 알림\n물품 ◦물품등록 및 관리전환",
+    "text": "한눈에 보기\n신설학교 설립 및 개교 준비 개요\n추진기관 분야 주요내용\n도교육청 관할 교육지원청 교육청 지원 ◦개교 업무 세부 추진계획 작성 · 통보(공사도면 포함) ◦개설사무취급학교 지정 및 학교장 겸임 발령 ◦도교육청 부서별 개교 준비 경비 세부내역 송부, ⋅공인관리 안내 공문 발송 ◦교육정보화(기관코드, 인증서 발급, 국가망 신청, 신설학교 누리집 신청, 감독청 누리집 ID 부여) 관련 안내\n기관등록 ◦고유번호증 발급, 공인 제작, ⋅초고속 국가망 신청, 전화가설 ◦나이스 기관 인증서 발급, ⋅지정정보처리장치 수요기관 등록 ◦급여 관련 기관등록, ⋅맞춤형 복지 기관 생성 ◦학교 누리집 개통 신청(전북특별자치도교육청미래교육연구원)\n재산 ◦등기\n신설학교 설립사무 ◦설립사무팀(행정실) 업무분장, ⋅설립사무팀 집기 구입 및 배치 ◦각종 교육 이수(사용시설 안전관리자, 대표자 위생교육)",
     "workId": "c18-w00",
     "blockId": "c18-w00-b1",
+    "anchor": "도교육청관할교육지원청교육청지원◦개교업무세부추",
     "weight": 0.6
   },
   {
+    "id": "c18-w00-b1~2",
+    "chapterId": "18",
+    "chapterLabel": "제18편",
+    "chapterTitle": "신설학교 설립 및 개교",
+    "type": "매뉴얼 원문",
+    "workTitle": "한눈에 보기",
+    "title": "신설학교 설립 및 개교 준비 개요 › 예산집행 ◦개교 경비 집행계획 작성 ◦교구 및 물품 선정위원회 구성 및 물품 구매 ◦교",
+    "description": "예산집행 ◦개교 경비 집행계획 작성 ◦교구 및 물품 선정위원회 구성 및 물품 구매 ◦교실 및 식생활관 비품, 업무용 책상 및 의자 우선 선정 (개교 실별 물품 수량 사전파악 후 구매추진) ◦정보화기기(컴퓨터 및 텔레비전) 구매방법 선정 ◦사무용 장비 및 소모품, 관리실 집기, 화장실 용품 구매 및 배치 ◦벽시계, 거울, 교실용 소모품, 청소용품, 쓰레기통 등 구매 및 배치 ◦교기제작 및 태극기, 각 실 표찰 구매 및 설치, ⋅교가(원가) 제작 시설현황 파악 ◦공…",
+    "text": "한눈에 보기\n신설학교 설립 및 개교 준비 개요\n예산집행 ◦개교 경비 집행계획 작성 ◦교구 및 물품 선정위원회 구성 및 물품 구매 ◦교실 및 식생활관 비품, 업무용 책상 및 의자 우선 선정 (개교 실별 물품 수량 사전파악 후 구매추진) ◦정보화기기(컴퓨터 및 텔레비전) 구매방법 선정 ◦사무용 장비 및 소모품, 관리실 집기, 화장실 용품 구매 및 배치 ◦벽시계, 거울, 교실용 소모품, 청소용품, 쓰레기통 등 구매 및 배치 ◦교기제작 및 태극기, 각 실 표찰 구매 및 설치, ⋅교가(원가) 제작\n시설현황 파악 ◦공사중인 경우 설계변경이 필요한 부분은 시설변경 긴급요청 ◦개교 학교 배치도 작성(교무실과 협의하여 교실배치 결정)\n학교회계 관리 ◦학교회계 금고계약 및 계좌 개설, EFT(전자자금이체) 신청 ◦학교 법인카드 발급, ⋅스쿨뱅킹 자동납부 신용카드 가맹점 개설 ◦회계관계공무원 재정보증보험 가입 ◦학교회계 예산편성, ⋅각종 용역계약 체결\n일반행정 ◦학교 위임전결규정 제정, ⋅학교운영위원회 규정 초안 제정 ◦당직근무 방식 선정 및 계약체결(무인경비시스템 등) ◦각급학교 비치장부 목록 확인",
+    "workId": "c18-w00",
+    "blockId": "c18-w00-b1",
+    "anchor": "예산집행◦개교경비집행계획작성◦교구및물품선정위",
+    "weight": 0.6
+  },
+  {
+    "id": "c18-w00-b1~3",
+    "chapterId": "18",
+    "chapterLabel": "제18편",
+    "chapterTitle": "신설학교 설립 및 개교",
+    "type": "매뉴얼 원문",
+    "workTitle": "한눈에 보기",
+    "title": "신설학교 설립 및 개교 준비 개요 › 시설물 관리 ◦도면 인계인수(건축 / 토목 / 전기통신 / 소방 / 설비), 하자보수",
+    "description": "시설물 관리 ◦도면 인계인수(건축 / 토목 / 전기통신 / 소방 / 설비), 하자보수 업체 연락처 정리, 전기 / 소방 / 통신 / 설비 사용법 인계인수 ◦개교(원) 전 입주 청소(식생활관 청소 포함) ◦충분한 환기 및 베이크아웃, ⋅학교 실내 공기질 측정 시설관리 선임자 신고 ◦가스안전관리자, 소방시설안전관리자, 승강기안전관리자 선임신고 ◦전기안전관리 대행 업체 선정 및 계약, 전기안전관리자 선임신고 ◦어린이놀이시설 등록 및 안전관리자 선임신고 도교육청 관할…",
+    "text": "한눈에 보기\n신설학교 설립 및 개교 준비 개요\n시설물 관리 ◦도면 인계인수(건축 / 토목 / 전기통신 / 소방 / 설비), 하자보수 업체 연락처 정리, 전기 / 소방 / 통신 / 설비 사용법 인계인수 ◦개교(원) 전 입주 청소(식생활관 청소 포함) ◦충분한 환기 및 베이크아웃, ⋅학교 실내 공기질 측정\n시설관리 선임자 신고 ◦가스안전관리자, 소방시설안전관리자, 승강기안전관리자 선임신고 ◦전기안전관리 대행 업체 선정 및 계약, 전기안전관리자 선임신고 ◦어린이놀이시설 등록 및 안전관리자 선임신고\n도교육청 관할 교육지원청 신설학교 협업 업무 보건 / 급식 관리 ◦급식기계 · 기구 구입 ◦급식수급계획 작성 및 급식업체 선정(입찰), 급식 관련 시 · 군청 신고 ◦교육환경보호구역 설정, 먹는 물 관리 등\n교육공무직원채용 ◦채용 및 근로계약 체결\n유관기관 협력 ◦도로명주소 및 건물번호 부여 신청 ◦도로 점용 신청, 어린이보호구역 지정, 전화번호 알림\n물품 ◦물품등록 및 관리전환",
+    "workId": "c18-w00",
+    "blockId": "c18-w00-b1",
+    "anchor": "시설물관리◦도면인계인수(건축/토목/전기통신/",
+    "weight": 0.6
+  },
+  {
+    "id": "c18-w01",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -29890,6 +34002,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c18-w01"
   },
   {
+    "id": "c18-w01-b1",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -29902,18 +34015,63 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w01-b1"
   },
   {
+    "id": "c18-w01-b2~1",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
     "type": "매뉴얼 원문",
     "workTitle": "일정별 업무처리",
-    "title": "세부내용 일정별 개교업무",
+    "title": "세부내용 일정별 개교업무 › ※ 학교 사정에 따라 달라질 수 있음",
     "description": "※ 학교 사정에 따라 달라질 수 있음 추진일정 업무명 세부 추진내용 10~11월 급식 기계 · 기구선정위원회 구성 개교와 동시에 급식 실시를 위한 급식 기계 · 기구선정위원회 구성 12월 기관코드 및 나이스 코드 발급 도교육청, 미래교육연구원에서 별도 시달 12월 신설학교 세부업무추진계획 수립 도교육청 계획서를 토대로 구체적 작성 개교경비 집행 계획, 겸임학교 업무분장 등 12~1월 신설학교 업무추진팀 구성 원만한 개교를 위해 구성[교장, 교감, 행정실장, 영양…",
-    "text": "일정별 업무처리\n세부내용 일정별 개교업무\n※ 학교 사정에 따라 달라질 수 있음\n추진일정 업무명 세부 추진내용\n10~11월 급식 기계 · 기구선정위원회 구성 개교와 동시에 급식 실시를 위한 급식 기계 · 기구선정위원회 구성\n12월 기관코드 및 나이스 코드 발급 도교육청, 미래교육연구원에서 별도 시달\n12월 신설학교 세부업무추진계획 수립 도교육청 계획서를 토대로 구체적 작성 개교경비 집행 계획, 겸임학교 업무분장 등\n12~1월 신설학교 업무추진팀 구성 원만한 개교를 위해 구성[교장, 교감, 행정실장, 영양(교)사 등으로 구성]\n12~1월 타 신설학교 견학 최근 개교한 신설학교 견학 실시\n12월 고유번호증 및 홈택스 인증서 발급 겸임교장 명의로 고유번호증 발급(세무서)\n12월 나이스 기관 인증서 발급 신청 나이스 권한 부여를 위한 기관 인증서 발급 신청 - 유 · 초 · 중은 교육지원청, 고등 · 특수 · 직속은 전북특별자치도교육청미래교육연구원\n12월 조달청 나라장터 수요기관 등록 S2B이용기관 등록 개교 준비물품 구매를 위한 기관인증서 발급 신청(나라장터, 학교장터)\n1월 초고속 국가망(NIS) 사용 신청 인터넷 이용을 위한 초고속 국가망 사용 신청\n공인 조각 및 관보→도보 게재 학교장 직인, 회계관계공무원 직인 등 공인 조각 및 관보 게재\n통장계좌 개설(보고) 및 카드 발급 학교회계 예탁금 관리를 위한 계좌 개설 후 보고 및 카드 발급 의뢰\n회계 관련 교직원 재정보증보험 가입 회계사무 처리를 위한 교직원 재정보증보험 가입\n관리실 및 기타실 집기와 전자기기 주문 사무용 책 · 걸상, 캐비닛, PC, 프린터 등 조달 구매 (구매 전 신축건물 실별 도면 확인)\n전화 가입 교육청 통신 발주 물량 확인 후 전화 가입\n보수 공제관련 기관 등록 각종 보수 공제관련 기관(공무원연금공단, 건강보험공단, 교직원공제회) 등록\n교재 · 교구 및 교단선진화기기 선정(구입) 위원회 구성 양질의 신설학교 교재 · 교구 · 기자재 구입을 위한 선정(구입)위원회 구성\n어린이보호구역 신청 학교부지 주변 도로 확인 후 어린이보호구역 신청(시 · 군청)\n도로점용 신청 도로에 학교 표지판 설치 시 해당 시 · 군청과 협의 후 설치\n교육공무직원 채용 교육공무직원 채용 협의(관할 교육지원청)\n개교 준비 합동 중간 점검 도교육청과 교육지원청 합동 점검\n추진일정 업무명 세부 추진내용\n2월 본예산 편성 개교 이후 사용할 예산 편성\n학내망 설치 완료 신축 건물 입주 시 인터넷 사용이 가능하도록 조치\n누리집 개통 및 전화번호 안내 학교 홍보, 각종 공지사항 안내 등을 위한 누리집 개통 도내 기관 알림공문 발송(업무관리시스템 공문게시 이용)\n전원 투입시기 조율 신축건물 이사 일정 등을 고려한 전원 투입시기 조율 필요\n공기질 측정 도교육청 및 관할 교육지원청에서 실시\n건물 준공 도교육청 및 관할 교육지원청에서 실시\n무인경비시스템 가동 개교준비 물품 배치에 따른 도난사고 방지\n준공 도면 인계인수 건축 / 토목 / 설비 / 소방 / 전기 / 통신 도면 인수\n관리실 및 기타실 집기 배치 실별 도면에 따른 집기 배치\n교재 · 교구 및 교단 선진화 기기 배치 교실, 특별실 등 교재 · 교구 · 기자재 배치\n급식기계 · 기구 배치 구입한 급식 기계 · 기구 배치\n급식 수급계획 및 급식납품업체 선정 완료 급식수급 계획 완성 및 급식업체 계약 완료\n교원 발령 교원인사과 및 교육지원청 인사발령\n신설학교 교직원 전체 회의 개교 준비를 위한 전체 교직원 회의 실시\n고유번호증 대표자 및 주소 변경 신임 교장 명의 및 새 주소로 고유번호증 변경 (국세청 홈택스 신청)\n각종 시간강사 채용 교육과정 운영에 필요한 시간강사 채용\n각종 용역 계약 체결 법령에 따른 각종 유지보수 계약 체결 완료\n가스시설 가동 및 급식 기계 · 기구 시운전 가스시설 가동 및 급식 기계 · 기구 시운전\n집단급식소 설치 · 운영 신고 시 · 군청 신고 (전주: 구청 청소위생과, 군산: 자원순환과, 익산: 위생과)\n음식물류 폐기물 발생 억제 및 처리 계획 시 · 군청 신고 (전주: 구청 청소위생과, 군산: 자원순환과, 익산: 청소자원과)\n검사대상기기 설치 검사 검사대상기기 설치 검사\n학교 실내 · 외 환경구성 학교 실내 · 외 환경구성 완료 (각 실 패찰, 건물배치도, 교육환경보호구역 안내문, 입간판 및 각종 현황판 부착 등)\n각종 소모품 구입 사무용품, 청소용품 등 각종 소모품 구입\n각종 대장 및 부책 정리 개교 전 · 후 각종 대장 및 부책 정리\n교육과정, 학교규칙, 각 부서 운영 계획, 시정표 초안 작성 개교 전 교무 / 학사 관련 초안 작성(개교 후 즉시 확정)\n신입생 예비 소집 학생 관련 각종 안내장 송부 (학교생활 안내, 스쿨뱅킹동의서, 학비지원 및 각종 수납금 납부 안내 등)\n교사 대청소 개교 전 주변 정리 및 대청소\n개교 준비 합동 최종 점검 도교육청 및 교육지원청 합동 점검\n업무관리시스템 개교 학교 등록 관할 교육지원청에서 실시\n개교식 준비 교육(지원)청과 협의하여 개교식 준비",
+    "text": "일정별 업무처리\n세부내용 일정별 개교업무\n※ 학교 사정에 따라 달라질 수 있음\n추진일정 업무명 세부 추진내용\n10~11월 급식 기계 · 기구선정위원회 구성 개교와 동시에 급식 실시를 위한 급식 기계 · 기구선정위원회 구성\n12월 기관코드 및 나이스 코드 발급 도교육청, 미래교육연구원에서 별도 시달\n12월 신설학교 세부업무추진계획 수립 도교육청 계획서를 토대로 구체적 작성 개교경비 집행 계획, 겸임학교 업무분장 등\n12~1월 신설학교 업무추진팀 구성 원만한 개교를 위해 구성[교장, 교감, 행정실장, 영양(교)사 등으로 구성]\n12~1월 타 신설학교 견학 최근 개교한 신설학교 견학 실시\n12월 고유번호증 및 홈택스 인증서 발급 겸임교장 명의로 고유번호증 발급(세무서)\n12월 나이스 기관 인증서 발급 신청 나이스 권한 부여를 위한 기관 인증서 발급 신청 - 유 · 초 · 중은 교육지원청, 고등 · 특수 · 직속은 전북특별자치도교육청미래교육연구원\n12월 조달청 나라장터 수요기관 등록 S2B이용기관 등록 개교 준비물품 구매를 위한 기관인증서 발급 신청(나라장터, 학교장터)\n1월 초고속 국가망(NIS) 사용 신청 인터넷 이용을 위한 초고속 국가망 사용 신청",
     "workId": "c18-w01",
-    "blockId": "c18-w01-b2"
+    "blockId": "c18-w01-b2",
+    "anchor": "※학교사정에따라달라질수있음"
   },
   {
+    "id": "c18-w01-b2~2",
+    "chapterId": "18",
+    "chapterLabel": "제18편",
+    "chapterTitle": "신설학교 설립 및 개교",
+    "type": "매뉴얼 원문",
+    "workTitle": "일정별 업무처리",
+    "title": "세부내용 일정별 개교업무 › 공인 조각 및 관보→도보 게재 학교장 직인, 회계관계공무원 직인 등 공인 조각 및 관보",
+    "description": "공인 조각 및 관보→도보 게재 학교장 직인, 회계관계공무원 직인 등 공인 조각 및 관보 게재 통장계좌 개설(보고) 및 카드 발급 학교회계 예탁금 관리를 위한 계좌 개설 후 보고 및 카드 발급 의뢰 회계 관련 교직원 재정보증보험 가입 회계사무 처리를 위한 교직원 재정보증보험 가입 관리실 및 기타실 집기와 전자기기 주문 사무용 책 · 걸상, 캐비닛, PC, 프린터 등 조달 구매 (구매 전 신축건물 실별 도면 확인) 전화 가입 교육청 통신 발주 물량 확인 후 전화 가…",
+    "text": "일정별 업무처리\n세부내용 일정별 개교업무\n공인 조각 및 관보→도보 게재 학교장 직인, 회계관계공무원 직인 등 공인 조각 및 관보 게재\n통장계좌 개설(보고) 및 카드 발급 학교회계 예탁금 관리를 위한 계좌 개설 후 보고 및 카드 발급 의뢰\n회계 관련 교직원 재정보증보험 가입 회계사무 처리를 위한 교직원 재정보증보험 가입\n관리실 및 기타실 집기와 전자기기 주문 사무용 책 · 걸상, 캐비닛, PC, 프린터 등 조달 구매 (구매 전 신축건물 실별 도면 확인)\n전화 가입 교육청 통신 발주 물량 확인 후 전화 가입\n보수 공제관련 기관 등록 각종 보수 공제관련 기관(공무원연금공단, 건강보험공단, 교직원공제회) 등록\n교재 · 교구 및 교단선진화기기 선정(구입) 위원회 구성 양질의 신설학교 교재 · 교구 · 기자재 구입을 위한 선정(구입)위원회 구성\n어린이보호구역 신청 학교부지 주변 도로 확인 후 어린이보호구역 신청(시 · 군청)\n도로점용 신청 도로에 학교 표지판 설치 시 해당 시 · 군청과 협의 후 설치\n교육공무직원 채용 교육공무직원 채용 협의(관할 교육지원청)\n개교 준비 합동 중간 점검 도교육청과 교육지원청 합동 점검\n추진일정 업무명 세부 추진내용\n2월 본예산 편성 개교 이후 사용할 예산 편성",
+    "workId": "c18-w01",
+    "blockId": "c18-w01-b2",
+    "anchor": "공인조각및관보→도보게재학교장직인,회계관계공무"
+  },
+  {
+    "id": "c18-w01-b2~3",
+    "chapterId": "18",
+    "chapterLabel": "제18편",
+    "chapterTitle": "신설학교 설립 및 개교",
+    "type": "매뉴얼 원문",
+    "workTitle": "일정별 업무처리",
+    "title": "세부내용 일정별 개교업무 › 학내망 설치 완료 신축 건물 입주 시 인터넷 사용이 가능하도록 조치",
+    "description": "학내망 설치 완료 신축 건물 입주 시 인터넷 사용이 가능하도록 조치 누리집 개통 및 전화번호 안내 학교 홍보, 각종 공지사항 안내 등을 위한 누리집 개통 도내 기관 알림공문 발송(업무관리시스템 공문게시 이용) 전원 투입시기 조율 신축건물 이사 일정 등을 고려한 전원 투입시기 조율 필요 공기질 측정 도교육청 및 관할 교육지원청에서 실시 건물 준공 도교육청 및 관할 교육지원청에서 실시 무인경비시스템 가동 개교준비 물품 배치에 따른 도난사고 방지 준공 도면 인계인수…",
+    "text": "일정별 업무처리\n세부내용 일정별 개교업무\n학내망 설치 완료 신축 건물 입주 시 인터넷 사용이 가능하도록 조치\n누리집 개통 및 전화번호 안내 학교 홍보, 각종 공지사항 안내 등을 위한 누리집 개통 도내 기관 알림공문 발송(업무관리시스템 공문게시 이용)\n전원 투입시기 조율 신축건물 이사 일정 등을 고려한 전원 투입시기 조율 필요\n공기질 측정 도교육청 및 관할 교육지원청에서 실시\n건물 준공 도교육청 및 관할 교육지원청에서 실시\n무인경비시스템 가동 개교준비 물품 배치에 따른 도난사고 방지\n준공 도면 인계인수 건축 / 토목 / 설비 / 소방 / 전기 / 통신 도면 인수\n관리실 및 기타실 집기 배치 실별 도면에 따른 집기 배치\n교재 · 교구 및 교단 선진화 기기 배치 교실, 특별실 등 교재 · 교구 · 기자재 배치\n급식기계 · 기구 배치 구입한 급식 기계 · 기구 배치\n급식 수급계획 및 급식납품업체 선정 완료 급식수급 계획 완성 및 급식업체 계약 완료\n교원 발령 교원인사과 및 교육지원청 인사발령\n신설학교 교직원 전체 회의 개교 준비를 위한 전체 교직원 회의 실시\n고유번호증 대표자 및 주소 변경 신임 교장 명의 및 새 주소로 고유번호증 변경 (국세청 홈택스 신청)\n각종 시간강사 채용 교육과정 운영에 필요한 시간강사 채용",
+    "workId": "c18-w01",
+    "blockId": "c18-w01-b2",
+    "anchor": "학내망설치완료신축건물입주시인터넷사용이가능하도"
+  },
+  {
+    "id": "c18-w01-b2~4",
+    "chapterId": "18",
+    "chapterLabel": "제18편",
+    "chapterTitle": "신설학교 설립 및 개교",
+    "type": "매뉴얼 원문",
+    "workTitle": "일정별 업무처리",
+    "title": "세부내용 일정별 개교업무 › 각종 용역 계약 체결 법령에 따른 각종 유지보수 계약 체결 완료",
+    "description": "각종 용역 계약 체결 법령에 따른 각종 유지보수 계약 체결 완료 가스시설 가동 및 급식 기계 · 기구 시운전 가스시설 가동 및 급식 기계 · 기구 시운전 집단급식소 설치 · 운영 신고 시 · 군청 신고 (전주: 구청 청소위생과, 군산: 자원순환과, 익산: 위생과) 음식물류 폐기물 발생 억제 및 처리 계획 시 · 군청 신고 (전주: 구청 청소위생과, 군산: 자원순환과, 익산: 청소자원과) 검사대상기기 설치 검사 검사대상기기 설치 검사 학교 실내 · 외 환경구성 학…",
+    "text": "일정별 업무처리\n세부내용 일정별 개교업무\n각종 용역 계약 체결 법령에 따른 각종 유지보수 계약 체결 완료\n가스시설 가동 및 급식 기계 · 기구 시운전 가스시설 가동 및 급식 기계 · 기구 시운전\n집단급식소 설치 · 운영 신고 시 · 군청 신고 (전주: 구청 청소위생과, 군산: 자원순환과, 익산: 위생과)\n음식물류 폐기물 발생 억제 및 처리 계획 시 · 군청 신고 (전주: 구청 청소위생과, 군산: 자원순환과, 익산: 청소자원과)\n검사대상기기 설치 검사 검사대상기기 설치 검사\n학교 실내 · 외 환경구성 학교 실내 · 외 환경구성 완료 (각 실 패찰, 건물배치도, 교육환경보호구역 안내문, 입간판 및 각종 현황판 부착 등)\n각종 소모품 구입 사무용품, 청소용품 등 각종 소모품 구입\n각종 대장 및 부책 정리 개교 전 · 후 각종 대장 및 부책 정리\n교육과정, 학교규칙, 각 부서 운영 계획, 시정표 초안 작성 개교 전 교무 / 학사 관련 초안 작성(개교 후 즉시 확정)\n신입생 예비 소집 학생 관련 각종 안내장 송부 (학교생활 안내, 스쿨뱅킹동의서, 학비지원 및 각종 수납금 납부 안내 등)\n교사 대청소 개교 전 주변 정리 및 대청소\n개교 준비 합동 최종 점검 도교육청 및 교육지원청 합동 점검\n업무관리시스템 개교 학교 등록 관할 교육지원청에서 실시\n개교식 준비 교육(지원)청과 협의하여 개교식 준비",
+    "workId": "c18-w01",
+    "blockId": "c18-w01-b2",
+    "anchor": "각종용역계약체결법령에따른각종유지보수계약체결완"
+  },
+  {
+    "id": "c18-w01:form:예시7",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -29926,6 +34084,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시7"
   },
   {
+    "id": "c18-w02",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -29938,6 +34097,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c18-w02"
   },
   {
+    "id": "c18-w02-b1",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -29950,6 +34110,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b1"
   },
   {
+    "id": "c18-w02-b2",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -29962,6 +34123,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b2"
   },
   {
+    "id": "c18-w02-b3",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -29974,6 +34136,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b3"
   },
   {
+    "id": "c18-w02-b4",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -29986,6 +34149,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b4"
   },
   {
+    "id": "c18-w02-b5",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -29998,6 +34162,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b5"
   },
   {
+    "id": "c18-w02-b6",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30010,6 +34175,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b6"
   },
   {
+    "id": "c18-w02-b7",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30022,6 +34188,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b7"
   },
   {
+    "id": "c18-w02-b8",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30034,6 +34201,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b8"
   },
   {
+    "id": "c18-w02-b9",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30046,6 +34214,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b9"
   },
   {
+    "id": "c18-w02-b10",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30058,6 +34227,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b10"
   },
   {
+    "id": "c18-w02-b11",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30070,6 +34240,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b11"
   },
   {
+    "id": "c18-w02-b12",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30082,6 +34253,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b12"
   },
   {
+    "id": "c18-w02-b13",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30094,6 +34266,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b13"
   },
   {
+    "id": "c18-w02-b14",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30106,6 +34279,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b14"
   },
   {
+    "id": "c18-w02-b15",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30118,6 +34292,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b15"
   },
   {
+    "id": "c18-w02-b16",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30130,6 +34305,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b16"
   },
   {
+    "id": "c18-w02-b17",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30142,6 +34318,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b17"
   },
   {
+    "id": "c18-w02-b18",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30154,6 +34331,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b18"
   },
   {
+    "id": "c18-w02-b19",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30166,6 +34344,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b19"
   },
   {
+    "id": "c18-w02-b20",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30178,6 +34357,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b20"
   },
   {
+    "id": "c18-w02-b21",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30190,6 +34370,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b21"
   },
   {
+    "id": "c18-w02-b22",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30202,6 +34383,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b22"
   },
   {
+    "id": "c18-w02-b23",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30214,6 +34396,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b23"
   },
   {
+    "id": "c18-w02-b24",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30226,6 +34409,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w02-b24"
   },
   {
+    "id": "c18-w02:form:서식1",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30238,6 +34422,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식1"
   },
   {
+    "id": "c18-w02:form:서식2",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30250,6 +34435,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식2"
   },
   {
+    "id": "c18-w02:form:서식3",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30262,6 +34448,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식3"
   },
   {
+    "id": "c18-w02:form:서식4",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30274,6 +34461,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식4"
   },
   {
+    "id": "c18-w02:form:서식5",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30286,6 +34474,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식5"
   },
   {
+    "id": "c18-w02:form:서식6",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30298,6 +34487,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식6"
   },
   {
+    "id": "c18-w02:form:예시1",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30310,6 +34500,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시1"
   },
   {
+    "id": "c18-w03",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30322,6 +34513,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c18-w03"
   },
   {
+    "id": "c18-w03-b1",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30334,6 +34526,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w03-b1"
   },
   {
+    "id": "c18-w03-b2",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30346,6 +34539,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w03-b2"
   },
   {
+    "id": "c18-w03-b3",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30358,6 +34552,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w03-b3"
   },
   {
+    "id": "c18-w03-b4",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30370,6 +34565,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w03-b4"
   },
   {
+    "id": "c18-w03-b5",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30382,6 +34578,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w03-b5"
   },
   {
+    "id": "c18-w03-b6",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30394,6 +34591,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w03-b6"
   },
   {
+    "id": "c18-w03-b7",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30406,6 +34604,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w03-b7"
   },
   {
+    "id": "c18-w03-b8",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30418,6 +34617,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w03-b8"
   },
   {
+    "id": "c18-w03-b9",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30430,6 +34630,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w03-b9"
   },
   {
+    "id": "c18-w03-b10",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30442,6 +34643,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w03-b10"
   },
   {
+    "id": "c18-w03-b11",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30454,6 +34656,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w03-b11"
   },
   {
+    "id": "c18-w03-b12",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30466,6 +34669,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w03-b12"
   },
   {
+    "id": "c18-w03-b13",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30478,6 +34682,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w03-b13"
   },
   {
+    "id": "c18-w03-b14",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30490,6 +34695,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w03-b14"
   },
   {
+    "id": "c18-w03-b15",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30502,6 +34708,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w03-b15"
   },
   {
+    "id": "c18-w03-b16",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30514,6 +34721,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w03-b16"
   },
   {
+    "id": "c18-w03-b17",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30526,6 +34734,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w03-b17"
   },
   {
+    "id": "c18-w03-b18",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30538,6 +34747,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w03-b18"
   },
   {
+    "id": "c18-w03-b19",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30550,6 +34760,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w03-b19"
   },
   {
+    "id": "c18-w03-b20",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30562,6 +34773,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w03-b20"
   },
   {
+    "id": "c18-w03-b21",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30574,6 +34786,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w03-b21"
   },
   {
+    "id": "c18-w03-b22",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30586,6 +34799,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w03-b22"
   },
   {
+    "id": "c18-w03-b23",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30598,6 +34812,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w03-b23"
   },
   {
+    "id": "c18-w03:form:예시2",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30610,6 +34825,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시2"
   },
   {
+    "id": "c18-w03:form:예시3",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30622,6 +34838,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시3"
   },
   {
+    "id": "c18-w03:form:예시4",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30634,6 +34851,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시4"
   },
   {
+    "id": "c18-w03:form:예시5",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30646,6 +34864,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시5"
   },
   {
+    "id": "c18-w03:form:예시6",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30658,6 +34877,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시6"
   },
   {
+    "id": "c18-w03:form:예시8",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30670,6 +34890,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시8"
   },
   {
+    "id": "c18-w04",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30682,6 +34903,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c18-w04"
   },
   {
+    "id": "c18-w04-b1",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30694,6 +34916,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w04-b1"
   },
   {
+    "id": "c18-w04-b2",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30706,6 +34929,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w04-b2"
   },
   {
+    "id": "c18-w04-b3",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30718,6 +34942,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w04-b3"
   },
   {
+    "id": "c18-w04-b4",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30730,6 +34955,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w04-b4"
   },
   {
+    "id": "c18-w04-b5",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30742,6 +34968,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w04-b5"
   },
   {
+    "id": "c18-w04-b6",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30754,6 +34981,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w04-b6"
   },
   {
+    "id": "c18-w04-b7",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30766,6 +34994,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w04-b7"
   },
   {
+    "id": "c18-w04-b8",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30778,6 +35007,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w04-b8"
   },
   {
+    "id": "c18-w04-b9",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30790,6 +35020,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w04-b9"
   },
   {
+    "id": "c18-w04-b10",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30802,6 +35033,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w04-b10"
   },
   {
+    "id": "c18-w04-b11",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30814,6 +35046,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w04-b11"
   },
   {
+    "id": "c18-w04-b12",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30826,6 +35059,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w04-b12"
   },
   {
+    "id": "c18-w04-b13",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30838,6 +35072,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w04-b13"
   },
   {
+    "id": "c18-w04-b14",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30850,6 +35085,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w04-b14"
   },
   {
+    "id": "c18-w04-b15",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30862,6 +35098,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w04-b15"
   },
   {
+    "id": "c18-w04-b16",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30874,6 +35111,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w04-b16"
   },
   {
+    "id": "c18-w04-b17",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30886,6 +35124,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w04-b17"
   },
   {
+    "id": "c18-w04-b18",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30898,6 +35137,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w04-b18"
   },
   {
+    "id": "c18-w04-b19",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30910,6 +35150,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w04-b19"
   },
   {
+    "id": "c18-w04-b20",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30922,6 +35163,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w04-b20"
   },
   {
+    "id": "c18-w04-b21",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30934,6 +35176,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w04-b21"
   },
   {
+    "id": "c18-w04:form:서식7",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30946,6 +35189,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식7"
   },
   {
+    "id": "c18-w04:form:예시9",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30958,6 +35202,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시9"
   },
   {
+    "id": "c18-w04:form:예시10",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30970,6 +35215,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시10"
   },
   {
+    "id": "c18-w04:form:예시11",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30982,6 +35228,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시11"
   },
   {
+    "id": "c18-w05",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -30994,6 +35241,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c18-w05"
   },
   {
+    "id": "c18-w05-b1",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31006,6 +35254,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w05-b1"
   },
   {
+    "id": "c18-w05-b2",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31018,6 +35267,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w05-b2"
   },
   {
+    "id": "c18-w05-b3",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31030,6 +35280,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w05-b3"
   },
   {
+    "id": "c18-w05-b4",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31042,6 +35293,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w05-b4"
   },
   {
+    "id": "c18-w05-b5",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31054,6 +35306,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w05-b5"
   },
   {
+    "id": "c18-w05-b6",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31066,6 +35319,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w05-b6"
   },
   {
+    "id": "c18-w05-b7",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31078,6 +35332,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w05-b7"
   },
   {
+    "id": "c18-w05-b8",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31090,6 +35345,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w05-b8"
   },
   {
+    "id": "c18-w05-b9",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31102,6 +35358,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w05-b9"
   },
   {
+    "id": "c18-w05-b10",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31114,6 +35371,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w05-b10"
   },
   {
+    "id": "c18-w05-b11",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31126,6 +35384,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w05-b11"
   },
   {
+    "id": "c18-w05-b12",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31138,6 +35397,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w05-b12"
   },
   {
+    "id": "c18-w05:form:서식8",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31150,6 +35410,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식8"
   },
   {
+    "id": "c18-w05:form:서식9",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31162,6 +35423,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식9"
   },
   {
+    "id": "c18-w05:form:서식10",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31174,6 +35436,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "서식10"
   },
   {
+    "id": "c18-w05:form:예시12",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31186,6 +35449,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시12"
   },
   {
+    "id": "c18-w06",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31198,6 +35462,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c18-w06"
   },
   {
+    "id": "c18-w06-b1",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31210,6 +35475,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w06-b1"
   },
   {
+    "id": "c18-w06-b2",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31222,6 +35488,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w06-b2"
   },
   {
+    "id": "c18-w06-b3",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31234,6 +35501,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w06-b3"
   },
   {
+    "id": "c18-w06-b4",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31246,6 +35514,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w06-b4"
   },
   {
+    "id": "c18-w06-b5",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31258,6 +35527,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w06-b5"
   },
   {
+    "id": "c18-w06-b6",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31270,6 +35540,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w06-b6"
   },
   {
+    "id": "c18-w06-b7",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31282,6 +35553,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w06-b7"
   },
   {
+    "id": "c18-w06-b8",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31294,6 +35566,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w06-b8"
   },
   {
+    "id": "c18-w06-b9",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31306,6 +35579,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w06-b9"
   },
   {
+    "id": "c18-w06-b10",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31318,6 +35592,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w06-b10"
   },
   {
+    "id": "c18-w06-b11",
     "chapterId": "18",
     "chapterLabel": "제18편",
     "chapterTitle": "신설학교 설립 및 개교",
@@ -31330,6 +35605,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c18-w06-b11"
   },
   {
+    "id": "c19-w00",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31343,19 +35619,37 @@ window.GUIDE_SEARCH_INDEX = [
     "weight": 0.6
   },
   {
+    "id": "c19-w00-b1~1",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
     "type": "매뉴얼 원문",
     "workTitle": "한눈에 보기",
-    "title": "학교 폐지 및 통폐합 개요",
+    "title": "학교 폐지 및 통폐합 개요 › 폐지학교 학교 폐지업무 추진계획 수립 ◦학교 통폐합에 따른 원활한 폐지학교 행정업무 처",
     "description": "추진기관 분야 주요내용 폐지학교 학교 폐지업무 추진계획 수립 ◦학교 통폐합에 따른 원활한 폐지학교 행정업무 처리를 위해 업무별 추진 내용과 일정 계획 수립 ◦사전 의견 수렴 실시(교직원, 지역주민, 학부모 설명회 등) ◦부서별 업무 분장 및 담당자 지정 ◦업무 추진 계획(안) 수립 및 상세 일정 조정 폐지학교 및 관할 교육지원청 비전자기록물 이관 ◦폐지학교에 보관중인 모든 비전자기록물 이관 ◦비전자기록물 / 행정박물 / 시청각기록물 / 간행물 등 ◦기록물 이관…",
-    "text": "한눈에 보기\n학교 폐지 및 통폐합 개요\n추진기관 분야 주요내용\n폐지학교 학교 폐지업무 추진계획 수립 ◦학교 통폐합에 따른 원활한 폐지학교 행정업무 처리를 위해 업무별 추진 내용과 일정 계획 수립 ◦사전 의견 수렴 실시(교직원, 지역주민, 학부모 설명회 등) ◦부서별 업무 분장 및 담당자 지정 ◦업무 추진 계획(안) 수립 및 상세 일정 조정\n폐지학교 및 관할 교육지원청 비전자기록물 이관 ◦폐지학교에 보관중인 모든 비전자기록물 이관 ◦비전자기록물 / 행정박물 / 시청각기록물 / 간행물 등 ◦기록물 이관 계획 수립 및 통보 ◦비전자기록물 정리 및 인계 ◦문서고 기록물 정리 및 전수조사 ◦이관 대상 비전자기록물 목록 통보\n공인 폐기 및 이관 ◦폐기 공인 대장 등록 ◦(폐지학교→도청) 도보 공고 의뢰 공문 발송 ◦(폐지학교→관할 교육지원청) 폐기 공인 이관 공문 제출 ◦폐기 공인 이관(공문 제출 후 7일 이내)\n폐지학교 학교회계 관리 ◦공공요금 납부 및 해지 ◦4대보험 정산 처리 ◦각종 회계 처리(학교발전기금, 세입세출외현금, 학교회계)\n물품 관리 ◦학교 폐지 확정 후 최우선 과제(학교 폐지에 따른 물품 정리) ◦재물조사 실시 및 불용결정, 관리전환 소요조회, 불용품 처분\n교육정보화기기 관리 ◦학교 폐지 확정 후 진행 ◦정보화기기 실태조사, 불용결정 ◦하드디스크 해체 / 디가우징 작업 ◦불용물품 매각 및 폐기, 관리전환\n기타 관리 ◦급식 관리: 학교급식 변경 보고, 식생활관 가스 해지 및 급식기구 처리, 집단급식소 설치 운영 종료 신고(폐지학교→해당 시군청) ◦재산 및 시설물 관리: 재산대장 전수조사, 공유재산심의회 심의 요청(행정재산 용도폐지 등), 시설물 정리 후 재산 인계인수 ◦학교도서관 관리: 도서관 장서 점검, 이관계획 수립 및 학교도서관운영위원회심의, 도서대장 정리, 관리전환 및 불용도서 폐기 처리\n각종 해지 및 신고 ◦학교 홈페이지 및 전산망 해지 ◦승강기 안전검사 연기 신청 ◦각종 지정정보처리장치 탈퇴 ◦어린이보호구역 해제 요청 ◦학교 우편물 수령 주소 변경 ◦학교 사업장 폐업 신고",
+    "text": "한눈에 보기\n학교 폐지 및 통폐합 개요\n추진기관 분야 주요내용\n폐지학교 학교 폐지업무 추진계획 수립 ◦학교 통폐합에 따른 원활한 폐지학교 행정업무 처리를 위해 업무별 추진 내용과 일정 계획 수립 ◦사전 의견 수렴 실시(교직원, 지역주민, 학부모 설명회 등) ◦부서별 업무 분장 및 담당자 지정 ◦업무 추진 계획(안) 수립 및 상세 일정 조정\n폐지학교 및 관할 교육지원청 비전자기록물 이관 ◦폐지학교에 보관중인 모든 비전자기록물 이관 ◦비전자기록물 / 행정박물 / 시청각기록물 / 간행물 등 ◦기록물 이관 계획 수립 및 통보 ◦비전자기록물 정리 및 인계 ◦문서고 기록물 정리 및 전수조사 ◦이관 대상 비전자기록물 목록 통보\n공인 폐기 및 이관 ◦폐기 공인 대장 등록 ◦(폐지학교→도청) 도보 공고 의뢰 공문 발송 ◦(폐지학교→관할 교육지원청) 폐기 공인 이관 공문 제출 ◦폐기 공인 이관(공문 제출 후 7일 이내)\n폐지학교 학교회계 관리 ◦공공요금 납부 및 해지 ◦4대보험 정산 처리 ◦각종 회계 처리(학교발전기금, 세입세출외현금, 학교회계)\n물품 관리 ◦학교 폐지 확정 후 최우선 과제(학교 폐지에 따른 물품 정리) ◦재물조사 실시 및 불용결정, 관리전환 소요조회, 불용품 처분",
     "workId": "c19-w00",
     "blockId": "c19-w00-b1",
+    "anchor": "폐지학교학교폐지업무추진계획수립◦학교통폐합에따",
     "weight": 0.6
   },
   {
+    "id": "c19-w00-b1~2",
+    "chapterId": "19",
+    "chapterLabel": "제19편",
+    "chapterTitle": "학교폐지 및 통폐합",
+    "type": "매뉴얼 원문",
+    "workTitle": "한눈에 보기",
+    "title": "학교 폐지 및 통폐합 개요 › 교육정보화기기 관리 ◦학교 폐지 확정 후 진행 ◦정보화기기 실태조사, 불용결정 ◦하드디",
+    "description": "교육정보화기기 관리 ◦학교 폐지 확정 후 진행 ◦정보화기기 실태조사, 불용결정 ◦하드디스크 해체 / 디가우징 작업 ◦불용물품 매각 및 폐기, 관리전환 기타 관리 ◦급식 관리: 학교급식 변경 보고, 식생활관 가스 해지 및 급식기구 처리, 집단급식소 설치 운영 종료 신고(폐지학교→해당 시군청) ◦재산 및 시설물 관리: 재산대장 전수조사, 공유재산심의회 심의 요청(행정재산 용도폐지 등), 시설물 정리 후 재산 인계인수 ◦학교도서관 관리: 도서관 장서 점검, 이관계획…",
+    "text": "한눈에 보기\n학교 폐지 및 통폐합 개요\n교육정보화기기 관리 ◦학교 폐지 확정 후 진행 ◦정보화기기 실태조사, 불용결정 ◦하드디스크 해체 / 디가우징 작업 ◦불용물품 매각 및 폐기, 관리전환\n기타 관리 ◦급식 관리: 학교급식 변경 보고, 식생활관 가스 해지 및 급식기구 처리, 집단급식소 설치 운영 종료 신고(폐지학교→해당 시군청) ◦재산 및 시설물 관리: 재산대장 전수조사, 공유재산심의회 심의 요청(행정재산 용도폐지 등), 시설물 정리 후 재산 인계인수 ◦학교도서관 관리: 도서관 장서 점검, 이관계획 수립 및 학교도서관운영위원회심의, 도서대장 정리, 관리전환 및 불용도서 폐기 처리\n각종 해지 및 신고 ◦학교 홈페이지 및 전산망 해지 ◦승강기 안전검사 연기 신청 ◦각종 지정정보처리장치 탈퇴 ◦어린이보호구역 해제 요청 ◦학교 우편물 수령 주소 변경 ◦학교 사업장 폐업 신고",
+    "workId": "c19-w00",
+    "blockId": "c19-w00-b1",
+    "anchor": "교육정보화기기관리◦학교폐지확정후진행◦정보화기",
+    "weight": 0.6
+  },
+  {
+    "id": "c19-w01",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31368,6 +35662,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c19-w01"
   },
   {
+    "id": "c19-w01-b1",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31380,18 +35675,63 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w01-b1"
   },
   {
+    "id": "c19-w01-b2~1",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
     "type": "매뉴얼 원문",
     "workTitle": "일정별 업무처리",
-    "title": "세부내용 일정별 폐지학교 행정업무",
+    "title": "세부내용 일정별 폐지학교 행정업무 › ※ 학교 형편에 따라 달라질 수 있음",
     "description": "※ 학교 형편에 따라 달라질 수 있음 추진일정 업무명 세부 추진내용 9월 학교 폐지 업무 추진계획 수립 업무별 추진 내용과 일정 계획 수립 세부 추진계획 및 분야별 소관 담당 지정 공유재산 전수조사 재산대장 누락사항 반영, 처분 및 이관 대상 재산 파악 재물조사 계획 수립 학교폐지에 따른 물품 정리, 폐지 확정 후 수립 재물조사 실시 물품 수량 과부족 정리, 활용가능 여부에 따라 관리전환 및 매각, 폐기 처분 교육정보화기기 실태조사 기기 상태 점검(종류, 수량,…",
-    "text": "일정별 업무처리\n세부내용 일정별 폐지학교 행정업무\n※ 학교 형편에 따라 달라질 수 있음\n추진일정 업무명 세부 추진내용\n9월 학교 폐지 업무 추진계획 수립 업무별 추진 내용과 일정 계획 수립 세부 추진계획 및 분야별 소관 담당 지정\n공유재산 전수조사 재산대장 누락사항 반영, 처분 및 이관 대상 재산 파악\n재물조사 계획 수립 학교폐지에 따른 물품 정리, 폐지 확정 후 수립\n재물조사 실시 물품 수량 과부족 정리, 활용가능 여부에 따라 관리전환 및 매각, 폐기 처분\n교육정보화기기 실태조사 기기 상태 점검(종류, 수량, 활용가능성 파악)\n발전기금 계획변경(학운위 심의) 잔액처리를 포함한 운용 변경 계획 수립 후 학교운영위원회에서 심의·의결\n기록물 이관계획 수립 기록물 정리 일정, 이관목록 통보일, 인계(예정)일 수립\n10월 기록물 전수조사(문서고 소장) 문서고 기록물 정리 및 전수조사\n11월 물품 불용결정 내용연수 경과 및 물품 가용상태 기준으로 판단\n12월 공유재산 심의위원회 자료 제출 공유재산심의회 심의 대상 ① 행정재산의 용도폐지(행정재산→일반재산) ② 대장가액 1억원 초과 재산의 처분\n학교 도서관 장서 점검 계획 수립 도서의 제적·폐기·관리전환에 관한 계획 수립\n학교 도서관 장서 점검 보유 자료 점검을 통한 수량 파악 관리전환, 제적 및 폐기 목록 작성\n과학실 폐시약 처리 통합학교에 인계→(통합학교) 향후 교육지원청 수거 시 처리\n학교도서관운영위원회 심의 회의록 및 불용대상 도서목록 등 작성 및 심의\n불용도서 관리전환 소요조회 인수기관 도서 편철·정리(학교도서관 길라잡이 참고)\n공공요금 등 자동이체 해지 자동이체 해지 후 지로납부로 변경\n도서 폐기처리 및 무상양여 폐기도서 중 재활용 가능한 도서는 개인이나 단체에 기증\n익년도 1월 불용물품 폐기(1차) 관리전환이 되지 않은 물품 중 매각이 되지 않거나 폐품 대상인 경우 물품 폐기\n재무감사 익년 2월 학교폐지 업무량이 집중되지 않도록 교육지원청과 재무감사 일정 협의(12월~1월초 등)\n학교급식 변경 보고 NEIS 및 업무관리시스템\n추진 일정 업무명 세부 추진내용\n익년도 1월 각종 용역계약 만료 통보 소방, 전기, 정수기, 공기청정기 등 계약만료 및 해지 예고\n간행물 해지 1월말까지 구독 해지 처리 및 2월 요금 정산\n이관 기록물 목록 통보 인계인수 예정일 2주 전까지 통보\n2월 수익자부담경비 정산 및 반환 전액 집행 원칙, 잔액 발생 시 수익자에게 반환\n목적사업비 집행잔액 반납 전액 집행 원칙, 집행 잔액은 교육비특별회계 반납 처리\n스쿨뱅킹, EFT 해지 에듀파인 전자자금이체(eft) 서비스, 금융결제원 CMS, 스쿨뱅킹 자동이체 이용 해지\n공공요금 해지(전기, 수도 등) 해지 신청 공문 발송\n2월 공공요금 및 4대보험 납부 인계 2월말 최종 사용료 정산이 불가능한 경우 통합학교 세입세출외현금 계좌로 송금 2월말(3월 납부)\n불용물품 폐기(2차) 관리전환이 되지 않은 물품 중 매각이 되지 않거나 폐품 대상인 경우 물품 폐기\n오수정화조 청소 및 폐쇄신고 교육지원청과 오수정화조 폐쇄 여부 사전 협의\n1~2월 세금계산서 신고\n홈페이지 및 전산망 해지 학교 도메인 계약 기간 확인 후 계약업체에 해지 요청 스쿨넷(인터넷)서비스 해지 신청\n승강기 휴지 신고 한국승강기안전공단에 승강기 안전검사 연기신청서 제출\n각종 기관 회원 탈퇴 G2B, S2B, EAT, onbid, 공공구매종합정보시스템 등\n어린이보호구역 해제 관할 지자체 교통행정 소관부서에 요청\n공유재산 인수인계 폐지에 따른 공유재산 사용기관 변경 요청 등\n우편물 수령지 변경 학교 행정구역 관할 우체국에 3월 이후의 우편물 수령 주소를 교육지원청으로 변경(단, 3개월 이내만 무료이므로 수령이 지속적으로 필요한 공공요금 고지서 등은 해당 기관에 개별 변경 요청)\n집단급식소 종료 신고 해당 시·군청에 신고\n기타계좌 해지\n교육지원청에 물품 관리전환\n비전자기록물 이관 비전자기록물 이관 결과 보고\n회계계좌 해지 결산마감 및 보고 계좌 해지에 따른 이자는 통합학교 세입세출외현금계좌로 송금, 에듀파인 결산마감 처리 및 교육지원청 결산 보고 *해지 전 잔액증명서 발급(해지 후 발급 불가)\n인수인계서 작성 및 인계인수 인계자와 인수자가 각 1부씩 보관, 1부는 교육지원청 제출\n사업장 폐업 신고 관할 세무서에 방문하여 사업자 폐업신고서 제출\n3월 4대보험 자격 상실신고 사업장 탈퇴신고 (통합학교)\n물품 관리전환 소요조회 (교육지원청)",
+    "text": "일정별 업무처리\n세부내용 일정별 폐지학교 행정업무\n※ 학교 형편에 따라 달라질 수 있음\n추진일정 업무명 세부 추진내용\n9월 학교 폐지 업무 추진계획 수립 업무별 추진 내용과 일정 계획 수립 세부 추진계획 및 분야별 소관 담당 지정\n공유재산 전수조사 재산대장 누락사항 반영, 처분 및 이관 대상 재산 파악\n재물조사 계획 수립 학교폐지에 따른 물품 정리, 폐지 확정 후 수립\n재물조사 실시 물품 수량 과부족 정리, 활용가능 여부에 따라 관리전환 및 매각, 폐기 처분\n교육정보화기기 실태조사 기기 상태 점검(종류, 수량, 활용가능성 파악)\n발전기금 계획변경(학운위 심의) 잔액처리를 포함한 운용 변경 계획 수립 후 학교운영위원회에서 심의·의결\n기록물 이관계획 수립 기록물 정리 일정, 이관목록 통보일, 인계(예정)일 수립\n10월 기록물 전수조사(문서고 소장) 문서고 기록물 정리 및 전수조사\n11월 물품 불용결정 내용연수 경과 및 물품 가용상태 기준으로 판단\n12월 공유재산 심의위원회 자료 제출 공유재산심의회 심의 대상 ① 행정재산의 용도폐지(행정재산→일반재산) ② 대장가액 1억원 초과 재산의 처분\n학교 도서관 장서 점검 계획 수립 도서의 제적·폐기·관리전환에 관한 계획 수립",
     "workId": "c19-w01",
-    "blockId": "c19-w01-b2"
+    "blockId": "c19-w01-b2",
+    "anchor": "※학교형편에따라달라질수있음"
   },
   {
+    "id": "c19-w01-b2~2",
+    "chapterId": "19",
+    "chapterLabel": "제19편",
+    "chapterTitle": "학교폐지 및 통폐합",
+    "type": "매뉴얼 원문",
+    "workTitle": "일정별 업무처리",
+    "title": "세부내용 일정별 폐지학교 행정업무 › 학교 도서관 장서 점검 보유 자료 점검을 통한 수량 파악 관리전환, 제적 및 폐기 목록",
+    "description": "학교 도서관 장서 점검 보유 자료 점검을 통한 수량 파악 관리전환, 제적 및 폐기 목록 작성 과학실 폐시약 처리 통합학교에 인계→(통합학교) 향후 교육지원청 수거 시 처리 학교도서관운영위원회 심의 회의록 및 불용대상 도서목록 등 작성 및 심의 불용도서 관리전환 소요조회 인수기관 도서 편철·정리(학교도서관 길라잡이 참고) 공공요금 등 자동이체 해지 자동이체 해지 후 지로납부로 변경 도서 폐기처리 및 무상양여 폐기도서 중 재활용 가능한 도서는 개인이나 단체에 기증…",
+    "text": "일정별 업무처리\n세부내용 일정별 폐지학교 행정업무\n학교 도서관 장서 점검 보유 자료 점검을 통한 수량 파악 관리전환, 제적 및 폐기 목록 작성\n과학실 폐시약 처리 통합학교에 인계→(통합학교) 향후 교육지원청 수거 시 처리\n학교도서관운영위원회 심의 회의록 및 불용대상 도서목록 등 작성 및 심의\n불용도서 관리전환 소요조회 인수기관 도서 편철·정리(학교도서관 길라잡이 참고)\n공공요금 등 자동이체 해지 자동이체 해지 후 지로납부로 변경\n도서 폐기처리 및 무상양여 폐기도서 중 재활용 가능한 도서는 개인이나 단체에 기증\n익년도 1월 불용물품 폐기(1차) 관리전환이 되지 않은 물품 중 매각이 되지 않거나 폐품 대상인 경우 물품 폐기\n재무감사 익년 2월 학교폐지 업무량이 집중되지 않도록 교육지원청과 재무감사 일정 협의(12월~1월초 등)\n학교급식 변경 보고 NEIS 및 업무관리시스템\n추진 일정 업무명 세부 추진내용\n익년도 1월 각종 용역계약 만료 통보 소방, 전기, 정수기, 공기청정기 등 계약만료 및 해지 예고\n간행물 해지 1월말까지 구독 해지 처리 및 2월 요금 정산\n이관 기록물 목록 통보 인계인수 예정일 2주 전까지 통보\n2월 수익자부담경비 정산 및 반환 전액 집행 원칙, 잔액 발생 시 수익자에게 반환",
+    "workId": "c19-w01",
+    "blockId": "c19-w01-b2",
+    "anchor": "학교도서관장서점검보유자료점검을통한수량파악관리"
+  },
+  {
+    "id": "c19-w01-b2~3",
+    "chapterId": "19",
+    "chapterLabel": "제19편",
+    "chapterTitle": "학교폐지 및 통폐합",
+    "type": "매뉴얼 원문",
+    "workTitle": "일정별 업무처리",
+    "title": "세부내용 일정별 폐지학교 행정업무 › 목적사업비 집행잔액 반납 전액 집행 원칙, 집행 잔액은 교육비특별회계 반납 처리",
+    "description": "목적사업비 집행잔액 반납 전액 집행 원칙, 집행 잔액은 교육비특별회계 반납 처리 스쿨뱅킹, EFT 해지 에듀파인 전자자금이체(eft) 서비스, 금융결제원 CMS, 스쿨뱅킹 자동이체 이용 해지 공공요금 해지(전기, 수도 등) 해지 신청 공문 발송 2월 공공요금 및 4대보험 납부 인계 2월말 최종 사용료 정산이 불가능한 경우 통합학교 세입세출외현금 계좌로 송금 2월말(3월 납부) 불용물품 폐기(2차) 관리전환이 되지 않은 물품 중 매각이 되지 않거나 폐품 대상인 경…",
+    "text": "일정별 업무처리\n세부내용 일정별 폐지학교 행정업무\n목적사업비 집행잔액 반납 전액 집행 원칙, 집행 잔액은 교육비특별회계 반납 처리\n스쿨뱅킹, EFT 해지 에듀파인 전자자금이체(eft) 서비스, 금융결제원 CMS, 스쿨뱅킹 자동이체 이용 해지\n공공요금 해지(전기, 수도 등) 해지 신청 공문 발송\n2월 공공요금 및 4대보험 납부 인계 2월말 최종 사용료 정산이 불가능한 경우 통합학교 세입세출외현금 계좌로 송금 2월말(3월 납부)\n불용물품 폐기(2차) 관리전환이 되지 않은 물품 중 매각이 되지 않거나 폐품 대상인 경우 물품 폐기\n오수정화조 청소 및 폐쇄신고 교육지원청과 오수정화조 폐쇄 여부 사전 협의\n1~2월 세금계산서 신고\n홈페이지 및 전산망 해지 학교 도메인 계약 기간 확인 후 계약업체에 해지 요청 스쿨넷(인터넷)서비스 해지 신청\n승강기 휴지 신고 한국승강기안전공단에 승강기 안전검사 연기신청서 제출\n각종 기관 회원 탈퇴 G2B, S2B, EAT, onbid, 공공구매종합정보시스템 등\n어린이보호구역 해제 관할 지자체 교통행정 소관부서에 요청\n공유재산 인수인계 폐지에 따른 공유재산 사용기관 변경 요청 등",
+    "workId": "c19-w01",
+    "blockId": "c19-w01-b2",
+    "anchor": "목적사업비집행잔액반납전액집행원칙,집행잔액은교"
+  },
+  {
+    "id": "c19-w01-b2~4",
+    "chapterId": "19",
+    "chapterLabel": "제19편",
+    "chapterTitle": "학교폐지 및 통폐합",
+    "type": "매뉴얼 원문",
+    "workTitle": "일정별 업무처리",
+    "title": "세부내용 일정별 폐지학교 행정업무 › 우편물 수령지 변경 학교 행정구역 관할 우체국에 3월 이후의 우편물 수령 주소를 교육지",
+    "description": "우편물 수령지 변경 학교 행정구역 관할 우체국에 3월 이후의 우편물 수령 주소를 교육지원청으로 변경(단, 3개월 이내만 무료이므로 수령이 지속적으로 필요한 공공요금 고지서 등은 해당 기관에 개별 변경 요청) 집단급식소 종료 신고 해당 시·군청에 신고 기타계좌 해지 교육지원청에 물품 관리전환 비전자기록물 이관 비전자기록물 이관 결과 보고 회계계좌 해지 결산마감 및 보고 계좌 해지에 따른 이자는 통합학교 세입세출외현금계좌로 송금, 에듀파인 결산마감 처리 및 교육지원…",
+    "text": "일정별 업무처리\n세부내용 일정별 폐지학교 행정업무\n우편물 수령지 변경 학교 행정구역 관할 우체국에 3월 이후의 우편물 수령 주소를 교육지원청으로 변경(단, 3개월 이내만 무료이므로 수령이 지속적으로 필요한 공공요금 고지서 등은 해당 기관에 개별 변경 요청)\n집단급식소 종료 신고 해당 시·군청에 신고\n기타계좌 해지\n교육지원청에 물품 관리전환\n비전자기록물 이관 비전자기록물 이관 결과 보고\n회계계좌 해지 결산마감 및 보고 계좌 해지에 따른 이자는 통합학교 세입세출외현금계좌로 송금, 에듀파인 결산마감 처리 및 교육지원청 결산 보고 *해지 전 잔액증명서 발급(해지 후 발급 불가)\n인수인계서 작성 및 인계인수 인계자와 인수자가 각 1부씩 보관, 1부는 교육지원청 제출\n사업장 폐업 신고 관할 세무서에 방문하여 사업자 폐업신고서 제출\n3월 4대보험 자격 상실신고 사업장 탈퇴신고 (통합학교)\n물품 관리전환 소요조회 (교육지원청)",
+    "workId": "c19-w01",
+    "blockId": "c19-w01-b2",
+    "anchor": "우편물수령지변경학교행정구역관할우체국에3월이후"
+  },
+  {
+    "id": "c19-w02",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31404,6 +35744,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c19-w02"
   },
   {
+    "id": "c19-w02-b1",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31416,6 +35757,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w02-b1"
   },
   {
+    "id": "c19-w02-b2",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31428,6 +35770,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w02-b2"
   },
   {
+    "id": "c19-w02-b3",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31440,6 +35783,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w02-b3"
   },
   {
+    "id": "c19-w02-b4",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31452,6 +35796,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w02-b4"
   },
   {
+    "id": "c19-w02-b5",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31464,6 +35809,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w02-b5"
   },
   {
+    "id": "c19-w02:form:예시1",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31476,6 +35822,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시1"
   },
   {
+    "id": "c19-w03",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31488,6 +35835,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c19-w03"
   },
   {
+    "id": "c19-w03-b1",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31500,6 +35848,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w03-b1"
   },
   {
+    "id": "c19-w03-b2",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31512,6 +35861,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w03-b2"
   },
   {
+    "id": "c19-w03-b3",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31524,6 +35874,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w03-b3"
   },
   {
+    "id": "c19-w03-b4",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31536,6 +35887,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w03-b4"
   },
   {
+    "id": "c19-w03-b5",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31548,6 +35900,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w03-b5"
   },
   {
+    "id": "c19-w03:form:예시2",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31560,6 +35913,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시2"
   },
   {
+    "id": "c19-w04",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31572,6 +35926,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c19-w04"
   },
   {
+    "id": "c19-w04-b1",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31584,6 +35939,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w04-b1"
   },
   {
+    "id": "c19-w04-b2",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31596,6 +35952,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w04-b2"
   },
   {
+    "id": "c19-w04-b3",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31608,6 +35965,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w04-b3"
   },
   {
+    "id": "c19-w04-b4",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31620,6 +35978,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w04-b4"
   },
   {
+    "id": "c19-w04-b5",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31632,6 +35991,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w04-b5"
   },
   {
+    "id": "c19-w04:form:예시3",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31644,6 +36004,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시3"
   },
   {
+    "id": "c19-w04:form:예시4",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31656,6 +36017,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시4"
   },
   {
+    "id": "c19-w04:form:예시5",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31668,6 +36030,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시5"
   },
   {
+    "id": "c19-w05",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31680,6 +36043,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c19-w05"
   },
   {
+    "id": "c19-w05-b1",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31692,6 +36056,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w05-b1"
   },
   {
+    "id": "c19-w05-b2",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31704,6 +36069,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w05-b2"
   },
   {
+    "id": "c19-w05-b3",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31716,6 +36082,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w05-b3"
   },
   {
+    "id": "c19-w05-b4",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31728,6 +36095,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w05-b4"
   },
   {
+    "id": "c19-w05-b5",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31740,6 +36108,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w05-b5"
   },
   {
+    "id": "c19-w05:form:예시6",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31752,6 +36121,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시6"
   },
   {
+    "id": "c19-w05:form:예시7",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31764,6 +36134,7 @@ window.GUIDE_SEARCH_INDEX = [
     "formId": "예시7"
   },
   {
+    "id": "c19-w06",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31776,6 +36147,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c19-w06"
   },
   {
+    "id": "c19-w06-b1",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31788,6 +36160,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w06-b1"
   },
   {
+    "id": "c19-w06-b2",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31800,6 +36173,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w06-b2"
   },
   {
+    "id": "c19-w06-b3",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31812,6 +36186,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w06-b3"
   },
   {
+    "id": "c19-w06-b4",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31824,6 +36199,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w06-b4"
   },
   {
+    "id": "c19-w07",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31836,6 +36212,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c19-w07"
   },
   {
+    "id": "c19-w07-b1",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31848,6 +36225,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w07-b1"
   },
   {
+    "id": "c19-w07-b2",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31860,6 +36238,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w07-b2"
   },
   {
+    "id": "c19-w07-b3",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31872,6 +36251,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w07-b3"
   },
   {
+    "id": "c19-w07-b4",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31884,6 +36264,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w07-b4"
   },
   {
+    "id": "c19-w08",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31896,6 +36277,7 @@ window.GUIDE_SEARCH_INDEX = [
     "workId": "c19-w08"
   },
   {
+    "id": "c19-w08-b1",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31908,6 +36290,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w08-b1"
   },
   {
+    "id": "c19-w08-b2",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31920,6 +36303,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w08-b2"
   },
   {
+    "id": "c19-w08-b3",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31932,6 +36316,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w08-b3"
   },
   {
+    "id": "c19-w08-b4",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31944,6 +36329,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w08-b4"
   },
   {
+    "id": "c19-w08-b5",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31956,6 +36342,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w08-b5"
   },
   {
+    "id": "c19-w08-b6",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31968,6 +36355,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w08-b6"
   },
   {
+    "id": "c19-w08-b7",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31980,6 +36368,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w08-b7"
   },
   {
+    "id": "c19-w08-b8",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -31992,6 +36381,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w08-b8"
   },
   {
+    "id": "c19-w08-b9",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -32004,6 +36394,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w08-b9"
   },
   {
+    "id": "c19-w08-b10",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -32016,6 +36407,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w08-b10"
   },
   {
+    "id": "c19-w08-b11",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",
@@ -32028,6 +36420,7 @@ window.GUIDE_SEARCH_INDEX = [
     "blockId": "c19-w08-b11"
   },
   {
+    "id": "c19-w08:form:예시8",
     "chapterId": "19",
     "chapterLabel": "제19편",
     "chapterTitle": "학교폐지 및 통폐합",

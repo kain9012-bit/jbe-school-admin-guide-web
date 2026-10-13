@@ -431,6 +431,8 @@
     if (item.blockId) params.set("block", item.blockId);
     if (item.formId) params.set("form", item.formId);
     if (item.faqNumber) params.set("faq", item.faqNumber);
+    // 긴 블록을 나눈 조각이면 그 조각의 첫 줄을 실어 그 줄로 바로 갑니다.
+    if (item.anchor) params.set("at", item.anchor);
     const hash = params.toString() ? `#${params.toString()}` : "#overview";
     return `?chapter=${encodeURIComponent(chapterId)}${hash}`;
   }
@@ -457,7 +459,13 @@
     return chapter ? chapterName(chapter) : item.chapterLabel;
   }
 
-  function runSearch(query) {
+  // 낱말 검색 결과를 바로 보여 주고, 뜻 검색(서버)이 돌아오면 둘을 합쳐 다시 그립니다.
+  // semanticHits가 없으면 새 검색이고, 있으면 같은 검색을 합친 결과로 다시 그리는 것입니다.
+  let searchToken = 0;
+  function runSearch(query, semanticHits) {
+    const fresh = semanticHits === undefined;
+    if (fresh) searchToken += 1;
+    const token = searchToken;
     const trimmed = query.trim();
     if (!trimmed) {
       searchStatus.textContent =
@@ -470,15 +478,40 @@
       types: scope.types,
       limit: 300,
     });
-    // 업무별로 묶습니다. 묶지 않으면 한 업무의 세부 항목이 첫 화면을 다 차지합니다.
-    const groups = window.GUIDE_SEARCH.groupByWork(found.results).slice(0, 20);
+    const fused =
+      semanticHits && semanticHits.length
+        ? window.GUIDE_SEARCH.fuse(searchIndex, found.results, semanticHits, {
+            types: scope.types,
+            wordCount: found.wordCount,
+          })
+        : null;
+    // 낱말로는 안 걸리고 뜻으로만 걸린 글의 수입니다.
+    const extra = fused ? fused.filter((entry) => entry.lexical === undefined).length : 0;
+    const total = found.total + extra;
+    if (fresh) {
+      window.GUIDE_SEARCH.semantic(trimmed).then((hits) => {
+        if (token !== searchToken) return;
+        if (!hits && found.total) return;
+        runSearch(query, hits || []);
+      });
+    }
+    const groups = window.GUIDE_SEARCH.groupByWork(fused || found.results).slice(0, 20);
 
     const where = currentSearchScope === "all" ? "" : `${scope.label}에서 `;
-    searchStatus.textContent = found.total
-      ? `${where}‘${trimmed}’ 검색 결과 업무 ${groups.length}곳 · 원문 ${found.total}건`
-      : `${where}‘${trimmed}’과 일치하는 원문을 찾지 못했습니다.`;
+    const waiting = fresh && !total && window.GUIDE_SEARCH.semanticPossible();
+    searchStatus.textContent = total
+      ? `${where}‘${trimmed}’ 검색 결과 업무 ${groups.length}곳 · 원문 ${total}건${
+          extra ? ` (뜻이 가까운 글 ${extra}건 포함)` : ""
+        }`
+      : waiting
+        ? `${where}‘${trimmed}’과 뜻이 가까운 글을 찾는 중입니다…`
+        : `${where}‘${trimmed}’과 일치하는 원문을 찾지 못했습니다.`;
 
-    if (!found.total) {
+    if (waiting) {
+      searchResults.innerHTML = "";
+      return;
+    }
+    if (!total) {
       searchResults.innerHTML = `<p class="empty-state">${
         currentSearchScope === "all"
           ? "원문에 그 말이 없습니다. 매뉴얼에 쓰인 다른 말로 찾아보세요."
@@ -495,8 +528,8 @@
         // 여기까지 발췌를 넣으면 바로 아래 항목과 똑같은 글이 두 번 나옵니다.
         // 적을 것이 없으면 줄을 빼야지, 업무 이름을 한 번 더 적으면 안 됩니다.
         const lead = head.description ? escapeHtml(head.description) : "";
-        const inside = group.hits
-          .filter((entry) => entry.item !== head)
+        const others = group.hits.filter((entry) => entry.item !== head);
+        const inside = others
           .slice(0, 4)
           .map(
             (entry) => `
@@ -511,7 +544,7 @@
               </a>`
           )
           .join("");
-        const more = group.hits.length > 5 ? group.hits.length - 5 : 0;
+        const more = Math.max(0, others.length - 4);
         return `
           <section class="search-group">
             <a class="search-result" href="${escapeHtml(resultHref(head))}">

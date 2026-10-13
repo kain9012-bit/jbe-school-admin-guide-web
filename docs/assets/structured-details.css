@@ -3417,3 +3417,48 @@
 .c19-goods-link {
   font-size: 1.5rem;
 }
+
+/* 검색 결과로 들어온 자리를 잠깐 빛내 어디인지 알려 줍니다
+   (app-faithful-workflow.js의 scrollToTarget). */
+.is-search-target {
+  border-radius: 0.8rem;
+  animation: search-target-glow 2.6s ease-out;
+}
+
+@keyframes search-target-glow {
+  0%,
+  35% {
+    background-color: #fff6d6;
+    box-shadow: 0 0 0 0.4rem #ffe08a;
+  }
+  100% {
+    background-color: transparent;
+    box-shadow: 0 0 0 0 rgba(255, 224, 138, 0);
+  }
+}
+
+/* 표의 한 줄을 가리킬 때는 칸마다 바탕을 칠해야 보입니다. */
+tr.is-search-target > th,
+tr.is-search-target > td {
+  animation: search-target-cell 2.6s ease-out;
+}
+
+@keyframes search-target-cell {
+  0%,
+  35% {
+    background-color: #fff6d6;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  tr.is-search-target > th,
+  tr.is-search-target > td {
+    animation: none;
+  }
+
+  .is-search-target {
+    animation: none;
+    outline: 0.3rem solid #ffd24d;
+    outline-offset: 0.3rem;
+  }
+}

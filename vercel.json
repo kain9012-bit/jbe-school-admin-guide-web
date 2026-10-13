@@ -10,5 +10,15 @@
       "destination": "https://kain9012-bit.github.io/jbe-school-admin-guide-web/downloads/:path*",
       "permanent": false
     }
-  ]
+  ],
+  "functions": {
+    "api/chat.mjs": {
+      "includeFiles": "api/_data/**",
+      "maxDuration": 60
+    },
+    "api/search.mjs": {
+      "includeFiles": "api/_data/**",
+      "maxDuration": 15
+    }
+  }
 }

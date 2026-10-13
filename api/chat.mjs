@@ -139,7 +139,7 @@ function headers(key) {
     Authorization: `Bearer ${key}`,
     "Content-Type": "application/json",
     "HTTP-Referer": "https://jbe-guide.vercel.app",
-    "X-Title": "학교행정업무 길라잡이 챗봇",
+    "X-Title": "JBE School Admin Guide (chat)",
   };
 }
 

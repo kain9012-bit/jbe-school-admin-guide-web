@@ -331,16 +331,153 @@
     return pieces;
   }
 
+  // ── 뜻으로 찾기 ──────────────────────────────────────────────────────
+  // 낱말 검색은 검색어가 글에 그대로 있어야 찾습니다. '육아휴직 중에 돈 나오나요'처럼
+  // 매뉴얼과 다른 말로 물으면 놓칩니다. 그래서 서버(/api/search)가 검색어를
+  // 임베딩(bge-m3)해 뜻이 가까운 조각의 id를 돌려주고, 여기서 두 순위를 합칩니다.
+  // 서버가 없거나(깃허브 페이지·내 컴퓨터) 늦으면 낱말 검색 결과만 씁니다.
+  const SEMANTIC_URL = "/api/search";
+  // 이보다 덜 닮은 조각은 버립니다. bge-m3는 상관없는 글끼리도 0.3~0.4쯤 나옵니다.
+  const SEMANTIC_FLOOR = 0.45;
+  const RRF_K = 60;
+  const semanticMemo = new Map();
+  let semanticOff = false;
+
+  function semantic(query) {
+    const q = String(query || "").trim().slice(0, 200);
+    if (semanticOff || q.length < 2 || !/^https?:$/.test(location.protocol)) {
+      return Promise.resolve(null);
+    }
+    // 따옴표·빼기(-)를 쓴 검색은 글자 그대로 찾겠다는 뜻이므로 뜻 검색을 섞지 않습니다.
+    const parsed = parseQuery(q);
+    if (parsed.phrases.length || parsed.excluded.length) return Promise.resolve(null);
+    if (semanticMemo.has(q)) return semanticMemo.get(q);
+    const controller = typeof AbortController === "function" ? new AbortController() : null;
+    const timer = controller ? setTimeout(() => controller.abort(), 6000) : 0;
+    const pending = fetch(`${SEMANTIC_URL}?q=${encodeURIComponent(q)}`, {
+      signal: controller ? controller.signal : undefined,
+    })
+      .then((response) => {
+        if (response.status === 404 || response.status === 503) semanticOff = true;
+        return response.ok ? response.json() : null;
+      })
+      .then((body) => (body && Array.isArray(body.results) ? body.results : null))
+      .catch(() => null)
+      .finally(() => clearTimeout(timer));
+    semanticMemo.set(q, pending);
+    pending.then((value) => {
+      if (!value) semanticMemo.delete(q);
+    });
+    return pending;
+  }
+
+  // 뜻 검색을 기다릴 만한지(서버가 있을 법한지) 알려 줍니다.
+  function semanticPossible() {
+    return !semanticOff && /^https?:$/.test(location.protocol);
+  }
+
+  const idMaps = new WeakMap();
+  function idMap(index) {
+    let map = idMaps.get(index);
+    if (!map) {
+      map = new Map();
+      for (const item of index) if (item.id) map.set(item.id, item);
+      idMaps.set(index, map);
+    }
+    return map;
+  }
+
+  // 낱말 순위와 뜻 순위를 합칩니다(Reciprocal Rank Fusion).
+  // 점수의 크기 대신 순위만 쓰므로 BM25 점수와 코사인 유사도처럼 잣대가 다른
+  // 두 점수를 억지로 맞출 필요가 없습니다. 두 쪽에서 모두 위에 선 조각이 맨 위로 옵니다.
+  function fuse(index, lexical, semanticHits, options) {
+    if (!Array.isArray(semanticHits) || !semanticHits.length) return null;
+    const allowed = options && options.types;
+    const byId = idMap(index);
+    const merged = new Map();
+    // 문장으로 물으면('학교에 불이 나면 어떻게 해야 하나요') 낱말 검색은 '학교'·'어떻게'
+    // 같은 흔한 말로 엉뚱한 글을 위에 세웁니다. 낱말이 셋 이상이면 낱말 순위의 몫을
+    // 절반으로 줄여 뜻 순위가 앞서게 합니다. '정근수당'·'출장비 정산' 같은 짧은
+    // 검색어는 낱말 검색이 정확하므로 그대로 둡니다.
+    const lexicalWeight = ((options && options.wordCount) || 1) >= 3 ? 0.5 : 1;
+    lexical.forEach((entry, rank) => {
+      merged.set(entry.item, {
+        item: entry.item,
+        matched: entry.matched,
+        lexical: entry.score,
+        score: lexicalWeight / (RRF_K + rank + 1),
+      });
+    });
+    let rank = 0;
+    for (const hit of semanticHits) {
+      if (hit.score < SEMANTIC_FLOOR) break;
+      const item = byId.get(hit.id);
+      if (!item || (allowed && !allowed.includes(item.type))) continue;
+      const add = 1 / (RRF_K + rank + 1);
+      rank += 1;
+      const entry = merged.get(item);
+      if (entry) {
+        entry.score += add;
+        entry.semantic = hit.score;
+      } else {
+        merged.set(item, { item, matched: 0, score: add, semantic: hit.score });
+      }
+    }
+    return [...merged.values()].sort((a, b) => b.score - a.score);
+  }
+
+  // 묶음 하나에 보여 주는 칸 수(화면의 slice(0, 4)와 같아야 합니다).
+  const SLOTS = 4;
+  function kindOf(item) {
+    if (item.type === "FAQ 원문") return "faq";
+    if (item.type === "서식·예시 원문") return "form";
+    return "body";
+  }
+
+  // 점수 순서는 지키되, 한 종류가 보이는 칸을 다 차지하지 않게 합니다.
+  // '정근수당'은 질문 네 건이 본문보다 몇 점 높아 네 칸을 다 차지했고,
+  // 정작 보수작업 본문은 '더 있습니다' 뒤로 숨었습니다. 칸 밖으로 밀린 종류가
+  // 있으면 그 종류의 가장 높은 것을, 여러 칸을 차지한 종류의 가장 낮은 것과
+  // 맞바꿉니다. 바꾼 뒤에도 칸 안은 점수 순입니다.
+  function diversify(hits) {
+    if (hits.length <= SLOTS) return hits;
+    const top = hits.slice(0, SLOTS);
+    const rest = hits.slice(SLOTS);
+    for (const kind of ["body", "faq", "form"]) {
+      if (top.some((entry) => kindOf(entry.item) === kind)) continue;
+      const at = rest.findIndex((entry) => kindOf(entry.item) === kind);
+      if (at < 0) continue;
+      const count = (one) => top.filter((entry) => kindOf(entry.item) === one).length;
+      let victim = -1;
+      for (let i = top.length - 1; i >= 0; i -= 1) {
+        if (count(kindOf(top[i].item)) > 1) {
+          victim = i;
+          break;
+        }
+      }
+      if (victim < 0) break;
+      const [moved] = rest.splice(at, 1);
+      rest.push(top[victim]);
+      top.splice(victim, 1, moved);
+    }
+    top.sort((a, b) => b.score - a.score);
+    rest.sort((a, b) => b.score - a.score);
+    return top.concat(rest);
+  }
+
   // 결과를 업무별로 묶습니다.
   // 묶지 않으면 한 업무의 세부 항목이 첫 화면을 통째로 차지합니다.
   //   '연말정산' → 상위 5건이 모두 제7편 연말정산의 조각
+  // 본문·질문·서식을 가리지 않고 점수대로 줄 세웁니다. 본문이 뒤로 밀리던 것은
+  // 종류 탓이 아니라 긴 블록이 통째로 한 조각이어서 점수가 묽어진 탓이었고,
+  // 색인에서 블록을 소제목 단위로 나눠 바로잡았습니다.
   function groupByWork(results) {
     const groups = new Map();
     for (const entry of results) {
       const key = `${entry.item.chapterId || ""}/${entry.item.workId || entry.item.title}`;
       let group = groups.get(key);
       if (!group) {
-        group = { key, chapterId: entry.item.chapterId, hits: [], score: 0, work: null };
+        group = { key, chapterId: entry.item.chapterId, hits: [], score: 0, best: 0, spread: 0, work: null };
         groups.set(key, group);
       }
       if (entry.item.type === "업무") group.work = entry.item;
@@ -362,14 +499,15 @@
       // 다만 올려 주는 몫에 뚜껑을 씌웁니다. 뚜껑이 없으면 글이 많은 업무가
       // 잔 점수를 쌓아 늘 이깁니다. 제7편 보수작업은 블록이 122개라
       // '육아휴직 신청 방법'에도 1위로 올라왔습니다.
-      group.best = Math.max(group.best || 0, entry.score);
-      group.spread = (group.spread || 0) + entry.score * 0.05;
-      group.score = group.best + Math.min(group.spread, group.best * 0.3);
+      group.best = Math.max(group.best, entry.score);
+      group.spread += entry.score * 0.05;
     }
     const list = [...groups.values()];
     for (const group of list) {
       if (!group.work) group.work = group.label || (group.hits[0] && group.hits[0].item);
+      group.score = group.best + Math.min(group.spread, group.best * 0.3);
       group.hits.sort((a, b) => b.score - a.score);
+      group.hits = diversify(group.hits);
     }
     return list.sort((a, b) => b.score - a.score);
   }
@@ -382,5 +520,8 @@
     snippet,
     countWhole,
     groupByWork,
+    semantic,
+    semanticPossible,
+    fuse,
   };
 })();
