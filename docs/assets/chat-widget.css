@@ -236,15 +236,23 @@
   text-decoration: underline;
 }
 
+/* 예시 질문: 대화창(.chat-log) 맨 위. '이렇게 물어보세요' 한 줄 + 질문 한 줄씩 */
 .chat-hint {
-  padding: 0 1.6rem;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
   color: var(--guide-muted);
   font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 .chat-hint button {
+  max-width: 100%;
   padding: 0.4rem 0.8rem;
-  margin: 0.4rem 0.4rem 0 0;
+  margin: 0;
+  text-align: left;
   border: 1px solid var(--guide-line);
   border-radius: 999px;
   background: #fff;

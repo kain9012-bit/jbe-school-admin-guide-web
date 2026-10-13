@@ -40,6 +40,9 @@
 
   const log = panel.querySelector(".chat-log");
   const hint = panel.querySelector(".chat-hint");
+  // 예시 질문은 대화창 맨 위에 둡니다. 대화가 이어지면 위로 밀려 스크롤로 사라지고,
+  // '대화 지우기'를 누르면 다시 예시만 남습니다.
+  log.appendChild(hint);
   const form = panel.querySelector(".chat-form");
   const input = form.querySelector("textarea");
   const send = form.querySelector("button");
@@ -184,7 +187,6 @@
     if (busy || !question) return;
     busy = true;
     send.disabled = true;
-    hint.hidden = true;
     bubble("user", question);
     history.push({ role: "user", content: question });
     const answer = bubble("assistant", "");
@@ -273,8 +275,8 @@
   panel.querySelector("[data-chat-close]").addEventListener("click", close);
   panel.querySelector("[data-chat-clear]").addEventListener("click", () => {
     log.innerHTML = "";
+    log.appendChild(hint);
     history.length = 0;
-    hint.hidden = false;
     input.focus();
   });
   panel.querySelectorAll("[data-chat-starter]").forEach((button) => {
