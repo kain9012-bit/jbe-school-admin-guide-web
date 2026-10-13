@@ -41,8 +41,9 @@
   bottom: 2.4rem;
   z-index: 80;
   display: flex;
-  width: min(42rem, calc(100vw - 4.8rem));
-  height: min(64rem, calc(100vh - 4.8rem));
+  /* 처음 42rem × 64rem에서 가로세로 20%씩 키움 */
+  width: min(50.4rem, calc(100vw - 4.8rem));
+  height: min(76.8rem, calc(100vh - 4.8rem));
   flex-direction: column;
   background: #fff;
   border: 1px solid var(--guide-line);
@@ -69,14 +70,6 @@
   font-size: 1.6rem;
 }
 
-.chat-head small {
-  display: block;
-  margin-top: 0.2rem;
-  font-size: 1.2rem;
-  font-weight: 400;
-  opacity: 0.85;
-}
-
 .chat-head button {
   flex: none;
   padding: 0.5rem 0.9rem;
@@ -101,6 +94,7 @@
   flex-direction: column;
   gap: 1rem;
   padding: 1.4rem 1.6rem;
+  overflow-x: hidden;
   overflow-y: auto;
   background: var(--guide-surface);
   font-size: 1.45rem;
@@ -125,9 +119,64 @@
 
 .chat-msg[data-role="assistant"] {
   align-self: flex-start;
+  min-width: 0;
   background: #fff;
   border: 1px solid var(--guide-line);
   border-bottom-left-radius: 0.3rem;
+  /* 답변은 HTML로 그리므로 줄바꿈·들여쓰기 빈칸을 그대로 두지 않습니다
+     (그대로 두면 목록 앞 빈칸 때문에 가로 스크롤이 생깁니다). */
+  white-space: normal;
+}
+
+.chat-msg[data-role="assistant"] p {
+  margin: 0 0 0.6rem;
+}
+
+.chat-msg[data-role="assistant"] ul {
+  margin: 0 0 0.6rem;
+  padding-left: 1.8rem;
+  list-style: disc; /* 사이트 공통 CSS가 목록 점을 없애므로 다시 켭니다 */
+}
+
+.chat-msg[data-role="assistant"] ul ul {
+  margin: 0.2rem 0 0.2rem;
+  padding-left: 1.6rem;
+  list-style: circle;
+}
+
+.chat-msg[data-role="assistant"] li {
+  margin: 0.15rem 0;
+}
+
+.chat-msg[data-role="assistant"] li.is-numbered {
+  list-style: none;
+  margin-left: -1.4rem;
+}
+
+.chat-msg[data-role="assistant"] > :last-child {
+  margin-bottom: 0;
+}
+
+/* 본문 속 근거 번호: 누르면 그 근거로 갑니다. */
+.chat-cite {
+  display: inline-block;
+  min-width: 1.7rem;
+  margin: 0 0.1rem;
+  padding: 0 0.4rem;
+  border-radius: 0.5rem;
+  background: var(--guide-blue-pale);
+  color: var(--guide-blue-dark);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: 0.15em;
+}
+
+.chat-cite:hover,
+.chat-cite:focus-visible {
+  text-decoration: underline;
 }
 
 .chat-msg[data-role="error"] {
@@ -143,15 +192,28 @@
 
 .chat-sources {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 0.5rem;
-  margin: 0.8rem 0 0;
-  padding: 0;
+  margin: 1rem 0 0 !important;
+  padding: 0.8rem 0 0 !important;
+  border-top: 1px dashed var(--guide-line);
   list-style: none;
 }
 
+.chat-msg[data-role="assistant"] .chat-sources {
+  list-style: none; /* 답변 목록의 점(disc)이 근거 목록에 번지지 않게 */
+}
+
+/* 항목이 내용 너비만큼 늘어나 창 밖으로 나가지 않게 막습니다(가로 스크롤 원인). */
+.chat-sources li {
+  max-width: 100%;
+  min-width: 0;
+  margin: 0 !important;
+}
+
 .chat-sources a {
-  display: inline-block;
+  display: block;
   max-width: 100%;
   padding: 0.35rem 0.8rem;
   border-radius: 999px;
@@ -160,9 +222,13 @@
   font-size: 1.2rem;
   font-weight: 700;
   text-decoration: none;
+  /* 두 줄까지 보여 주고 넘치면 말줄임 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  border-radius: 0.8rem;
 }
 
 .chat-sources a:hover,

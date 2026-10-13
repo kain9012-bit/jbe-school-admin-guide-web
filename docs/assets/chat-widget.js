@@ -23,7 +23,7 @@
   panel.setAttribute("aria-label", "길라잡이 챗봇");
   panel.innerHTML = `
     <header class="chat-head">
-      <strong>길라잡이에게 묻기<small>19편 본문과 자주 묻는 질문에서 근거를 찾아 답합니다</small></strong>
+      <strong>길라잡이에게 묻기</strong>
       <button type="button" data-chat-clear>대화 지우기</button>
       <button type="button" data-chat-close aria-label="닫기">닫기 ✕</button>
     </header>
@@ -70,16 +70,109 @@
     return node;
   }
 
-  function sourcesMarkup(sources) {
+  // ── 답변 그리기 ──────────────────────────────────────────────────────
+  // 모델은 마크다운으로 답합니다. 글자 그대로 넣으면 **, * 기호와 들여쓰기 빈칸이
+  // 그대로 보이므로, 굵게·목록(두 단계까지)·문단만 골라 HTML로 바꿉니다.
+  // 먼저 모든 글을 이스케이프하므로 모델이 HTML을 써도 그대로 글자로 나옵니다.
+  function inline(text, sources) {
+    return escapeHtml(text)
+      .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+      .replace(/\[(\d{1,2})\]/g, (all, n) => {
+        const one = sources && sources.find((source) => String(source.n) === n);
+        return one
+          ? `<a class="chat-cite" href="${escapeHtml(one.url)}" title="${escapeHtml(
+              shortHeading(one.heading)
+            )}">${n}</a>`
+          : all;
+      });
+  }
+
+  function renderAnswer(text, sources) {
+    const lines = String(text || "").replace(/\r/g, "").split("\n");
+    let html = "";
+    let depth = 0; // 열려 있는 <ul> 수
+    let para = [];
+    const flush = () => {
+      if (para.length) html += `<p>${para.map((line) => inline(line, sources)).join("<br>")}</p>`;
+      para = [];
+    };
+    const closeTo = (level) => {
+      while (depth > level) {
+        html += "</li></ul>";
+        depth -= 1;
+      }
+    };
+    for (const raw of lines) {
+      const bullet = raw.match(/^(\s*)(?:[-*•]|\d{1,2}[.)])\s+(.*)$/);
+      // '**굵게**'로 시작하는 줄은 '*' 뒤에 빈칸이 없으므로 목록으로 잡히지 않습니다.
+      if (bullet) {
+        flush();
+        const indent = bullet[1].replace(/\t/g, "    ").length;
+        const level = indent >= 2 ? 2 : 1;
+        const number = raw.trim().match(/^(\d{1,2})[.)]\s/);
+        const body = (number ? `${number[1]}. ` : "") + bullet[2];
+        if (level > depth) {
+          while (depth < level) {
+            html += "<ul>";
+            depth += 1;
+            if (depth < level) html += "<li>";
+          }
+        } else {
+          closeTo(level);
+          html += "</li>";
+        }
+        html += `<li${number ? ' class="is-numbered"' : ""}>${inline(body, sources)}`;
+        continue;
+      }
+      if (!raw.trim()) {
+        flush();
+        closeTo(0);
+        continue;
+      }
+      closeTo(0);
+      const heading = raw.match(/^\s*#{1,6}\s+(.*)$/);
+      para.push(heading ? `**${heading[1]}**` : raw.trim());
+    }
+    flush();
+    closeTo(0);
+    return html;
+  }
+
+  // 근거 제목은 '편 › 업무 › 항목'까지만 보여 줍니다. 그 뒤는 원문 첫 줄이라 깁니다.
+  function shortHeading(heading) {
+    const parts = String(heading || "")
+      .replace(/\s*\(자주 묻는 질문\)\s*$/, "")
+      .split(" › ");
+    const kept = parts.slice(0, 3);
+    if (parts.length > 3 && /^Q\d/.test(parts[3])) kept[2] = parts[3];
+    return kept.join(" › ");
+  }
+
+  // 답에서 실제로 인용한 근거만 보여 줍니다.
+  function sourcesMarkup(sources, text) {
     if (!sources || !sources.length) return null;
+    const cited = new Set((String(text).match(/\[(\d{1,2})\]/g) || []).map((one) => one.slice(1, -1)));
+    const used = sources.filter((one) => cited.has(String(one.n)));
+    if (!used.length) return null;
     const list = document.createElement("ul");
     list.className = "chat-sources";
     list.setAttribute("aria-label", "근거");
-    for (const one of sources) {
+    // 같은 항목의 다른 조각이면('5. 심의사항'이 셋) 그 조각 첫 줄을 조금 덧붙여 구별합니다.
+    const labels = used.map((one) => shortHeading(one.heading));
+    for (const [at, one] of used.entries()) {
+      let label = labels[at];
+      if (labels.filter((other) => other === label).length > 1) {
+        // 구별하는 말이 잘리지 않도록 가운데 업무 이름은 빼고 붙입니다.
+        const parts = String(one.heading || "").split(" › ");
+        const extra = (parts[3] || "").split("◦")[0].trim();
+        if (extra) {
+          label = [parts[0], parts[2], extra.length > 24 ? `${extra.slice(0, 24)}…` : extra].join(" › ");
+        }
+      }
       const item = document.createElement("li");
       const link = document.createElement("a");
       link.href = one.url;
-      link.textContent = `[${one.n}] ${one.heading}`;
+      link.textContent = `[${one.n}] ${label}`;
       link.title = one.heading;
       item.appendChild(link);
       list.appendChild(item);
@@ -133,24 +226,20 @@
         }
         text += buffer;
         buffer = "";
-        answer.textContent = text;
+        answer.innerHTML = renderAnswer(text, sources);
         log.scrollTop = log.scrollHeight;
       }
-      if (buffer) {
-        text += buffer;
-        answer.textContent = text;
-      }
+      if (buffer) text += buffer;
+      answer.innerHTML = renderAnswer(text, sources);
       delete answer.dataset.thinking;
-      const list = sourcesMarkup(sources);
-      if (list) {
-        answer.appendChild(list);
-        list.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", () => {
-            // 같은 편 안의 지면이면 화면이 바뀌므로 창을 닫습니다.
-            close();
-          });
+      const list = sourcesMarkup(sources, text);
+      if (list) answer.appendChild(list);
+      answer.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          // 같은 편 안의 지면이면 화면이 바뀌므로 창을 닫습니다.
+          close();
         });
-      }
+      });
       history.push({ role: "assistant", content: text });
     } catch (error) {
       answer.remove();
